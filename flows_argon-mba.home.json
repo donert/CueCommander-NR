@@ -1076,15 +1076,15 @@
             "c429c25d.85b76",
             "20ea12e0.60f5ce",
             "398747d.dff9db8",
-            "da49656b.463888",
             "c3c4a4a8.1f5b18",
-            "7b515a48.f926e4",
-            "5096d1bc.446cb"
+            "1eb8246e.835cec",
+            "ec8567eb.bb60c8",
+            "639681c.ae0658"
         ],
         "x": 14,
-        "y": 1039,
+        "y": 1059,
         "w": 1318,
-        "h": 508
+        "h": 548
     },
     {
         "id": "70379837.cc02c8",
@@ -1122,7 +1122,7 @@
             "514a708a.86566"
         ],
         "x": 14,
-        "y": 1799,
+        "y": 1879,
         "w": 392,
         "h": 142
     },
@@ -1150,7 +1150,7 @@
             "95c66e65.3594d"
         ],
         "x": 14,
-        "y": 1539,
+        "y": 1619,
         "w": 1012,
         "h": 242
     },
@@ -2146,7 +2146,7 @@
             "9501c916.ff2468"
         ],
         "x": 954,
-        "y": 1319,
+        "y": 1379,
         "w": 352,
         "h": 202
     },
@@ -12347,7 +12347,7 @@
         "to": "",
         "reg": false,
         "x": 170,
-        "y": 1220,
+        "y": 1100,
         "wires": [
             []
         ]
@@ -12473,7 +12473,7 @@
         "splitc": "250",
         "name": "Talk to Matrix ",
         "x": 640,
-        "y": 1220,
+        "y": 1280,
         "wires": [
             [
                 "5c32a3f6.f075fc"
@@ -12508,10 +12508,10 @@
         "to": "",
         "reg": false,
         "x": 610,
-        "y": 1160,
+        "y": 1180,
         "wires": [
             [
-                "cc0496fb.431d98"
+                "1eb8246e.835cec"
             ]
         ]
     },
@@ -12530,7 +12530,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 750,
-        "y": 1320,
+        "y": 1380,
         "wires": []
     },
     {
@@ -12589,7 +12589,7 @@
         "to": "",
         "reg": false,
         "x": 310,
-        "y": 1320,
+        "y": 1380,
         "wires": [
             [
                 "878bd516.9bcf28"
@@ -12624,7 +12624,7 @@
         "to": "",
         "reg": false,
         "x": 310,
-        "y": 1360,
+        "y": 1420,
         "wires": [
             [
                 "878bd516.9bcf28"
@@ -12659,7 +12659,7 @@
         "to": "",
         "reg": false,
         "x": 340,
-        "y": 1400,
+        "y": 1460,
         "wires": [
             [
                 "878bd516.9bcf28"
@@ -12693,12 +12693,11 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 300,
-        "y": 1280,
+        "x": 320,
+        "y": 1220,
         "wires": [
             [
-                "7b515a48.f926e4",
-                "5096d1bc.446cb"
+                "878bd516.9bcf28"
             ]
         ]
     },
@@ -12724,8 +12723,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 130,
-        "y": 1280,
+        "x": 110,
+        "y": 1220,
         "wires": [
             [
                 "7c13464f.c42cc8"
@@ -12755,7 +12754,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 130,
-        "y": 1320,
+        "y": 1380,
         "wires": [
             [
                 "7b34e546.49c34c"
@@ -12785,7 +12784,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 130,
-        "y": 1360,
+        "y": 1420,
         "wires": [
             [
                 "c83d7d4a.04531"
@@ -12815,7 +12814,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 140,
-        "y": 1400,
+        "y": 1460,
         "wires": [
             [
                 "938e36f5.0e6ee8"
@@ -12838,7 +12837,7 @@
         "topic": "",
         "base64": false,
         "x": 100,
-        "y": 1840,
+        "y": 1920,
         "wires": [
             [
                 "9df6af52.95b53",
@@ -12858,7 +12857,7 @@
         "end": false,
         "name": "",
         "x": 310,
-        "y": 1840,
+        "y": 1920,
         "wires": []
     },
     {
@@ -12876,7 +12875,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 270,
-        "y": 1900,
+        "y": 1980,
         "wires": []
     },
     {
@@ -12926,7 +12925,7 @@
         "repair": false,
         "outputs": 7,
         "x": 810,
-        "y": 1220,
+        "y": 1280,
         "wires": [
             [
                 "496d0967.24b248"
@@ -12949,7 +12948,8 @@
             ],
             [
                 "7c62fcde.2d7534",
-                "20ea12e0.60f5ce"
+                "20ea12e0.60f5ce",
+                "ec8567eb.bb60c8"
             ]
         ],
         "outputLabels": [
@@ -12977,7 +12977,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1040,
-        "y": 1200,
+        "y": 1260,
         "wires": []
     },
     {
@@ -12995,7 +12995,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1070,
-        "y": 1240,
+        "y": 1300,
         "wires": []
     },
     {
@@ -13013,7 +13013,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1200,
-        "y": 1280,
+        "y": 1340,
         "wires": []
     },
     {
@@ -13031,7 +13031,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1040,
-        "y": 1160,
+        "y": 1220,
         "wires": []
     },
     {
@@ -13049,7 +13049,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1040,
-        "y": 1120,
+        "y": 1180,
         "wires": []
     },
     {
@@ -13098,7 +13098,7 @@
         "name": "TODO - process response",
         "info": "Format the response from a switch to feed back into the UI.\n\nExpect it to be \"@VID ...\"",
         "x": 1090,
-        "y": 1480,
+        "y": 1540,
         "wires": []
     },
     {
@@ -13129,7 +13129,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "#ROUTE? 1,*",
+                "to": "#VID? 1",
                 "tot": "str"
             },
             {
@@ -13146,10 +13146,10 @@
         "to": "",
         "reg": false,
         "x": 340,
-        "y": 1120,
+        "y": 1180,
         "wires": [
             [
-                "da49656b.463888"
+                "878bd516.9bcf28"
             ]
         ],
         "info": "#ROUTE? 1,*\\r\\n\n\nIntended to query the routing of the video layer ... #1. All outputs."
@@ -13177,10 +13177,9 @@
         "payload": "",
         "payloadType": "date",
         "x": 140,
-        "y": 1140,
+        "y": 1180,
         "wires": [
             [
-                "c3c4a4a8.1f5b18",
                 "f0abc614.9df3c8"
             ]
         ]
@@ -13197,7 +13196,7 @@
         "initialize": "",
         "finalize": "",
         "x": 1060,
-        "y": 1440,
+        "y": 1500,
         "wires": [
             []
         ]
@@ -13212,7 +13211,7 @@
             "970b31ac.89773"
         ],
         "x": 1195,
-        "y": 1440,
+        "y": 1500,
         "wires": []
     },
     {
@@ -13230,7 +13229,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1170,
-        "y": 1400,
+        "y": 1460,
         "wires": []
     },
     {
@@ -13256,7 +13255,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 110,
-        "y": 1640,
+        "y": 1720,
         "wires": [
             [
                 "a57488a3.659bb8",
@@ -13292,7 +13291,7 @@
         ],
         "active": false,
         "x": 890,
-        "y": 1580,
+        "y": 1660,
         "wires": []
     },
     {
@@ -13323,7 +13322,7 @@
         ],
         "active": false,
         "x": 890,
-        "y": 1620,
+        "y": 1700,
         "wires": []
     },
     {
@@ -13341,7 +13340,7 @@
         "statusVal": "payload",
         "statusType": "auto",
         "x": 900,
-        "y": 1720,
+        "y": 1800,
         "wires": []
     },
     {
@@ -13356,7 +13355,7 @@
         "initialize": "",
         "finalize": "",
         "x": 280,
-        "y": 1700,
+        "y": 1780,
         "wires": [
             [
                 "84754912.574398"
@@ -13375,7 +13374,7 @@
         "inout": "out",
         "property": "payload",
         "x": 420,
-        "y": 1700,
+        "y": 1780,
         "wires": [
             [
                 "b6791e07.04a96"
@@ -13533,7 +13532,7 @@
         "repair": false,
         "outputs": 3,
         "x": 640,
-        "y": 1600,
+        "y": 1680,
         "wires": [
             [
                 "e6627d9.813a78"
@@ -13566,7 +13565,7 @@
         "statusVal": "payload",
         "statusType": "auto",
         "x": 900,
-        "y": 1660,
+        "y": 1740,
         "wires": []
     },
     {
@@ -13590,7 +13589,7 @@
         "to": "",
         "reg": false,
         "x": 300,
-        "y": 1600,
+        "y": 1680,
         "wires": [
             [
                 "795cc935.803968"
@@ -13609,7 +13608,7 @@
         "inout": "out",
         "property": "payload",
         "x": 470,
-        "y": 1600,
+        "y": 1680,
         "wires": [
             [
                 "183b053a.8ec69b"
@@ -16037,7 +16036,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 130,
-        "y": 1740,
+        "y": 1820,
         "wires": [
             [
                 "95c66e65.3594d"
@@ -16056,7 +16055,7 @@
         "initialize": "",
         "finalize": "",
         "x": 280,
-        "y": 1740,
+        "y": 1820,
         "wires": [
             [
                 "b6791e07.04a96"
@@ -20508,7 +20507,7 @@
         "initialize": "",
         "finalize": "",
         "x": 860,
-        "y": 1120,
+        "y": 1180,
         "wires": [
             [
                 "f592fbab.fc1e08"
@@ -20527,7 +20526,7 @@
         "initialize": "",
         "finalize": "",
         "x": 1060,
-        "y": 1360,
+        "y": 1420,
         "wires": [
             [
                 "8b2712eb.c8edf"
@@ -20613,7 +20612,7 @@
         "initialize": "",
         "finalize": "",
         "x": 1040,
-        "y": 1280,
+        "y": 1340,
         "wires": [
             [
                 "b433f36.6f9581"
@@ -20625,7 +20624,7 @@
         "type": "debug",
         "z": "c7f9390d.cde5e8",
         "g": "7713f4e6.d2aacc",
-        "name": "Peek at query",
+        "name": "Peek at Command to Matrix",
         "active": true,
         "tosidebar": true,
         "console": false,
@@ -20634,8 +20633,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 520,
-        "y": 1080,
+        "x": 840,
+        "y": 1100,
         "wires": []
     },
     {
@@ -20650,12 +20649,9 @@
         "initialize": "",
         "finalize": "",
         "x": 320,
-        "y": 1080,
+        "y": 1140,
         "wires": [
-            [
-                "c429c25d.85b76",
-                "878bd516.9bcf28"
-            ]
+            []
         ]
     },
     {
@@ -20670,7 +20666,7 @@
         "initialize": "",
         "finalize": "",
         "x": 660,
-        "y": 1360,
+        "y": 1420,
         "wires": [
             [
                 "398747d.dff9db8"
@@ -20692,14 +20688,55 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 760,
-        "y": 1400,
+        "y": 1460,
         "wires": []
     },
     {
-        "id": "9f57fa61.95d4c8",
+        "id": "1eb8246e.835cec",
+        "type": "function",
+        "z": "c7f9390d.cde5e8",
+        "g": "7713f4e6.d2aacc",
+        "name": "Add CRLF",
+        "func": "// trying as a function node rather \n// than a change node to get correct crlf interpretation.\n    \nmsg = {payload : msg.payload + \"\\r\\n\"}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 630,
+        "y": 1220,
+        "wires": [
+            [
+                "cc0496fb.431d98",
+                "c429c25d.85b76"
+            ]
+        ]
+    },
+    {
+        "id": "ec8567eb.bb60c8",
+        "type": "split",
+        "z": "c7f9390d.cde5e8",
+        "g": "7713f4e6.d2aacc",
+        "name": "",
+        "splt": "\\r\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "x": 630,
+        "y": 1500,
+        "wires": [
+            [
+                "639681c.ae0658"
+            ]
+        ]
+    },
+    {
+        "id": "639681c.ae0658",
         "type": "debug",
         "z": "c7f9390d.cde5e8",
-        "name": "Peek at query2",
+        "g": "7713f4e6.d2aacc",
+        "name": "Otherwise result from split on crlf",
         "active": true,
         "tosidebar": true,
         "console": false,
@@ -20708,65 +20745,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 320,
-        "y": 1180,
+        "x": 720,
+        "y": 1560,
         "wires": []
-    },
-    {
-        "id": "da49656b.463888",
-        "type": "function",
-        "z": "c7f9390d.cde5e8",
-        "g": "7713f4e6.d2aacc",
-        "name": "Add CRLF",
-        "func": "// trying as a function node rather \n// than a change node to get correct crlf interpretation.\n    \nmsg = {payload : msg.payload + \"\\r\\n\"}\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "x": 350,
-        "y": 1140,
-        "wires": [
-            [
-                "9f57fa61.95d4c8"
-            ]
-        ]
-    },
-    {
-        "id": "7b515a48.f926e4",
-        "type": "function",
-        "z": "c7f9390d.cde5e8",
-        "g": "7713f4e6.d2aacc",
-        "name": "Add CRLF",
-        "func": "// trying as a function node rather \n// than a change node to get correct crlf interpretation.\n    \nmsg = {payload : msg.payload + \"\\r\\n\"}\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "x": 370,
-        "y": 1240,
-        "wires": [
-            [
-                "9f57fa61.95d4c8"
-            ]
-        ]
-    },
-    {
-        "id": "5096d1bc.446cb",
-        "type": "function",
-        "z": "c7f9390d.cde5e8",
-        "g": "7713f4e6.d2aacc",
-        "name": "Add CRLF",
-        "func": "// trying as a function node rather \n// than a change node to get correct crlf interpretation.\n    \nmsg = {payload : msg.payload + \"\\r\\n\"}\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "x": 470,
-        "y": 1200,
-        "wires": [
-            [
-                "878bd516.9bcf28"
-            ]
-        ]
     }
 ]
