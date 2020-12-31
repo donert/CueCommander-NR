@@ -1089,11 +1089,12 @@
         "nodes": [
             "ad8643df.03db",
             "960ae863.0a61f8",
-            "dac6bd14.4d169"
+            "dac6bd14.4d169",
+            "3dc7c30a.5af23c"
         ],
-        "x": 494,
+        "x": 394,
         "y": 919,
-        "w": 772,
+        "w": 872,
         "h": 122
     },
     {
@@ -1682,12 +1683,15 @@
             "e22d6f45.39cfd",
             "58acb796.e41b38",
             "3e6979c2.b32606",
-            "fb48fed4.2695d"
+            "fb48fed4.2695d",
+            "6bcad2ce.31c4bc",
+            "f32e9da3.c5aed",
+            "4de1ab2e.329e74"
         ],
         "x": 14,
         "y": 3193,
         "w": 788,
-        "h": 448
+        "h": 508
     },
     {
         "id": "4eefb8e2.42fac8",
@@ -19143,7 +19147,8 @@
         "y": 3600,
         "wires": [
             [
-                "dc860eb2.ea287"
+                "dc860eb2.ea287",
+                "4de1ab2e.329e74"
             ]
         ]
     },
@@ -19186,7 +19191,8 @@
         "y": 3600,
         "wires": [
             [
-                "c0b47dff.7541c"
+                "c0b47dff.7541c",
+                "f32e9da3.c5aed"
             ]
         ]
     },
@@ -20158,7 +20164,8 @@
         "y": 3460,
         "wires": [
             [
-                "c0b47dff.7541c"
+                "c0b47dff.7541c",
+                "6bcad2ce.31c4bc"
             ]
         ]
     },
@@ -20514,6 +20521,73 @@
         "wires": [
             [
                 "8b2712eb.c8edf"
+            ]
+        ]
+    },
+    {
+        "id": "6bcad2ce.31c4bc",
+        "type": "debug",
+        "z": "3340c1d9.9b95de",
+        "g": "1f480a84.7e36a5",
+        "name": "res from copy key to topic",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 380,
+        "y": 3560,
+        "wires": []
+    },
+    {
+        "id": "f32e9da3.c5aed",
+        "type": "debug",
+        "z": "3340c1d9.9b95de",
+        "g": "1f480a84.7e36a5",
+        "name": "res from mx join input",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 250,
+        "y": 3640,
+        "wires": []
+    },
+    {
+        "id": "4de1ab2e.329e74",
+        "type": "link out",
+        "z": "3340c1d9.9b95de",
+        "g": "1f480a84.7e36a5",
+        "name": "time to send",
+        "links": [
+            "72e16019.9e284",
+            "3dc7c30a.5af23c"
+        ],
+        "x": 465,
+        "y": 3660,
+        "wires": []
+    },
+    {
+        "id": "3dc7c30a.5af23c",
+        "type": "link in",
+        "z": "c7f9390d.cde5e8",
+        "g": "70379837.cc02c8",
+        "name": "Send to Matrix",
+        "links": [
+            "4de1ab2e.329e74"
+        ],
+        "x": 435,
+        "y": 960,
+        "wires": [
+            [
+                "960ae863.0a61f8"
             ]
         ]
     }
