@@ -20483,7 +20483,7 @@
         "z": "c7f9390d.cde5e8",
         "g": "7713f4e6.d2aacc",
         "name": "",
-        "func": "txt = \"\"; \n\nfor (var b of msg.payload) {\n    txt += String.fromCharCode(b)\n    }\n}\nmsg = { \"payload\": txt };\nreturn msg;",
+        "func": "txt = \"\"; \n\nfor (var b of msg.payload) {\n    txt += String.fromCharCode(b)\n    }\n\nmsg = { \"payload\": txt };\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
