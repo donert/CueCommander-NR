@@ -1072,7 +1072,8 @@
             "40060b8d.30add4",
             "7a9b2f38.1b47e",
             "496d0967.24b248",
-            "63b89e07.e85cc"
+            "63b89e07.e85cc",
+            "c429c25d.85b76"
         ],
         "x": 14,
         "y": 1079,
@@ -13140,7 +13141,8 @@
         "y": 1140,
         "wires": [
             [
-                "878bd516.9bcf28"
+                "878bd516.9bcf28",
+                "c429c25d.85b76"
             ]
         ],
         "info": "#ROUTE? 1,*\\r\\n\n\nIntended to query the routing of the video layer ... #1. All outputs."
@@ -20609,5 +20611,23 @@
                 "b433f36.6f9581"
             ]
         ]
+    },
+    {
+        "id": "c429c25d.85b76",
+        "type": "debug",
+        "z": "c7f9390d.cde5e8",
+        "g": "7713f4e6.d2aacc",
+        "name": "Peek at query",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 370,
+        "y": 1200,
+        "wires": []
     }
 ]
