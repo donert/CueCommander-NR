@@ -13049,7 +13049,7 @@
         "z": "c7f9390d.cde5e8",
         "g": "70379837.cc02c8",
         "name": "Reformat into command",
-        "func": "// msg.payload will look like {\"out2\":6,\"out8\":3}\n\n// need to create a string that looks like:\n// \"#VID in>out||VID 6>2|VID 3>8\\r\\n\"\n\n// for (const i in )\nguts = \"\" \n\nfor (const i of Object.keys(msg.payload)) {\n    guts += \"|VID \" +  msg.payload[i]  + \">\" + i ;\n}\n    \nmsg = {payload : \"#VID in>out|\" + guts + \"\\r\\n\"}\n\nreturn msg;",
+        "func": "// msg.payload will look like {\"out2\":6,\"out8\":3}\n\n// need to create a string that looks like:\n// \"#VID in>out||VID 6>2|VID 3>8\\r\\n\"\n\n// for (const i in )\nguts = \"\" \n\nfor (const i of Object.keys(msg.payload)) {\n    // i will be a string like \"out1\"\n    guts += \"|VID \" +  msg.payload[i]  + \">\" + i.substr(3, 1) ;\n}\n    \nmsg = {payload : \"#VID in>out|\" + guts + \"\\r\\n\"}\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
