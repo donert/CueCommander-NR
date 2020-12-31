@@ -1071,11 +1071,12 @@
             "f0abc614.9df3c8",
             "40060b8d.30add4",
             "7a9b2f38.1b47e",
-            "496d0967.24b248"
+            "496d0967.24b248",
+            "63b89e07.e85cc"
         ],
         "x": 14,
         "y": 1079,
-        "w": 1238,
+        "w": 1292,
         "h": 468
     },
     {
@@ -12462,7 +12463,7 @@
         "server": "",
         "port": "",
         "out": "time",
-        "splitc": "0",
+        "splitc": "250",
         "name": "Talk to Matrix ",
         "x": 620,
         "y": 1220,
@@ -12932,7 +12933,7 @@
                 "3174314a.0926ce"
             ],
             [
-                "b433f36.6f9581"
+                "63b89e07.e85cc"
             ],
             [
                 "df192c05.76c5d",
@@ -13002,7 +13003,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1020,
+        "x": 1180,
         "y": 1280,
         "wires": []
     },
@@ -13187,9 +13188,7 @@
         "x": 1040,
         "y": 1440,
         "wires": [
-            [
-                "cc8df114.81462"
-            ]
+            []
         ]
     },
     {
@@ -20588,6 +20587,25 @@
         "wires": [
             [
                 "960ae863.0a61f8"
+            ]
+        ]
+    },
+    {
+        "id": "63b89e07.e85cc",
+        "type": "function",
+        "z": "c7f9390d.cde5e8",
+        "g": "7713f4e6.d2aacc",
+        "name": "",
+        "func": "txt = \"\"; \n\nfor (var b of msg.payload) {\n    txt += String.fromCharCode(b)\n    }\n\nmsg = { \"payload\": txt };\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1020,
+        "y": 1280,
+        "wires": [
+            [
+                "b433f36.6f9581"
             ]
         ]
     }
