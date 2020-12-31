@@ -1074,9 +1074,9 @@
             "496d0967.24b248",
             "63b89e07.e85cc"
         ],
-        "x": 34,
+        "x": 14,
         "y": 1079,
-        "w": 1298,
+        "w": 1318,
         "h": 468
     },
     {
@@ -13120,7 +13120,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "#VID? *\\r\\n",
+                "to": "#ROUTE? 1,*\\r\\n",
                 "tot": "str"
             },
             {
@@ -13136,20 +13136,21 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 360,
-        "y": 1440,
+        "x": 340,
+        "y": 1140,
         "wires": [
             [
                 "878bd516.9bcf28"
             ]
-        ]
+        ],
+        "info": "#ROUTE? 1,*\\r\\n\n\nIntended to query the routing of the video layer ... #1. All outputs."
     },
     {
         "id": "40060b8d.30add4",
         "type": "inject",
         "z": "c7f9390d.cde5e8",
         "g": "7713f4e6.d2aacc",
-        "name": "Query Route",
+        "name": "Refresh Display",
         "props": [
             {
                 "p": "payload"
@@ -13166,8 +13167,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 160,
-        "y": 1440,
+        "x": 140,
+        "y": 1140,
         "wires": [
             [
                 "f0abc614.9df3c8"
