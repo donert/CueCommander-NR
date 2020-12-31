@@ -1076,9 +1076,9 @@
             "c429c25d.85b76"
         ],
         "x": 14,
-        "y": 1079,
+        "y": 1039,
         "w": 1318,
-        "h": 468
+        "h": 508
     },
     {
         "id": "70379837.cc02c8",
@@ -13140,10 +13140,7 @@
         "x": 340,
         "y": 1140,
         "wires": [
-            [
-                "878bd516.9bcf28",
-                "c429c25d.85b76"
-            ]
+            []
         ],
         "info": "#ROUTE? 1,*\\r\\n\n\nIntended to query the routing of the video layer ... #1. All outputs."
     },
@@ -13173,7 +13170,7 @@
         "y": 1140,
         "wires": [
             [
-                "f0abc614.9df3c8"
+                "c3c4a4a8.1f5b18"
             ]
         ]
     },
@@ -20626,8 +20623,27 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 370,
-        "y": 1200,
+        "x": 520,
+        "y": 1080,
         "wires": []
+    },
+    {
+        "id": "c3c4a4a8.1f5b18",
+        "type": "function",
+        "z": "c7f9390d.cde5e8",
+        "name": "Routing query",
+        "func": "// trying as a function node rather \n// than a change node to get correct crlf interpretation.\n    \nmsg = {payload : \"#ROUTE? 1,*\\r\\n\"}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 320,
+        "y": 1100,
+        "wires": [
+            [
+                "c429c25d.85b76",
+                "878bd516.9bcf28"
+            ]
+        ]
     }
 ]
