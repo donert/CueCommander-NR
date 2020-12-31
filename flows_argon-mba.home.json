@@ -1075,8 +1075,8 @@
         ],
         "x": 14,
         "y": 1079,
-        "w": 1208,
-        "h": 428
+        "w": 1238,
+        "h": 468
     },
     {
         "id": "70379837.cc02c8",
@@ -2130,12 +2130,13 @@
             "8b2712eb.c8edf",
             "cc8df114.81462",
             "df192c05.76c5d",
-            "39c92cd2.c15e84"
+            "39c92cd2.c15e84",
+            "9501c916.ff2468"
         ],
-        "x": 914,
+        "x": 934,
         "y": 1319,
-        "w": 282,
-        "h": 162
+        "w": 292,
+        "h": 202
     },
     {
         "id": "fb48fed4.2695d",
@@ -12931,7 +12932,7 @@
             ],
             [
                 "df192c05.76c5d",
-                "8b2712eb.c8edf"
+                "9501c916.ff2468"
             ],
             [
                 "7c62fcde.2d7534"
@@ -13082,8 +13083,8 @@
         "g": "7a9b2f38.1b47e",
         "name": "TODO - process response",
         "info": "Format the response from a switch to feed back into the UI.\n\nExpect it to be \"@VID ...\"",
-        "x": 1050,
-        "y": 1440,
+        "x": 1070,
+        "y": 1480,
         "wires": []
     },
     {
@@ -13179,8 +13180,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 1020,
-        "y": 1400,
+        "x": 1040,
+        "y": 1440,
         "wires": [
             [
                 "cc8df114.81462"
@@ -13196,8 +13197,8 @@
         "links": [
             "970b31ac.89773"
         ],
-        "x": 1155,
-        "y": 1400,
+        "x": 1175,
+        "y": 1440,
         "wires": []
     },
     {
@@ -13214,8 +13215,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1030,
-        "y": 1360,
+        "x": 1090,
+        "y": 1400,
         "wires": []
     },
     {
@@ -20364,6 +20365,7 @@
         "id": "99abdcc.1a1b22",
         "type": "inject",
         "z": "4ab9df2b.7b3dd",
+        "d": true,
         "g": "a9f3ca9c.583a58",
         "name": "Every Minute",
         "props": [
@@ -20493,6 +20495,25 @@
         "wires": [
             [
                 "f592fbab.fc1e08"
+            ]
+        ]
+    },
+    {
+        "id": "9501c916.ff2468",
+        "type": "function",
+        "z": "c7f9390d.cde5e8",
+        "g": "7a9b2f38.1b47e",
+        "name": "",
+        "func": "txt = \"\"; \n\nfor (var b of msg.payload) {\n    txt += String.fromCharCode(b)\n    }\n\nmsg = { \"payload\": txt };\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1040,
+        "y": 1360,
+        "wires": [
+            [
+                "8b2712eb.c8edf"
             ]
         ]
     }
