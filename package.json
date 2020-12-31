@@ -1,0 +1,12 @@
+{
+    "name": "CueCommander-NR",
+    "description": "An AVL automation application ",
+    "version": "0.0.1",
+    "dependencies": {},
+    "node-red": {
+        "settings": {
+            "flowFile": "flows_argon-mba.home.json",
+            "credentialsFile": "flows_argon-mba.home_cred.json"
+        }
+    }
+}
