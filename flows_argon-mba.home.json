@@ -1075,7 +1075,11 @@
             "63b89e07.e85cc",
             "c429c25d.85b76",
             "20ea12e0.60f5ce",
-            "398747d.dff9db8"
+            "398747d.dff9db8",
+            "da49656b.463888",
+            "c3c4a4a8.1f5b18",
+            "7b515a48.f926e4",
+            "5096d1bc.446cb"
         ],
         "x": 14,
         "y": 1039,
@@ -12342,8 +12346,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 230,
-        "y": 1240,
+        "x": 170,
+        "y": 1220,
         "wires": [
             []
         ]
@@ -12673,7 +12677,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "#BUILD-DATE?\\r\\n",
+                "to": "#BUILD-DATE?",
                 "tot": "str"
             },
             {
@@ -12693,7 +12697,8 @@
         "y": 1280,
         "wires": [
             [
-                "878bd516.9bcf28"
+                "7b515a48.f926e4",
+                "5096d1bc.446cb"
             ]
         ]
     },
@@ -13124,7 +13129,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "#ROUTE? 1,*\\r\\n",
+                "to": "#ROUTE? 1,*",
                 "tot": "str"
             },
             {
@@ -13141,9 +13146,11 @@
         "to": "",
         "reg": false,
         "x": 340,
-        "y": 1140,
+        "y": 1120,
         "wires": [
-            []
+            [
+                "da49656b.463888"
+            ]
         ],
         "info": "#ROUTE? 1,*\\r\\n\n\nIntended to query the routing of the video layer ... #1. All outputs."
     },
@@ -13173,7 +13180,8 @@
         "y": 1140,
         "wires": [
             [
-                "c3c4a4a8.1f5b18"
+                "c3c4a4a8.1f5b18",
+                "f0abc614.9df3c8"
             ]
         ]
     },
@@ -20634,6 +20642,7 @@
         "id": "c3c4a4a8.1f5b18",
         "type": "function",
         "z": "c7f9390d.cde5e8",
+        "g": "7713f4e6.d2aacc",
         "name": "Routing query",
         "func": "// trying as a function node rather \n// than a change node to get correct crlf interpretation.\n    \nmsg = {payload : \"#ROUTE? 1,*\\r\\n\"}\n\nreturn msg;",
         "outputs": 1,
@@ -20641,7 +20650,7 @@
         "initialize": "",
         "finalize": "",
         "x": 320,
-        "y": 1100,
+        "y": 1080,
         "wires": [
             [
                 "c429c25d.85b76",
@@ -20685,5 +20694,79 @@
         "x": 760,
         "y": 1400,
         "wires": []
+    },
+    {
+        "id": "9f57fa61.95d4c8",
+        "type": "debug",
+        "z": "c7f9390d.cde5e8",
+        "name": "Peek at query2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 320,
+        "y": 1180,
+        "wires": []
+    },
+    {
+        "id": "da49656b.463888",
+        "type": "function",
+        "z": "c7f9390d.cde5e8",
+        "g": "7713f4e6.d2aacc",
+        "name": "Add CRLF",
+        "func": "// trying as a function node rather \n// than a change node to get correct crlf interpretation.\n    \nmsg = {payload : msg.payload + \"\\r\\n\"}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 350,
+        "y": 1140,
+        "wires": [
+            [
+                "9f57fa61.95d4c8"
+            ]
+        ]
+    },
+    {
+        "id": "7b515a48.f926e4",
+        "type": "function",
+        "z": "c7f9390d.cde5e8",
+        "g": "7713f4e6.d2aacc",
+        "name": "Add CRLF",
+        "func": "// trying as a function node rather \n// than a change node to get correct crlf interpretation.\n    \nmsg = {payload : msg.payload + \"\\r\\n\"}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 370,
+        "y": 1240,
+        "wires": [
+            [
+                "9f57fa61.95d4c8"
+            ]
+        ]
+    },
+    {
+        "id": "5096d1bc.446cb",
+        "type": "function",
+        "z": "c7f9390d.cde5e8",
+        "g": "7713f4e6.d2aacc",
+        "name": "Add CRLF",
+        "func": "// trying as a function node rather \n// than a change node to get correct crlf interpretation.\n    \nmsg = {payload : msg.payload + \"\\r\\n\"}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 470,
+        "y": 1200,
+        "wires": [
+            [
+                "878bd516.9bcf28"
+            ]
+        ]
     }
 ]
