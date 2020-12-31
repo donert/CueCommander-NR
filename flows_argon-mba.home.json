@@ -1070,7 +1070,8 @@
             "f592fbab.fc1e08",
             "f0abc614.9df3c8",
             "40060b8d.30add4",
-            "7a9b2f38.1b47e"
+            "7a9b2f38.1b47e",
+            "496d0967.24b248"
         ],
         "x": 14,
         "y": 1079,
@@ -12914,7 +12915,7 @@
         "y": 1220,
         "wires": [
             [
-                "f592fbab.fc1e08"
+                "496d0967.24b248"
             ],
             [
                 "2b290c23.111574"
@@ -20475,5 +20476,24 @@
         "x": 600,
         "y": 60,
         "wires": []
+    },
+    {
+        "id": "496d0967.24b248",
+        "type": "function",
+        "z": "c7f9390d.cde5e8",
+        "g": "7713f4e6.d2aacc",
+        "name": "",
+        "func": "txt = \"\"; \n\nfor (var b of msg.payload) {\n    txt += String.fromCharCode(b)\n    }\n}\nmsg = { \"payload\": txt };\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 840,
+        "y": 1120,
+        "wires": [
+            [
+                "f592fbab.fc1e08"
+            ]
+        ]
     }
 ]
