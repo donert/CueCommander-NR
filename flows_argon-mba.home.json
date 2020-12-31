@@ -1085,7 +1085,7 @@
             "afac8255.49e2",
             "8fa7a3df.960d6"
         ],
-        "x": 24,
+        "x": 4,
         "y": 19,
         "w": 902,
         "h": 262
@@ -13153,7 +13153,7 @@
             }
         ],
         "active": false,
-        "x": 450,
+        "x": 430,
         "y": 100,
         "wires": []
     },
@@ -13172,7 +13172,7 @@
             }
         ],
         "active": true,
-        "x": 450,
+        "x": 430,
         "y": 60,
         "wires": []
     },
@@ -13198,7 +13198,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 130,
+        "x": 110,
         "y": 240,
         "wires": [
             [
@@ -13220,7 +13220,7 @@
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 790,
+        "x": 770,
         "y": 240,
         "wires": []
     },
@@ -13235,7 +13235,7 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 380,
+        "x": 360,
         "y": 240,
         "wires": [
             [
@@ -13254,7 +13254,7 @@
         "start": "",
         "inout": "out",
         "property": "payload",
-        "x": 520,
+        "x": 500,
         "y": 240,
         "wires": [
             [
@@ -15658,7 +15658,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 140,
+        "x": 120,
         "y": 60,
         "wires": [
             [
@@ -15689,7 +15689,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 130,
+        "x": 110,
         "y": 100,
         "wires": [
             [
@@ -15712,7 +15712,7 @@
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 760,
+        "x": 740,
         "y": 180,
         "wires": []
     },
@@ -15732,7 +15732,7 @@
         "randomLast": "5",
         "randomUnits": "seconds",
         "drop": false,
-        "x": 370,
+        "x": 350,
         "y": 180,
         "wires": [
             [
@@ -15747,7 +15747,7 @@
         "g": "f2aad9f6.0d8f18",
         "name": "TODO - race Condition",
         "info": "Is this code exposed to a race condition.\nWhat if the delayed message is not evaluated before the global property is set? Possible?",
-        "x": 400,
+        "x": 380,
         "y": 140,
         "wires": []
     },
@@ -15762,7 +15762,7 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 520,
+        "x": 500,
         "y": 180,
         "wires": [
             [
