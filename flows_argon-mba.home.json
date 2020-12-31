@@ -1077,9 +1077,9 @@
             "20ea12e0.60f5ce",
             "398747d.dff9db8",
             "c3c4a4a8.1f5b18",
-            "1eb8246e.835cec",
             "ec8567eb.bb60c8",
-            "639681c.ae0658"
+            "639681c.ae0658",
+            "7f9f7c4b.c7c6c4"
         ],
         "x": 14,
         "y": 1059,
@@ -12511,7 +12511,8 @@
         "y": 1180,
         "wires": [
             [
-                "1eb8246e.835cec"
+                "c429c25d.85b76",
+                "cc0496fb.431d98"
             ]
         ]
     },
@@ -12557,7 +12558,7 @@
         "y": 1000,
         "wires": [
             [
-                "878bd516.9bcf28"
+                "7f9f7c4b.c7c6c4"
             ]
         ]
     },
@@ -12592,7 +12593,7 @@
         "y": 1380,
         "wires": [
             [
-                "878bd516.9bcf28"
+                "7f9f7c4b.c7c6c4"
             ]
         ]
     },
@@ -12627,7 +12628,7 @@
         "y": 1420,
         "wires": [
             [
-                "878bd516.9bcf28"
+                "7f9f7c4b.c7c6c4"
             ]
         ]
     },
@@ -12662,7 +12663,7 @@
         "y": 1460,
         "wires": [
             [
-                "878bd516.9bcf28"
+                "7f9f7c4b.c7c6c4"
             ]
         ]
     },
@@ -12697,7 +12698,7 @@
         "y": 1220,
         "wires": [
             [
-                "878bd516.9bcf28"
+                "7f9f7c4b.c7c6c4"
             ]
         ]
     },
@@ -13149,7 +13150,7 @@
         "y": 1180,
         "wires": [
             [
-                "878bd516.9bcf28"
+                "7f9f7c4b.c7c6c4"
             ]
         ],
         "info": "#ROUTE? 1,*\\r\\n\n\nIntended to query the routing of the video layer ... #1. All outputs."
@@ -20692,26 +20693,6 @@
         "wires": []
     },
     {
-        "id": "1eb8246e.835cec",
-        "type": "function",
-        "z": "c7f9390d.cde5e8",
-        "g": "7713f4e6.d2aacc",
-        "name": "Add CRLF",
-        "func": "// trying as a function node rather \n// than a change node to get correct crlf interpretation.\n    \nmsg = {payload : msg.payload + \"\\r\\n\"}\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "x": 630,
-        "y": 1220,
-        "wires": [
-            [
-                "cc0496fb.431d98",
-                "c429c25d.85b76"
-            ]
-        ]
-    },
-    {
         "id": "ec8567eb.bb60c8",
         "type": "split",
         "z": "c7f9390d.cde5e8",
@@ -20748,5 +20729,24 @@
         "x": 720,
         "y": 1560,
         "wires": []
+    },
+    {
+        "id": "7f9f7c4b.c7c6c4",
+        "type": "function",
+        "z": "c7f9390d.cde5e8",
+        "g": "7713f4e6.d2aacc",
+        "name": "Add CRLF",
+        "func": "// trying as a function node rather \n// than a change node to get correct crlf interpretation.\n    \nmsg = {payload : msg.payload + \"\\r\\n\"}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 610,
+        "y": 1140,
+        "wires": [
+            [
+                "878bd516.9bcf28"
+            ]
+        ]
     }
 ]
