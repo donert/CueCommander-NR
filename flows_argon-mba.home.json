@@ -1079,7 +1079,8 @@
             "c3c4a4a8.1f5b18",
             "ec8567eb.bb60c8",
             "639681c.ae0658",
-            "7f9f7c4b.c7c6c4"
+            "7f9f7c4b.c7c6c4",
+            "d8be1ec7.c7f9f"
         ],
         "x": 14,
         "y": 1059,
@@ -20660,13 +20661,13 @@
         "type": "function",
         "z": "c7f9390d.cde5e8",
         "g": "7713f4e6.d2aacc",
-        "name": "",
+        "name": "convert to String",
         "func": "txt = \"\"; \n\nfor (var b of msg.payload) {\n    txt += String.fromCharCode(b)\n    }\n\nmsg = { \"payload\": txt };\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 660,
+        "x": 690,
         "y": 1420,
         "wires": [
             [
@@ -20708,7 +20709,7 @@
         "y": 1500,
         "wires": [
             [
-                "639681c.ae0658"
+                "d8be1ec7.c7f9f"
             ]
         ]
     },
@@ -20746,6 +20747,25 @@
         "wires": [
             [
                 "878bd516.9bcf28"
+            ]
+        ]
+    },
+    {
+        "id": "d8be1ec7.c7f9f",
+        "type": "function",
+        "z": "c7f9390d.cde5e8",
+        "g": "7713f4e6.d2aacc",
+        "name": "convert to String",
+        "func": "txt = \"\"; \n\nfor (var b of msg.payload) {\n    txt += String.fromCharCode(b)\n    }\n\nmsg = { \"payload\": txt };\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 810,
+        "y": 1500,
+        "wires": [
+            [
+                "639681c.ae0658"
             ]
         ]
     }
