@@ -480,14 +480,23 @@
             "4fbff3b.762920c",
             "7d64263a.10eef8",
             "1915aec1.fb8071",
-            "26553768.96f598",
-            "73f55a1a.68b884",
-            "74e50c6a.efaeb4"
+            "74e50c6a.efaeb4",
+            "4e183078.6a513",
+            "1ff1f832.1a84c8",
+            "45593342.ca1d9c",
+            "b43a9d2a.9a1a2",
+            "5bde9fce.f908e",
+            "4a6e839a.d0766c",
+            "1212e854.6711b8",
+            "81b4a9df.db79f8",
+            "44c0f6a6.81c808",
+            "578207b4.907098",
+            "5045dcc0.9807c4"
         ],
         "x": 34,
-        "y": 173,
-        "w": 1042,
-        "h": 454
+        "y": 159,
+        "w": 1232,
+        "h": 468
     },
     {
         "id": "65220297.8c588c",
@@ -2649,7 +2658,7 @@
         "tab": "871ea368.15c4e",
         "order": 4,
         "disp": true,
-        "width": "6",
+        "width": "8",
         "collapse": false
     },
     {
@@ -4010,7 +4019,8 @@
         "y": 280,
         "wires": [
             [
-                "8ba66cf1.4c622"
+                "8ba66cf1.4c622",
+                "4e183078.6a513"
             ],
             [
                 "ae53dd77.bda38"
@@ -4023,13 +4033,23 @@
         "z": "17ca131.e488ced",
         "g": "65220297.8c588c",
         "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
         "repeat": "",
         "crontab": "",
         "once": false,
-        "topic": "",
+        "onceDelay": "",
+        "topic": "getname",
         "payload": "getname",
-        "payloadType": "string",
-        "x": 140,
+        "payloadType": "str",
+        "x": 170,
         "y": 820,
         "wires": [
             [
@@ -4043,13 +4063,23 @@
         "z": "17ca131.e488ced",
         "g": "65220297.8c588c",
         "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
         "repeat": "",
         "crontab": "",
         "once": false,
-        "topic": "",
+        "onceDelay": "",
+        "topic": "getmanufacturer",
         "payload": "getmanufacturer",
-        "payloadType": "string",
-        "x": 160,
+        "payloadType": "str",
+        "x": 210,
         "y": 700,
         "wires": [
             [
@@ -4063,13 +4093,23 @@
         "z": "17ca131.e488ced",
         "g": "65220297.8c588c",
         "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
         "repeat": "",
         "crontab": "",
         "once": false,
-        "topic": "",
+        "onceDelay": "",
+        "topic": "getlamps",
         "payload": "getlamps",
-        "payloadType": "string",
-        "x": 140,
+        "payloadType": "str",
+        "x": 170,
         "y": 740,
         "wires": [
             [
@@ -4083,13 +4123,23 @@
         "z": "17ca131.e488ced",
         "g": "65220297.8c588c",
         "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
         "repeat": "",
         "crontab": "",
         "once": false,
-        "topic": "",
+        "onceDelay": "",
+        "topic": "getinputs",
         "payload": "getinputs",
-        "payloadType": "string",
-        "x": 140,
+        "payloadType": "str",
+        "x": 170,
         "y": 780,
         "wires": [
             [
@@ -4103,13 +4153,23 @@
         "z": "17ca131.e488ced",
         "g": "65220297.8c588c",
         "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
         "repeat": "",
         "crontab": "",
         "once": false,
-        "topic": "",
+        "onceDelay": "",
+        "topic": "getinfo",
         "payload": "getinfo",
-        "payloadType": "string",
-        "x": 130,
+        "payloadType": "str",
+        "x": 150,
         "y": 900,
         "wires": [
             [
@@ -4125,23 +4185,21 @@
         "name": "",
         "props": [
             {
-                "p": "payload",
-                "v": "getpowerstate",
-                "vt": "str"
+                "p": "payload"
             },
             {
                 "p": "topic",
-                "v": "",
-                "vt": "string"
+                "vt": "str"
             }
         ],
         "repeat": "",
         "crontab": "",
         "once": false,
-        "topic": "",
+        "onceDelay": "",
+        "topic": "getpowerstate",
         "payload": "getpowerstate",
         "payloadType": "str",
-        "x": 150,
+        "x": 200,
         "y": 940,
         "wires": [
             [
@@ -4155,13 +4213,23 @@
         "z": "17ca131.e488ced",
         "g": "65220297.8c588c",
         "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
         "repeat": "",
         "crontab": "",
         "once": false,
-        "topic": "",
+        "onceDelay": "",
+        "topic": "getinput",
         "payload": "getinput",
-        "payloadType": "string",
-        "x": 140,
+        "payloadType": "str",
+        "x": 160,
         "y": 860,
         "wires": [
             [
@@ -4175,13 +4243,23 @@
         "z": "17ca131.e488ced",
         "g": "65220297.8c588c",
         "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
         "repeat": "",
         "crontab": "",
         "once": false,
-        "topic": "",
+        "onceDelay": "",
+        "topic": "getmodel",
         "payload": "getmodel",
-        "payloadType": "string",
-        "x": 140,
+        "payloadType": "str",
+        "x": 170,
         "y": 980,
         "wires": [
             [
@@ -4195,13 +4273,23 @@
         "z": "17ca131.e488ced",
         "g": "65220297.8c588c",
         "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
         "repeat": "",
         "crontab": "",
         "once": false,
-        "topic": "",
+        "onceDelay": "",
+        "topic": "getclass",
         "payload": "getclass",
-        "payloadType": "string",
-        "x": 140,
+        "payloadType": "str",
+        "x": 160,
         "y": 1020,
         "wires": [
             [
@@ -4215,13 +4303,23 @@
         "z": "17ca131.e488ced",
         "g": "65220297.8c588c",
         "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
         "repeat": "",
         "crontab": "",
         "once": false,
-        "topic": "",
+        "onceDelay": "",
+        "topic": "geterrors",
         "payload": "geterrors",
-        "payloadType": "string",
-        "x": 140,
+        "payloadType": "str",
+        "x": 170,
         "y": 1060,
         "wires": [
             [
@@ -4305,7 +4403,8 @@
         "y": 420,
         "wires": [
             [
-                "639d792.f877788"
+                "639d792.f877788",
+                "5045dcc0.9807c4"
             ],
             [
                 "abe724c5.18f818"
@@ -4511,7 +4610,7 @@
         "height": 0,
         "passthru": true,
         "decouple": "false",
-        "topic": "",
+        "topic": "power",
         "style": "",
         "onvalue": "on",
         "onvalueType": "str",
@@ -7895,27 +7994,6 @@
         "icon": "node-red/alert.svg"
     },
     {
-        "id": "26553768.96f598",
-        "type": "ui_template",
-        "z": "17ca131.e488ced",
-        "g": "2a5510d0.88b28",
-        "group": "3d999ade.1f4f76",
-        "name": "Projector Responses",
-        "order": 0,
-        "width": "6",
-        "height": "16",
-        "format": "<h1>Projector 1</h1>\n<div ng-bind-html=\"msg.payload193\"></div>\n\n<h1>Projector 2</h1>\n<div ng-bind-html=\"msg.payload194\"></div>\n\n<h1>Projector 3</h1>\n<div ng-bind-html=\"msg.payload195\"></div>\n",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "x": 760,
-        "y": 420,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "846bf1bd.3fb21",
         "type": "link in",
         "z": "17ca131.e488ced",
@@ -8041,9 +8119,7 @@
         "x": 520,
         "y": 240,
         "wires": [
-            [
-                "73f55a1a.68b884"
-            ]
+            []
         ]
     },
     {
@@ -8069,9 +8145,7 @@
         "x": 520,
         "y": 380,
         "wires": [
-            [
-                "73f55a1a.68b884"
-            ]
+            []
         ]
     },
     {
@@ -8097,39 +8171,7 @@
         "x": 520,
         "y": 520,
         "wires": [
-            [
-                "73f55a1a.68b884"
-            ]
-        ]
-    },
-    {
-        "id": "73f55a1a.68b884",
-        "type": "join",
-        "z": "17ca131.e488ced",
-        "g": "2a5510d0.88b28",
-        "name": "",
-        "mode": "custom",
-        "build": "merged",
-        "property": "",
-        "propertyType": "full",
-        "key": "topic",
-        "joiner": "\\n",
-        "joinerType": "str",
-        "accumulate": true,
-        "timeout": "5",
-        "count": "1",
-        "reduceRight": false,
-        "reduceExp": "",
-        "reduceInit": "",
-        "reduceInitType": "",
-        "reduceFixup": "",
-        "x": 710,
-        "y": 380,
-        "wires": [
-            [
-                "26553768.96f598",
-                "74e50c6a.efaeb4"
-            ]
+            []
         ]
     },
     {
@@ -20156,7 +20198,7 @@
             },
             {
                 "t": "cont",
-                "v": "Welcome to VS88-DT Control.",
+                "v": "Welcome",
                 "vt": "str"
             },
             {
@@ -20480,8 +20522,270 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
+        "x": 850,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "4e183078.6a513",
+        "type": "switch",
+        "z": "17ca131.e488ced",
+        "g": "2a5510d0.88b28",
+        "name": "",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "getlamps",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "getmanufacturer",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "getinputs",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "getname",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 4,
+        "x": 700,
+        "y": 220,
+        "wires": [
+            [
+                "1ff1f832.1a84c8",
+                "45593342.ca1d9c"
+            ],
+            [],
+            [],
+            []
+        ],
+        "outputLabels": [
+            "lamps",
+            "manu",
+            "inputs",
+            "name"
+        ]
+    },
+    {
+        "id": "1ff1f832.1a84c8",
+        "type": "ui_button",
+        "z": "17ca131.e488ced",
+        "g": "2a5510d0.88b28",
+        "name": "",
+        "group": "3d999ade.1f4f76",
+        "order": 9,
+        "width": "2",
+        "height": "1",
+        "passthru": false,
+        "label": "{{msg.payload}}",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 880,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "45593342.ca1d9c",
+        "type": "ui_text",
+        "z": "17ca131.e488ced",
+        "g": "2a5510d0.88b28",
+        "group": "3d999ade.1f4f76",
+        "order": 6,
+        "width": "2",
+        "height": "1",
+        "name": "p1lamp",
+        "label": "",
+        "format": "{{msg.payload}} xx",
+        "layout": "row-spread",
         "x": 900,
         "y": 340,
         "wires": []
+    },
+    {
+        "id": "4a6e839a.d0766c",
+        "type": "ui_text",
+        "z": "17ca131.e488ced",
+        "g": "2a5510d0.88b28",
+        "group": "3d999ade.1f4f76",
+        "order": 5,
+        "width": "2",
+        "height": "1",
+        "name": "row.lamp",
+        "label": "",
+        "format": "Lamp",
+        "layout": "row-spread",
+        "x": 760,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "b43a9d2a.9a1a2",
+        "type": "ui_text",
+        "z": "17ca131.e488ced",
+        "g": "2a5510d0.88b28",
+        "group": "3d999ade.1f4f76",
+        "order": 2,
+        "width": "2",
+        "height": "1",
+        "name": "p1head",
+        "label": "",
+        "format": "Prj 1",
+        "layout": "row-spread",
+        "x": 900,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "5bde9fce.f908e",
+        "type": "ui_text",
+        "z": "17ca131.e488ced",
+        "g": "2a5510d0.88b28",
+        "group": "3d999ade.1f4f76",
+        "order": 1,
+        "width": "2",
+        "height": "1",
+        "name": "corner",
+        "label": "",
+        "format": "",
+        "layout": "row-spread",
+        "x": 750,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "1212e854.6711b8",
+        "type": "ui_text",
+        "z": "17ca131.e488ced",
+        "g": "2a5510d0.88b28",
+        "group": "3d999ade.1f4f76",
+        "order": 3,
+        "width": "2",
+        "height": "1",
+        "name": "p2head",
+        "label": "",
+        "format": "Prj 2",
+        "layout": "row-spread",
+        "x": 1040,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "81b4a9df.db79f8",
+        "type": "ui_text",
+        "z": "17ca131.e488ced",
+        "g": "2a5510d0.88b28",
+        "group": "3d999ade.1f4f76",
+        "order": 4,
+        "width": "2",
+        "height": "1",
+        "name": "p3head",
+        "label": "",
+        "format": "Prj 3",
+        "layout": "row-spread",
+        "x": 1180,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "44c0f6a6.81c808",
+        "type": "ui_text",
+        "z": "17ca131.e488ced",
+        "g": "2a5510d0.88b28",
+        "group": "3d999ade.1f4f76",
+        "order": 7,
+        "width": "2",
+        "height": "1",
+        "name": "p2lamp",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 1040,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "578207b4.907098",
+        "type": "ui_text",
+        "z": "17ca131.e488ced",
+        "g": "2a5510d0.88b28",
+        "group": "3d999ade.1f4f76",
+        "order": 8,
+        "width": "2",
+        "height": "1",
+        "name": "p3lamp",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 1180,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "5045dcc0.9807c4",
+        "type": "switch",
+        "z": "17ca131.e488ced",
+        "g": "2a5510d0.88b28",
+        "name": "",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "getlamps",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "getmanufacturer",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "getinputs",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "getname",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 4,
+        "x": 690,
+        "y": 380,
+        "wires": [
+            [
+                "44c0f6a6.81c808"
+            ],
+            [],
+            [],
+            []
+        ],
+        "outputLabels": [
+            "lamps",
+            "manu",
+            "inputs",
+            "name"
+        ]
     }
 ]
