@@ -20149,6 +20149,16 @@
             },
             {
                 "t": "eq",
+                "v": "\\r\\n",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Welcome to VS88-DT Control.",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
                 "v": "",
                 "vt": "str"
             },
@@ -20158,7 +20168,7 @@
         ],
         "checkall": "true",
         "repair": false,
-        "outputs": 7,
+        "outputs": 9,
         "x": 590,
         "y": 1600,
         "wires": [
@@ -20178,6 +20188,8 @@
                 "124a48e8.9b73d7"
             ],
             [],
+            [],
+            [],
             [
                 "ed4b52cd.4adb2"
             ]
@@ -20188,6 +20200,8 @@
             "PROT-VER",
             "MODEL",
             "VID",
+            "crlf",
+            "Welcome",
             "empty string",
             ""
         ]
