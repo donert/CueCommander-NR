@@ -13182,7 +13182,7 @@
         "y": 1180,
         "wires": [
             [
-                "f0abc614.9df3c8"
+                "c3c4a4a8.1f5b18"
             ]
         ]
     },
@@ -20645,7 +20645,7 @@
         "z": "c7f9390d.cde5e8",
         "g": "7713f4e6.d2aacc",
         "name": "Routing query",
-        "func": "// trying as a function node rather \n// than a change node to get correct crlf interpretation.\n    \nmsg = {payload : \"#ROUTE? 1,*\\r\\n\"}\n\nreturn msg;",
+        "func": "// trying as a function node rather \n// than a change node to get correct crlf interpretation.\n    \nmsg = {payload : \"#VID? 1\\r\\n\" +\n\"#VID? 2\\r\\n\" +\n\"#VID? 3\\r\\n\" +\n\"#VID? 4\\r\\n\" +\n\"#VID? 5\\r\\n\" +\n\"#VID? 6\\r\\n\" +\n\"#VID? 7\\r\\n\" +\n\"#VID? 8\" //crlf will be added later\n}\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -20653,7 +20653,9 @@
         "x": 320,
         "y": 1140,
         "wires": [
-            []
+            [
+                "7f9f7c4b.c7c6c4"
+            ]
         ]
     },
     {
