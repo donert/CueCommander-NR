@@ -1011,34 +1011,27 @@
             "color": "#000000"
         },
         "nodes": [
-            "254bf64c.4bda4a",
             "7cc27ce4.5b1d64",
             "5049ffc2.a357a",
-            "52be43b8.fdbd6c",
             "b0d8d191.4920f",
             "61427010.0621",
-            "7386418a.670c4",
             "e5ab239c.cf84b",
             "b4edffd3.79807",
             "8648b4.8664b75",
             "de40a810.6c64d8",
-            "bd1c5713.523298",
-            "89909898.0fc378",
-            "d3a9b613.933578",
-            "3449b8ea.ae8ac8",
-            "9a4dcd8b.13644",
             "2a527f68.3408b",
             "c723375e.85cab8",
             "970b31ac.89773",
             "38349be8.251e54",
             "3e377a65.711616",
             "1e16b2ab.291d5d",
-            "f88d8be4.0d4cc8"
+            "f88d8be4.0d4cc8",
+            "6ff199d5.a8fcb8"
         ],
         "x": 8,
         "y": 19,
-        "w": 1278,
-        "h": 468
+        "w": 938,
+        "h": 442
     },
     {
         "id": "7713f4e6.d2aacc",
@@ -1050,7 +1043,6 @@
             "color": "#000000"
         },
         "nodes": [
-            "f472fecb.86568",
             "cc0496fb.431d98",
             "878bd516.9bcf28",
             "7b34e546.49c34c",
@@ -1061,9 +1053,7 @@
             "6ceddfe1.02696",
             "530eeac6.0339c4",
             "be087f.b987678",
-            "33524b6.1dea8b4",
             "2b290c23.111574",
-            "f0abc614.9df3c8",
             "40060b8d.30add4",
             "c429c25d.85b76",
             "20ea12e0.60f5ce",
@@ -1076,24 +1066,13 @@
             "b8cd2fdb.32868",
             "f7bf08ca.a4f0e8",
             "ed4b52cd.4adb2",
-            "5a4f5dc1.be4e64",
-            "e645fb47.1010a8",
             "124a48e8.9b73d7",
-            "8adb03d5.efa5e",
-            "685963e9.42f61c",
-            "24bf355f.50d85a",
-            "7b68eabe.18fdb4",
-            "1295367c.47dc0a",
-            "7a598a27.ce6aa4",
-            "1edc6aed.02e925",
-            "222cbc8e.30af44",
-            "aaae572d.129018",
-            "c210a695.620208"
+            "22d220a4.a89f5"
         ],
         "x": 14,
-        "y": 1019,
-        "w": 1922,
-        "h": 622
+        "y": 1119,
+        "w": 1328,
+        "h": 808
     },
     {
         "id": "70379837.cc02c8",
@@ -1130,8 +1109,8 @@
             "9df6af52.95b53",
             "514a708a.86566"
         ],
-        "x": 14,
-        "y": 1879,
+        "x": 34,
+        "y": 2319,
         "w": 392,
         "h": 142
     },
@@ -1158,8 +1137,8 @@
             "e71b1143.43c",
             "95c66e65.3594d"
         ],
-        "x": 14,
-        "y": 1619,
+        "x": 34,
+        "y": 2059,
         "w": 1012,
         "h": 242
     },
@@ -2127,7 +2106,6 @@
             "dedfc6f8.efb718",
             "d3c20796.dad5a8",
             "d629236a.91607",
-            "b8101017.98cec",
             "ab95eb0a.a04e78",
             "e1d1dbc4.a40eb8",
             "f623011e.08314",
@@ -2136,7 +2114,7 @@
         "x": 34,
         "y": 99,
         "w": 272,
-        "h": 362
+        "h": 322
     },
     {
         "id": "fb48fed4.2695d",
@@ -2217,6 +2195,32 @@
         "y": 19,
         "w": 292,
         "h": 282
+    },
+    {
+        "id": "22d220a4.a89f5",
+        "type": "group",
+        "z": "c7f9390d.cde5e8",
+        "g": "7713f4e6.d2aacc",
+        "name": "Send to Rows",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "24bf355f.50d85a",
+            "7b68eabe.18fdb4",
+            "1295367c.47dc0a",
+            "7a598a27.ce6aa4",
+            "1edc6aed.02e925",
+            "222cbc8e.30af44",
+            "aaae572d.129018",
+            "c210a695.620208",
+            "685963e9.42f61c",
+            "8adb03d5.efa5e"
+        ],
+        "x": 914,
+        "y": 1539,
+        "w": 402,
+        "h": 362
     },
     {
         "id": "b36c9a8b.092df8",
@@ -11678,22 +11682,11 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 810,
+        "x": 470,
         "y": 60,
         "wires": [
             []
         ]
-    },
-    {
-        "id": "254bf64c.4bda4a",
-        "type": "comment",
-        "z": "c7f9390d.cde5e8",
-        "g": "c2b73d36.ba7f6",
-        "name": "TODO - read inital values",
-        "info": "Current injecting a static set of values. \nChange this to read current values from matrix.",
-        "x": 150,
-        "y": 60,
-        "wires": []
     },
     {
         "id": "dedfc6f8.efb718",
@@ -11748,99 +11741,6 @@
         "wires": [
             [
                 "3e377a65.711616"
-            ]
-        ]
-    },
-    {
-        "id": "52be43b8.fdbd6c",
-        "type": "ui_form",
-        "z": "c7f9390d.cde5e8",
-        "d": true,
-        "g": "c2b73d36.ba7f6",
-        "name": "Input Selection",
-        "label": "",
-        "group": "b0884adc.7533a8",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "options": [
-            {
-                "label": "1. \"A\" Projector (East)",
-                "value": "out1",
-                "type": "number",
-                "required": true,
-                "rows": null
-            },
-            {
-                "label": "2. \"B\" Projector (Centre)",
-                "value": "out2",
-                "type": "number",
-                "required": true,
-                "rows": null
-            },
-            {
-                "label": "3. \"C\" Projector (West)",
-                "value": "out3",
-                "type": "number",
-                "required": true,
-                "rows": null
-            },
-            {
-                "label": "4. Confidence (Rear)",
-                "value": "out4",
-                "type": "number",
-                "required": true,
-                "rows": null
-            },
-            {
-                "label": "5. ATEM In 1",
-                "value": "out5",
-                "type": "number",
-                "required": true,
-                "rows": null
-            },
-            {
-                "label": "6. ATEM In 2",
-                "value": "out6",
-                "type": "number",
-                "required": true,
-                "rows": null
-            },
-            {
-                "label": "7. Lobby",
-                "value": "out7",
-                "type": "number",
-                "required": true,
-                "rows": null
-            },
-            {
-                "label": "8. Nursery",
-                "value": "out8",
-                "type": "number",
-                "required": true,
-                "rows": null
-            }
-        ],
-        "formValue": {
-            "out1": "",
-            "out2": "",
-            "out3": "",
-            "out4": "",
-            "out5": "",
-            "out6": "",
-            "out7": "",
-            "out8": ""
-        },
-        "payload": "",
-        "submit": "Change",
-        "cancel": "cancel",
-        "topic": "",
-        "x": 900,
-        "y": 240,
-        "wires": [
-            [
-                "7386418a.670c4",
-                "de40a810.6c64d8"
             ]
         ]
     },
@@ -11952,46 +11852,6 @@
             [
                 "3e377a65.711616"
             ]
-        ]
-    },
-    {
-        "id": "7386418a.670c4",
-        "type": "debug",
-        "z": "c7f9390d.cde5e8",
-        "g": "c2b73d36.ba7f6",
-        "name": "Matrix settings",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1080,
-        "y": 180,
-        "wires": []
-    },
-    {
-        "id": "b8101017.98cec",
-        "type": "ui_template",
-        "z": "c7f9390d.cde5e8",
-        "d": true,
-        "g": "e5ab239c.cf84b",
-        "group": "fe267298.a4981",
-        "name": "Note",
-        "order": 8,
-        "width": 6,
-        "height": 2,
-        "format": "<div>\nAfter clicking a \"Quick Selection\" button, \nactivate it by pushing the \"Change\" button.    \n</div>",
-        "storeOutMessages": false,
-        "fwdInMessages": false,
-        "resendOnRefresh": false,
-        "templateScope": "local",
-        "x": 110,
-        "y": 420,
-        "wires": [
-            []
         ]
     },
     {
@@ -12125,218 +11985,12 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 850,
+        "x": 770,
         "y": 400,
         "wires": [
             [
-                "4ba443b3.be44dc",
-                "bd1c5713.523298"
+                "4ba443b3.be44dc"
             ],
-            [
-                "89909898.0fc378"
-            ]
-        ]
-    },
-    {
-        "id": "bd1c5713.523298",
-        "type": "change",
-        "z": "c7f9390d.cde5e8",
-        "g": "c2b73d36.ba7f6",
-        "name": "Ok",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "Ok",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "background",
-                "pt": "msg",
-                "to": "green",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "icon",
-                "pt": "msg",
-                "to": "fa-check",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1020,
-        "y": 380,
-        "wires": [
-            [
-                "d3a9b613.933578",
-                "9a4dcd8b.13644"
-            ]
-        ]
-    },
-    {
-        "id": "89909898.0fc378",
-        "type": "change",
-        "z": "c7f9390d.cde5e8",
-        "g": "c2b73d36.ba7f6",
-        "name": "Out of Range",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "Invalid - choose 1 thru 8",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "background",
-                "pt": "msg",
-                "to": "red",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "icon",
-                "pt": "msg",
-                "to": "mi-error",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1030,
-        "y": 420,
-        "wires": [
-            [
-                "9a4dcd8b.13644"
-            ]
-        ]
-    },
-    {
-        "id": "d3a9b613.933578",
-        "type": "delay",
-        "z": "c7f9390d.cde5e8",
-        "g": "c2b73d36.ba7f6",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "1",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "x": 1040,
-        "y": 300,
-        "wires": [
-            [
-                "3449b8ea.ae8ac8"
-            ]
-        ]
-    },
-    {
-        "id": "3449b8ea.ae8ac8",
-        "type": "change",
-        "z": "c7f9390d.cde5e8",
-        "g": "c2b73d36.ba7f6",
-        "name": "Blank",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "background",
-                "pt": "msg",
-                "to": "#333333",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "icon",
-                "pt": "msg",
-                "to": "",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1170,
-        "y": 300,
-        "wires": [
-            [
-                "9a4dcd8b.13644"
-            ]
-        ]
-    },
-    {
-        "id": "9a4dcd8b.13644",
-        "type": "ui_button",
-        "z": "c7f9390d.cde5e8",
-        "d": true,
-        "g": "c2b73d36.ba7f6",
-        "name": "",
-        "group": "b0884adc.7533a8",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "{{payload}}",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "{{background}}",
-        "icon": "{{icon}}",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "",
-        "x": 1210,
-        "y": 400,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "f472fecb.86568",
-        "type": "change",
-        "z": "c7f9390d.cde5e8",
-        "g": "7713f4e6.d2aacc",
-        "name": "Reference - Kramer Commands",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"bdate\":\"#BUILD-DATE?\\r\\n\",\"model\":\"#MODEL?\\r\\n\",\"version\":\"#VERSION?\\r\\n\",\"protver\":\"#PROT-VER?\\r\\n\",\"status\":\"#BUILD-DATE?|MODEL?|#VERSION?|#PROT-VER?\\r\\n\",\"centrePrg\":\"#VID in>out|VID 6>2\\r\\n\",\"centreAux\":\"#VID in>out|VID 7>2\\r\\n\",\"centreNorm\":\"#VID in>out|VID 2>2\\r\\n\",\"LNvmAux\":\"#VID in>out||VID 7>7|VID 7>8\\r\\n\",\"LNvmPgm\":\"#VID in>out||VID 6>7|VID 6>8\\r\\n\",\"LNms\":\"#VID in>out||VID 5>7|VID 5>8\\r\\n\",\"centrems\":\"#VID in>out|VID 5>2\\r\\n\",\"AC_CDWU0009\":\"#VID in>out||VID 5>1|VID 5>3\\r\\n\",\"AC_CDMUA001\":\"#VID in>out||VID 1>1|VID 3>3\\r\\n\",\"rear_CDWU0009\":\"#VID in>out||VID 5>4\\r\\n\",\"rear_CDMUA001\":\"#VID in>out||VID 4>4\\r\\n\"}",
-                "tot": "json"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 170,
-        "y": 1060,
-        "wires": [
             []
         ]
     },
@@ -12460,8 +12114,8 @@
         "out": "time",
         "splitc": "250",
         "name": "Talk to Matrix ",
-        "x": 640,
-        "y": 1240,
+        "x": 140,
+        "y": 1460,
         "wires": [
             [
                 "ec8567eb.bb60c8",
@@ -12496,8 +12150,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 610,
-        "y": 1140,
+        "x": 650,
+        "y": 1360,
         "wires": [
             [
                 "c429c25d.85b76",
@@ -12560,8 +12214,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 310,
-        "y": 1340,
+        "x": 330,
+        "y": 1280,
         "wires": [
             [
                 "7f9f7c4b.c7c6c4"
@@ -12595,8 +12249,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 310,
-        "y": 1380,
+        "x": 330,
+        "y": 1320,
         "wires": [
             [
                 "7f9f7c4b.c7c6c4"
@@ -12630,8 +12284,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 340,
-        "y": 1420,
+        "x": 360,
+        "y": 1360,
         "wires": [
             [
                 "7f9f7c4b.c7c6c4"
@@ -12666,7 +12320,7 @@
         "to": "",
         "reg": false,
         "x": 320,
-        "y": 1180,
+        "y": 1240,
         "wires": [
             [
                 "7f9f7c4b.c7c6c4"
@@ -12696,7 +12350,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 110,
-        "y": 1180,
+        "y": 1240,
         "wires": [
             [
                 "7c13464f.c42cc8"
@@ -12725,8 +12379,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 130,
-        "y": 1340,
+        "x": 110,
+        "y": 1280,
         "wires": [
             [
                 "7b34e546.49c34c"
@@ -12755,8 +12409,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 130,
-        "y": 1380,
+        "x": 110,
+        "y": 1320,
         "wires": [
             [
                 "c83d7d4a.04531"
@@ -12785,8 +12439,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 140,
-        "y": 1420,
+        "x": 120,
+        "y": 1360,
         "wires": [
             [
                 "938e36f5.0e6ee8"
@@ -12808,8 +12462,8 @@
         "newline": "",
         "topic": "",
         "base64": false,
-        "x": 100,
-        "y": 1920,
+        "x": 120,
+        "y": 2360,
         "wires": [
             [
                 "9df6af52.95b53",
@@ -12828,8 +12482,8 @@
         "base64": false,
         "end": false,
         "name": "",
-        "x": 310,
-        "y": 1920,
+        "x": 330,
+        "y": 2360,
         "wires": []
     },
     {
@@ -12846,26 +12500,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 270,
-        "y": 1980,
-        "wires": []
-    },
-    {
-        "id": "33524b6.1dea8b4",
-        "type": "debug",
-        "z": "c7f9390d.cde5e8",
-        "g": "7713f4e6.d2aacc",
-        "name": "version Output",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1340,
-        "y": 1300,
+        "x": 290,
+        "y": 2420,
         "wires": []
     },
     {
@@ -12873,7 +12509,7 @@
         "type": "debug",
         "z": "c7f9390d.cde5e8",
         "g": "7713f4e6.d2aacc",
-        "name": "model Output",
+        "name": "Device Diagnostic Output",
         "active": true,
         "tosidebar": true,
         "console": false,
@@ -12882,8 +12518,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1320,
-        "y": 1260,
+        "x": 810,
+        "y": 1500,
         "wires": []
     },
     {
@@ -12930,9 +12566,7 @@
         "z": "c7f9390d.cde5e8",
         "g": "c2b73d36.ba7f6",
         "name": "Response from Matrix",
-        "links": [
-            "cc8df114.81462"
-        ],
+        "links": [],
         "x": 575,
         "y": 420,
         "wires": [
@@ -12940,42 +12574,6 @@
                 "3e377a65.711616"
             ]
         ]
-    },
-    {
-        "id": "f0abc614.9df3c8",
-        "type": "change",
-        "z": "c7f9390d.cde5e8",
-        "g": "7713f4e6.d2aacc",
-        "name": "Query Current Routing",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "#VID? 1",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "routingquery",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 340,
-        "y": 1140,
-        "wires": [
-            [
-                "7f9f7c4b.c7c6c4"
-            ]
-        ],
-        "info": "#ROUTE? 1,*\\r\\n\n\nIntended to query the routing of the video layer ... #1. All outputs."
     },
     {
         "id": "40060b8d.30add4",
@@ -12992,7 +12590,7 @@
                 "vt": "str"
             }
         ],
-        "repeat": "30",
+        "repeat": "15",
         "crontab": "",
         "once": true,
         "onceDelay": "0.2",
@@ -13000,7 +12598,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 140,
-        "y": 1140,
+        "y": 1200,
         "wires": [
             [
                 "c3c4a4a8.1f5b18"
@@ -13029,8 +12627,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 110,
-        "y": 1720,
+        "x": 130,
+        "y": 2160,
         "wires": [
             [
                 "a57488a3.659bb8",
@@ -13065,8 +12663,8 @@
             }
         ],
         "active": false,
-        "x": 890,
-        "y": 1660,
+        "x": 910,
+        "y": 2100,
         "wires": []
     },
     {
@@ -13096,8 +12694,8 @@
             }
         ],
         "active": false,
-        "x": 890,
-        "y": 1700,
+        "x": 910,
+        "y": 2140,
         "wires": []
     },
     {
@@ -13114,8 +12712,8 @@
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 900,
-        "y": 1800,
+        "x": 920,
+        "y": 2240,
         "wires": []
     },
     {
@@ -13129,8 +12727,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 280,
-        "y": 1780,
+        "x": 300,
+        "y": 2220,
         "wires": [
             [
                 "84754912.574398"
@@ -13148,8 +12746,8 @@
         "start": "",
         "inout": "out",
         "property": "payload",
-        "x": 420,
-        "y": 1780,
+        "x": 440,
+        "y": 2220,
         "wires": [
             [
                 "b6791e07.04a96"
@@ -13306,8 +12904,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 3,
-        "x": 640,
-        "y": 1680,
+        "x": 660,
+        "y": 2120,
         "wires": [
             [
                 "e6627d9.813a78"
@@ -13339,8 +12937,8 @@
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 900,
-        "y": 1740,
+        "x": 920,
+        "y": 2180,
         "wires": []
     },
     {
@@ -13363,8 +12961,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 300,
-        "y": 1680,
+        "x": 320,
+        "y": 2120,
         "wires": [
             [
                 "795cc935.803968"
@@ -13382,8 +12980,8 @@
         "start": "",
         "inout": "out",
         "property": "payload",
-        "x": 470,
-        "y": 1680,
+        "x": 490,
+        "y": 2120,
         "wires": [
             [
                 "183b053a.8ec69b"
@@ -15810,8 +15408,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 130,
-        "y": 1820,
+        "x": 150,
+        "y": 2260,
         "wires": [
             [
                 "95c66e65.3594d"
@@ -15829,8 +15427,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 280,
-        "y": 1820,
+        "x": 300,
+        "y": 2260,
         "wires": [
             [
                 "b6791e07.04a96"
@@ -19281,7 +18879,7 @@
             "3e6979c2.b32606"
         ],
         "x": 835,
-        "y": 200,
+        "y": 240,
         "wires": []
     },
     {
@@ -19976,7 +19574,6 @@
         "y": 240,
         "wires": [
             [
-                "52be43b8.fdbd6c",
                 "38349be8.251e54"
             ]
         ]
@@ -20261,7 +19858,7 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 820,
+        "x": 480,
         "y": 100,
         "wires": [
             []
@@ -20272,9 +19869,9 @@
         "type": "comment",
         "z": "c7f9390d.cde5e8",
         "g": "c2b73d36.ba7f6",
-        "name": "Button Array on separate tab",
+        "name": "The Button array logic is on separate tab",
         "info": "",
-        "x": 400,
+        "x": 220,
         "y": 60,
         "wires": []
     },
@@ -20351,7 +19948,7 @@
         "z": "c7f9390d.cde5e8",
         "g": "7713f4e6.d2aacc",
         "name": "Peek at Command to Matrix",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -20359,8 +19956,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 840,
-        "y": 1060,
+        "x": 820,
+        "y": 1300,
         "wires": []
     },
     {
@@ -20375,7 +19972,7 @@
         "initialize": "",
         "finalize": "",
         "x": 320,
-        "y": 1100,
+        "y": 1200,
         "wires": [
             [
                 "7f9f7c4b.c7c6c4"
@@ -20393,8 +19990,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 670,
-        "y": 1300,
+        "x": 150,
+        "y": 1520,
         "wires": [
             [
                 "398747d.dff9db8"
@@ -20407,7 +20004,7 @@
         "z": "c7f9390d.cde5e8",
         "g": "7713f4e6.d2aacc",
         "name": "Matrix Output as string",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -20415,8 +20012,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 690,
-        "y": 1340,
+        "x": 170,
+        "y": 1560,
         "wires": []
     },
     {
@@ -20431,8 +20028,8 @@
         "arraySpltType": "len",
         "stream": false,
         "addname": "",
-        "x": 920,
-        "y": 1240,
+        "x": 360,
+        "y": 1460,
         "wires": [
             [
                 "d8be1ec7.c7f9f"
@@ -20445,7 +20042,7 @@
         "z": "c7f9390d.cde5e8",
         "g": "7713f4e6.d2aacc",
         "name": "Individual Response Messages",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -20453,8 +20050,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1250,
-        "y": 1200,
+        "x": 670,
+        "y": 1460,
         "wires": []
     },
     {
@@ -20469,7 +20066,7 @@
         "initialize": "",
         "finalize": "",
         "x": 610,
-        "y": 1100,
+        "y": 1160,
         "wires": [
             [
                 "878bd516.9bcf28"
@@ -20487,8 +20084,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 970,
-        "y": 1280,
+        "x": 410,
+        "y": 1500,
         "wires": [
             [
                 "b8cd2fdb.32868",
@@ -20508,8 +20105,8 @@
         "arraySpltType": "len",
         "stream": false,
         "addname": "",
-        "x": 1070,
-        "y": 1320,
+        "x": 390,
+        "y": 1540,
         "wires": [
             [
                 "f7bf08ca.a4f0e8"
@@ -20551,30 +20148,36 @@
                 "vt": "str"
             },
             {
+                "t": "eq",
+                "v": "",
+                "vt": "str"
+            },
+            {
                 "t": "else"
             }
         ],
         "checkall": "true",
         "repair": false,
-        "outputs": 6,
-        "x": 1090,
-        "y": 1400,
+        "outputs": 7,
+        "x": 590,
+        "y": 1600,
         "wires": [
             [
                 "2b290c23.111574"
             ],
             [
-                "33524b6.1dea8b4"
+                "2b290c23.111574"
             ],
             [
-                "5a4f5dc1.be4e64"
+                "2b290c23.111574"
             ],
             [
-                "e645fb47.1010a8"
+                "2b290c23.111574"
             ],
             [
                 "124a48e8.9b73d7"
             ],
+            [],
             [
                 "ed4b52cd.4adb2"
             ]
@@ -20585,6 +20188,7 @@
             "PROT-VER",
             "MODEL",
             "VID",
+            "empty string",
             ""
         ]
     },
@@ -20602,44 +20206,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1050,
-        "y": 1480,
-        "wires": []
-    },
-    {
-        "id": "5a4f5dc1.be4e64",
-        "type": "debug",
-        "z": "c7f9390d.cde5e8",
-        "g": "7713f4e6.d2aacc",
-        "name": "prot-ver Output",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1360,
-        "y": 1340,
-        "wires": []
-    },
-    {
-        "id": "e645fb47.1010a8",
-        "type": "debug",
-        "z": "c7f9390d.cde5e8",
-        "g": "7713f4e6.d2aacc",
-        "name": "Model Output",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1380,
-        "y": 1380,
+        "x": 590,
+        "y": 1680,
         "wires": []
     },
     {
@@ -20648,13 +20216,13 @@
         "z": "c7f9390d.cde5e8",
         "g": "7713f4e6.d2aacc",
         "name": "Extract mapping",
-        "func": "var inmsg = msg.payload;\n\nvar greater = inmsg.substr(8, 1);\n\nif (greater != \">\") throw \"Video routing format error. Received\" + inmsg;\n\nvar input = inmsg.substr(7, 1);\nvar output = inmsg.substr(9, 1);\n\nmsg = { \"payload\" : input,\n        \"topic\"   : output\n}\n \nreturn msg;",
+        "func": "var inmsg = msg.payload; //Expected message example \"@VID 4>3\"\n\nvar greater = inmsg.substr(6, 1);\n\nif (greater != \">\") \n    throw \"Video routing format error. Received\" + inmsg;\n\nvar input = inmsg.substr(5, 1);\nvar output = inmsg.substr(7, 1);\n\nmsg = { \"payload\" : input,\n        \"topic\"   : output\n}\n \nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 1390,
-        "y": 1460,
+        "x": 800,
+        "y": 1620,
         "wires": [
             [
                 "8adb03d5.efa5e"
@@ -20665,7 +20233,7 @@
         "id": "8adb03d5.efa5e",
         "type": "switch",
         "z": "c7f9390d.cde5e8",
-        "g": "7713f4e6.d2aacc",
+        "g": "22d220a4.a89f5",
         "name": "Route to Rows",
         "property": "topic",
         "propertyType": "msg",
@@ -20717,8 +20285,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 9,
-        "x": 1600,
-        "y": 1460,
+        "x": 1080,
+        "y": 1700,
         "wires": [
             [
                 "24bf355f.50d85a"
@@ -20753,7 +20321,7 @@
         "id": "685963e9.42f61c",
         "type": "debug",
         "z": "c7f9390d.cde5e8",
-        "g": "7713f4e6.d2aacc",
+        "g": "22d220a4.a89f5",
         "name": "Failed to map to row",
         "active": true,
         "tosidebar": true,
@@ -20763,112 +20331,123 @@
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 1640,
-        "y": 1560,
+        "x": 1040,
+        "y": 1800,
         "wires": []
     },
     {
         "id": "24bf355f.50d85a",
         "type": "link out",
         "z": "c7f9390d.cde5e8",
-        "g": "7713f4e6.d2aacc",
+        "g": "22d220a4.a89f5",
         "name": "Send to Row X",
         "links": [
             "c0e5caaf.749dc8"
         ],
-        "x": 1755,
-        "y": 1320,
+        "x": 1275,
+        "y": 1580,
         "wires": []
     },
     {
         "id": "7b68eabe.18fdb4",
         "type": "link out",
         "z": "c7f9390d.cde5e8",
-        "g": "7713f4e6.d2aacc",
+        "g": "22d220a4.a89f5",
         "name": "Send to Row X",
         "links": [
             "8cbbb4d9.cd5c88"
         ],
-        "x": 1775,
-        "y": 1360,
+        "x": 1275,
+        "y": 1620,
         "wires": []
     },
     {
         "id": "1295367c.47dc0a",
         "type": "link out",
         "z": "c7f9390d.cde5e8",
-        "g": "7713f4e6.d2aacc",
+        "g": "22d220a4.a89f5",
         "name": "Send to Row X",
         "links": [
             "8101e52d.3ce748"
         ],
-        "x": 1795,
-        "y": 1400,
+        "x": 1275,
+        "y": 1660,
         "wires": []
     },
     {
         "id": "7a598a27.ce6aa4",
         "type": "link out",
         "z": "c7f9390d.cde5e8",
-        "g": "7713f4e6.d2aacc",
+        "g": "22d220a4.a89f5",
         "name": "Send to Row X",
         "links": [
             "bb16f573.2a3388"
         ],
-        "x": 1815,
-        "y": 1440,
+        "x": 1275,
+        "y": 1700,
         "wires": []
     },
     {
         "id": "1edc6aed.02e925",
         "type": "link out",
         "z": "c7f9390d.cde5e8",
-        "g": "7713f4e6.d2aacc",
+        "g": "22d220a4.a89f5",
         "name": "Send to Row X",
         "links": [
             "ef3062f9.96069"
         ],
-        "x": 1835,
-        "y": 1480,
+        "x": 1275,
+        "y": 1740,
         "wires": []
     },
     {
         "id": "222cbc8e.30af44",
         "type": "link out",
         "z": "c7f9390d.cde5e8",
-        "g": "7713f4e6.d2aacc",
+        "g": "22d220a4.a89f5",
         "name": "Send to Row X",
         "links": [
             "a7cc23c8.fb4da"
         ],
-        "x": 1855,
-        "y": 1520,
+        "x": 1275,
+        "y": 1780,
         "wires": []
     },
     {
         "id": "aaae572d.129018",
         "type": "link out",
         "z": "c7f9390d.cde5e8",
-        "g": "7713f4e6.d2aacc",
+        "g": "22d220a4.a89f5",
         "name": "Send to Row X",
         "links": [
             "10a78dde.b44f42"
         ],
-        "x": 1875,
-        "y": 1560,
+        "x": 1275,
+        "y": 1820,
         "wires": []
     },
     {
         "id": "c210a695.620208",
         "type": "link out",
         "z": "c7f9390d.cde5e8",
-        "g": "7713f4e6.d2aacc",
+        "g": "22d220a4.a89f5",
         "name": "Send to Row X",
         "links": [
             "f1651b61.ce4238"
         ],
-        "x": 1895,
-        "y": 1600,
+        "x": 1275,
+        "y": 1860,
+        "wires": []
+    },
+    {
+        "id": "6ff199d5.a8fcb8",
+        "type": "comment",
+        "z": "c7f9390d.cde5e8",
+        "g": "c2b73d36.ba7f6",
+        "name": "TODO - dead end logic",
+        "info": "There is logic here to remove redundant messages. Not currently used and not sure if I will want to wire it back in or not yet.",
+        "x": 820,
+        "y": 360,
         "wires": []
     }
 ]
