@@ -20155,7 +20155,7 @@
                 "vt": "str"
             },
             {
-                "t": "eq",
+                "t": "cont",
                 "v": "Welcome to VS88-DT Control.",
                 "vt": "str"
             },
@@ -20223,7 +20223,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 590,
-        "y": 1680,
+        "y": 1700,
         "wires": []
     },
     {
