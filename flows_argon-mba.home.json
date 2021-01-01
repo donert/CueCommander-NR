@@ -481,11 +481,12 @@
             "7d64263a.10eef8",
             "1915aec1.fb8071",
             "26553768.96f598",
-            "73f55a1a.68b884"
+            "73f55a1a.68b884",
+            "74e50c6a.efaeb4"
         ],
         "x": 34,
         "y": 173,
-        "w": 852,
+        "w": 1042,
         "h": 454
     },
     {
@@ -8126,7 +8127,8 @@
         "y": 380,
         "wires": [
             [
-                "26553768.96f598"
+                "26553768.96f598",
+                "74e50c6a.efaeb4"
             ]
         ]
     },
@@ -11148,7 +11150,7 @@
                 "p": "port",
                 "pt": "msg",
                 "to": "proj1_port",
-                "tot": "str"
+                "tot": "flow"
             }
         ],
         "action": "",
@@ -11183,7 +11185,7 @@
                 "p": "port",
                 "pt": "msg",
                 "to": "proj2_port",
-                "tot": "str"
+                "tot": "flow"
             }
         ],
         "action": "",
@@ -11218,7 +11220,7 @@
                 "p": "port",
                 "pt": "msg",
                 "to": "proj3_port",
-                "tot": "str"
+                "tot": "flow"
             }
         ],
         "action": "",
@@ -20462,6 +20464,24 @@
         "info": "There is logic here to remove redundant messages. Not currently used and not sure if I will want to wire it back in or not yet.",
         "x": 820,
         "y": 360,
+        "wires": []
+    },
+    {
+        "id": "74e50c6a.efaeb4",
+        "type": "debug",
+        "z": "17ca131.e488ced",
+        "g": "2a5510d0.88b28",
+        "name": "JOint reponse from Projectors",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 900,
+        "y": 340,
         "wires": []
     }
 ]
