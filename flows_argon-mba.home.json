@@ -544,12 +544,13 @@
             "5f95eb17.76edb4",
             "ed99bc7b.e0c6e",
             "9223dc40.cd804",
-            "2d020fb4.2fd23"
+            "2d020fb4.2fd23",
+            "d7653fa1.bf7e4"
         ],
         "x": 54,
-        "y": 19,
-        "w": 662,
-        "h": 202
+        "y": -1,
+        "w": 882,
+        "h": 222
     },
     {
         "id": "5c5e0515.ea0e2c",
@@ -21276,7 +21277,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 540,
+        "x": 760,
         "y": 100,
         "wires": [
             [
@@ -21311,7 +21312,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 520,
+        "x": 740,
         "y": 60,
         "wires": [
             [
@@ -21346,7 +21347,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 540,
+        "x": 760,
         "y": 140,
         "wires": [
             [
@@ -21381,7 +21382,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 540,
+        "x": 760,
         "y": 180,
         "wires": [
             [
@@ -21398,7 +21399,7 @@
         "links": [
             "846bf1bd.3fb21"
         ],
-        "x": 675,
+        "x": 895,
         "y": 120,
         "wires": []
     },
@@ -21413,7 +21414,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "(msg.payload = \"0\") ? \"Off\" : \"On\"",
+                "to": "(msg.payload = 0) ? \"Off\" : \"On\"",
                 "tot": "jsonata"
             }
         ],
@@ -21441,7 +21442,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "(msg.payload = \"0\") ? \"Off\" : \"On\"",
+                "to": "(msg.payload = 0) ? \"Off\" : \"On\"",
                 "tot": "jsonata"
             }
         ],
@@ -21469,7 +21470,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "(msg.payload = \"0\") ? \"Off\" : \"On\"",
+                "to": "(msg.payload = 0) ? \"Off\" : \"On\"",
                 "tot": "jsonata"
             }
         ],
@@ -21493,8 +21494,8 @@
         "g": "74d2eb49.51fe34",
         "name": "",
         "pauseType": "delay",
-        "timeout": "10",
-        "timeoutUnits": "seconds",
+        "timeout": "1",
+        "timeoutUnits": "minutes",
         "rate": "1",
         "nbRateUnits": "1",
         "rateUnits": "second",
@@ -21504,6 +21505,31 @@
         "drop": false,
         "x": 280,
         "y": 60,
+        "wires": [
+            [
+                "8feb0f13.81a46",
+                "d7653fa1.bf7e4"
+            ]
+        ]
+    },
+    {
+        "id": "d7653fa1.bf7e4",
+        "type": "delay",
+        "z": "17ca131.e488ced",
+        "g": "74d2eb49.51fe34",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "minutes",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 460,
+        "y": 40,
         "wires": [
             [
                 "8feb0f13.81a46"
