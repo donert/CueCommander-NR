@@ -2360,9 +2360,9 @@
             "380817e7.0d4d58"
         ],
         "x": 1454,
-        "y": 339,
-        "w": 572,
-        "h": 262
+        "y": 359,
+        "w": 512,
+        "h": 202
     },
     {
         "id": "b36c9a8b.092df8",
@@ -22518,8 +22518,8 @@
         ],
         "outputs": 0,
         "cts": false,
-        "x": 1880,
-        "y": 560,
+        "x": 1860,
+        "y": 460,
         "wires": []
     },
     {
@@ -22528,13 +22528,13 @@
         "z": "17ca131.e488ced",
         "g": "bb661aa6.08f608",
         "name": "Retrieve from flow and format",
-        "func": "msg = { \"payload\": [  \n              {\"projector\":  \"1\",\n                \"name\":      flow.get(\"ps_1_name\"),\n                \"lamp\":      flow.get(\"ps_1_lamp\"),\n                \"power\":     \"0\",\n                \"powercolour\": \"#FF0000\"\n              } ,\n              {\"projector\":  \"2\",\n                \"name\":      flow.get(\"ps_2_name\"),\n                \"lamp\":      flow.get(\"ps_2_lamp\"),\n                \"power\":     \"0\",\n                \"powercolour\": \"#FF0000\"\n              } ,\n               {\"projector\":  \"3\",\n                \"name\":      flow.get(\"ps_3_name\"),\n                \"lamp\":      flow.get(\"ps_3_lamp\"),\n                \"power\":     \"1\",\n                \"powercolour\": \"#00FF00\"\n              }\n]\n}\n\nreturn  msg ;",
+        "func": "off_colour = \"#FF0000\";\non_colour  = \"#00FF00\";\n\nmsg = { \"payload\": [  \n              {\"projector\":  \"1\",\n                \"name\":      flow.get(\"ps_1_name\"),\n                \"lamp\":      flow.get(\"ps_1_lamp\"),\n                \"power\":     flow.get(\"ps_1_power\"),\n                \"powercolour\": (flow.get(\"ps_1_power\") == \"Off\" ? off_colour : on_colour) \n              } ,\n              {\"projector\":  \"2\",\n                \"name\":      flow.get(\"ps_2_name\"),\n                \"lamp\":      flow.get(\"ps_2_lamp\"),                 \n                \"power\":     flow.get(\"ps_2_power\"),                \n                \"powercolour\": (flow.get(\"ps_2_power\") == \"Off\" ? off_colour : on_colour)\n              } ,\n               {\"projector\":  \"3\",\n                \"name\":      flow.get(\"ps_3_name\"),\n                \"lamp\":      flow.get(\"ps_3_lamp\"),\n                \"power\":     flow.get(\"ps_3_power\"),\n                \"powercolour\": (flow.get(\"ps_3_power\") == \"Off\" ? off_colour : on_colour)\n              }\n]\n}\n\nreturn  msg ;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "x": 1610,
-        "y": 560,
+        "y": 460,
         "wires": [
             [
                 "4e318fff.2f414",
@@ -22566,13 +22566,13 @@
         "z": "17ca131.e488ced",
         "g": "bb661aa6.08f608",
         "name": "save to flow context",
-        "func": "//msg.key identifies projector: prj1, prj2 etc\n//msg.topic is parameter\n\n\nswitch(msg.key) {\n  case \"prj1\":\n    prj = \"1\";\n    break;\n  case \"prj2\":\n    prj = \"2\";\n    break;\n  case \"prj3\":\n    prj = \"3\";\n    break;    \n  default:\n    prj = \"?\";\n}\n\nswitch(msg.topic) {\n    case \"getlamps\":\n        key = \"lamp\"\n        val = msg.payload[0].hours ;\n        break;\n    case \"getpowerstate\":\n        key= \"power\"\n        val = (msg.payload == \"0\" ? \"Off\" : \"On\");\n        break;\n    default:\n        key = \"unknown\"\n        val = \"?\"\n}\n  \nfk = \"ps_\" + String(prj) + \"_\" + key\nfv = val\n\nflow.set(fk,fv)\n\nreturn msg;",
+        "func": "//msg.key identifies projector: prj1, prj2 etc\n//msg.topic is parameter\n\n\nswitch(msg.key) {\n  case \"Prj1\":\n    prj = \"1\";\n    break;\n  case \"Prj2\":\n    prj = \"2\";\n    break;\n  case \"Prj3\":\n    prj = \"3\";\n    break;    \n  default:\n    prj = \"?\";\n}\n\nswitch(msg.topic) {\n    case \"getlamps\":\n        key = \"lamp\"\n        val = msg.payload[0].hours ;\n        break;\n    case \"getpowerstate\":\n        key= \"power\"\n        val = (msg.payload == 0  ? \"Off\" : \"On\");\n        break;\n    case \"getname\":\n        key= \"name\"\n        val = msg.payload  ;\n        break;        \n    default:\n        key = \"unknown\"\n        val = \"?\"\n}\n  \nfk = \"ps_\" + String(prj) + \"_\" + key\nfv = val\n\nflow.set(fk,fv)\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 1900,
-        "y": 380,
+        "x": 1580,
+        "y": 400,
         "wires": [
             [
                 "380817e7.0d4d58"
@@ -22595,8 +22595,8 @@
         "randomLast": "5",
         "randomUnits": "seconds",
         "drop": true,
-        "x": 1900,
-        "y": 440,
+        "x": 1800,
+        "y": 400,
         "wires": [
             [
                 "42d1f1dd.ed9e"
