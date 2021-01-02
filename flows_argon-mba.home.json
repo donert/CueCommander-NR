@@ -2948,7 +2948,7 @@
     {
         "id": "53a10c1c.b388c4",
         "type": "ui_group",
-        "name": "Projector Response Table",
+        "name": "Projector Status",
         "tab": "871ea368.15c4e",
         "order": 3,
         "disp": true,
@@ -21646,7 +21646,7 @@
             {
                 "field": "projector",
                 "title": "Projector",
-                "width": "10%",
+                "width": "",
                 "align": "left",
                 "formatter": "plaintext",
                 "formatterParams": {
@@ -21656,7 +21656,7 @@
             {
                 "field": "power",
                 "title": "Power",
-                "width": "10%",
+                "width": "",
                 "align": "left",
                 "formatter": "plaintext",
                 "formatterParams": {
@@ -21666,7 +21666,7 @@
             {
                 "field": "powercolour",
                 "title": "Power",
-                "width": "10%",
+                "width": "",
                 "align": "left",
                 "formatter": "color",
                 "formatterParams": {
@@ -21696,7 +21696,7 @@
             {
                 "field": "input",
                 "title": "Input",
-                "width": "10%",
+                "width": "",
                 "align": "left",
                 "formatter": "plaintext",
                 "formatterParams": {
@@ -21716,7 +21716,7 @@
         "z": "17ca131.e488ced",
         "g": "bb661aa6.08f608",
         "name": "Retrieve from flow and format",
-        "func": "off_colour = \"#FF0000\";\non_colour  = \"#00FF00\";\n\nmsg = { \"payload\": [  \n              {\"projector\":  \"1\",\n                \"name\":      flow.get(\"ps_1_name\"),\n                \"lamp\":      flow.get(\"ps_1_lamp\"),\n                \"power\":     flow.get(\"ps_1_power\"),\n                \"powercolour\": (flow.get(\"ps_1_power\") == \"Off\" ? off_colour : on_colour) \n              } ,\n              {\"projector\":  \"2\",\n                \"name\":      flow.get(\"ps_2_name\"),\n                \"lamp\":      flow.get(\"ps_2_lamp\"),                 \n                \"power\":     flow.get(\"ps_2_power\"),                \n                \"powercolour\": (flow.get(\"ps_2_power\") == \"Off\" ? off_colour : on_colour)\n              } ,\n               {\"projector\":  \"3\",\n                \"name\":      flow.get(\"ps_3_name\"),\n                \"lamp\":      flow.get(\"ps_3_lamp\"),\n                \"power\":     flow.get(\"ps_3_power\"),\n                \"powercolour\": (flow.get(\"ps_3_power\") == \"Off\" ? off_colour : on_colour)\n              }\n]\n}\n\nreturn  msg ;",
+        "func": "off_colour = \"#FF0000\";\non_colour  = \"#00FF00\";\n\nmsg = { \"payload\": [  \n              {\"projector\":  \"1\",\n                \"name\":      flow.get(\"ps_1_name\"),\n                \"lamp\":      flow.get(\"ps_1_lamp\"),\n                \"power\":     flow.get(\"ps_1_power\"),\n                \"input\":     flow.get(\"ps_1_input\"),\n                \"powercolour\": (flow.get(\"ps_1_power\") == \"Off\" ? off_colour : on_colour) \n              } ,\n              {\"projector\":  \"2\",\n                \"name\":      flow.get(\"ps_2_name\"),\n                \"lamp\":      flow.get(\"ps_2_lamp\"),                 \n                \"power\":     flow.get(\"ps_2_power\"),\n                \"input\":     flow.get(\"ps_2_input\"),                \n                \"powercolour\": (flow.get(\"ps_2_power\") == \"Off\" ? off_colour : on_colour)\n              } ,\n               {\"projector\":  \"3\",\n                \"name\":      flow.get(\"ps_3_name\"),\n                \"lamp\":      flow.get(\"ps_3_lamp\"),\n                \"power\":     flow.get(\"ps_3_power\"),\n                \"input\":     flow.get(\"ps_3_input\"),\n                \"powercolour\": (flow.get(\"ps_3_power\") == \"Off\" ? off_colour : on_colour)\n              }\n]\n}\n\nreturn  msg ;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
