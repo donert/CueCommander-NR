@@ -489,16 +489,15 @@
             "1915aec1.fb8071",
             "4e183078.6a513",
             "5045dcc0.9807c4",
-            "cbd41535.6363d8",
             "52ea93f7.420e6c",
             "826797b8.63f2f8",
             "b48ec8cd.0548d8",
             "2af2b4ee.de636c"
         ],
         "x": 54,
-        "y": 233,
-        "w": 1378,
-        "h": 534
+        "y": 239,
+        "w": 762,
+        "h": 528
     },
     {
         "id": "65220297.8c588c",
@@ -2186,50 +2185,6 @@
         "h": 362
     },
     {
-        "id": "cbd41535.6363d8",
-        "type": "group",
-        "z": "17ca131.e488ced",
-        "g": "2a5510d0.88b28",
-        "style": {
-            "stroke": "#999999",
-            "stroke-opacity": "1",
-            "fill": "none",
-            "fill-opacity": "1",
-            "label": true,
-            "label-position": "nw",
-            "color": "#a4a4a4"
-        },
-        "nodes": [
-            "5bde9fce.f908e",
-            "b43a9d2a.9a1a2",
-            "1212e854.6711b8",
-            "81b4a9df.db79f8",
-            "578207b4.907098",
-            "44c0f6a6.81c808",
-            "45593342.ca1d9c",
-            "4a6e839a.d0766c",
-            "fa66e21c.9c141",
-            "7c73d882.243798",
-            "844642d0.f48db",
-            "7b59aa7b.a951d4",
-            "e189c9c7.90a138",
-            "259d09d9.1d8bc6",
-            "91a42731.c3fef8",
-            "2918fb8b.7713a4",
-            "14195bfe.a16064",
-            "caa31cf9.7da75",
-            "b15629b.adab2d8",
-            "d6ced93d.2c7b88",
-            "f8c2569c.622e98",
-            "ad5aed01.55ca1",
-            "d2be559f.cbcea8"
-        ],
-        "x": 794,
-        "y": 259,
-        "w": 612,
-        "h": 482
-    },
-    {
         "id": "eec2fe41.6fc47",
         "type": "group",
         "z": "64cbf871.f282f8",
@@ -2359,8 +2314,8 @@
             "851b5714.714348",
             "380817e7.0d4d58"
         ],
-        "x": 1454,
-        "y": 359,
+        "x": 1054,
+        "y": 339,
         "w": 512,
         "h": 202
     },
@@ -19676,19 +19631,11 @@
         "x": 690,
         "y": 340,
         "wires": [
-            [
-                "45593342.ca1d9c"
-            ],
             [],
-            [
-                "d6ced93d.2c7b88"
-            ],
-            [
-                "259d09d9.1d8bc6"
-            ],
-            [
-                "ad5aed01.55ca1"
-            ]
+            [],
+            [],
+            [],
+            []
         ],
         "outputLabels": [
             "lamps",
@@ -19697,142 +19644,6 @@
             "name",
             "power"
         ]
-    },
-    {
-        "id": "45593342.ca1d9c",
-        "type": "ui_text",
-        "z": "17ca131.e488ced",
-        "g": "cbd41535.6363d8",
-        "group": "3d999ade.1f4f76",
-        "order": 14,
-        "width": "3",
-        "height": "1",
-        "name": "p1lamp",
-        "label": "",
-        "format": "{{msg.payload[0].hours}}",
-        "layout": "row-spread",
-        "x": 1040,
-        "y": 380,
-        "wires": []
-    },
-    {
-        "id": "4a6e839a.d0766c",
-        "type": "ui_text",
-        "z": "17ca131.e488ced",
-        "g": "cbd41535.6363d8",
-        "group": "3d999ade.1f4f76",
-        "order": 13,
-        "width": "3",
-        "height": "1",
-        "name": "row.lamp",
-        "label": "Lamp Hours",
-        "format": "",
-        "layout": "row-spread",
-        "x": 880,
-        "y": 380,
-        "wires": []
-    },
-    {
-        "id": "b43a9d2a.9a1a2",
-        "type": "ui_text",
-        "z": "17ca131.e488ced",
-        "g": "cbd41535.6363d8",
-        "group": "3d999ade.1f4f76",
-        "order": 2,
-        "width": "3",
-        "height": "1",
-        "name": "p1head",
-        "label": "",
-        "format": "Prj 1",
-        "layout": "row-spread",
-        "x": 1040,
-        "y": 300,
-        "wires": []
-    },
-    {
-        "id": "5bde9fce.f908e",
-        "type": "ui_text",
-        "z": "17ca131.e488ced",
-        "g": "cbd41535.6363d8",
-        "group": "3d999ade.1f4f76",
-        "order": 1,
-        "width": "3",
-        "height": "1",
-        "name": "corner",
-        "label": "",
-        "format": "",
-        "layout": "row-spread",
-        "x": 870,
-        "y": 300,
-        "wires": []
-    },
-    {
-        "id": "1212e854.6711b8",
-        "type": "ui_text",
-        "z": "17ca131.e488ced",
-        "g": "cbd41535.6363d8",
-        "group": "3d999ade.1f4f76",
-        "order": 3,
-        "width": "3",
-        "height": "1",
-        "name": "p2head",
-        "label": "",
-        "format": "Prj 2",
-        "layout": "row-spread",
-        "x": 1180,
-        "y": 300,
-        "wires": []
-    },
-    {
-        "id": "81b4a9df.db79f8",
-        "type": "ui_text",
-        "z": "17ca131.e488ced",
-        "g": "cbd41535.6363d8",
-        "group": "3d999ade.1f4f76",
-        "order": 4,
-        "width": "3",
-        "height": "1",
-        "name": "p3head",
-        "label": "",
-        "format": "Prj 3",
-        "layout": "row-spread",
-        "x": 1320,
-        "y": 300,
-        "wires": []
-    },
-    {
-        "id": "44c0f6a6.81c808",
-        "type": "ui_text",
-        "z": "17ca131.e488ced",
-        "g": "cbd41535.6363d8",
-        "group": "3d999ade.1f4f76",
-        "order": 15,
-        "width": "3",
-        "height": "1",
-        "name": "p2lamp",
-        "label": "",
-        "format": "{{msg.payload[0].hours}}",
-        "layout": "row-spread",
-        "x": 1180,
-        "y": 380,
-        "wires": []
-    },
-    {
-        "id": "578207b4.907098",
-        "type": "ui_text",
-        "z": "17ca131.e488ced",
-        "g": "cbd41535.6363d8",
-        "group": "3d999ade.1f4f76",
-        "order": 16,
-        "width": "3",
-        "height": "1",
-        "name": "p3lamp",
-        "label": "",
-        "format": "{{msg.payload[0].hours}}",
-        "layout": "row-spread",
-        "x": 1320,
-        "y": 380,
-        "wires": []
     },
     {
         "id": "5045dcc0.9807c4",
@@ -19875,19 +19686,11 @@
         "x": 690,
         "y": 480,
         "wires": [
-            [
-                "44c0f6a6.81c808"
-            ],
             [],
-            [
-                "caa31cf9.7da75"
-            ],
-            [
-                "91a42731.c3fef8"
-            ],
-            [
-                "d2be559f.cbcea8"
-            ]
+            [],
+            [],
+            [],
+            []
         ],
         "outputLabels": [
             "lamps",
@@ -19938,19 +19741,11 @@
         "x": 690,
         "y": 620,
         "wires": [
-            [
-                "578207b4.907098"
-            ],
             [],
-            [
-                "b15629b.adab2d8"
-            ],
-            [
-                "2918fb8b.7713a4"
-            ],
-            [
-                "f8c2569c.622e98"
-            ]
+            [],
+            [],
+            [],
+            []
         ],
         "outputLabels": [
             "lamps",
@@ -19959,210 +19754,6 @@
             "name",
             "power"
         ]
-    },
-    {
-        "id": "fa66e21c.9c141",
-        "type": "ui_text",
-        "z": "17ca131.e488ced",
-        "g": "cbd41535.6363d8",
-        "group": "3d999ade.1f4f76",
-        "order": 9,
-        "width": "3",
-        "height": "1",
-        "name": "row.power",
-        "label": "Power",
-        "format": "",
-        "layout": "row-spread",
-        "x": 890,
-        "y": 480,
-        "wires": []
-    },
-    {
-        "id": "7c73d882.243798",
-        "type": "ui_text",
-        "z": "17ca131.e488ced",
-        "g": "cbd41535.6363d8",
-        "group": "3d999ade.1f4f76",
-        "order": 10,
-        "width": "3",
-        "height": "1",
-        "name": "p1pwr",
-        "label": "",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "x": 1030,
-        "y": 480,
-        "wires": []
-    },
-    {
-        "id": "844642d0.f48db",
-        "type": "ui_text",
-        "z": "17ca131.e488ced",
-        "g": "cbd41535.6363d8",
-        "group": "3d999ade.1f4f76",
-        "order": 11,
-        "width": "3",
-        "height": "1",
-        "name": "p2pwr",
-        "label": "",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "x": 1170,
-        "y": 480,
-        "wires": []
-    },
-    {
-        "id": "7b59aa7b.a951d4",
-        "type": "ui_text",
-        "z": "17ca131.e488ced",
-        "g": "cbd41535.6363d8",
-        "group": "3d999ade.1f4f76",
-        "order": 12,
-        "width": "3",
-        "height": "1",
-        "name": "p3pwr",
-        "label": "",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "x": 1310,
-        "y": 480,
-        "wires": []
-    },
-    {
-        "id": "e189c9c7.90a138",
-        "type": "ui_text",
-        "z": "17ca131.e488ced",
-        "g": "cbd41535.6363d8",
-        "group": "3d999ade.1f4f76",
-        "order": 5,
-        "width": "3",
-        "height": "1",
-        "name": "row.name",
-        "label": "Name",
-        "format": "",
-        "layout": "row-spread",
-        "x": 880,
-        "y": 600,
-        "wires": []
-    },
-    {
-        "id": "259d09d9.1d8bc6",
-        "type": "ui_text",
-        "z": "17ca131.e488ced",
-        "g": "cbd41535.6363d8",
-        "group": "3d999ade.1f4f76",
-        "order": 6,
-        "width": "3",
-        "height": "1",
-        "name": "p1name",
-        "label": "",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "x": 1040,
-        "y": 600,
-        "wires": []
-    },
-    {
-        "id": "91a42731.c3fef8",
-        "type": "ui_text",
-        "z": "17ca131.e488ced",
-        "g": "cbd41535.6363d8",
-        "group": "3d999ade.1f4f76",
-        "order": 7,
-        "width": "3",
-        "height": "1",
-        "name": "p2name",
-        "label": "",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "x": 1180,
-        "y": 600,
-        "wires": []
-    },
-    {
-        "id": "2918fb8b.7713a4",
-        "type": "ui_text",
-        "z": "17ca131.e488ced",
-        "g": "cbd41535.6363d8",
-        "group": "3d999ade.1f4f76",
-        "order": 8,
-        "width": "3",
-        "height": "1",
-        "name": "p3name",
-        "label": "",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "x": 1320,
-        "y": 600,
-        "wires": []
-    },
-    {
-        "id": "14195bfe.a16064",
-        "type": "ui_text",
-        "z": "17ca131.e488ced",
-        "g": "cbd41535.6363d8",
-        "group": "3d999ade.1f4f76",
-        "order": 17,
-        "width": "3",
-        "height": "1",
-        "name": "row.input",
-        "label": "Input",
-        "format": "",
-        "layout": "row-spread",
-        "x": 880,
-        "y": 700,
-        "wires": []
-    },
-    {
-        "id": "d6ced93d.2c7b88",
-        "type": "ui_text",
-        "z": "17ca131.e488ced",
-        "g": "cbd41535.6363d8",
-        "group": "3d999ade.1f4f76",
-        "order": 18,
-        "width": "3",
-        "height": "1",
-        "name": "p1input",
-        "label": "",
-        "format": "{{msg.payload.source}}",
-        "layout": "row-spread",
-        "x": 1040,
-        "y": 700,
-        "wires": []
-    },
-    {
-        "id": "caa31cf9.7da75",
-        "type": "ui_text",
-        "z": "17ca131.e488ced",
-        "g": "cbd41535.6363d8",
-        "group": "3d999ade.1f4f76",
-        "order": 19,
-        "width": "3",
-        "height": "1",
-        "name": "p2input",
-        "label": "",
-        "format": "{{msg.payload.source}}",
-        "layout": "row-spread",
-        "x": 1180,
-        "y": 700,
-        "wires": []
-    },
-    {
-        "id": "b15629b.adab2d8",
-        "type": "ui_text",
-        "z": "17ca131.e488ced",
-        "g": "cbd41535.6363d8",
-        "group": "3d999ade.1f4f76",
-        "order": 20,
-        "width": "3",
-        "height": "1",
-        "name": "p3input",
-        "label": "",
-        "format": "{{msg.payload.source}}",
-        "layout": "row-spread",
-        "x": 1320,
-        "y": 700,
-        "wires": []
     },
     {
         "id": "622ed375.02eb6c",
@@ -20653,90 +20244,6 @@
         "x": 895,
         "y": 120,
         "wires": []
-    },
-    {
-        "id": "f8c2569c.622e98",
-        "type": "change",
-        "z": "17ca131.e488ced",
-        "g": "cbd41535.6363d8",
-        "name": "translate",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "(msg.payload = 0) ? \"Off\" : \"On\"",
-                "tot": "jsonata"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1320,
-        "y": 440,
-        "wires": [
-            [
-                "7b59aa7b.a951d4"
-            ]
-        ]
-    },
-    {
-        "id": "ad5aed01.55ca1",
-        "type": "change",
-        "z": "17ca131.e488ced",
-        "g": "cbd41535.6363d8",
-        "name": "translate",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "(msg.payload = 0) ? \"Off\" : \"On\"",
-                "tot": "jsonata"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1040,
-        "y": 440,
-        "wires": [
-            [
-                "7c73d882.243798"
-            ]
-        ]
-    },
-    {
-        "id": "d2be559f.cbcea8",
-        "type": "change",
-        "z": "17ca131.e488ced",
-        "g": "cbd41535.6363d8",
-        "name": "translate",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "(msg.payload = 0) ? \"Off\" : \"On\"",
-                "tot": "jsonata"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1180,
-        "y": 440,
-        "wires": [
-            [
-                "844642d0.f48db"
-            ]
-        ]
     },
     {
         "id": "2d020fb4.2fd23",
@@ -21905,7 +21412,7 @@
         "y": 420,
         "wires": [
             [
-                "851b5714.714348"
+                "adeb0e6d.dc05b"
             ]
         ]
     },
@@ -21933,7 +21440,7 @@
         "y": 540,
         "wires": [
             [
-                "851b5714.714348"
+                "adeb0e6d.dc05b"
             ]
         ]
     },
@@ -21960,7 +21467,7 @@
         "y": 680,
         "wires": [
             [
-                "851b5714.714348"
+                "adeb0e6d.dc05b"
             ]
         ]
     },
@@ -22518,8 +22025,8 @@
         ],
         "outputs": 0,
         "cts": false,
-        "x": 1860,
-        "y": 460,
+        "x": 1460,
+        "y": 440,
         "wires": []
     },
     {
@@ -22533,8 +22040,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 1610,
-        "y": 460,
+        "x": 1210,
+        "y": 440,
         "wires": [
             [
                 "4e318fff.2f414",
@@ -22556,8 +22063,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1860,
-        "y": 520,
+        "x": 1460,
+        "y": 500,
         "wires": []
     },
     {
@@ -22571,8 +22078,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 1580,
-        "y": 400,
+        "x": 1180,
+        "y": 380,
         "wires": [
             [
                 "380817e7.0d4d58"
@@ -22595,12 +22102,66 @@
         "randomLast": "5",
         "randomUnits": "seconds",
         "drop": true,
-        "x": 1800,
-        "y": 400,
+        "x": 1400,
+        "y": 380,
         "wires": [
             [
                 "42d1f1dd.ed9e"
             ]
         ]
+    },
+    {
+        "id": "320b1f78.2913c",
+        "type": "debug",
+        "z": "17ca131.e488ced",
+        "name": "before Save",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "\"key:\" & msg.key & \". topic:\" & msg.topic & \". payload:\" & msg.payload",
+        "targetType": "jsonata",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1050,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "adeb0e6d.dc05b",
+        "type": "function",
+        "z": "17ca131.e488ced",
+        "name": "clone",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 930,
+        "y": 500,
+        "wires": [
+            [
+                "851b5714.714348",
+                "320b1f78.2913c",
+                "239ae29d.72b0ee"
+            ]
+        ]
+    },
+    {
+        "id": "239ae29d.72b0ee",
+        "type": "debug",
+        "z": "17ca131.e488ced",
+        "name": "before Save",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1071.25,
+        "y": 698.75,
+        "wires": []
     }
 ]
