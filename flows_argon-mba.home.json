@@ -490,8 +490,8 @@
         ],
         "x": 54,
         "y": 253,
-        "w": 618,
-        "h": 394
+        "w": 658,
+        "h": 414
     },
     {
         "id": "65220297.8c588c",
@@ -2002,12 +2002,13 @@
         "nodes": [
             "74fb71be.b2d3d",
             "325c0043.d752b",
-            "bf8d356c.2778a8"
+            "bf8d356c.2778a8",
+            "6557efe0.2d0cc"
         ],
         "x": 154,
         "y": 519,
-        "w": 492,
-        "h": 102
+        "w": 532,
+        "h": 122
     },
     {
         "id": "7d64263a.10eef8",
@@ -2021,12 +2022,13 @@
         "nodes": [
             "a52c29e3.5ad3d8",
             "c8b70477.28bed8",
-            "f39f4384.27a1f"
+            "f39f4384.27a1f",
+            "c8a86b97.8d6478"
         ],
         "x": 154,
         "y": 279,
-        "w": 492,
-        "h": 102
+        "w": 532,
+        "h": 122
     },
     {
         "id": "1915aec1.fb8071",
@@ -2040,12 +2042,13 @@
         "nodes": [
             "7884f8d7.a419b8",
             "d7608b57.c20f98",
-            "f9e1f11f.3513a"
+            "f9e1f11f.3513a",
+            "764c7ce9.9e2cc4"
         ],
         "x": 154,
         "y": 399,
-        "w": 492,
-        "h": 102
+        "w": 532,
+        "h": 122
     },
     {
         "id": "e5ab239c.cf84b",
@@ -2733,16 +2736,6 @@
         "order": 2,
         "width": "4",
         "height": 1
-    },
-    {
-        "id": "3d999ade.1f4f76",
-        "type": "ui_group",
-        "name": "Projector Responses",
-        "tab": "871ea368.15c4e",
-        "order": 4,
-        "disp": true,
-        "width": "12",
-        "collapse": false
     },
     {
         "id": "35d2ab16.4904c4",
@@ -4134,7 +4127,9 @@
             [
                 "f39f4384.27a1f"
             ],
-            []
+            [
+                "c8a86b97.8d6478"
+            ]
         ]
     },
     {
@@ -4375,7 +4370,9 @@
             [
                 "f9e1f11f.3513a"
             ],
-            []
+            [
+                "764c7ce9.9e2cc4"
+            ]
         ]
     },
     {
@@ -4392,7 +4389,9 @@
             [
                 "bf8d356c.2778a8"
             ],
-            []
+            [
+                "6557efe0.2d0cc"
+            ]
         ]
     },
     {
@@ -21640,8 +21639,8 @@
         "group": "53a10c1c.b388c4",
         "name": "Response Table",
         "order": 2,
-        "width": 0,
-        "height": 0,
+        "width": "12",
+        "height": "4",
         "columns": [
             {
                 "field": "projector",
@@ -21797,7 +21796,7 @@
         "z": "17ca131.e488ced",
         "g": "bb661aa6.08f608",
         "name": "before Save",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -21912,5 +21911,59 @@
                 "adeb0e6d.dc05b"
             ]
         ]
+    },
+    {
+        "id": "c8a86b97.8d6478",
+        "type": "debug",
+        "z": "17ca131.e488ced",
+        "g": "7d64263a.10eef8",
+        "name": "Projector 1 error",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "764c7ce9.9e2cc4",
+        "type": "debug",
+        "z": "17ca131.e488ced",
+        "g": "1915aec1.fb8071",
+        "name": "Projector 2 error",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "6557efe0.2d0cc",
+        "type": "debug",
+        "z": "17ca131.e488ced",
+        "g": "4fbff3b.762920c",
+        "name": "Projector 3 error",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 600,
+        "wires": []
     }
 ]
