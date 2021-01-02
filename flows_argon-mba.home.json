@@ -81,7 +81,7 @@
         "type": "tab",
         "label": "UI Playground",
         "disabled": false,
-        "info": ""
+        "info": "One possible future addition would be dante control. or at least R/O access to the dante config. Resources: \n - https://www.gearslutz.com/board/music-computers/1221989-dante-routing-without-dante-controller-possible.html"
     },
     {
         "id": "d96161cd.5d1f9",
@@ -484,7 +484,9 @@
             "5045dcc0.9807c4",
             "cbd41535.6363d8",
             "52ea93f7.420e6c",
-            "826797b8.63f2f8"
+            "826797b8.63f2f8",
+            "b48ec8cd.0548d8",
+            "2af2b4ee.de636c"
         ],
         "x": 54,
         "y": 233,
@@ -768,15 +770,17 @@
             "37322088.3ba2e",
             "5b30473.c871cb8",
             "e9166c51.0aa7b",
-            "d5c26417.f6cd68",
             "e529ea6a.cc9a78",
             "d131c863.857a48",
             "80ad7969.e9d538",
-            "15af5889.51d377",
-            "1f31d915.483307"
+            "1f31d915.483307",
+            "ad591886.149398",
+            "2844f952.f90d76",
+            "dd20ca67.127598",
+            "6c65bfe6.b3955"
         ],
         "x": 14,
-        "y": 1059,
+        "y": 1079,
         "w": 622,
         "h": 282
     },
@@ -2253,13 +2257,16 @@
         "nodes": [
             "b6863a52.363088",
             "eb62224d.bf539",
-            "c1ff2a7d.8d2df8",
-            "bbc90f6f.8b8c4",
-            "c3d85252.b8012"
+            "c3d85252.b8012",
+            "2dab43cc.f9e7fc",
+            "1a0ae7a1.83c318",
+            "1854e3d5.531b5c",
+            "a0d91a2d.6ee248",
+            "4b892877.4105a8"
         ],
         "x": 774,
         "y": 439,
-        "w": 612,
+        "w": 802,
         "h": 162
     },
     {
@@ -2282,6 +2289,24 @@
         "y": 39,
         "w": 672,
         "h": 162
+    },
+    {
+        "id": "dea49e79.b5f4c",
+        "type": "group",
+        "z": "64cbf871.f282f8",
+        "name": "Item Details",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "874fdd32.de193",
+            "c4631f3b.ef67e",
+            "3522baec.e78fc6"
+        ],
+        "x": 774,
+        "y": 639,
+        "w": 555,
+        "h": 82
     },
     {
         "id": "b36c9a8b.092df8",
@@ -2766,7 +2791,7 @@
         "tab": "ab63beb4.a6246",
         "order": 4,
         "disp": true,
-        "width": "10",
+        "width": "12",
         "collapse": false
     },
     {
@@ -2902,6 +2927,16 @@
         "order": 1,
         "width": 1,
         "height": "2"
+    },
+    {
+        "id": "2108c06a.f432e",
+        "type": "ui_group",
+        "name": "Item Details",
+        "tab": "ab63beb4.a6246",
+        "order": 5,
+        "disp": true,
+        "width": "6",
+        "collapse": false
     },
     {
         "id": "b5b6edb9.31d88",
@@ -4081,7 +4116,8 @@
         "wires": [
             [
                 "8ba66cf1.4c622",
-                "4e183078.6a513"
+                "4e183078.6a513",
+                "b48ec8cd.0548d8"
             ],
             [
                 "ae53dd77.bda38"
@@ -4325,7 +4361,8 @@
         "wires": [
             [
                 "639d792.f877788",
-                "5045dcc0.9807c4"
+                "5045dcc0.9807c4",
+                "2af2b4ee.de636c"
             ],
             [
                 "abe724c5.18f818"
@@ -4345,7 +4382,8 @@
         "wires": [
             [
                 "1b52e5ca.f8260a",
-                "52ea93f7.420e6c"
+                "52ea93f7.420e6c",
+                "c3734761.ae2728"
             ],
             [
                 "85729b02.074de8"
@@ -9050,7 +9088,13 @@
             },
             {
                 "t": "regex",
-                "v": "https://api.planningcenteronline.com/services/v2/service_types/[0-9]*/plans/[0-9]*/items",
+                "v": "https://api.planningcenteronline.com/services/v2/service_types/[0-9]*/plans/[0-9]*/items$",
+                "vt": "str",
+                "case": false
+            },
+            {
+                "t": "regex",
+                "v": "https://api.planningcenteronline.com/services/v2/service_types/[0-9]*/plans/[0-9]*/items/[0-9]*/item_notes",
                 "vt": "str",
                 "case": false
             },
@@ -9060,7 +9104,7 @@
         ],
         "checkall": "true",
         "repair": false,
-        "outputs": 4,
+        "outputs": 5,
         "x": 620,
         "y": 340,
         "wires": [
@@ -9074,6 +9118,9 @@
                 "b6863a52.363088"
             ],
             [
+                "874fdd32.de193"
+            ],
+            [
                 "d93a5ed6.524a"
             ]
         ],
@@ -9081,6 +9128,7 @@
             "servicetypes",
             "plans",
             "planitems",
+            "item_notes",
             ""
         ]
     },
@@ -9095,7 +9143,8 @@
             "dd43aa85.cd9f48",
             "cf256b8c.761a08",
             "5180ccfb.36b4b4",
-            "1f31d915.483307"
+            "1f31d915.483307",
+            "4b892877.4105a8"
         ],
         "x": 115,
         "y": 337,
@@ -9165,7 +9214,7 @@
         "to": "",
         "reg": false,
         "x": 320,
-        "y": 1300,
+        "y": 1320,
         "wires": [
             [
                 "1f31d915.483307"
@@ -9195,11 +9244,10 @@
         "payload": "",
         "payloadType": "date",
         "x": 120,
-        "y": 1300,
+        "y": 1320,
         "wires": [
             [
-                "de9fea50.fcb8b8",
-                "15af5889.51d377"
+                "de9fea50.fcb8b8"
             ]
         ]
     },
@@ -19007,7 +19055,6 @@
         "id": "99abdcc.1a1b22",
         "type": "inject",
         "z": "4ab9df2b.7b3dd",
-        "d": true,
         "g": "a9f3ca9c.583a58",
         "name": "Every Minute",
         "props": [
@@ -20884,33 +20931,6 @@
         "wires": []
     },
     {
-        "id": "16d3c83e.39df38",
-        "type": "change",
-        "z": "4ab9df2b.7b3dd",
-        "name": "List Data",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "[{\"title\":\"line 1\",\"description\":\"value 1\"},{\"title\":\"line 2\",\"description\":\"value 2\"},{\"title\":\"line 3\",\"description\":\"value 3\"},{\"title\":\"line 4\",\"description\":\"value 4\"},{\"title\":\"line 5\",\"description\":\"value 5\"}]",
-                "tot": "json"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 630,
-        "y": 340,
-        "wires": [
-            [
-                "599e1345.01c97c"
-            ]
-        ]
-    },
-    {
         "id": "14393996.d62ec6",
         "type": "inject",
         "z": "4ab9df2b.7b3dd",
@@ -20931,52 +20951,14 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 600,
-        "y": 280,
+        "x": 130,
+        "y": 660,
         "wires": [
             [
-                "16d3c83e.39df38"
+                "ecf1b52.205d348",
+                "df844e9c.33544"
             ]
         ]
-    },
-    {
-        "id": "599e1345.01c97c",
-        "type": "ui_list",
-        "z": "4ab9df2b.7b3dd",
-        "group": "56403e50.c97c8",
-        "name": "pick list",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "lineType": "one",
-        "actionType": "click",
-        "allowHTML": false,
-        "outputs": 1,
-        "topic": "",
-        "x": 700,
-        "y": 400,
-        "wires": [
-            [
-                "a9fb0c41.a7b23"
-            ]
-        ]
-    },
-    {
-        "id": "a9fb0c41.a7b23",
-        "type": "debug",
-        "z": "4ab9df2b.7b3dd",
-        "name": "Picked item",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 780,
-        "y": 460,
-        "wires": []
     },
     {
         "id": "a808708f.1304b",
@@ -21062,7 +21044,7 @@
         "z": "64cbf871.f282f8",
         "g": "45975be6.e0ca34",
         "name": "selected plan",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -21091,11 +21073,11 @@
         "repair": false,
         "outputs": 1,
         "x": 850,
-        "y": 500,
+        "y": 480,
         "wires": [
             [
                 "eb62224d.bf539",
-                "c1ff2a7d.8d2df8"
+                "1a0ae7a1.83c318"
             ]
         ]
     },
@@ -21118,31 +21100,12 @@
         "wires": []
     },
     {
-        "id": "c1ff2a7d.8d2df8",
-        "type": "function",
-        "z": "64cbf871.f282f8",
-        "g": "eec2fe41.6fc47",
-        "name": "Format for List",
-        "func": "out = []\n\nfor (var d of msg.payload.data) {\n    id   = d.id;\n    service_position = d.attributes.service_position\n    length    = d.attributes.length;\n    description = d.attributes.description || \"no description\";\n    title = d.attributes.title || \"[untitled]\";\n    title = \"<strong>\" + title + \"</strong>\";\n    \n    desc = description + \" (\" + length + \")(\" + service_position + \")\"\n    link = d.links.self;\n    out.push( {\"title\": title, \n               \"description\": desc, \n               \"link\":link})\n}\n\nmsg = {\"payload\": out}\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "x": 1040,
-        "y": 520,
-        "wires": [
-            [
-                "bbc90f6f.8b8c4"
-            ]
-        ]
-    },
-    {
         "id": "819262f3.31571",
         "type": "debug",
         "z": "64cbf871.f282f8",
         "g": "faf3623e.eecb6",
         "name": "Http Response",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -21153,27 +21116,6 @@
         "x": 580,
         "y": 280,
         "wires": []
-    },
-    {
-        "id": "bbc90f6f.8b8c4",
-        "type": "ui_list",
-        "z": "64cbf871.f282f8",
-        "g": "eec2fe41.6fc47",
-        "group": "156005cd.9619da",
-        "name": "List of Plans Details",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "lineType": "three",
-        "actionType": "click",
-        "allowHTML": true,
-        "outputs": 1,
-        "topic": "",
-        "x": 1270,
-        "y": 520,
-        "wires": [
-            []
-        ]
     },
     {
         "id": "d93a5ed6.524a",
@@ -21446,7 +21388,7 @@
         "y": 560,
         "wires": [
             [
-                "bbc90f6f.8b8c4"
+                "2dab43cc.f9e7fc"
             ]
         ]
     },
@@ -21488,11 +21430,10 @@
         "payload": "",
         "payloadType": "date",
         "x": 120,
-        "y": 1120,
+        "y": 1200,
         "wires": [
             [
-                "e9166c51.0aa7b",
-                "d5c26417.f6cd68"
+                "e9166c51.0aa7b"
             ]
         ]
     },
@@ -21517,30 +21458,12 @@
         "to": "",
         "reg": false,
         "x": 340,
-        "y": 1100,
+        "y": 1200,
         "wires": [
             [
                 "1f31d915.483307"
             ]
         ]
-    },
-    {
-        "id": "d5c26417.f6cd68",
-        "type": "debug",
-        "z": "64cbf871.f282f8",
-        "g": "de808323.a2eff",
-        "name": "ts marker",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 320,
-        "y": 1140,
-        "wires": []
     },
     {
         "id": "5b30473.c871cb8",
@@ -21565,10 +21488,9 @@
         "payload": "",
         "payloadType": "date",
         "x": 120,
-        "y": 1160,
+        "y": 1120,
         "wires": [
             [
-                "d5c26417.f6cd68",
                 "e529ea6a.cc9a78"
             ]
         ]
@@ -21594,7 +21516,7 @@
         "to": "",
         "reg": false,
         "x": 370,
-        "y": 1180,
+        "y": 1120,
         "wires": [
             [
                 "1f31d915.483307"
@@ -21622,7 +21544,7 @@
         "to": "",
         "reg": false,
         "x": 340,
-        "y": 1220,
+        "y": 1160,
         "wires": [
             [
                 "1f31d915.483307"
@@ -21652,31 +21574,12 @@
         "payload": "",
         "payloadType": "date",
         "x": 120,
-        "y": 1220,
+        "y": 1160,
         "wires": [
             [
-                "d131c863.857a48",
-                "15af5889.51d377"
+                "d131c863.857a48"
             ]
         ]
-    },
-    {
-        "id": "15af5889.51d377",
-        "type": "debug",
-        "z": "64cbf871.f282f8",
-        "g": "de808323.a2eff",
-        "name": "ts marker",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 320,
-        "y": 1260,
-        "wires": []
     },
     {
         "id": "1f31d915.483307",
@@ -21688,7 +21591,874 @@
             "13ed2b3a.fd3ef5"
         ],
         "x": 595,
-        "y": 1180,
+        "y": 1220,
+        "wires": []
+    },
+    {
+        "id": "c1449425.dc7ec8",
+        "type": "ui_table",
+        "z": "4ab9df2b.7b3dd",
+        "group": "56403e50.c97c8",
+        "name": "",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "columns": [
+            {
+                "field": "title",
+                "title": "Title",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "description",
+                "title": "Description",
+                "width": "",
+                "align": "right",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "link",
+                "title": "Link",
+                "width": "",
+                "align": "left",
+                "formatter": "link",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            }
+        ],
+        "outputs": 1,
+        "cts": true,
+        "x": 190,
+        "y": 900,
+        "wires": [
+            [
+                "36bb4014.bc346"
+            ]
+        ]
+    },
+    {
+        "id": "36bb4014.bc346",
+        "type": "debug",
+        "z": "4ab9df2b.7b3dd",
+        "name": "Picked item",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 290,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "2dab43cc.f9e7fc",
+        "type": "ui_table",
+        "z": "64cbf871.f282f8",
+        "g": "eec2fe41.6fc47",
+        "group": "156005cd.9619da",
+        "name": "Table of Details",
+        "order": 1,
+        "width": "12",
+        "height": "12",
+        "columns": [
+            {
+                "field": "",
+                "title": "#",
+                "width": "7%",
+                "align": "left",
+                "formatter": "rownum",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "position",
+                "title": "Pos",
+                "width": "10%",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "length",
+                "title": "Time",
+                "width": "10%",
+                "align": "right",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "title",
+                "title": "Item",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "description",
+                "title": "Description",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            }
+        ],
+        "outputs": 1,
+        "cts": true,
+        "x": 1240,
+        "y": 520,
+        "wires": [
+            [
+                "1854e3d5.531b5c",
+                "a0d91a2d.6ee248"
+            ]
+        ]
+    },
+    {
+        "id": "1a0ae7a1.83c318",
+        "type": "function",
+        "z": "64cbf871.f282f8",
+        "g": "eec2fe41.6fc47",
+        "name": "Format for Table",
+        "func": "out = []\n\nfor (var d of msg.payload.data) {\n    id   = d.id;\n    service_position = d.attributes.service_position\n    minutes = Math.floor(d.attributes.length/60);\n    seconds = d.attributes.length - (minutes*60);\n    \n    length = minutes + \":\" + String(seconds).padStart(2, '0')\n    desc = d.attributes.description  ;\n    title =   d.attributes.title || \"[untitled]\"  ;\n     \n     link = d.links.self;\n    out.push( { \"position\": service_position,\n                \"length\":   length,\n                 \"title\": title, \n               \"description\": desc, \n               \"link\":link})\n}\n\nmsg = {\"payload\": out}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1040,
+        "y": 520,
+        "wires": [
+            [
+                "2dab43cc.f9e7fc"
+            ]
+        ]
+    },
+    {
+        "id": "1854e3d5.531b5c",
+        "type": "debug",
+        "z": "64cbf871.f282f8",
+        "g": "eec2fe41.6fc47",
+        "name": "selected plan item",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1310,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "ad591886.149398",
+        "type": "change",
+        "z": "64cbf871.f282f8",
+        "g": "de808323.a2eff",
+        "name": "get notes",
+        "rules": [
+            {
+                "t": "set",
+                "p": "url",
+                "pt": "msg",
+                "to": "https://api.planningcenteronline.com/services/v2/service_types/611418/plans/49842897/notes",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 320,
+        "y": 1280,
+        "wires": [
+            [
+                "1f31d915.483307"
+            ]
+        ]
+    },
+    {
+        "id": "2844f952.f90d76",
+        "type": "inject",
+        "z": "64cbf871.f282f8",
+        "g": "de808323.a2eff",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 1280,
+        "wires": [
+            [
+                "ad591886.149398"
+            ]
+        ]
+    },
+    {
+        "id": "dd20ca67.127598",
+        "type": "change",
+        "z": "64cbf871.f282f8",
+        "g": "de808323.a2eff",
+        "name": "item_notes",
+        "rules": [
+            {
+                "t": "set",
+                "p": "url",
+                "pt": "msg",
+                "to": "https://api.planningcenteronline.com/services/v2/service_types/611418/plans/26895138/items/371266902/item_notes",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 330,
+        "y": 1240,
+        "wires": [
+            [
+                "1f31d915.483307"
+            ]
+        ]
+    },
+    {
+        "id": "6c65bfe6.b3955",
+        "type": "inject",
+        "z": "64cbf871.f282f8",
+        "g": "de808323.a2eff",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 1240,
+        "wires": [
+            [
+                "dd20ca67.127598"
+            ]
+        ]
+    },
+    {
+        "id": "a0d91a2d.6ee248",
+        "type": "change",
+        "z": "64cbf871.f282f8",
+        "g": "eec2fe41.6fc47",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "url",
+                "pt": "msg",
+                "to": "msg.payload.link & '/item_notes'",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1430,
+        "y": 520,
+        "wires": [
+            [
+                "4b892877.4105a8"
+            ]
+        ]
+    },
+    {
+        "id": "4b892877.4105a8",
+        "type": "link out",
+        "z": "64cbf871.f282f8",
+        "g": "eec2fe41.6fc47",
+        "name": "Plan Detail",
+        "links": [
+            "13ed2b3a.fd3ef5"
+        ],
+        "x": 1535,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "874fdd32.de193",
+        "type": "switch",
+        "z": "64cbf871.f282f8",
+        "g": "dea49e79.b5f4c",
+        "name": "clone",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 850,
+        "y": 680,
+        "wires": [
+            [
+                "c4631f3b.ef67e"
+            ]
+        ]
+    },
+    {
+        "id": "c4631f3b.ef67e",
+        "type": "function",
+        "z": "64cbf871.f282f8",
+        "g": "dea49e79.b5f4c",
+        "name": "Format for Table",
+        "func": "out = []\n\nfor (var d of msg.payload.data) {\n    id   = d.id;\n    category = d.attributes.category_name;\n    content  = d.attributes.content;\n      \n    link = d.links.self;\n    out.push( { \"category\": category,\n                \"content\" : content, \n                \"link\"    : link})\n}\n\nmsg = {\"payload\": out}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1023,
+        "y": 680,
+        "wires": [
+            [
+                "3522baec.e78fc6"
+            ]
+        ]
+    },
+    {
+        "id": "3522baec.e78fc6",
+        "type": "ui_table",
+        "z": "64cbf871.f282f8",
+        "g": "dea49e79.b5f4c",
+        "group": "2108c06a.f432e",
+        "name": "Item Details",
+        "order": 1,
+        "width": "6",
+        "height": "3",
+        "columns": [
+            {
+                "field": "",
+                "title": "#",
+                "width": "15%",
+                "align": "left",
+                "formatter": "rownum",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "category",
+                "title": "Category",
+                "width": "30%",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "content",
+                "title": "Content",
+                "width": "",
+                "align": "right",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            }
+        ],
+        "outputs": 1,
+        "cts": true,
+        "x": 1233,
+        "y": 680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b48ec8cd.0548d8",
+        "type": "change",
+        "z": "17ca131.e488ced",
+        "g": "2a5510d0.88b28",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "key",
+                "pt": "msg",
+                "to": "Prj1",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 720,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2af2b4ee.de636c",
+        "type": "change",
+        "z": "17ca131.e488ced",
+        "g": "2a5510d0.88b28",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "key",
+                "pt": "msg",
+                "to": "Prj2",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 710,
+        "y": 540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c3734761.ae2728",
+        "type": "change",
+        "z": "17ca131.e488ced",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "key",
+                "pt": "msg",
+                "to": "Prj3",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 710,
+        "y": 680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ecf1b52.205d348",
+        "type": "change",
+        "z": "4ab9df2b.7b3dd",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"prj\":1,\"key\":\"lamps\",\"value\":550}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 640,
+        "y": 660,
+        "wires": [
+            [
+                "c945b13b.d7508"
+            ]
+        ]
+    },
+    {
+        "id": "40a9874e.824e18",
+        "type": "change",
+        "z": "4ab9df2b.7b3dd",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"prj\":2,\"key\":\"lamps\",\"value\":666}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 640,
+        "y": 700,
+        "wires": [
+            [
+                "c945b13b.d7508"
+            ]
+        ]
+    },
+    {
+        "id": "9d02c931.ac1c88",
+        "type": "change",
+        "z": "4ab9df2b.7b3dd",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"prj\":3,\"key\":\"lamps\",\"value\":444}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 640,
+        "y": 740,
+        "wires": [
+            [
+                "c945b13b.d7508"
+            ]
+        ]
+    },
+    {
+        "id": "e17b9eca.eb7cb",
+        "type": "change",
+        "z": "4ab9df2b.7b3dd",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"prj\":1,\"key\":\"name\",\"value\":\"fred\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 640,
+        "y": 780,
+        "wires": [
+            [
+                "c945b13b.d7508"
+            ]
+        ]
+    },
+    {
+        "id": "23b68e51.363972",
+        "type": "change",
+        "z": "4ab9df2b.7b3dd",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"prj\":2,\"key\":\"name\",\"value\":\"barney\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 640,
+        "y": 820,
+        "wires": [
+            [
+                "c945b13b.d7508"
+            ]
+        ]
+    },
+    {
+        "id": "502d9926.71a408",
+        "type": "change",
+        "z": "4ab9df2b.7b3dd",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"prj\":1,\"key\":\"name\",\"value\":\"dino\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 640,
+        "y": 860,
+        "wires": [
+            [
+                "c945b13b.d7508"
+            ]
+        ]
+    },
+    {
+        "id": "df844e9c.33544",
+        "type": "delay",
+        "z": "4ab9df2b.7b3dd",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": ".2",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 260,
+        "y": 700,
+        "wires": [
+            [
+                "40a9874e.824e18",
+                "65a57d96.db5904"
+            ]
+        ]
+    },
+    {
+        "id": "65a57d96.db5904",
+        "type": "delay",
+        "z": "4ab9df2b.7b3dd",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": ".2",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 300,
+        "y": 740,
+        "wires": [
+            [
+                "9d02c931.ac1c88",
+                "164e7960.546547"
+            ]
+        ]
+    },
+    {
+        "id": "164e7960.546547",
+        "type": "delay",
+        "z": "4ab9df2b.7b3dd",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": ".2",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 320,
+        "y": 780,
+        "wires": [
+            [
+                "e17b9eca.eb7cb",
+                "e03dafc.c3cba5"
+            ]
+        ]
+    },
+    {
+        "id": "e03dafc.c3cba5",
+        "type": "delay",
+        "z": "4ab9df2b.7b3dd",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": ".2",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 340,
+        "y": 820,
+        "wires": [
+            [
+                "23b68e51.363972",
+                "5a960a86.5cb3f4"
+            ]
+        ]
+    },
+    {
+        "id": "5a960a86.5cb3f4",
+        "type": "delay",
+        "z": "4ab9df2b.7b3dd",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": ".2",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 360,
+        "y": 860,
+        "wires": [
+            [
+                "502d9926.71a408"
+            ]
+        ]
+    },
+    {
+        "id": "c945b13b.d7508",
+        "type": "join",
+        "z": "4ab9df2b.7b3dd",
+        "name": "",
+        "mode": "custom",
+        "build": "array",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": false,
+        "timeout": "2",
+        "count": "",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 850,
+        "y": 760,
+        "wires": [
+            [
+                "92275c05.6ee4a",
+                "4ce10a10.6a83d4"
+            ]
+        ]
+    },
+    {
+        "id": "92275c05.6ee4a",
+        "type": "debug",
+        "z": "4ab9df2b.7b3dd",
+        "name": "join out",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 880,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "4ce10a10.6a83d4",
+        "type": "function",
+        "z": "4ab9df2b.7b3dd",
+        "name": "",
+        "func": "var results = {};\n\nmsg.payload.forEach(function(el) {\n    var name = el[0];\n    var prop = el[1];\n    var value = el[2];\n    results[name] = results[name] || {};\n    results[name][prop] = value;\n})\n\n\nreturn  {payload: results};",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 640,
+        "y": 1000,
+        "wires": [
+            [
+                "ad43b752.217638"
+            ]
+        ]
+    },
+    {
+        "id": "ad43b752.217638",
+        "type": "debug",
+        "z": "4ab9df2b.7b3dd",
+        "name": "func out",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 1060,
         "wires": []
     }
 ]
