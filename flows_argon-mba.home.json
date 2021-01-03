@@ -25,28 +25,28 @@
         "type": "tab",
         "label": "UI Projectors",
         "disabled": false,
-        "info": ""
+        "info": "Basic function is to turn the configured projectors on and off.\n\nIt also displays the current projector status."
     },
     {
         "id": "7014b916.6d1208",
         "type": "tab",
         "label": "UI Cameras",
         "disabled": false,
-        "info": ""
+        "info": "Basic function is to switch the cameras on and off. \n\nUltimately I hope to link the tally functions of the BMD ATEM to the cameras.\n\nSee [here for details](https://www.sony.net/Products/CameraSystem/CA/BRC_X1000_BRC_H800/Technical_Document/C456100121.pdf)\n\ninput is a space delimited list of hex codes, result is bytes of that value\n\nexample: input \"FF FF\", output b'\\xFF\\xFF'\n\n# This is a snippet of Python code for command formatting.\n\ndef compose(s):\n    parsed = s.split(\" \")\n    glued  = \"\".join(parsed)\n    bs = bytes.fromhex(glued)\n    return(bs)\n\n - \"poweron\"\n -- compose('01 00 00 06 00 00 00 02 81 01 04 00 02 FF')\n - \"poweroff\"\n -- compose('01 00 00 06 00 00 00 02 81 01 04 00 03 FF')\n - \"powerinq\"          : \n -- compose('01 00 00 05 00 00 00 01 81 09 04 00 FF')\n - \"home\"              : \n -- compose('01 00 00 05 00 00 00 01 81 01 06 04 FF'),\n - \"camzoomtele\"\n -- compose('01 00 00 06 00 00 00 01 81 01 04 07 02 FF')\n - \"camzoomwide\"\n -- compose('01 00 00 06 00 00 00 01 81 01 04 07 03 FF')  \n - \"command_completed\"\n -- compose('90 50 FF') # expected result\n\n# Tally commands\n\n - On/Off Inquiry \n - 8x 09 7E 01 0A FF y0 50 0p FF \n - p: 2=On, 3=Off"
     },
     {
         "id": "a3be0cff.690a5",
         "type": "tab",
         "label": "UI ProPresenter",
         "disabled": false,
-        "info": ""
+        "info": "Basic control of ProPresenter 6."
     },
     {
         "id": "96ac9944.5b4dd8",
         "type": "tab",
         "label": "UI ATEM",
         "disabled": false,
-        "info": ""
+        "info": "The main communication engine is provided by\n[this](https://github.com/haydendonald/blackmagic-atem-nodered/blob/master/howToUse.md)\n\nThis relies heavily on \n[this](https://www.skaarhoj.com/fileadmin/BMDPROTOCOL.html)"
     },
     {
         "id": "64cbf871.f282f8",
@@ -244,7 +244,7 @@
             "ad7a26b8.1d20a8"
         ],
         "x": 14,
-        "y": 160,
+        "y": 119,
         "w": 672,
         "h": 162
     },
@@ -318,9 +318,7 @@
             "bffb7904.fa0f88"
         ],
         "x": 34,
-        "y": 79,
-        "w": 322,
-        "h": 162
+        "y": 79
     },
     {
         "id": "26f7e48.6e71e1c",
@@ -340,9 +338,7 @@
             "f2be0943.43f9b8"
         ],
         "x": 34,
-        "y": 479,
-        "w": 742,
-        "h": 142
+        "y": 479
     },
     {
         "id": "3c1c153.7ee79ea",
@@ -358,9 +354,7 @@
             "419a8ba6.444ea4"
         ],
         "x": 454,
-        "y": 119,
-        "w": 262,
-        "h": 82
+        "y": 119
     },
     {
         "id": "a10197b4.719a58",
@@ -377,9 +371,7 @@
             "aea3b623.0f4e98"
         ],
         "x": 14,
-        "y": 39,
-        "w": 173,
-        "h": 162
+        "y": 39
     },
     {
         "id": "2a5510d0.88b28",
@@ -458,8 +450,8 @@
             "2d020fb4.2fd23",
             "d7653fa1.bf7e4"
         ],
-        "x": 54,
-        "y": -1,
+        "x": 34,
+        "y": 19,
         "w": 882,
         "h": 222
     },
@@ -487,7 +479,7 @@
             "8cf5b702.df8188"
         ],
         "x": 354,
-        "y": 119,
+        "y": 19,
         "w": 612,
         "h": 162
     },
@@ -713,9 +705,7 @@
             "4d303fb1.3dc85"
         ],
         "x": 14,
-        "y": 239,
-        "w": 772,
-        "h": 242
+        "y": 239
     },
     {
         "id": "c259391c.942cb8",
@@ -815,26 +805,6 @@
         "h": 82
     },
     {
-        "id": "74b0aeda.ae95f",
-        "type": "group",
-        "z": "7014b916.6d1208",
-        "name": "Expoeriment with dumping all flow config",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "a093d60a.52e6d8",
-            "e9f14e10.07fac",
-            "b00e6664.a1bb78",
-            "2a4cf814.2482a8",
-            "f0c5f869.2fe018"
-        ],
-        "x": 34,
-        "y": 779,
-        "w": 492,
-        "h": 282
-    },
-    {
         "id": "aa34448f.507d08",
         "type": "group",
         "z": "7014b916.6d1208",
@@ -849,8 +819,8 @@
             "4740a3a6.61153c",
             "91bdfbc4.f7d808"
         ],
-        "x": 34,
-        "y": 313,
+        "x": 14,
+        "y": 213,
         "w": 548,
         "h": 454
     },
@@ -958,8 +928,8 @@
         ],
         "x": 14,
         "y": 1119,
-        "w": 1328,
-        "h": 808
+        "w": 1148,
+        "h": 928
     },
     {
         "id": "70379837.cc02c8",
@@ -1156,8 +1126,8 @@
             "b710464b.ea7198",
             "d689e919.81ea98"
         ],
-        "x": 34,
-        "y": 1079,
+        "x": 14,
+        "y": 699,
         "w": 1012,
         "h": 202
     },
@@ -1235,9 +1205,7 @@
             "cab251ea.9e8c1"
         ],
         "x": 14,
-        "y": 499,
-        "w": 1012,
-        "h": 202
+        "y": 499
     },
     {
         "id": "24319489.d01d3c",
@@ -1258,9 +1226,7 @@
             "7cbdc7e5.63eef8"
         ],
         "x": 34,
-        "y": 719,
-        "w": 532,
-        "h": 282
+        "y": 719
     },
     {
         "id": "e5b273f7.f6673",
@@ -1284,9 +1250,7 @@
             "dd4ddea7.fffe1"
         ],
         "x": 34,
-        "y": 639,
-        "w": 1012,
-        "h": 202
+        "y": 639
     },
     {
         "id": "67bf8f34.14b37",
@@ -1632,6 +1596,233 @@
         "h": 202
     },
     {
+        "id": "faf3623e.eecb6",
+        "type": "group",
+        "z": "64cbf871.f282f8",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "4708b43d.b63d1c",
+            "895b6dd5.49a33",
+            "8b02954.df71668",
+            "13ed2b3a.fd3ef5",
+            "67f795a8.01489c",
+            "819262f3.31571",
+            "d93a5ed6.524a",
+            "336ecbab.f7acb4",
+            "2fca2b77.3d1134"
+        ],
+        "x": 34,
+        "y": 179,
+        "w": 672,
+        "h": 282
+    },
+    {
+        "id": "85dc7af0.c16fb8",
+        "type": "group",
+        "z": "7014b916.6d1208",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "8eb0c09e.7f105",
+            "ab5b079.76567f8",
+            "ce3ad22d.cff7c",
+            "cb527676.f585c8"
+        ],
+        "x": 14,
+        "y": 19,
+        "w": 292,
+        "h": 162
+    },
+    {
+        "id": "eec2fe41.6fc47",
+        "type": "group",
+        "z": "64cbf871.f282f8",
+        "name": "List of Plan Items",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "b6863a52.363088",
+            "eb62224d.bf539",
+            "c3d85252.b8012",
+            "2dab43cc.f9e7fc",
+            "1a0ae7a1.83c318",
+            "1854e3d5.531b5c",
+            "a0d91a2d.6ee248",
+            "4b892877.4105a8"
+        ],
+        "x": 774,
+        "y": 439,
+        "w": 802,
+        "h": 162
+    },
+    {
+        "id": "5873162f.e5f188",
+        "type": "group",
+        "z": "64cbf871.f282f8",
+        "name": "List of Service Types",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "1a0e3da8.695572",
+            "7c64c9c1.6cb3e8",
+            "3e826114.ff2a7e",
+            "45f95704.a39988",
+            "9dfb1f63.94524",
+            "19e3f20.91ff20e"
+        ],
+        "x": 774,
+        "y": 39,
+        "w": 672,
+        "h": 162
+    },
+    {
+        "id": "dea49e79.b5f4c",
+        "type": "group",
+        "z": "64cbf871.f282f8",
+        "name": "Item Details",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "874fdd32.de193",
+            "c4631f3b.ef67e",
+            "3522baec.e78fc6"
+        ],
+        "x": 774,
+        "y": 639,
+        "w": 555,
+        "h": 82
+    },
+    {
+        "id": "4e43355a.46202c",
+        "type": "group",
+        "z": "a2a03f8f.18587",
+        "name": "Internet Connection Monitor",
+        "style": {
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "6388fa87.f33ec4",
+            "47479cd5.d14444",
+            "770fa8a8.0aa958",
+            "4cb192fa.a6cbcc",
+            "8c27536f.a6c2a"
+        ],
+        "x": 34,
+        "y": 19,
+        "w": 372,
+        "h": 322
+    },
+    {
+        "id": "c0cd69aa.d96a98",
+        "type": "group",
+        "z": "4ab9df2b.7b3dd",
+        "name": "Prototype of wrangling projector data into the table ui",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "14393996.d62ec6",
+            "c1449425.dc7ec8",
+            "ecf1b52.205d348",
+            "40a9874e.824e18",
+            "9d02c931.ac1c88",
+            "e17b9eca.eb7cb",
+            "23b68e51.363972",
+            "502d9926.71a408",
+            "df844e9c.33544",
+            "65a57d96.db5904",
+            "164e7960.546547",
+            "e03dafc.c3cba5",
+            "5a960a86.5cb3f4",
+            "4ce10a10.6a83d4",
+            "ad43b752.217638",
+            "f05aca7.15cac38",
+            "78bef0ad.ee7ae"
+        ],
+        "x": 34,
+        "y": 279,
+        "w": 892,
+        "h": 362
+    },
+    {
+        "id": "bb661aa6.08f608",
+        "type": "group",
+        "z": "17ca131.e488ced",
+        "name": "Wrangling projector data into the table ui",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "78d7ba57.f7e9c4",
+            "42d1f1dd.ed9e",
+            "4e318fff.2f414",
+            "851b5714.714348",
+            "380817e7.0d4d58",
+            "adeb0e6d.dc05b",
+            "320b1f78.2913c",
+            "102af5b4.89f82a",
+            "5e58cef2.267da"
+        ],
+        "x": 754,
+        "y": 399,
+        "w": 802,
+        "h": 222
+    },
+    {
+        "id": "1fee3fae.e6893",
+        "type": "group",
+        "z": "ee400291.7cb",
+        "name": "Cue List Table - Eventually will feed this table from console",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "ed2b752e.7b81e8",
+            "6394e967.243a88",
+            "e09fe42d.e14738",
+            "83ff632a.62649",
+            "1e515476.5c430c"
+        ],
+        "x": 24,
+        "y": 359
+    },
+    {
+        "id": "c459911f.288c6",
+        "type": "group",
+        "z": "ee400291.7cb",
+        "name": "Cue List Table - Eventually will feed this table from console",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "23df5452.40230c",
+            "82044ecb.83ec4",
+            "339fef25.55aaf",
+            "93d6c2d3.a86a7"
+        ],
+        "x": 24,
+        "y": 259
+    },
+    {
         "id": "429387c.c26c678",
         "type": "group",
         "z": "7014b916.6d1208",
@@ -1646,8 +1837,8 @@
             "f0d18f3b.c1b22",
             "1bc616f5.e04a99"
         ],
-        "x": 294,
-        "y": 339,
+        "x": 274,
+        "y": 239,
         "w": 262,
         "h": 122
     },
@@ -1666,8 +1857,8 @@
             "efe88d10.173fb",
             "de69e9b1.b1e1e8"
         ],
-        "x": 294,
-        "y": 479,
+        "x": 274,
+        "y": 379,
         "w": 262,
         "h": 122
     },
@@ -1686,8 +1877,8 @@
             "eff3a804.32f6d8",
             "bb8693ba.4019"
         ],
-        "x": 294,
-        "y": 619,
+        "x": 274,
+        "y": 519,
         "w": 262,
         "h": 122
     },
@@ -2008,62 +2199,6 @@
         "h": 362
     },
     {
-        "id": "faf3623e.eecb6",
-        "type": "group",
-        "z": "64cbf871.f282f8",
-        "style": {
-            "stroke": "#999999",
-            "stroke-opacity": "1",
-            "fill": "none",
-            "fill-opacity": "1",
-            "label": true,
-            "label-position": "nw",
-            "color": "#a4a4a4"
-        },
-        "nodes": [
-            "4708b43d.b63d1c",
-            "895b6dd5.49a33",
-            "8b02954.df71668",
-            "13ed2b3a.fd3ef5",
-            "67f795a8.01489c",
-            "819262f3.31571",
-            "d93a5ed6.524a",
-            "336ecbab.f7acb4",
-            "2fca2b77.3d1134"
-        ],
-        "x": 34,
-        "y": 179,
-        "w": 672,
-        "h": 282
-    },
-    {
-        "id": "85dc7af0.c16fb8",
-        "type": "group",
-        "z": "7014b916.6d1208",
-        "style": {
-            "stroke": "#999999",
-            "stroke-opacity": "1",
-            "fill": "none",
-            "fill-opacity": "1",
-            "label": true,
-            "label-position": "nw",
-            "color": "#a4a4a4"
-        },
-        "nodes": [
-            "8f34cf31.a146e",
-            "21523ff4.7df4",
-            "8eb0c09e.7f105",
-            "ab5b079.76567f8",
-            "ce3ad22d.cff7c",
-            "ba94d32f.909ea",
-            "cb527676.f585c8"
-        ],
-        "x": 14,
-        "y": 19,
-        "w": 292,
-        "h": 282
-    },
-    {
         "id": "22d220a4.a89f5",
         "type": "group",
         "z": "c7f9390d.cde5e8",
@@ -2084,188 +2219,10 @@
             "685963e9.42f61c",
             "8adb03d5.efa5e"
         ],
-        "x": 914,
-        "y": 1539,
+        "x": 734,
+        "y": 1659,
         "w": 402,
         "h": 362
-    },
-    {
-        "id": "eec2fe41.6fc47",
-        "type": "group",
-        "z": "64cbf871.f282f8",
-        "name": "List of Plan Items",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "b6863a52.363088",
-            "eb62224d.bf539",
-            "c3d85252.b8012",
-            "2dab43cc.f9e7fc",
-            "1a0ae7a1.83c318",
-            "1854e3d5.531b5c",
-            "a0d91a2d.6ee248",
-            "4b892877.4105a8"
-        ],
-        "x": 774,
-        "y": 439,
-        "w": 802,
-        "h": 162
-    },
-    {
-        "id": "5873162f.e5f188",
-        "type": "group",
-        "z": "64cbf871.f282f8",
-        "name": "List of Service Types",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "1a0e3da8.695572",
-            "7c64c9c1.6cb3e8",
-            "3e826114.ff2a7e",
-            "45f95704.a39988",
-            "9dfb1f63.94524",
-            "19e3f20.91ff20e"
-        ],
-        "x": 774,
-        "y": 39,
-        "w": 672,
-        "h": 162
-    },
-    {
-        "id": "dea49e79.b5f4c",
-        "type": "group",
-        "z": "64cbf871.f282f8",
-        "name": "Item Details",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "874fdd32.de193",
-            "c4631f3b.ef67e",
-            "3522baec.e78fc6"
-        ],
-        "x": 774,
-        "y": 639,
-        "w": 555,
-        "h": 82
-    },
-    {
-        "id": "4e43355a.46202c",
-        "type": "group",
-        "z": "a2a03f8f.18587",
-        "name": "Internet Connection Monitor",
-        "style": {
-            "label": true,
-            "color": "#000000"
-        },
-        "nodes": [
-            "6388fa87.f33ec4",
-            "47479cd5.d14444",
-            "770fa8a8.0aa958",
-            "4cb192fa.a6cbcc",
-            "8c27536f.a6c2a"
-        ],
-        "x": 34,
-        "y": 19,
-        "w": 372,
-        "h": 322
-    },
-    {
-        "id": "c0cd69aa.d96a98",
-        "type": "group",
-        "z": "4ab9df2b.7b3dd",
-        "name": "Prototype of wrangling projector data into the table ui",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "14393996.d62ec6",
-            "c1449425.dc7ec8",
-            "ecf1b52.205d348",
-            "40a9874e.824e18",
-            "9d02c931.ac1c88",
-            "e17b9eca.eb7cb",
-            "23b68e51.363972",
-            "502d9926.71a408",
-            "df844e9c.33544",
-            "65a57d96.db5904",
-            "164e7960.546547",
-            "e03dafc.c3cba5",
-            "5a960a86.5cb3f4",
-            "4ce10a10.6a83d4",
-            "ad43b752.217638",
-            "f05aca7.15cac38",
-            "78bef0ad.ee7ae"
-        ],
-        "x": 34,
-        "y": 279,
-        "w": 892,
-        "h": 362
-    },
-    {
-        "id": "bb661aa6.08f608",
-        "type": "group",
-        "z": "17ca131.e488ced",
-        "name": "Wrangling projector data into the table ui",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "78d7ba57.f7e9c4",
-            "42d1f1dd.ed9e",
-            "4e318fff.2f414",
-            "851b5714.714348",
-            "380817e7.0d4d58",
-            "adeb0e6d.dc05b",
-            "320b1f78.2913c",
-            "102af5b4.89f82a",
-            "5e58cef2.267da"
-        ],
-        "x": 754,
-        "y": 399,
-        "w": 802,
-        "h": 222
-    },
-    {
-        "id": "1fee3fae.e6893",
-        "type": "group",
-        "z": "ee400291.7cb",
-        "name": "Cue List Table - Eventually will feed this table from console",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "ed2b752e.7b81e8",
-            "6394e967.243a88",
-            "e09fe42d.e14738",
-            "83ff632a.62649",
-            "1e515476.5c430c"
-        ],
-        "x": 24,
-        "y": 359,
-        "w": 892,
-        "h": 82
-    },
-    {
-        "id": "c459911f.288c6",
-        "type": "group",
-        "z": "ee400291.7cb",
-        "name": "Cue List Table - Eventually will feed this table from console",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "23df5452.40230c",
-            "82044ecb.83ec4",
-            "339fef25.55aaf",
-            "93d6c2d3.a86a7"
-        ],
-        "x": 24,
-        "y": 259,
-        "w": 962,
-        "h": 82
     },
     {
         "id": "b36c9a8b.092df8",
@@ -3514,28 +3471,6 @@
         ]
     },
     {
-        "id": "8f34cf31.a146e",
-        "type": "comment",
-        "z": "7014b916.6d1208",
-        "g": "85dc7af0.c16fb8",
-        "name": "IPs",
-        "info": " *     1: \"192.168.0.186\",\n *     2: \"192.168.0.187\",\n *     3: \"192.168.0.188\"",
-        "x": 90,
-        "y": 220,
-        "wires": []
-    },
-    {
-        "id": "21523ff4.7df4",
-        "type": "comment",
-        "z": "7014b916.6d1208",
-        "g": "85dc7af0.c16fb8",
-        "name": "commands",
-        "info": "See [here for details](https://www.sony.net/Products/CameraSystem/CA/BRC_X1000_BRC_H800/Technical_Document/C456100121.pdf)\n\ninput is a space delimited list of hex codes, result is bytes of that value\n\nexample: input \"FF FF\", output b'\\xFF\\xFF'\n\ndef compose(s):\n    parsed = s.split(\" \")\n    glued  = \"\".join(parsed)\n    bs = bytes.fromhex(glued)\n    return(bs)\n\n - \"poweron\"\n -- compose('01 00 00 06 00 00 00 02 81 01 04 00 02 FF')\n - \"poweroff\"\n -- compose('01 00 00 06 00 00 00 02 81 01 04 00 03 FF')\n - \"powerinq\"          : \n -- compose('01 00 00 05 00 00 00 01 81 09 04 00 FF')\n - \"home\"              : \n -- compose('01 00 00 05 00 00 00 01 81 01 06 04 FF'),\n - \"camzoomtele\"\n -- compose('01 00 00 06 00 00 00 01 81 01 04 07 02 FF')\n - \"camzoomwide\"\n -- compose('01 00 00 06 00 00 00 01 81 01 04 07 03 FF')  \n - \"command_completed\"\n -- compose('90 50 FF') # expected result",
-        "x": 100,
-        "y": 180,
-        "wires": []
-    },
-    {
         "id": "7bc89364.546b1c",
         "type": "udp out",
         "z": "7014b916.6d1208",
@@ -3549,7 +3484,7 @@
         "base64": false,
         "multicast": "false",
         "x": 890,
-        "y": 160,
+        "y": 60,
         "wires": []
     },
     {
@@ -3566,7 +3501,7 @@
         "base64": false,
         "multicast": "false",
         "x": 890,
-        "y": 200,
+        "y": 100,
         "wires": []
     },
     {
@@ -3583,7 +3518,7 @@
         "base64": false,
         "multicast": "false",
         "x": 890,
-        "y": 240,
+        "y": 140,
         "wires": []
     },
     {
@@ -3598,7 +3533,7 @@
         "initialize": "",
         "finalize": "",
         "x": 520,
-        "y": 160,
+        "y": 60,
         "wires": [
             [
                 "53782773.37f848"
@@ -3677,8 +3612,8 @@
         "offvalueType": "str",
         "officon": "",
         "offcolor": "",
-        "x": 130,
-        "y": 60,
+        "x": 110,
+        "y": 80,
         "wires": [
             [
                 "a2bacb69.935388",
@@ -4199,7 +4134,7 @@
         "payloadType": "json",
         "topic": "",
         "x": 90,
-        "y": 201,
+        "y": 160,
         "wires": [
             [
                 "3adece22.fbc0d2"
@@ -4226,7 +4161,7 @@
         "payloadType": "json",
         "topic": "",
         "x": 90,
-        "y": 241,
+        "y": 200,
         "wires": [
             [
                 "3adece22.fbc0d2"
@@ -5748,7 +5683,7 @@
         "officon": "",
         "offcolor": "",
         "x": 100,
-        "y": 281,
+        "y": 240,
         "wires": [
             [
                 "aed3ff81.48fe1"
@@ -5783,17 +5718,7 @@
         "name": "Input Mappings - used for Program, Preview and Aux",
         "info": "{\n    \"0\": \"Black\",\n    \"1\": \"Input 1\",\n    \"2\": \"Input 2\",\n    \"3\": \"Input 3\",\n    \"4\": \"Input 4\",\n    \"5\": \"Input 5\",\n    \"6\": \"Input 6\",\n    \"7\": \"Input 7\",\n    \"8\": \"Input 8\",\n    \"1000\": \"Color Bars\",\n    \"2001\": \"Color 1\",\n    \"2002\": \"Color 2\",\n    \"3010\": \"Media Player 1\",\n    \"3011\": \"Media Player 1 Key\",\n    \"3020\": \"Media Player 2\",\n    \"3021\": \"Media Player 2 Key\",\n    \"4010\": \"Key 1 Mask\",\n    \"4020\": \"Key 2 Mask\",\n    \"5010\": \"DSK 1 Mask\",\n    \"5020\": \"DSK 2 Mask\",\n    \"8001\": \"Auxilary 1\",\n    \"10010\": \"ME 1 Prog\",\n    \"10011\": \"ME 1 Prev\",\n    \"10020\": \"ME 2 Prog\",\n    \"10021\": \"ME 2 Prev\"\n}",
         "x": 220,
-        "y": 61,
-        "wires": []
-    },
-    {
-        "id": "4f36ac62.ce7034",
-        "type": "comment",
-        "z": "96ac9944.5b4dd8",
-        "name": "General Comments",
-        "info": "The main communication engine is provided by\n[this](https://github.com/haydendonald/blackmagic-atem-nodered/blob/master/howToUse.md)\n\nThis relies heavily on \n[this](https://www.skaarhoj.com/fileadmin/BMDPROTOCOL.html)",
-        "x": 110,
-        "y": 21,
+        "y": 40,
         "wires": []
     },
     {
@@ -5817,7 +5742,7 @@
             "1ac81781.75b738"
         ],
         "x": 495,
-        "y": 201,
+        "y": 160,
         "wires": []
     },
     {
@@ -6460,7 +6385,7 @@
         "name": "TODO",
         "info": " - Test everything with an actual ATEM\n - Verify the Aux source message structures.",
         "x": 70,
-        "y": 101,
+        "y": 80,
         "wires": []
     },
     {
@@ -6510,7 +6435,7 @@
         "template": " {\n    \"cmd\": \"downstreamKeyer\",\n    \"data\": {\n        \"id\": 0,\n        \"state\": {{payload}}\n    }\n}",
         "output": "str",
         "x": 290,
-        "y": 281,
+        "y": 240,
         "wires": [
             [
                 "ad7a26b8.1d20a8",
@@ -6533,7 +6458,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 560,
-        "y": 281,
+        "y": 240,
         "wires": []
     },
     {
@@ -7033,8 +6958,8 @@
         "links": [
             "846bf1bd.3fb21"
         ],
-        "x": 215,
-        "y": 100,
+        "x": 195,
+        "y": 120,
         "wires": []
     },
     {
@@ -7048,17 +6973,6 @@
         ],
         "x": 755,
         "y": 940,
-        "wires": []
-    },
-    {
-        "id": "ba94d32f.909ea",
-        "type": "comment",
-        "z": "7014b916.6d1208",
-        "g": "85dc7af0.c16fb8",
-        "name": "Tally",
-        "info": " - On/Off Inquiry \n - 8x 09 7E 01 0A FF y0 50 0p FF \n - p: 2=On, 3=Off",
-        "x": 90,
-        "y": 260,
         "wires": []
     },
     {
@@ -7089,8 +7003,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 3,
-        "x": 190,
-        "y": 540,
+        "x": 170,
+        "y": 440,
         "wires": [
             [
                 "bec98423.d4f878",
@@ -7126,8 +7040,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 390,
-        "y": 380,
+        "x": 370,
+        "y": 280,
         "wires": [
             [
                 "f0d18f3b.c1b22"
@@ -7147,7 +7061,7 @@
             "bb8693ba.4019"
         ],
         "x": 395,
-        "y": 160,
+        "y": 60,
         "wires": [
             [
                 "7540e0f1.794b2"
@@ -7166,7 +7080,7 @@
         "initialize": "",
         "finalize": "",
         "x": 520,
-        "y": 200,
+        "y": 100,
         "wires": [
             [
                 "ba833bb3.50fa98"
@@ -7185,7 +7099,7 @@
         "initialize": "",
         "finalize": "",
         "x": 520,
-        "y": 240,
+        "y": 140,
         "wires": [
             [
                 "8cf5b702.df8188"
@@ -7205,7 +7119,7 @@
             "bb8693ba.4019"
         ],
         "x": 395,
-        "y": 200,
+        "y": 100,
         "wires": [
             [
                 "3ce9bdd0.54eae2"
@@ -7225,7 +7139,7 @@
             "eff3a804.32f6d8"
         ],
         "x": 395,
-        "y": 240,
+        "y": 140,
         "wires": [
             [
                 "97ae20b2.d3069"
@@ -7267,8 +7181,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 390,
-        "y": 420,
+        "x": 370,
+        "y": 320,
         "wires": [
             [
                 "1bc616f5.e04a99"
@@ -7284,8 +7198,8 @@
         "links": [
             "4578eab2.af26c4"
         ],
-        "x": 515,
-        "y": 380,
+        "x": 495,
+        "y": 280,
         "wires": []
     },
     {
@@ -7298,8 +7212,8 @@
             "22b7d423.dda69c",
             "a499c220.177c"
         ],
-        "x": 515,
-        "y": 420,
+        "x": 495,
+        "y": 320,
         "wires": []
     },
     {
@@ -7322,8 +7236,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 390,
-        "y": 520,
+        "x": 370,
+        "y": 420,
         "wires": [
             [
                 "efe88d10.173fb"
@@ -7350,8 +7264,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 390,
-        "y": 560,
+        "x": 370,
+        "y": 460,
         "wires": [
             [
                 "de69e9b1.b1e1e8"
@@ -7367,8 +7281,8 @@
         "links": [
             "a499c220.177c"
         ],
-        "x": 515,
-        "y": 520,
+        "x": 495,
+        "y": 420,
         "wires": []
     },
     {
@@ -7381,8 +7295,8 @@
             "22b7d423.dda69c",
             "4578eab2.af26c4"
         ],
-        "x": 515,
-        "y": 560,
+        "x": 495,
+        "y": 460,
         "wires": []
     },
     {
@@ -7405,8 +7319,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 390,
-        "y": 660,
+        "x": 370,
+        "y": 560,
         "wires": [
             [
                 "eff3a804.32f6d8"
@@ -7433,8 +7347,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 390,
-        "y": 700,
+        "x": 370,
+        "y": 600,
         "wires": [
             [
                 "bb8693ba.4019"
@@ -7450,8 +7364,8 @@
         "links": [
             "22b7d423.dda69c"
         ],
-        "x": 515,
-        "y": 660,
+        "x": 495,
+        "y": 560,
         "wires": []
     },
     {
@@ -7464,8 +7378,8 @@
             "4578eab2.af26c4",
             "a499c220.177c"
         ],
-        "x": 515,
-        "y": 700,
+        "x": 495,
+        "y": 600,
         "wires": []
     },
     {
@@ -7475,8 +7389,8 @@
         "g": "aa34448f.507d08",
         "name": "Set Tally",
         "links": [],
-        "x": 75,
-        "y": 540,
+        "x": 55,
+        "y": 440,
         "wires": [
             [
                 "bf8e9d90.cb87d"
@@ -8854,7 +8768,7 @@
         "to": "",
         "reg": false,
         "x": 730,
-        "y": 160,
+        "y": 60,
         "wires": [
             [
                 "7bc89364.546b1c"
@@ -8889,7 +8803,7 @@
         "to": "",
         "reg": false,
         "x": 730,
-        "y": 200,
+        "y": 100,
         "wires": [
             [
                 "29a8af.fd9ef752"
@@ -8924,115 +8838,10 @@
         "to": "",
         "reg": false,
         "x": 730,
-        "y": 240,
+        "y": 140,
         "wires": [
             [
                 "617d275.72c70d8"
-            ]
-        ]
-    },
-    {
-        "id": "2a4cf814.2482a8",
-        "type": "function",
-        "z": "7014b916.6d1208",
-        "g": "74b0aeda.ae95f",
-        "name": "Extract Flow Properties",
-        "func": "obj = []\n\nfor (const  prop in flow.keys() ) {\n  obj.push(  prop + \":\"  +  flow.get(prop)   ) ;\n}\n\nobj.push( \"c1\" + \":\" + flow.get(\"cam1.ip\") )\n\nobj.push(flow.keys() )\n\n//obj.push(flow.cam1.ip)\n//obj.push(flow.cam2.ip)\n//obj.push(flow.cam3.ip)\n\nmsg = {payload: obj}\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "x": 330,
-        "y": 960,
-        "wires": [
-            [
-                "f0c5f869.2fe018"
-            ]
-        ]
-    },
-    {
-        "id": "a093d60a.52e6d8",
-        "type": "inject",
-        "z": "7014b916.6d1208",
-        "g": "74b0aeda.ae95f",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 140,
-        "y": 900,
-        "wires": [
-            [
-                "2a4cf814.2482a8",
-                "e9f14e10.07fac"
-            ]
-        ]
-    },
-    {
-        "id": "f0c5f869.2fe018",
-        "type": "debug",
-        "z": "7014b916.6d1208",
-        "g": "74b0aeda.ae95f",
-        "name": "Dump Flow",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 340,
-        "y": 1020,
-        "wires": []
-    },
-    {
-        "id": "b00e6664.a1bb78",
-        "type": "debug",
-        "z": "7014b916.6d1208",
-        "g": "74b0aeda.ae95f",
-        "name": "Dump Flow",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 410,
-        "y": 820,
-        "wires": []
-    },
-    {
-        "id": "e9f14e10.07fac",
-        "type": "function",
-        "z": "7014b916.6d1208",
-        "g": "74b0aeda.ae95f",
-        "name": "Extract Flow Properties",
-        "func": "obj = []\n\nfor (const  prop in flow ) {\n  obj.push(  prop +   \":\"  +  flow[prop]   ) ;\n}\n\nmsg = {payload: obj}\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "x": 390,
-        "y": 860,
-        "wires": [
-            [
-                "b00e6664.a1bb78"
             ]
         ]
     },
@@ -11960,8 +11769,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 130,
-        "y": 1180,
+        "x": 110,
+        "y": 800,
         "wires": [
             [
                 "4e7a2d1d.71e454",
@@ -11983,8 +11792,8 @@
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 920,
-        "y": 1240,
+        "x": 900,
+        "y": 860,
         "wires": []
     },
     {
@@ -11998,8 +11807,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 300,
-        "y": 1240,
+        "x": 280,
+        "y": 860,
         "wires": [
             [
                 "1b0ed325.2e377d"
@@ -12017,8 +11826,8 @@
         "start": "",
         "inout": "out",
         "property": "payload",
-        "x": 440,
-        "y": 1240,
+        "x": 420,
+        "y": 860,
         "wires": [
             [
                 "c7501997.554508"
@@ -12051,8 +11860,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 3,
-        "x": 660,
-        "y": 1140,
+        "x": 640,
+        "y": 760,
         "wires": [
             [
                 "b710464b.ea7198"
@@ -12084,8 +11893,8 @@
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 920,
-        "y": 1200,
+        "x": 900,
+        "y": 820,
         "wires": []
     },
     {
@@ -12108,8 +11917,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 320,
-        "y": 1140,
+        "x": 300,
+        "y": 760,
         "wires": [
             [
                 "36963c8c.a51974"
@@ -12127,8 +11936,8 @@
         "start": "",
         "inout": "out",
         "property": "payload",
-        "x": 490,
-        "y": 1140,
+        "x": 470,
+        "y": 760,
         "wires": [
             [
                 "96dba387.c8126"
@@ -12186,8 +11995,8 @@
             }
         ],
         "active": false,
-        "x": 910,
-        "y": 1120,
+        "x": 890,
+        "y": 740,
         "wires": []
     },
     {
@@ -12241,8 +12050,8 @@
             }
         ],
         "active": false,
-        "x": 910,
-        "y": 1160,
+        "x": 890,
+        "y": 780,
         "wires": []
     },
     {
@@ -18436,8 +18245,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 9,
-        "x": 1080,
-        "y": 1700,
+        "x": 900,
+        "y": 1820,
         "wires": [
             [
                 "24bf355f.50d85a"
@@ -18482,8 +18291,8 @@
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 1040,
-        "y": 1800,
+        "x": 860,
+        "y": 1920,
         "wires": []
     },
     {
@@ -18495,8 +18304,8 @@
         "links": [
             "c0e5caaf.749dc8"
         ],
-        "x": 1275,
-        "y": 1580,
+        "x": 1095,
+        "y": 1700,
         "wires": []
     },
     {
@@ -18508,8 +18317,8 @@
         "links": [
             "8cbbb4d9.cd5c88"
         ],
-        "x": 1275,
-        "y": 1620,
+        "x": 1095,
+        "y": 1740,
         "wires": []
     },
     {
@@ -18521,8 +18330,8 @@
         "links": [
             "8101e52d.3ce748"
         ],
-        "x": 1275,
-        "y": 1660,
+        "x": 1095,
+        "y": 1780,
         "wires": []
     },
     {
@@ -18534,8 +18343,8 @@
         "links": [
             "bb16f573.2a3388"
         ],
-        "x": 1275,
-        "y": 1700,
+        "x": 1095,
+        "y": 1820,
         "wires": []
     },
     {
@@ -18547,8 +18356,8 @@
         "links": [
             "ef3062f9.96069"
         ],
-        "x": 1275,
-        "y": 1740,
+        "x": 1095,
+        "y": 1860,
         "wires": []
     },
     {
@@ -18560,8 +18369,8 @@
         "links": [
             "a7cc23c8.fb4da"
         ],
-        "x": 1275,
-        "y": 1780,
+        "x": 1095,
+        "y": 1900,
         "wires": []
     },
     {
@@ -18573,8 +18382,8 @@
         "links": [
             "10a78dde.b44f42"
         ],
-        "x": 1275,
-        "y": 1820,
+        "x": 1095,
+        "y": 1940,
         "wires": []
     },
     {
@@ -18586,8 +18395,8 @@
         "links": [
             "f1651b61.ce4238"
         ],
-        "x": 1275,
-        "y": 1860,
+        "x": 1095,
+        "y": 1980,
         "wires": []
     },
     {
@@ -18927,8 +18736,8 @@
         "payload": "",
         "payloadType": "str",
         "topic": "",
-        "x": 140,
-        "y": 140,
+        "x": 120,
+        "y": 160,
         "wires": [
             [
                 "5b15cf8f.9919e",
@@ -18965,8 +18774,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 760,
-        "y": 100,
+        "x": 740,
+        "y": 120,
         "wires": [
             [
                 "9223dc40.cd804"
@@ -19000,8 +18809,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 740,
-        "y": 60,
+        "x": 720,
+        "y": 80,
         "wires": [
             [
                 "9223dc40.cd804"
@@ -19035,8 +18844,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 760,
-        "y": 140,
+        "x": 740,
+        "y": 160,
         "wires": [
             [
                 "9223dc40.cd804"
@@ -19070,8 +18879,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 760,
-        "y": 180,
+        "x": 740,
+        "y": 200,
         "wires": [
             [
                 "9223dc40.cd804"
@@ -19087,8 +18896,8 @@
         "links": [
             "846bf1bd.3fb21"
         ],
-        "x": 895,
-        "y": 120,
+        "x": 875,
+        "y": 140,
         "wires": []
     },
     {
@@ -19107,8 +18916,8 @@
         "randomLast": "5",
         "randomUnits": "seconds",
         "drop": false,
-        "x": 280,
-        "y": 60,
+        "x": 260,
+        "y": 80,
         "wires": [
             [
                 "8feb0f13.81a46",
@@ -19132,8 +18941,8 @@
         "randomLast": "5",
         "randomUnits": "seconds",
         "drop": false,
-        "x": 460,
-        "y": 40,
+        "x": 440,
+        "y": 60,
         "wires": [
             [
                 "8feb0f13.81a46"
