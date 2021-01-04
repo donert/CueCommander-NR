@@ -341,7 +341,7 @@
             "f2be0943.43f9b8"
         ],
         "x": 34,
-        "y": 479,
+        "y": 659,
         "w": 742,
         "h": 142
     },
@@ -1214,7 +1214,7 @@
             "dd4ddea7.fffe1"
         ],
         "x": 34,
-        "y": 639,
+        "y": 819,
         "w": 1012,
         "h": 202
     },
@@ -1737,15 +1737,18 @@
         },
         "nodes": [
             "ed2b752e.7b81e8",
-            "6394e967.243a88",
             "e09fe42d.e14738",
             "83ff632a.62649",
-            "1e515476.5c430c"
+            "1e515476.5c430c",
+            "9ff0f102.1bed5",
+            "837072d1.40d76",
+            "e2e1ef36.465ef",
+            "69f16cf.16d8994"
         ],
         "x": 24,
         "y": 359,
-        "w": 892,
-        "h": 82
+        "w": 832,
+        "h": 182
     },
     {
         "id": "c459911f.288c6",
@@ -2783,6 +2786,16 @@
         "collapse": false
     },
     {
+        "id": "541fa183.b6ccd",
+        "type": "ui_group",
+        "name": "Cues from Static File",
+        "tab": "b36c9a8b.092df8",
+        "order": 4,
+        "disp": true,
+        "width": "11",
+        "collapse": false
+    },
+    {
         "id": "b5b6edb9.31d88",
         "type": "ui_button",
         "z": "ee400291.7cb",
@@ -2824,7 +2837,7 @@
         "base64": true,
         "multicast": "false",
         "x": 640,
-        "y": 520,
+        "y": 700,
         "wires": []
     },
     {
@@ -2897,7 +2910,7 @@
         "topic": "",
         "name": "",
         "x": 410,
-        "y": 580,
+        "y": 760,
         "wires": []
     },
     {
@@ -6820,7 +6833,7 @@
             "474759da.511b38"
         ],
         "x": 75,
-        "y": 520,
+        "y": 700,
         "wires": [
             [
                 "f45db8b7.d0b738",
@@ -7353,7 +7366,7 @@
         "z": "a3be0cff.690a5",
         "g": "d96161cd.5d1f9",
         "name": "ProP Return Msg",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -7941,7 +7954,7 @@
         "to": "",
         "reg": false,
         "x": 220,
-        "y": 520,
+        "y": 700,
         "wires": [
             [
                 "241fcd48.6aa722",
@@ -8117,7 +8130,7 @@
         "statusVal": "payload",
         "statusType": "auto",
         "x": 650,
-        "y": 565,
+        "y": 745,
         "wires": []
     },
     {
@@ -12820,7 +12833,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 130,
-        "y": 740,
+        "y": 920,
         "wires": [
             [
                 "db555aa4.47f2f8",
@@ -12843,7 +12856,7 @@
         "statusVal": "payload",
         "statusType": "auto",
         "x": 910,
-        "y": 800,
+        "y": 980,
         "wires": []
     },
     {
@@ -12858,7 +12871,7 @@
         "initialize": "",
         "finalize": "",
         "x": 300,
-        "y": 800,
+        "y": 980,
         "wires": [
             [
                 "2c90fd9f.f92ba2"
@@ -12877,7 +12890,7 @@
         "inout": "out",
         "property": "payload",
         "x": 440,
-        "y": 800,
+        "y": 980,
         "wires": [
             [
                 "385708da.b57048"
@@ -12911,7 +12924,7 @@
         "repair": false,
         "outputs": 3,
         "x": 660,
-        "y": 700,
+        "y": 880,
         "wires": [
             [
                 "18d82ccc.80e513"
@@ -12944,7 +12957,7 @@
         "statusVal": "payload",
         "statusType": "auto",
         "x": 920,
-        "y": 760,
+        "y": 940,
         "wires": []
     },
     {
@@ -12968,7 +12981,7 @@
         "to": "",
         "reg": false,
         "x": 320,
-        "y": 700,
+        "y": 880,
         "wires": [
             [
                 "6e731c8e.758c44"
@@ -12987,7 +13000,7 @@
         "inout": "out",
         "property": "payload",
         "x": 490,
-        "y": 700,
+        "y": 880,
         "wires": [
             [
                 "22ddcdab.0d4522"
@@ -13016,7 +13029,7 @@
         ],
         "active": false,
         "x": 910,
-        "y": 680,
+        "y": 860,
         "wires": []
     },
     {
@@ -13041,7 +13054,7 @@
         ],
         "active": false,
         "x": 910,
-        "y": 720,
+        "y": 900,
         "wires": []
     },
     {
@@ -20607,7 +20620,7 @@
         "height": 10,
         "columns": [
             {
-                "field": "cuenum",
+                "field": "cue",
                 "title": "Cue#",
                 "width": "10%",
                 "align": "left",
@@ -20617,8 +20630,38 @@
                 }
             },
             {
-                "field": "cuename",
-                "title": "Name (Names are not yet correct)",
+                "field": "text",
+                "title": "Name",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "upTime",
+                "title": "Up",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "waitTime",
+                "title": "Wait",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "downTime",
+                "title": "Down",
                 "width": "",
                 "align": "left",
                 "formatter": "plaintext",
@@ -20630,38 +20673,10 @@
         "outputs": 1,
         "cts": true,
         "x": 580,
-        "y": 400,
+        "y": 440,
         "wires": [
             [
                 "83ff632a.62649"
-            ]
-        ]
-    },
-    {
-        "id": "6394e967.243a88",
-        "type": "change",
-        "z": "ee400291.7cb",
-        "g": "1fee3fae.e6893",
-        "name": "Cue Data",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "[{\"cuenum\":1,\"cuename\":\"unnamed 1\"},{\"cuenum\":2,\"cuename\":\"unnamed 2\"},{\"cuenum\":3,\"cuename\":\"unnamed 3\"},{\"cuenum\":4,\"cuename\":\"unnamed 4\"},{\"cuenum\":5,\"cuename\":\"unnamed 5\"},{\"cuenum\":6,\"cuename\":\"unnamed 6\"},{\"cuenum\":7,\"cuename\":\"unnamed 7\"},{\"cuenum\":8,\"cuename\":\"unnamed 8\"},{\"cuenum\":9,\"cuename\":\"unnamed 9\"},{\"cuenum\":10,\"cuename\":\"unnamed 10\"},{\"cuenum\":11,\"cuename\":\"unnamed 11\"},{\"cuenum\":12,\"cuename\":\"unnamed 12\"},{\"cuenum\":13,\"cuename\":\"unnamed 13\"},{\"cuenum\":14,\"cuename\":\"unnamed 14\"},{\"cuenum\":15,\"cuename\":\"unnamed 15\"},{\"cuenum\":16,\"cuename\":\"unnamed 16\"},{\"cuenum\":17,\"cuename\":\"unnamed 17\"},{\"cuenum\":18,\"cuename\":\"unnamed 18\"},{\"cuenum\":19,\"cuename\":\"unnamed 19\"},{\"cuenum\":20,\"cuename\":\"unnamed 20\"}]",
-                "tot": "json"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 350,
-        "y": 400,
-        "wires": [
-            [
-                "ed2b752e.7b81e8"
             ]
         ]
     },
@@ -20688,10 +20703,10 @@
         "payload": "",
         "payloadType": "str",
         "x": 150,
-        "y": 400,
+        "y": 440,
         "wires": [
             [
-                "6394e967.243a88"
+                "69f16cf.16d8994"
             ]
         ]
     },
@@ -20706,7 +20721,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "\"/cs/playback/gotocue/\" & msg.payload.cuenum",
+                "to": "\"/cs/playback/gotocue/\" & msg.payload.cue",
                 "tot": "jsonata"
             }
         ],
@@ -20715,8 +20730,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 740,
-        "y": 400,
+        "x": 720,
+        "y": 440,
         "wires": [
             [
                 "1e515476.5c430c"
@@ -20732,8 +20747,8 @@
         "links": [
             "a5f96939.8900e8"
         ],
-        "x": 875,
-        "y": 400,
+        "x": 815,
+        "y": 440,
         "wires": []
     },
     {
@@ -20753,7 +20768,7 @@
         "randomUnits": "seconds",
         "drop": true,
         "x": 220,
-        "y": 580,
+        "y": 760,
         "wires": [
             [
                 "cdd82f05.e3c48"
@@ -21006,7 +21021,7 @@
         "z": "a3be0cff.690a5",
         "g": "d96161cd.5d1f9",
         "name": "PP6 Response",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -21173,6 +21188,81 @@
         "wires": [
             [
                 "3802cbe5.306794"
+            ]
+        ]
+    },
+    {
+        "id": "9ff0f102.1bed5",
+        "type": "comment",
+        "z": "ee400291.7cb",
+        "g": "1fee3fae.e6893",
+        "name": "TODO - cue format",
+        "info": "may need to divide cue number by 10",
+        "x": 730,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "837072d1.40d76",
+        "type": "change",
+        "z": "ee400291.7cb",
+        "g": "1fee3fae.e6893",
+        "name": "pick the steps array",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.steps",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 410,
+        "y": 440,
+        "wires": [
+            [
+                "ed2b752e.7b81e8"
+            ]
+        ]
+    },
+    {
+        "id": "e2e1ef36.465ef",
+        "type": "json",
+        "z": "ee400291.7cb",
+        "g": "1fee3fae.e6893",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 410,
+        "y": 500,
+        "wires": [
+            [
+                "837072d1.40d76"
+            ]
+        ]
+    },
+    {
+        "id": "69f16cf.16d8994",
+        "type": "file in",
+        "z": "ee400291.7cb",
+        "g": "1fee3fae.e6893",
+        "name": "Read saved cues ",
+        "filename": "/Users/donert/Dropbox/UAC_Software/cuecommander/cueList.json",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "x": 230,
+        "y": 500,
+        "wires": [
+            [
+                "e2e1ef36.465ef"
             ]
         ]
     }
