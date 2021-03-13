@@ -2,7 +2,17 @@
     "name": "CueCommander-NR",
     "description": "An AVL automation application ",
     "version": "0.0.1",
-    "dependencies": {},
+    "dependencies": {
+        "node-red-contrib-ui-etable": "4.6.3",
+        "node-red-dashboard": "2.25.0",
+        "node-red-contrib-pjlink": "1.0.4",
+        "node-red-contrib-osc": "1.1.0",
+        "node-red-contrib-config": "1.2.1",
+        "blackmagic-atem-nodered": "2.2.8",
+        "node-red-node-rbe": "0.2.9",
+        "node-red-node-ui-list": "0.3.4",
+        "node-red-node-ui-table": "0.3.10"
+    },
     "node-red": {
         "settings": {
             "flowFile": "flows_argon-mba.home.json",
