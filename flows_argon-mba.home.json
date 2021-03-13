@@ -1673,12 +1673,13 @@
             "adeb0e6d.dc05b",
             "320b1f78.2913c",
             "102af5b4.89f82a",
-            "5e58cef2.267da"
+            "23a29d32.4ebce2",
+            "aa409703.25a2d8"
         ],
         "x": 794,
-        "y": 679,
-        "w": 802,
-        "h": 222
+        "y": 639,
+        "w": 932,
+        "h": 262
     },
     {
         "id": "1fee3fae.e6893",
@@ -19907,7 +19908,7 @@
         "z": "17ca131.e488ced",
         "g": "bb661aa6.08f608",
         "name": "save to flow context",
-        "func": "//msg.key identifies projector: prj1, prj2 etc\n//msg.topic is parameter\n\n//TODO: Make this more scalable rather than hardcoded to 4 items.\n\nswitch(msg.key) {\n  case 1:\n    prj = \"1\";\n    break;\n    \n  case 2:\n    prj = \"2\";\n    break;\n    \n  case 3:\n    prj = \"3\";\n    break;    \n    \n  case 4:\n    prj = \"4\";\n    break;    \n    \n  default:\n    prj = \"?\";\n}\n\nswitch(msg.topic) {\n    case \"getlamps\":\n        key = \"lamp\"\n        val = msg.payload[0].hours ;\n        break;\n    case \"getpowerstate\":\n        key= \"power\"\n        val = (msg.payload == 0  ? \"Off\" : \"On\");\n        break;\n    case \"getname\":\n        key= \"name\"\n        val = msg.payload  ;\n        break; \n    case \"getinput\":\n        key= \"input\"\n        val = msg.payload.source  ;\n        break;           \n    default:\n        key = \"unknown\"\n        val = \"?\"\n}\n  \nfk = \"ps_\" + String(prj) + \"_\" + key\nfv = val\n\nflow.set(fk,fv)\n\nreturn msg;",
+        "func": "//msg.key identifies projector: prj1, prj2 etc\n//msg.topic is parameter\n\n//TODO: Make this more scalable rather than hardcoded to 4 items.\n\nswitch(msg.instance) {\n  case 1:\n    prj = \"1\";\n    break;\n    \n  case 2:\n    prj = \"2\";\n    break;\n    \n  case 3:\n    prj = \"3\";\n    break;    \n    \n  case 4:\n    prj = \"4\";\n    break;    \n    \n  default:\n    prj = \"?\";\n}\n\nswitch(msg.topic) {\n    case \"getlamps\":\n        key = \"lamp\"\n        val = msg.payload[0].hours ;\n        break;\n    case \"getpowerstate\":\n        key= \"power\"\n        val = (msg.payload == 0  ? \"Off\" : \"On\");\n        break;\n    case \"getname\":\n        key= \"name\"\n        val = msg.payload  ;\n        break; \n    case \"getinput\":\n        key= \"input\"\n        val = msg.payload.source  ;\n        break;           \n    default:\n        key = \"unknown\"\n        val = \"?\"\n}\n  \nfk = \"ps_\" + String(prj) + \"_\" + key\nfv = val\n\nflow.set(fk,fv)\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -20455,17 +20456,6 @@
                 "78d7ba57.f7e9c4"
             ]
         ]
-    },
-    {
-        "id": "5e58cef2.267da",
-        "type": "comment",
-        "z": "17ca131.e488ced",
-        "g": "bb661aa6.08f608",
-        "name": "TODO - turn off sorting",
-        "info": "Tried, but not wokring",
-        "x": 1470,
-        "y": 740,
-        "wires": []
     },
     {
         "id": "46c32589.dcc19c",
@@ -22144,6 +22134,28 @@
         "statusType": "auto",
         "x": 1140,
         "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "23a29d32.4ebce2",
+        "type": "comment",
+        "z": "17ca131.e488ced",
+        "g": "bb661aa6.08f608",
+        "name": "todo refactor the function tp be more scalable",
+        "info": "",
+        "x": 1190,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "aa409703.25a2d8",
+        "type": "comment",
+        "z": "17ca131.e488ced",
+        "g": "bb661aa6.08f608",
+        "name": "todo - store status in an array rather than discrete",
+        "info": "",
+        "x": 1520,
+        "y": 740,
         "wires": []
     }
 ]
