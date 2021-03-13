@@ -399,7 +399,8 @@
             "19ab985d.b5c048",
             "3c314cee.d4ba94",
             "3bfc7fa1.093c9",
-            "7de41cf.eb31de4"
+            "7de41cf.eb31de4",
+            "c208d442.f81c88"
         ],
         "x": 54,
         "y": 513,
@@ -1674,8 +1675,8 @@
             "102af5b4.89f82a",
             "5e58cef2.267da"
         ],
-        "x": 774,
-        "y": 799,
+        "x": 794,
+        "y": 679,
         "w": 802,
         "h": 222
     },
@@ -19858,8 +19859,8 @@
         ],
         "outputs": 0,
         "cts": false,
-        "x": 1440,
-        "y": 960,
+        "x": 1460,
+        "y": 840,
         "wires": []
     },
     {
@@ -19873,8 +19874,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 1150,
-        "y": 920,
+        "x": 1170,
+        "y": 800,
         "wires": [
             [
                 "4e318fff.2f414",
@@ -19896,8 +19897,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1220,
-        "y": 980,
+        "x": 1240,
+        "y": 860,
         "wires": []
     },
     {
@@ -19911,8 +19912,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 1100,
-        "y": 840,
+        "x": 1120,
+        "y": 720,
         "wires": [
             [
                 "380817e7.0d4d58"
@@ -19935,8 +19936,8 @@
         "randomLast": "5",
         "randomUnits": "seconds",
         "drop": true,
-        "x": 1140,
-        "y": 880,
+        "x": 1160,
+        "y": 760,
         "wires": [
             [
                 "42d1f1dd.ed9e"
@@ -19957,8 +19958,8 @@
         "targetType": "jsonata",
         "statusVal": "",
         "statusType": "auto",
-        "x": 890,
-        "y": 920,
+        "x": 910,
+        "y": 800,
         "wires": []
     },
     {
@@ -19972,8 +19973,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 850,
-        "y": 840,
+        "x": 870,
+        "y": 720,
         "wires": [
             [
                 "851b5714.714348",
@@ -20447,8 +20448,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1400,
-        "y": 920,
+        "x": 1420,
+        "y": 800,
         "wires": [
             [
                 "78d7ba57.f7e9c4"
@@ -20462,8 +20463,8 @@
         "g": "bb661aa6.08f608",
         "name": "TODO - turn off sorting",
         "info": "Tried, but not wokring",
-        "x": 1450,
-        "y": 860,
+        "x": 1470,
+        "y": 740,
         "wires": []
     },
     {
@@ -21788,7 +21789,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "[{\"num\":1,\"name\":\"dev init Frontyyyxxx\",\"ip\":\"192.168.0.193\",\"port\":\"4532\",\"delete\":false},{\"num\":2,\"name\":\"Centre Front\",\"ip\":\"192.168.0.194\",\"port\":\"4532\",\"delete\":false},{\"num\":3,\"name\":\"West Front\",\"ip\":\"192.168.0.195\",\"port\":\"4532\",\"delete\":false},{\"num\":4,\"name\":\"Rear\",\"ip\":\"192.168.0.183\",\"port\":\"4532\",\"delete\":false}]",
+                "to": "[{\"num\":1,\"name\":\"dev init Frontyyyxxx\",\"ip\":\"192.168.0.193\",\"port\":\"4352\",\"delete\":false},{\"num\":2,\"name\":\"Centre Front\",\"ip\":\"192.168.0.194\",\"port\":\"4352\",\"delete\":false},{\"num\":3,\"name\":\"West Front\",\"ip\":\"192.168.0.195\",\"port\":\"4352\",\"delete\":false},{\"num\":4,\"name\":\"Rear\",\"ip\":\"192.168.0.183\",\"port\":\"4352\",\"delete\":false}]",
                 "tot": "json"
             }
         ],
@@ -21875,7 +21876,7 @@
         "z": "17ca131.e488ced",
         "g": "955bfb84.2f11d8",
         "name": "Add a row ",
-        "func": "defrec = [ \n    {\"num\":1,\"name\":\" no context\",\"ip\":\"999.199968.0.10\",\"port\":\"4532\",\n        \"delete\": false},\n    \n]\n\nvar proj_parms = flow.get(\"proj_parms\");\n\nif (typeof(proj_parms) == \"undefined\") {\n    console.log(\"it was undefined\")\n    proj_parms = [defrec]\n}\n\nnum = proj_parms.length+1;\n \nrec = {\n    \"num\" : num,\n    \"name\": \"default\",\n    \"ip\"  : \"0.0.0.1\",\n    \"port\": 4532,\n    \"delete\": false\n}\n  \nproj_parms.push ( rec);\n\nmsg = { \"payload\": proj_parms }\n\nreturn msg;",
+        "func": "defrec = [ \n    {\"num\":1,\"name\":\" no context\",\n    \"ip\":\"999.199968.0.10\",\n    \"port\":\"4352\",\n        \"delete\": false},\n    \n]\n\nvar proj_parms = flow.get(\"proj_parms\");\n\nif (typeof(proj_parms) == \"undefined\") {\n    console.log(\"it was undefined\")\n    proj_parms = [defrec]\n}\n\nnum = proj_parms.length+1;\n \nrec = {\n    \"num\" : num,\n    \"name\": \"default\",\n    \"ip\"  : \"0.0.0.1\",\n    \"port\": 4352,\n    \"delete\": false\n}\n  \nproj_parms.push ( rec);\n\nmsg = { \"payload\": proj_parms }\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -21951,7 +21952,7 @@
         "z": "17ca131.e488ced",
         "g": "955bfb84.2f11d8",
         "name": "Delete Selected",
-        "func": "proj_parms = msg.payload;\n\nrec = {\n    \"num\" : \"1\",\n    \"name\": \"Must have one row (delete)\",\n    \"ip\"  : \"999.999.999.999\",\n    \"port\": \"4532\",\n    \"delete\": false\n}\n\nif (typeof(proj_parms) == \"undefined\") {\n    console.log(\"delete: it was undefined\")\n    proj_parms = [ rec ] \n}\n\nnew_parms = [];\nj=0;\n\nfor (var i = 0; i < proj_parms.length; i++) {\n    console.log(\"i=\", i, \"delete=\", proj_parms[i].delete )\n  if (proj_parms[i].delete ==  false) {\n    new_parms[j] = proj_parms[i];\n    new_parms[j].num = j+1;\n    j = j+1;\n  }\n}\n \nmsg = { \"payload\": new_parms }\n\nreturn msg;",
+        "func": "proj_parms = msg.payload;\n\nrec = {\n    \"num\" : \"1\",\n    \"name\": \"Must have one row (delete)\",\n    \"ip\"  : \"999.999.999.999\",\n    \"port\": \"4352\",\n    \"delete\": false\n}\n\nif (typeof(proj_parms) == \"undefined\") {\n    console.log(\"delete: it was undefined\")\n    proj_parms = [ rec ] \n}\n\nnew_parms = [];\nj=0;\n\nfor (var i = 0; i < proj_parms.length; i++) {\n    console.log(\"i=\", i, \"delete=\", proj_parms[i].delete )\n  if (proj_parms[i].delete ==  false) {\n    new_parms[j] = proj_parms[i];\n    new_parms[j].num = j+1;\n    j = j+1;\n  }\n}\n \nmsg = { \"payload\": new_parms }\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -22101,7 +22102,8 @@
         "y": 1080,
         "wires": [
             [
-                "adeb0e6d.dc05b"
+                "adeb0e6d.dc05b",
+                "c208d442.f81c88"
             ],
             [
                 "7de41cf.eb31de4"
@@ -22124,6 +22126,24 @@
         "statusType": "auto",
         "x": 1120,
         "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "c208d442.f81c88",
+        "type": "debug",
+        "z": "17ca131.e488ced",
+        "g": "2a5510d0.88b28",
+        "name": "pjlink out",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1140,
+        "y": 1000,
         "wires": []
     }
 ]
