@@ -19955,7 +19955,7 @@
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "\"key:\" & msg.key & \". topic:\" & msg.topic & \". payload:\" & msg.payload",
+        "complete": "\"instance:\" & msg.instance & \". topic:\" & msg.topic & \". payload:\" & msg.payload",
         "targetType": "jsonata",
         "statusVal": "",
         "statusType": "auto",
@@ -21979,7 +21979,7 @@
         "z": "17ca131.e488ced",
         "g": "2a5510d0.88b28",
         "name": "iterate over all projectors",
-        "func": "pp = flow.get(\"proj_parms\")\nn = pp.length\n\nout = []\n\nfor (var i = 0; i < n; i++) { \n     msgi = {\n         \"payload\" : msg.payload,\n         \"instance\" : i\n     }\n     out.push( msgi )\n}\n\nmsg = { \"payload\" : out }\n\nreturn msg;",
+        "func": "pp = flow.get(\"proj_parms\")\nn = pp.length\n\nout = []\n\nfor (var i = 0; i < n; i++) { \n     msgi = {\n         \"payload\" : msg.payload,\n         \"instance\" : i,\n         \"topic\": msg.topic\n     }\n     out.push( msgi )\n}\n\nmsg = { \"payload\" : out }\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -22072,7 +22072,7 @@
         "initialize": "",
         "finalize": "",
         "x": 730,
-        "y": 1080,
+        "y": 1140,
         "wires": [
             [
                 "e880b599.3f8de8",
