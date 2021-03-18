@@ -395,9 +395,9 @@
             "3bfc7fa1.093c9",
             "c208d442.f81c88"
         ],
-        "x": 54,
+        "x": 34,
         "y": 559,
-        "w": 532,
+        "w": 592,
         "h": 222
     },
     {
@@ -1658,7 +1658,6 @@
             "label": true
         },
         "nodes": [
-            "78d7ba57.f7e9c4",
             "42d1f1dd.ed9e",
             "4e318fff.2f414",
             "851b5714.714348",
@@ -2111,8 +2110,8 @@
             "c41e00bc.b979b",
             "2ce45fde.33427"
         ],
-        "x": 34,
-        "y": 819,
+        "x": 594,
+        "y": 1219,
         "w": 592,
         "h": 202
     },
@@ -2126,13 +2125,12 @@
             "label": true
         },
         "nodes": [
-            "728af67f.d18cb8",
-            "ac4eb5e.7c30448"
+            "728af67f.d18cb8"
         ],
-        "x": 34,
-        "y": 1039,
-        "w": 332,
-        "h": 142
+        "x": 394,
+        "y": 1359,
+        "w": 172,
+        "h": 82
     },
     {
         "id": "c87c24f4.363dc8",
@@ -2145,16 +2143,64 @@
         },
         "nodes": [
             "d8351720.dca718",
-            "9cbf6757.a76ec8",
-            "d90c1f11.7b8f5",
-            "e3e2804a.f73f2",
-            "956c8d0a.59e9b",
-            "d1430f53.1d486"
+            "9cbf6757.a76ec8"
         ],
         "x": 34,
-        "y": 1199,
-        "w": 832,
-        "h": 262
+        "y": 1319,
+        "w": 342,
+        "h": 122
+    },
+    {
+        "id": "72b450b6.03b4d",
+        "type": "group",
+        "z": "17ca131.e488ced",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "d821eef8.6fce4",
+            "6379cc35.4cbb54",
+            "d4d2cbb.64b4138",
+            "893b4dce.95f96",
+            "343ecb61.5d9144",
+            "1c31bb43.4c9505"
+        ],
+        "x": 54,
+        "y": 899,
+        "w": 772,
+        "h": 162
+    },
+    {
+        "id": "abe38ad4.dae558",
+        "type": "group",
+        "z": "17ca131.e488ced",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "29aa4734.eae0a8",
+            "77a9497a.b1b018",
+            "453a450.63abfbc",
+            "4f0a8274.697b3c",
+            "e0dbeb1c.db9378",
+            "217b6567.07b41a"
+        ],
+        "x": 874,
+        "y": 899,
+        "w": 766,
+        "h": 162
     },
     {
         "id": "b36c9a8b.092df8",
@@ -7027,7 +7073,7 @@
             "a2bacb69.935388",
             "9223dc40.cd804"
         ],
-        "x": 95,
+        "x": 75,
         "y": 600,
         "wires": [
             [
@@ -19596,84 +19642,6 @@
         "wires": []
     },
     {
-        "id": "78d7ba57.f7e9c4",
-        "type": "ui_table",
-        "z": "17ca131.e488ced",
-        "g": "bb661aa6.08f608",
-        "group": "53a10c1c.b388c4",
-        "name": "Response Table",
-        "order": 1,
-        "width": 12,
-        "height": 4,
-        "columns": [
-            {
-                "field": "projector",
-                "title": "Projector",
-                "width": "",
-                "align": "left",
-                "formatter": "plaintext",
-                "formatterParams": {
-                    "target": "_blank"
-                }
-            },
-            {
-                "field": "power",
-                "title": "Power",
-                "width": "",
-                "align": "left",
-                "formatter": "plaintext",
-                "formatterParams": {
-                    "target": "_blank"
-                }
-            },
-            {
-                "field": "powercolour",
-                "title": "Power",
-                "width": "",
-                "align": "left",
-                "formatter": "color",
-                "formatterParams": {
-                    "target": "_blank"
-                }
-            },
-            {
-                "field": "name",
-                "title": "Name",
-                "width": "",
-                "align": "left",
-                "formatter": "plaintext",
-                "formatterParams": {
-                    "target": "_blank"
-                }
-            },
-            {
-                "field": "lamp",
-                "title": "Lamp Hours",
-                "width": "",
-                "align": "right",
-                "formatter": "plaintext",
-                "formatterParams": {
-                    "target": "_blank"
-                }
-            },
-            {
-                "field": "input",
-                "title": "Input",
-                "width": "",
-                "align": "left",
-                "formatter": "plaintext",
-                "formatterParams": {
-                    "target": "_blank"
-                }
-            }
-        ],
-        "outputs": 0,
-        "cts": false,
-        "x": 1320,
-        "y": 740,
-        "wires": []
-    },
-    {
         "id": "42d1f1dd.ed9e",
         "type": "function",
         "z": "17ca131.e488ced",
@@ -21542,7 +21510,7 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 250,
+        "x": 230,
         "y": 600,
         "wires": [
             [
@@ -21564,7 +21532,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 200,
+        "x": 180,
         "y": 740,
         "wires": []
     },
@@ -21580,7 +21548,7 @@
         "arraySpltType": "len",
         "stream": false,
         "addname": "",
-        "x": 430,
+        "x": 410,
         "y": 600,
         "wires": [
             [
@@ -21599,7 +21567,7 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 170,
+        "x": 150,
         "y": 680,
         "wires": [
             [
@@ -21616,10 +21584,12 @@
         "ip": "",
         "port": "",
         "name": "",
-        "x": 350,
+        "x": 330,
         "y": 680,
         "wires": [
-            [],
+            [
+                "893b4dce.95f96"
+            ],
             [
                 "c208d442.f81c88"
             ]
@@ -21639,7 +21609,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 450,
+        "x": 490,
         "y": 740,
         "wires": []
     },
@@ -21676,8 +21646,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 220,
-        "y": 900,
+        "x": 780,
+        "y": 1300,
         "wires": [
             [
                 "99a5a358.010ff"
@@ -21706,8 +21676,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 130,
-        "y": 860,
+        "x": 690,
+        "y": 1260,
         "wires": [
             [
                 "76980cdf.867b74"
@@ -21725,8 +21695,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 290,
-        "y": 940,
+        "x": 850,
+        "y": 1340,
         "wires": [
             [
                 "c41e00bc.b979b",
@@ -21738,14 +21708,15 @@
         "id": "29aa4734.eae0a8",
         "type": "function",
         "z": "17ca131.e488ced",
+        "g": "abe38ad4.dae558",
         "name": "Pivot Wider",
         "func": "//Code from https://techbrij.com\n// dataArray: Array to be converted\n// rowIndex: Index of column in array which is to be kept as first column\n// colIndex: Index of column whose values to be converted as columns in the output array.\n// dataIndex: Index of column whose values to be used as data (displayed in tabular/grid format).\nfunction pivotWider(dataArray, rowIndex, colIndex, dataIndex) {\n        var result = {}, ret = [];\n        var newCols = [];\n        for (var i = 0; i < dataArray.length; i++) {\n \n            if (!result[dataArray[i][rowIndex]]) {\n                result[dataArray[i][rowIndex]] = {};\n            }\n            result[dataArray[i][rowIndex]][dataArray[i][colIndex]] = dataArray[i][dataIndex];\n \n            //To get column names\n            if (newCols.indexOf(dataArray[i][colIndex]) == -1) {\n                newCols.push(dataArray[i][colIndex]);\n            }\n        }\n \n        newCols.sort();\n        var item = [];\n \n        //Add Header Row\n        item.push('Item');\n        item.push.apply(item, newCols);\n        ret.push(item);\n \n        //Add content \n        for (var key in result) {\n            item = [];\n            item.push(key);\n            for (var j = 0; j < newCols.length; j++) {\n                item.push(result[key][newCols[j]] || \"-\");\n            }\n            ret.push(item);\n        }\n    return ret;\n}\n\nmp = msg.payload // need to convert structures to array\n\nwrangled = []\n\nfor (i=0; i < mp.length; i++) {\n    p = mp[i].projector;\n    m = mp[i].metric;\n    v = mp[i].value;\n    row = [ p,m,v ];\n    wrangled.push(row);\n}\n\nwider = pivotWider(wrangled, 0, 1, 2);\n\n// TODO\n// wider is a table style structure with headers - need to turn that into json structures.\n\nreturn  { payload: wider };",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 690,
-        "y": 1040,
+        "x": 1153,
+        "y": 980,
         "wires": [
             [
                 "77a9497a.b1b018",
@@ -21757,6 +21728,7 @@
         "id": "77a9497a.b1b018",
         "type": "debug",
         "z": "17ca131.e488ced",
+        "g": "abe38ad4.dae558",
         "name": "Wide Data",
         "active": false,
         "tosidebar": true,
@@ -21766,8 +21738,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 970,
-        "y": 900,
+        "x": 1370,
+        "y": 940,
         "wires": []
     },
     {
@@ -21807,6 +21779,7 @@
         "id": "453a450.63abfbc",
         "type": "debug",
         "z": "17ca131.e488ced",
+        "g": "abe38ad4.dae558",
         "name": "json out",
         "active": false,
         "tosidebar": true,
@@ -21816,7 +21789,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1060,
+        "x": 1380,
         "y": 1020,
         "wires": []
     },
@@ -21824,18 +21797,19 @@
         "id": "4f0a8274.697b3c",
         "type": "function",
         "z": "17ca131.e488ced",
+        "g": "abe38ad4.dae558",
         "name": "tableToJSON",
         "func": "function convertJSON(tableData){\n    var keys = tableData[0],\n        objects = [];\n        \n    for(var i = 1; i < tableData.length; i++){\n        var rowObject = {};\n        tableData[i].forEach(function(item, index){\n            rowObject[keys[index]] = item;\n        });\n        objects.push(rowObject);\n    }\n    \n    //return JSON.stringify(objects);\n    return objects;\n}\n\ni = msg.payload;\n\no = {payload: convertJSON(i)};\n\nreturn o;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 1050,
-        "y": 960,
+        "x": 1341,
+        "y": 980,
         "wires": [
             [
                 "453a450.63abfbc",
-                "78d7ba57.f7e9c4"
+                "e0dbeb1c.db9378"
             ]
         ]
     },
@@ -21853,8 +21827,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 350,
-        "y": 980,
+        "x": 910,
+        "y": 1380,
         "wires": []
     },
     {
@@ -21877,8 +21851,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 520,
-        "y": 940,
+        "x": 1080,
+        "y": 1340,
         "wires": [
             []
         ]
@@ -21906,56 +21880,29 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 130,
-        "y": 1080,
+        "x": 490,
+        "y": 1400,
         "wires": [
-            [
-                "ac4eb5e.7c30448"
-            ]
-        ]
-    },
-    {
-        "id": "ac4eb5e.7c30448",
-        "type": "change",
-        "z": "17ca131.e488ced",
-        "g": "452ed9f6.117cb8",
-        "name": "Retrieve from Context",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "projectorStatus",
-                "tot": "flow"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 240,
-        "y": 1140,
-        "wires": [
-            [
-                "29aa4734.eae0a8"
-            ]
+            []
         ]
     },
     {
         "id": "d821eef8.6fce4",
         "type": "function",
         "z": "17ca131.e488ced",
+        "g": "72b450b6.03b4d",
         "name": "Update Projector Status in flow ",
         "func": "//msg.key identifies projector: prj1, prj2 etc\n//msg.topic is parameter\n\noff_colour = \"#FF0000\";\non_colour  = \"#00FF00\";\n\nprj = msg.instance;\n\nswitch(msg.topic) {\n    case \"getlamps\":\n        key = \"lamp\"\n        val = msg.payload[0].hours ;\n        break;\n    case \"getpowerstate\":\n        key= \"power\"\n        val = (msg.payload == 0  ? \"Off\" : \"On\");\n        break;\n    case \"getname\":\n        key= \"name\"\n        val = msg.payload  ;\n        break; \n    case \"getinput\":\n        key= \"input\"\n        val = msg.payload ;\n        break;     \n    case \"powercolour\": // this should be a copy of the getpowerstate message topic with a different topic.\n        key= \"powercolour\"\n        val = (msg.payload == 0 ? off_colour : on_colour) ;\n        break;  \n    default:\n        key = \"unknown\"\n        val = \"?\"\n}\n\nnewval = {\"projector\": prj,\n          \"metric\"   : key,\n          \"value\"    : val\n          };\n  \n// retrieve status  \n  \nps = flow.get(\"projectorStatus\")  \n\n// remove prior value\n\n//ps = prjstatus.filter( x => !( x[0]==itm[0] & x[1] == itm[1]  ) )\n\n//console.log( \"x.projector=\", x.projector)\nconsole.log( \"newval.projector=\", newval.projector)\n//console.log( \"x.metric=\", x.metric)\nconsole.log( \"newval.metric=\", newval.metric)\n\nps = ps.filter(x => !(x.projector == newval.projector & x.metric == newval.metric))\n\n// add new value\n\nps.push(newval);\n\nflow.set( \"projectorStatus\"  , ps)\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 1130,
-        "y": 1080,
+        "x": 650,
+        "y": 980,
         "wires": [
-            []
+            [
+                "217b6567.07b41a"
+            ]
         ]
     },
     {
@@ -21970,32 +21917,10 @@
         "initialize": "",
         "finalize": "",
         "x": 230,
-        "y": 1280,
+        "y": 1400,
         "wires": [
-            [
-                "d90c1f11.7b8f5",
-                "d821eef8.6fce4",
-                "e3e2804a.f73f2"
-            ]
+            []
         ]
-    },
-    {
-        "id": "d90c1f11.7b8f5",
-        "type": "debug",
-        "z": "17ca131.e488ced",
-        "g": "c87c24f4.363dc8",
-        "name": "monitor",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": true,
-        "complete": "msg.instance & \":\" & msg.topic & \":\" & msg.payload  ",
-        "targetType": "jsonata",
-        "statusVal": "payload",
-        "statusType": "auto",
-        "x": 580,
-        "y": 1300,
-        "wires": []
     },
     {
         "id": "d8351720.dca718",
@@ -22020,7 +21945,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 210,
-        "y": 1240,
+        "y": 1360,
         "wires": [
             [
                 "9cbf6757.a76ec8"
@@ -22028,36 +21953,10 @@
         ]
     },
     {
-        "id": "e3e2804a.f73f2",
-        "type": "switch",
-        "z": "17ca131.e488ced",
-        "g": "c87c24f4.363dc8",
-        "name": "",
-        "property": "topic",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "getpowerstate",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 290,
-        "y": 1380,
-        "wires": [
-            [
-                "d1430f53.1d486"
-            ]
-        ]
-    },
-    {
-        "id": "956c8d0a.59e9b",
+        "id": "6379cc35.4cbb54",
         "type": "debug",
         "z": "17ca131.e488ced",
-        "g": "c87c24f4.363dc8",
+        "g": "72b450b6.03b4d",
         "name": "monitor",
         "active": false,
         "tosidebar": true,
@@ -22067,15 +21966,15 @@
         "targetType": "jsonata",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 760,
-        "y": 1420,
+        "x": 720,
+        "y": 1020,
         "wires": []
     },
     {
-        "id": "d1430f53.1d486",
+        "id": "d4d2cbb.64b4138",
         "type": "change",
         "z": "17ca131.e488ced",
-        "g": "c87c24f4.363dc8",
+        "g": "72b450b6.03b4d",
         "name": "override topic",
         "rules": [
             {
@@ -22091,12 +21990,183 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 480,
-        "y": 1420,
+        "x": 414,
+        "y": 1020,
         "wires": [
             [
-                "956c8d0a.59e9b",
+                "6379cc35.4cbb54",
                 "d821eef8.6fce4"
+            ]
+        ]
+    },
+    {
+        "id": "893b4dce.95f96",
+        "type": "function",
+        "z": "17ca131.e488ced",
+        "g": "72b450b6.03b4d",
+        "name": "clone",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 130,
+        "y": 980,
+        "wires": [
+            [
+                "d821eef8.6fce4",
+                "343ecb61.5d9144",
+                "1c31bb43.4c9505"
+            ]
+        ]
+    },
+    {
+        "id": "343ecb61.5d9144",
+        "type": "debug",
+        "z": "17ca131.e488ced",
+        "g": "72b450b6.03b4d",
+        "name": "monitor",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "msg.instance & \":\" & msg.topic & \":\" & msg.payload  ",
+        "targetType": "jsonata",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 580,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "1c31bb43.4c9505",
+        "type": "switch",
+        "z": "17ca131.e488ced",
+        "g": "72b450b6.03b4d",
+        "name": "",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "getpowerstate",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 264,
+        "y": 1020,
+        "wires": [
+            [
+                "d4d2cbb.64b4138"
+            ]
+        ]
+    },
+    {
+        "id": "e0dbeb1c.db9378",
+        "type": "ui_table",
+        "z": "17ca131.e488ced",
+        "g": "abe38ad4.dae558",
+        "group": "53a10c1c.b388c4",
+        "name": "Response Table",
+        "order": 1,
+        "width": 12,
+        "height": 4,
+        "columns": [
+            {
+                "field": "projector",
+                "title": "Projector",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "power",
+                "title": "Power",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "powercolour",
+                "title": "Power",
+                "width": "",
+                "align": "left",
+                "formatter": "color",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "name",
+                "title": "Name",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "lamp",
+                "title": "Lamp Hours",
+                "width": "",
+                "align": "right",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "input",
+                "title": "Input",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            }
+        ],
+        "outputs": 0,
+        "cts": false,
+        "x": 1534,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "217b6567.07b41a",
+        "type": "change",
+        "z": "17ca131.e488ced",
+        "g": "abe38ad4.dae558",
+        "name": "From Context",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "projectorStatus",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 980,
+        "y": 980,
+        "wires": [
+            [
+                "29aa4734.eae0a8"
             ]
         ]
     }
