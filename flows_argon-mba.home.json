@@ -388,24 +388,17 @@
         },
         "nodes": [
             "846bf1bd.3fb21",
-            "4fbff3b.762920c",
-            "7d64263a.10eef8",
-            "1915aec1.fb8071",
-            "5117aa79.7c6374",
-            "b228232f.c171b",
             "88966e38.a3778",
-            "9febb91b.c2a4d8",
             "e880b599.3f8de8",
             "19ab985d.b5c048",
             "3c314cee.d4ba94",
             "3bfc7fa1.093c9",
-            "7de41cf.eb31de4",
             "c208d442.f81c88"
         ],
         "x": 54,
-        "y": 513,
-        "w": 1192,
-        "h": 668
+        "y": 559,
+        "w": 532,
+        "h": 222
     },
     {
         "id": "65220297.8c588c",
@@ -439,7 +432,7 @@
             "8cfbb4ee.75d588"
         ],
         "x": 34,
-        "y": 1679,
+        "y": 1959,
         "w": 742,
         "h": 462
     },
@@ -1128,7 +1121,7 @@
             "4bf08b27.0064b4"
         ],
         "x": 34,
-        "y": 1199,
+        "y": 1479,
         "w": 1072,
         "h": 442
     },
@@ -1674,12 +1667,13 @@
             "320b1f78.2913c",
             "102af5b4.89f82a",
             "23a29d32.4ebce2",
-            "aa409703.25a2d8"
+            "aa409703.25a2d8",
+            "26d4e0bb.c3f3a"
         ],
-        "x": 794,
-        "y": 639,
+        "x": 654,
+        "y": 539,
         "w": 932,
-        "h": 262
+        "h": 322
     },
     {
         "id": "1fee3fae.e6893",
@@ -1990,69 +1984,6 @@
         "h": 122
     },
     {
-        "id": "4fbff3b.762920c",
-        "type": "group",
-        "z": "17ca131.e488ced",
-        "g": "2a5510d0.88b28",
-        "name": ".195",
-        "style": {
-            "label": true,
-            "fill": "#ffffff"
-        },
-        "nodes": [
-            "74fb71be.b2d3d",
-            "325c0043.d752b",
-            "bf8d356c.2778a8",
-            "6557efe0.2d0cc"
-        ],
-        "x": 154,
-        "y": 839,
-        "w": 532,
-        "h": 122
-    },
-    {
-        "id": "7d64263a.10eef8",
-        "type": "group",
-        "z": "17ca131.e488ced",
-        "g": "2a5510d0.88b28",
-        "name": ".193",
-        "style": {
-            "label": true,
-            "fill": "#ffffff"
-        },
-        "nodes": [
-            "a52c29e3.5ad3d8",
-            "c8b70477.28bed8",
-            "f39f4384.27a1f",
-            "c8a86b97.8d6478"
-        ],
-        "x": 134,
-        "y": 539,
-        "w": 532,
-        "h": 122
-    },
-    {
-        "id": "1915aec1.fb8071",
-        "type": "group",
-        "z": "17ca131.e488ced",
-        "g": "2a5510d0.88b28",
-        "name": ".194",
-        "style": {
-            "label": true,
-            "fill": "#ffffff"
-        },
-        "nodes": [
-            "7884f8d7.a419b8",
-            "d7608b57.c20f98",
-            "f9e1f11f.3513a",
-            "764c7ce9.9e2cc4"
-        ],
-        "x": 154,
-        "y": 619,
-        "w": 532,
-        "h": 122
-    },
-    {
         "id": "e5ab239c.cf84b",
         "type": "group",
         "z": "c7f9390d.cde5e8",
@@ -2165,25 +2096,65 @@
         "h": 242
     },
     {
-        "id": "5117aa79.7c6374",
+        "id": "a983bc11.746d",
         "type": "group",
         "z": "17ca131.e488ced",
-        "g": "2a5510d0.88b28",
-        "name": ".183",
+        "name": "TEST: Generate Test Data and Store in Context",
         "style": {
             "label": true,
-            "fill": "#ffffff"
+            "fill": "#ffefbf"
         },
         "nodes": [
-            "1b6b4fa.f9f38b",
-            "9565cf38.f4e25",
-            "75dd043a.ceaccc",
-            "8965b46.5942b48"
+            "76980cdf.867b74",
+            "84d70c4e.07366",
+            "99a5a358.010ff",
+            "c41e00bc.b979b",
+            "2ce45fde.33427"
         ],
-        "x": 194,
-        "y": 739,
-        "w": 532,
-        "h": 122
+        "x": 34,
+        "y": 819,
+        "w": 592,
+        "h": 202
+    },
+    {
+        "id": "452ed9f6.117cb8",
+        "type": "group",
+        "z": "17ca131.e488ced",
+        "name": "TEST: Display Test Data",
+        "style": {
+            "fill": "#ffefbf",
+            "label": true
+        },
+        "nodes": [
+            "728af67f.d18cb8",
+            "ac4eb5e.7c30448"
+        ],
+        "x": 34,
+        "y": 1039,
+        "w": 332,
+        "h": 142
+    },
+    {
+        "id": "c87c24f4.363dc8",
+        "type": "group",
+        "z": "17ca131.e488ced",
+        "name": "TEST: Generate updates",
+        "style": {
+            "fill": "#ffefbf",
+            "label": true
+        },
+        "nodes": [
+            "d8351720.dca718",
+            "9cbf6757.a76ec8",
+            "d90c1f11.7b8f5",
+            "e3e2804a.f73f2",
+            "956c8d0a.59e9b",
+            "d1430f53.1d486"
+        ],
+        "x": 34,
+        "y": 1199,
+        "w": 832,
+        "h": 262
     },
     {
         "id": "b36c9a8b.092df8",
@@ -3240,25 +3211,6 @@
         ]
     },
     {
-        "id": "a52c29e3.5ad3d8",
-        "type": "pjlink",
-        "z": "17ca131.e488ced",
-        "g": "7d64263a.10eef8",
-        "ip": "",
-        "port": "",
-        "name": "",
-        "x": 370,
-        "y": 600,
-        "wires": [
-            [
-                "f39f4384.27a1f"
-            ],
-            [
-                "c8a86b97.8d6478"
-            ]
-        ]
-    },
-    {
         "id": "ac02fb71.53fd08",
         "type": "inject",
         "z": "17ca131.e488ced",
@@ -3271,7 +3223,7 @@
         "onceDelay": "",
         "topic": "",
         "x": 140,
-        "y": 1900,
+        "y": 2180,
         "wires": [
             [
                 "abf52217.9dfcd"
@@ -3291,7 +3243,7 @@
         "onceDelay": "",
         "topic": "",
         "x": 160,
-        "y": 1780,
+        "y": 2060,
         "wires": [
             [
                 "622ed375.02eb6c"
@@ -3311,7 +3263,7 @@
         "onceDelay": "",
         "topic": "",
         "x": 140,
-        "y": 1820,
+        "y": 2100,
         "wires": [
             [
                 "451326e8.be3a58"
@@ -3331,7 +3283,7 @@
         "onceDelay": "",
         "topic": "",
         "x": 140,
-        "y": 1860,
+        "y": 2140,
         "wires": [
             [
                 "313ead3b.699d52"
@@ -3351,7 +3303,7 @@
         "onceDelay": "",
         "topic": "",
         "x": 150,
-        "y": 1980,
+        "y": 2260,
         "wires": [
             [
                 "6fba00d3.ead91"
@@ -3371,7 +3323,7 @@
         "onceDelay": "",
         "topic": "",
         "x": 140,
-        "y": 1940,
+        "y": 2220,
         "wires": [
             [
                 "ade2686e.a571a8"
@@ -3391,7 +3343,7 @@
         "onceDelay": "",
         "topic": "",
         "x": 140,
-        "y": 2020,
+        "y": 2300,
         "wires": [
             [
                 "956c08ae.d29638"
@@ -3411,7 +3363,7 @@
         "onceDelay": "",
         "topic": "",
         "x": 140,
-        "y": 2060,
+        "y": 2340,
         "wires": [
             [
                 "d4f3f05c.7616e"
@@ -3429,7 +3381,7 @@
         "syntax": "mustache",
         "template": "{\"setinput\": {\"source\": 3, \"channel\": 3}}",
         "x": 260,
-        "y": 2100,
+        "y": 2380,
         "wires": [
             [
                 "a3c3d3d9.5c3c3"
@@ -3461,7 +3413,7 @@
         "payload": "",
         "payloadType": "str",
         "x": 130,
-        "y": 2100,
+        "y": 2380,
         "wires": [
             [
                 "ecf62a9a.1309d8"
@@ -3475,48 +3427,10 @@
         "g": "65220297.8c588c",
         "name": "",
         "x": 430,
-        "y": 2100,
+        "y": 2380,
         "wires": [
             [
                 "6035296f.649fd8"
-            ]
-        ]
-    },
-    {
-        "id": "7884f8d7.a419b8",
-        "type": "pjlink",
-        "z": "17ca131.e488ced",
-        "g": "1915aec1.fb8071",
-        "ip": "",
-        "port": "",
-        "name": "",
-        "x": 390,
-        "y": 680,
-        "wires": [
-            [
-                "f9e1f11f.3513a"
-            ],
-            [
-                "764c7ce9.9e2cc4"
-            ]
-        ]
-    },
-    {
-        "id": "74fb71be.b2d3d",
-        "type": "pjlink",
-        "z": "17ca131.e488ced",
-        "g": "4fbff3b.762920c",
-        "ip": "",
-        "port": "",
-        "name": "",
-        "x": 390,
-        "y": 900,
-        "wires": [
-            [
-                "bf8d356c.2778a8"
-            ],
-            [
-                "6557efe0.2d0cc"
             ]
         ]
     },
@@ -7114,7 +7028,7 @@
             "9223dc40.cd804"
         ],
         "x": 95,
-        "y": 960,
+        "y": 600,
         "wires": [
             [
                 "88966e38.a3778"
@@ -7144,7 +7058,7 @@
             "846bf1bd.3fb21"
         ],
         "x": 735,
-        "y": 1940,
+        "y": 2220,
         "wires": []
     },
     {
@@ -9158,111 +9072,6 @@
         "x": 635,
         "y": 160,
         "wires": []
-    },
-    {
-        "id": "c8b70477.28bed8",
-        "type": "change",
-        "z": "17ca131.e488ced",
-        "g": "7d64263a.10eef8",
-        "name": "Set IP Info",
-        "rules": [
-            {
-                "t": "set",
-                "p": "host",
-                "pt": "msg",
-                "to": "proj1_ip",
-                "tot": "flow"
-            },
-            {
-                "t": "set",
-                "p": "port",
-                "pt": "msg",
-                "to": "proj1_port",
-                "tot": "flow"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 230,
-        "y": 600,
-        "wires": [
-            [
-                "a52c29e3.5ad3d8"
-            ]
-        ]
-    },
-    {
-        "id": "d7608b57.c20f98",
-        "type": "change",
-        "z": "17ca131.e488ced",
-        "g": "1915aec1.fb8071",
-        "name": "Set IP Info",
-        "rules": [
-            {
-                "t": "set",
-                "p": "host",
-                "pt": "msg",
-                "to": "proj2_ip",
-                "tot": "flow"
-            },
-            {
-                "t": "set",
-                "p": "port",
-                "pt": "msg",
-                "to": "proj2_port",
-                "tot": "flow"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 250,
-        "y": 680,
-        "wires": [
-            [
-                "7884f8d7.a419b8"
-            ]
-        ]
-    },
-    {
-        "id": "325c0043.d752b",
-        "type": "change",
-        "z": "17ca131.e488ced",
-        "g": "4fbff3b.762920c",
-        "name": "Set IP Info",
-        "rules": [
-            {
-                "t": "set",
-                "p": "host",
-                "pt": "msg",
-                "to": "proj3_ip",
-                "tot": "flow"
-            },
-            {
-                "t": "set",
-                "p": "port",
-                "pt": "msg",
-                "to": "proj3_port",
-                "tot": "flow"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 250,
-        "y": 900,
-        "wires": [
-            [
-                "74fb71be.b2d3d"
-            ]
-        ]
     },
     {
         "id": "e4ab948d.8ab008",
@@ -12054,7 +11863,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 170,
-        "y": 1300,
+        "y": 1580,
         "wires": [
             [
                 "20a8e993.1a2716",
@@ -12077,7 +11886,7 @@
         "statusVal": "payload",
         "statusType": "auto",
         "x": 960,
-        "y": 1360,
+        "y": 1640,
         "wires": []
     },
     {
@@ -12092,7 +11901,7 @@
         "initialize": "",
         "finalize": "",
         "x": 340,
-        "y": 1360,
+        "y": 1640,
         "wires": [
             [
                 "f0752e40.18e1"
@@ -12111,7 +11920,7 @@
         "inout": "out",
         "property": "payload",
         "x": 480,
-        "y": 1360,
+        "y": 1640,
         "wires": [
             [
                 "f0d904f9.ebb8c8"
@@ -12145,7 +11954,7 @@
         "repair": false,
         "outputs": 3,
         "x": 700,
-        "y": 1260,
+        "y": 1540,
         "wires": [
             [
                 "67de1d60.f8fb94"
@@ -12176,7 +11985,7 @@
         "statusVal": "payload",
         "statusType": "auto",
         "x": 960,
-        "y": 1320,
+        "y": 1600,
         "wires": []
     },
     {
@@ -12200,7 +12009,7 @@
         "to": "",
         "reg": false,
         "x": 360,
-        "y": 1260,
+        "y": 1540,
         "wires": [
             [
                 "8784dfbb.ab278"
@@ -12219,7 +12028,7 @@
         "inout": "out",
         "property": "payload",
         "x": 530,
-        "y": 1260,
+        "y": 1540,
         "wires": [
             [
                 "64ec6968.fea168"
@@ -12278,7 +12087,7 @@
         ],
         "active": false,
         "x": 930,
-        "y": 1240,
+        "y": 1520,
         "wires": []
     },
     {
@@ -12333,7 +12142,7 @@
         ],
         "active": false,
         "x": 930,
-        "y": 1280,
+        "y": 1560,
         "wires": []
     },
     {
@@ -18261,7 +18070,7 @@
         "to": "",
         "reg": false,
         "x": 460,
-        "y": 1780,
+        "y": 2060,
         "wires": [
             [
                 "6035296f.649fd8"
@@ -18296,7 +18105,7 @@
         "to": "",
         "reg": false,
         "x": 440,
-        "y": 1820,
+        "y": 2100,
         "wires": [
             [
                 "6035296f.649fd8"
@@ -18331,7 +18140,7 @@
         "to": "",
         "reg": false,
         "x": 440,
-        "y": 1860,
+        "y": 2140,
         "wires": [
             [
                 "6035296f.649fd8"
@@ -18366,7 +18175,7 @@
         "to": "",
         "reg": false,
         "x": 440,
-        "y": 1900,
+        "y": 2180,
         "wires": [
             [
                 "6035296f.649fd8"
@@ -18401,7 +18210,7 @@
         "to": "",
         "reg": false,
         "x": 440,
-        "y": 1940,
+        "y": 2220,
         "wires": [
             [
                 "6035296f.649fd8"
@@ -18436,7 +18245,7 @@
         "to": "",
         "reg": false,
         "x": 460,
-        "y": 1980,
+        "y": 2260,
         "wires": [
             [
                 "6035296f.649fd8"
@@ -18471,7 +18280,7 @@
         "to": "",
         "reg": false,
         "x": 440,
-        "y": 2020,
+        "y": 2300,
         "wires": [
             [
                 "6035296f.649fd8"
@@ -18506,7 +18315,7 @@
         "to": "",
         "reg": false,
         "x": 440,
-        "y": 2060,
+        "y": 2340,
         "wires": [
             [
                 "6035296f.649fd8"
@@ -18526,7 +18335,7 @@
         "onceDelay": "",
         "topic": "",
         "x": 270,
-        "y": 1720,
+        "y": 2000,
         "wires": [
             [
                 "d4f3f05c.7616e",
@@ -19860,8 +19669,8 @@
         ],
         "outputs": 0,
         "cts": false,
-        "x": 1460,
-        "y": 840,
+        "x": 1320,
+        "y": 740,
         "wires": []
     },
     {
@@ -19875,8 +19684,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 1170,
-        "y": 800,
+        "x": 1030,
+        "y": 700,
         "wires": [
             [
                 "4e318fff.2f414",
@@ -19898,8 +19707,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1240,
-        "y": 860,
+        "x": 1100,
+        "y": 760,
         "wires": []
     },
     {
@@ -19913,8 +19722,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 1120,
-        "y": 720,
+        "x": 980,
+        "y": 620,
         "wires": [
             [
                 "380817e7.0d4d58"
@@ -19937,8 +19746,8 @@
         "randomLast": "5",
         "randomUnits": "seconds",
         "drop": true,
-        "x": 1160,
-        "y": 760,
+        "x": 1020,
+        "y": 660,
         "wires": [
             [
                 "42d1f1dd.ed9e"
@@ -19950,7 +19759,7 @@
         "type": "debug",
         "z": "17ca131.e488ced",
         "g": "bb661aa6.08f608",
-        "name": "before Save",
+        "name": "pjlink output",
         "active": true,
         "tosidebar": true,
         "console": false,
@@ -19959,8 +19768,8 @@
         "targetType": "jsonata",
         "statusVal": "",
         "statusType": "auto",
-        "x": 910,
-        "y": 800,
+        "x": 770,
+        "y": 700,
         "wires": []
     },
     {
@@ -19974,152 +19783,14 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 870,
-        "y": 720,
+        "x": 730,
+        "y": 620,
         "wires": [
             [
                 "851b5714.714348",
                 "320b1f78.2913c"
             ]
         ]
-    },
-    {
-        "id": "f39f4384.27a1f",
-        "type": "change",
-        "z": "17ca131.e488ced",
-        "g": "7d64263a.10eef8",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "key",
-                "pt": "msg",
-                "to": "1",
-                "tot": "num"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 530,
-        "y": 580,
-        "wires": [
-            [
-                "adeb0e6d.dc05b"
-            ]
-        ]
-    },
-    {
-        "id": "f9e1f11f.3513a",
-        "type": "change",
-        "z": "17ca131.e488ced",
-        "g": "1915aec1.fb8071",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "key",
-                "pt": "msg",
-                "to": "2",
-                "tot": "num"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 550,
-        "y": 660,
-        "wires": [
-            [
-                "adeb0e6d.dc05b"
-            ]
-        ]
-    },
-    {
-        "id": "bf8d356c.2778a8",
-        "type": "change",
-        "z": "17ca131.e488ced",
-        "g": "4fbff3b.762920c",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "key",
-                "pt": "msg",
-                "to": "3",
-                "tot": "num"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 550,
-        "y": 880,
-        "wires": [
-            [
-                "adeb0e6d.dc05b"
-            ]
-        ]
-    },
-    {
-        "id": "c8a86b97.8d6478",
-        "type": "debug",
-        "z": "17ca131.e488ced",
-        "g": "7d64263a.10eef8",
-        "name": "Projector 1 error",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 540,
-        "y": 620,
-        "wires": []
-    },
-    {
-        "id": "764c7ce9.9e2cc4",
-        "type": "debug",
-        "z": "17ca131.e488ced",
-        "g": "1915aec1.fb8071",
-        "name": "Projector 2 error",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 560,
-        "y": 700,
-        "wires": []
-    },
-    {
-        "id": "6557efe0.2d0cc",
-        "type": "debug",
-        "z": "17ca131.e488ced",
-        "g": "4fbff3b.762920c",
-        "name": "Projector 3 error",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 560,
-        "y": 920,
-        "wires": []
     },
     {
         "id": "ed2b752e.7b81e8",
@@ -20449,12 +20120,10 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1420,
-        "y": 800,
+        "x": 1280,
+        "y": 700,
         "wires": [
-            [
-                "78d7ba57.f7e9c4"
-            ]
+            []
         ]
     },
     {
@@ -21523,117 +21192,6 @@
         "wires": []
     },
     {
-        "id": "75dd043a.ceaccc",
-        "type": "pjlink",
-        "z": "17ca131.e488ced",
-        "g": "5117aa79.7c6374",
-        "ip": "",
-        "port": "",
-        "name": "",
-        "x": 430,
-        "y": 800,
-        "wires": [
-            [
-                "1b6b4fa.f9f38b"
-            ],
-            [
-                "9565cf38.f4e25"
-            ]
-        ]
-    },
-    {
-        "id": "8965b46.5942b48",
-        "type": "change",
-        "z": "17ca131.e488ced",
-        "g": "5117aa79.7c6374",
-        "name": "Set IP Info",
-        "rules": [
-            {
-                "t": "set",
-                "p": "host",
-                "pt": "msg",
-                "to": "proj4_ip",
-                "tot": "flow"
-            },
-            {
-                "t": "set",
-                "p": "port",
-                "pt": "msg",
-                "to": "proj4_port",
-                "tot": "flow"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 290,
-        "y": 800,
-        "wires": [
-            [
-                "75dd043a.ceaccc"
-            ]
-        ]
-    },
-    {
-        "id": "1b6b4fa.f9f38b",
-        "type": "change",
-        "z": "17ca131.e488ced",
-        "g": "5117aa79.7c6374",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "key",
-                "pt": "msg",
-                "to": "4",
-                "tot": "num"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 590,
-        "y": 780,
-        "wires": [
-            [
-                "adeb0e6d.dc05b"
-            ]
-        ]
-    },
-    {
-        "id": "9565cf38.f4e25",
-        "type": "debug",
-        "z": "17ca131.e488ced",
-        "g": "5117aa79.7c6374",
-        "name": "Projector 4 error",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 600,
-        "y": 820,
-        "wires": []
-    },
-    {
-        "id": "b228232f.c171b",
-        "type": "comment",
-        "z": "17ca131.e488ced",
-        "g": "2a5510d0.88b28",
-        "name": "TODO - Refactor",
-        "info": "This whole approach to projector instance management needs to be refactored. Need to conider them to be members of an array of objects rather than the discrete items they are right now. \n\nAlso Should make the IP:Port iformation entered on a UI rather than hardcoded.\n\nNeed to make the context filesystem persistent. ",
-        "x": 180,
-        "y": 1040,
-        "wires": []
-    },
-    {
         "id": "24e0d613.2207ba",
         "type": "ui_etable",
         "z": "17ca131.e488ced",
@@ -21650,7 +21208,7 @@
         "outputs": 1,
         "cts": false,
         "x": 623,
-        "y": 1440,
+        "y": 1720,
         "wires": [
             [
                 "496e2e39.61849",
@@ -21679,7 +21237,7 @@
         "to": "",
         "reg": false,
         "x": 340,
-        "y": 1440,
+        "y": 1720,
         "wires": [
             [
                 "24e0d613.2207ba"
@@ -21705,7 +21263,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 140,
-        "y": 1440,
+        "y": 1720,
         "wires": [
             [
                 "467bb08.a9e125"
@@ -21733,7 +21291,7 @@
         "to": "",
         "reg": false,
         "x": 1000,
-        "y": 1500,
+        "y": 1780,
         "wires": [
             []
         ]
@@ -21761,7 +21319,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 130,
-        "y": 1500,
+        "y": 1780,
         "wires": [
             [
                 "6f511c5e.272184"
@@ -21789,7 +21347,7 @@
         "to": "",
         "reg": false,
         "x": 330,
-        "y": 1500,
+        "y": 1780,
         "wires": [
             [
                 "24e0d613.2207ba"
@@ -21808,7 +21366,7 @@
         "initialize": "",
         "finalize": "",
         "x": 790,
-        "y": 1440,
+        "y": 1720,
         "wires": [
             [
                 "38fe1752.98db28"
@@ -21830,7 +21388,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 770,
-        "y": 1400,
+        "y": 1680,
         "wires": []
     },
     {
@@ -21853,7 +21411,7 @@
         "payloadType": "str",
         "topic": "",
         "x": 120,
-        "y": 1540,
+        "y": 1820,
         "wires": [
             [
                 "40e8f4e7.6d4a5c"
@@ -21872,7 +21430,7 @@
         "initialize": "",
         "finalize": "",
         "x": 470,
-        "y": 1540,
+        "y": 1820,
         "wires": [
             [
                 "24e0d613.2207ba",
@@ -21900,7 +21458,7 @@
         "payloadType": "str",
         "topic": "",
         "x": 140,
-        "y": 1580,
+        "y": 1860,
         "wires": [
             [
                 "a6d5fb87.0496a8"
@@ -21928,7 +21486,7 @@
         "to": "",
         "reg": false,
         "x": 350,
-        "y": 1580,
+        "y": 1860,
         "wires": [
             [
                 "d0213eca.e1277",
@@ -21948,7 +21506,7 @@
         "initialize": "",
         "finalize": "",
         "x": 560,
-        "y": 1580,
+        "y": 1860,
         "wires": [
             [
                 "38fe1752.98db28",
@@ -21970,7 +21528,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 840,
-        "y": 1600,
+        "y": 1880,
         "wires": []
     },
     {
@@ -21984,41 +21542,11 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 390,
-        "y": 1140,
+        "x": 250,
+        "y": 600,
         "wires": [
             [
                 "19ab985d.b5c048"
-            ]
-        ]
-    },
-    {
-        "id": "9febb91b.c2a4d8",
-        "type": "inject",
-        "z": "17ca131.e488ced",
-        "g": "2a5510d0.88b28",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 180,
-        "y": 1140,
-        "wires": [
-            [
-                "88966e38.a3778"
             ]
         ]
     },
@@ -22028,7 +21556,7 @@
         "z": "17ca131.e488ced",
         "g": "2a5510d0.88b28",
         "name": "func out",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -22036,8 +21564,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 900,
-        "y": 1140,
+        "x": 200,
+        "y": 740,
         "wires": []
     },
     {
@@ -22052,8 +21580,8 @@
         "arraySpltType": "len",
         "stream": false,
         "addname": "",
-        "x": 570,
-        "y": 1140,
+        "x": 430,
+        "y": 600,
         "wires": [
             [
                 "3c314cee.d4ba94"
@@ -22071,8 +21599,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 730,
-        "y": 1140,
+        "x": 170,
+        "y": 680,
         "wires": [
             [
                 "e880b599.3f8de8",
@@ -22088,43 +21616,22 @@
         "ip": "",
         "port": "",
         "name": "",
-        "x": 930,
-        "y": 1080,
+        "x": 350,
+        "y": 680,
         "wires": [
+            [],
             [
-                "adeb0e6d.dc05b",
                 "c208d442.f81c88"
-            ],
-            [
-                "7de41cf.eb31de4"
             ]
         ]
-    },
-    {
-        "id": "7de41cf.eb31de4",
-        "type": "debug",
-        "z": "17ca131.e488ced",
-        "g": "2a5510d0.88b28",
-        "name": "pjlink error out",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1120,
-        "y": 1100,
-        "wires": []
     },
     {
         "id": "c208d442.f81c88",
         "type": "debug",
         "z": "17ca131.e488ced",
         "g": "2a5510d0.88b28",
-        "name": "pjlink out",
-        "active": true,
+        "name": "pjlink Error Output",
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -22132,8 +21639,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1140,
-        "y": 1000,
+        "x": 450,
+        "y": 740,
         "wires": []
     },
     {
@@ -22143,8 +21650,8 @@
         "g": "bb661aa6.08f608",
         "name": "todo refactor the function tp be more scalable",
         "info": "",
-        "x": 1190,
-        "y": 680,
+        "x": 1050,
+        "y": 580,
         "wires": []
     },
     {
@@ -22154,8 +21661,443 @@
         "g": "bb661aa6.08f608",
         "name": "todo - store status in an array rather than discrete",
         "info": "",
-        "x": 1520,
-        "y": 740,
+        "x": 1380,
+        "y": 640,
         "wires": []
+    },
+    {
+        "id": "76980cdf.867b74",
+        "type": "function",
+        "z": "17ca131.e488ced",
+        "g": "a983bc11.746d",
+        "name": "Generate Wide Data",
+        "func": "//\"projector\"\n//\"name\" \n//\"lamp\"   \n//\"power\"\n//\"input\" \n//\"powercolour\"\n\nres = []\n\nfor (i=0; i<4; i++) {\n    row =  {\n        projector: i, \n        name: \"prj\" + String(i), \n        lamp: Math.floor(Math.random()*1000),\n        power: Math.random() >0.5 ? \"on\" : \"off\",\n        powercolour: Math.random() >0.5 ? \"red\" : \"green\",\n        input: \"input\" + String(Math.floor(Math.random()*10))\n        \n    }\n        \n        res.push(row)\n}\n\nmsg = { payload: res}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 220,
+        "y": 900,
+        "wires": [
+            [
+                "99a5a358.010ff"
+            ]
+        ]
+    },
+    {
+        "id": "84d70c4e.07366",
+        "type": "inject",
+        "z": "17ca131.e488ced",
+        "g": "a983bc11.746d",
+        "name": "start",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 860,
+        "wires": [
+            [
+                "76980cdf.867b74"
+            ]
+        ]
+    },
+    {
+        "id": "99a5a358.010ff",
+        "type": "function",
+        "z": "17ca131.e488ced",
+        "g": "a983bc11.746d",
+        "name": "Pivot Longer",
+        "func": "mp = msg.payload;\n\npl = []\n\nfor( i=0; i<mp.length; i++) {\n    console.log(i);\n    input = mp[i];\n    for (var [k,v] of Object.entries(input) ) {\n        row = {\n            projector: i,\n            metric   : k,\n            value: v\n        }\n        pl.push(row)\n    }\n    \n}\n\nmsg = { payload: pl }\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 290,
+        "y": 940,
+        "wires": [
+            [
+                "c41e00bc.b979b",
+                "2ce45fde.33427"
+            ]
+        ]
+    },
+    {
+        "id": "29aa4734.eae0a8",
+        "type": "function",
+        "z": "17ca131.e488ced",
+        "name": "Pivot Wider",
+        "func": "//Code from https://techbrij.com\n// dataArray: Array to be converted\n// rowIndex: Index of column in array which is to be kept as first column\n// colIndex: Index of column whose values to be converted as columns in the output array.\n// dataIndex: Index of column whose values to be used as data (displayed in tabular/grid format).\nfunction pivotWider(dataArray, rowIndex, colIndex, dataIndex) {\n        var result = {}, ret = [];\n        var newCols = [];\n        for (var i = 0; i < dataArray.length; i++) {\n \n            if (!result[dataArray[i][rowIndex]]) {\n                result[dataArray[i][rowIndex]] = {};\n            }\n            result[dataArray[i][rowIndex]][dataArray[i][colIndex]] = dataArray[i][dataIndex];\n \n            //To get column names\n            if (newCols.indexOf(dataArray[i][colIndex]) == -1) {\n                newCols.push(dataArray[i][colIndex]);\n            }\n        }\n \n        newCols.sort();\n        var item = [];\n \n        //Add Header Row\n        item.push('Item');\n        item.push.apply(item, newCols);\n        ret.push(item);\n \n        //Add content \n        for (var key in result) {\n            item = [];\n            item.push(key);\n            for (var j = 0; j < newCols.length; j++) {\n                item.push(result[key][newCols[j]] || \"-\");\n            }\n            ret.push(item);\n        }\n    return ret;\n}\n\nmp = msg.payload // need to convert structures to array\n\nwrangled = []\n\nfor (i=0; i < mp.length; i++) {\n    p = mp[i].projector;\n    m = mp[i].metric;\n    v = mp[i].value;\n    row = [ p,m,v ];\n    wrangled.push(row);\n}\n\nwider = pivotWider(wrangled, 0, 1, 2);\n\n// TODO\n// wider is a table style structure with headers - need to turn that into json structures.\n\nreturn  { payload: wider };",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 690,
+        "y": 1040,
+        "wires": [
+            [
+                "77a9497a.b1b018",
+                "4f0a8274.697b3c"
+            ]
+        ]
+    },
+    {
+        "id": "77a9497a.b1b018",
+        "type": "debug",
+        "z": "17ca131.e488ced",
+        "name": "Wide Data",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 970,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "60ce0b6b.3607c4",
+        "type": "function",
+        "z": "17ca131.e488ced",
+        "name": "scrapbook",
+        "func": "//Code from https://techbrij.com\n        \n// dataArray: Array to be converted\n// rowIndex: Index of column in array which is to be kept as first column\n// colIndex: Index of column whose values to be converted as columns in the output array.\n// dataIndex: Index of column whose values to be used as data (displayed in tabular/grid format).\nfunction pivotWider(dataArray, rowIndex, colIndex, dataIndex) {\n        var result = {}, ret = [];\n        var newCols = [];\n        for (var i = 0; i < dataArray.length; i++) {\n \n            if (!result[dataArray[i][rowIndex]]) {\n                result[dataArray[i][rowIndex]] = {};\n            }\n            result[dataArray[i][rowIndex]][dataArray[i][colIndex]] = dataArray[i][dataIndex];\n \n            //To get column names\n            if (newCols.indexOf(dataArray[i][colIndex]) == -1) {\n                newCols.push(dataArray[i][colIndex]);\n            }\n        }\n \n        newCols.sort();\n        var item = [];\n \n        //Add Header Row\n        item.push('Item');\n        item.push.apply(item, newCols);\n        ret.push(item);\n \n        //Add content \n        for (var key in result) {\n            item = [];\n            item.push(key);\n            for (var j = 0; j < newCols.length; j++) {\n                item.push(result[key][newCols[j]] || \"-\");\n            }\n            ret.push(item);\n        }\n    return ret;\n}\n\n\n//[\"Product\", \"Year\", \"Sales\"],\nvar arr = [\n[\"Product 1\", \"2009\", \"1212\"],\n[\"Product 2\", \"2009\", \"522\"],\n[\"Product 1\", \"2010\", \"1337\"],\n[\"Product 2\", \"2011\", \"711\"],\n[\"Product 2\", \"2012\", \"2245\"],\n[\"Product 3\", \"2012\", \"1000\"]\n];\n\n\noutput = pivotWider(arr, 0, 1, 2);\n\n//[\"Proj\", \"metric\", \"value\"]\n  prjstatus =[\n    [\"0\", \"lamp\", 900],\n    [\"0\", \"manu\", \"Sony\"],\n    [\"0\", \"input\", \"hdmi1\"],\n        [\"1\", \"lamp\", 901],\n    [\"1\", \"manu\", \"Sony\"],\n    [\"1\", \"input\", \"hdmi2\"],\n        [\"2\", \"lamp\", 902],\n    [\"2\", \"manu\", \"Sony\"],\n    [\"2\", \"input\", \"hdmi3\"]\n]\n\nitm =     [\"2\", \"input\", \"hdmi22\"]\n\nps = prjstatus.filter( x => !( x[0]==itm[0] & x[1] == itm[1]  ) )\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 830,
+        "y": 840,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "26d4e0bb.c3f3a",
+        "type": "debug",
+        "z": "17ca131.e488ced",
+        "g": "bb661aa6.08f608",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1020,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "453a450.63abfbc",
+        "type": "debug",
+        "z": "17ca131.e488ced",
+        "name": "json out",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1060,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "4f0a8274.697b3c",
+        "type": "function",
+        "z": "17ca131.e488ced",
+        "name": "tableToJSON",
+        "func": "function convertJSON(tableData){\n    var keys = tableData[0],\n        objects = [];\n        \n    for(var i = 1; i < tableData.length; i++){\n        var rowObject = {};\n        tableData[i].forEach(function(item, index){\n            rowObject[keys[index]] = item;\n        });\n        objects.push(rowObject);\n    }\n    \n    //return JSON.stringify(objects);\n    return objects;\n}\n\ni = msg.payload;\n\no = {payload: convertJSON(i)};\n\nreturn o;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1050,
+        "y": 960,
+        "wires": [
+            [
+                "453a450.63abfbc",
+                "78d7ba57.f7e9c4"
+            ]
+        ]
+    },
+    {
+        "id": "c41e00bc.b979b",
+        "type": "debug",
+        "z": "17ca131.e488ced",
+        "g": "a983bc11.746d",
+        "name": "Long Data",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 350,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "2ce45fde.33427",
+        "type": "change",
+        "z": "17ca131.e488ced",
+        "g": "a983bc11.746d",
+        "name": "Store in Context",
+        "rules": [
+            {
+                "t": "set",
+                "p": "projectorStatus",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 520,
+        "y": 940,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "728af67f.d18cb8",
+        "type": "inject",
+        "z": "17ca131.e488ced",
+        "d": true,
+        "g": "452ed9f6.117cb8",
+        "name": "start",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "3",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 1080,
+        "wires": [
+            [
+                "ac4eb5e.7c30448"
+            ]
+        ]
+    },
+    {
+        "id": "ac4eb5e.7c30448",
+        "type": "change",
+        "z": "17ca131.e488ced",
+        "g": "452ed9f6.117cb8",
+        "name": "Retrieve from Context",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "projectorStatus",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 240,
+        "y": 1140,
+        "wires": [
+            [
+                "29aa4734.eae0a8"
+            ]
+        ]
+    },
+    {
+        "id": "d821eef8.6fce4",
+        "type": "function",
+        "z": "17ca131.e488ced",
+        "name": "Update Projector Status in flow ",
+        "func": "//msg.key identifies projector: prj1, prj2 etc\n//msg.topic is parameter\n\noff_colour = \"#FF0000\";\non_colour  = \"#00FF00\";\n\nprj = msg.instance;\n\nswitch(msg.topic) {\n    case \"getlamps\":\n        key = \"lamp\"\n        val = msg.payload[0].hours ;\n        break;\n    case \"getpowerstate\":\n        key= \"power\"\n        val = (msg.payload == 0  ? \"Off\" : \"On\");\n        break;\n    case \"getname\":\n        key= \"name\"\n        val = msg.payload  ;\n        break; \n    case \"getinput\":\n        key= \"input\"\n        val = msg.payload ;\n        break;     \n    case \"powercolour\": // this should be a copy of the getpowerstate message topic with a different topic.\n        key= \"powercolour\"\n        val = (msg.payload == 0 ? off_colour : on_colour) ;\n        break;  \n    default:\n        key = \"unknown\"\n        val = \"?\"\n}\n\nnewval = {\"projector\": prj,\n          \"metric\"   : key,\n          \"value\"    : val\n          };\n  \n// retrieve status  \n  \nps = flow.get(\"projectorStatus\")  \n\n// remove prior value\n\n//ps = prjstatus.filter( x => !( x[0]==itm[0] & x[1] == itm[1]  ) )\n\n//console.log( \"x.projector=\", x.projector)\n//console.log( \"newval.projector=\", newval.projector)\n//console.log( \"x.metric=\", x.metric)\n//console.log( \"newval.metricr=\", newval.metric)\n\nps = ps.filter(x => !(x.projector == newval.projector & x.metric == newval.metric))\n\n// add new value\n\nps.push(newval);\n  \n//fk = \"ps_\" + String(prj) + \"_\" + key\n//fv = val\n\nflow.set( \"projectorStatus\"  , ps)\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1130,
+        "y": 1080,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9cbf6757.a76ec8",
+        "type": "function",
+        "z": "17ca131.e488ced",
+        "g": "c87c24f4.363dc8",
+        "name": "Generate Random Updates",
+        "func": "//msg.key identifies projector: prj1, prj2 etc\n//msg.topic is parameter\nnumprj = 4 // number of projectors\n\nprj = Math.floor(Math.random() * numprj) // start at 0\n\nparm = Math.floor(Math.random() * 4) // start at 0\n\nswitch(parm) {\n    case 0: //\"getlamps\":\n        topic = \"getlamps\"\n        val = Math.floor(Math.random() * 2000) ;\n        val = [{hours: val}] ; /// this is the way it comes in from pjlink\n        break;\n    case 1: //\"getpowerstate\":\n        topic= \"getpowerstate\"\n        val = (Math.random() < 0.5  ? 0 : 1);\n        break;\n    case 2: //\"getname\":\n        topic= \"getname\"\n        val = \"Name\" + String(Math.floor(Math.random() * numprj))  ;\n        break; \n    case 3: //\"getinput\":\n        topic= \"getinput\"\n        val = \"Input\" + String(Math.floor(Math.random() * 10))  ;\n        break;           \n    default:\n        topic = \"unknown\"\n        val = \"?\"\n}\n  \nmsg = {payload: val,\n    topic: topic,\n    instance: prj\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 230,
+        "y": 1280,
+        "wires": [
+            [
+                "d90c1f11.7b8f5",
+                "d821eef8.6fce4",
+                "e3e2804a.f73f2"
+            ]
+        ]
+    },
+    {
+        "id": "d90c1f11.7b8f5",
+        "type": "debug",
+        "z": "17ca131.e488ced",
+        "g": "c87c24f4.363dc8",
+        "name": "monitor",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "msg.instance & \":\" & msg.topic & \":\" & msg.payload  ",
+        "targetType": "jsonata",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 580,
+        "y": 1300,
+        "wires": []
+    },
+    {
+        "id": "d8351720.dca718",
+        "type": "inject",
+        "z": "17ca131.e488ced",
+        "g": "c87c24f4.363dc8",
+        "name": "Generate stream of updates",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 210,
+        "y": 1240,
+        "wires": [
+            [
+                "9cbf6757.a76ec8"
+            ]
+        ]
+    },
+    {
+        "id": "e3e2804a.f73f2",
+        "type": "switch",
+        "z": "17ca131.e488ced",
+        "g": "c87c24f4.363dc8",
+        "name": "",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "getpowerstate",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 290,
+        "y": 1380,
+        "wires": [
+            [
+                "d1430f53.1d486"
+            ]
+        ]
+    },
+    {
+        "id": "956c8d0a.59e9b",
+        "type": "debug",
+        "z": "17ca131.e488ced",
+        "g": "c87c24f4.363dc8",
+        "name": "monitor",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "msg.instance & \":\" & msg.topic & \":\" & msg.payload  ",
+        "targetType": "jsonata",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 760,
+        "y": 1420,
+        "wires": []
+    },
+    {
+        "id": "d1430f53.1d486",
+        "type": "change",
+        "z": "17ca131.e488ced",
+        "g": "c87c24f4.363dc8",
+        "name": "override topic",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "powercolour",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 480,
+        "y": 1420,
+        "wires": [
+            [
+                "956c8d0a.59e9b",
+                "d821eef8.6fce4"
+            ]
+        ]
     }
 ]
