@@ -2256,12 +2256,14 @@
             "24d69049.2938c",
             "6ed83db2.8ac3d4",
             "d97d2a09.9cd3e8",
-            "4340eac6.4250f4"
+            "4340eac6.4250f4",
+            "36dab30c.b878cc",
+            "b5df023c.b99d4"
         ],
         "x": 34,
         "y": 1079,
         "w": 992,
-        "h": 242
+        "h": 282
     },
     {
         "id": "b36c9a8b.092df8",
@@ -22511,7 +22513,7 @@
         "z": "7014b916.6d1208",
         "g": "6efbe5a5.35e4cc",
         "name": "Buffer tally on",
-        "func": "// 01000006000000028101040002FF\nton = new Buffer([\n    0x81,  \n    0x01,  \n    0x7e,  \n    0x01,  \n    0x0a,  \n    0x00,  \n    0x02 ,  \n    0xff   \n    ])\n    \n    toff  = new Buffer([\n    0x81,  \n    0x01,  \n    0x7e,  \n    0x01,  \n    0x0a,  \n    0x00,  \n    0x03 ,  \n    0xff   \n    ])\n\nreturn {payload: ton};\n\n// tally ON/OFF - 8x 01 7E 01 0A 00 0p FF p: 2=On, 3=Off",
+        "func": "// 01000006000000028101040002FF\nton = new Buffer([\n        0x01, //01\n    0x00, //00\n    0x00, //00\n    0x06, //06\n    0x00, //00\n    0x00, //00\n    0x00, //00\n    0x02, //02\n    \n    0x81,  \n    0x01,  \n    0x7e,  \n    0x01,  \n    0x0a,  \n    0x00,  \n    0x02 ,  \n    0xff   \n    ])\n    \n    toff  = new Buffer([\n            0x01, //01\n    0x00, //00\n    0x00, //00\n    0x06, //06\n    0x00, //00\n    0x00, //00\n    0x00, //00\n    0x02, //02\n    \n    0x81,  \n    0x01,  \n    0x7e,  \n    0x01,  \n    0x0a,  \n    0x00,  \n    0x03 ,  \n    0xff   \n    ])\n\nreturn {payload: ton};\n\n// tally ON/OFF - 8x 01 7E 01 0A 00 0p FF p: 2=On, 3=Off",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -22530,7 +22532,7 @@
         "z": "7014b916.6d1208",
         "g": "6efbe5a5.35e4cc",
         "name": "Buffer tally off",
-        "func": "// 01000006000000028101040002FF\nton = new Buffer([\n    0x81,  \n    0x01,  \n    0x7e,  \n    0x01,  \n    0x0a,  \n    0x00,  \n    0x02 ,  \n    0xff   \n    ])\n    \n    toff  = new Buffer([\n    0x81,  \n    0x01,  \n    0x7e,  \n    0x01,  \n    0x0a,  \n    0x00,  \n    0x03 ,  \n    0xff   \n    ])\n\nreturn {payload: toff};\n\n// tally ON/OFF - 8x 01 7E 01 0A 00 0p FF p: 2=On, 3=Off",
+        "func": "// 01000006000000028101040002FF\nton = new Buffer([\n        0x01, //01\n    0x00, //00\n    0x00, //00\n    0x06, //06\n    0x00, //00\n    0x00, //00\n    0x00, //00\n    0x02, //02\n    \n    0x81,  \n    0x01,  \n    0x7e,  \n    0x01,  \n    0x0a,  \n    0x00,  \n    0x02 ,  \n    0xff   \n    ])\n    \n    toff  = new Buffer([\n            0x01, //01\n    0x00, //00\n    0x00, //00\n    0x06, //06\n    0x00, //00\n    0x00, //00\n    0x00, //00\n    0x02, //02\n    \n    0x81,  \n    0x01,  \n    0x7e,  \n    0x01,  \n    0x0a,  \n    0x00,  \n    0x03 ,  \n    0xff   \n    ])\n\nreturn {payload: toff};\n\n// tally ON/OFF - 8x 01 7E 01 0A 00 0p FF p: 2=On, 3=Off\n\n// reset seqence \\x02\\x00\\x00\\x01\\x00\\x00\\x00\\x02\\x01",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -22600,6 +22602,55 @@
         "wires": [
             [
                 "24d69049.2938c"
+            ]
+        ]
+    },
+    {
+        "id": "36dab30c.b878cc",
+        "type": "function",
+        "z": "7014b916.6d1208",
+        "g": "6efbe5a5.35e4cc",
+        "name": "Buffer reset seqeunce",
+        "func": "reset  = new Buffer([\n                0x01, //01\n    0x00, //00\n    0x00, //00\n    0x06, //06\n    0x00, //00\n    0x00, //00\n    0x00, //00\n    0x02, //02\n    \n    0x02,  \n    0x00,  \n    0x00,  \n    0x01,  \n    0x00,  \n    0x00,  \n    0x00 ,\n    0x02 ,\n    0x01   \n    ])\n\nreturn {payload: reset};\n\n// reset seqence \\x02\\x00\\x00\\x01\\x00\\x00\\x00\\x02\\x01",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 380,
+        "y": 1320,
+        "wires": [
+            [
+                "4446bed6.3c5f4"
+            ]
+        ]
+    },
+    {
+        "id": "b5df023c.b99d4",
+        "type": "inject",
+        "z": "7014b916.6d1208",
+        "g": "6efbe5a5.35e4cc",
+        "name": "Reset Sequence",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 160,
+        "y": 1320,
+        "wires": [
+            [
+                "36dab30c.b878cc"
             ]
         ]
     }
