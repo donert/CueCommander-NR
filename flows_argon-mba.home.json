@@ -2250,12 +2250,18 @@
             "4446bed6.3c5f4",
             "cadb1910.af8638",
             "adeb11d4.c252b",
-            "e958548f.be1ca8"
+            "e958548f.be1ca8",
+            "c052b7c8.8f1268",
+            "3fdf1304.7aee3c",
+            "24d69049.2938c",
+            "6ed83db2.8ac3d4",
+            "d97d2a09.9cd3e8",
+            "4340eac6.4250f4"
         ],
         "x": 34,
         "y": 1079,
         "w": 992,
-        "h": 222
+        "h": 242
     },
     {
         "id": "b36c9a8b.092df8",
@@ -22278,7 +22284,7 @@
         "type": "inject",
         "z": "7014b916.6d1208",
         "g": "6efbe5a5.35e4cc",
-        "name": "fire test",
+        "name": "fire camera on",
         "props": [
             {
                 "p": "payload"
@@ -22295,7 +22301,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 130,
+        "x": 150,
         "y": 1160,
         "wires": [
             [
@@ -22314,14 +22320,14 @@
                 "t": "set",
                 "p": "ip",
                 "pt": "msg",
-                "to": "192.168.0.186",
+                "to": "192.168.86.34",
                 "tot": "str"
             },
             {
                 "t": "set",
                 "p": "port",
                 "pt": "msg",
-                "to": "52381",
+                "to": "1111",
                 "tot": "str"
             }
         ],
@@ -22384,8 +22390,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 620,
-        "y": 1160,
+        "x": 610,
+        "y": 1220,
         "wires": [
             [
                 "abc8164b.de4628",
@@ -22405,7 +22411,7 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 740,
+        "x": 790,
         "y": 1220,
         "wires": [
             [
@@ -22442,11 +22448,158 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 310,
+        "x": 370,
         "y": 1160,
         "wires": [
             [
                 "4446bed6.3c5f4"
+            ]
+        ]
+    },
+    {
+        "id": "c052b7c8.8f1268",
+        "type": "function",
+        "z": "7014b916.6d1208",
+        "g": "6efbe5a5.35e4cc",
+        "name": "Buffer camera off",
+        "func": "// 01000006000000028101040002FF\nb = new Buffer([\n    0x01, //01\n    0x00, //00\n    0x00, //00\n    0x06, //06\n    0x00, //00\n    0x00, //00\n    0x00, //00\n    0x02, //02\n    0x81, //81\n    0x01, //01\n    0x04, //04\n    0x00, //00\n    0x03, //03\n    0xff  //FF\n    ])\n\nreturn {payload: b};\n\n// tally ON/OFF - 8x 01 7E 01 0A 00 0p FF p: 2=On, 3=Off",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 370,
+        "y": 1200,
+        "wires": [
+            [
+                "4446bed6.3c5f4"
+            ]
+        ]
+    },
+    {
+        "id": "3fdf1304.7aee3c",
+        "type": "inject",
+        "z": "7014b916.6d1208",
+        "g": "6efbe5a5.35e4cc",
+        "name": "fire camera off",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 1200,
+        "wires": [
+            [
+                "c052b7c8.8f1268"
+            ]
+        ]
+    },
+    {
+        "id": "d97d2a09.9cd3e8",
+        "type": "function",
+        "z": "7014b916.6d1208",
+        "g": "6efbe5a5.35e4cc",
+        "name": "Buffer tally on",
+        "func": "// 01000006000000028101040002FF\nton = new Buffer([\n    0x81,  \n    0x01,  \n    0x7e,  \n    0x01,  \n    0x0a,  \n    0x00,  \n    0x02 ,  \n    0xff   \n    ])\n    \n    toff  = new Buffer([\n    0x81,  \n    0x01,  \n    0x7e,  \n    0x01,  \n    0x0a,  \n    0x00,  \n    0x03 ,  \n    0xff   \n    ])\n\nreturn {payload: ton};\n\n// tally ON/OFF - 8x 01 7E 01 0A 00 0p FF p: 2=On, 3=Off",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 360,
+        "y": 1240,
+        "wires": [
+            [
+                "4446bed6.3c5f4"
+            ]
+        ]
+    },
+    {
+        "id": "24d69049.2938c",
+        "type": "function",
+        "z": "7014b916.6d1208",
+        "g": "6efbe5a5.35e4cc",
+        "name": "Buffer tally off",
+        "func": "// 01000006000000028101040002FF\nton = new Buffer([\n    0x81,  \n    0x01,  \n    0x7e,  \n    0x01,  \n    0x0a,  \n    0x00,  \n    0x02 ,  \n    0xff   \n    ])\n    \n    toff  = new Buffer([\n    0x81,  \n    0x01,  \n    0x7e,  \n    0x01,  \n    0x0a,  \n    0x00,  \n    0x03 ,  \n    0xff   \n    ])\n\nreturn {payload: toff};\n\n// tally ON/OFF - 8x 01 7E 01 0A 00 0p FF p: 2=On, 3=Off",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 360,
+        "y": 1280,
+        "wires": [
+            [
+                "4446bed6.3c5f4"
+            ]
+        ]
+    },
+    {
+        "id": "4340eac6.4250f4",
+        "type": "inject",
+        "z": "7014b916.6d1208",
+        "g": "6efbe5a5.35e4cc",
+        "name": "Tally On",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 1240,
+        "wires": [
+            [
+                "d97d2a09.9cd3e8"
+            ]
+        ]
+    },
+    {
+        "id": "6ed83db2.8ac3d4",
+        "type": "inject",
+        "z": "7014b916.6d1208",
+        "g": "6efbe5a5.35e4cc",
+        "name": "Tally Off",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 1280,
+        "wires": [
+            [
+                "24d69049.2938c"
             ]
         ]
     }
