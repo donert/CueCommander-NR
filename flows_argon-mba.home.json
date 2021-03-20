@@ -459,10 +459,10 @@
             "422d26b0.a49cd8",
             "eb69de6a.fb725"
         ],
-        "x": 48,
+        "x": 28,
         "y": 13,
-        "w": 1364,
-        "h": 488
+        "w": 928,
+        "h": 508
     },
     {
         "id": "5c5e0515.ea0e2c",
@@ -488,7 +488,9 @@
             "8cf5b702.df8188"
         ],
         "x": 354,
-        "y": 19
+        "y": 19,
+        "w": 612,
+        "h": 162
     },
     {
         "id": "c54cb139.4f73d",
@@ -784,7 +786,9 @@
             "91bdfbc4.f7d808"
         ],
         "x": 14,
-        "y": 213
+        "y": 213,
+        "w": 548,
+        "h": 454
     },
     {
         "id": "c8d8db35.9a9e88",
@@ -1083,7 +1087,9 @@
             "d689e919.81ea98"
         ],
         "x": 14,
-        "y": 699
+        "y": 699,
+        "w": 1012,
+        "h": 202
     },
     {
         "id": "955bfb84.2f11d8",
@@ -1591,7 +1597,9 @@
             "cb527676.f585c8"
         ],
         "x": 14,
-        "y": 19
+        "y": 19,
+        "w": 292,
+        "h": 162
     },
     {
         "id": "eec2fe41.6fc47",
@@ -1737,7 +1745,9 @@
             "1bc616f5.e04a99"
         ],
         "x": 274,
-        "y": 239
+        "y": 239,
+        "w": 262,
+        "h": 122
     },
     {
         "id": "91bdfbc4.f7d808",
@@ -1755,7 +1765,9 @@
             "de69e9b1.b1e1e8"
         ],
         "x": 274,
-        "y": 379
+        "y": 379,
+        "w": 262,
+        "h": 122
     },
     {
         "id": "4740a3a6.61153c",
@@ -1773,7 +1785,9 @@
             "bb8693ba.4019"
         ],
         "x": 274,
-        "y": 519
+        "y": 519,
+        "w": 262,
+        "h": 122
     },
     {
         "id": "77ffcbeb.3e5634",
@@ -2074,25 +2088,20 @@
         "nodes": [
             "a85d6aef.1c6138",
             "6d295566.29bd0c",
-            "cb4a8f14.028dc",
             "82b1edb0.2d655",
             "40b93631.cfa308",
-            "ffcebc04.a1e4c",
-            "58bb5f9d.50483",
-            "e309cdad.f3413",
-            "3bee47a2.16d5d8",
-            "4268fe97.a76b6",
             "8cba10e3.ec18a",
-            "609fdcc9.057604",
-            "eacce4e1.623fa8",
-            "27386990.7e9026",
-            "599b0c66.c5ac84",
-            "b8bc19d6.41b158"
+            "b8bc19d6.41b158",
+            "bfbda8f4.b5ee28",
+            "c403b12f.4fbf2",
+            "845383bb.0fe64",
+            "bcb9ed8c.4754f",
+            "ff22a0a2.ac74f"
         ],
-        "x": 74,
+        "x": 54,
         "y": 39,
-        "w": 1312,
-        "h": 242
+        "w": 872,
+        "h": 222
     },
     {
         "id": "a983bc11.746d",
@@ -2201,6 +2210,52 @@
         "y": 899,
         "w": 766,
         "h": 162
+    },
+    {
+        "id": "84d3bbc9.a70f28",
+        "type": "group",
+        "z": "17ca131.e488ced",
+        "name": "TEST: switch status",
+        "style": {
+            "fill": "#ffefbf",
+            "label": true
+        },
+        "nodes": [
+            "3f69dc12.0df184",
+            "48689fe8.5ce33",
+            "1d41fad5.63c365",
+            "9c917f93.d3cee",
+            "ebf5bad4.5f08f8",
+            "fd41b514.4d55f8"
+        ],
+        "x": 1094,
+        "y": 79,
+        "w": 512,
+        "h": 122
+    },
+    {
+        "id": "6efbe5a5.35e4cc",
+        "type": "group",
+        "z": "7014b916.6d1208",
+        "name": "Test Hex Conversion",
+        "style": {
+            "fill": "#ffefbf",
+            "label": true
+        },
+        "nodes": [
+            "486de96e.03c238",
+            "3a5300df.9b7aa",
+            "7ee320d5.453dd",
+            "abc8164b.de4628",
+            "4446bed6.3c5f4",
+            "cadb1910.af8638",
+            "adeb11d4.c252b",
+            "e958548f.be1ca8"
+        ],
+        "x": 34,
+        "y": 1079,
+        "w": 992,
+        "h": 222
     },
     {
         "id": "b36c9a8b.092df8",
@@ -3607,7 +3662,7 @@
         "label": "Power",
         "tooltip": "Left is OFF, Right in ON",
         "group": "7d93d0fa.632f6",
-        "order": 1,
+        "order": 2,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -3623,7 +3678,7 @@
         "officon": "",
         "offcolor": "",
         "x": 150,
-        "y": 360,
+        "y": 380,
         "wires": [
             [
                 "2d020fb4.2fd23",
@@ -7091,7 +7146,7 @@
             "846bf1bd.3fb21"
         ],
         "x": 235,
-        "y": 400,
+        "y": 420,
         "wires": []
     },
     {
@@ -18402,7 +18457,7 @@
         "g": "74d2eb49.51fe34",
         "name": "",
         "group": "7d93d0fa.632f6",
-        "order": 2,
+        "order": 3,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -18415,7 +18470,7 @@
         "payloadType": "str",
         "topic": "",
         "x": 160,
-        "y": 460,
+        "y": 480,
         "wires": [
             [
                 "5b15cf8f.9919e",
@@ -18453,7 +18508,7 @@
         "to": "",
         "reg": false,
         "x": 780,
-        "y": 378,
+        "y": 398,
         "wires": [
             [
                 "9223dc40.cd804"
@@ -18488,7 +18543,7 @@
         "to": "",
         "reg": false,
         "x": 760,
-        "y": 338,
+        "y": 358,
         "wires": [
             [
                 "9223dc40.cd804"
@@ -18523,7 +18578,7 @@
         "to": "",
         "reg": false,
         "x": 780,
-        "y": 418,
+        "y": 438,
         "wires": [
             [
                 "9223dc40.cd804"
@@ -18558,7 +18613,7 @@
         "to": "",
         "reg": false,
         "x": 780,
-        "y": 458,
+        "y": 478,
         "wires": [
             [
                 "9223dc40.cd804"
@@ -18575,7 +18630,7 @@
             "846bf1bd.3fb21"
         ],
         "x": 915,
-        "y": 360,
+        "y": 380,
         "wires": []
     },
     {
@@ -18595,7 +18650,7 @@
         "randomUnits": "seconds",
         "drop": false,
         "x": 300,
-        "y": 360,
+        "y": 380,
         "wires": [
             [
                 "8feb0f13.81a46",
@@ -18620,7 +18675,7 @@
         "randomUnits": "seconds",
         "drop": false,
         "x": 480,
-        "y": 340,
+        "y": 360,
         "wires": [
             [
                 "8feb0f13.81a46"
@@ -20608,7 +20663,6 @@
         "id": "a85d6aef.1c6138",
         "type": "inject",
         "z": "17ca131.e488ced",
-        "d": true,
         "g": "422d26b0.a49cd8",
         "name": "",
         "props": [
@@ -20627,13 +20681,12 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 210,
+        "x": 190,
         "y": 180,
         "wires": [
             [
                 "8feb0f13.81a46",
-                "cb4a8f14.028dc",
-                "ffcebc04.a1e4c"
+                "845383bb.0fe64"
             ]
         ]
     },
@@ -20644,34 +20697,9 @@
         "g": "422d26b0.a49cd8",
         "name": "This block periodically queries the state of the projectors and updates the swtich if all three are on",
         "info": "",
-        "x": 440,
+        "x": 420,
         "y": 80,
         "wires": []
-    },
-    {
-        "id": "cb4a8f14.028dc",
-        "type": "delay",
-        "z": "17ca131.e488ced",
-        "g": "422d26b0.a49cd8",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "5432",
-        "timeoutUnits": "milliseconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "x": 440,
-        "y": 140,
-        "wires": [
-            [
-                "82b1edb0.2d655"
-            ]
-        ],
-        "info": "The delay time is somewhat arbitrary. The projectors don't change state very quickly. "
     },
     {
         "id": "82b1edb0.2d655",
@@ -20679,28 +20707,30 @@
         "z": "17ca131.e488ced",
         "g": "422d26b0.a49cd8",
         "name": "All On?",
-        "property": "payload",
+        "property": "payload.status",
         "propertyType": "msg",
         "rules": [
             {
-                "t": "jsonata_exp",
-                "v": "($flowContext(\"ps_1_power\") = \"On\") and  ($flowContext(\"ps_2_power\") = \"On\") and  ($flowContext(\"ps_3_power\") = \"On\")",
-                "vt": "jsonata"
+                "t": "eq",
+                "v": "all",
+                "vt": "str"
             },
             {
-                "t": "jsonata_exp",
-                "v": "($flowContext(\"ps_1_power\") = \"Off\") and \t($flowContext(\"ps_2_power\") = \"Off\") and \t($flowContext(\"ps_3_power\") = \"Off\")",
-                "vt": "jsonata"
+                "t": "eq",
+                "v": "some",
+                "vt": "str"
             },
             {
-                "t": "else"
+                "t": "eq",
+                "v": "none",
+                "vt": "str"
             }
         ],
         "checkall": "true",
         "repair": false,
         "outputs": 3,
-        "x": 620,
-        "y": 140,
+        "x": 460,
+        "y": 200,
         "wires": [
             [
                 "40b93631.cfa308"
@@ -20709,13 +20739,13 @@
                 "8cba10e3.ec18a"
             ],
             [
-                "4268fe97.a76b6"
+                "8cba10e3.ec18a"
             ]
         ],
         "outputLabels": [
-            "All On",
-            "All Off",
-            "Mixed"
+            "all",
+            "some",
+            "none"
         ]
     },
     {
@@ -20738,138 +20768,13 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 770,
-        "y": 120,
+        "x": 650,
+        "y": 180,
         "wires": [
             [
-                "58bb5f9d.50483",
                 "eb69de6a.fb725"
             ]
         ]
-    },
-    {
-        "id": "ffcebc04.a1e4c",
-        "type": "debug",
-        "z": "17ca131.e488ced",
-        "g": "422d26b0.a49cd8",
-        "name": "pulse",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 290,
-        "y": 240,
-        "wires": []
-    },
-    {
-        "id": "58bb5f9d.50483",
-        "type": "debug",
-        "z": "17ca131.e488ced",
-        "g": "422d26b0.a49cd8",
-        "name": "Projector Power",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 940,
-        "y": 100,
-        "wires": []
-    },
-    {
-        "id": "e309cdad.f3413",
-        "type": "inject",
-        "z": "17ca131.e488ced",
-        "g": "422d26b0.a49cd8",
-        "name": "test",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 970,
-        "y": 140,
-        "wires": [
-            [
-                "3bee47a2.16d5d8"
-            ]
-        ]
-    },
-    {
-        "id": "3bee47a2.16d5d8",
-        "type": "change",
-        "z": "17ca131.e488ced",
-        "g": "422d26b0.a49cd8",
-        "name": "All On",
-        "rules": [
-            {
-                "t": "set",
-                "p": "ps_1_power",
-                "pt": "flow",
-                "to": "On",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "ps_2_power",
-                "pt": "flow",
-                "to": "On",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "ps_3_power",
-                "pt": "flow",
-                "to": "On",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 980,
-        "y": 180,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "4268fe97.a76b6",
-        "type": "debug",
-        "z": "17ca131.e488ced",
-        "g": "422d26b0.a49cd8",
-        "name": "Switch stays off",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 780,
-        "y": 200,
-        "wires": []
     },
     {
         "id": "8cba10e3.ec18a",
@@ -20891,153 +20796,12 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 780,
-        "y": 160,
+        "x": 660,
+        "y": 220,
         "wires": [
             [
-                "58bb5f9d.50483",
                 "eb69de6a.fb725"
             ]
-        ]
-    },
-    {
-        "id": "609fdcc9.057604",
-        "type": "inject",
-        "z": "17ca131.e488ced",
-        "g": "422d26b0.a49cd8",
-        "name": "test",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 1130,
-        "y": 140,
-        "wires": [
-            [
-                "27386990.7e9026"
-            ]
-        ]
-    },
-    {
-        "id": "27386990.7e9026",
-        "type": "change",
-        "z": "17ca131.e488ced",
-        "g": "422d26b0.a49cd8",
-        "name": "All Off",
-        "rules": [
-            {
-                "t": "set",
-                "p": "ps_1_power",
-                "pt": "flow",
-                "to": "Off",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "ps_2_power",
-                "pt": "flow",
-                "to": "Off",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "ps_3_power",
-                "pt": "flow",
-                "to": "Off",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1130,
-        "y": 180,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "eacce4e1.623fa8",
-        "type": "inject",
-        "z": "17ca131.e488ced",
-        "g": "422d26b0.a49cd8",
-        "name": "test",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 1290,
-        "y": 140,
-        "wires": [
-            [
-                "599b0c66.c5ac84"
-            ]
-        ]
-    },
-    {
-        "id": "599b0c66.c5ac84",
-        "type": "change",
-        "z": "17ca131.e488ced",
-        "g": "422d26b0.a49cd8",
-        "name": "All Mixed",
-        "rules": [
-            {
-                "t": "set",
-                "p": "ps_1_power",
-                "pt": "flow",
-                "to": "Off",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "ps_2_power",
-                "pt": "flow",
-                "to": "On",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "ps_3_power",
-                "pt": "flow",
-                "to": "Off",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1300,
-        "y": 180,
-        "wires": [
-            []
         ]
     },
     {
@@ -21053,7 +20817,7 @@
         "initialize": "",
         "finalize": "",
         "x": 150,
-        "y": 320,
+        "y": 340,
         "wires": [
             [
                 "48daae73.74f9b"
@@ -21068,7 +20832,7 @@
         "name": "TODO -fix logic",
         "info": "Fix logic so that a button action changes projector state, but a pulsed action which detects an external change does not cause projector communications.",
         "x": 180,
-        "y": 120,
+        "y": 140,
         "wires": []
     },
     {
@@ -21891,13 +21655,13 @@
         "type": "function",
         "z": "17ca131.e488ced",
         "g": "72b450b6.03b4d",
-        "name": "Update Projector Status in flow ",
+        "name": "Update Projector Status in context ",
         "func": "//msg.key identifies projector: prj1, prj2 etc\n//msg.topic is parameter\n\noff_colour = \"#FF0000\";\non_colour  = \"#00FF00\";\n\nprj = msg.instance;\n\nswitch(msg.topic) {\n    \n    case \"getlamps\":\n        key = \"lamp\"\n        val = msg.payload[0].hours ;\n        break;\n    \n    case \"getpowerstate\":\n        key= \"power\"\n        val = (msg.payload == 0  ? \"Off\" : \"On\");\n        break;\n    \n    case \"getname\":\n        key= \"name\"\n        val = msg.payload  ;\n        break; \n    \n    case \"getinput\":\n        key= \"input\" // response format is different between Sony and Hitachi\n        val = typeof(msg.payload.name) == \"undefined\" ? msg.payload : msg.payload.name;\n        break;     \n    \n    case \"powercolour\": // this should be a copy of the getpowerstate message topic with a different topic.\n        key= \"powercolour\"\n        val = (msg.payload == 0 ? off_colour : on_colour) ;\n        break;  \n    \n    default:\n        key = \"unknown\"\n        val = \"?\"\n}\n\nnewval = {\"projector\": prj,\n          \"metric\"   : key,\n          \"value\"    : val\n          };\n  \n// retrieve status  \n  \nps = flow.get(\"projectorStatus\")  \n\n// remove prior value\n\n//ps = prjstatus.filter( x => !( x[0]==itm[0] & x[1] == itm[1]  ) )\n\n//console.log( \"x.projector=\", x.projector)\nconsole.log( \"newval.projector=\", newval.projector)\n//console.log( \"x.metric=\", x.metric)\nconsole.log( \"newval.metric=\", newval.metric)\n\nps = ps.filter(x => !(x.projector == newval.projector & x.metric == newval.metric))\n\n// add new value\n\nps.push(newval);\n\nflow.set( \"projectorStatus\"  , ps)\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 650,
+        "x": 660,
         "y": 980,
         "wires": [
             [
@@ -22167,6 +21931,522 @@
         "wires": [
             [
                 "29aa4734.eae0a8"
+            ]
+        ]
+    },
+    {
+        "id": "3f69dc12.0df184",
+        "type": "inject",
+        "z": "17ca131.e488ced",
+        "g": "84d3bbc9.a70f28",
+        "name": "test",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1190,
+        "y": 120,
+        "wires": [
+            [
+                "48689fe8.5ce33"
+            ]
+        ]
+    },
+    {
+        "id": "48689fe8.5ce33",
+        "type": "change",
+        "z": "17ca131.e488ced",
+        "g": "84d3bbc9.a70f28",
+        "name": "All On",
+        "rules": [
+            {
+                "t": "set",
+                "p": "ps_1_power",
+                "pt": "flow",
+                "to": "On",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "ps_2_power",
+                "pt": "flow",
+                "to": "On",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "ps_3_power",
+                "pt": "flow",
+                "to": "On",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1200,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1d41fad5.63c365",
+        "type": "inject",
+        "z": "17ca131.e488ced",
+        "g": "84d3bbc9.a70f28",
+        "name": "test",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1350,
+        "y": 120,
+        "wires": [
+            [
+                "9c917f93.d3cee"
+            ]
+        ]
+    },
+    {
+        "id": "9c917f93.d3cee",
+        "type": "change",
+        "z": "17ca131.e488ced",
+        "g": "84d3bbc9.a70f28",
+        "name": "All Off",
+        "rules": [
+            {
+                "t": "set",
+                "p": "ps_1_power",
+                "pt": "flow",
+                "to": "Off",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "ps_2_power",
+                "pt": "flow",
+                "to": "Off",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "ps_3_power",
+                "pt": "flow",
+                "to": "Off",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1350,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ebf5bad4.5f08f8",
+        "type": "inject",
+        "z": "17ca131.e488ced",
+        "g": "84d3bbc9.a70f28",
+        "name": "test",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1510,
+        "y": 120,
+        "wires": [
+            [
+                "fd41b514.4d55f8"
+            ]
+        ]
+    },
+    {
+        "id": "fd41b514.4d55f8",
+        "type": "change",
+        "z": "17ca131.e488ced",
+        "g": "84d3bbc9.a70f28",
+        "name": "All Mixed",
+        "rules": [
+            {
+                "t": "set",
+                "p": "ps_1_power",
+                "pt": "flow",
+                "to": "Off",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "ps_2_power",
+                "pt": "flow",
+                "to": "On",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "ps_3_power",
+                "pt": "flow",
+                "to": "Off",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1520,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bfbda8f4.b5ee28",
+        "type": "inject",
+        "z": "17ca131.e488ced",
+        "g": "422d26b0.a49cd8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 200,
+        "y": 220,
+        "wires": [
+            [
+                "c403b12f.4fbf2"
+            ]
+        ]
+    },
+    {
+        "id": "c403b12f.4fbf2",
+        "type": "function",
+        "z": "17ca131.e488ced",
+        "g": "422d26b0.a49cd8",
+        "name": "query power status",
+        "func": "ps = flow.get( \"projectorStatus\")\n\ntotal = ps.filter( x => (x.metric == \"power\")).length\n\non = ps.filter( x => (x.metric == \"power\" & x.value == \"On\")).length\noff = total-on\n\nif (total == on) { status = \"all\"}\nelse if (total == off) { status = \"none\"}\nelse status = \"some\";\n\nmsg = { payload : {\n                    total : total,\n                    on    : on,\n                    off   : off,\n                    status: status\n                }\n    }\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 430,
+        "y": 160,
+        "wires": [
+            [
+                "82b1edb0.2d655",
+                "ff22a0a2.ac74f"
+            ]
+        ]
+    },
+    {
+        "id": "845383bb.0fe64",
+        "type": "delay",
+        "z": "17ca131.e488ced",
+        "g": "422d26b0.a49cd8",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 380,
+        "y": 120,
+        "wires": [
+            [
+                "c403b12f.4fbf2"
+            ]
+        ]
+    },
+    {
+        "id": "bcb9ed8c.4754f",
+        "type": "ui_text",
+        "z": "17ca131.e488ced",
+        "g": "422d26b0.a49cd8",
+        "group": "7d93d0fa.632f6",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Power Status",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 820,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "ff22a0a2.ac74f",
+        "type": "change",
+        "z": "17ca131.e488ced",
+        "g": "422d26b0.a49cd8",
+        "name": "format",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "msg.payload.on &  \" projectors out of \" &\tmsg.payload.total &\t\" projectors are on.\"",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 140,
+        "wires": [
+            [
+                "bcb9ed8c.4754f"
+            ]
+        ]
+    },
+    {
+        "id": "f3ab6db9.f75ff",
+        "type": "comment",
+        "z": "4ab9df2b.7b3dd",
+        "name": "Dante",
+        "info": "https://www.gearslutz.com/board/music-computers/1221989-dante-routing-without-dante-controller-possible.html",
+        "x": 180,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "486de96e.03c238",
+        "type": "inject",
+        "z": "7014b916.6d1208",
+        "g": "6efbe5a5.35e4cc",
+        "name": "fire test",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 1160,
+        "wires": [
+            [
+                "e958548f.be1ca8"
+            ]
+        ]
+    },
+    {
+        "id": "3a5300df.9b7aa",
+        "type": "change",
+        "z": "7014b916.6d1208",
+        "g": "6efbe5a5.35e4cc",
+        "name": "Set IP Parms",
+        "rules": [
+            {
+                "t": "set",
+                "p": "ip",
+                "pt": "msg",
+                "to": "192.168.0.186",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "port",
+                "pt": "msg",
+                "to": "52381",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 790,
+        "y": 1120,
+        "wires": [
+            [
+                "7ee320d5.453dd"
+            ]
+        ]
+    },
+    {
+        "id": "7ee320d5.453dd",
+        "type": "udp out",
+        "z": "7014b916.6d1208",
+        "g": "6efbe5a5.35e4cc",
+        "name": "Test Out",
+        "addr": "",
+        "iface": "",
+        "port": "",
+        "ipv": "udp4",
+        "outport": "",
+        "base64": false,
+        "multicast": "false",
+        "x": 940,
+        "y": 1120,
+        "wires": []
+    },
+    {
+        "id": "abc8164b.de4628",
+        "type": "debug",
+        "z": "7014b916.6d1208",
+        "g": "6efbe5a5.35e4cc",
+        "name": "Before network",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 1160,
+        "wires": []
+    },
+    {
+        "id": "4446bed6.3c5f4",
+        "type": "function",
+        "z": "7014b916.6d1208",
+        "g": "6efbe5a5.35e4cc",
+        "name": "clone",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 620,
+        "y": 1160,
+        "wires": [
+            [
+                "abc8164b.de4628",
+                "3a5300df.9b7aa",
+                "cadb1910.af8638"
+            ]
+        ]
+    },
+    {
+        "id": "cadb1910.af8638",
+        "type": "function",
+        "z": "7014b916.6d1208",
+        "g": "6efbe5a5.35e4cc",
+        "name": "typeof",
+        "func": "\nreturn {payload: typeof(msg)};",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 740,
+        "y": 1220,
+        "wires": [
+            [
+                "adeb11d4.c252b"
+            ]
+        ]
+    },
+    {
+        "id": "adeb11d4.c252b",
+        "type": "debug",
+        "z": "7014b916.6d1208",
+        "g": "6efbe5a5.35e4cc",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 840,
+        "y": 1260,
+        "wires": []
+    },
+    {
+        "id": "e958548f.be1ca8",
+        "type": "function",
+        "z": "7014b916.6d1208",
+        "g": "6efbe5a5.35e4cc",
+        "name": "Buffer camera on",
+        "func": "// 01000006000000028101040002FF\nb = new Buffer([\n    0x01, //01\n    0x00, //00\n    0x00, //00\n    0x06, //06\n    0x00, //00\n    0x00, //00\n    0x00, //00\n    0x02, //02\n    0x81, //81\n    0x01, //01\n    0x04, //04\n    0x00, //00\n    0x02, //02\n    0xff  //FF\n    ])\n\nreturn {payload: b};",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 310,
+        "y": 1160,
+        "wires": [
+            [
+                "4446bed6.3c5f4"
             ]
         ]
     }
