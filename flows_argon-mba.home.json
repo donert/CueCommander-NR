@@ -489,22 +489,15 @@
         },
         "nodes": [
             "7bc89364.546b1c",
-            "29a8af.fd9ef752",
-            "617d275.72c70d8",
             "4578eab2.af26c4",
-            "a499c220.177c",
-            "22b7d423.dda69c",
-            "53782773.37f848",
-            "ba833bb3.50fa98",
-            "8cf5b702.df8188",
             "8162415a.d8326",
-            "bb203786.1c3648",
-            "2d4bb82e.e65c38"
+            "5652d4df.fc332c",
+            "31b5d4e2.9251cc"
         ],
-        "x": 354,
+        "x": 563,
         "y": 19,
-        "w": 683,
-        "h": 162
+        "w": 703,
+        "h": 122
     },
     {
         "id": "c54cb139.4f73d",
@@ -796,16 +789,16 @@
             "bf8e9d90.cb87d",
             "4fbe7095.907c4",
             "429387c.c26c678",
-            "4740a3a6.61153c",
             "91bdfbc4.f7d808",
             "96c95ab.61ed0a8",
             "ce615635.53cd98",
-            "15f86d87.e90a62"
+            "15f86d87.e90a62",
+            "4740a3a6.61153c"
         ],
-        "x": -26,
-        "y": 213,
-        "w": 828,
-        "h": 454
+        "x": 14,
+        "y": 273,
+        "w": 894,
+        "h": 574
     },
     {
         "id": "c8d8db35.9a9e88",
@@ -1090,7 +1083,7 @@
             "d689e919.81ea98"
         ],
         "x": 14,
-        "y": 699,
+        "y": 939,
         "w": 1012,
         "h": 202
     },
@@ -1576,11 +1569,14 @@
             "ab5b079.76567f8",
             "ce3ad22d.cff7c",
             "cb527676.f585c8",
-            "a10b5b90.92b388"
+            "a10b5b90.92b388",
+            "4ea0d53f.409c6c",
+            "6615f74b.cd0e18",
+            "78808df0.12d964"
         ],
         "x": 14,
         "y": 19,
-        "w": 322,
+        "w": 534,
         "h": 182
     },
     {
@@ -1854,7 +1850,7 @@
             "b3eb0067.40bfa"
         ],
         "x": 14,
-        "y": 919,
+        "y": 1179,
         "w": 952,
         "h": 462
     },
@@ -1871,12 +1867,14 @@
             "bec98423.d4f878",
             "cd820e10.89782",
             "f0d18f3b.c1b22",
-            "1bc616f5.e04a99"
+            "47f8108b.e636",
+            "6d7132ca.524f3c",
+            "81dfd081.61b7d"
         ],
-        "x": 274,
-        "y": 239,
+        "x": 380,
+        "y": 299,
         "w": 502,
-        "h": 122
+        "h": 162
     },
     {
         "id": "91bdfbc4.f7d808",
@@ -1891,32 +1889,14 @@
             "8ea268dc.a6e9f8",
             "e9494221.1123e",
             "efe88d10.173fb",
-            "de69e9b1.b1e1e8"
+            "7cdb92ae.8517dc",
+            "27962c0e.a009b4",
+            "a4c863ff.67198"
         ],
-        "x": 274,
-        "y": 379,
+        "x": 380,
+        "y": 479,
         "w": 502,
-        "h": 122
-    },
-    {
-        "id": "4740a3a6.61153c",
-        "type": "group",
-        "z": "7014b916.6d1208",
-        "g": "aa34448f.507d08",
-        "name": "Set Tally for Camera 3",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "656a6c63.fef2d4",
-            "8888c7f6.821c58",
-            "eff3a804.32f6d8",
-            "bb8693ba.4019"
-        ],
-        "x": 274,
-        "y": 519,
-        "w": 502,
-        "h": 122
+        "h": 162
     },
     {
         "id": "77ffcbeb.3e5634",
@@ -2216,10 +2196,32 @@
             "6f0fa0df.6600b",
             "bff7cce8.44d2f"
         ],
-        "x": 1044,
-        "y": 239,
-        "w": 542,
+        "x": 564,
+        "y": 159,
+        "w": 422,
         "h": 82
+    },
+    {
+        "id": "4740a3a6.61153c",
+        "type": "group",
+        "z": "7014b916.6d1208",
+        "g": "aa34448f.507d08",
+        "name": "Set Tally for Camera 3",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "656a6c63.fef2d4",
+            "8888c7f6.821c58",
+            "bb8693ba.4019",
+            "98662036.d7f66",
+            "b2c6691d.1da2d8",
+            "2488de1d.2c7bb2"
+        ],
+        "x": 380,
+        "y": 659,
+        "w": 502,
+        "h": 162
     },
     {
         "id": "b36c9a8b.092df8",
@@ -3504,7 +3506,7 @@
         "type": "udp out",
         "z": "7014b916.6d1208",
         "g": "5c5e0515.ea0e2c",
-        "name": "Cam1",
+        "name": "To Cameras",
         "addr": "",
         "iface": "",
         "port": "",
@@ -3512,42 +3514,8 @@
         "outport": "",
         "base64": false,
         "multicast": "false",
-        "x": 961,
+        "x": 1130,
         "y": 60,
-        "wires": []
-    },
-    {
-        "id": "29a8af.fd9ef752",
-        "type": "udp out",
-        "z": "7014b916.6d1208",
-        "g": "5c5e0515.ea0e2c",
-        "name": "Cam2",
-        "addr": "",
-        "iface": "",
-        "port": "",
-        "ipv": "udp4",
-        "outport": "",
-        "base64": false,
-        "multicast": "false",
-        "x": 961,
-        "y": 100,
-        "wires": []
-    },
-    {
-        "id": "617d275.72c70d8",
-        "type": "udp out",
-        "z": "7014b916.6d1208",
-        "g": "5c5e0515.ea0e2c",
-        "name": "Cam3",
-        "addr": "",
-        "iface": "",
-        "port": "",
-        "ipv": "udp4",
-        "outport": "",
-        "base64": false,
-        "multicast": "false",
-        "x": 961,
-        "y": 140,
         "wires": []
     },
     {
@@ -3591,7 +3559,7 @@
         "officon": "",
         "offcolor": "",
         "x": 90,
-        "y": 100,
+        "y": 120,
         "wires": [
             [
                 "a10b5b90.92b388"
@@ -7135,8 +7103,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 3,
-        "x": 170,
-        "y": 440,
+        "x": 276,
+        "y": 520,
         "wires": [
             [
                 "bec98423.d4f878",
@@ -7172,11 +7140,11 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 360,
-        "y": 280,
+        "x": 466,
+        "y": 340,
         "wires": [
             [
-                "f0d18f3b.c1b22"
+                "47f8108b.e636"
             ]
         ]
     },
@@ -7190,53 +7158,14 @@
             "cb527676.f585c8",
             "f0d18f3b.c1b22",
             "de69e9b1.b1e1e8",
-            "bb8693ba.4019"
+            "bb8693ba.4019",
+            "efe88d10.173fb"
         ],
-        "x": 395,
+        "x": 604,
         "y": 60,
         "wires": [
             [
                 "8162415a.d8326"
-            ]
-        ]
-    },
-    {
-        "id": "a499c220.177c",
-        "type": "link in",
-        "z": "7014b916.6d1208",
-        "g": "5c5e0515.ea0e2c",
-        "name": "Camera2",
-        "links": [
-            "cb527676.f585c8",
-            "1bc616f5.e04a99",
-            "efe88d10.173fb",
-            "bb8693ba.4019"
-        ],
-        "x": 395,
-        "y": 100,
-        "wires": [
-            [
-                "bb203786.1c3648"
-            ]
-        ]
-    },
-    {
-        "id": "22b7d423.dda69c",
-        "type": "link in",
-        "z": "7014b916.6d1208",
-        "g": "5c5e0515.ea0e2c",
-        "name": "Camera3",
-        "links": [
-            "cb527676.f585c8",
-            "1bc616f5.e04a99",
-            "de69e9b1.b1e1e8",
-            "eff3a804.32f6d8"
-        ],
-        "x": 395,
-        "y": 140,
-        "wires": [
-            [
-                "2d4bb82e.e65c38"
             ]
         ]
     },
@@ -7251,8 +7180,8 @@
             "4578eab2.af26c4",
             "a499c220.177c"
         ],
-        "x": 295,
-        "y": 100,
+        "x": 507,
+        "y": 120,
         "wires": []
     },
     {
@@ -7275,11 +7204,12 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 360,
-        "y": 320,
+        "x": 466,
+        "y": 380,
         "wires": [
             [
-                "1bc616f5.e04a99"
+                "6d7132ca.524f3c",
+                "81dfd081.61b7d"
             ]
         ]
     },
@@ -7292,22 +7222,8 @@
         "links": [
             "4578eab2.af26c4"
         ],
-        "x": 735,
-        "y": 280,
-        "wires": []
-    },
-    {
-        "id": "1bc616f5.e04a99",
-        "type": "link out",
-        "z": "7014b916.6d1208",
-        "g": "429387c.c26c678",
-        "name": "",
-        "links": [
-            "22b7d423.dda69c",
-            "a499c220.177c"
-        ],
-        "x": 735,
-        "y": 320,
+        "x": 841,
+        "y": 380,
         "wires": []
     },
     {
@@ -7330,11 +7246,11 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 360,
-        "y": 420,
+        "x": 466,
+        "y": 520,
         "wires": [
             [
-                "efe88d10.173fb"
+                "7cdb92ae.8517dc"
             ]
         ]
     },
@@ -7358,11 +7274,12 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 360,
-        "y": 460,
+        "x": 466,
+        "y": 560,
         "wires": [
             [
-                "de69e9b1.b1e1e8"
+                "27962c0e.a009b4",
+                "a4c863ff.67198"
             ]
         ]
     },
@@ -7373,107 +7290,11 @@
         "g": "91bdfbc4.f7d808",
         "name": "",
         "links": [
-            "a499c220.177c"
-        ],
-        "x": 735,
-        "y": 420,
-        "wires": []
-    },
-    {
-        "id": "de69e9b1.b1e1e8",
-        "type": "link out",
-        "z": "7014b916.6d1208",
-        "g": "91bdfbc4.f7d808",
-        "name": "",
-        "links": [
-            "22b7d423.dda69c",
+            "a499c220.177c",
             "4578eab2.af26c4"
         ],
-        "x": 735,
-        "y": 460,
-        "wires": []
-    },
-    {
-        "id": "656a6c63.fef2d4",
-        "type": "change",
-        "z": "7014b916.6d1208",
-        "g": "4740a3a6.61153c",
-        "name": "Tally On",
-        "rules": [
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "tallyOn",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 360,
+        "x": 841,
         "y": 560,
-        "wires": [
-            [
-                "eff3a804.32f6d8"
-            ]
-        ]
-    },
-    {
-        "id": "8888c7f6.821c58",
-        "type": "change",
-        "z": "7014b916.6d1208",
-        "g": "4740a3a6.61153c",
-        "name": "Tally Off",
-        "rules": [
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "tallyOff",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 360,
-        "y": 600,
-        "wires": [
-            [
-                "bb8693ba.4019"
-            ]
-        ]
-    },
-    {
-        "id": "eff3a804.32f6d8",
-        "type": "link out",
-        "z": "7014b916.6d1208",
-        "g": "4740a3a6.61153c",
-        "name": "",
-        "links": [
-            "22b7d423.dda69c"
-        ],
-        "x": 735,
-        "y": 560,
-        "wires": []
-    },
-    {
-        "id": "bb8693ba.4019",
-        "type": "link out",
-        "z": "7014b916.6d1208",
-        "g": "4740a3a6.61153c",
-        "name": "",
-        "links": [
-            "4578eab2.af26c4",
-            "a499c220.177c"
-        ],
-        "x": 735,
-        "y": 600,
         "wires": []
     },
     {
@@ -7483,8 +7304,8 @@
         "g": "aa34448f.507d08",
         "name": "Set Tally",
         "links": [],
-        "x": 55,
-        "y": 440,
+        "x": 95,
+        "y": 520,
         "wires": [
             [
                 "bf8e9d90.cb87d"
@@ -8636,112 +8457,6 @@
         "x": 855,
         "y": 240,
         "wires": []
-    },
-    {
-        "id": "53782773.37f848",
-        "type": "change",
-        "z": "7014b916.6d1208",
-        "g": "5c5e0515.ea0e2c",
-        "name": "Set IP Parms",
-        "rules": [
-            {
-                "t": "set",
-                "p": "ip",
-                "pt": "msg",
-                "to": "cam1_ip",
-                "tot": "flow"
-            },
-            {
-                "t": "set",
-                "p": "port",
-                "pt": "msg",
-                "to": "cam1_port",
-                "tot": "flow"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 801,
-        "y": 60,
-        "wires": [
-            [
-                "7bc89364.546b1c"
-            ]
-        ]
-    },
-    {
-        "id": "ba833bb3.50fa98",
-        "type": "change",
-        "z": "7014b916.6d1208",
-        "g": "5c5e0515.ea0e2c",
-        "name": "Set IP Parms",
-        "rules": [
-            {
-                "t": "set",
-                "p": "ip",
-                "pt": "msg",
-                "to": "cam2_ip",
-                "tot": "flow"
-            },
-            {
-                "t": "set",
-                "p": "port",
-                "pt": "msg",
-                "to": "cam2_port",
-                "tot": "flow"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 801,
-        "y": 100,
-        "wires": [
-            [
-                "29a8af.fd9ef752"
-            ]
-        ]
-    },
-    {
-        "id": "8cf5b702.df8188",
-        "type": "change",
-        "z": "7014b916.6d1208",
-        "g": "5c5e0515.ea0e2c",
-        "name": "Set IP Parms",
-        "rules": [
-            {
-                "t": "set",
-                "p": "ip",
-                "pt": "msg",
-                "to": "cam3_ip",
-                "tot": "flow"
-            },
-            {
-                "t": "set",
-                "p": "port",
-                "pt": "msg",
-                "to": "cam3_port",
-                "tot": "flow"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 801,
-        "y": 140,
-        "wires": [
-            [
-                "617d275.72c70d8",
-                "73fd403e.e6e16"
-            ]
-        ]
     },
     {
         "id": "6d6abeb5.0fa48",
@@ -11564,7 +11279,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 110,
-        "y": 800,
+        "y": 1040,
         "wires": [
             [
                 "4e7a2d1d.71e454",
@@ -11587,7 +11302,7 @@
         "statusVal": "payload",
         "statusType": "auto",
         "x": 900,
-        "y": 860,
+        "y": 1100,
         "wires": []
     },
     {
@@ -11602,7 +11317,7 @@
         "initialize": "",
         "finalize": "",
         "x": 280,
-        "y": 860,
+        "y": 1100,
         "wires": [
             [
                 "1b0ed325.2e377d"
@@ -11621,7 +11336,7 @@
         "inout": "out",
         "property": "payload",
         "x": 420,
-        "y": 860,
+        "y": 1100,
         "wires": [
             [
                 "c7501997.554508"
@@ -11655,7 +11370,7 @@
         "repair": false,
         "outputs": 3,
         "x": 640,
-        "y": 760,
+        "y": 1000,
         "wires": [
             [
                 "b710464b.ea7198"
@@ -11688,7 +11403,7 @@
         "statusVal": "payload",
         "statusType": "auto",
         "x": 900,
-        "y": 820,
+        "y": 1060,
         "wires": []
     },
     {
@@ -11712,7 +11427,7 @@
         "to": "",
         "reg": false,
         "x": 300,
-        "y": 760,
+        "y": 1000,
         "wires": [
             [
                 "36963c8c.a51974"
@@ -11731,7 +11446,7 @@
         "inout": "out",
         "property": "payload",
         "x": 470,
-        "y": 760,
+        "y": 1000,
         "wires": [
             [
                 "96dba387.c8126"
@@ -11790,7 +11505,7 @@
         ],
         "active": false,
         "x": 890,
-        "y": 740,
+        "y": 980,
         "wires": []
     },
     {
@@ -11845,7 +11560,7 @@
         ],
         "active": false,
         "x": 890,
-        "y": 780,
+        "y": 1020,
         "wires": []
     },
     {
@@ -20743,22 +20458,6 @@
         "wires": []
     },
     {
-        "id": "73fd403e.e6e16",
-        "type": "debug",
-        "z": "7014b916.6d1208",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 930,
-        "y": 200,
-        "wires": []
-    },
-    {
         "id": "67a052cf.4d07fc",
         "type": "debug",
         "z": "ee400291.7cb",
@@ -22198,7 +21897,7 @@
         "onceDelay": 0.1,
         "topic": "powerOn",
         "x": 120,
-        "y": 960,
+        "y": 1220,
         "wires": [
             [
                 "b3eb0067.40bfa"
@@ -22233,7 +21932,7 @@
         "to": "",
         "reg": false,
         "x": 730,
-        "y": 1040,
+        "y": 1300,
         "wires": [
             [
                 "7ee320d5.453dd"
@@ -22254,7 +21953,7 @@
         "base64": false,
         "multicast": "false",
         "x": 880,
-        "y": 1040,
+        "y": 1300,
         "wires": []
     },
     {
@@ -22272,7 +21971,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 660,
-        "y": 1100,
+        "y": 1360,
         "wires": []
     },
     {
@@ -22287,7 +21986,7 @@
         "initialize": "",
         "finalize": "",
         "x": 550,
-        "y": 1040,
+        "y": 1300,
         "wires": [
             [
                 "abc8164b.de4628",
@@ -22307,7 +22006,7 @@
         "initialize": "",
         "finalize": "",
         "x": 350,
-        "y": 1180,
+        "y": 1440,
         "wires": [
             []
         ]
@@ -22324,7 +22023,7 @@
         "initialize": "",
         "finalize": "",
         "x": 350,
-        "y": 1220,
+        "y": 1480,
         "wires": [
             []
         ]
@@ -22348,7 +22047,7 @@
         "topic": "powerOff",
         "payloadType": "str",
         "x": 120,
-        "y": 1000,
+        "y": 1260,
         "wires": [
             [
                 "b3eb0067.40bfa"
@@ -22367,7 +22066,7 @@
         "initialize": "",
         "finalize": "",
         "x": 340,
-        "y": 1260,
+        "y": 1520,
         "wires": [
             []
         ]
@@ -22384,7 +22083,7 @@
         "initialize": "",
         "finalize": "",
         "x": 340,
-        "y": 1300,
+        "y": 1560,
         "wires": [
             []
         ]
@@ -22408,7 +22107,7 @@
         "topic": "tallyOn",
         "payloadType": "str",
         "x": 110,
-        "y": 1040,
+        "y": 1300,
         "wires": [
             [
                 "b3eb0067.40bfa"
@@ -22433,7 +22132,7 @@
         "onceDelay": 0.1,
         "topic": "tallyOff",
         "x": 110,
-        "y": 1080,
+        "y": 1340,
         "wires": [
             [
                 "b3eb0067.40bfa"
@@ -22452,7 +22151,7 @@
         "initialize": "",
         "finalize": "",
         "x": 360,
-        "y": 1340,
+        "y": 1600,
         "wires": [
             []
         ]
@@ -22476,7 +22175,7 @@
         "topic": "reset",
         "payloadType": "str",
         "x": 110,
-        "y": 1120,
+        "y": 1380,
         "wires": [
             [
                 "b3eb0067.40bfa"
@@ -22495,8 +22194,8 @@
         "multicast": "false",
         "group": "",
         "datatype": "buffer",
-        "x": 1150,
-        "y": 280,
+        "x": 670,
+        "y": 200,
         "wires": [
             [
                 "6f0fa0df.6600b"
@@ -22517,8 +22216,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1460,
-        "y": 280,
+        "x": 860,
+        "y": 200,
         "wires": []
     },
     {
@@ -22526,7 +22225,7 @@
         "type": "function",
         "z": "a3ba969f.c5f3b8",
         "name": "Create Camera Message",
-        "func": "powerOn = new Buffer([\n    0x01, 0x00, 0x00, 0x06, 0x00, 0x00, 0x00, 0x02, \n    0x81, 0x01, 0x04, 0x00, 0x02, 0xff\n    ])\n    \npowerOff = new Buffer([\n    0x01, 0x00, 0x00, 0x06, 0x00, 0x00, 0x00, 0x02, \n    0x81, 0x01, 0x04, 0x00, 0x03, 0xff \n    ])   \n    \npowerInq = new Buffer([\n    0x01, 0x00, 0x00, 0x06, 0x00, 0x00, 0x00, 0x02, \n    0x81, 0x09, 0x00, 0xff \n    ])     \n    \ntallyOn = new Buffer([\n    0x01, 0x00, 0x00, 0x06, 0x00, 0x00, 0x00, 0x02, \n    0x81, 0x01, 0x7e, 0x01, 0x0a, 0x00, 0x02, 0xff   \n    ])\n    \ntallyOff  = new Buffer([\n    0x01, 0x00, 0x00, 0x06, 0x00, 0x00, 0x00, 0x02, \n    0x81, 0x01, 0x7e, 0x01, 0x0a, 0x00, 0x03, 0xff   \n    ]) \n    \nreset  = new Buffer([\n    0x01, 0x00, 0x00, 0x06, 0x00, 0x00, 0x00, 0x02, \n    0x02, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00 ,0x02 ,0x01   \n    ])  \n    \nbuffer = new Buffer([]);    \n    \nswitch (msg.topic) {\n    case \"powerOn\":\n        buffer = powerOn;\n        break;\n    case \"powerOff\":\n        buffer = powerOff;\n        break;\n    case \"powerInq\":\n        buffer = powerInq;\n        break; \n    case \"tallyOn\":\n        buffer = tallyOn;\n        break;   \n    case \"tallyOff\":\n        buffer = tallyOff;\n        break;\n    case \"reset\":\n        buffer = reset;\n        break;       \n}    \n\nreturn {payload: buffer,\n        topic: msg.topic\n       };",
+        "func": "powerOn = new Buffer([\n    0x01, 0x00, 0x00, 0x06, 0x00, 0x00, 0x00, 0x02, \n    0x81, 0x01, 0x04, 0x00, 0x02, 0xff\n    ])\n    \npowerOff = new Buffer([\n    0x01, 0x00, 0x00, 0x06, 0x00, 0x00, 0x00, 0x02, \n    0x81, 0x01, 0x04, 0x00, 0x03, 0xff \n    ])   \n    \npowerInq = new Buffer([\n    0x01, 0x00, 0x00, 0x06, 0x00, 0x00, 0x00, 0x02, \n    0x81, 0x09, 0x00, 0xff \n    ])     \n    \ntallyOn = new Buffer([\n    0x01, 0x00, 0x00, 0x06, 0x00, 0x00, 0x00, 0x02, \n    0x81, 0x01, 0x7e, 0x01, 0x0a, 0x00, 0x02, 0xff   \n    ])\n    \ntallyOff  = new Buffer([\n    0x01, 0x00, 0x00, 0x06, 0x00, 0x00, 0x00, 0x02, \n    0x81, 0x01, 0x7e, 0x01, 0x0a, 0x00, 0x03, 0xff   \n    ]) \n    \nreset  = new Buffer([\n    0x01, 0x00, 0x00, 0x06, 0x00, 0x00, 0x00, 0x02, \n    0x02, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00 ,0x02 ,0x01   \n    ])  \n    \nbuffer = new Buffer([]);    \n    \nswitch (msg.topic) {\n    case \"powerOn\":\n        buffer = powerOn;\n        break;\n    case \"powerOff\":\n        buffer = powerOff;\n        break;\n    case \"powerInq\":\n        buffer = powerInq;\n        break; \n    case \"tallyOn\":\n        buffer = tallyOn;\n        break;   \n    case \"tallyOff\":\n        buffer = tallyOff;\n        break;\n    case \"reset\":\n        buffer = reset;\n        break;       \n}    \n\nreturn {payload: buffer,\n        topic: msg.topic,\n        camera: msg.camera\n       };",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -22557,11 +22256,13 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 220,
-        "y": 140,
+        "x": 240,
+        "y": 120,
         "wires": [
             [
-                "cb527676.f585c8"
+                "4ea0d53f.409c6c",
+                "6615f74b.cd0e18",
+                "78808df0.12d964"
             ]
         ]
     },
@@ -22571,7 +22272,7 @@
         "z": "7014b916.6d1208",
         "g": "6efbe5a5.35e4cc",
         "x": 390,
-        "y": 1000,
+        "y": 1260,
         "wires": [
             [
                 "4446bed6.3c5f4"
@@ -22584,39 +22285,12 @@
         "z": "7014b916.6d1208",
         "g": "5c5e0515.ea0e2c",
         "name": "",
-        "x": 570,
+        "env": [],
+        "x": 750,
         "y": 60,
         "wires": [
             [
-                "53782773.37f848"
-            ]
-        ]
-    },
-    {
-        "id": "bb203786.1c3648",
-        "type": "subflow:a3ba969f.c5f3b8",
-        "z": "7014b916.6d1208",
-        "g": "5c5e0515.ea0e2c",
-        "name": "",
-        "x": 570,
-        "y": 100,
-        "wires": [
-            [
-                "ba833bb3.50fa98"
-            ]
-        ]
-    },
-    {
-        "id": "2d4bb82e.e65c38",
-        "type": "subflow:a3ba969f.c5f3b8",
-        "z": "7014b916.6d1208",
-        "g": "5c5e0515.ea0e2c",
-        "name": "",
-        "x": 570,
-        "y": 140,
-        "wires": [
-            [
-                "8cf5b702.df8188"
+                "5652d4df.fc332c"
             ]
         ]
     },
@@ -22638,8 +22312,8 @@
         "topic": "",
         "payload": "1",
         "payloadType": "str",
-        "x": 100,
-        "y": 280,
+        "x": 110,
+        "y": 360,
         "wires": [
             [
                 "bf8e9d90.cb87d"
@@ -22664,8 +22338,8 @@
         "topic": "",
         "payload": "2",
         "payloadType": "str",
-        "x": 90,
-        "y": 320,
+        "x": 110,
+        "y": 400,
         "wires": [
             [
                 "bf8e9d90.cb87d"
@@ -22690,12 +22364,457 @@
         "topic": "",
         "payload": "3",
         "payloadType": "str",
-        "x": 70,
-        "y": 360,
+        "x": 110,
+        "y": 440,
         "wires": [
             [
                 "bf8e9d90.cb87d"
             ]
         ]
+    },
+    {
+        "id": "47f8108b.e636",
+        "type": "change",
+        "z": "7014b916.6d1208",
+        "g": "429387c.c26c678",
+        "name": "Camera 1",
+        "rules": [
+            {
+                "t": "set",
+                "p": "camera",
+                "pt": "msg",
+                "to": "1",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 666,
+        "y": 340,
+        "wires": [
+            [
+                "f0d18f3b.c1b22"
+            ]
+        ]
+    },
+    {
+        "id": "6d7132ca.524f3c",
+        "type": "change",
+        "z": "7014b916.6d1208",
+        "g": "429387c.c26c678",
+        "name": "Camera 2",
+        "rules": [
+            {
+                "t": "set",
+                "p": "camera",
+                "pt": "msg",
+                "to": "2",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 666,
+        "y": 380,
+        "wires": [
+            [
+                "f0d18f3b.c1b22"
+            ]
+        ]
+    },
+    {
+        "id": "81dfd081.61b7d",
+        "type": "change",
+        "z": "7014b916.6d1208",
+        "g": "429387c.c26c678",
+        "name": "Camera 3",
+        "rules": [
+            {
+                "t": "set",
+                "p": "camera",
+                "pt": "msg",
+                "to": "3",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 666,
+        "y": 420,
+        "wires": [
+            [
+                "f0d18f3b.c1b22"
+            ]
+        ]
+    },
+    {
+        "id": "7cdb92ae.8517dc",
+        "type": "change",
+        "z": "7014b916.6d1208",
+        "g": "91bdfbc4.f7d808",
+        "name": "Camera 2",
+        "rules": [
+            {
+                "t": "set",
+                "p": "camera",
+                "pt": "msg",
+                "to": "2",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 666,
+        "y": 520,
+        "wires": [
+            [
+                "efe88d10.173fb"
+            ]
+        ]
+    },
+    {
+        "id": "27962c0e.a009b4",
+        "type": "change",
+        "z": "7014b916.6d1208",
+        "g": "91bdfbc4.f7d808",
+        "name": "Camera 1",
+        "rules": [
+            {
+                "t": "set",
+                "p": "camera",
+                "pt": "msg",
+                "to": "1",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 666,
+        "y": 560,
+        "wires": [
+            [
+                "efe88d10.173fb"
+            ]
+        ]
+    },
+    {
+        "id": "a4c863ff.67198",
+        "type": "change",
+        "z": "7014b916.6d1208",
+        "g": "91bdfbc4.f7d808",
+        "name": "Camera 3",
+        "rules": [
+            {
+                "t": "set",
+                "p": "camera",
+                "pt": "msg",
+                "to": "3",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 666,
+        "y": 600,
+        "wires": [
+            [
+                "efe88d10.173fb"
+            ]
+        ]
+    },
+    {
+        "id": "656a6c63.fef2d4",
+        "type": "change",
+        "z": "7014b916.6d1208",
+        "g": "4740a3a6.61153c",
+        "name": "Tally On",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "tallyOn",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 466,
+        "y": 700,
+        "wires": [
+            [
+                "98662036.d7f66"
+            ]
+        ]
+    },
+    {
+        "id": "8888c7f6.821c58",
+        "type": "change",
+        "z": "7014b916.6d1208",
+        "g": "4740a3a6.61153c",
+        "name": "Tally Off",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "tallyOff",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 466,
+        "y": 740,
+        "wires": [
+            [
+                "b2c6691d.1da2d8",
+                "2488de1d.2c7bb2"
+            ]
+        ]
+    },
+    {
+        "id": "bb8693ba.4019",
+        "type": "link out",
+        "z": "7014b916.6d1208",
+        "g": "4740a3a6.61153c",
+        "name": "",
+        "links": [
+            "4578eab2.af26c4",
+            "a499c220.177c"
+        ],
+        "x": 841,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "98662036.d7f66",
+        "type": "change",
+        "z": "7014b916.6d1208",
+        "g": "4740a3a6.61153c",
+        "name": "Camera 3",
+        "rules": [
+            {
+                "t": "set",
+                "p": "camera",
+                "pt": "msg",
+                "to": "3",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 666,
+        "y": 700,
+        "wires": [
+            [
+                "bb8693ba.4019"
+            ]
+        ]
+    },
+    {
+        "id": "b2c6691d.1da2d8",
+        "type": "change",
+        "z": "7014b916.6d1208",
+        "g": "4740a3a6.61153c",
+        "name": "Camera 1",
+        "rules": [
+            {
+                "t": "set",
+                "p": "camera",
+                "pt": "msg",
+                "to": "1",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 666,
+        "y": 740,
+        "wires": [
+            [
+                "bb8693ba.4019"
+            ]
+        ]
+    },
+    {
+        "id": "2488de1d.2c7bb2",
+        "type": "change",
+        "z": "7014b916.6d1208",
+        "g": "4740a3a6.61153c",
+        "name": "Camera 2",
+        "rules": [
+            {
+                "t": "set",
+                "p": "camera",
+                "pt": "msg",
+                "to": "2",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 666,
+        "y": 780,
+        "wires": [
+            [
+                "bb8693ba.4019"
+            ]
+        ]
+    },
+    {
+        "id": "4ea0d53f.409c6c",
+        "type": "change",
+        "z": "7014b916.6d1208",
+        "g": "85dc7af0.c16fb8",
+        "name": "Camera 1",
+        "rules": [
+            {
+                "t": "set",
+                "p": "camera",
+                "pt": "msg",
+                "to": "1",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 392,
+        "y": 80,
+        "wires": [
+            [
+                "cb527676.f585c8"
+            ]
+        ]
+    },
+    {
+        "id": "6615f74b.cd0e18",
+        "type": "change",
+        "z": "7014b916.6d1208",
+        "g": "85dc7af0.c16fb8",
+        "name": "Camera 2",
+        "rules": [
+            {
+                "t": "set",
+                "p": "camera",
+                "pt": "msg",
+                "to": "2",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 392,
+        "y": 120,
+        "wires": [
+            [
+                "cb527676.f585c8"
+            ]
+        ]
+    },
+    {
+        "id": "78808df0.12d964",
+        "type": "change",
+        "z": "7014b916.6d1208",
+        "g": "85dc7af0.c16fb8",
+        "name": "Camera 3",
+        "rules": [
+            {
+                "t": "set",
+                "p": "camera",
+                "pt": "msg",
+                "to": "3",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 392,
+        "y": 160,
+        "wires": [
+            [
+                "cb527676.f585c8"
+            ]
+        ]
+    },
+    {
+        "id": "5652d4df.fc332c",
+        "type": "function",
+        "z": "7014b916.6d1208",
+        "g": "5c5e0515.ea0e2c",
+        "name": "Set IP Parms",
+        "func": "port = 0;\nip = \"x.x.x.x\";\n\nswitch(msg.camera) {\n    case 1: \n        ip   = flow.get(\"cam1_ip\");\n        port = flow.get(\"cam1_port\");\n        break;\n    case 2: \n        ip   = flow.get(\"cam2_ip\");\n        port = flow.get(\"cam2_port\");\n        break;\n    case 3: \n        ip   = flow.get(\"cam3_ip\");\n        port = flow.get(\"cam3_port\");\n        break;\n}\n\nreturn {\n    payload: msg.payload,\n    topic:   msg.topic,\n    camera:  msg.camera,\n    ip:      ip,\n    port:    port\n};",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 970,
+        "y": 60,
+        "wires": [
+            [
+                "7bc89364.546b1c",
+                "31b5d4e2.9251cc"
+            ]
+        ]
+    },
+    {
+        "id": "31b5d4e2.9251cc",
+        "type": "debug",
+        "z": "7014b916.6d1208",
+        "g": "5c5e0515.ea0e2c",
+        "name": "before network",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1140,
+        "y": 100,
+        "wires": []
     }
 ]
