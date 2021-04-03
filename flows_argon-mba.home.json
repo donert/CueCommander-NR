@@ -3594,7 +3594,7 @@
         "order": 2,
         "width": 0,
         "height": 0,
-        "format": "<div height=\"70\" style=\"height: 70px;\">\n<a href=\"http://192.168.0.186/more_needed\" target=\"_blank\">Open video</a>\n</div>\n<div height=\"70\" style=\"height: 70px;\">\n<a href=\"http://192.168.0.187/more_needed\" target=\"_blank\">Open video</a>\n</div>\n<div height=\"70\" style=\"height: 70px;\">\n<a href=\"http://192.168.0.188/more_needed\" target=\"_blank\">Open video</a>\n</div>",
+        "format": "<div height=\"70\" style=\"height: 70px;\">\n<a href=\"rtsp://192.168.0.186/video1\" target=\"_blank\">Open video</a>\n</div>\n<div height=\"70\" style=\"height: 70px;\">\n<a href=\"http://192.168.0.187/more_needed\" target=\"_blank\">Open video</a>\n</div>\n<div height=\"70\" style=\"height: 70px;\">\n<a href=\"http://192.168.0.188/more_needed\" target=\"_blank\">Open video</a>\n</div>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": false,
