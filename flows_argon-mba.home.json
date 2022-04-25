@@ -2231,6 +2231,25 @@
         "h": 222
     },
     {
+        "id": "b0498d092b7b9b25",
+        "type": "group",
+        "z": "4ab9df2b.7b3dd",
+        "name": "read rtsp camera stream",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "86fe9b81.31c418",
+            "54d0ea94.c1b9a4",
+            "4068ec45.05b034",
+            "3fa57e6a.6819f2"
+        ],
+        "x": 54,
+        "y": 279,
+        "w": 772,
+        "h": 222
+    },
+    {
         "id": "b36c9a8b.092df8",
         "type": "ui_tab",
         "name": "Lights",
@@ -2953,6 +2972,24 @@
         "order": 5,
         "width": 8,
         "height": 1
+    },
+    {
+        "id": "73b331f4.a8bda",
+        "type": "ui_group",
+        "name": "HTTP Snap",
+        "tab": "d75e440d.a22678",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "d75e440d.a22678",
+        "type": "ui_tab",
+        "z": "4ab9df2b.7b3dd",
+        "name": "Cameras",
+        "icon": "camera_alt",
+        "order": 2
     },
     {
         "id": "c6213b74.2cce48",
@@ -9745,6 +9782,7 @@
         "fwdInMessages": true,
         "resendOnRefresh": false,
         "templateScope": "local",
+        "className": "",
         "x": 90,
         "y": 1620,
         "wires": [
@@ -23246,5 +23284,95 @@
         "x": 180,
         "y": 120,
         "wires": []
+    },
+    {
+        "id": "86fe9b81.31c418",
+        "type": "http request",
+        "z": "4ab9df2b.7b3dd",
+        "g": "b0498d092b7b9b25",
+        "name": "",
+        "method": "GET",
+        "ret": "bin",
+        "paytoqs": "ignore",
+        "url": "http://192.168.178.21/tmpfs/snap.jpg?usr=admin&pwd=instar",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "senderr": false,
+        "x": 330,
+        "y": 360,
+        "wires": [
+            [
+                "4068ec45.05b034"
+            ]
+        ]
+    },
+    {
+        "id": "54d0ea94.c1b9a4",
+        "type": "ui_template",
+        "z": "4ab9df2b.7b3dd",
+        "g": "b0498d092b7b9b25",
+        "group": "73b331f4.a8bda",
+        "name": "Display image",
+        "order": 1,
+        "width": "6",
+        "height": "6",
+        "format": "\n<img alt=\"HTTP Snap\" src=\"data:image/jpg;base64,{{msg.payload}}\" />\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 720,
+        "y": 460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3fa57e6a.6819f2",
+        "type": "inject",
+        "z": "4ab9df2b.7b3dd",
+        "g": "b0498d092b7b9b25",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 160,
+        "y": 320,
+        "wires": [
+            [
+                "86fe9b81.31c418"
+            ]
+        ]
+    },
+    {
+        "id": "4068ec45.05b034",
+        "type": "base64",
+        "z": "4ab9df2b.7b3dd",
+        "name": "",
+        "action": "",
+        "property": "payload",
+        "x": 530,
+        "y": 400,
+        "wires": [
+            [
+                "54d0ea94.c1b9a4"
+            ]
+        ]
     }
 ]
