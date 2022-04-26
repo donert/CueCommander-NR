@@ -2621,8 +2621,8 @@
             "name": "CueCommander-NR",
             "hideToolbar": "false",
             "allowSwipe": "true",
-            "lockMenu": "icon",
-            "allowTempTheme": "false",
+            "lockMenu": "true",
+            "allowTempTheme": "none",
             "dateFormat": "YYYY-MM-DD",
             "sizes": {
                 "sx": 48,
