@@ -2992,17 +2992,6 @@
         "collapse": false
     },
     {
-        "id": "56403e50.c97c8",
-        "type": "ui_group",
-        "name": "Dynamic List Response",
-        "tab": "d75e440d.a22678",
-        "order": 3,
-        "disp": true,
-        "width": "6",
-        "collapse": false,
-        "className": ""
-    },
-    {
         "id": "5c1219fd.c022e8",
         "type": "ui_tab",
         "name": "Video Matrix",
@@ -3073,7 +3062,7 @@
         "id": "1c661b86.f02d94",
         "type": "ui_spacer",
         "name": "spacer",
-        "group": "56403e50.c97c8",
+        "group": "",
         "order": 3,
         "width": 1,
         "height": 1
@@ -23943,32 +23932,6 @@
         "x": 170,
         "y": 420,
         "wires": []
-    },
-    {
-        "id": "46e6efd4f6e44f99",
-        "type": "ui_button",
-        "z": "4ab9df2b.7b3dd",
-        "name": "",
-        "group": "56403e50.c97c8",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "button",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 590,
-        "y": 100,
-        "wires": [
-            []
-        ]
     },
     {
         "id": "8b29f35d23aaf038",
