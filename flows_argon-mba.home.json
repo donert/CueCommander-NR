@@ -2995,11 +2995,12 @@
         "id": "56403e50.c97c8",
         "type": "ui_group",
         "name": "Dynamic List Response",
-        "tab": "",
+        "tab": "d75e440d.a22678",
         "order": 3,
         "disp": true,
         "width": "6",
-        "collapse": false
+        "collapse": false,
+        "className": ""
     },
     {
         "id": "5c1219fd.c022e8",
@@ -3264,20 +3265,23 @@
     {
         "id": "73b331f4.a8bda",
         "type": "ui_group",
-        "name": "HTTP Snap",
+        "name": "Camera Preview Prototype",
         "tab": "d75e440d.a22678",
         "order": 1,
         "disp": true,
         "width": "6",
-        "collapse": false
+        "collapse": false,
+        "className": ""
     },
     {
         "id": "d75e440d.a22678",
         "type": "ui_tab",
         "z": "4ab9df2b.7b3dd",
-        "name": "Cameras",
+        "name": "Camera Preview",
         "icon": "camera_alt",
-        "order": 2
+        "order": 2,
+        "disabled": false,
+        "hidden": false
     },
     {
         "id": "721af69.d130208",
@@ -23939,6 +23943,32 @@
         "x": 170,
         "y": 420,
         "wires": []
+    },
+    {
+        "id": "46e6efd4f6e44f99",
+        "type": "ui_button",
+        "z": "4ab9df2b.7b3dd",
+        "name": "",
+        "group": "56403e50.c97c8",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "button",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 590,
+        "y": 100,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "8b29f35d23aaf038",
