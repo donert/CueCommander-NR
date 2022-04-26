@@ -2621,8 +2621,8 @@
             "name": "CueCommander-NR",
             "hideToolbar": "false",
             "allowSwipe": "true",
-            "lockMenu": "true",
-            "allowTempTheme": "true",
+            "lockMenu": "icon",
+            "allowTempTheme": "false",
             "dateFormat": "YYYY-MM-DD",
             "sizes": {
                 "sx": 48,
@@ -3264,7 +3264,7 @@
     {
         "id": "721af69.d130208",
         "type": "ui_tab",
-        "name": "Propresenter Cues",
+        "name": "Propresenter Cue Automation",
         "icon": "dashboard",
         "disabled": false,
         "hidden": false
