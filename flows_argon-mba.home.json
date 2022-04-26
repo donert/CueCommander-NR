@@ -2001,22 +2001,6 @@
         "h": 222
     },
     {
-        "id": "8dba136d.ba3fb",
-        "type": "group",
-        "z": "7014b916.6d1208",
-        "name": "Prototype - try to show camera preview",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "fc05be6f.23d21"
-        ],
-        "x": 14,
-        "y": 1579,
-        "w": 255,
-        "h": 82
-    },
-    {
         "id": "77ffcbeb.3e5634",
         "type": "group",
         "z": "96ac9944.5b4dd8",
@@ -2314,7 +2298,7 @@
         "id": "b0498d092b7b9b25",
         "type": "group",
         "z": "4ab9df2b.7b3dd",
-        "name": "read rtsp camera stream",
+        "name": "read image from camera ",
         "style": {
             "label": true
         },
@@ -2323,7 +2307,9 @@
             "54d0ea94.c1b9a4",
             "4068ec45.05b034",
             "3fa57e6a.6819f2",
-            "3e887aa7eb6b2e44"
+            "3e887aa7eb6b2e44",
+            "729215baf9ccca66",
+            "f8358b92a5d4d947"
         ],
         "x": 54,
         "y": 279,
@@ -10118,7 +10104,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "[{\"num\":1,\"name\":\"dev init Frontyyyxxx\",\"ip\":\"192.168.0.193\",\"port\":\"4352\",\"delete\":false},{\"num\":2,\"name\":\"Centre Front\",\"ip\":\"192.168.0.194\",\"port\":\"4352\",\"delete\":false},{\"num\":3,\"name\":\"West Front\",\"ip\":\"192.168.0.195\",\"port\":\"4352\",\"delete\":false},{\"num\":4,\"name\":\"Rear\",\"ip\":\"192.168.0.183\",\"port\":\"4352\",\"delete\":false}]",
+                "to": "[{\"num\":1,\"name\":\"Camera 1\",\"ip\":\"192.168.0.186\",\"port\":\"52381\",\"delete\":false},{\"num\":2,\"name\":\"Camera 2\",\"ip\":\"192.168.0.187\",\"port\":\"4352\",\"delete\":false},{\"num\":3,\"name\":\"Camera 3\",\"ip\":\"192.168.0.188\",\"port\":\"52381\",\"delete\":false}]",
                 "tot": "json"
             }
         ],
@@ -10302,28 +10288,6 @@
             [
                 "5be6d674.8a9db8"
             ]
-        ]
-    },
-    {
-        "id": "fc05be6f.23d21",
-        "type": "ui_template",
-        "z": "7014b916.6d1208",
-        "g": "8dba136d.ba3fb",
-        "group": "f0dc2fca.f3cd2",
-        "name": "Video",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "format": "<div height=\"70\" style=\"height: 70px;\">\n<a href=\"rtsp://192.168.0.186/video1\" target=\"_blank\">Open video</a>\n</div>\n<div height=\"70\" style=\"height: 70px;\">\n<a href=\"http://192.168.0.187/more_needed\" target=\"_blank\">Open video</a>\n</div>\n<div height=\"70\" style=\"height: 70px;\">\n<a href=\"http://192.168.0.188/more_needed\" target=\"_blank\">Open video</a>\n</div>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": false,
-        "templateScope": "local",
-        "className": "",
-        "x": 90,
-        "y": 1620,
-        "wires": [
-            []
         ]
     },
     {
@@ -23940,6 +23904,28 @@
                 "86fe9b81.31c418"
             ]
         ]
+    },
+    {
+        "id": "729215baf9ccca66",
+        "type": "comment",
+        "z": "4ab9df2b.7b3dd",
+        "g": "b0498d092b7b9b25",
+        "name": "Original code",
+        "info": "You can import the flow below and change the IP address and login to match that of your personal camera - http://192.168.178.21/tmpfs/snap.jpg?usr=admin&pwd=instar.\n\nhttps://mpolinowski.github.io/devnotes/2018-11-26--node-red-and-live-video",
+        "x": 190,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "f8358b92a5d4d947",
+        "type": "comment",
+        "z": "4ab9df2b.7b3dd",
+        "g": "b0498d092b7b9b25",
+        "name": "TODO",
+        "info": "Need to figure out the correct http URL and then integrate with the IP settings context ",
+        "x": 170,
+        "y": 420,
+        "wires": []
     },
     {
         "id": "8b29f35d23aaf038",
