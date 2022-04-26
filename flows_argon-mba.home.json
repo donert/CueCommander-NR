@@ -2586,7 +2586,7 @@
         "id": "4b3e8f7.2d6ea7",
         "type": "ui_base",
         "theme": {
-            "name": "theme-dark",
+            "name": "theme-light",
             "lightTheme": {
                 "default": "#0094CE",
                 "baseColor": "#0094CE",
@@ -2609,44 +2609,44 @@
             },
             "themeState": {
                 "base-color": {
-                    "default": "#097479",
-                    "value": "#006d8f",
+                    "default": "#0094CE",
+                    "value": "#0094CE",
                     "edited": true
                 },
                 "page-titlebar-backgroundColor": {
-                    "value": "#006d8f",
+                    "value": "#0094CE",
                     "edited": false
                 },
                 "page-backgroundColor": {
-                    "value": "#111111",
+                    "value": "#fafafa",
                     "edited": false
                 },
                 "page-sidebar-backgroundColor": {
-                    "value": "#333333",
+                    "value": "#ffffff",
                     "edited": false
                 },
                 "group-textColor": {
-                    "value": "#00a7db",
+                    "value": "#1bbfff",
                     "edited": false
                 },
                 "group-borderColor": {
-                    "value": "#555555",
+                    "value": "#ffffff",
                     "edited": false
                 },
                 "group-backgroundColor": {
-                    "value": "#333333",
+                    "value": "#ffffff",
                     "edited": false
                 },
                 "widget-textColor": {
-                    "value": "#eeeeee",
+                    "value": "#111111",
                     "edited": false
                 },
                 "widget-backgroundColor": {
-                    "value": "#006d8f",
+                    "value": "#0094ce",
                     "edited": false
                 },
                 "widget-borderColor": {
-                    "value": "#333333",
+                    "value": "#ffffff",
                     "edited": false
                 },
                 "base-font": {
@@ -3507,6 +3507,17 @@
         "order": 24,
         "width": 12,
         "height": 1
+    },
+    {
+        "id": "081499cdb0e45d15",
+        "type": "ui_group",
+        "name": "IP Addr of this machine",
+        "tab": "e0b6460f.51cf08",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
     },
     {
         "id": "c6213b74.2cce48",
@@ -23771,6 +23782,74 @@
         "x": 290,
         "y": 360,
         "wires": []
+    },
+    {
+        "id": "0927626329e37e63",
+        "type": "exec",
+        "z": "805d289f.fd83a8",
+        "command": "ipconfig getifaddr en0",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "get ip addr",
+        "x": 190,
+        "y": 440,
+        "wires": [
+            [
+                "99902afff0c0b301"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "99902afff0c0b301",
+        "type": "ui_text",
+        "z": "805d289f.fd83a8",
+        "group": "081499cdb0e45d15",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Ip Addr of this machine",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 270,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "75f3c41a6d48ca8f",
+        "type": "inject",
+        "z": "805d289f.fd83a8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 90,
+        "y": 380,
+        "wires": [
+            [
+                "0927626329e37e63"
+            ]
+        ]
     },
     {
         "id": "fdde3e7a.9360c",
