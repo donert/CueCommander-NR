@@ -2622,7 +2622,7 @@
             "hideToolbar": "false",
             "allowSwipe": "true",
             "lockMenu": "true",
-            "allowTempTheme": "none",
+            "allowTempTheme": "true",
             "dateFormat": "YYYY-MM-DD",
             "sizes": {
                 "sx": 48,
