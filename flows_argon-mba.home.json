@@ -1993,12 +1993,13 @@
             "5be6d674.8a9db8",
             "615dbb9b.878c74",
             "e10c1bb7.8dca18",
-            "8e77be37.dbe45"
+            "8e77be37.dbe45",
+            "c49818265e4f0392"
         ],
         "x": 14,
-        "y": 1319,
+        "y": 1279,
         "w": 1132,
-        "h": 222
+        "h": 262
     },
     {
         "id": "77ffcbeb.3e5634",
@@ -10104,7 +10105,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "[{\"num\":1,\"name\":\"Camera 1\",\"ip\":\"192.168.0.186\",\"port\":\"52381\",\"delete\":false},{\"num\":2,\"name\":\"Camera 2\",\"ip\":\"192.168.0.187\",\"port\":\"4352\",\"delete\":false},{\"num\":3,\"name\":\"Camera 3\",\"ip\":\"192.168.0.188\",\"port\":\"52381\",\"delete\":false}]",
+                "to": "[{\"num\":1,\"name\":\"Camera 1\",\"ip\":\"192.168.0.186\",\"port\":\"52381\",\"delete\":false},{\"num\":2,\"name\":\"Camera 2\",\"ip\":\"192.168.0.187\",\"port\":\"52381\",\"delete\":false},{\"num\":3,\"name\":\"Camera 3\",\"ip\":\"192.168.0.188\",\"port\":\"52381\",\"delete\":false}]",
                 "tot": "json"
             }
         ],
@@ -10200,11 +10201,12 @@
         "z": "7014b916.6d1208",
         "g": "7ec16513.a62d6c",
         "name": "Add Row ",
-        "func": "network_parms = msg.payload;\n//var network_parms = flow.get(\"network_parms\");\n\ndefrec = [ \n    {\"num\":1,\"name\":\"no context\",\n    \"ip\":\"192.168.x.x\",\n    \"port\":\"52381\",\n        \"delete\": false}\n]\n\nif (typeof(network_parms) == \"undefined\") {\n    console.log(\"it was undefined\")\n    network_parms = [defrec]\n}\n\nnum = network_parms.length+1;\n \nrec = {\n    \"num\" : num,\n    \"name\": \"default\",\n    \"ip\"  : \"192.168.x.x\",\n    \"port\": 52381,\n    \"delete\": false\n}\n  \nnetwork_parms.push ( rec);\n\nmsg = { \"payload\": network_parms }\n\nreturn msg;",
+        "func": "network_parms = msg.payload;\n//var network_parms = flow.get(\"network_parms\");\n\ndefrec = [ \n    {\"num\":1,\"name\":\"no context\",\n    \"ip\":\"192.168.x.x\",\n    \"port\":\"52381\",\n        \"delete\": false}\n]\n\nif (typeof(network_parms) == \"undefined\") {\n    console.log(\"Camera settings were undefined\")\n    network_parms = [defrec]\n}\n\nnum = network_parms.length+1;\n \nrec = {\n    \"num\" : num,\n    \"name\": \"default\",\n    \"ip\"  : \"192.168.x.x\",\n    \"port\": 52381,\n    \"delete\": false\n}\n  \nnetwork_parms.push ( rec);\n\nmsg = { \"payload\": network_parms }\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
+        "libs": [],
         "x": 549,
         "y": 1360,
         "wires": [
@@ -11004,6 +11006,17 @@
         "info": "",
         "x": 160,
         "y": 20,
+        "wires": []
+    },
+    {
+        "id": "c49818265e4f0392",
+        "type": "comment",
+        "z": "7014b916.6d1208",
+        "g": "7ec16513.a62d6c",
+        "name": "TODO ",
+        "info": "Add and Delete functions do not work - have tried the context menu and buttons",
+        "x": 190,
+        "y": 1320,
         "wires": []
     },
     {
@@ -23892,7 +23905,7 @@
         "color": "",
         "bgcolor": "",
         "className": "",
-        "icon": "",
+        "icon": "linked_camera",
         "payload": "",
         "payloadType": "str",
         "topic": "topic",
