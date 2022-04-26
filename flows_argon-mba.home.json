@@ -2977,16 +2977,6 @@
         "collapse": false
     },
     {
-        "id": "b0884adc.7533a8",
-        "type": "ui_group",
-        "name": "For Each Out, Select In",
-        "tab": "5c1219fd.c022e8",
-        "order": 6,
-        "disp": true,
-        "width": "5",
-        "collapse": false
-    },
-    {
         "id": "fe267298.a4981",
         "type": "ui_group",
         "name": "Quick Selections",
@@ -3130,22 +3120,6 @@
         "disp": true,
         "width": "6",
         "collapse": false
-    },
-    {
-        "id": "541fa183.b6ccd",
-        "type": "ui_group",
-        "name": "Cues from Static File",
-        "tab": "b36c9a8b.092df8",
-        "order": 4,
-        "disp": true,
-        "width": "11",
-        "collapse": false
-    },
-    {
-        "id": "b750d4dd.3599b8",
-        "type": "websocket-listener",
-        "path": "ws://192.168.0.140:53787/remote",
-        "wholemsg": "false"
     },
     {
         "id": "be2db7b0.461188",
