@@ -2585,14 +2585,13 @@
             "227a8deb1bd05f21",
             "acfd4f93c32def6a",
             "934c28187a63b445",
-            "014d67e31679a974",
             "f01ef3ada886ac8a",
             "4b19b7b3dba93624"
         ],
         "x": 54,
-        "y": 1199,
+        "y": 1259,
         "w": 472,
-        "h": 342
+        "h": 282
     },
     {
         "id": "b36c9a8b.092df8",
@@ -4644,24 +4643,6 @@
                 "227a8deb1bd05f21"
             ]
         ]
-    },
-    {
-        "id": "014d67e31679a974",
-        "type": "ui_text",
-        "z": "ee400291.7cb",
-        "g": "c681dc44e2d3bb1d",
-        "group": "208906fc.3b7e2a",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Quick Cues",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 150,
-        "y": 1240,
-        "wires": []
     },
     {
         "id": "f01ef3ada886ac8a",
