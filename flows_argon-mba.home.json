@@ -4632,8 +4632,8 @@
         "group": "208906fc.3b7e2a",
         "name": "Quick Cue List",
         "order": 3,
-        "width": 0,
-        "height": 0,
+        "width": "8",
+        "height": "6",
         "columns": [
             {
                 "field": "cue",
