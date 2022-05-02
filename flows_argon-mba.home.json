@@ -3614,6 +3614,7 @@
         "ok": "OK",
         "cancel": "",
         "raw": false,
+        "className": "",
         "topic": "",
         "name": "",
         "x": 410,
@@ -3690,7 +3691,6 @@
         "y": 740,
         "wires": [
             [
-                "241fcd48.6aa722",
                 "54d613f.2507cec",
                 "67a052cf.4d07fc",
                 "d234a895.fdae68"
@@ -4139,6 +4139,7 @@
         "randomLast": "5",
         "randomUnits": "seconds",
         "drop": true,
+        "allowrate": false,
         "outputs": 1,
         "x": 220,
         "y": 800,
@@ -4493,7 +4494,9 @@
         "x": 660,
         "y": 740,
         "wires": [
-            []
+            [
+                "241fcd48.6aa722"
+            ]
         ]
     },
     {
@@ -4511,8 +4514,8 @@
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
-        "topic": "/cs/playback/gotocue/170",
-        "x": 180,
+        "topic": "/cs/playback/gotocue/17.0",
+        "x": 190,
         "y": 1140,
         "wires": [
             [
@@ -26594,7 +26597,7 @@
         "statusVal": "ip",
         "statusType": "auto",
         "x": 950,
-        "y": 2340,
+        "y": 2320,
         "wires": []
     },
     {
