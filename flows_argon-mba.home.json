@@ -4640,13 +4640,12 @@
         "format": "yaml",
         "syntax": "mustache",
         "template": "- {cue: \"91.0\", desc : \"Series Walkin\"} ",
-        "output": "json",
+        "output": "yaml",
         "x": 300,
         "y": 1260,
         "wires": [
             [
-                "227a8deb1bd05f21",
-                "3fd2eff51dab9226"
+                "2df48948349bb13a"
             ]
         ]
     },
@@ -4683,8 +4682,8 @@
         ],
         "outputs": 1,
         "cts": true,
-        "x": 450,
-        "y": 1260,
+        "x": 510,
+        "y": 1180,
         "wires": [
             [
                 "acfd4f93c32def6a"
@@ -4720,9 +4719,26 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 430,
+        "x": 490,
         "y": 1340,
         "wires": []
+    },
+    {
+        "id": "2df48948349bb13a",
+        "type": "json",
+        "z": "ee400291.7cb",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 410,
+        "y": 1220,
+        "wires": [
+            [
+                "227a8deb1bd05f21",
+                "3fd2eff51dab9226"
+            ]
+        ]
     },
     {
         "id": "75b23a68.99e7a4",
