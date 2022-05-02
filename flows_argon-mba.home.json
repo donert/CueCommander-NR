@@ -3670,14 +3670,14 @@
                 "t": "set",
                 "p": "ip",
                 "pt": "msg",
-                "to": "console.ip",
+                "to": "console_ip",
                 "tot": "flow"
             },
             {
                 "t": "set",
                 "p": "port",
                 "pt": "msg",
-                "to": "console.port",
+                "to": "console_port",
                 "tot": "flow"
             }
         ],
@@ -4490,7 +4490,7 @@
         "name": "OSC to Console",
         "path": "",
         "metadata": false,
-        "x": 660,
+        "x": 480,
         "y": 740,
         "wires": [
             [
