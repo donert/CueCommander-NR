@@ -27210,7 +27210,7 @@
         "type": "debug",
         "z": "41f3235e2124e3a2",
         "g": "5187317a14d88a88",
-        "name": "",
+        "name": "playlist active url",
         "active": true,
         "tosidebar": true,
         "console": false,
@@ -27219,7 +27219,7 @@
         "targetType": "msg",
         "statusVal": "url",
         "statusType": "auto",
-        "x": 780,
+        "x": 810,
         "y": 1040,
         "wires": []
     }
