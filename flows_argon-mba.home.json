@@ -2661,7 +2661,7 @@
                     "edited": true
                 },
                 "page-titlebar-backgroundColor": {
-                    "value": "#097479",
+                    "value": "#006d8f",
                     "edited": false
                 },
                 "page-backgroundColor": {
@@ -2673,7 +2673,7 @@
                     "edited": false
                 },
                 "group-textColor": {
-                    "value": "#0eb8c0",
+                    "value": "#00a7db",
                     "edited": false
                 },
                 "group-borderColor": {
@@ -2689,7 +2689,7 @@
                     "edited": false
                 },
                 "widget-backgroundColor": {
-                    "value": "#097479",
+                    "value": "#006d8f",
                     "edited": false
                 },
                 "widget-borderColor": {
@@ -4630,7 +4630,7 @@
         "z": "ee400291.7cb",
         "g": "c681dc44e2d3bb1d",
         "group": "208906fc.3b7e2a",
-        "name": "",
+        "name": "Quick Cue List",
         "order": 3,
         "width": 0,
         "height": 0,
@@ -4658,7 +4658,7 @@
         ],
         "outputs": 1,
         "cts": true,
-        "x": 150,
+        "x": 180,
         "y": 1420,
         "wires": [
             [
