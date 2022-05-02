@@ -2606,7 +2606,7 @@
             "014d67e31679a974"
         ],
         "x": 54,
-        "y": 1159,
+        "y": 1199,
         "w": 392,
         "h": 262
     },
@@ -4031,6 +4031,7 @@
         "id": "ed2b752e.7b81e8",
         "type": "ui_table",
         "z": "ee400291.7cb",
+        "d": true,
         "g": "1fee3fae.e6893",
         "group": "208906fc.3b7e2a",
         "name": "Cue List",
@@ -4596,7 +4597,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 170,
-        "y": 1260,
+        "y": 1300,
         "wires": [
             [
                 "58c62455215e7109"
@@ -4616,7 +4617,7 @@
         "template": "- {cue: \"91.0\" , desc: \"Series Walkin\" }\n- {cue: \"92.0\" , desc: \"Series Talk Podium\"}\n- {cue: \"94.0\" , desc: \"Series Video\"}\n- {cue: \"95.0\" , desc: \"Series Message\"}\n- {cue: \"96.0\" , desc: \"Series Walkout\"}",
         "output": "str",
         "x": 160,
-        "y": 1300,
+        "y": 1340,
         "wires": [
             [
                 "934c28187a63b445"
@@ -4658,7 +4659,7 @@
         "outputs": 1,
         "cts": true,
         "x": 150,
-        "y": 1380,
+        "y": 1420,
         "wires": [
             [
                 "acfd4f93c32def6a"
@@ -4679,7 +4680,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 330,
-        "y": 1380,
+        "y": 1420,
         "wires": []
     },
     {
@@ -4690,7 +4691,7 @@
         "property": "payload",
         "name": "",
         "x": 150,
-        "y": 1340,
+        "y": 1380,
         "wires": [
             [
                 "227a8deb1bd05f21"
@@ -4712,7 +4713,7 @@
         "layout": "row-spread",
         "className": "",
         "x": 150,
-        "y": 1200,
+        "y": 1240,
         "wires": []
     },
     {
