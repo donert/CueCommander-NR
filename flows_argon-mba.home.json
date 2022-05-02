@@ -4675,22 +4675,6 @@
         "wires": []
     },
     {
-        "id": "2df48948349bb13a",
-        "type": "json",
-        "z": "ee400291.7cb",
-        "name": "",
-        "property": "payload",
-        "action": "str",
-        "pretty": false,
-        "x": 110,
-        "y": 1380,
-        "wires": [
-            [
-                "227a8deb1bd05f21"
-            ]
-        ]
-    },
-    {
         "id": "934c28187a63b445",
         "type": "yaml",
         "z": "ee400291.7cb",
@@ -4700,8 +4684,8 @@
         "y": 1340,
         "wires": [
             [
-                "2df48948349bb13a",
-                "3fd2eff51dab9226"
+                "3fd2eff51dab9226",
+                "227a8deb1bd05f21"
             ]
         ]
     },
