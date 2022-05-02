@@ -342,7 +342,9 @@
             "bffb7904.fa0f88"
         ],
         "x": 34,
-        "y": 79
+        "y": 79,
+        "w": 322,
+        "h": 162
     },
     {
         "id": "26f7e48.6e71e1c",
@@ -364,7 +366,9 @@
             "d234a895.fdae68"
         ],
         "x": 34,
-        "y": 659
+        "y": 659,
+        "w": 892,
+        "h": 182
     },
     {
         "id": "3c1c153.7ee79ea",
@@ -380,7 +384,9 @@
             "419a8ba6.444ea4"
         ],
         "x": 454,
-        "y": 119
+        "y": 119,
+        "w": 262,
+        "h": 82
     },
     {
         "id": "a10197b4.719a58",
@@ -1274,7 +1280,9 @@
             "dd4ddea7.fffe1"
         ],
         "x": 34,
-        "y": 879
+        "y": 879,
+        "w": 1012,
+        "h": 202
     },
     {
         "id": "67bf8f34.14b37",
@@ -1768,7 +1776,9 @@
             "743ed796.8d5508"
         ],
         "x": 24,
-        "y": 359
+        "y": 359,
+        "w": 832,
+        "h": 262
     },
     {
         "id": "c459911f.288c6",
@@ -1785,7 +1795,9 @@
             "93d6c2d3.a86a7"
         ],
         "x": 24,
-        "y": 259
+        "y": 259,
+        "w": 962,
+        "h": 82
     },
     {
         "id": "a983bc11.746d",
@@ -4588,6 +4600,111 @@
                 "f45db8b7.d0b738"
             ]
         ]
+    },
+    {
+        "id": "679e3fbb7e0c02eb",
+        "type": "inject",
+        "z": "ee400291.7cb",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 1260,
+        "wires": [
+            [
+                "58c62455215e7109"
+            ]
+        ]
+    },
+    {
+        "id": "58c62455215e7109",
+        "type": "template",
+        "z": "ee400291.7cb",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "yaml",
+        "syntax": "mustache",
+        "template": "- {cue: \"91.0\", desc : \"Series Walkin\"} ",
+        "output": "json",
+        "x": 300,
+        "y": 1260,
+        "wires": [
+            [
+                "227a8deb1bd05f21"
+            ]
+        ]
+    },
+    {
+        "id": "227a8deb1bd05f21",
+        "type": "ui_table",
+        "z": "ee400291.7cb",
+        "group": "208906fc.3b7e2a",
+        "name": "",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "columns": [
+            {
+                "field": "cue",
+                "title": "Cue",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "desc",
+                "title": "Description",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            }
+        ],
+        "outputs": 1,
+        "cts": true,
+        "x": 450,
+        "y": 1260,
+        "wires": [
+            [
+                "acfd4f93c32def6a"
+            ]
+        ]
+    },
+    {
+        "id": "acfd4f93c32def6a",
+        "type": "debug",
+        "z": "ee400291.7cb",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 610,
+        "y": 1260,
+        "wires": []
     },
     {
         "id": "75b23a68.99e7a4",
