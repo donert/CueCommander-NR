@@ -154,7 +154,9 @@
             "e495e943.cf1f18"
         ],
         "x": 14,
-        "y": 19
+        "y": 19,
+        "w": 912,
+        "h": 442
     },
     {
         "id": "77c46321.0fddbc",
@@ -534,7 +536,9 @@
             "eb211ff1.3b78d"
         ],
         "x": 14,
-        "y": 499
+        "y": 499,
+        "w": 462,
+        "h": 142
     },
     {
         "id": "85bfeabb.c569f8",
@@ -555,7 +559,9 @@
             "19f9ac10.374204"
         ],
         "x": 14,
-        "y": 1019
+        "y": 1019,
+        "w": 322,
+        "h": 282
     },
     {
         "id": "7dfc3cbb.7e95c4",
@@ -576,7 +582,9 @@
             "d2f4f486.a18a58"
         ],
         "x": 14,
-        "y": 839
+        "y": 839,
+        "w": 762,
+        "h": 162
     },
     {
         "id": "1c7dc81d.0c1e38",
@@ -597,7 +605,9 @@
             "eb7e9bd5.ba3358"
         ],
         "x": 394,
-        "y": 1039
+        "y": 1039,
+        "w": 312,
+        "h": 142
     },
     {
         "id": "8ad3a579.ea8288",
@@ -617,7 +627,9 @@
             "a2e428e8.108d28"
         ],
         "x": 14,
-        "y": 679
+        "y": 679,
+        "w": 562,
+        "h": 142
     },
     {
         "id": "7269a2d8.645c0c",
@@ -1113,7 +1125,9 @@
             "f5e66a1e.b30d28"
         ],
         "x": 14,
-        "y": 1319
+        "y": 1319,
+        "w": 1012,
+        "h": 202
     },
     {
         "id": "b942e9b.c955b18",
@@ -4575,9 +4589,9 @@
         "field": "payload",
         "fieldType": "msg",
         "format": "yaml",
-        "syntax": "plain",
-        "template": "quickcues:\n- cue: 91.0\n desc: Series Walkin\n- cue: 92.0\n desc: Series Talk Podium",
-        "output": "yaml",
+        "syntax": "mustache",
+        "template": "- {cue: 91.0 , desc: \"Series Walkin\" }\n- {cue: 92.0 , desc: \"Series Talk Podium\"}",
+        "output": "str",
         "x": 120,
         "y": 1300,
         "wires": [
