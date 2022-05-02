@@ -373,24 +373,6 @@
         "h": 182
     },
     {
-        "id": "3c1c153.7ee79ea",
-        "type": "group",
-        "z": "ee400291.7cb",
-        "name": "Experimental",
-        "style": {
-            "label": true,
-            "color": "#ff0000"
-        },
-        "nodes": [
-            "fa52c3b6.2c9db",
-            "419a8ba6.444ea4"
-        ],
-        "x": 454,
-        "y": 119,
-        "w": 262,
-        "h": 82
-    },
-    {
         "id": "a10197b4.719a58",
         "type": "group",
         "z": "900140d4.af55",
@@ -2603,12 +2585,14 @@
             "227a8deb1bd05f21",
             "acfd4f93c32def6a",
             "934c28187a63b445",
-            "014d67e31679a974"
+            "014d67e31679a974",
+            "f01ef3ada886ac8a",
+            "4b19b7b3dba93624"
         ],
         "x": 54,
         "y": 1199,
-        "w": 392,
-        "h": 262
+        "w": 472,
+        "h": 342
     },
     {
         "id": "b36c9a8b.092df8",
@@ -3638,32 +3622,6 @@
         "wires": []
     },
     {
-        "id": "fa52c3b6.2c9db",
-        "type": "ui_slider",
-        "z": "ee400291.7cb",
-        "g": "3c1c153.7ee79ea",
-        "name": "",
-        "label": "playback 1",
-        "tooltip": "",
-        "group": "4c3df80b.e0f0d8",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "outs": "all",
-        "topic": "/cs/playback/22/level",
-        "min": 0,
-        "max": "1",
-        "step": ".01",
-        "x": 550,
-        "y": 160,
-        "wires": [
-            [
-                "419a8ba6.444ea4"
-            ]
-        ]
-    },
-    {
         "id": "a5f96939.8900e8",
         "type": "link in",
         "z": "ee400291.7cb",
@@ -3677,7 +3635,8 @@
             "3645f799.f03438",
             "419a8ba6.444ea4",
             "1e515476.5c430c",
-            "474759da.511b38"
+            "474759da.511b38",
+            "f01ef3ada886ac8a"
         ],
         "x": 75,
         "y": 740,
@@ -3698,19 +3657,6 @@
             "a5f96939.8900e8"
         ],
         "x": 315,
-        "y": 160,
-        "wires": []
-    },
-    {
-        "id": "419a8ba6.444ea4",
-        "type": "link out",
-        "z": "ee400291.7cb",
-        "g": "3c1c153.7ee79ea",
-        "name": "To Light Console",
-        "links": [
-            "a5f96939.8900e8"
-        ],
-        "x": 675,
         "y": 160,
         "wires": []
     },
@@ -4662,7 +4608,8 @@
         "y": 1420,
         "wires": [
             [
-                "acfd4f93c32def6a"
+                "acfd4f93c32def6a",
+                "4b19b7b3dba93624"
             ]
         ]
     },
@@ -4679,7 +4626,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 330,
+        "x": 410,
         "y": 1420,
         "wires": []
     },
@@ -4715,6 +4662,47 @@
         "x": 150,
         "y": 1240,
         "wires": []
+    },
+    {
+        "id": "f01ef3ada886ac8a",
+        "type": "link out",
+        "z": "ee400291.7cb",
+        "g": "c681dc44e2d3bb1d",
+        "name": "To Light Console",
+        "links": [
+            "a5f96939.8900e8"
+        ],
+        "x": 115,
+        "y": 1500,
+        "wires": []
+    },
+    {
+        "id": "4b19b7b3dba93624",
+        "type": "change",
+        "z": "ee400291.7cb",
+        "g": "c681dc44e2d3bb1d",
+        "name": "set topoc",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "\"/cs/playback/gotocue/\" & msg.payload.cue",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 160,
+        "y": 1460,
+        "wires": [
+            [
+                "f01ef3ada886ac8a"
+            ]
+        ]
     },
     {
         "id": "75b23a68.99e7a4",
