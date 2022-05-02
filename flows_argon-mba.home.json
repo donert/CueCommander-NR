@@ -25015,7 +25015,7 @@
         "type": "http request",
         "z": "41f3235e2124e3a2",
         "g": "5187317a14d88a88",
-        "name": "http get",
+        "name": "http get playlist active",
         "method": "GET",
         "ret": "txt",
         "paytoqs": "ignore",
@@ -25025,7 +25025,7 @@
         "proxy": "",
         "authType": "",
         "senderr": true,
-        "x": 140,
+        "x": 180,
         "y": 1100,
         "wires": [
             [
@@ -27174,9 +27174,11 @@
         "type": "catch",
         "z": "41f3235e2124e3a2",
         "name": "",
-        "scope": null,
+        "scope": [
+            "96f5583f4a7aa2a0"
+        ],
         "uncaught": false,
-        "x": 120,
+        "x": 110,
         "y": 1420,
         "wires": [
             [
@@ -27188,7 +27190,7 @@
         "id": "5034ac8ec08d9d16",
         "type": "debug",
         "z": "41f3235e2124e3a2",
-        "name": "",
+        "name": "catch output",
         "active": true,
         "tosidebar": true,
         "console": false,
@@ -27197,7 +27199,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 290,
+        "x": 310,
         "y": 1420,
         "wires": []
     }
