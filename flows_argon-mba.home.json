@@ -2586,8 +2586,7 @@
             "acfd4f93c32def6a",
             "934c28187a63b445",
             "f01ef3ada886ac8a",
-            "4b19b7b3dba93624",
-            "e7b0b0b8a104bb30"
+            "4b19b7b3dba93624"
         ],
         "x": 54,
         "y": 1259,
@@ -4642,7 +4641,7 @@
         "y": 1380,
         "wires": [
             [
-                "e7b0b0b8a104bb30"
+                "227a8deb1bd05f21"
             ]
         ]
     },
@@ -4684,34 +4683,6 @@
         "wires": [
             [
                 "f01ef3ada886ac8a"
-            ]
-        ]
-    },
-    {
-        "id": "e7b0b0b8a104bb30",
-        "type": "change",
-        "z": "ee400291.7cb",
-        "g": "c681dc44e2d3bb1d",
-        "name": "table title",
-        "rules": [
-            {
-                "t": "set",
-                "p": "ui_control.tabulator",
-                "pt": "msg",
-                "to": "{\"title\":\"This. is a title\"}",
-                "tot": "json"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 300,
-        "y": 1380,
-        "wires": [
-            [
-                "227a8deb1bd05f21"
             ]
         ]
     },
