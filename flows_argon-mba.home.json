@@ -3533,7 +3533,6 @@
         "id": "241fcd48.6aa722",
         "type": "udp out",
         "z": "ee400291.7cb",
-        "d": true,
         "g": "26f7e48.6e71e1c",
         "name": "To ColorSource",
         "addr": "",
