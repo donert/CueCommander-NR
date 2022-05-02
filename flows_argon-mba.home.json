@@ -4639,7 +4639,7 @@
         "fieldType": "msg",
         "format": "yaml",
         "syntax": "plain",
-        "template": "quickcues:\n    - cue: 91.0\n    desc: Series Walkin\n    - cue: 92.0\n    desc: Series Talk Podium",
+        "template": "quickcues:\n- cue: 91.0\n    desc: Series Walkin\n- cue: 92.0\n    desc: Series Talk Podium",
         "output": "yaml",
         "x": 120,
         "y": 1300,
