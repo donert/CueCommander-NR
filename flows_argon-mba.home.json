@@ -4641,11 +4641,11 @@
         "syntax": "plain",
         "template": "- {cue: \"91.0\", desc : \"Series Walkin\"} ",
         "output": "yaml",
-        "x": 300,
-        "y": 1260,
+        "x": 120,
+        "y": 1300,
         "wires": [
             [
-                "2df48948349bb13a"
+                "934c28187a63b445"
             ]
         ]
     },
@@ -4682,8 +4682,8 @@
         ],
         "outputs": 1,
         "cts": true,
-        "x": 510,
-        "y": 1180,
+        "x": 110,
+        "y": 1420,
         "wires": [
             [
                 "acfd4f93c32def6a"
@@ -4702,8 +4702,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 610,
-        "y": 1260,
+        "x": 290,
+        "y": 1480,
         "wires": []
     },
     {
@@ -4719,8 +4719,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 490,
-        "y": 1340,
+        "x": 450,
+        "y": 1380,
         "wires": []
     },
     {
@@ -4731,12 +4731,26 @@
         "property": "payload",
         "action": "str",
         "pretty": false,
-        "x": 410,
-        "y": 1220,
+        "x": 110,
+        "y": 1380,
         "wires": [
             [
                 "227a8deb1bd05f21",
                 "3fd2eff51dab9226"
+            ]
+        ]
+    },
+    {
+        "id": "934c28187a63b445",
+        "type": "yaml",
+        "z": "ee400291.7cb",
+        "property": "payload",
+        "name": "",
+        "x": 110,
+        "y": 1340,
+        "wires": [
+            [
+                "2df48948349bb13a"
             ]
         ]
     },
