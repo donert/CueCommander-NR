@@ -2590,6 +2590,27 @@
         "h": 242
     },
     {
+        "id": "c681dc44e2d3bb1d",
+        "type": "group",
+        "z": "ee400291.7cb",
+        "name": "Quick Cues",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "679e3fbb7e0c02eb",
+            "58c62455215e7109",
+            "227a8deb1bd05f21",
+            "acfd4f93c32def6a",
+            "934c28187a63b445",
+            "014d67e31679a974"
+        ],
+        "x": 54,
+        "y": 1159,
+        "w": 392,
+        "h": 262
+    },
+    {
         "id": "b36c9a8b.092df8",
         "type": "ui_tab",
         "name": "Lights",
@@ -4556,6 +4577,7 @@
         "id": "679e3fbb7e0c02eb",
         "type": "inject",
         "z": "ee400291.7cb",
+        "g": "c681dc44e2d3bb1d",
         "name": "",
         "props": [
             {
@@ -4573,7 +4595,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 130,
+        "x": 170,
         "y": 1260,
         "wires": [
             [
@@ -4585,14 +4607,15 @@
         "id": "58c62455215e7109",
         "type": "template",
         "z": "ee400291.7cb",
+        "g": "c681dc44e2d3bb1d",
         "name": "",
         "field": "payload",
         "fieldType": "msg",
         "format": "yaml",
         "syntax": "mustache",
-        "template": "- {cue: 91.0 , desc: \"Series Walkin\" }\n- {cue: 92.0 , desc: \"Series Talk Podium\"}",
+        "template": "- {cue: \"91.0\" , desc: \"Series Walkin\" }\n- {cue: \"92.0\" , desc: \"Series Talk Podium\"}\n- {cue: \"94.0\" , desc: \"Series Video\"}\n- {cue: \"95.0\" , desc: \"Series Message\"}\n- {cue: \"96.0\" , desc: \"Series Walkout\"}",
         "output": "str",
-        "x": 120,
+        "x": 160,
         "y": 1300,
         "wires": [
             [
@@ -4604,6 +4627,7 @@
         "id": "227a8deb1bd05f21",
         "type": "ui_table",
         "z": "ee400291.7cb",
+        "g": "c681dc44e2d3bb1d",
         "group": "208906fc.3b7e2a",
         "name": "",
         "order": 3,
@@ -4633,8 +4657,8 @@
         ],
         "outputs": 1,
         "cts": true,
-        "x": 110,
-        "y": 1420,
+        "x": 150,
+        "y": 1380,
         "wires": [
             [
                 "acfd4f93c32def6a"
@@ -4645,6 +4669,7 @@
         "id": "acfd4f93c32def6a",
         "type": "debug",
         "z": "ee400291.7cb",
+        "g": "c681dc44e2d3bb1d",
         "name": "",
         "active": true,
         "tosidebar": true,
@@ -4653,24 +4678,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 290,
-        "y": 1480,
-        "wires": []
-    },
-    {
-        "id": "3fd2eff51dab9226",
-        "type": "debug",
-        "z": "ee400291.7cb",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 450,
+        "x": 330,
         "y": 1380,
         "wires": []
     },
@@ -4678,16 +4686,34 @@
         "id": "934c28187a63b445",
         "type": "yaml",
         "z": "ee400291.7cb",
+        "g": "c681dc44e2d3bb1d",
         "property": "payload",
         "name": "",
-        "x": 110,
+        "x": 150,
         "y": 1340,
         "wires": [
             [
-                "3fd2eff51dab9226",
                 "227a8deb1bd05f21"
             ]
         ]
+    },
+    {
+        "id": "014d67e31679a974",
+        "type": "ui_text",
+        "z": "ee400291.7cb",
+        "g": "c681dc44e2d3bb1d",
+        "group": "208906fc.3b7e2a",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Quick Cues",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 150,
+        "y": 1200,
+        "wires": []
     },
     {
         "id": "75b23a68.99e7a4",
