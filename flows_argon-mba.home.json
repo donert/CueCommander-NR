@@ -3017,15 +3017,6 @@
         "height": 1
     },
     {
-        "id": "1c661b86.f02d94",
-        "type": "ui_spacer",
-        "name": "spacer",
-        "group": "",
-        "order": 3,
-        "width": 1,
-        "height": 1
-    },
-    {
         "id": "98cf5f2c.9a9be",
         "type": "ui_group",
         "name": "Click to Refresh",
