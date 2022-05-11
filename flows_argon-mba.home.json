@@ -16265,7 +16265,7 @@
         "order": 1,
         "width": 0,
         "height": 0,
-        "lineType": "one",
+        "lineType": "two",
         "actionType": "click",
         "allowHTML": false,
         "outputs": 1,
