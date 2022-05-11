@@ -16190,7 +16190,7 @@
         "z": "64cbf871.f282f8",
         "g": "7269a2d8.645c0c",
         "name": "Add Filters",
-        "func": "var today = new Date();\nvar yesterday = new Date(today-(1000*3600*24)); // Yesterday\n\nvar fy = yesterday.getFullYear();\nvar mo = yesterday.getMonth() + 1;\nvar da = yesterday.getDate();\n\nmsg = { url:  \n    msg.payload.link +\n    \"/plans?filter=after&per_page=4&after=\" +\n    fy + \"-0\" +  mo + \"-0\" + da\n}\n \nreturn msg;\n\n//  ?filter=after&per_page=3&after=2020-12-26",
+        "func": "var today = new Date();\nvar yesterday = new Date(today-(1000*3600*24)); // Yesterday\n\nvar fy = yesterday.getFullYear();\nvar mo = yesterday.getMonth() + 1;\nvar da = yesterday.getDate();\n\nmsg = { url:  \n    msg.payload.link +\n    \"/plans?filter=after&per_page=4&after=\" +\n    fy + \"-\" +  mo.padStart(3, '0') + \"-\" + da.padStart(3, '0')\n}\n \nreturn msg;\n\n//  ?filter=after&per_page=3&after=2020-12-26",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
