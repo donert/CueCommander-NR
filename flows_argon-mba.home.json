@@ -619,7 +619,7 @@
             "78b664ca.bcfc4c"
         ],
         "x": 1474,
-        "y": 79,
+        "y": 59,
         "w": 432,
         "h": 122
     },
@@ -15628,7 +15628,7 @@
             "13ed2b3a.fd3ef5"
         ],
         "x": 1695,
-        "y": 160,
+        "y": 140,
         "wires": []
     },
     {
@@ -16190,13 +16190,14 @@
         "z": "64cbf871.f282f8",
         "g": "7269a2d8.645c0c",
         "name": "Add Filters",
-        "func": "var today = new Date();\nvar yesterday = new Date(today-(1000*3600*24)); // Yesterday\n\nvar fy = yesterday.getFullYear();\nvar mo = yesterday.getMonth() + 1;\nvar da = yesterday.getDate();\n\nmsg = { url:  \n    msg.payload.link +\n    \"/plans?filter=after&per_page=4&after=\" +\n    fy + \"-\" +  mo + \"-\" + da\n}\n \nreturn msg;\n\n//  ?filter=after&per_page=3&after=2020-12-26",
+        "func": "var today = new Date();\nvar yesterday = new Date(today-(1000*3600*24)); // Yesterday\n\nvar fy = yesterday.getFullYear();\nvar mo = yesterday.getMonth() + 1;\nvar da = yesterday.getDate();\n\nmsg = { url:  \n    msg.payload.link +\n    \"/plans?filter=after&per_page=4&after=\" +\n    fy + \"-0\" +  mo + \"-0\" + da\n}\n \nreturn msg;\n\n//  ?filter=after&per_page=3&after=2020-12-26",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
+        "libs": [],
         "x": 1570,
-        "y": 140,
+        "y": 120,
         "wires": [
             [
                 "dd43aa85.cd9f48",
@@ -16315,7 +16316,7 @@
         "z": "64cbf871.f282f8",
         "g": "7269a2d8.645c0c",
         "name": "Query for List of Plans",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -16324,7 +16325,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1760,
-        "y": 120,
+        "y": 100,
         "wires": []
     },
     {
