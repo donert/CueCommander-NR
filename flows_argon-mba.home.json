@@ -17007,8 +17007,8 @@
         "group": "9a3fea2f.45bc08",
         "name": "",
         "order": 3,
-        "width": 0,
-        "height": 0,
+        "width": "8",
+        "height": "4",
         "columns": [
             {
                 "field": "title",
