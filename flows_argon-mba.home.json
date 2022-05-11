@@ -2918,7 +2918,7 @@
         "tab": "ab63beb4.a6246",
         "order": 4,
         "disp": true,
-        "width": "12",
+        "width": 10,
         "collapse": false
     },
     {
@@ -2996,7 +2996,7 @@
         "tab": "ab63beb4.a6246",
         "order": 3,
         "disp": true,
-        "width": 12,
+        "width": 6,
         "collapse": false
     },
     {
@@ -3006,7 +3006,7 @@
         "tab": "ab63beb4.a6246",
         "order": 5,
         "disp": true,
-        "width": 12,
+        "width": 8,
         "collapse": false
     },
     {
@@ -3335,36 +3335,6 @@
         "group": "081499cdb0e45d15",
         "order": 4,
         "width": 16,
-        "height": 1
-    },
-    {
-        "id": "f56f25de1e0ea38a",
-        "type": "ui_spacer",
-        "z": "64cbf871.f282f8",
-        "name": "spacer",
-        "group": "2108c06a.f432e",
-        "order": 2,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "201eea0b648a26ae",
-        "type": "ui_spacer",
-        "z": "64cbf871.f282f8",
-        "name": "spacer",
-        "group": "2108c06a.f432e",
-        "order": 3,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "71b5e352418790b7",
-        "type": "ui_spacer",
-        "z": "64cbf871.f282f8",
-        "name": "spacer",
-        "group": "2108c06a.f432e",
-        "order": 4,
-        "width": 1,
         "height": 1
     },
     {
@@ -15754,8 +15724,8 @@
         "name": "",
         "group": "98cf5f2c.9a9be",
         "order": 1,
-        "width": "4",
-        "height": "4",
+        "width": 4,
+        "height": 4,
         "passthru": false,
         "label": "Refresh",
         "tooltip": "Reload data from PCO",
@@ -16605,7 +16575,7 @@
         "group": "156005cd.9619da",
         "name": "Table of Details",
         "order": 1,
-        "width": 12,
+        "width": 10,
         "height": 12,
         "columns": [
             {
@@ -16915,7 +16885,7 @@
         "group": "2108c06a.f432e",
         "name": "Item Details",
         "order": 1,
-        "width": 11,
+        "width": 8,
         "height": 3,
         "columns": [
             {
@@ -16982,9 +16952,9 @@
         "g": "5873162f.e5f188",
         "group": "9a3fea2f.45bc08",
         "name": "List of Service Types",
-        "order": 3,
-        "width": "8",
-        "height": "4",
+        "order": 1,
+        "width": 8,
+        "height": 4,
         "columns": [
             {
                 "field": "title",
@@ -17025,8 +16995,8 @@
         "group": "4f286988.766258",
         "name": "List of Plans",
         "order": 1,
-        "width": "12",
-        "height": "6",
+        "width": 6,
+        "height": 4,
         "columns": [
             {
                 "field": "title",
