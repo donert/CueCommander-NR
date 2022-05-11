@@ -17115,6 +17115,16 @@
         "wires": []
     },
     {
+        "id": "45f3fefc701a2be3",
+        "type": "comment",
+        "z": "64cbf871.f282f8",
+        "name": "trying to reset the list when parent changes... doesn't work",
+        "info": "",
+        "x": 1830,
+        "y": 360,
+        "wires": []
+    },
+    {
         "id": "e4ab948d.8ab008",
         "type": "rbe",
         "z": "c7f9390d.cde5e8",
