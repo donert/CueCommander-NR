@@ -23742,11 +23742,11 @@
         "width": 0,
         "height": 0,
         "name": "",
-        "label": "Ip Addr of this machine",
+        "label": "IP Address:",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
-        "x": 410,
+        "x": 370,
         "y": 400,
         "wires": []
     },
