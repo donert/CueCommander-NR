@@ -3312,7 +3312,7 @@
         "tab": "e0b6460f.51cf08",
         "order": 3,
         "disp": true,
-        "width": "6",
+        "width": 20,
         "collapse": false,
         "className": ""
     },
@@ -3323,7 +3323,7 @@
         "tab": "e0b6460f.51cf08",
         "order": 4,
         "disp": true,
-        "width": "6",
+        "width": 20,
         "collapse": false,
         "className": ""
     },
@@ -3348,13 +3348,13 @@
         "height": 1
     },
     {
-        "id": "3d7ea484edfa7eff",
+        "id": "8233b53cccd4e64f",
         "type": "ui_spacer",
         "z": "64cbf871.f282f8",
         "name": "spacer",
         "group": "081499cdb0e45d15",
         "order": 4,
-        "width": 2,
+        "width": 16,
         "height": 1
     },
     {
