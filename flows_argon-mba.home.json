@@ -1659,12 +1659,13 @@
         "nodes": [
             "874fdd32.de193",
             "c4631f3b.ef67e",
-            "3522baec.e78fc6"
+            "3522baec.e78fc6",
+            "83a809a536ed22e5"
         ],
         "x": 774,
         "y": 639,
         "w": 555,
-        "h": 82
+        "h": 122
     },
     {
         "id": "bb661aa6.08f608",
@@ -16854,7 +16855,8 @@
         "y": 680,
         "wires": [
             [
-                "c4631f3b.ef67e"
+                "c4631f3b.ef67e",
+                "83a809a536ed22e5"
             ]
         ]
     },
@@ -17028,6 +17030,24 @@
                 "6e597930.b178b8"
             ]
         ]
+    },
+    {
+        "id": "83a809a536ed22e5",
+        "type": "debug",
+        "z": "64cbf871.f282f8",
+        "g": "dea49e79.b5f4c",
+        "name": "Item Details",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1010,
+        "y": 720,
+        "wires": []
     },
     {
         "id": "e4ab948d.8ab008",
