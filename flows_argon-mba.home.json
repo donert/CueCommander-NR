@@ -3302,14 +3302,25 @@
         "className": ""
     },
     {
-        "id": "62ebb178e4726532",
+        "id": "0a8a4183f786a333",
         "type": "ui_spacer",
         "z": "41f3235e2124e3a2",
         "name": "spacer",
         "group": "081499cdb0e45d15",
-        "order": 3,
+        "order": 4,
         "width": 2,
         "height": 1
+    },
+    {
+        "id": "2c5bf6ea177505f8",
+        "type": "ui_group",
+        "name": "Device Config",
+        "tab": "e0b6460f.51cf08",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
     },
     {
         "id": "c6213b74.2cce48",
@@ -23893,7 +23904,7 @@
         "z": "805d289f.fd83a8",
         "g": "50abd8f9327f05ea",
         "group": "081499cdb0e45d15",
-        "order": 4,
+        "order": 2,
         "width": 0,
         "height": 0,
         "name": "Where am I",
@@ -26332,9 +26343,9 @@
         "type": "ui_table",
         "z": "41f3235e2124e3a2",
         "g": "6433aa0ec9372bde",
-        "group": "081499cdb0e45d15",
+        "group": "2c5bf6ea177505f8",
         "name": "Address Config",
-        "order": 5,
+        "order": 1,
         "width": 0,
         "height": 0,
         "columns": [
@@ -27045,7 +27056,7 @@
         "label": "Home|Church",
         "tooltip": "Home is left, Church is right",
         "group": "081499cdb0e45d15",
-        "order": 2,
+        "order": 3,
         "width": 4,
         "height": 1,
         "passthru": true,
