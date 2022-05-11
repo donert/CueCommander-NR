@@ -1640,7 +1640,8 @@
             "3e826114.ff2a7e",
             "45f95704.a39988",
             "9dfb1f63.94524",
-            "19e3f20.91ff20e"
+            "19e3f20.91ff20e",
+            "13ad49572a4d23fc"
         ],
         "x": 774,
         "y": 39,
@@ -16249,7 +16250,8 @@
         "y": 120,
         "wires": [
             [
-                "45f95704.a39988"
+                "45f95704.a39988",
+                "13ad49572a4d23fc"
             ]
         ]
     },
@@ -16386,7 +16388,7 @@
         "links": [
             "2fca2b77.3d1134"
         ],
-        "x": 1095,
+        "x": 1085,
         "y": 160,
         "wires": [
             [
@@ -16989,6 +16991,24 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "13ad49572a4d23fc",
+        "type": "debug",
+        "z": "64cbf871.f282f8",
+        "g": "5873162f.e5f188",
+        "name": "List of Servcice types",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1240,
+        "y": 160,
+        "wires": []
     },
     {
         "id": "e4ab948d.8ab008",
