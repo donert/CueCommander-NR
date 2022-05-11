@@ -615,8 +615,8 @@
         ],
         "x": 1524,
         "y": 59,
-        "w": 492,
-        "h": 162
+        "w": 432,
+        "h": 182
     },
     {
         "id": "45975be6.e0ca34",
@@ -635,12 +635,13 @@
             "e01fa06c.691fd",
             "4238e90b.b45378",
             "91e9792.fd66d88",
-            "fb3df472c2d76cb1"
+            "fb3df472c2d76cb1",
+            "cb89c732858b7664"
         ],
         "x": 774,
         "y": 219,
-        "w": 712,
-        "h": 202
+        "w": 772,
+        "h": 222
     },
     {
         "id": "de808323.a2eff",
@@ -1623,14 +1624,13 @@
             "1a0e3da8.695572",
             "7c64c9c1.6cb3e8",
             "3e826114.ff2a7e",
-            "9dfb1f63.94524",
             "19e3f20.91ff20e",
             "13ad49572a4d23fc",
             "80fe4f4b3c5c311a"
         ],
         "x": 774,
         "y": 39,
-        "w": 672,
+        "w": 612,
         "h": 162
     },
     {
@@ -16175,24 +16175,6 @@
         ]
     },
     {
-        "id": "9dfb1f63.94524",
-        "type": "debug",
-        "z": "64cbf871.f282f8",
-        "g": "5873162f.e5f188",
-        "name": "selected plan",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1320,
-        "y": 80,
-        "wires": []
-    },
-    {
         "id": "c3570d79.8939",
         "type": "debug",
         "z": "64cbf871.f282f8",
@@ -16530,7 +16512,7 @@
         "g": "eec2fe41.6fc47",
         "group": "156005cd.9619da",
         "name": "Table of Details",
-        "order": 1,
+        "order": 2,
         "width": 10,
         "height": 12,
         "columns": [
@@ -16952,7 +16934,7 @@
         "g": "45975be6.e0ca34",
         "group": "4f286988.766258",
         "name": "List of Plans",
-        "order": 1,
+        "order": 2,
         "width": 6,
         "height": 4,
         "columns": [
@@ -16983,7 +16965,8 @@
         "y": 380,
         "wires": [
             [
-                "6e597930.b178b8"
+                "6e597930.b178b8",
+                "cb89c732858b7664"
             ]
         ]
     },
@@ -17019,8 +17002,26 @@
         "format": "{{msg.payload.title}}",
         "layout": "row-spread",
         "className": "",
-        "x": 1910,
-        "y": 180,
+        "x": 1660,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "cb89c732858b7664",
+        "type": "ui_text",
+        "z": "64cbf871.f282f8",
+        "g": "45975be6.e0ca34",
+        "group": "156005cd.9619da",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "Selected Plan",
+        "label": "Selected Plan",
+        "format": "{{msg.payload.title}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1440,
+        "y": 400,
         "wires": []
     },
     {
