@@ -1641,12 +1641,13 @@
             "45f95704.a39988",
             "9dfb1f63.94524",
             "19e3f20.91ff20e",
-            "13ad49572a4d23fc"
+            "13ad49572a4d23fc",
+            "80fe4f4b3c5c311a"
         ],
         "x": 774,
         "y": 39,
         "w": 672,
-        "h": 162
+        "h": 202
     },
     {
         "id": "dea49e79.b5f4c",
@@ -2908,7 +2909,7 @@
         "tab": "ab63beb4.a6246",
         "order": 2,
         "disp": true,
-        "width": 6,
+        "width": 8,
         "collapse": false
     },
     {
@@ -2986,7 +2987,7 @@
         "tab": "ab63beb4.a6246",
         "order": 1,
         "disp": true,
-        "width": 6,
+        "width": 4,
         "collapse": false
     },
     {
@@ -3338,7 +3339,7 @@
         "height": 1
     },
     {
-        "id": "bc6035ea6dfbc021",
+        "id": "f56f25de1e0ea38a",
         "type": "ui_spacer",
         "z": "64cbf871.f282f8",
         "name": "spacer",
@@ -3348,7 +3349,7 @@
         "height": 1
     },
     {
-        "id": "2b0a57930f1264c2",
+        "id": "201eea0b648a26ae",
         "type": "ui_spacer",
         "z": "64cbf871.f282f8",
         "name": "spacer",
@@ -3358,7 +3359,7 @@
         "height": 1
     },
     {
-        "id": "bf517cfe60fe624f",
+        "id": "71b5e352418790b7",
         "type": "ui_spacer",
         "z": "64cbf871.f282f8",
         "name": "spacer",
@@ -16264,7 +16265,8 @@
         "wires": [
             [
                 "45f95704.a39988",
-                "13ad49572a4d23fc"
+                "13ad49572a4d23fc",
+                "80fe4f4b3c5c311a"
             ]
         ]
     },
@@ -17022,6 +17024,48 @@
         "x": 1240,
         "y": 160,
         "wires": []
+    },
+    {
+        "id": "80fe4f4b3c5c311a",
+        "type": "ui_table",
+        "z": "64cbf871.f282f8",
+        "g": "5873162f.e5f188",
+        "group": "9a3fea2f.45bc08",
+        "name": "",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "columns": [
+            {
+                "field": "title",
+                "title": "Title",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "description",
+                "title": "Description",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            }
+        ],
+        "outputs": 1,
+        "cts": true,
+        "x": 1190,
+        "y": 200,
+        "wires": [
+            [
+                "78b664ca.bcfc4c"
+            ]
+        ]
     },
     {
         "id": "e4ab948d.8ab008",
