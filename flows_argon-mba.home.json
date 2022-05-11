@@ -636,11 +636,11 @@
             "86966ddf.a4ec3",
             "5180ccfb.36b4b4",
             "a808708f.1304b",
-            "3ac67ef4.b168b2",
             "6e597930.b178b8",
             "e01fa06c.691fd",
             "4238e90b.b45378",
-            "91e9792.fd66d88"
+            "91e9792.fd66d88",
+            "fb3df472c2d76cb1"
         ],
         "x": 774,
         "y": 219,
@@ -1646,7 +1646,7 @@
         "x": 774,
         "y": 39,
         "w": 672,
-        "h": 202
+        "h": 162
     },
     {
         "id": "dea49e79.b5f4c",
@@ -16022,34 +16022,12 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
+        "libs": [],
         "x": 1020,
         "y": 320,
         "wires": [
             [
-                "3ac67ef4.b168b2"
-            ]
-        ]
-    },
-    {
-        "id": "3ac67ef4.b168b2",
-        "type": "ui_list",
-        "z": "64cbf871.f282f8",
-        "g": "45975be6.e0ca34",
-        "group": "4f286988.766258",
-        "name": "List of Plans",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "lineType": "two",
-        "actionType": "click",
-        "allowHTML": false,
-        "outputs": 1,
-        "topic": "",
-        "x": 1190,
-        "y": 320,
-        "wires": [
-            [
-                "6e597930.b178b8"
+                "fb3df472c2d76cb1"
             ]
         ]
     },
@@ -16397,9 +16375,7 @@
         "x": 1105,
         "y": 380,
         "wires": [
-            [
-                "3ac67ef4.b168b2"
-            ]
+            []
         ]
     },
     {
@@ -17005,7 +16981,7 @@
         "z": "64cbf871.f282f8",
         "g": "5873162f.e5f188",
         "group": "9a3fea2f.45bc08",
-        "name": "",
+        "name": "List of Service Types",
         "order": 3,
         "width": "8",
         "height": "4",
@@ -17033,11 +17009,53 @@
         ],
         "outputs": 1,
         "cts": true,
-        "x": 1190,
-        "y": 200,
+        "x": 1240,
+        "y": 120,
         "wires": [
             [
                 "78b664ca.bcfc4c"
+            ]
+        ]
+    },
+    {
+        "id": "fb3df472c2d76cb1",
+        "type": "ui_table",
+        "z": "64cbf871.f282f8",
+        "g": "45975be6.e0ca34",
+        "group": "4f286988.766258",
+        "name": "List of Plans",
+        "order": 1,
+        "width": "12",
+        "height": "6",
+        "columns": [
+            {
+                "field": "title",
+                "title": "Title",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "Description",
+                "title": "description",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            }
+        ],
+        "outputs": 1,
+        "cts": true,
+        "x": 1270,
+        "y": 380,
+        "wires": [
+            [
+                "6e597930.b178b8"
             ]
         ]
     },
