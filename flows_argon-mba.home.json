@@ -611,12 +611,12 @@
             "dd43aa85.cd9f48",
             "c3570d79.8939",
             "78b664ca.bcfc4c",
-            "1b3246ad4536b9ef"
+            "3726a658f9cc8c0b"
         ],
-        "x": 1474,
+        "x": 1524,
         "y": 59,
-        "w": 432,
-        "h": 142
+        "w": 492,
+        "h": 162
     },
     {
         "id": "45975be6.e0ca34",
@@ -15553,7 +15553,7 @@
         "links": [
             "13ed2b3a.fd3ef5"
         ],
-        "x": 1695,
+        "x": 1745,
         "y": 140,
         "wires": []
     },
@@ -16102,7 +16102,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1570,
+        "x": 1620,
         "y": 120,
         "wires": [
             [
@@ -16206,7 +16206,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1760,
+        "x": 1810,
         "y": 100,
         "wires": []
     },
@@ -16941,7 +16941,7 @@
         "wires": [
             [
                 "78b664ca.bcfc4c",
-                "1b3246ad4536b9ef"
+                "3726a658f9cc8c0b"
             ]
         ]
     },
@@ -17006,21 +17006,21 @@
         "wires": []
     },
     {
-        "id": "1b3246ad4536b9ef",
-        "type": "debug",
+        "id": "3726a658f9cc8c0b",
+        "type": "ui_text",
         "z": "64cbf871.f282f8",
         "g": "7269a2d8.645c0c",
-        "name": "Selected service type",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1620,
-        "y": 160,
+        "group": "4f286988.766258",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "Selected Type",
+        "label": "Selected Type",
+        "format": "{{msg.payload.title}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1910,
+        "y": 180,
         "wires": []
     },
     {
