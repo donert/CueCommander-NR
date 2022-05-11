@@ -1605,7 +1605,8 @@
             "1a0ae7a1.83c318",
             "1854e3d5.531b5c",
             "a0d91a2d.6ee248",
-            "4b892877.4105a8"
+            "4b892877.4105a8",
+            "7060e020c6b8aef3"
         ],
         "x": 774,
         "y": 439,
@@ -16574,7 +16575,8 @@
         "wires": [
             [
                 "1854e3d5.531b5c",
-                "a0d91a2d.6ee248"
+                "a0d91a2d.6ee248",
+                "7060e020c6b8aef3"
             ]
         ]
     },
@@ -16823,9 +16825,9 @@
         "g": "dea49e79.b5f4c",
         "group": "2108c06a.f432e",
         "name": "Item Details",
-        "order": 1,
+        "order": 2,
         "width": 8,
-        "height": 11,
+        "height": 10,
         "columns": [
             {
                 "field": "",
@@ -17022,6 +17024,24 @@
         "className": "",
         "x": 1440,
         "y": 400,
+        "wires": []
+    },
+    {
+        "id": "7060e020c6b8aef3",
+        "type": "ui_text",
+        "z": "64cbf871.f282f8",
+        "g": "eec2fe41.6fc47",
+        "group": "2108c06a.f432e",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "Selected Item",
+        "label": "Selected Item",
+        "format": "{{msg.payload.title}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1460,
+        "y": 560,
         "wires": []
     },
     {
