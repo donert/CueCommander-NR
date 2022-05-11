@@ -17079,8 +17079,8 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "",
-                "tot": "str"
+                "to": "{ \"title\": \"\", \"description\" :\"\"}",
+                "tot": "json"
             }
         ],
         "action": "",
