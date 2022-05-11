@@ -15681,7 +15681,7 @@
         "group": "98cf5f2c.9a9be",
         "order": 1,
         "width": 4,
-        "height": 4,
+        "height": 5,
         "passthru": false,
         "label": "Refresh",
         "tooltip": "Reload data from PCO",
@@ -16514,7 +16514,7 @@
         "name": "Table of Details",
         "order": 2,
         "width": 10,
-        "height": 12,
+        "height": 10,
         "columns": [
             {
                 "field": "",
@@ -16825,7 +16825,7 @@
         "name": "Item Details",
         "order": 1,
         "width": 8,
-        "height": 3,
+        "height": 11,
         "columns": [
             {
                 "field": "",
@@ -16893,7 +16893,7 @@
         "name": "List of Service Types",
         "order": 1,
         "width": 8,
-        "height": 4,
+        "height": 5,
         "columns": [
             {
                 "field": "title",
