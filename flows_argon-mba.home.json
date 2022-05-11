@@ -2908,7 +2908,7 @@
         "tab": "ab63beb4.a6246",
         "order": 2,
         "disp": true,
-        "width": 6,
+        "width": 8,
         "collapse": false
     },
     {
@@ -2996,26 +2996,8 @@
         "tab": "ab63beb4.a6246",
         "order": 3,
         "disp": true,
-        "width": "6",
+        "width": 8,
         "collapse": false
-    },
-    {
-        "id": "d16d49a5.c29058",
-        "type": "ui_spacer",
-        "name": "spacer",
-        "group": "98cf5f2c.9a9be",
-        "order": 3,
-        "width": 1,
-        "height": "3"
-    },
-    {
-        "id": "1b94eaea.45c455",
-        "type": "ui_spacer",
-        "name": "spacer",
-        "group": "9a3fea2f.45bc08",
-        "order": 1,
-        "width": 1,
-        "height": "2"
     },
     {
         "id": "2108c06a.f432e",
@@ -3335,16 +3317,6 @@
         "className": ""
     },
     {
-        "id": "0a8a4183f786a333",
-        "type": "ui_spacer",
-        "z": "41f3235e2124e3a2",
-        "name": "spacer",
-        "group": "081499cdb0e45d15",
-        "order": 4,
-        "width": 2,
-        "height": 1
-    },
-    {
         "id": "2c5bf6ea177505f8",
         "type": "ui_group",
         "name": "Device Config",
@@ -3354,6 +3326,36 @@
         "width": "6",
         "collapse": false,
         "className": ""
+    },
+    {
+        "id": "28bdfa4feaff6bfb",
+        "type": "ui_spacer",
+        "z": "64cbf871.f282f8",
+        "name": "spacer",
+        "group": "9a3fea2f.45bc08",
+        "order": 1,
+        "width": 8,
+        "height": 1
+    },
+    {
+        "id": "550a44302feb3f40",
+        "type": "ui_spacer",
+        "z": "64cbf871.f282f8",
+        "name": "spacer",
+        "group": "9a3fea2f.45bc08",
+        "order": 2,
+        "width": 8,
+        "height": 1
+    },
+    {
+        "id": "3d7ea484edfa7eff",
+        "type": "ui_spacer",
+        "z": "64cbf871.f282f8",
+        "name": "spacer",
+        "group": "081499cdb0e45d15",
+        "order": 4,
+        "width": 2,
+        "height": 1
     },
     {
         "id": "c6213b74.2cce48",
@@ -16262,7 +16264,7 @@
         "g": "5873162f.e5f188",
         "group": "9a3fea2f.45bc08",
         "name": "List of ServiceTypes",
-        "order": 1,
+        "order": 3,
         "width": 0,
         "height": 0,
         "lineType": "three",
@@ -16640,8 +16642,8 @@
         "group": "156005cd.9619da",
         "name": "Table of Details",
         "order": 1,
-        "width": "12",
-        "height": "12",
+        "width": 12,
+        "height": 12,
         "columns": [
             {
                 "field": "",
@@ -16950,8 +16952,8 @@
         "group": "2108c06a.f432e",
         "name": "Item Details",
         "order": 1,
-        "width": "6",
-        "height": "3",
+        "width": 6,
+        "height": 3,
         "columns": [
             {
                 "field": "",
