@@ -982,8 +982,10 @@
             "afac8255.49e2",
             "8fa7a3df.960d6"
         ],
-        "x": 24,
-        "y": 19
+        "x": 44,
+        "y": 19,
+        "w": 902,
+        "h": 262
     },
     {
         "id": "1976ad4e.952673",
@@ -2463,6 +2465,29 @@
         ],
         "x": 54,
         "y": 39
+    },
+    {
+        "id": "50abd8f9327f05ea",
+        "type": "group",
+        "z": "805d289f.fd83a8",
+        "name": "Where Am I",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "0927626329e37e63",
+            "99902afff0c0b301",
+            "75f3c41a6d48ca8f",
+            "ea3cda0ff378b0d1",
+            "4b5678bcc0710310",
+            "356dc9191546f848",
+            "2aa8fa39a8cce087",
+            "e7b21c8bad30732c"
+        ],
+        "x": 34,
+        "y": 299,
+        "w": 872,
+        "h": 202
     },
     {
         "id": "b36c9a8b.092df8",
@@ -23399,7 +23424,7 @@
             }
         ],
         "active": false,
-        "x": 450,
+        "x": 470,
         "y": 100,
         "wires": []
     },
@@ -23418,7 +23443,7 @@
             }
         ],
         "active": true,
-        "x": 450,
+        "x": 470,
         "y": 60,
         "wires": []
     },
@@ -23444,7 +23469,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 130,
+        "x": 150,
         "y": 240,
         "wires": [
             [
@@ -23466,7 +23491,7 @@
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 790,
+        "x": 810,
         "y": 240,
         "wires": []
     },
@@ -23481,7 +23506,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 380,
+        "libs": [],
+        "x": 300,
         "y": 240,
         "wires": [
             [
@@ -23500,7 +23526,7 @@
         "start": "",
         "inout": "out",
         "property": "payload",
-        "x": 520,
+        "x": 460,
         "y": 240,
         "wires": [
             [
@@ -23530,7 +23556,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 140,
+        "x": 160,
         "y": 60,
         "wires": [
             [
@@ -23561,7 +23587,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 130,
+        "x": 150,
         "y": 100,
         "wires": [
             [
@@ -23584,7 +23610,7 @@
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 760,
+        "x": 780,
         "y": 180,
         "wires": []
     },
@@ -23605,7 +23631,7 @@
         "randomUnits": "seconds",
         "drop": false,
         "outputs": 1,
-        "x": 370,
+        "x": 390,
         "y": 180,
         "wires": [
             [
@@ -23620,7 +23646,7 @@
         "g": "f2aad9f6.0d8f18",
         "name": "TODO - race Condition",
         "info": "Is this code exposed to a race condition.\nWhat if the delayed message is not evaluated before the global property is set? Possible?",
-        "x": 400,
+        "x": 420,
         "y": 140,
         "wires": []
     },
@@ -23635,7 +23661,7 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 520,
+        "x": 540,
         "y": 180,
         "wires": [
             [
@@ -23647,6 +23673,7 @@
         "id": "0927626329e37e63",
         "type": "exec",
         "z": "805d289f.fd83a8",
+        "g": "50abd8f9327f05ea",
         "command": "ipconfig getifaddr en0",
         "addpay": "",
         "append": "",
@@ -23656,7 +23683,7 @@
         "oldrc": false,
         "name": "get ip addr",
         "x": 150,
-        "y": 440,
+        "y": 400,
         "wires": [
             [
                 "99902afff0c0b301",
@@ -23670,6 +23697,7 @@
         "id": "99902afff0c0b301",
         "type": "ui_text",
         "z": "805d289f.fd83a8",
+        "g": "50abd8f9327f05ea",
         "group": "081499cdb0e45d15",
         "order": 0,
         "width": 0,
@@ -23680,13 +23708,14 @@
         "layout": "row-spread",
         "className": "",
         "x": 390,
-        "y": 500,
+        "y": 380,
         "wires": []
     },
     {
         "id": "75f3c41a6d48ca8f",
         "type": "inject",
         "z": "805d289f.fd83a8",
+        "g": "50abd8f9327f05ea",
         "name": "",
         "props": [
             {
@@ -23704,8 +23733,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 130,
-        "y": 320,
+        "x": 150,
+        "y": 340,
         "wires": [
             [
                 "0927626329e37e63"
@@ -23716,6 +23745,7 @@
         "id": "ea3cda0ff378b0d1",
         "type": "change",
         "z": "805d289f.fd83a8",
+        "g": "50abd8f9327f05ea",
         "name": "",
         "rules": [
             {
@@ -23731,7 +23761,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 340,
+        "x": 360,
         "y": 420,
         "wires": [
             [
@@ -23743,6 +23773,7 @@
         "id": "4b5678bcc0710310",
         "type": "switch",
         "z": "805d289f.fd83a8",
+        "g": "50abd8f9327f05ea",
         "name": "",
         "property": "my_ip",
         "propertyType": "global",
@@ -23760,7 +23791,7 @@
         "repair": false,
         "outputs": 2,
         "x": 510,
-        "y": 420,
+        "y": 440,
         "wires": [
             [
                 "356dc9191546f848"
@@ -23778,6 +23809,7 @@
         "id": "356dc9191546f848",
         "type": "change",
         "z": "805d289f.fd83a8",
+        "g": "50abd8f9327f05ea",
         "name": "home",
         "rules": [
             {
@@ -23794,7 +23826,7 @@
         "to": "",
         "reg": false,
         "x": 650,
-        "y": 380,
+        "y": 420,
         "wires": [
             [
                 "e7b21c8bad30732c"
@@ -23805,6 +23837,7 @@
         "id": "2aa8fa39a8cce087",
         "type": "change",
         "z": "805d289f.fd83a8",
+        "g": "50abd8f9327f05ea",
         "name": "church",
         "rules": [
             {
@@ -23821,7 +23854,7 @@
         "to": "",
         "reg": false,
         "x": 650,
-        "y": 440,
+        "y": 460,
         "wires": [
             [
                 "e7b21c8bad30732c"
@@ -23832,6 +23865,7 @@
         "id": "e7b21c8bad30732c",
         "type": "ui_text",
         "z": "805d289f.fd83a8",
+        "g": "50abd8f9327f05ea",
         "group": "081499cdb0e45d15",
         "order": 3,
         "width": 0,
@@ -23841,8 +23875,8 @@
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
-        "x": 870,
-        "y": 420,
+        "x": 810,
+        "y": 440,
         "wires": []
     },
     {
