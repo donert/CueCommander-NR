@@ -2908,7 +2908,7 @@
         "tab": "ab63beb4.a6246",
         "order": 2,
         "disp": true,
-        "width": 12,
+        "width": 6,
         "collapse": false
     },
     {
@@ -2986,7 +2986,7 @@
         "tab": "ab63beb4.a6246",
         "order": 1,
         "disp": true,
-        "width": 12,
+        "width": 6,
         "collapse": false
     },
     {
@@ -3338,7 +3338,7 @@
         "height": 1
     },
     {
-        "id": "ef645e95f3951ab0",
+        "id": "bc6035ea6dfbc021",
         "type": "ui_spacer",
         "z": "64cbf871.f282f8",
         "name": "spacer",
@@ -3348,7 +3348,7 @@
         "height": 1
     },
     {
-        "id": "a9c1a140121fdc18",
+        "id": "2b0a57930f1264c2",
         "type": "ui_spacer",
         "z": "64cbf871.f282f8",
         "name": "spacer",
@@ -3358,7 +3358,7 @@
         "height": 1
     },
     {
-        "id": "d583f337a7ad3724",
+        "id": "bf517cfe60fe624f",
         "type": "ui_spacer",
         "z": "64cbf871.f282f8",
         "name": "spacer",
