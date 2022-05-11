@@ -611,10 +611,12 @@
             "dd43aa85.cd9f48",
             "c3570d79.8939",
             "78b664ca.bcfc4c",
-            "3726a658f9cc8c0b"
+            "3726a658f9cc8c0b",
+            "4d96ef84b31e1732",
+            "815749e918d87f17"
         ],
-        "x": 1524,
-        "y": 59,
+        "x": 1514,
+        "y": 39,
         "w": 432,
         "h": 182
     },
@@ -15554,8 +15556,8 @@
         "links": [
             "13ed2b3a.fd3ef5"
         ],
-        "x": 1745,
-        "y": 140,
+        "x": 1735,
+        "y": 120,
         "wires": []
     },
     {
@@ -16103,8 +16105,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1620,
-        "y": 120,
+        "x": 1610,
+        "y": 100,
         "wires": [
             [
                 "dd43aa85.cd9f48",
@@ -16189,8 +16191,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1810,
-        "y": 100,
+        "x": 1800,
+        "y": 80,
         "wires": []
     },
     {
@@ -16925,7 +16927,8 @@
         "wires": [
             [
                 "78b664ca.bcfc4c",
-                "3726a658f9cc8c0b"
+                "3726a658f9cc8c0b",
+                "4d96ef84b31e1732"
             ]
         ]
     },
@@ -17004,8 +17007,8 @@
         "format": "{{msg.payload.title}}",
         "layout": "row-spread",
         "className": "",
-        "x": 1660,
-        "y": 200,
+        "x": 1620,
+        "y": 140,
         "wires": []
     },
     {
@@ -17043,6 +17046,55 @@
         "x": 1460,
         "y": 560,
         "wires": []
+    },
+    {
+        "id": "4d96ef84b31e1732",
+        "type": "rbe",
+        "z": "64cbf871.f282f8",
+        "g": "7269a2d8.645c0c",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 1630,
+        "y": 180,
+        "wires": [
+            [
+                "815749e918d87f17"
+            ]
+        ]
+    },
+    {
+        "id": "815749e918d87f17",
+        "type": "change",
+        "z": "64cbf871.f282f8",
+        "g": "7269a2d8.645c0c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1800,
+        "y": 180,
+        "wires": [
+            [
+                "fb3df472c2d76cb1"
+            ]
+        ]
     },
     {
         "id": "e4ab948d.8ab008",
