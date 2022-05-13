@@ -2225,12 +2225,16 @@
             "2aa8fa39a8cce087",
             "e7b21c8bad30732c",
             "eed5703287d35ad0",
-            "dbb1afaee7dc8d02"
+            "dbb1afaee7dc8d02",
+            "2bcbe017b5366a20",
+            "f2478a4db59d0b8e",
+            "ed2f2b2cef43f412",
+            "b31ed71913044737"
         ],
-        "x": 54,
+        "x": 34,
         "y": 319,
-        "w": 872,
-        "h": 202
+        "w": 852,
+        "h": 322
     },
     {
         "id": "77ffcbeb.3e5634",
@@ -23916,8 +23920,8 @@
         "winHide": false,
         "oldrc": false,
         "name": "get ip addr",
-        "x": 170,
-        "y": 420,
+        "x": 150,
+        "y": 440,
         "wires": [
             [
                 "99902afff0c0b301",
@@ -23941,7 +23945,7 @@
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
-        "x": 370,
+        "x": 350,
         "y": 400,
         "wires": []
     },
@@ -23967,8 +23971,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 170,
-        "y": 360,
+        "x": 150,
+        "y": 380,
         "wires": [
             [
                 "0927626329e37e63"
@@ -23995,8 +23999,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 380,
-        "y": 440,
+        "x": 360,
+        "y": 460,
         "wires": [
             [
                 "4b5678bcc0710310"
@@ -24024,8 +24028,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 530,
-        "y": 460,
+        "x": 330,
+        "y": 520,
         "wires": [
             [
                 "356dc9191546f848"
@@ -24059,12 +24063,11 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 670,
-        "y": 440,
+        "x": 470,
+        "y": 560,
         "wires": [
             [
-                "e7b21c8bad30732c",
-                "eed5703287d35ad0"
+                "f2478a4db59d0b8e"
             ]
         ]
     },
@@ -24088,12 +24091,11 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 670,
-        "y": 480,
+        "x": 470,
+        "y": 600,
         "wires": [
             [
-                "e7b21c8bad30732c",
-                "eed5703287d35ad0"
+                "f2478a4db59d0b8e"
             ]
         ]
     },
@@ -24111,8 +24113,8 @@
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
-        "x": 830,
-        "y": 460,
+        "x": 770,
+        "y": 520,
         "wires": []
     },
     {
@@ -24125,8 +24127,8 @@
         "links": [
             "ec761bc5c44ae47d"
         ],
-        "x": 825,
-        "y": 400,
+        "x": 715,
+        "y": 560,
         "wires": []
     },
     {
@@ -24140,12 +24142,123 @@
         "height": 2,
         "name": "help",
         "label": "",
-        "format": "The IP address that this computer is assigned is used to determine where it is located and changes the device settings as a result. It can be overrrideen with the slider",
+        "format": "The IP address that this computer is assigned is used to determine where it is located and changes the \"Device Config\" as a result. It can be overrridden with the slider, but resets every minute.",
         "layout": "col-center",
         "className": "",
-        "x": 650,
+        "x": 510,
         "y": 360,
         "wires": []
+    },
+    {
+        "id": "2bcbe017b5366a20",
+        "type": "ui_table",
+        "z": "805d289f.fd83a8",
+        "g": "50abd8f9327f05ea",
+        "group": "081499cdb0e45d15",
+        "name": "",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "columns": [
+            {
+                "field": "item",
+                "title": "Item",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "value",
+                "title": "Value",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            }
+        ],
+        "outputs": 0,
+        "cts": false,
+        "x": 810,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "f2478a4db59d0b8e",
+        "type": "change",
+        "z": "805d289f.fd83a8",
+        "g": "50abd8f9327f05ea",
+        "name": "merge",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "paylod",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 610,
+        "y": 500,
+        "wires": [
+            [
+                "e7b21c8bad30732c",
+                "eed5703287d35ad0",
+                "b31ed71913044737"
+            ]
+        ]
+    },
+    {
+        "id": "ed2f2b2cef43f412",
+        "type": "join",
+        "z": "805d289f.fd83a8",
+        "g": "50abd8f9327f05ea",
+        "name": "",
+        "mode": "auto",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": "false",
+        "timeout": "",
+        "count": "",
+        "reduceRight": false,
+        "x": 650,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b31ed71913044737",
+        "type": "template",
+        "z": "805d289f.fd83a8",
+        "g": "50abd8f9327f05ea",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "\"item\" : \"xxx\" , \"value\": {{payload}} !",
+        "output": "str",
+        "x": 760,
+        "y": 480,
+        "wires": [
+            [
+                "2bcbe017b5366a20"
+            ]
+        ]
     },
     {
         "id": "fdde3e7a.9360c",
