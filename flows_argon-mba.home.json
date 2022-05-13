@@ -24233,7 +24233,7 @@
         "format": "handlebars",
         "syntax": "mustache",
         "template": "[{ \"item\" : \"xxx\" , \"value\": \"{{payload}}\" }]",
-        "output": "str",
+        "output": "json",
         "x": 760,
         "y": 480,
         "wires": [
