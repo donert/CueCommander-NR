@@ -2236,7 +2236,7 @@
         ],
         "x": 34,
         "y": 279,
-        "w": 1112,
+        "w": 1132,
         "h": 362
     },
     {
@@ -24253,7 +24253,7 @@
         "type": "debug",
         "z": "805d289f.fd83a8",
         "g": "50abd8f9327f05ea",
-        "name": "",
+        "name": "parts debug",
         "active": true,
         "tosidebar": true,
         "console": false,
@@ -24262,7 +24262,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1030,
+        "x": 1050,
         "y": 460,
         "wires": []
     },
