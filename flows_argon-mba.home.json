@@ -2232,10 +2232,12 @@
             "b31ed71913044737",
             "5dabc695c699e825",
             "7485c8acf40ed3ef",
-            "3f3c19418d428606"
+            "3f3c19418d428606",
+            "855f895038c74f58",
+            "2ce2e3d14ca5c3e8"
         ],
-        "x": 34,
-        "y": 279,
+        "x": 14,
+        "y": 299,
         "w": 1132,
         "h": 362
     },
@@ -23903,12 +23905,13 @@
         "winHide": false,
         "oldrc": false,
         "name": "get ip addr",
-        "x": 150,
-        "y": 440,
+        "x": 130,
+        "y": 460,
         "wires": [
             [
                 "99902afff0c0b301",
-                "ea3cda0ff378b0d1"
+                "ea3cda0ff378b0d1",
+                "855f895038c74f58"
             ],
             [],
             []
@@ -23928,8 +23931,8 @@
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
-        "x": 350,
-        "y": 400,
+        "x": 330,
+        "y": 420,
         "wires": []
     },
     {
@@ -23954,8 +23957,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 150,
-        "y": 380,
+        "x": 130,
+        "y": 400,
         "wires": [
             [
                 "0927626329e37e63"
@@ -23982,8 +23985,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 360,
-        "y": 460,
+        "x": 340,
+        "y": 480,
         "wires": [
             [
                 "4b5678bcc0710310"
@@ -24011,8 +24014,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 330,
-        "y": 520,
+        "x": 310,
+        "y": 540,
         "wires": [
             [
                 "356dc9191546f848"
@@ -24046,8 +24049,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 470,
-        "y": 560,
+        "x": 450,
+        "y": 580,
         "wires": [
             [
                 "f2478a4db59d0b8e"
@@ -24074,8 +24077,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 470,
-        "y": 600,
+        "x": 450,
+        "y": 620,
         "wires": [
             [
                 "f2478a4db59d0b8e"
@@ -24096,8 +24099,8 @@
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
-        "x": 770,
-        "y": 520,
+        "x": 750,
+        "y": 540,
         "wires": []
     },
     {
@@ -24110,8 +24113,8 @@
         "links": [
             "ec761bc5c44ae47d"
         ],
-        "x": 715,
-        "y": 560,
+        "x": 695,
+        "y": 580,
         "wires": []
     },
     {
@@ -24128,8 +24131,8 @@
         "format": "The IP address that this computer is assigned is used to determine where it is located and changes the \"Device Config\" as a result. It can be overrridden with the slider, but resets every minute.",
         "layout": "col-center",
         "className": "",
-        "x": 510,
-        "y": 360,
+        "x": 390,
+        "y": 340,
         "wires": []
     },
     {
@@ -24166,8 +24169,8 @@
         ],
         "outputs": 0,
         "cts": false,
-        "x": 1070,
-        "y": 340,
+        "x": 1050,
+        "y": 360,
         "wires": []
     },
     {
@@ -24190,8 +24193,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 610,
-        "y": 500,
+        "x": 590,
+        "y": 520,
         "wires": [
             [
                 "e7b21c8bad30732c",
@@ -24221,10 +24224,12 @@
         "reduceInit": "",
         "reduceInitType": "",
         "reduceFixup": "",
-        "x": 930,
-        "y": 320,
+        "x": 910,
+        "y": 340,
         "wires": [
-            []
+            [
+                "2bcbe017b5366a20"
+            ]
         ]
     },
     {
@@ -24239,11 +24244,10 @@
         "syntax": "mustache",
         "template": "{\n\"payload\" : {\n       \"item\" : \"Location\" , \n       \"value\": \"{{msg.payload}}\"\n},\n \n    \"parts\" : {\n        \"id\" : 1,\n        \"index\": 1 ,\n        \"count\" : 2\n    }\n}  \n",
         "output": "json",
-        "x": 760,
-        "y": 480,
+        "x": 740,
+        "y": 500,
         "wires": [
             [
-                "2bcbe017b5366a20",
                 "3f3c19418d428606",
                 "5dabc695c699e825"
             ]
@@ -24263,8 +24267,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1050,
-        "y": 460,
+        "x": 1030,
+        "y": 480,
         "wires": []
     },
     {
@@ -24289,8 +24293,8 @@
         "topic": "",
         "payload": "Test",
         "payloadType": "str",
-        "x": 610,
-        "y": 420,
+        "x": 590,
+        "y": 440,
         "wires": [
             [
                 "b31ed71913044737"
@@ -24324,12 +24328,67 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 810,
-        "y": 380,
+        "x": 790,
+        "y": 400,
         "wires": [
             [
                 "ed2f2b2cef43f412",
                 "5dabc695c699e825"
+            ]
+        ]
+    },
+    {
+        "id": "855f895038c74f58",
+        "type": "template",
+        "z": "805d289f.fd83a8",
+        "g": "50abd8f9327f05ea",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "json",
+        "syntax": "mustache",
+        "template": "{\n\"payload\" : {\n       \"item\" : \"IP Address\" , \n       \"value\": \"{{msg.payload}}\"\n},\n \n    \"parts\" : {\n        \"id\" : 2,\n        \"index\": 2 ,\n        \"count\" : 2\n    }\n}  \n",
+        "output": "json",
+        "x": 560,
+        "y": 340,
+        "wires": [
+            [
+                "2ce2e3d14ca5c3e8"
+            ]
+        ]
+    },
+    {
+        "id": "2ce2e3d14ca5c3e8",
+        "type": "change",
+        "z": "805d289f.fd83a8",
+        "g": "50abd8f9327f05ea",
+        "name": "promote payload",
+        "rules": [
+            {
+                "t": "set",
+                "p": "parts",
+                "pt": "msg",
+                "to": "payload.parts",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 730,
+        "y": 340,
+        "wires": [
+            [
+                "ed2f2b2cef43f412"
             ]
         ]
     },
