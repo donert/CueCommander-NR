@@ -997,7 +997,9 @@
             "8fa7a3df.960d6"
         ],
         "x": 44,
-        "y": 19
+        "y": 19,
+        "w": 902,
+        "h": 262
     },
     {
         "id": "1976ad4e.952673",
@@ -1960,7 +1962,9 @@
             "9e3a0b69d60efbc9"
         ],
         "x": 34,
-        "y": -1
+        "y": -1,
+        "w": 492,
+        "h": 382
     },
     {
         "id": "511ec5943fba0ae3",
@@ -1977,7 +1981,9 @@
             "a0fa3cbc9a9eb910"
         ],
         "x": 854,
-        "y": 739
+        "y": 739,
+        "w": 532,
+        "h": 122
     },
     {
         "id": "bcb4281ae3598805",
@@ -2012,7 +2018,9 @@
             "6c1ac10a65da12be"
         ],
         "x": 34,
-        "y": 399
+        "y": 399,
+        "w": 752,
+        "h": 582
     },
     {
         "id": "b04365528854e88a",
@@ -2034,7 +2042,9 @@
             "5e1b3a6eb4d3b552"
         ],
         "x": 34,
-        "y": 1479
+        "y": 1479,
+        "w": 772,
+        "h": 242
     },
     {
         "id": "5187317a14d88a88",
@@ -2071,7 +2081,9 @@
             "24673fa75db6941e"
         ],
         "x": 34,
-        "y": 999
+        "y": 999,
+        "w": 1092,
+        "h": 402
     },
     {
         "id": "5addd3a7c909e423",
@@ -2119,7 +2131,9 @@
             "86b22c9ddd563804"
         ],
         "x": 34,
-        "y": 1999
+        "y": 1999,
+        "w": 1032,
+        "h": 742
     },
     {
         "id": "6433aa0ec9372bde",
@@ -2147,7 +2161,9 @@
             "ec761bc5c44ae47d"
         ],
         "x": 34,
-        "y": 2879
+        "y": 2879,
+        "w": 732,
+        "h": 522
     },
     {
         "id": "43393c4fc3b775a7",
@@ -2167,7 +2183,9 @@
             "922a911ea01b4991"
         ],
         "x": 34,
-        "y": 1739
+        "y": 1739,
+        "w": 672,
+        "h": 242
     },
     {
         "id": "c681dc44e2d3bb1d",
@@ -2206,10 +2224,13 @@
             "356dc9191546f848",
             "2aa8fa39a8cce087",
             "e7b21c8bad30732c",
-            "eed5703287d35ad0"
+            "eed5703287d35ad0",
+            "dbb1afaee7dc8d02"
         ],
         "x": 54,
-        "y": 319
+        "y": 319,
+        "w": 872,
+        "h": 202
     },
     {
         "id": "77ffcbeb.3e5634",
@@ -3287,13 +3308,83 @@
         "className": ""
     },
     {
-        "id": "8233b53cccd4e64f",
+        "id": "c4d9efa42a4462e8",
         "type": "ui_spacer",
-        "z": "64cbf871.f282f8",
+        "z": "805d289f.fd83a8",
         "name": "spacer",
         "group": "081499cdb0e45d15",
+        "order": 3,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "5fdf34122d6b2692",
+        "type": "ui_spacer",
+        "z": "805d289f.fd83a8",
+        "name": "spacer",
+        "group": "081499cdb0e45d15",
+        "order": 6,
+        "width": 11,
+        "height": 1
+    },
+    {
+        "id": "b53af086a7e8ce75",
+        "type": "ui_spacer",
+        "z": "805d289f.fd83a8",
+        "name": "spacer",
+        "group": "2c5bf6ea177505f8",
+        "order": 2,
+        "width": 12,
+        "height": 1
+    },
+    {
+        "id": "3ba8b8bfd8cd348d",
+        "type": "ui_spacer",
+        "z": "805d289f.fd83a8",
+        "name": "spacer",
+        "group": "2c5bf6ea177505f8",
+        "order": 3,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "9a1189863f1b555f",
+        "type": "ui_spacer",
+        "z": "805d289f.fd83a8",
+        "name": "spacer",
+        "group": "2c5bf6ea177505f8",
         "order": 4,
-        "width": 16,
+        "width": 12,
+        "height": 1
+    },
+    {
+        "id": "eaa0ce99c0c10a63",
+        "type": "ui_spacer",
+        "z": "805d289f.fd83a8",
+        "name": "spacer",
+        "group": "2c5bf6ea177505f8",
+        "order": 5,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "b7dd02dd56f9204d",
+        "type": "ui_spacer",
+        "z": "805d289f.fd83a8",
+        "name": "spacer",
+        "group": "2c5bf6ea177505f8",
+        "order": 6,
+        "width": 12,
+        "height": 1
+    },
+    {
+        "id": "3aa44e5e84e8b57b",
+        "type": "ui_spacer",
+        "z": "805d289f.fd83a8",
+        "name": "spacer",
+        "group": "2c5bf6ea177505f8",
+        "order": 7,
+        "width": 2,
         "height": 1
     },
     {
@@ -24099,6 +24190,24 @@
         "wires": []
     },
     {
+        "id": "dbb1afaee7dc8d02",
+        "type": "ui_text",
+        "z": "805d289f.fd83a8",
+        "g": "50abd8f9327f05ea",
+        "group": "081499cdb0e45d15",
+        "order": 5,
+        "width": 6,
+        "height": 3,
+        "name": "",
+        "label": "text",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 650,
+        "y": 360,
+        "wires": []
+    },
+    {
         "id": "fdde3e7a.9360c",
         "type": "comment",
         "z": "4ab9df2b.7b3dd",
@@ -27237,7 +27346,7 @@
         "label": "Home|Church",
         "tooltip": "Home is left, Church is right",
         "group": "081499cdb0e45d15",
-        "order": 3,
+        "order": 4,
         "width": 4,
         "height": 1,
         "passthru": true,
