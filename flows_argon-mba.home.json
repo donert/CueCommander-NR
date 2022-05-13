@@ -24251,7 +24251,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "{ \"item\" : \"xxx\" , \"value\": {{payload}} }",
+        "template": "{ \"item\" : \"xxx\" , \"value\": \"{{payload}}\" }",
         "output": "str",
         "x": 760,
         "y": 480,
