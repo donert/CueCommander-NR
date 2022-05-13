@@ -24237,7 +24237,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "{\n \"payload\" :  \n         { \"item\" : \"Location\" , \n            \"value\": \"{{msg.payload}}\"\n        } \n}",
+        "template": "{\n    \"payload\" :  \n         { \"item\" : \"Location\" , \n            \"value\": \"{{msg.payload}}\"\n        } \n},\n{ \n    \"parts\" : {\n        \"id\" : 1\n        \"index\": 1 \n        \"count\" : 2\n    }\n}    \n",
         "output": "json",
         "x": 760,
         "y": 480,
