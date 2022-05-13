@@ -24232,7 +24232,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "[{ \"item\" : \"xxx\" , \"value\": {{payload}} }]",
+        "template": "[{ \"item\" : \"Location\" , \"value\": {{msg.payload}} }]",
         "output": "json",
         "x": 760,
         "y": 480,
