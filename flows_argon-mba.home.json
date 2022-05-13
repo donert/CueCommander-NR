@@ -2232,12 +2232,13 @@
             "b31ed71913044737",
             "5dabc695c699e825",
             "7485c8acf40ed3ef",
-            "2286c8f04eb8b25e"
+            "2286c8f04eb8b25e",
+            "3f3c19418d428606"
         ],
         "x": 34,
-        "y": 299,
+        "y": 279,
         "w": 1112,
-        "h": 342
+        "h": 362
     },
     {
         "id": "77ffcbeb.3e5634",
@@ -24221,8 +24222,8 @@
         "reduceInit": "",
         "reduceInitType": "",
         "reduceFixup": "",
-        "x": 890,
-        "y": 340,
+        "x": 930,
+        "y": 320,
         "wires": [
             []
         ]
@@ -24244,7 +24245,7 @@
         "wires": [
             [
                 "2bcbe017b5366a20",
-                "2286c8f04eb8b25e"
+                "3f3c19418d428606"
             ]
         ]
     },
@@ -24322,6 +24323,41 @@
             [
                 "ed2f2b2cef43f412",
                 "5dabc695c699e825"
+            ]
+        ]
+    },
+    {
+        "id": "3f3c19418d428606",
+        "type": "change",
+        "z": "805d289f.fd83a8",
+        "g": "50abd8f9327f05ea",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.paylod",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "parts",
+                "pt": "msg",
+                "to": "payload.parts",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 780,
+        "y": 440,
+        "wires": [
+            [
+                "2286c8f04eb8b25e"
             ]
         ]
     },
