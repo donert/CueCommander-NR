@@ -24204,18 +24204,22 @@
         "type": "join",
         "z": "805d289f.fd83a8",
         "g": "50abd8f9327f05ea",
-        "name": "",
+        "name": "Union",
         "mode": "auto",
-        "build": "object",
+        "build": "array",
         "property": "payload",
         "propertyType": "msg",
         "key": "topic",
         "joiner": "\\n",
         "joinerType": "str",
-        "accumulate": "false",
+        "accumulate": false,
         "timeout": "",
         "count": "",
         "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
         "x": 650,
         "y": 360,
         "wires": [
@@ -24232,14 +24236,15 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "[{ \"item\" : \"Location\" , \"value\": {{msg.payload}} }]",
+        "template": "{\"parts\" : 1,\n \"payload\" : {\n        [{ \"item\" : \"Location\" , \n            \"value\": {{msg.payload}} }]\n}\n}",
         "output": "json",
         "x": 760,
         "y": 480,
         "wires": [
             [
                 "2bcbe017b5366a20",
-                "5dabc695c699e825"
+                "5dabc695c699e825",
+                "ed2f2b2cef43f412"
             ]
         ]
     },
