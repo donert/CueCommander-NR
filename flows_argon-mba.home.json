@@ -24302,20 +24302,20 @@
         "type": "change",
         "z": "805d289f.fd83a8",
         "g": "50abd8f9327f05ea",
-        "name": "",
+        "name": "promote payload",
         "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "payload.payload",
-                "tot": "msg"
-            },
             {
                 "t": "set",
                 "p": "parts",
                 "pt": "msg",
                 "to": "payload.parts",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.payload",
                 "tot": "msg"
             }
         ],
@@ -24324,8 +24324,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 800,
-        "y": 420,
+        "x": 810,
+        "y": 380,
         "wires": [
             [
                 "ed2f2b2cef43f412",
