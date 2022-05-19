@@ -24317,8 +24317,8 @@
         "fieldType": "msg",
         "format": "json",
         "syntax": "mustache",
-        "template": "{\n\"payload\" : {\n       \"item\" : \"Location\" , \n       \"value\": \"{{msg.payload}}\"\n},\n \n    \"parts\" : {\n        \"id\" : 1,\n        \"index\": 1 ,\n        \"count\" : 2\n    }\n}  \n",
-        "output": "json",
+        "template": "{\n\"payload\" : {\n       \"item\" : \"Location\" , \n       \"value\": {{msg.payload}}\n},\n \n    \"parts\" : {\n        \"id\" : 1,\n        \"index\": 1 ,\n        \"count\" : 2\n    }\n}  \n",
+        "output": "yaml",
         "x": 740,
         "y": 500,
         "wires": [
