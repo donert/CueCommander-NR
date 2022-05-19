@@ -24422,7 +24422,7 @@
         "fieldType": "msg",
         "format": "json",
         "syntax": "mustache",
-        "template": "{\n\"payload\" : {\n       \"item\" : \"IP Address\" , \n       \"value\": \"{{msg.payload}}\"\n},\n \n    \"parts\" : {\n        \"id\" : 2,\n        \"index\": 2 ,\n        \"count\" : 2\n    }\n}  \n",
+        "template": "{\n\"payload\" : {\n       \"item\" : \"IP Address\" , \n       \"value\": \"{{payload}}\"\n},\n \n    \"parts\" : {\n        \"id\" : 2,\n        \"index\": 2 ,\n        \"count\" : 2\n    }\n}  \n",
         "output": "json",
         "x": 560,
         "y": 340,
