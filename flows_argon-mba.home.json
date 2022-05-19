@@ -23980,7 +23980,7 @@
         "oldrc": false,
         "name": "get ip addr",
         "x": 130,
-        "y": 460,
+        "y": 420,
         "wires": [
             [
                 "99902afff0c0b301",
@@ -24032,7 +24032,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 130,
-        "y": 400,
+        "y": 340,
         "wires": [
             [
                 "0927626329e37e63"
@@ -24205,7 +24205,7 @@
         "format": "The IP address that this computer is assigned is used to determine where it is located and changes the \"Device Config\" as a result. It can be overrridden with the slider, but resets every minute.",
         "layout": "col-center",
         "className": "",
-        "x": 390,
+        "x": 310,
         "y": 340,
         "wires": []
     },
@@ -24323,8 +24323,7 @@
         "y": 500,
         "wires": [
             [
-                "3f3c19418d428606",
-                "5dabc695c699e825"
+                "3f3c19418d428606"
             ]
         ]
     },
@@ -24463,7 +24462,8 @@
         "y": 340,
         "wires": [
             [
-                "ed2f2b2cef43f412"
+                "ed2f2b2cef43f412",
+                "5dabc695c699e825"
             ]
         ]
     },
