@@ -2267,13 +2267,11 @@
         },
         "nodes": [
             "0927626329e37e63",
-            "99902afff0c0b301",
             "75f3c41a6d48ca8f",
             "ea3cda0ff378b0d1",
             "4b5678bcc0710310",
             "356dc9191546f848",
             "2aa8fa39a8cce087",
-            "e7b21c8bad30732c",
             "eed5703287d35ad0",
             "dbb1afaee7dc8d02",
             "2bcbe017b5366a20",
@@ -3389,6 +3387,16 @@
         "width": 20,
         "collapse": false,
         "className": ""
+    },
+    {
+        "id": "ac1b363e78daeb85",
+        "type": "ui_spacer",
+        "z": "805d289f.fd83a8",
+        "name": "spacer",
+        "group": "081499cdb0e45d15",
+        "order": 3,
+        "width": 5,
+        "height": 1
     },
     {
         "id": "c6213b74.2cce48",
@@ -23983,31 +23991,12 @@
         "y": 420,
         "wires": [
             [
-                "99902afff0c0b301",
                 "ea3cda0ff378b0d1",
                 "855f895038c74f58"
             ],
             [],
             []
         ]
-    },
-    {
-        "id": "99902afff0c0b301",
-        "type": "ui_text",
-        "z": "805d289f.fd83a8",
-        "g": "50abd8f9327f05ea",
-        "group": "081499cdb0e45d15",
-        "order": 1,
-        "width": 5,
-        "height": 2,
-        "name": "",
-        "label": "IP Address:",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 330,
-        "y": 420,
-        "wires": []
     },
     {
         "id": "75f3c41a6d48ca8f",
@@ -24160,24 +24149,6 @@
         ]
     },
     {
-        "id": "e7b21c8bad30732c",
-        "type": "ui_text",
-        "z": "805d289f.fd83a8",
-        "g": "50abd8f9327f05ea",
-        "group": "081499cdb0e45d15",
-        "order": 2,
-        "width": 5,
-        "height": 1,
-        "name": "Where am I",
-        "label": "Operating @",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 750,
-        "y": 540,
-        "wires": []
-    },
-    {
         "id": "eed5703287d35ad0",
         "type": "link out",
         "z": "805d289f.fd83a8",
@@ -24197,8 +24168,8 @@
         "z": "805d289f.fd83a8",
         "g": "50abd8f9327f05ea",
         "group": "081499cdb0e45d15",
-        "order": 3,
-        "width": 9,
+        "order": 2,
+        "width": 15,
         "height": 2,
         "name": "help",
         "label": "",
@@ -24216,7 +24187,7 @@
         "g": "50abd8f9327f05ea",
         "group": "081499cdb0e45d15",
         "name": "",
-        "order": 7,
+        "order": 4,
         "width": 0,
         "height": 0,
         "columns": [
@@ -24271,7 +24242,6 @@
         "y": 520,
         "wires": [
             [
-                "e7b21c8bad30732c",
                 "eed5703287d35ad0",
                 "b31ed71913044737"
             ]
@@ -27654,7 +27624,7 @@
         "label": "Home|Church",
         "tooltip": "Home is left, Church is right",
         "group": "081499cdb0e45d15",
-        "order": 5,
+        "order": 1,
         "width": 5,
         "height": 1,
         "passthru": true,
