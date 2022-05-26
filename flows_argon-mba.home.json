@@ -13896,7 +13896,7 @@
         "g": "5a3761.bcd618a",
         "name": "",
         "network": "13e3cbbba82ff43c",
-        "outputMode": "supported",
+        "outputMode": "all",
         "sendTime": "yes",
         "sendInitialData": "yes",
         "sendStatusUpdates": "yes",
