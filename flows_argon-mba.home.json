@@ -2539,6 +2539,25 @@
         "y": 39
     },
     {
+        "id": "dacfcd47aec0c05a",
+        "type": "group",
+        "z": "96ac9944.5b4dd8",
+        "name": "Random Camera Selector",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "4bcb8f255762a052",
+            "74b12019ac85788b",
+            "6b7c32af476c0feb",
+            "a7cf0a5119df01fa"
+        ],
+        "x": 34,
+        "y": 3919,
+        "w": 672,
+        "h": 162
+    },
+    {
         "id": "b36c9a8b.092df8",
         "type": "ui_tab",
         "name": "Lights",
@@ -15570,6 +15589,7 @@
         "id": "4bcb8f255762a052",
         "type": "inject",
         "z": "96ac9944.5b4dd8",
+        "g": "dacfcd47aec0c05a",
         "name": "30 Seconds",
         "props": [
             {
@@ -15586,15 +15606,14 @@
         "x": 150,
         "y": 3960,
         "wires": [
-            [
-                "74b12019ac85788b"
-            ]
+            []
         ]
     },
     {
         "id": "74b12019ac85788b",
         "type": "function",
         "z": "96ac9944.5b4dd8",
+        "g": "dacfcd47aec0c05a",
         "name": "",
         "func": "MIN=5\nMAX=8\n\nmsg.payload =function getRandomInt(min = MIN, max = MAX) {\n\n\n  min = Math.ceil(min);\n\n\n  max = Math.floor(max);\n\n\n  return Math.floor(Math.random() * (max - min)) + min;\n\n\n}();\n\n\nreturn msg;",
         "outputs": 1,
@@ -15615,6 +15634,7 @@
         "id": "6b7c32af476c0feb",
         "type": "debug",
         "z": "96ac9944.5b4dd8",
+        "g": "dacfcd47aec0c05a",
         "name": "",
         "active": true,
         "tosidebar": true,
@@ -15648,6 +15668,7 @@
         "id": "a7cf0a5119df01fa",
         "type": "link out",
         "z": "96ac9944.5b4dd8",
+        "g": "dacfcd47aec0c05a",
         "name": "Random Camera",
         "mode": "link",
         "links": [
