@@ -15595,7 +15595,7 @@
         "type": "function",
         "z": "96ac9944.5b4dd8",
         "name": "",
-        "func": "MIN=5\nMAX=7\n\nmsg.payload =function getRandomInt(min = MIN, max = MAX) {\n\n\n  min = Math.ceil(min);\n\n\n  max = Math.floor(max);\n\n\n  return Math.floor(Math.random() * (max - min)) + min;\n\n\n}();\n\n\nreturn msg;",
+        "func": "MIN=5\nMAX=8\n\nmsg.payload =function getRandomInt(min = MIN, max = MAX) {\n\n\n  min = Math.ceil(min);\n\n\n  max = Math.floor(max);\n\n\n  return Math.floor(Math.random() * (max - min)) + min;\n\n\n}();\n\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
