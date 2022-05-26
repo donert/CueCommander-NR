@@ -286,12 +286,13 @@
             "86ffe856.908688",
             "aed3ff81.48fe1",
             "ad7a26b8.1d20a8",
-            "a04e4fb67460d164"
+            "a04e4fb67460d164",
+            "e6a0700376ebef9d"
         ],
-        "x": 34,
+        "x": 14,
         "y": 119,
-        "w": 892,
-        "h": 162
+        "w": 912,
+        "h": 182
     },
     {
         "id": "d8d55245.49726",
@@ -15479,6 +15480,32 @@
         "wires": [
             [
                 "9871bf8e.2fa56"
+            ]
+        ]
+    },
+    {
+        "id": "e6a0700376ebef9d",
+        "type": "inject",
+        "z": "96ac9944.5b4dd8",
+        "g": "ba4bbd3e.8196d",
+        "name": "getVersion",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"cmd\":\"version\",\"data\":{}}",
+        "payloadType": "json",
+        "x": 120,
+        "y": 260,
+        "wires": [
+            [
+                "3adece22.fbc0d2"
             ]
         ]
     },
