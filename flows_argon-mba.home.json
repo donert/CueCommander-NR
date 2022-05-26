@@ -192,7 +192,8 @@
             "dd24c6cb.1a3af8",
             "c2028c1f.14b4d",
             "be807d43.8defe",
-            "fa9f3bf0.23fc08"
+            "fa9f3bf0.23fc08",
+            "0995226901628529"
         ],
         "x": 34,
         "y": 379,
@@ -15605,7 +15606,8 @@
         "y": 3960,
         "wires": [
             [
-                "6b7c32af476c0feb"
+                "6b7c32af476c0feb",
+                "a7cf0a5119df01fa"
             ]
         ]
     },
@@ -15623,6 +15625,36 @@
         "statusType": "auto",
         "x": 590,
         "y": 3960,
+        "wires": []
+    },
+    {
+        "id": "0995226901628529",
+        "type": "link in",
+        "z": "96ac9944.5b4dd8",
+        "g": "77c46321.0fddbc",
+        "name": "ProgramInput",
+        "links": [
+            "a7cf0a5119df01fa"
+        ],
+        "x": 625,
+        "y": 760,
+        "wires": [
+            [
+                "3af4f9c3.3fa406"
+            ]
+        ]
+    },
+    {
+        "id": "a7cf0a5119df01fa",
+        "type": "link out",
+        "z": "96ac9944.5b4dd8",
+        "name": "Random Camera",
+        "mode": "link",
+        "links": [
+            "0995226901628529"
+        ],
+        "x": 495,
+        "y": 4040,
         "wires": []
     },
     {
