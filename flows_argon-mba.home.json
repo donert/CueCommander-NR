@@ -3336,7 +3336,7 @@
         "id": "13e3cbbba82ff43c",
         "type": "atem-network",
         "name": "",
-        "ipAddress": "192.168.0.192"
+        "ipAddress": "192.168.0.191"
     },
     {
         "id": "c6213b74.2cce48",
@@ -13910,7 +13910,7 @@
         "network": "13e3cbbba82ff43c",
         "outputMode": "all",
         "sendTime": "no",
-        "sendInitialData": "no",
+        "sendInitialData": "yes",
         "sendStatusUpdates": "no",
         "x": 250,
         "y": 2840,
