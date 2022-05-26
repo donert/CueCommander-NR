@@ -12329,7 +12329,7 @@
         "bgcolor": "",
         "className": "",
         "icon": "",
-        "payload": "{\"cmd\":\"performCut\",\"data\":{\"ME\":1}}",
+        "payload": "{\"cmd\":\"performCut\",\"data\":{\"ME\":0}}",
         "payloadType": "json",
         "topic": "",
         "topicType": "str",
