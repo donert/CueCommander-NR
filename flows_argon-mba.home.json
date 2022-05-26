@@ -285,11 +285,12 @@
             "3adece22.fbc0d2",
             "86ffe856.908688",
             "aed3ff81.48fe1",
-            "ad7a26b8.1d20a8"
+            "ad7a26b8.1d20a8",
+            "a04e4fb67460d164"
         ],
-        "x": 14,
+        "x": 34,
         "y": 119,
-        "w": 672,
+        "w": 892,
         "h": 162
     },
     {
@@ -12332,7 +12333,7 @@
         "order": 1,
         "width": 0,
         "height": 0,
-        "passthru": false,
+        "passthru": true,
         "label": "Cut",
         "tooltip": "",
         "color": "",
@@ -12343,7 +12344,7 @@
         "payloadType": "json",
         "topic": "",
         "topicType": "str",
-        "x": 90,
+        "x": 330,
         "y": 160,
         "wires": [
             [
@@ -12370,7 +12371,7 @@
         "payload": "{\"cmd\":\"performAuto\",\"data\":{\"ME\":0}}",
         "payloadType": "json",
         "topic": "",
-        "x": 90,
+        "x": 330,
         "y": 200,
         "wires": [
             [
@@ -13892,7 +13893,7 @@
         "offvalueType": "str",
         "officon": "",
         "offcolor": "",
-        "x": 100,
+        "x": 340,
         "y": 240,
         "wires": [
             [
@@ -13951,7 +13952,7 @@
         "links": [
             "1ac81781.75b738"
         ],
-        "x": 495,
+        "x": 735,
         "y": 160,
         "wires": []
     },
@@ -14779,7 +14780,7 @@
         "syntax": "mustache",
         "template": " {\n    \"cmd\": \"downstreamKeyer\",\n    \"data\": {\n        \"id\": 0,\n        \"state\": {{payload}}\n    }\n}",
         "output": "str",
-        "x": 290,
+        "x": 530,
         "y": 240,
         "wires": [
             [
@@ -14802,7 +14803,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 560,
+        "x": 800,
         "y": 240,
         "wires": []
     },
@@ -15450,6 +15451,36 @@
         "x": 910,
         "y": 3720,
         "wires": []
+    },
+    {
+        "id": "a04e4fb67460d164",
+        "type": "inject",
+        "z": "96ac9944.5b4dd8",
+        "g": "ba4bbd3e.8196d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 160,
+        "wires": [
+            [
+                "9871bf8e.2fa56"
+            ]
+        ]
     },
     {
         "id": "4708b43d.b63d1c",
