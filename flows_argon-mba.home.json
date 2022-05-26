@@ -13899,9 +13899,9 @@
         "name": "",
         "network": "13e3cbbba82ff43c",
         "outputMode": "all",
-        "sendTime": "yes",
-        "sendInitialData": "yes",
-        "sendStatusUpdates": "yes",
+        "sendTime": "no",
+        "sendInitialData": "no",
+        "sendStatusUpdates": "no",
         "x": 250,
         "y": 2840,
         "wires": [
