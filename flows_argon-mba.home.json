@@ -15566,6 +15566,66 @@
         ]
     },
     {
+        "id": "4bcb8f255762a052",
+        "type": "inject",
+        "z": "96ac9944.5b4dd8",
+        "name": "30 Seconds",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "30",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 3960,
+        "wires": [
+            [
+                "74b12019ac85788b"
+            ]
+        ]
+    },
+    {
+        "id": "74b12019ac85788b",
+        "type": "function",
+        "z": "96ac9944.5b4dd8",
+        "name": "",
+        "func": "MIN=5\nMAX=7\n\nmsg.payload =function getRandomInt(min = MIN, max = MAX) {\n\n\n  min = Math.ceil(min);\n\n\n  max = Math.floor(max);\n\n\n  return Math.floor(Math.random() * (max - min)) + min;\n\n\n}();\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 3960,
+        "wires": [
+            [
+                "6b7c32af476c0feb"
+            ]
+        ]
+    },
+    {
+        "id": "6b7c32af476c0feb",
+        "type": "debug",
+        "z": "96ac9944.5b4dd8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 590,
+        "y": 3960,
+        "wires": []
+    },
+    {
         "id": "4708b43d.b63d1c",
         "type": "http request",
         "z": "64cbf871.f282f8",
