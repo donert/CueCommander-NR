@@ -12327,10 +12327,12 @@
         "tooltip": "",
         "color": "",
         "bgcolor": "",
+        "className": "",
         "icon": "",
-        "payload": "{\"cmd\":\"performCut\",\"data\":{\"ME\":0}}",
+        "payload": "{\"cmd\":\"performCut\",\"data\":{\"ME\":1}}",
         "payloadType": "json",
         "topic": "",
+        "topicType": "str",
         "x": 90,
         "y": 160,
         "wires": [
