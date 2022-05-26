@@ -12727,7 +12727,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "{\n    \"payload\": {\n        \"cmd\": \"programInput\",\n        \"data\": {\n            \"ME\": 0,\n            \"videoSource\": {\n                \"id\": {{payload}}\n            }\n        }\n    }\n}",
+        "template": "  {\n        \"cmd\": \"programInput\",\n        \"data\": {\n            \"ME\": 0,\n            \"videoSource\": {\n                \"id\": {{payload}}\n            }\n        }\n    }\n ",
         "output": "json",
         "x": 740,
         "y": 680,
