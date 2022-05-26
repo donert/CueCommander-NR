@@ -14784,7 +14784,7 @@
         "format": "handlebars",
         "syntax": "mustache",
         "template": " {\n    \"cmd\": \"downstreamKeyer\",\n    \"data\": {\n        \"id\": 0,\n        \"state\": {{payload}}\n    }\n}",
-        "output": "str",
+        "output": "json",
         "x": 550,
         "y": 240,
         "wires": [
