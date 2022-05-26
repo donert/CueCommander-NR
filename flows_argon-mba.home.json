@@ -287,12 +287,13 @@
             "aed3ff81.48fe1",
             "ad7a26b8.1d20a8",
             "a04e4fb67460d164",
-            "e6a0700376ebef9d"
+            "e6a0700376ebef9d",
+            "94882785802a7a37"
         ],
-        "x": 14,
-        "y": 119,
+        "x": 34,
+        "y": 79,
         "w": 912,
-        "h": 182
+        "h": 202
     },
     {
         "id": "d8d55245.49726",
@@ -12345,7 +12346,7 @@
         "payloadType": "json",
         "topic": "",
         "topicType": "str",
-        "x": 330,
+        "x": 350,
         "y": 160,
         "wires": [
             [
@@ -12372,7 +12373,7 @@
         "payload": "{\"cmd\":\"performAuto\",\"data\":{\"ME\":0}}",
         "payloadType": "json",
         "topic": "",
-        "x": 330,
+        "x": 350,
         "y": 200,
         "wires": [
             [
@@ -13894,7 +13895,7 @@
         "offvalueType": "str",
         "officon": "",
         "offcolor": "",
-        "x": 340,
+        "x": 360,
         "y": 240,
         "wires": [
             [
@@ -13952,7 +13953,7 @@
         "links": [
             "1ac81781.75b738"
         ],
-        "x": 735,
+        "x": 755,
         "y": 160,
         "wires": []
     },
@@ -14780,7 +14781,7 @@
         "syntax": "mustache",
         "template": " {\n    \"cmd\": \"downstreamKeyer\",\n    \"data\": {\n        \"id\": 0,\n        \"state\": {{payload}}\n    }\n}",
         "output": "str",
-        "x": 530,
+        "x": 550,
         "y": 240,
         "wires": [
             [
@@ -14803,7 +14804,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 800,
+        "x": 820,
         "y": 240,
         "wires": []
     },
@@ -15474,7 +15475,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 140,
+        "x": 160,
         "y": 160,
         "wires": [
             [
@@ -15500,11 +15501,41 @@
         "topic": "",
         "payload": "{\"cmd\":\"version\",\"data\":{}}",
         "payloadType": "json",
-        "x": 120,
-        "y": 260,
+        "x": 360,
+        "y": 120,
         "wires": [
             [
                 "3adece22.fbc0d2"
+            ]
+        ]
+    },
+    {
+        "id": "94882785802a7a37",
+        "type": "inject",
+        "z": "96ac9944.5b4dd8",
+        "g": "ba4bbd3e.8196d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 220,
+        "wires": [
+            [
+                "86ffe856.908688"
             ]
         ]
     },
