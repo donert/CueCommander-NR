@@ -28537,8 +28537,8 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "",
-                "tot": "str"
+                "to": "payload",
+                "tot": "msg"
             }
         ],
         "action": "",
