@@ -2719,11 +2719,12 @@
             "ce30b7b70ab0b1e9",
             "d5e87bb8c016a097",
             "836fdf46eff96526",
-            "e1cb76ab134cbad5"
+            "e1cb76ab134cbad5",
+            "f05a4895472c62d5"
         ],
-        "x": 4,
+        "x": 24,
         "y": 4179,
-        "w": 1102,
+        "w": 1142,
         "h": 242
     },
     {
@@ -15875,7 +15876,7 @@
         "links": [
             "03ccce0cf990ff92"
         ],
-        "x": 225,
+        "x": 245,
         "y": 4260,
         "wires": [
             [
@@ -15890,7 +15891,7 @@
         "g": "2e267aabc8e94e20",
         "name": "Video Cues",
         "info": "Vx:ProgramInput:x\nVx:PreviewInput:x\nVx:UpStreamKey:on :off\nVx:Macro:x",
-        "x": 100,
+        "x": 120,
         "y": 4220,
         "wires": []
     },
@@ -15912,7 +15913,7 @@
         "topic": "",
         "payload": "Vx:ProgramInput:1",
         "payloadType": "str",
-        "x": 150,
+        "x": 170,
         "y": 4340,
         "wires": [
             [
@@ -15940,7 +15941,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 340,
+        "x": 360,
         "y": 4300,
         "wires": [
             [
@@ -15960,7 +15961,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 480,
+        "x": 500,
         "y": 4300,
         "wires": [
             [
@@ -16001,7 +16002,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 4,
-        "x": 630,
+        "x": 650,
         "y": 4300,
         "wires": [
             [
@@ -16011,7 +16012,9 @@
                 "e1cb76ab134cbad5"
             ],
             [],
-            []
+            [
+                "f05a4895472c62d5"
+            ]
         ]
     },
     {
@@ -16032,7 +16035,7 @@
         "topic": "",
         "payload": "Vx:PreviewInput:2",
         "payloadType": "str",
-        "x": 150,
+        "x": 170,
         "y": 4380,
         "wires": [
             [
@@ -16053,8 +16056,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 990,
-        "y": 4300,
+        "x": 1050,
+        "y": 4320,
         "wires": []
     },
     {
@@ -16069,7 +16072,7 @@
         "syntax": "mustache",
         "template": "{\n\"cmd\": \"ProgramInput\"   ,\n\"data\":{\"ME\":0,\n        \"videoSource\":{\n            \"id\": {{payload}} \n            }\n        }\n}",
         "output": "json",
-        "x": 800,
+        "x": 820,
         "y": 4280,
         "wires": [
             [
@@ -16089,8 +16092,28 @@
         "syntax": "mustache",
         "template": "{\n\"cmd\": \"PreviewInput\"   ,\n\"data\":{\"ME\":0,\n        \"videoSource\":{\n            \"id\": {{payload}} \n            }\n        }\n}",
         "output": "json",
-        "x": 810,
+        "x": 830,
         "y": 4320,
+        "wires": [
+            [
+                "d5e87bb8c016a097"
+            ]
+        ]
+    },
+    {
+        "id": "f05a4895472c62d5",
+        "type": "template",
+        "z": "96ac9944.5b4dd8",
+        "g": "2e267aabc8e94e20",
+        "name": "Upstream Keyer",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": " {\n    \"cmd\": \"upstreamKeyer\",\n    \"data\": {\n        \"ME\": 0,\n        \"id\": 0,\n        \"state\": {{payload}}\n    }\n}",
+        "output": "json",
+        "x": 860,
+        "y": 4360,
         "wires": [
             [
                 "d5e87bb8c016a097"
