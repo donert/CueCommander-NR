@@ -2726,7 +2726,7 @@
         ],
         "x": 14,
         "y": 4179,
-        "w": 1152,
+        "w": 1232,
         "h": 322
     },
     {
@@ -16058,7 +16058,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1050,
+        "x": 1130,
         "y": 4320,
         "wires": []
     },
@@ -16067,14 +16067,14 @@
         "type": "template",
         "z": "96ac9944.5b4dd8",
         "g": "2e267aabc8e94e20",
-        "name": "format",
+        "name": "format ProgramInput",
         "field": "payload",
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
         "template": "{\n\"cmd\": \"ProgramInput\"   ,\n\"data\":{\"ME\":0,\n        \"videoSource\":{\n            \"id\": {{payload}} \n            }\n        }\n}",
         "output": "json",
-        "x": 820,
+        "x": 870,
         "y": 4280,
         "wires": [
             [
@@ -16087,14 +16087,14 @@
         "type": "template",
         "z": "96ac9944.5b4dd8",
         "g": "2e267aabc8e94e20",
-        "name": "format",
+        "name": "format PreviewInput",
         "field": "payload",
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
         "template": "{\n\"cmd\": \"PreviewInput\"   ,\n\"data\":{\"ME\":0,\n        \"videoSource\":{\n            \"id\": {{payload}} \n            }\n        }\n}",
         "output": "json",
-        "x": 830,
+        "x": 880,
         "y": 4320,
         "wires": [
             [
@@ -16107,14 +16107,14 @@
         "type": "template",
         "z": "96ac9944.5b4dd8",
         "g": "2e267aabc8e94e20",
-        "name": "Upstream Keyer",
+        "name": "format Upstream Keyer",
         "field": "payload",
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": " {\n    \"cmd\": \"upstreamKeyer\",\n    \"data\": {\n        \"ME\": 0,\n        \"id\": 0,\n        \"state\": {{payload}}\n    }\n}",
+        "template": " {\n    \"cmd\": \"upstreamKeyer\",\n    \"data\": {\n        \"ME\": 0,\n        \"id\": 0,\n        \"state\": {{paylad}}\n    }\n}",
         "output": "json",
-        "x": 860,
+        "x": 890,
         "y": 4360,
         "wires": [
             [
