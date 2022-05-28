@@ -2722,12 +2722,14 @@
             "e1cb76ab134cbad5",
             "f05a4895472c62d5",
             "a4230f95d7d7e26b",
-            "6a737fdfa8aafb93"
+            "6a737fdfa8aafb93",
+            "bde8554cd2d28fbc",
+            "f2abfc7dd8e41052"
         ],
         "x": 14,
         "y": 4179,
         "w": 1232,
-        "h": 322
+        "h": 362
     },
     {
         "id": "b36c9a8b.092df8",
@@ -16013,7 +16015,9 @@
             [
                 "e1cb76ab134cbad5"
             ],
-            [],
+            [
+                "bde8554cd2d28fbc"
+            ],
             [
                 "f05a4895472c62d5"
             ]
@@ -16115,7 +16119,7 @@
         "template": " {\n    \"cmd\": \"upstreamKeyer\",\n    \"data\": {\n        \"ME\": 0,\n        \"id\": 0,\n        \"state\": \"{{payload}}\"\n    }\n}",
         "output": "json",
         "x": 890,
-        "y": 4360,
+        "y": 4420,
         "wires": [
             [
                 "d5e87bb8c016a097"
@@ -16168,6 +16172,53 @@
         "payloadType": "str",
         "x": 180,
         "y": 4460,
+        "wires": [
+            [
+                "383915c7d2b2e69a"
+            ]
+        ]
+    },
+    {
+        "id": "bde8554cd2d28fbc",
+        "type": "template",
+        "z": "96ac9944.5b4dd8",
+        "g": "2e267aabc8e94e20",
+        "name": "format Macro",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{\n    \"cmd\": \"macroAction\",\n    \"data\": {\n        \"macroId\": \"{{payload}}\" ,\n        \"action\": \"run\"\n    }\n}",
+        "output": "json",
+        "x": 860,
+        "y": 4360,
+        "wires": [
+            [
+                "d5e87bb8c016a097"
+            ]
+        ],
+        "info": "The inbound payload is the macro number"
+    },
+    {
+        "id": "f2abfc7dd8e41052",
+        "type": "inject",
+        "z": "96ac9944.5b4dd8",
+        "g": "2e267aabc8e94e20",
+        "name": "test vx macro 1 ",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Vx:Macro:2",
+        "payloadType": "str",
+        "x": 220,
+        "y": 4500,
         "wires": [
             [
                 "383915c7d2b2e69a"
