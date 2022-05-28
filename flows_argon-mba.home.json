@@ -2715,12 +2715,13 @@
             "3bb5b2a8b67473d9",
             "383915c7d2b2e69a",
             "32660b99d8ee5118",
-            "770b41d2fd905b93"
+            "770b41d2fd905b93",
+            "ce30b7b70ab0b1e9"
         ],
-        "x": 44,
-        "y": 4139,
+        "x": 34,
+        "y": 4179,
         "w": 702,
-        "h": 202
+        "h": 242
     },
     {
         "id": "b36c9a8b.092df8",
@@ -15871,8 +15872,8 @@
         "links": [
             "03ccce0cf990ff92"
         ],
-        "x": 265,
-        "y": 4220,
+        "x": 255,
+        "y": 4260,
         "wires": [
             [
                 "383915c7d2b2e69a"
@@ -15886,8 +15887,8 @@
         "g": "2e267aabc8e94e20",
         "name": "Video Cues",
         "info": "Vx:ProgramInput:x\nVx:PreviewInput:x\nVx:UpstreamKey:on :off\nVx:Macro:x",
-        "x": 140,
-        "y": 4180,
+        "x": 130,
+        "y": 4220,
         "wires": []
     },
     {
@@ -15908,8 +15909,8 @@
         "topic": "",
         "payload": "Vx:ProgramInput:1",
         "payloadType": "str",
-        "x": 190,
-        "y": 4300,
+        "x": 180,
+        "y": 4340,
         "wires": [
             [
                 "383915c7d2b2e69a"
@@ -15936,8 +15937,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 380,
-        "y": 4260,
+        "x": 370,
+        "y": 4300,
         "wires": [
             [
                 "32660b99d8ee5118"
@@ -15956,8 +15957,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 520,
-        "y": 4260,
+        "x": 510,
+        "y": 4300,
         "wires": [
             [
                 "770b41d2fd905b93"
@@ -15982,10 +15983,36 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 670,
-        "y": 4260,
+        "x": 660,
+        "y": 4300,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "ce30b7b70ab0b1e9",
+        "type": "inject",
+        "z": "96ac9944.5b4dd8",
+        "g": "2e267aabc8e94e20",
+        "name": "test vx preview input 2",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Vx:PreviewInput:2",
+        "payloadType": "str",
+        "x": 180,
+        "y": 4380,
+        "wires": [
+            [
+                "383915c7d2b2e69a"
+            ]
         ]
     },
     {
