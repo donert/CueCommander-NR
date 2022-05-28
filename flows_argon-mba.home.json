@@ -16059,14 +16059,14 @@
         "type": "template",
         "z": "96ac9944.5b4dd8",
         "g": "2e267aabc8e94e20",
-        "name": "",
+        "name": "format",
         "field": "payload",
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
         "template": "{\n\"cmd\": {msg.topic}  ,\n\"data\":{\"ME\":0,\n        \"videoSource\":{\"id\":{payload} }\n        }\n}",
         "output": "json",
-        "x": 840,
+        "x": 830,
         "y": 4280,
         "wires": [
             [
