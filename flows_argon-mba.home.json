@@ -16064,7 +16064,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "{\n\"cmd\": {topic}  ,\n\"data\":{\"ME\":0,\n        \"videoSource\":{\"id\":{payload} }\n        }\n}",
+        "template": "{\n\"cmd\": {msg.topic}  ,\n\"data\":{\"ME\":0,\n        \"videoSource\":{\"id\":{payload} }\n        }\n}",
         "output": "json",
         "x": 840,
         "y": 4280,
