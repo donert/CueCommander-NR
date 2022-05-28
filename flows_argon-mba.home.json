@@ -2720,7 +2720,7 @@
             "d5e87bb8c016a097",
             "836fdf46eff96526"
         ],
-        "x": 34,
+        "x": 4,
         "y": 4179,
         "w": 932,
         "h": 242
@@ -15874,7 +15874,7 @@
         "links": [
             "03ccce0cf990ff92"
         ],
-        "x": 255,
+        "x": 225,
         "y": 4260,
         "wires": [
             [
@@ -15889,7 +15889,7 @@
         "g": "2e267aabc8e94e20",
         "name": "Video Cues",
         "info": "Vx:ProgramInput:x\nVx:PreviewInput:x\nVx:UpStreamKey:on :off\nVx:Macro:x",
-        "x": 130,
+        "x": 100,
         "y": 4220,
         "wires": []
     },
@@ -15911,7 +15911,7 @@
         "topic": "",
         "payload": "Vx:ProgramInput:1",
         "payloadType": "str",
-        "x": 180,
+        "x": 150,
         "y": 4340,
         "wires": [
             [
@@ -15939,7 +15939,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 370,
+        "x": 340,
         "y": 4300,
         "wires": [
             [
@@ -15959,7 +15959,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 510,
+        "x": 480,
         "y": 4300,
         "wires": [
             [
@@ -16000,7 +16000,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 4,
-        "x": 660,
+        "x": 630,
         "y": 4300,
         "wires": [
             [
@@ -16029,7 +16029,7 @@
         "topic": "",
         "payload": "Vx:PreviewInput:2",
         "payloadType": "str",
-        "x": 180,
+        "x": 150,
         "y": 4380,
         "wires": [
             [
@@ -16050,7 +16050,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 850,
+        "x": 820,
         "y": 4240,
         "wires": []
     },
@@ -16064,9 +16064,9 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "{\n\"cmd\": {{payload}}   ,\n\"data\":{\"ME\":0,\n        \"videoSource\":{\n            \"id\": \"msg.payload \" \n            }\n        }\n}",
+        "template": "{\n\"cmd\": {{payload}}   ,\n\"data\":{\"ME\":0,\n        \"videoSource\":{\n            \"id\": {{payload}} \n            }\n        }\n}",
         "output": "json",
-        "x": 830,
+        "x": 800,
         "y": 4280,
         "wires": [
             [
