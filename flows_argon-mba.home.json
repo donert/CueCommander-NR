@@ -2725,7 +2725,8 @@
             "6a737fdfa8aafb93",
             "bde8554cd2d28fbc",
             "f2abfc7dd8e41052",
-            "6d38ff1f8a651ab4"
+            "6d38ff1f8a651ab4",
+            "f05677b3590d90d3"
         ],
         "x": 14,
         "y": 4179,
@@ -15885,7 +15886,8 @@
         "y": 4260,
         "wires": [
             [
-                "383915c7d2b2e69a"
+                "383915c7d2b2e69a",
+                "f05677b3590d90d3"
             ]
         ]
     },
@@ -16242,6 +16244,24 @@
         ],
         "x": 1125,
         "y": 4360,
+        "wires": []
+    },
+    {
+        "id": "f05677b3590d90d3",
+        "type": "debug",
+        "z": "96ac9944.5b4dd8",
+        "g": "2e267aabc8e94e20",
+        "name": "From PP Cue Automation",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 450,
+        "y": 4220,
         "wires": []
     },
     {
