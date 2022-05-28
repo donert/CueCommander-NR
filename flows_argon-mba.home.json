@@ -2720,12 +2720,14 @@
             "d5e87bb8c016a097",
             "836fdf46eff96526",
             "e1cb76ab134cbad5",
-            "f05a4895472c62d5"
+            "f05a4895472c62d5",
+            "a4230f95d7d7e26b",
+            "6a737fdfa8aafb93"
         ],
-        "x": 24,
+        "x": 14,
         "y": 4179,
-        "w": 1142,
-        "h": 242
+        "w": 1152,
+        "h": 322
     },
     {
         "id": "b36c9a8b.092df8",
@@ -16117,6 +16119,58 @@
         "wires": [
             [
                 "d5e87bb8c016a097"
+            ]
+        ]
+    },
+    {
+        "id": "a4230f95d7d7e26b",
+        "type": "inject",
+        "z": "96ac9944.5b4dd8",
+        "g": "2e267aabc8e94e20",
+        "name": "test vx upstream key on",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Vx:PreviewInput:on",
+        "payloadType": "str",
+        "x": 160,
+        "y": 4420,
+        "wires": [
+            [
+                "383915c7d2b2e69a"
+            ]
+        ]
+    },
+    {
+        "id": "6a737fdfa8aafb93",
+        "type": "inject",
+        "z": "96ac9944.5b4dd8",
+        "g": "2e267aabc8e94e20",
+        "name": "test vx upstream key off",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Vx:PreviewInput:off",
+        "payloadType": "str",
+        "x": 180,
+        "y": 4460,
+        "wires": [
+            [
+                "383915c7d2b2e69a"
             ]
         ]
     },
