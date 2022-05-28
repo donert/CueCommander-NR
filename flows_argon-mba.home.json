@@ -2716,11 +2716,13 @@
             "383915c7d2b2e69a",
             "32660b99d8ee5118",
             "770b41d2fd905b93",
-            "ce30b7b70ab0b1e9"
+            "ce30b7b70ab0b1e9",
+            "d5e87bb8c016a097",
+            "836fdf46eff96526"
         ],
         "x": 34,
         "y": 4179,
-        "w": 702,
+        "w": 1112,
         "h": 242
     },
     {
@@ -15886,7 +15888,7 @@
         "z": "96ac9944.5b4dd8",
         "g": "2e267aabc8e94e20",
         "name": "Video Cues",
-        "info": "Vx:ProgramInput:x\nVx:PreviewInput:x\nVx:UpstreamKey:on :off\nVx:Macro:x",
+        "info": "Vx:ProgramInput:x\nVx:PreviewInput:x\nVx:UpStreamKey:on :off\nVx:Macro:x",
         "x": 130,
         "y": 4220,
         "wires": []
@@ -15971,21 +15973,41 @@
         "z": "96ac9944.5b4dd8",
         "g": "2e267aabc8e94e20",
         "name": "",
-        "property": "payload",
+        "property": "toopic",
         "propertyType": "msg",
         "rules": [
             {
                 "t": "eq",
-                "v": "",
+                "v": "ProgramInput",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "PreviewInput",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Macro",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "UpStreamKey",
                 "vt": "str"
             }
         ],
         "checkall": "true",
         "repair": false,
-        "outputs": 1,
+        "outputs": 4,
         "x": 660,
         "y": 4300,
         "wires": [
+            [
+                "836fdf46eff96526"
+            ],
+            [],
+            [],
             []
         ]
     },
@@ -16012,6 +16034,43 @@
         "wires": [
             [
                 "383915c7d2b2e69a"
+            ]
+        ]
+    },
+    {
+        "id": "d5e87bb8c016a097",
+        "type": "debug",
+        "z": "96ac9944.5b4dd8",
+        "g": "2e267aabc8e94e20",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1030,
+        "y": 4280,
+        "wires": []
+    },
+    {
+        "id": "836fdf46eff96526",
+        "type": "template",
+        "z": "96ac9944.5b4dd8",
+        "g": "2e267aabc8e94e20",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{\n\"cmd\": {topic}  ,\n\"data\":{\"ME\":0,\n        \"videoSource\":{\"id\":{payload} }\n        }\n}",
+        "output": "json",
+        "x": 840,
+        "y": 4280,
+        "wires": [
+            [
+                "d5e87bb8c016a097"
             ]
         ]
     },
