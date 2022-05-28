@@ -15906,7 +15906,7 @@
         "type": "inject",
         "z": "96ac9944.5b4dd8",
         "g": "2e267aabc8e94e20",
-        "name": "test vx program input 1",
+        "name": "test vx program input 5",
         "props": [
             {
                 "p": "payload"
@@ -15917,7 +15917,7 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "Vx:ProgramInput:1",
+        "payload": "Vx:ProgramInput:5",
         "payloadType": "str",
         "x": 170,
         "y": 4340,
@@ -16030,7 +16030,7 @@
         "type": "inject",
         "z": "96ac9944.5b4dd8",
         "g": "2e267aabc8e94e20",
-        "name": "test vx preview input 2",
+        "name": "test vx preview input 6",
         "props": [
             {
                 "p": "payload"
@@ -16041,7 +16041,7 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "Vx:PreviewInput:2",
+        "payload": "Vx:PreviewInput:6",
         "payloadType": "str",
         "x": 170,
         "y": 4380,
