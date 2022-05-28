@@ -2716,12 +2716,13 @@
             "383915c7d2b2e69a",
             "32660b99d8ee5118",
             "2ff8d32055aac776",
-            "c4561ca0025ed39e"
+            "c4561ca0025ed39e",
+            "2fbd2bb31eca6673"
         ],
-        "x": 34,
-        "y": 4119,
-        "w": 772,
-        "h": 202
+        "x": 44,
+        "y": 4139,
+        "w": 782,
+        "h": 242
     },
     {
         "id": "b36c9a8b.092df8",
@@ -15871,8 +15872,8 @@
         "links": [
             "03ccce0cf990ff92"
         ],
-        "x": 255,
-        "y": 4200,
+        "x": 265,
+        "y": 4220,
         "wires": [
             [
                 "383915c7d2b2e69a"
@@ -15886,8 +15887,8 @@
         "g": "2e267aabc8e94e20",
         "name": "Video Cues",
         "info": "Vx:ProgramInput:x\nVx:PreviewInput:x\nVx:UpstreamKey:on :off\nVx:Macro:x",
-        "x": 130,
-        "y": 4160,
+        "x": 140,
+        "y": 4180,
         "wires": []
     },
     {
@@ -15908,8 +15909,8 @@
         "topic": "",
         "payload": "Vx:ProgramInput:1",
         "payloadType": "str",
-        "x": 180,
-        "y": 4280,
+        "x": 190,
+        "y": 4300,
         "wires": [
             [
                 "383915c7d2b2e69a"
@@ -15936,8 +15937,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 370,
-        "y": 4240,
+        "x": 380,
+        "y": 4260,
         "wires": [
             [
                 "32660b99d8ee5118"
@@ -15956,12 +15957,13 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 520,
-        "y": 4240,
+        "x": 530,
+        "y": 4260,
         "wires": [
             [
                 "2ff8d32055aac776",
-                "c4561ca0025ed39e"
+                "c4561ca0025ed39e",
+                "2fbd2bb31eca6673"
             ]
         ]
     },
@@ -15979,8 +15981,8 @@
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 700,
-        "y": 4200,
+        "x": 710,
+        "y": 4220,
         "wires": []
     },
     {
@@ -15997,8 +15999,25 @@
         "targetType": "msg",
         "statusVal": "topic",
         "statusType": "auto",
-        "x": 680,
-        "y": 4260,
+        "x": 720,
+        "y": 4280,
+        "wires": []
+    },
+    {
+        "id": "2fbd2bb31eca6673",
+        "type": "debug",
+        "z": "96ac9944.5b4dd8",
+        "g": "2e267aabc8e94e20",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 710,
+        "y": 4340,
         "wires": []
     },
     {
