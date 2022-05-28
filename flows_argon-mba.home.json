@@ -15914,8 +15914,7 @@
         "y": 4300,
         "wires": [
             [
-                "383915c7d2b2e69a",
-                "2fbd2bb31eca6673"
+                "383915c7d2b2e69a"
             ]
         ]
     },
@@ -15952,14 +15951,14 @@
         "type": "function",
         "z": "96ac9944.5b4dd8",
         "g": "2e267aabc8e94e20",
-        "name": "",
-        "func": "mp = msg.payload;\n\nx  = mp.split(\":\")\n\nt = x[1]\npl = x[2]\n\nm = {  \n                \"topic\": t,\n                \"payload\": pl\n        \n    }\n    \n \nconsole.log(m)\n \nreturn m;",
+        "name": "parse",
+        "func": "mp = msg.payload;\n\nx  = mp.split(\":\")\n\nt = x[1]\npl = x[2]\n\nm = {  \n                \"topic\"  : t,\n                \"payload\": pl\n    }\n\nreturn m;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 530,
+        "x": 520,
         "y": 4260,
         "wires": [
             [
