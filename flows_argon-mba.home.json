@@ -15954,7 +15954,7 @@
         "z": "96ac9944.5b4dd8",
         "g": "2e267aabc8e94e20",
         "name": "",
-        "func": "\nreturn msg.payload.split(\":\");",
+        "func": "\nreturn msg.payload ",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
