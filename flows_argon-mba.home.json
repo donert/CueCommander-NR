@@ -2718,11 +2718,12 @@
             "770b41d2fd905b93",
             "ce30b7b70ab0b1e9",
             "d5e87bb8c016a097",
-            "836fdf46eff96526"
+            "836fdf46eff96526",
+            "e1cb76ab134cbad5"
         ],
         "x": 4,
         "y": 4179,
-        "w": 932,
+        "w": 1102,
         "h": 242
     },
     {
@@ -16006,7 +16007,9 @@
             [
                 "836fdf46eff96526"
             ],
-            [],
+            [
+                "e1cb76ab134cbad5"
+            ],
             [],
             []
         ]
@@ -16050,8 +16053,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 820,
-        "y": 4240,
+        "x": 990,
+        "y": 4300,
         "wires": []
     },
     {
@@ -16068,6 +16071,26 @@
         "output": "json",
         "x": 800,
         "y": 4280,
+        "wires": [
+            [
+                "d5e87bb8c016a097"
+            ]
+        ]
+    },
+    {
+        "id": "e1cb76ab134cbad5",
+        "type": "template",
+        "z": "96ac9944.5b4dd8",
+        "g": "2e267aabc8e94e20",
+        "name": "format",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{\n\"cmd\": \"PreviewInput\"   ,\n\"data\":{\"ME\":0,\n        \"videoSource\":{\n            \"id\": {{payload}} \n            }\n        }\n}",
+        "output": "json",
+        "x": 810,
+        "y": 4320,
         "wires": [
             [
                 "d5e87bb8c016a097"
