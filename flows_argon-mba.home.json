@@ -16135,7 +16135,7 @@
         "type": "inject",
         "z": "96ac9944.5b4dd8",
         "g": "2e267aabc8e94e20",
-        "name": "test vx upstream key on",
+        "name": "test vx upstream key true",
         "props": [
             {
                 "p": "payload"
@@ -16146,9 +16146,9 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "Vx:UpStreamKey:on",
+        "payload": "Vx:UpStreamKey:true",
         "payloadType": "str",
-        "x": 160,
+        "x": 170,
         "y": 4420,
         "wires": [
             [
@@ -16161,7 +16161,7 @@
         "type": "inject",
         "z": "96ac9944.5b4dd8",
         "g": "2e267aabc8e94e20",
-        "name": "test vx upstream key off",
+        "name": "test vx upstream key false",
         "props": [
             {
                 "p": "payload"
@@ -16174,7 +16174,7 @@
         "topic": "",
         "payload": "Vx:UpStreamKey:false",
         "payloadType": "str",
-        "x": 180,
+        "x": 190,
         "y": 4460,
         "wires": [
             [
