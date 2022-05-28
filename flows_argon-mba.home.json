@@ -2722,7 +2722,7 @@
         ],
         "x": 34,
         "y": 4179,
-        "w": 1112,
+        "w": 932,
         "h": 242
     },
     {
@@ -15973,7 +15973,7 @@
         "z": "96ac9944.5b4dd8",
         "g": "2e267aabc8e94e20",
         "name": "",
-        "property": "toopic",
+        "property": "topic",
         "propertyType": "msg",
         "rules": [
             {
@@ -16050,8 +16050,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1030,
-        "y": 4280,
+        "x": 850,
+        "y": 4240,
         "wires": []
     },
     {
