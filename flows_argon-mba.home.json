@@ -16112,7 +16112,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": " {\n    \"cmd\": \"upstreamKeyer\",\n    \"data\": {\n        \"ME\": 0,\n        \"id\": 0,\n        \"state\": {{payload}}\n    }\n}",
+        "template": " {\n    \"cmd\": \"upstreamKeyer\",\n    \"data\": {\n        \"ME\": 0,\n        \"id\": 0,\n        \"state\": \"X\"\n    }\n}",
         "output": "json",
         "x": 860,
         "y": 4360,
