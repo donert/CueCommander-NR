@@ -2752,9 +2752,9 @@
             "32c1b7c328650c7f"
         ],
         "x": 54,
-        "y": 1539,
+        "y": 1559,
         "w": 772,
-        "h": 282
+        "h": 302
     },
     {
         "id": "b36c9a8b.092df8",
@@ -4777,7 +4777,7 @@
         "className": "",
         "topicType": "msg",
         "x": 130,
-        "y": 1620,
+        "y": 1660,
         "wires": [
             [
                 "3b7ddfe7491e3f0a"
@@ -4799,7 +4799,7 @@
         "layout": "row-left",
         "className": "",
         "x": 740,
-        "y": 1640,
+        "y": 1680,
         "wires": []
     },
     {
@@ -4829,7 +4829,7 @@
         "repair": false,
         "outputs": 3,
         "x": 430,
-        "y": 1640,
+        "y": 1680,
         "wires": [
             [
                 "32c1b7c328650c7f"
@@ -4863,7 +4863,7 @@
         "to": "",
         "reg": false,
         "x": 600,
-        "y": 1700,
+        "y": 1740,
         "wires": [
             [
                 "9c4d73677b835152"
@@ -4893,7 +4893,7 @@
         "payload": "a valid msg",
         "payloadType": "str",
         "x": 180,
-        "y": 1700,
+        "y": 1740,
         "wires": [
             [
                 "3b7ddfe7491e3f0a"
@@ -4923,7 +4923,7 @@
         "payload": "an error message",
         "payloadType": "str",
         "x": 200,
-        "y": 1740,
+        "y": 1780,
         "wires": [
             [
                 "3b7ddfe7491e3f0a"
@@ -4948,7 +4948,7 @@
         "onceDelay": 0.1,
         "topic": "junk",
         "x": 150,
-        "y": 1780,
+        "y": 1820,
         "wires": [
             [
                 "3b7ddfe7491e3f0a"
@@ -4976,7 +4976,7 @@
         "to": "",
         "reg": false,
         "x": 580,
-        "y": 1580,
+        "y": 1600,
         "wires": [
             [
                 "9c4d73677b835152"
