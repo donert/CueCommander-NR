@@ -4777,11 +4777,11 @@
         "width": 0,
         "height": 0,
         "name": "",
-        "label": "Error Message",
+        "label": "Message",
         "format": "{{msg.payload}}",
         "layout": "row-left",
         "className": "",
-        "x": 660,
+        "x": 640,
         "y": 1600,
         "wires": []
     },
@@ -4813,7 +4813,9 @@
         "x": 330,
         "y": 1600,
         "wires": [
-            [],
+            [
+                "9c4d73677b835152"
+            ],
             [
                 "9c4d73677b835152"
             ],
@@ -4923,8 +4925,8 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "junk",
-        "x": 170,
-        "y": 1760,
+        "x": 270,
+        "y": 1780,
         "wires": [
             [
                 "3b7ddfe7491e3f0a"
