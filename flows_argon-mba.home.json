@@ -2748,12 +2748,13 @@
             "9cc762e3a5322203",
             "788a3f8760756e69",
             "61c0ed185cc74358",
-            "25964288e38955e9"
+            "25964288e38955e9",
+            "32c1b7c328650c7f"
         ],
         "x": 54,
-        "y": 1579,
+        "y": 1539,
         "w": 772,
-        "h": 242
+        "h": 282
     },
     {
         "id": "b36c9a8b.092df8",
@@ -2913,7 +2914,7 @@
     {
         "id": "7d93d0fa.632f6",
         "type": "ui_group",
-        "name": "Goto Cue",
+        "name": "Goto Cue (Enter value and press enter)",
         "tab": "b36c9a8b.092df8",
         "order": 3,
         "disp": true,
@@ -4733,7 +4734,7 @@
         "type": "change",
         "z": "ee400291.7cb",
         "g": "c681dc44e2d3bb1d",
-        "name": "set topoc",
+        "name": "set topic",
         "rules": [
             {
                 "t": "set",
@@ -4831,7 +4832,7 @@
         "y": 1640,
         "wires": [
             [
-                "9c4d73677b835152"
+                "32c1b7c328650c7f"
             ],
             [
                 "9c4d73677b835152"
@@ -4951,6 +4952,34 @@
         "wires": [
             [
                 "3b7ddfe7491e3f0a"
+            ]
+        ]
+    },
+    {
+        "id": "32c1b7c328650c7f",
+        "type": "change",
+        "z": "ee400291.7cb",
+        "g": "83b35ec65abcd370",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "\"/cs/playback/gotocue/\" & msg.payload",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 580,
+        "y": 1580,
+        "wires": [
+            [
+                "9c4d73677b835152"
             ]
         ]
     },
