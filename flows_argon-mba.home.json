@@ -4772,10 +4772,10 @@
         "passthru": true,
         "mode": "text",
         "delay": "0",
-        "topic": "payload",
+        "topic": "valid",
         "sendOnBlur": true,
         "className": "",
-        "topicType": "msg",
+        "topicType": "str",
         "x": 130,
         "y": 1660,
         "wires": [
