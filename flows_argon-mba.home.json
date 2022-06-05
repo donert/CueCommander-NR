@@ -2901,12 +2901,13 @@
     {
         "id": "7d93d0fa.632f6",
         "type": "ui_group",
-        "name": "All Projectors",
-        "tab": "871ea368.15c4e",
+        "name": "Goto Cue",
+        "tab": "b36c9a8b.092df8",
         "order": 1,
         "disp": true,
-        "width": 20,
-        "collapse": false
+        "width": "20",
+        "collapse": false,
+        "className": ""
     },
     {
         "id": "71ca2bc1.40f914",
@@ -4741,6 +4742,55 @@
             [
                 "f01ef3ada886ac8a"
             ]
+        ]
+    },
+    {
+        "id": "100e73a6c693d174",
+        "type": "ui_text_input",
+        "z": "ee400291.7cb",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 120,
+        "y": 1620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8128c33d5a00db0d",
+        "type": "ui_numeric",
+        "z": "ee400291.7cb",
+        "name": "",
+        "label": "numeric",
+        "tooltip": "",
+        "group": "7d93d0fa.632f6",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "wrap": false,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "format": "{{value}}",
+        "min": "1.0",
+        "max": "999.9",
+        "step": ".1",
+        "className": "",
+        "x": 160,
+        "y": 1680,
+        "wires": [
+            []
         ]
     },
     {
