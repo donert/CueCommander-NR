@@ -4967,7 +4967,7 @@
                 "p": "payload",
                 "pt": "msg",
                 "to": "\"/cs/playback/gotocue/\" & msg.payload",
-                "tot": "json"
+                "tot": "jsonata"
             }
         ],
         "action": "",
