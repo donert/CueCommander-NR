@@ -4756,7 +4756,7 @@
         "width": 0,
         "height": 0,
         "passthru": true,
-        "mode": "number",
+        "mode": "text",
         "delay": 300,
         "topic": "payload",
         "sendOnBlur": true,
@@ -4858,6 +4858,9 @@
             {
                 "p": "topic",
                 "vt": "str"
+            },
+            {
+                "p": "payload"
             }
         ],
         "repeat": "",
@@ -4865,7 +4868,9 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "valid",
-        "x": 170,
+        "payload": "a valid msg",
+        "payloadType": "str",
+        "x": 200,
         "y": 1680,
         "wires": [
             [
@@ -4882,6 +4887,9 @@
             {
                 "p": "topic",
                 "vt": "str"
+            },
+            {
+                "p": "payload"
             }
         ],
         "repeat": "",
@@ -4889,7 +4897,9 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "error",
-        "x": 170,
+        "payload": "an error message",
+        "payloadType": "str",
+        "x": 220,
         "y": 1720,
         "wires": [
             [
