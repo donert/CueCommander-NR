@@ -4749,48 +4749,176 @@
         "type": "ui_text_input",
         "z": "ee400291.7cb",
         "name": "",
-        "label": "",
-        "tooltip": "",
-        "order": 0,
+        "label": "Cue#",
+        "tooltip": "Between 1.0 and 999.9",
+        "group": "7d93d0fa.632f6",
+        "order": 3,
         "width": 0,
         "height": 0,
         "passthru": true,
-        "mode": "text",
+        "mode": "number",
         "delay": 300,
-        "topic": "topic",
+        "topic": "payload",
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 120,
-        "y": 1620,
+        "x": 110,
+        "y": 1600,
         "wires": [
             []
         ]
     },
     {
-        "id": "8128c33d5a00db0d",
-        "type": "ui_numeric",
+        "id": "9c4d73677b835152",
+        "type": "ui_text",
         "z": "ee400291.7cb",
-        "name": "",
-        "label": "numeric",
-        "tooltip": "",
         "group": "7d93d0fa.632f6",
-        "order": 3,
+        "order": 4,
         "width": 0,
         "height": 0,
-        "wrap": false,
-        "passthru": true,
-        "topic": "topic",
-        "topicType": "msg",
-        "format": "{{value}}",
-        "min": "1.0",
-        "max": "999.9",
-        "step": ".1",
+        "name": "",
+        "label": "Error Message",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
         "className": "",
-        "x": 160,
+        "x": 660,
+        "y": 1600,
+        "wires": []
+    },
+    {
+        "id": "3b7ddfe7491e3f0a",
+        "type": "switch",
+        "z": "ee400291.7cb",
+        "name": "",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "valid",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "error",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 330,
+        "y": 1600,
+        "wires": [
+            [],
+            [
+                "9c4d73677b835152"
+            ],
+            [
+                "9cc762e3a5322203"
+            ]
+        ]
+    },
+    {
+        "id": "9cc762e3a5322203",
+        "type": "change",
+        "z": "ee400291.7cb",
+        "name": "Unknown",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "\"Unknown Message\" & msg.payload",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 500,
+        "y": 1660,
+        "wires": [
+            [
+                "9c4d73677b835152"
+            ]
+        ]
+    },
+    {
+        "id": "788a3f8760756e69",
+        "type": "inject",
+        "z": "ee400291.7cb",
+        "name": "",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "valid",
+        "x": 170,
         "y": 1680,
         "wires": [
-            []
+            [
+                "3b7ddfe7491e3f0a"
+            ]
+        ]
+    },
+    {
+        "id": "61c0ed185cc74358",
+        "type": "inject",
+        "z": "ee400291.7cb",
+        "name": "",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "error",
+        "x": 170,
+        "y": 1720,
+        "wires": [
+            [
+                "3b7ddfe7491e3f0a"
+            ]
+        ]
+    },
+    {
+        "id": "25964288e38955e9",
+        "type": "inject",
+        "z": "ee400291.7cb",
+        "name": "",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "junk",
+        "x": 170,
+        "y": 1760,
+        "wires": [
+            [
+                "3b7ddfe7491e3f0a"
+            ]
         ]
     },
     {
