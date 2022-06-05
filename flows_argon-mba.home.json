@@ -2748,8 +2748,7 @@
             "9cc762e3a5322203",
             "788a3f8760756e69",
             "61c0ed185cc74358",
-            "25964288e38955e9",
-            "33a7c4ce0961fc78"
+            "25964288e38955e9"
         ],
         "x": 54,
         "y": 1579,
@@ -4771,7 +4770,7 @@
         "height": 0,
         "passthru": true,
         "mode": "text",
-        "delay": 300,
+        "delay": "0",
         "topic": "payload",
         "sendOnBlur": true,
         "className": "",
@@ -4780,7 +4779,7 @@
         "y": 1620,
         "wires": [
             [
-                "33a7c4ce0961fc78"
+                "3b7ddfe7491e3f0a"
             ]
         ]
     },
@@ -4949,35 +4948,6 @@
         "topic": "junk",
         "x": 150,
         "y": 1780,
-        "wires": [
-            [
-                "3b7ddfe7491e3f0a"
-            ]
-        ]
-    },
-    {
-        "id": "33a7c4ce0961fc78",
-        "type": "ui_button",
-        "z": "ee400291.7cb",
-        "g": "83b35ec65abcd370",
-        "name": "",
-        "group": "7d93d0fa.632f6",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "Submit",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 280,
-        "y": 1620,
         "wires": [
             [
                 "3b7ddfe7491e3f0a"
