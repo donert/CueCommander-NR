@@ -4891,6 +4891,11 @@
                 "t": "delete",
                 "p": "topic",
                 "pt": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "_event",
+                "pt": "msg"
             }
         ],
         "action": "",
