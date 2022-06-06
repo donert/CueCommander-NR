@@ -4922,9 +4922,9 @@
         "z": "ee400291.7cb",
         "g": "83b35ec65abcd370",
         "name": "",
-        "func": "str = msg.payload;\n\n#str = str.trim();\n\nif (isNaN(str)) {\n    msg.topic = \"error\"\n    msg.payload = \"Error value must be a number. Saw \" + str\n    return msg\n}\n\nif (str < 1.0 | str > 999.9) {\n    msg.topic = \"error\"\n    msg.payload = \"Error value must be between 1.0 and 999.9. Saw \" + str\n    return msg\n}\n\nstr = str.toFixed(1)\n\nmsg.payload = str;\nmsg.topic = \"valid\"\n\nreturn msg;",
+        "func": "str = msg.payload;\n\n// str = str.trim();\n\nif (isNaN(str)) {\n    msg.topic = \"error\"\n    msg.payload = \"Error value must be a number. Saw \" + str\n    return msg\n}\n\nif (str < 1.0 | str > 999.9) {\n    msg.topic = \"error\"\n    msg.payload = \"Error value must be between 1.0 and 999.9. Saw \" + str\n    return msg\n}\n\nstr = str.toFixed(1)\n\nmsg.payload = str;\nmsg.topic = \"valid\"\n\nreturn msg;",
         "outputs": 1,
-        "noerr": 2,
+        "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
@@ -4932,7 +4932,8 @@
         "y": 1660,
         "wires": [
             [
-                "3b7ddfe7491e3f0a"
+                "3b7ddfe7491e3f0a",
+                "f6ff681b4fc5e9bf"
             ]
         ]
     },
