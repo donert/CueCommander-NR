@@ -2748,12 +2748,13 @@
             "9cc762e3a5322203",
             "32c1b7c328650c7f",
             "5f510e3fe33560d7",
-            "2b85fe861a161115"
+            "2b85fe861a161115",
+            "63acd7a61e0b2fc9"
         ],
         "x": 54,
-        "y": 1559,
+        "y": 1539,
         "w": 552,
-        "h": 242
+        "h": 262
     },
     {
         "id": "b36c9a8b.092df8",
@@ -4919,7 +4920,7 @@
         "z": "ee400291.7cb",
         "g": "83b35ec65abcd370",
         "name": "",
-        "func": "str = msg.payload;\n\nstr = str.trim();\n\nif (isNaN(str)) {\n    msg.topic = \"error\"\n    msg.payload = \"Error value must be a number. Saw \" + str\n    return msg\n}\n\nif (str < 1.0 | str >999.9) {\n    msg.topic = \"error\"\n    msg.payload = \"Error value must be between 1.0 and 999.9. Saw \" + str\n    return msg\n}\n\nstr = str.toFixed(1)\n\nmsg.payload = str;\nmsg.topic = \"valid\"\n\nreturn msg;",
+        "func": "str = msg.payload;\n\nstr = str.trim();\n\nif (isNaN(str)) {\n    msg.topic = \"error\"\n    msg.payload = \"Error value must be a number. Saw \" + str\n    return msg\n}\n\nif (str < 1.0 | str > 999.9) {\n    msg.topic = \"error\"\n    msg.payload = \"Error value must be between 1.0 and 999.9. Saw \" + str\n    return msg\n}\n\nstr = str.toFixed(1)\n\nmsg.payload = str;\nmsg.topic = \"valid\"\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -4930,6 +4931,36 @@
         "wires": [
             [
                 "3b7ddfe7491e3f0a"
+            ]
+        ]
+    },
+    {
+        "id": "63acd7a61e0b2fc9",
+        "type": "inject",
+        "z": "ee400291.7cb",
+        "g": "83b35ec65abcd370",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "92.0",
+        "payload": "",
+        "payloadType": "num",
+        "x": 290,
+        "y": 1580,
+        "wires": [
+            [
+                "2b85fe861a161115"
             ]
         ]
     },
