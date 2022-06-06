@@ -4922,7 +4922,7 @@
         "z": "ee400291.7cb",
         "g": "83b35ec65abcd370",
         "name": "",
-        "func": "str = msg.payload;\n\n// str = str.trim();\n\nif (isNaN(str)) {\n    msg.topic = \"error\"\n    msg.payload = \"Error value must be a number. Saw \" + str\n    return msg\n}\n\nif (str < 1.0 | str > 999.9) {\n    msg.topic = \"error\"\n    msg.payload = \"Error value must be between 1.0 and 999.9. Saw \" + str\n    return msg\n}\n\nstr = parseFloat(str.toFixed(1))\n\nmsg.payload = str;\nmsg.topic = \"valid\"\n\nreturn msg;",
+        "func": "str = msg.payload;\n\n// str = str.trim();\n\nif (isNaN(str)) {\n    msg.topic = \"error\"\n    msg.payload = \"Error value must be a number. Saw \" + str\n    return msg\n}\n\nif (str < 1.0 | str > 999.9) {\n    msg.topic = \"error\"\n    msg.payload = \"Error value must be between 1.0 and 999.9. Saw \" + str\n    return msg\n}\n\nstr = parseFloat(str).toFixed(1) \n\nmsg.payload = str;\nmsg.topic = \"valid\"\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
