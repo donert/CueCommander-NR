@@ -2750,7 +2750,8 @@
             "61c0ed185cc74358",
             "25964288e38955e9",
             "32c1b7c328650c7f",
-            "5f510e3fe33560d7"
+            "5f510e3fe33560d7",
+            "2b85fe861a161115"
         ],
         "x": 54,
         "y": 1559,
@@ -4782,7 +4783,7 @@
         "y": 1660,
         "wires": [
             [
-                "3b7ddfe7491e3f0a"
+                "2b85fe861a161115"
             ]
         ]
     },
@@ -4999,6 +5000,26 @@
         "x": 765,
         "y": 1600,
         "wires": []
+    },
+    {
+        "id": "2b85fe861a161115",
+        "type": "function",
+        "z": "ee400291.7cb",
+        "g": "83b35ec65abcd370",
+        "name": "",
+        "func": "str = msg.payload;\n\nstr = str.trim();\n\nif (isNaN(str)) {\n    msg.topic = \"error\"\n    msg.payload = \"Error value must be a number. Saw \" + str\n    return msg\n}\n\n\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 280,
+        "y": 1660,
+        "wires": [
+            [
+                "3b7ddfe7491e3f0a"
+            ]
+        ]
     },
     {
         "id": "75b23a68.99e7a4",
