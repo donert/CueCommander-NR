@@ -4882,20 +4882,10 @@
         "rules": [
             {
                 "t": "set",
-                "p": "payload",
+                "p": "topic",
                 "pt": "msg",
                 "to": "\"/cs/playback/gotocue/\" & msg.payload",
                 "tot": "jsonata"
-            },
-            {
-                "t": "delete",
-                "p": "topic",
-                "pt": "msg"
-            },
-            {
-                "t": "delete",
-                "p": "_event",
-                "pt": "msg"
             }
         ],
         "action": "",
