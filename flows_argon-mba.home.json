@@ -2752,11 +2752,12 @@
             "63acd7a61e0b2fc9",
             "f6ff681b4fc5e9bf",
             "58d39bc449dbf330",
-            "62084b9d4d934f8f"
+            "62084b9d4d934f8f",
+            "9c77b111a524835e"
         ],
         "x": 54,
         "y": 1579,
-        "w": 552,
+        "w": 652,
         "h": 302
     },
     {
@@ -5020,7 +5021,7 @@
         "y": 1840,
         "wires": [
             [
-                "62084b9d4d934f8f"
+                "9c77b111a524835e"
             ]
         ]
     },
@@ -5038,9 +5039,37 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 410,
+        "x": 590,
         "y": 1840,
         "wires": []
+    },
+    {
+        "id": "9c77b111a524835e",
+        "type": "change",
+        "z": "ee400291.7cb",
+        "g": "83b35ec65abcd370",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.cuenum",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 340,
+        "y": 1840,
+        "wires": [
+            [
+                "62084b9d4d934f8f"
+            ]
+        ]
     },
     {
         "id": "75b23a68.99e7a4",
