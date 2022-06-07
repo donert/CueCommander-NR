@@ -2750,12 +2750,14 @@
             "5f510e3fe33560d7",
             "2b85fe861a161115",
             "63acd7a61e0b2fc9",
-            "f6ff681b4fc5e9bf"
+            "f6ff681b4fc5e9bf",
+            "58d39bc449dbf330",
+            "62084b9d4d934f8f"
         ],
         "x": 54,
         "y": 1579,
         "w": 552,
-        "h": 262
+        "h": 302
     },
     {
         "id": "b36c9a8b.092df8",
@@ -4982,6 +4984,62 @@
         "statusType": "auto",
         "x": 470,
         "y": 1640,
+        "wires": []
+    },
+    {
+        "id": "58d39bc449dbf330",
+        "type": "ui_form",
+        "z": "ee400291.7cb",
+        "g": "83b35ec65abcd370",
+        "name": "",
+        "label": "",
+        "group": "7d93d0fa.632f6",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "Cue#",
+                "value": "cuenum",
+                "type": "number",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "cuenum": ""
+        },
+        "payload": "",
+        "submit": "submit",
+        "cancel": "cancel",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "className": "",
+        "x": 150,
+        "y": 1840,
+        "wires": [
+            [
+                "62084b9d4d934f8f"
+            ]
+        ]
+    },
+    {
+        "id": "62084b9d4d934f8f",
+        "type": "debug",
+        "z": "ee400291.7cb",
+        "g": "83b35ec65abcd370",
+        "name": "form outpiut",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 410,
+        "y": 1840,
         "wires": []
     },
     {
