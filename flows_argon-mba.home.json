@@ -4993,7 +4993,7 @@
         "z": "ee400291.7cb",
         "g": "83b35ec65abcd370",
         "name": "",
-        "label": "",
+        "label": "Goto Cue#",
         "group": "7d93d0fa.632f6",
         "order": 2,
         "width": 0,
@@ -5012,12 +5012,12 @@
         },
         "payload": "",
         "submit": "submit",
-        "cancel": "cancel",
+        "cancel": "",
         "topic": "topic",
         "topicType": "msg",
         "splitLayout": "",
         "className": "",
-        "x": 130,
+        "x": 150,
         "y": 1600,
         "wires": [
             [
