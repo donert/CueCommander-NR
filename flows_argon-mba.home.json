@@ -2742,23 +2742,20 @@
             "label": true
         },
         "nodes": [
-            "100e73a6c693d174",
             "9c4d73677b835152",
             "3b7ddfe7491e3f0a",
             "9cc762e3a5322203",
             "32c1b7c328650c7f",
             "5f510e3fe33560d7",
             "2b85fe861a161115",
-            "63acd7a61e0b2fc9",
-            "f6ff681b4fc5e9bf",
             "58d39bc449dbf330",
             "62084b9d4d934f8f",
             "9c77b111a524835e"
         ],
         "x": 54,
-        "y": 1559,
+        "y": 1599,
         "w": 552,
-        "h": 382
+        "h": 302
     },
     {
         "id": "b36c9a8b.092df8",
@@ -4763,34 +4760,6 @@
         ]
     },
     {
-        "id": "100e73a6c693d174",
-        "type": "ui_text_input",
-        "z": "ee400291.7cb",
-        "g": "83b35ec65abcd370",
-        "name": "",
-        "label": "Cue#",
-        "tooltip": "Between 1.0 and 999.9",
-        "group": "7d93d0fa.632f6",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "mode": "text",
-        "delay": "0",
-        "topic": "valid",
-        "sendOnBlur": true,
-        "className": "",
-        "topicType": "str",
-        "x": 130,
-        "y": 1740,
-        "wires": [
-            [
-                "2b85fe861a161115",
-                "f6ff681b4fc5e9bf"
-            ]
-        ]
-    },
-    {
         "id": "9c4d73677b835152",
         "type": "ui_text",
         "z": "ee400291.7cb",
@@ -4805,7 +4774,7 @@
         "layout": "row-left",
         "className": "",
         "x": 520,
-        "y": 1860,
+        "y": 1820,
         "wires": []
     },
     {
@@ -4835,7 +4804,7 @@
         "repair": false,
         "outputs": 3,
         "x": 130,
-        "y": 1860,
+        "y": 1820,
         "wires": [
             [
                 "32c1b7c328650c7f"
@@ -4869,7 +4838,7 @@
         "to": "",
         "reg": false,
         "x": 340,
-        "y": 1900,
+        "y": 1860,
         "wires": [
             [
                 "9c4d73677b835152"
@@ -4897,7 +4866,7 @@
         "to": "",
         "reg": false,
         "x": 360,
-        "y": 1820,
+        "y": 1780,
         "wires": [
             [
                 "9c4d73677b835152",
@@ -4916,7 +4885,7 @@
             "a5f96939.8900e8"
         ],
         "x": 545,
-        "y": 1820,
+        "y": 1780,
         "wires": []
     },
     {
@@ -4932,60 +4901,12 @@
         "finalize": "",
         "libs": [],
         "x": 140,
-        "y": 1800,
+        "y": 1760,
         "wires": [
             [
-                "3b7ddfe7491e3f0a",
-                "f6ff681b4fc5e9bf"
+                "3b7ddfe7491e3f0a"
             ]
         ]
-    },
-    {
-        "id": "63acd7a61e0b2fc9",
-        "type": "inject",
-        "z": "ee400291.7cb",
-        "g": "83b35ec65abcd370",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "valid",
-        "payload": "92.0",
-        "payloadType": "num",
-        "x": 300,
-        "y": 1720,
-        "wires": [
-            [
-                "2b85fe861a161115"
-            ]
-        ]
-    },
-    {
-        "id": "f6ff681b4fc5e9bf",
-        "type": "debug",
-        "z": "ee400291.7cb",
-        "g": "83b35ec65abcd370",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 470,
-        "y": 1740,
-        "wires": []
     },
     {
         "id": "58d39bc449dbf330",
@@ -5018,7 +4939,7 @@
         "splitLayout": "",
         "className": "",
         "x": 150,
-        "y": 1600,
+        "y": 1640,
         "wires": [
             [
                 "9c77b111a524835e"
@@ -5031,7 +4952,7 @@
         "z": "ee400291.7cb",
         "g": "83b35ec65abcd370",
         "name": "form outpiut",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -5040,7 +4961,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 470,
-        "y": 1680,
+        "y": 1700,
         "wires": []
     },
     {
@@ -5064,7 +4985,7 @@
         "to": "",
         "reg": false,
         "x": 160,
-        "y": 1640,
+        "y": 1700,
         "wires": [
             [
                 "62084b9d4d934f8f",
