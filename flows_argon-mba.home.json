@@ -2607,7 +2607,8 @@
             "16a76d6d2c1a0d8e",
             "f1f274dbe582c3b4",
             "145a247602ec182f",
-            "b046b15b2f154d15"
+            "b046b15b2f154d15",
+            "17a7b8dd2fbcd461"
         ],
         "x": 34,
         "y": 3439,
@@ -28809,7 +28810,8 @@
         "wires": [
             [],
             [
-                "16a76d6d2c1a0d8e"
+                "16a76d6d2c1a0d8e",
+                "17a7b8dd2fbcd461"
             ]
         ]
     },
@@ -28893,6 +28895,24 @@
         "statusType": "auto",
         "x": 400,
         "y": 3560,
+        "wires": []
+    },
+    {
+        "id": "17a7b8dd2fbcd461",
+        "type": "debug",
+        "z": "41f3235e2124e3a2",
+        "g": "24b66573302654fa",
+        "name": "swrich out",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 410,
+        "y": 3660,
         "wires": []
     }
 ]
