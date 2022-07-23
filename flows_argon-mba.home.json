@@ -2608,7 +2608,8 @@
             "f1f274dbe582c3b4",
             "145a247602ec182f",
             "b046b15b2f154d15",
-            "17a7b8dd2fbcd461"
+            "17a7b8dd2fbcd461",
+            "85f50ee4c5bf0a07"
         ],
         "x": 34,
         "y": 3439,
@@ -28831,7 +28832,8 @@
         "y": 3680,
         "wires": [
             [
-                "f1f274dbe582c3b4"
+                "f1f274dbe582c3b4",
+                "85f50ee4c5bf0a07"
             ]
         ]
     },
@@ -28903,7 +28905,7 @@
         "z": "41f3235e2124e3a2",
         "g": "24b66573302654fa",
         "name": "swrich out",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -28912,6 +28914,24 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 410,
+        "y": 3600,
+        "wires": []
+    },
+    {
+        "id": "85f50ee4c5bf0a07",
+        "type": "debug",
+        "z": "41f3235e2124e3a2",
+        "g": "24b66573302654fa",
+        "name": "split out",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 400,
         "y": 3660,
         "wires": []
     }
