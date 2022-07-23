@@ -2614,7 +2614,7 @@
         ],
         "x": 34,
         "y": 3439,
-        "w": 492,
+        "w": 532,
         "h": 402
     },
     {
@@ -28872,11 +28872,11 @@
         "tosidebar": true,
         "console": false,
         "tostatus": true,
-        "complete": "payload.id",
+        "complete": "payload.id.name",
         "targetType": "msg",
         "statusVal": "payload.id",
         "statusType": "auto",
-        "x": 400,
+        "x": 420,
         "y": 3800,
         "wires": []
     },
