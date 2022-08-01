@@ -29466,7 +29466,7 @@
         "height": 0,
         "columns": [
             {
-                "field": "payload.id.name",
+                "field": "id.name",
                 "title": "Name",
                 "width": "",
                 "align": "left",
@@ -29476,7 +29476,7 @@
                 }
             },
             {
-                "field": "payload.is_active",
+                "field": "is_active",
                 "title": "active",
                 "width": "",
                 "align": "left",
@@ -29486,7 +29486,7 @@
                 }
             },
             {
-                "field": "payload.id.index",
+                "field": "id.index",
                 "title": "Index",
                 "width": "",
                 "align": "left",
