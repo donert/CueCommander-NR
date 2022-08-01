@@ -29474,6 +29474,26 @@
                 "formatterParams": {
                     "target": "_blank"
                 }
+            },
+            {
+                "field": "payload.is_active",
+                "title": "active",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "payload.id.index",
+                "title": "Index",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
             }
         ],
         "outputs": 0,
