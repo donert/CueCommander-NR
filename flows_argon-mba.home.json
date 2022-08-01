@@ -29433,35 +29433,9 @@
         "y": 360,
         "wires": [
             [
-                "84a34d132255600e",
                 "3b98adaa0ae00f87",
                 "f1d201b3749db8bb"
             ]
-        ]
-    },
-    {
-        "id": "84a34d132255600e",
-        "type": "change",
-        "z": "41f3235e2124e3a2",
-        "name": "Select name",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "payload.id.name",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 510,
-        "y": 400,
-        "wires": [
-            []
         ]
     },
     {
@@ -29492,7 +29466,7 @@
         "height": 0,
         "columns": [
             {
-                "field": "id.name",
+                "field": "payload.id.name",
                 "title": "Name",
                 "width": "",
                 "align": "left",
