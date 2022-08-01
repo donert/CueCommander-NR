@@ -29432,7 +29432,8 @@
         "y": 360,
         "wires": [
             [
-                "84a34d132255600e"
+                "84a34d132255600e",
+                "3b98adaa0ae00f87"
             ]
         ]
     },
@@ -29458,9 +29459,7 @@
         "x": 510,
         "y": 400,
         "wires": [
-            [
-                "3b98adaa0ae00f87"
-            ]
+            []
         ]
     },
     {
@@ -29469,12 +29468,12 @@
         "z": "41f3235e2124e3a2",
         "name": "",
         "active": true,
-        "tosidebar": false,
+        "tosidebar": true,
         "console": false,
-        "tostatus": true,
+        "tostatus": false,
         "complete": "payload",
         "targetType": "msg",
-        "statusVal": "payload",
+        "statusVal": "",
         "statusType": "auto",
         "x": 570,
         "y": 480,
