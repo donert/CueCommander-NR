@@ -2168,16 +2168,15 @@
         },
         "nodes": [
             "0f35a8755183c3e1",
-            "0495405795ad40f1",
-            "da4a743942809757",
             "fa46ceacdf34976d",
             "33a8efab624ba559",
             "31f697270708f211",
-            "922a911ea01b4991"
+            "922a911ea01b4991",
+            "51839c40f44bdfab"
         ],
         "x": 34,
         "y": 1739,
-        "w": 672,
+        "w": 482,
         "h": 242
     },
     {
@@ -2658,6 +2657,25 @@
         "y": 4119,
         "w": 642,
         "h": 262
+    },
+    {
+        "id": "744e7dfa2109b681",
+        "type": "group",
+        "z": "41f3235e2124e3a2",
+        "name": "PP7 Communications",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "8b118698bee8597d",
+            "27c942602ad9335a",
+            "3947cc6e1ada983e",
+            "03e861f483ba32de"
+        ],
+        "x": 774,
+        "y": 1739,
+        "w": 332,
+        "h": 222
     },
     {
         "id": "b36c9a8b.092df8",
@@ -28016,49 +28034,8 @@
         "y": 1780,
         "wires": [
             [
-                "0495405795ad40f1"
+                "51839c40f44bdfab"
             ]
-        ]
-    },
-    {
-        "id": "0495405795ad40f1",
-        "type": "function",
-        "z": "41f3235e2124e3a2",
-        "g": "43393c4fc3b775a7",
-        "name": "",
-        "func": "cfg = flow.get(\"config_ip_port\");\n\ncfg = cfg.find( y => y.device == \"Propresenter\")\n\nnode.status(cfg)\nnode.log(cfg)\n\nurl = \"http://\" + cfg.ip + \":\" + cfg.port + \"/v1\" + msg.payload\n\nreturn  {\"payload\"  : msg.payload   ,\n         \"url\"       : url        \n}  ;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 480,
-        "y": 1780,
-        "wires": [
-            [
-                "da4a743942809757"
-            ]
-        ]
-    },
-    {
-        "id": "da4a743942809757",
-        "type": "http request",
-        "z": "41f3235e2124e3a2",
-        "g": "43393c4fc3b775a7",
-        "name": "http",
-        "method": "GET",
-        "ret": "txt",
-        "paytoqs": "ignore",
-        "url": "",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "authType": "",
-        "senderr": false,
-        "x": 630,
-        "y": 1780,
-        "wires": [
-            []
         ]
     },
     {
@@ -28083,7 +28060,7 @@
         "y": 1940,
         "wires": [
             [
-                "0495405795ad40f1"
+                "51839c40f44bdfab"
             ]
         ]
     },
@@ -28109,7 +28086,7 @@
         "y": 1820,
         "wires": [
             [
-                "0495405795ad40f1"
+                "51839c40f44bdfab"
             ]
         ]
     },
@@ -28135,7 +28112,7 @@
         "y": 1900,
         "wires": [
             [
-                "0495405795ad40f1"
+                "51839c40f44bdfab"
             ]
         ]
     },
@@ -28161,7 +28138,7 @@
         "y": 1860,
         "wires": [
             [
-                "0495405795ad40f1"
+                "51839c40f44bdfab"
             ]
         ]
     },
@@ -29160,6 +29137,92 @@
         "statusType": "auto",
         "x": 580,
         "y": 4160,
+        "wires": []
+    },
+    {
+        "id": "8b118698bee8597d",
+        "type": "function",
+        "z": "41f3235e2124e3a2",
+        "g": "744e7dfa2109b681",
+        "name": "",
+        "func": "cfg = flow.get(\"config_ip_port\");\n\ncfg = cfg.find( y => y.device == \"Propresenter\")\n\nnode.status(cfg)\nnode.log(cfg)\n\nurl = \"http://\" + cfg.ip + \":\" + cfg.port + \"/v1\" + msg.payload\n\nreturn  {\"payload\"  : msg.payload   ,\n         \"url\"       : url        \n}  ;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 1820,
+        "wires": [
+            [
+                "27c942602ad9335a"
+            ]
+        ]
+    },
+    {
+        "id": "27c942602ad9335a",
+        "type": "http request",
+        "z": "41f3235e2124e3a2",
+        "g": "744e7dfa2109b681",
+        "name": "http",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "senderr": false,
+        "x": 930,
+        "y": 1880,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3947cc6e1ada983e",
+        "type": "debug",
+        "z": "41f3235e2124e3a2",
+        "g": "744e7dfa2109b681",
+        "name": "PP7 Result",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 990,
+        "y": 1920,
+        "wires": []
+    },
+    {
+        "id": "03e861f483ba32de",
+        "type": "link in",
+        "z": "41f3235e2124e3a2",
+        "g": "744e7dfa2109b681",
+        "name": "",
+        "links": [],
+        "x": 815,
+        "y": 1780,
+        "wires": [
+            [
+                "8b118698bee8597d"
+            ]
+        ]
+    },
+    {
+        "id": "51839c40f44bdfab",
+        "type": "link out",
+        "z": "41f3235e2124e3a2",
+        "g": "43393c4fc3b775a7",
+        "name": "",
+        "mode": "link",
+        "links": [],
+        "x": 475,
+        "y": 1860,
         "wires": []
     }
 ]
