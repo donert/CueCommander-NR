@@ -2304,6 +2304,35 @@
         "h": 302
     },
     {
+        "id": "24b66573302654fa",
+        "type": "group",
+        "z": "41f3235e2124e3a2",
+        "name": "Fire Cue based on Prop Name",
+        "style": {
+            "stroke": "#92d04f",
+            "label": true
+        },
+        "nodes": [
+            "aed50141858d4564",
+            "81b2d02e70dd77d5",
+            "547b9396de8d453a",
+            "ec0fc2a35871a01b",
+            "c22b483d9ae1ec49",
+            "16a76d6d2c1a0d8e",
+            "f1f274dbe582c3b4",
+            "145a247602ec182f",
+            "b046b15b2f154d15",
+            "17a7b8dd2fbcd461",
+            "85f50ee4c5bf0a07",
+            "04b035e1dbfa1418",
+            "b0abab58be05e76b"
+        ],
+        "x": 34,
+        "y": 3439,
+        "w": 592,
+        "h": 442
+    },
+    {
         "id": "77ffcbeb.3e5634",
         "type": "group",
         "z": "96ac9944.5b4dd8",
@@ -2588,34 +2617,6 @@
         ],
         "x": 54,
         "y": 39
-    },
-    {
-        "id": "24b66573302654fa",
-        "type": "group",
-        "z": "41f3235e2124e3a2",
-        "name": "Fire Cue based on Prop Name",
-        "style": {
-            "stroke": "#92d04f",
-            "label": true
-        },
-        "nodes": [
-            "aed50141858d4564",
-            "81b2d02e70dd77d5",
-            "547b9396de8d453a",
-            "ec0fc2a35871a01b",
-            "c22b483d9ae1ec49",
-            "16a76d6d2c1a0d8e",
-            "f1f274dbe582c3b4",
-            "145a247602ec182f",
-            "b046b15b2f154d15",
-            "17a7b8dd2fbcd461",
-            "85f50ee4c5bf0a07",
-            "04b035e1dbfa1418"
-        ],
-        "x": 34,
-        "y": 3439,
-        "w": 532,
-        "h": 402
     },
     {
         "id": "b36c9a8b.092df8",
@@ -28858,7 +28859,7 @@
         "y": 3800,
         "wires": [
             [
-                "145a247602ec182f"
+                "b0abab58be05e76b"
             ]
         ]
     },
@@ -28876,8 +28877,8 @@
         "targetType": "msg",
         "statusVal": "payload.id",
         "statusType": "auto",
-        "x": 420,
-        "y": 3800,
+        "x": 480,
+        "y": 3840,
         "wires": []
     },
     {
@@ -28886,7 +28887,7 @@
         "z": "41f3235e2124e3a2",
         "g": "24b66573302654fa",
         "name": "func out",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -28922,7 +28923,7 @@
         "z": "41f3235e2124e3a2",
         "g": "24b66573302654fa",
         "name": "split out",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -28948,6 +28949,26 @@
         "wires": [
             [
                 "16a76d6d2c1a0d8e"
+            ]
+        ]
+    },
+    {
+        "id": "b0abab58be05e76b",
+        "type": "split",
+        "z": "41f3235e2124e3a2",
+        "g": "24b66573302654fa",
+        "name": "",
+        "splt": ",",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "x": 330,
+        "y": 3780,
+        "wires": [
+            [
+                "145a247602ec182f"
             ]
         ]
     }
