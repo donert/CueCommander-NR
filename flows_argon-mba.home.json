@@ -3228,12 +3228,13 @@
     {
         "id": "53a10c1c.b388c4",
         "type": "ui_group",
-        "name": "Projector Status",
-        "tab": "871ea368.15c4e",
+        "name": "Active Props",
+        "tab": "99fceeca.e5d48",
         "order": 3,
         "disp": true,
-        "width": 20,
-        "collapse": false
+        "width": "20",
+        "collapse": false,
+        "className": ""
     },
     {
         "id": "208906fc.3b7e2a",
@@ -29433,7 +29434,8 @@
         "wires": [
             [
                 "84a34d132255600e",
-                "3b98adaa0ae00f87"
+                "3b98adaa0ae00f87",
+                "f1d201b3749db8bb"
             ]
         ]
     },
@@ -29477,6 +29479,33 @@
         "statusType": "auto",
         "x": 570,
         "y": 480,
+        "wires": []
+    },
+    {
+        "id": "f1d201b3749db8bb",
+        "type": "ui_table",
+        "z": "41f3235e2124e3a2",
+        "group": "53a10c1c.b388c4",
+        "name": "Active Props",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "columns": [
+            {
+                "field": "id.name",
+                "title": "Name",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            }
+        ],
+        "outputs": 0,
+        "cts": false,
+        "x": 730,
+        "y": 420,
         "wires": []
     }
 ]
