@@ -29493,7 +29493,7 @@
                 "title": "active",
                 "width": "",
                 "align": "left",
-                "formatter": "plaintext",
+                "formatter": "tickCross",
                 "formatterParams": {
                     "target": "_blank"
                 }
@@ -29504,6 +29504,16 @@
                 "width": "",
                 "align": "left",
                 "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "is_active",
+                "title": "Active2",
+                "width": "",
+                "align": "left",
+                "formatter": "tickCross",
                 "formatterParams": {
                     "target": "_blank"
                 }
