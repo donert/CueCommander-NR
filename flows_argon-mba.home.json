@@ -29325,7 +29325,7 @@
         "z": "41f3235e2124e3a2",
         "g": "744e7dfa2109b681",
         "name": "",
-        "property": "payload.url",
+        "property": "url",
         "propertyType": "msg",
         "rules": [
             {
