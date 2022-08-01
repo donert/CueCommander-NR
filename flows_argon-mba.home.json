@@ -29329,9 +29329,7 @@
         "propertyType": "msg",
         "rules": [
             {
-                "t": "eq",
-                "v": "",
-                "vt": "str"
+                "t": "else"
             }
         ],
         "checkall": "true",
