@@ -2089,11 +2089,7 @@
             "274dc93239cda83a",
             "40658dc6ff2b308f",
             "48385d163d92b5f0",
-            "2d1475a9c2788e80",
-            "2df13233446494c1",
             "e177c9d0d0aa374e",
-            "afecf1131817bb1e",
-            "db81eda67906d205",
             "e7e7a9e9898816c7",
             "5325cf6a89891b30",
             "976ca8778dfd15f9",
@@ -2105,20 +2101,17 @@
             "f480023965d909b6",
             "69892a238a32d8d7",
             "46d95b01dbd586c8",
-            "9dc6fcbc30721e8a",
-            "e3a49470ae26b383",
-            "68c8ce7f5a719688",
             "7452f60ce0258510",
             "c12a797393040679",
             "6daddb00ec26b8df",
-            "a3c7cf858d718bcf",
             "86b22c9ddd563804",
             "9fbe379a78abcf02",
-            "03ccce0cf990ff92"
+            "03ccce0cf990ff92",
+            "625d67be510c1eae"
         ],
         "x": 34,
         "y": 2019,
-        "w": 1072,
+        "w": 1012,
         "h": 742
     },
     {
@@ -2327,7 +2320,9 @@
             "b0abab58be05e76b",
             "228d178206bf0cda",
             "78d0e5ba3294155d",
-            "d630cf78cefa3cef"
+            "d630cf78cefa3cef",
+            "cda28b1aa59a52a5",
+            "f6c1b853513e829e"
         ],
         "x": 34,
         "y": 3439,
@@ -2619,6 +2614,35 @@
         ],
         "x": 54,
         "y": 39
+    },
+    {
+        "id": "f591482dad1c88d8",
+        "type": "group",
+        "z": "41f3235e2124e3a2",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "7ea0f087888ffcfe",
+            "75ed70daae489624",
+            "27bf1278ea27d4ae",
+            "9cecda2fb757af87",
+            "bf5aad2f6b422d02",
+            "107c974f836a2104",
+            "6e7f0e7c43b471b7",
+            "cb8be9dd017fb758",
+            "5b716f61200c374b"
+        ],
+        "x": 84,
+        "y": 4159,
+        "w": 642,
+        "h": 242
     },
     {
         "id": "b36c9a8b.092df8",
@@ -27176,7 +27200,7 @@
         "wires": [
             [
                 "274dc93239cda83a",
-                "afecf1131817bb1e"
+                "625d67be510c1eae"
             ],
             [
                 "9fbe379a78abcf02"
@@ -27271,51 +27295,6 @@
         "wires": []
     },
     {
-        "id": "2d1475a9c2788e80",
-        "type": "osc",
-        "z": "41f3235e2124e3a2",
-        "g": "5addd3a7c909e423",
-        "name": "",
-        "path": "",
-        "metadata": false,
-        "x": 750,
-        "y": 2360,
-        "wires": [
-            [
-                "9dc6fcbc30721e8a"
-            ]
-        ]
-    },
-    {
-        "id": "2df13233446494c1",
-        "type": "change",
-        "z": "41f3235e2124e3a2",
-        "g": "5addd3a7c909e423",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "\"/cs/playback/gotocue/\" & $substring(msg.payload,3)",
-                "tot": "jsonata"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 580,
-        "y": 2360,
-        "wires": [
-            [
-                "2d1475a9c2788e80",
-                "a3c7cf858d718bcf"
-            ]
-        ]
-    },
-    {
         "id": "e177c9d0d0aa374e",
         "type": "debug",
         "z": "41f3235e2124e3a2",
@@ -27331,44 +27310,6 @@
         "statusType": "auto",
         "x": 680,
         "y": 2160,
-        "wires": []
-    },
-    {
-        "id": "afecf1131817bb1e",
-        "type": "rbe",
-        "z": "41f3235e2124e3a2",
-        "g": "5addd3a7c909e423",
-        "name": "",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "septopics": true,
-        "property": "payload",
-        "topi": "topic",
-        "x": 550,
-        "y": 2320,
-        "wires": [
-            [
-                "2df13233446494c1"
-            ]
-        ]
-    },
-    {
-        "id": "db81eda67906d205",
-        "type": "udp out",
-        "z": "41f3235e2124e3a2",
-        "g": "5addd3a7c909e423",
-        "name": "",
-        "addr": "192.168.0.197",
-        "iface": "",
-        "port": "8005",
-        "ipv": "udp4",
-        "outport": "",
-        "base64": false,
-        "multicast": "false",
-        "x": 970,
-        "y": 2440,
         "wires": []
     },
     {
@@ -27970,64 +27911,6 @@
         "wires": []
     },
     {
-        "id": "9dc6fcbc30721e8a",
-        "type": "function",
-        "z": "41f3235e2124e3a2",
-        "g": "5addd3a7c909e423",
-        "name": "",
-        "func": "cfg = flow.get(\"config_ip_port\");\n\ncfg = cfg.find( y => y.device == \"Lights\")\n\nreturn  {\"payload\"  : msg.payload   ,\n         \"ip\"       : cfg.ip        ,\n         \"port\"     : cfg.port      ,\n         \"topic\"    : msg.topic\n}  ;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 760,
-        "y": 2400,
-        "wires": [
-            [
-                "db81eda67906d205",
-                "e3a49470ae26b383",
-                "68c8ce7f5a719688"
-            ]
-        ]
-    },
-    {
-        "id": "e3a49470ae26b383",
-        "type": "debug",
-        "z": "41f3235e2124e3a2",
-        "g": "5addd3a7c909e423",
-        "name": "",
-        "active": true,
-        "tosidebar": false,
-        "console": false,
-        "tostatus": true,
-        "complete": "ip",
-        "targetType": "msg",
-        "statusVal": "ip",
-        "statusType": "auto",
-        "x": 950,
-        "y": 2340,
-        "wires": []
-    },
-    {
-        "id": "68c8ce7f5a719688",
-        "type": "debug",
-        "z": "41f3235e2124e3a2",
-        "g": "5addd3a7c909e423",
-        "name": "",
-        "active": true,
-        "tosidebar": false,
-        "console": false,
-        "tostatus": true,
-        "complete": "port",
-        "targetType": "msg",
-        "statusVal": "port",
-        "statusType": "auto",
-        "x": 960,
-        "y": 2400,
-        "wires": []
-    },
-    {
         "id": "7452f60ce0258510",
         "type": "function",
         "z": "41f3235e2124e3a2",
@@ -28453,24 +28336,6 @@
         ]
     },
     {
-        "id": "a3c7cf858d718bcf",
-        "type": "ui_text",
-        "z": "41f3235e2124e3a2",
-        "g": "5addd3a7c909e423",
-        "group": "2dee2e04.7cf00a",
-        "order": 23,
-        "width": 12,
-        "height": 1,
-        "name": "osc Stub",
-        "label": "last osc msg",
-        "format": "{{msg.topic}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 780,
-        "y": 2300,
-        "wires": []
-    },
-    {
         "id": "86b22c9ddd563804",
         "type": "function",
         "z": "41f3235e2124e3a2",
@@ -28857,7 +28722,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 220,
+        "x": 180,
         "y": 3800,
         "wires": [
             [
@@ -28948,7 +28813,7 @@
         "arraySpltType": "len",
         "stream": false,
         "addname": "",
-        "x": 310,
+        "x": 210,
         "y": 3880,
         "wires": [
             [
@@ -28976,7 +28841,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 270,
+        "x": 190,
         "y": 3840,
         "wires": [
             [
@@ -29019,12 +28884,246 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 330,
+        "x": 210,
         "y": 3920,
         "wires": [
             [
-                "78d0e5ba3294155d"
+                "f6c1b853513e829e"
             ]
         ]
+    },
+    {
+        "id": "cda28b1aa59a52a5",
+        "type": "change",
+        "z": "41f3235e2124e3a2",
+        "g": "24b66573302654fa",
+        "name": "set topic",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "\"/cs/playback/gotocue/\" & $substring(msg.payload,3)",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 240,
+        "y": 3960,
+        "wires": [
+            [
+                "78d0e5ba3294155d",
+                "f6c1b853513e829e"
+            ]
+        ]
+    },
+    {
+        "id": "7ea0f087888ffcfe",
+        "type": "rbe",
+        "z": "41f3235e2124e3a2",
+        "g": "f591482dad1c88d8",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 170,
+        "y": 4240,
+        "wires": [
+            [
+                "75ed70daae489624"
+            ]
+        ]
+    },
+    {
+        "id": "75ed70daae489624",
+        "type": "change",
+        "z": "41f3235e2124e3a2",
+        "g": "f591482dad1c88d8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "\"/cs/playback/gotocue/\" & $substring(msg.payload,3)",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 200,
+        "y": 4280,
+        "wires": [
+            [
+                "9cecda2fb757af87",
+                "27bf1278ea27d4ae"
+            ]
+        ]
+    },
+    {
+        "id": "27bf1278ea27d4ae",
+        "type": "ui_text",
+        "z": "41f3235e2124e3a2",
+        "g": "f591482dad1c88d8",
+        "group": "2dee2e04.7cf00a",
+        "order": 23,
+        "width": 12,
+        "height": 1,
+        "name": "osc Stub",
+        "label": "last osc msg",
+        "format": "{{msg.topic}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 400,
+        "y": 4220,
+        "wires": []
+    },
+    {
+        "id": "9cecda2fb757af87",
+        "type": "osc",
+        "z": "41f3235e2124e3a2",
+        "g": "f591482dad1c88d8",
+        "name": "",
+        "path": "",
+        "metadata": false,
+        "x": 370,
+        "y": 4280,
+        "wires": [
+            [
+                "bf5aad2f6b422d02"
+            ]
+        ]
+    },
+    {
+        "id": "bf5aad2f6b422d02",
+        "type": "function",
+        "z": "41f3235e2124e3a2",
+        "g": "f591482dad1c88d8",
+        "name": "",
+        "func": "cfg = flow.get(\"config_ip_port\");\n\ncfg = cfg.find( y => y.device == \"Lights\")\n\nreturn  {\"payload\"  : msg.payload   ,\n         \"ip\"       : cfg.ip        ,\n         \"port\"     : cfg.port      ,\n         \"topic\"    : msg.topic\n}  ;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 4320,
+        "wires": [
+            [
+                "cb8be9dd017fb758",
+                "107c974f836a2104",
+                "6e7f0e7c43b471b7"
+            ]
+        ]
+    },
+    {
+        "id": "107c974f836a2104",
+        "type": "debug",
+        "z": "41f3235e2124e3a2",
+        "g": "f591482dad1c88d8",
+        "name": "",
+        "active": true,
+        "tosidebar": false,
+        "console": false,
+        "tostatus": true,
+        "complete": "ip",
+        "targetType": "msg",
+        "statusVal": "ip",
+        "statusType": "auto",
+        "x": 570,
+        "y": 4260,
+        "wires": []
+    },
+    {
+        "id": "6e7f0e7c43b471b7",
+        "type": "debug",
+        "z": "41f3235e2124e3a2",
+        "g": "f591482dad1c88d8",
+        "name": "",
+        "active": true,
+        "tosidebar": false,
+        "console": false,
+        "tostatus": true,
+        "complete": "port",
+        "targetType": "msg",
+        "statusVal": "port",
+        "statusType": "auto",
+        "x": 580,
+        "y": 4320,
+        "wires": []
+    },
+    {
+        "id": "cb8be9dd017fb758",
+        "type": "udp out",
+        "z": "41f3235e2124e3a2",
+        "g": "f591482dad1c88d8",
+        "name": "",
+        "addr": "192.168.0.197",
+        "iface": "",
+        "port": "8005",
+        "ipv": "udp4",
+        "outport": "",
+        "base64": false,
+        "multicast": "false",
+        "x": 590,
+        "y": 4360,
+        "wires": []
+    },
+    {
+        "id": "625d67be510c1eae",
+        "type": "link out",
+        "z": "41f3235e2124e3a2",
+        "g": "5addd3a7c909e423",
+        "name": "",
+        "mode": "link",
+        "links": [
+            "5b716f61200c374b"
+        ],
+        "x": 635,
+        "y": 2360,
+        "wires": []
+    },
+    {
+        "id": "5b716f61200c374b",
+        "type": "link in",
+        "z": "41f3235e2124e3a2",
+        "g": "f591482dad1c88d8",
+        "name": "",
+        "links": [
+            "625d67be510c1eae",
+            "f6c1b853513e829e"
+        ],
+        "x": 125,
+        "y": 4200,
+        "wires": [
+            [
+                "7ea0f087888ffcfe"
+            ]
+        ]
+    },
+    {
+        "id": "f6c1b853513e829e",
+        "type": "link out",
+        "z": "41f3235e2124e3a2",
+        "g": "24b66573302654fa",
+        "name": "",
+        "mode": "link",
+        "links": [
+            "5b716f61200c374b"
+        ],
+        "x": 485,
+        "y": 3880,
+        "wires": []
     }
 ]
