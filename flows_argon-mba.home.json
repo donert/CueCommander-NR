@@ -29489,7 +29489,7 @@
                 }
             },
             {
-                "field": "is_active",
+                "field": "payload.is_active",
                 "title": "active",
                 "width": "",
                 "align": "left",
