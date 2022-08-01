@@ -28559,7 +28559,7 @@
         "type": "inject",
         "z": "41f3235e2124e3a2",
         "g": "24b66573302654fa",
-        "name": "",
+        "name": "every 1/10th",
         "props": [
             {
                 "p": "payload"
@@ -28569,14 +28569,14 @@
                 "vt": "str"
             }
         ],
-        "repeat": "",
+        "repeat": ".1",
         "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
+        "once": true,
+        "onceDelay": "1",
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 140,
+        "x": 150,
         "y": 3480,
         "wires": [
             [
