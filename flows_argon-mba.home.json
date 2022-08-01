@@ -3234,7 +3234,7 @@
         "type": "ui_group",
         "name": "Active Props",
         "tab": "99fceeca.e5d48",
-        "order": 3,
+        "order": 6,
         "disp": true,
         "width": "20",
         "collapse": false,
@@ -3325,46 +3325,6 @@
         "disp": true,
         "width": "6",
         "collapse": false
-    },
-    {
-        "id": "41ebd106976067ce",
-        "type": "ui_spacer",
-        "z": "64cbf871.f282f8",
-        "name": "spacer",
-        "group": "53a10c1c.b388c4",
-        "order": 2,
-        "width": 8,
-        "height": 1
-    },
-    {
-        "id": "4952e96ee8de5530",
-        "type": "ui_spacer",
-        "z": "64cbf871.f282f8",
-        "name": "spacer",
-        "group": "53a10c1c.b388c4",
-        "order": 3,
-        "width": 8,
-        "height": 1
-    },
-    {
-        "id": "6d4d1353ab0fa73a",
-        "type": "ui_spacer",
-        "z": "64cbf871.f282f8",
-        "name": "spacer",
-        "group": "53a10c1c.b388c4",
-        "order": 4,
-        "width": 8,
-        "height": 1
-    },
-    {
-        "id": "d510b6e8eef2e8ed",
-        "type": "ui_spacer",
-        "z": "64cbf871.f282f8",
-        "name": "spacer",
-        "group": "53a10c1c.b388c4",
-        "order": 5,
-        "width": 8,
-        "height": 1
     },
     {
         "id": "73b331f4.a8bda",
