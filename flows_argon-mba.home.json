@@ -3433,6 +3433,7 @@
     {
         "id": "13e3cbbba82ff43c",
         "type": "atem-network",
+        "d": true,
         "name": "",
         "ipAddress": "192.168.0.191"
     },
