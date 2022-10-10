@@ -11353,7 +11353,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "'/camera/1/'{msg.payload}",
+                "to": "'/camera/1/' &  msg.payload ",
                 "tot": "jsonata"
             }
         ],
