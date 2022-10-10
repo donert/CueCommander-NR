@@ -2698,7 +2698,6 @@
             "9a84e58513e8d295",
             "402437ea0add3cda",
             "8ed7e18299e7b7f2",
-            "535f6f3b9eae2946",
             "84d0693ded3584f4",
             "3eee8cc190c89d05",
             "e918ed2c479266f3",
@@ -11509,7 +11508,7 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 210,
-        "y": 2220,
+        "y": 2420,
         "wires": [
             [
                 "1fffe4f019074c25"
@@ -11538,7 +11537,7 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 360,
-        "y": 2220,
+        "y": 2420,
         "wires": [
             [
                 "1fffe4f019074c25"
@@ -11566,8 +11565,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 490,
-        "y": 2220,
+        "x": 510,
+        "y": 2420,
         "wires": [
             [
                 "1fffe4f019074c25"
@@ -11591,41 +11590,12 @@
         "bgcolor": "",
         "className": "",
         "icon": "",
-        "payload": "panleft",
+        "payload": "left",
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
         "x": 210,
-        "y": 2260,
-        "wires": [
-            [
-                "1fffe4f019074c25"
-            ]
-        ]
-    },
-    {
-        "id": "535f6f3b9eae2946",
-        "type": "ui_button",
-        "z": "7014b916.6d1208",
-        "g": "e660fb746dfbb567",
-        "name": "",
-        "group": "56c8bd5d.50a2e4",
-        "order": 5,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "Pan Stop",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "panstop",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 360,
-        "y": 2260,
+        "y": 2220,
         "wires": [
             [
                 "1fffe4f019074c25"
@@ -11649,12 +11619,12 @@
         "bgcolor": "",
         "className": "",
         "icon": "",
-        "payload": "panright",
+        "payload": "right",
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
         "x": 490,
-        "y": 2260,
+        "y": 2220,
         "wires": [
             [
                 "1fffe4f019074c25"
@@ -11678,12 +11648,12 @@
         "bgcolor": "",
         "className": "",
         "icon": "",
-        "payload": "tiltup",
+        "payload": "up",
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
         "x": 210,
-        "y": 2300,
+        "y": 2260,
         "wires": [
             [
                 "1fffe4f019074c25"
@@ -11701,20 +11671,22 @@
         "width": 0,
         "height": 0,
         "passthru": false,
-        "label": "tilt stop",
+        "label": "stop",
         "tooltip": "",
         "color": "",
         "bgcolor": "",
         "className": "",
         "icon": "",
-        "payload": "tiltstop",
+        "payload": "stop",
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 360,
-        "y": 2300,
+        "x": 350,
+        "y": 2240,
         "wires": [
-            []
+            [
+                "1fffe4f019074c25"
+            ]
         ]
     },
     {
@@ -11734,12 +11706,12 @@
         "bgcolor": "",
         "className": "",
         "icon": "",
-        "payload": "tiltstop",
+        "payload": "down",
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
         "x": 490,
-        "y": 2300,
+        "y": 2260,
         "wires": [
             [
                 "1fffe4f019074c25"
@@ -11832,7 +11804,7 @@
         "to": "",
         "reg": false,
         "x": 400,
-        "y": 2400,
+        "y": 2360,
         "wires": [
             [
                 "dbfa147e05622b83",
@@ -11851,7 +11823,7 @@
             "47152b92eaeb477f"
         ],
         "x": 565,
-        "y": 2420,
+        "y": 2380,
         "wires": []
     },
     {
@@ -11869,7 +11841,7 @@
         "statusVal": "payload",
         "statusType": "auto",
         "x": 630,
-        "y": 2360,
+        "y": 2320,
         "wires": []
     },
     {
@@ -11895,7 +11867,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 180,
-        "y": 2400,
+        "y": 2360,
         "wires": [
             [
                 "3eee8cc190c89d05"
