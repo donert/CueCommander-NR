@@ -490,12 +490,15 @@
             "5652d4df.fc332c",
             "31b5d4e2.9251cc",
             "be6d1db5.1bb6e",
-            "95e19b2d.3c7cb8"
+            "95e19b2d.3c7cb8",
+            "47152b92eaeb477f",
+            "bdb051274e1eec2d",
+            "2be7f085656edb9d"
         ],
         "x": 14,
-        "y": 79,
+        "y": 39,
         "w": 737,
-        "h": 162
+        "h": 202
     },
     {
         "id": "c54cb139.4f73d",
@@ -1584,13 +1587,12 @@
             "cd4a32dcf0dc9d5b",
             "26406a2209a5e5d1",
             "ecd65a1af3555f6c",
-            "dfb2f4d763d2981d",
-            "fb6dc4271e4fee75",
-            "ca1fe26fc3b4dfce"
+            "ca1fe26fc3b4dfce",
+            "2c40920334dd0a83"
         ],
         "x": 14,
         "y": 479,
-        "w": 1052,
+        "w": 972,
         "h": 342
     },
     {
@@ -2682,6 +2684,40 @@
         ],
         "x": 54,
         "y": 39
+    },
+    {
+        "id": "e660fb746dfbb567",
+        "type": "group",
+        "z": "7014b916.6d1208",
+        "name": "Camera Controls 1",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "77e72b833edbda2f",
+            "9a84e58513e8d295",
+            "402437ea0add3cda",
+            "8ed7e18299e7b7f2",
+            "535f6f3b9eae2946",
+            "84d0693ded3584f4",
+            "3eee8cc190c89d05",
+            "e918ed2c479266f3",
+            "acf9187b42aaba51",
+            "1fffe4f019074c25",
+            "f2156563bd6337ca",
+            "dbfa147e05622b83"
+        ],
+        "env": [
+            {
+                "name": "camera",
+                "value": "1",
+                "type": "str"
+            }
+        ],
+        "x": 74,
+        "y": 2179,
+        "w": 632,
+        "h": 282
     },
     {
         "id": "b36c9a8b.092df8",
@@ -9454,7 +9490,7 @@
         "base64": false,
         "multicast": "false",
         "x": 630,
-        "y": 120,
+        "y": 80,
         "wires": []
     },
     {
@@ -9508,7 +9544,7 @@
             "45d3886e.bf37d8"
         ],
         "x": 55,
-        "y": 120,
+        "y": 80,
         "wires": [
             [
                 "8162415a.d8326",
@@ -10172,7 +10208,7 @@
         "name": "",
         "env": [],
         "x": 235,
-        "y": 120,
+        "y": 80,
         "wires": [
             [
                 "5652d4df.fc332c",
@@ -10192,7 +10228,7 @@
         "initialize": "",
         "finalize": "",
         "x": 455,
-        "y": 120,
+        "y": 80,
         "wires": [
             [
                 "7bc89364.546b1c",
@@ -10215,7 +10251,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 625,
-        "y": 160,
+        "y": 120,
         "wires": []
     },
     {
@@ -10996,7 +11032,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 445,
-        "y": 180,
+        "y": 140,
         "wires": []
     },
     {
@@ -11014,7 +11050,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 205,
-        "y": 200,
+        "y": 160,
         "wires": []
     },
     {
@@ -11420,42 +11456,9 @@
         "wires": [
             [
                 "bb4afb15.f41be8",
-                "dfb2f4d763d2981d"
+                "2c40920334dd0a83"
             ]
         ]
-    },
-    {
-        "id": "dfb2f4d763d2981d",
-        "type": "osc",
-        "z": "7014b916.6d1208",
-        "g": "85dc7af0.c16fb8",
-        "name": "",
-        "path": "",
-        "metadata": false,
-        "x": 850,
-        "y": 520,
-        "wires": [
-            [
-                "fb6dc4271e4fee75"
-            ]
-        ]
-    },
-    {
-        "id": "fb6dc4271e4fee75",
-        "type": "udp out",
-        "z": "7014b916.6d1208",
-        "g": "85dc7af0.c16fb8",
-        "name": "",
-        "addr": "127.0.0.1",
-        "iface": "",
-        "port": "54000",
-        "ipv": "udp4",
-        "outport": "",
-        "base64": false,
-        "multicast": "false",
-        "x": 940,
-        "y": 580,
-        "wires": []
     },
     {
         "id": "ca1fe26fc3b4dfce",
@@ -11482,6 +11485,391 @@
                 "f8b93d9667fc0cb6"
             ]
         ]
+    },
+    {
+        "id": "77e72b833edbda2f",
+        "type": "ui_button",
+        "z": "7014b916.6d1208",
+        "g": "e660fb746dfbb567",
+        "name": "",
+        "group": "56c8bd5d.50a2e4",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "In",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "zoomin",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 150,
+        "y": 2220,
+        "wires": [
+            [
+                "1fffe4f019074c25"
+            ]
+        ]
+    },
+    {
+        "id": "9a84e58513e8d295",
+        "type": "ui_button",
+        "z": "7014b916.6d1208",
+        "g": "e660fb746dfbb567",
+        "name": "",
+        "group": "56c8bd5d.50a2e4",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "zoomstop",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "zoomstop",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 300,
+        "y": 2220,
+        "wires": [
+            [
+                "1fffe4f019074c25"
+            ]
+        ]
+    },
+    {
+        "id": "402437ea0add3cda",
+        "type": "ui_button",
+        "z": "7014b916.6d1208",
+        "g": "e660fb746dfbb567",
+        "name": "",
+        "group": "56c8bd5d.50a2e4",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Out",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "zoomout",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 430,
+        "y": 2220,
+        "wires": [
+            [
+                "1fffe4f019074c25"
+            ]
+        ]
+    },
+    {
+        "id": "8ed7e18299e7b7f2",
+        "type": "ui_button",
+        "z": "7014b916.6d1208",
+        "g": "e660fb746dfbb567",
+        "name": "",
+        "group": "56c8bd5d.50a2e4",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Left",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "panleft",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 150,
+        "y": 2260,
+        "wires": [
+            [
+                "1fffe4f019074c25"
+            ]
+        ]
+    },
+    {
+        "id": "535f6f3b9eae2946",
+        "type": "ui_button",
+        "z": "7014b916.6d1208",
+        "g": "e660fb746dfbb567",
+        "name": "",
+        "group": "56c8bd5d.50a2e4",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Pan Stop",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "panstop",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 300,
+        "y": 2260,
+        "wires": [
+            [
+                "1fffe4f019074c25"
+            ]
+        ]
+    },
+    {
+        "id": "84d0693ded3584f4",
+        "type": "ui_button",
+        "z": "7014b916.6d1208",
+        "g": "e660fb746dfbb567",
+        "name": "",
+        "group": "56c8bd5d.50a2e4",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Right",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "panright",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 430,
+        "y": 2260,
+        "wires": [
+            [
+                "1fffe4f019074c25"
+            ]
+        ]
+    },
+    {
+        "id": "3eee8cc190c89d05",
+        "type": "ui_button",
+        "z": "7014b916.6d1208",
+        "g": "e660fb746dfbb567",
+        "name": "",
+        "group": "56c8bd5d.50a2e4",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Up",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "tiltup",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 150,
+        "y": 2300,
+        "wires": [
+            [
+                "1fffe4f019074c25"
+            ]
+        ]
+    },
+    {
+        "id": "e918ed2c479266f3",
+        "type": "ui_button",
+        "z": "7014b916.6d1208",
+        "g": "e660fb746dfbb567",
+        "name": "",
+        "group": "56c8bd5d.50a2e4",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "tilt stop",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "tiltstop",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 300,
+        "y": 2300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "acf9187b42aaba51",
+        "type": "ui_button",
+        "z": "7014b916.6d1208",
+        "g": "e660fb746dfbb567",
+        "name": "",
+        "group": "56c8bd5d.50a2e4",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Down",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "tiltstop",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 430,
+        "y": 2300,
+        "wires": [
+            [
+                "1fffe4f019074c25"
+            ]
+        ]
+    },
+    {
+        "id": "47152b92eaeb477f",
+        "type": "link in",
+        "z": "7014b916.6d1208",
+        "g": "5c5e0515.ea0e2c",
+        "name": "osc outbound",
+        "links": [
+            "2c40920334dd0a83",
+            "f2156563bd6337ca"
+        ],
+        "x": 55,
+        "y": 200,
+        "wires": [
+            [
+                "2be7f085656edb9d"
+            ]
+        ]
+    },
+    {
+        "id": "bdb051274e1eec2d",
+        "type": "udp out",
+        "z": "7014b916.6d1208",
+        "g": "5c5e0515.ea0e2c",
+        "name": "",
+        "addr": "127.0.0.1",
+        "iface": "",
+        "port": "54000",
+        "ipv": "udp4",
+        "outport": "",
+        "base64": false,
+        "multicast": "false",
+        "x": 380,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "2be7f085656edb9d",
+        "type": "osc",
+        "z": "7014b916.6d1208",
+        "g": "5c5e0515.ea0e2c",
+        "name": "",
+        "path": "",
+        "metadata": false,
+        "x": 170,
+        "y": 200,
+        "wires": [
+            [
+                "bdb051274e1eec2d"
+            ]
+        ]
+    },
+    {
+        "id": "2c40920334dd0a83",
+        "type": "link out",
+        "z": "7014b916.6d1208",
+        "g": "85dc7af0.c16fb8",
+        "name": "",
+        "mode": "link",
+        "links": [
+            "47152b92eaeb477f"
+        ],
+        "x": 885,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "1fffe4f019074c25",
+        "type": "change",
+        "z": "7014b916.6d1208",
+        "g": "e660fb746dfbb567",
+        "name": "build message",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "'/camera/${camera}/' &  msg.payload ",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 340,
+        "y": 2400,
+        "wires": [
+            [
+                "dbfa147e05622b83",
+                "f2156563bd6337ca"
+            ]
+        ]
+    },
+    {
+        "id": "f2156563bd6337ca",
+        "type": "link out",
+        "z": "7014b916.6d1208",
+        "g": "e660fb746dfbb567",
+        "name": "",
+        "mode": "link",
+        "links": [
+            "47152b92eaeb477f"
+        ],
+        "x": 505,
+        "y": 2420,
+        "wires": []
+    },
+    {
+        "id": "dbfa147e05622b83",
+        "type": "debug",
+        "z": "7014b916.6d1208",
+        "g": "e660fb746dfbb567",
+        "name": "Camera Control 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 570,
+        "y": 2360,
+        "wires": []
     },
     {
         "id": "590e16ba.44da28",
