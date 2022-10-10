@@ -1578,14 +1578,14 @@
             "5dfa0103.5325c",
             "196f8b46.ad3d45",
             "bb4afb15.f41be8",
-            "5b4bc84d.8ce6a8",
-            "7b23414b.b788e",
             "5fd8d588.9c8c7c",
             "d4e305dda321dca3",
-            "f8b93d9667fc0cb6"
+            "f8b93d9667fc0cb6",
+            "cd4a32dcf0dc9d5b",
+            "26406a2209a5e5d1"
         ],
         "x": 14,
-        "y": 479,
+        "y": 499,
         "w": 952,
         "h": 322
     },
@@ -9481,7 +9481,7 @@
         "animate": true,
         "className": "",
         "x": 110,
-        "y": 540,
+        "y": 560,
         "wires": [
             [
                 "d4e305dda321dca3"
@@ -9524,7 +9524,7 @@
             "a499c220.177c"
         ],
         "x": 675,
-        "y": 760,
+        "y": 780,
         "wires": []
     },
     {
@@ -10140,7 +10140,7 @@
         "to": "",
         "reg": false,
         "x": 300,
-        "y": 560,
+        "y": 580,
         "wires": [
             [
                 "9d9796f1.adb0a8"
@@ -10610,7 +10610,7 @@
         "to": "",
         "reg": false,
         "x": 350,
-        "y": 600,
+        "y": 620,
         "wires": [
             [
                 "8393ee16.0e42a"
@@ -10638,7 +10638,7 @@
         "to": "",
         "reg": false,
         "x": 360,
-        "y": 640,
+        "y": 660,
         "wires": [
             [
                 "8409d8fe.4a2278"
@@ -10657,7 +10657,7 @@
         "initialize": "",
         "finalize": "",
         "x": 420,
-        "y": 680,
+        "y": 700,
         "wires": [
             [
                 "db80e0a0.71098"
@@ -10677,11 +10677,9 @@
         "stream": false,
         "addname": "",
         "x": 410,
-        "y": 720,
+        "y": 740,
         "wires": [
             [
-                "5b4bc84d.8ce6a8",
-                "7b23414b.b788e",
                 "5fd8d588.9c8c7c"
             ]
         ]
@@ -10928,7 +10926,7 @@
         "payload": "poweron",
         "payloadType": "str",
         "x": 130,
-        "y": 660,
+        "y": 680,
         "wires": [
             [
                 "8eb0c09e.7f105"
@@ -10954,7 +10952,7 @@
         "payload": "poweroff",
         "payloadType": "str",
         "x": 130,
-        "y": 720,
+        "y": 740,
         "wires": [
             [
                 "8eb0c09e.7f105"
@@ -10967,7 +10965,7 @@
         "z": "7014b916.6d1208",
         "g": "85dc7af0.c16fb8",
         "name": "Power Message",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -10976,7 +10974,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 840,
-        "y": 520,
+        "y": 540,
         "wires": []
     },
     {
@@ -11016,42 +11014,6 @@
         "wires": []
     },
     {
-        "id": "5b4bc84d.8ce6a8",
-        "type": "debug",
-        "z": "7014b916.6d1208",
-        "g": "85dc7af0.c16fb8",
-        "name": "Post Split",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 710,
-        "y": 580,
-        "wires": []
-    },
-    {
-        "id": "7b23414b.b788e",
-        "type": "debug",
-        "z": "7014b916.6d1208",
-        "g": "85dc7af0.c16fb8",
-        "name": "dump topic",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload.topic",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 720,
-        "y": 640,
-        "wires": []
-    },
-    {
         "id": "5fd8d588.9c8c7c",
         "type": "function",
         "z": "7014b916.6d1208",
@@ -11063,7 +11025,7 @@
         "initialize": "",
         "finalize": "",
         "x": 480,
-        "y": 760,
+        "y": 780,
         "wires": [
             [
                 "cb527676.f585c8"
@@ -11336,10 +11298,12 @@
         "to": "",
         "reg": false,
         "x": 470,
-        "y": 540,
+        "y": 560,
         "wires": [
             [
-                "f8b93d9667fc0cb6"
+                "f8b93d9667fc0cb6",
+                "cd4a32dcf0dc9d5b",
+                "26406a2209a5e5d1"
             ]
         ]
     },
@@ -11348,7 +11312,7 @@
         "type": "change",
         "z": "7014b916.6d1208",
         "g": "85dc7af0.c16fb8",
-        "name": "",
+        "name": "cam 1",
         "rules": [
             {
                 "t": "set",
@@ -11363,8 +11327,64 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 620,
-        "y": 520,
+        "x": 590,
+        "y": 540,
+        "wires": [
+            [
+                "bb4afb15.f41be8"
+            ]
+        ]
+    },
+    {
+        "id": "cd4a32dcf0dc9d5b",
+        "type": "change",
+        "z": "7014b916.6d1208",
+        "g": "85dc7af0.c16fb8",
+        "name": "cam 2",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "'/camera/2/' &  msg.payload ",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 590,
+        "y": 580,
+        "wires": [
+            [
+                "bb4afb15.f41be8"
+            ]
+        ]
+    },
+    {
+        "id": "26406a2209a5e5d1",
+        "type": "change",
+        "z": "7014b916.6d1208",
+        "g": "85dc7af0.c16fb8",
+        "name": "cam 3",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "'/camera/3/' &  msg.payload ",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 590,
+        "y": 620,
         "wires": [
             [
                 "bb4afb15.f41be8"
