@@ -11404,7 +11404,7 @@
         "rules": [
             {
                 "t": "set",
-                "p": "payload",
+                "p": "topic",
                 "pt": "msg",
                 "to": "payload",
                 "tot": "msg"
