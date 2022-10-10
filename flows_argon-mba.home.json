@@ -1580,12 +1580,14 @@
             "bb4afb15.f41be8",
             "5b4bc84d.8ce6a8",
             "7b23414b.b788e",
-            "5fd8d588.9c8c7c"
+            "5fd8d588.9c8c7c",
+            "d4e305dda321dca3",
+            "f8b93d9667fc0cb6"
         ],
         "x": 14,
-        "y": 519,
-        "w": 892,
-        "h": 282
+        "y": 479,
+        "w": 952,
+        "h": 322
     },
     {
         "id": "eec2fe41.6fc47",
@@ -9466,20 +9468,23 @@
         "passthru": true,
         "decouple": "false",
         "topic": "",
+        "topicType": "str",
         "style": "",
-        "onvalue": "powerOn",
+        "onvalue": "poweron",
         "onvalueType": "str",
         "onicon": "",
         "oncolor": "",
-        "offvalue": "powerOff",
+        "offvalue": "poweroff",
         "offvalueType": "str",
         "officon": "",
         "offcolor": "",
+        "animate": true,
+        "className": "",
         "x": 110,
-        "y": 560,
+        "y": 540,
         "wires": [
             [
-                "a10b5b90.92b388"
+                "d4e305dda321dca3"
             ]
         ]
     },
@@ -10919,13 +10924,13 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "powerOn",
+        "payload": "poweron",
         "payloadType": "str",
         "x": 130,
         "y": 660,
         "wires": [
             [
-                "a10b5b90.92b388"
+                "8eb0c09e.7f105"
             ]
         ]
     },
@@ -10945,13 +10950,13 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "powerOff",
+        "payload": "poweroff",
         "payloadType": "str",
         "x": 130,
         "y": 720,
         "wires": [
             [
-                "a10b5b90.92b388"
+                "8eb0c09e.7f105"
             ]
         ]
     },
@@ -10969,8 +10974,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 780,
-        "y": 720,
+        "x": 840,
+        "y": 520,
         "wires": []
     },
     {
@@ -11060,8 +11065,7 @@
         "y": 760,
         "wires": [
             [
-                "cb527676.f585c8",
-                "bb4afb15.f41be8"
+                "cb527676.f585c8"
             ]
         ]
     },
@@ -11294,7 +11298,7 @@
         "type": "comment",
         "z": "7014b916.6d1208",
         "name": "TODO - Finish development",
-        "info": "",
+        "info": "makes use of of the osc interface offered by https://github.com/Electronics/ViscaOverIP\nand modified by me.",
         "x": 160,
         "y": 20,
         "wires": []
@@ -11309,6 +11313,62 @@
         "x": 190,
         "y": 1320,
         "wires": []
+    },
+    {
+        "id": "d4e305dda321dca3",
+        "type": "change",
+        "z": "7014b916.6d1208",
+        "g": "85dc7af0.c16fb8",
+        "name": "fork",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 470,
+        "y": 540,
+        "wires": [
+            [
+                "f8b93d9667fc0cb6"
+            ]
+        ]
+    },
+    {
+        "id": "f8b93d9667fc0cb6",
+        "type": "change",
+        "z": "7014b916.6d1208",
+        "g": "85dc7af0.c16fb8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "'/camera/1/'{msg.payload}",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 620,
+        "y": 520,
+        "wires": [
+            [
+                "bb4afb15.f41be8"
+            ]
+        ]
     },
     {
         "id": "590e16ba.44da28",
