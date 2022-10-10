@@ -9544,6 +9544,7 @@
         "id": "74a7bf2.ef1654",
         "type": "inject",
         "z": "7014b916.6d1208",
+        "d": true,
         "g": "b942e9b.c955b18",
         "name": "pulse",
         "props": [
