@@ -31,7 +31,7 @@
         "id": "7014b916.6d1208",
         "type": "tab",
         "label": "UI Cameras",
-        "disabled": true,
+        "disabled": false,
         "info": "Basic function is to switch the cameras on and off. \n\nAn advanced goal is to link the tally functions of the BMD ATEM to the cameras.\n\nSee [here for details] of the VISCA over IP protocol. (https://www.sony.net/Products/CameraSystem/CA/BRC_X1000_BRC_H800/Technical_Document/C456100121.pdf)\n\n# How it works\n\nThe `msg.topic` attribute is used to direct which camera action is to be triggered. \n\nThe attribtute, `msg.camera` indicates which camera is to be acted on. \n\nThe core of the formatting logic is in the subflow `Create Camera Message`. This flow responds to the `msg.topic` to create a `msg.payload` which is the buffer ready for transmission.\n\nNote: There is a field within the camera message for a sequence number. zeroes are being used for this. If this is a problem and actual sequence numbers need to be used, some refactoring will be needed to get ensure correct ordering.\n\n---\n\n# Python code\nThis is a snippet of Python code for command formatting.\n\ndef compose(s):\n    parsed = s.split(\" \")\n    glued  = \"\".join(parsed)\n    bs = bytes.fromhex(glued)\n    return(bs)\n\n - \"poweron\"\n -- compose('01 00 00 06 00 00 00 02 81 01 04 00 02 FF')\n - \"poweroff\"\n -- compose('01 00 00 06 00 00 00 02 81 01 04 00 03 FF')\n - \"powerinq\"          : \n -- compose('01 00 00 05 00 00 00 01 81 09 04 00 FF')\n - \"home\"              : \n -- compose('01 00 00 05 00 00 00 01 81 01 06 04 FF'),\n - \"camzoomtele\"\n -- compose('01 00 00 06 00 00 00 01 81 01 04 07 02 FF')\n - \"camzoomwide\"\n -- compose('01 00 00 06 00 00 00 01 81 01 04 07 03 FF')  \n - \"command_completed\"\n -- compose('90 50 FF') # expected result\n\n# Tally commands\n\n - On/Off Inquiry \n - 8x 09 7E 01 0A FF y0 50 0p FF \n - p: 2=On, 3=Off"
     },
     {
@@ -154,9 +154,7 @@
             "e495e943.cf1f18"
         ],
         "x": 14,
-        "y": 19,
-        "w": 912,
-        "h": 442
+        "y": 19
     },
     {
         "id": "77c46321.0fddbc",
@@ -191,9 +189,7 @@
             "43c5e078f5fa1fd2"
         ],
         "x": 34,
-        "y": 379,
-        "w": 882,
-        "h": 482
+        "y": 379
     },
     {
         "id": "7baf983a.7a1498",
@@ -226,9 +222,7 @@
             "e7f92019.e682"
         ],
         "x": 34,
-        "y": 1399,
-        "w": 862,
-        "h": 522
+        "y": 1399
     },
     {
         "id": "db849107.39fd1",
@@ -260,9 +254,7 @@
             "9beb1f34.27c84"
         ],
         "x": 34,
-        "y": 899,
-        "w": 862,
-        "h": 482
+        "y": 899
     },
     {
         "id": "ba4bbd3e.8196d",
@@ -288,9 +280,7 @@
             "900fe0b426429e10"
         ],
         "x": 34,
-        "y": 79,
-        "w": 912,
-        "h": 222
+        "y": 79
     },
     {
         "id": "d8d55245.49726",
@@ -312,9 +302,7 @@
             "38102d4c.5d4282"
         ],
         "x": 36,
-        "y": 1953,
-        "w": 840,
-        "h": 734
+        "y": 1953
     },
     {
         "id": "5a3761.bcd618a",
@@ -342,9 +330,7 @@
             "97c79174.f6cf3"
         ],
         "x": 14,
-        "y": 2759,
-        "w": 908,
-        "h": 822
+        "y": 2759
     },
     {
         "id": "1a657411.db32ac",
@@ -426,9 +412,7 @@
             "c208d442.f81c88"
         ],
         "x": 34,
-        "y": 559,
-        "w": 592,
-        "h": 222
+        "y": 559
     },
     {
         "id": "65220297.8c588c",
@@ -462,9 +446,7 @@
             "8cfbb4ee.75d588"
         ],
         "x": 34,
-        "y": 1959,
-        "w": 742,
-        "h": 462
+        "y": 1959
     },
     {
         "id": "74d2eb49.51fe34",
@@ -490,9 +472,7 @@
             "eb69de6a.fb725"
         ],
         "x": 28,
-        "y": 13,
-        "w": 928,
-        "h": 508
+        "y": 13
     },
     {
         "id": "5c5e0515.ea0e2c",
@@ -513,7 +493,9 @@
             "95e19b2d.3c7cb8"
         ],
         "x": 14,
-        "y": 79
+        "y": 79,
+        "w": 737,
+        "h": 162
     },
     {
         "id": "c54cb139.4f73d",
@@ -532,9 +514,7 @@
             "eb211ff1.3b78d"
         ],
         "x": 14,
-        "y": 499,
-        "w": 462,
-        "h": 142
+        "y": 499
     },
     {
         "id": "85bfeabb.c569f8",
@@ -555,9 +535,7 @@
             "19f9ac10.374204"
         ],
         "x": 14,
-        "y": 1019,
-        "w": 322,
-        "h": 282
+        "y": 1019
     },
     {
         "id": "7dfc3cbb.7e95c4",
@@ -578,9 +556,7 @@
             "d2f4f486.a18a58"
         ],
         "x": 14,
-        "y": 839,
-        "w": 762,
-        "h": 162
+        "y": 839
     },
     {
         "id": "1c7dc81d.0c1e38",
@@ -601,9 +577,7 @@
             "eb7e9bd5.ba3358"
         ],
         "x": 394,
-        "y": 1039,
-        "w": 312,
-        "h": 142
+        "y": 1039
     },
     {
         "id": "8ad3a579.ea8288",
@@ -623,9 +597,7 @@
             "a2e428e8.108d28"
         ],
         "x": 14,
-        "y": 679,
-        "w": 562,
-        "h": 142
+        "y": 679
     },
     {
         "id": "7269a2d8.645c0c",
@@ -829,7 +801,9 @@
             "f8f5d13a.7ff"
         ],
         "x": 14,
-        "y": 819
+        "y": 819,
+        "w": 942,
+        "h": 242
     },
     {
         "id": "c8d8db35.9a9e88",
@@ -1019,9 +993,7 @@
             "8fa7a3df.960d6"
         ],
         "x": 44,
-        "y": 19,
-        "w": 902,
-        "h": 262
+        "y": 19
     },
     {
         "id": "1976ad4e.952673",
@@ -1069,9 +1041,7 @@
             "3b0762ae.73cc9e"
         ],
         "x": 34,
-        "y": 3639,
-        "w": 1012,
-        "h": 202
+        "y": 3639
     },
     {
         "id": "39e73dff.5e4cc2",
@@ -1095,9 +1065,7 @@
             "f5e66a1e.b30d28"
         ],
         "x": 14,
-        "y": 1319,
-        "w": 1012,
-        "h": 202
+        "y": 1319
     },
     {
         "id": "b942e9b.c955b18",
@@ -1123,7 +1091,9 @@
             "d3cdce03.bb22d"
         ],
         "x": 14,
-        "y": 1079
+        "y": 1079,
+        "w": 1012,
+        "h": 202
     },
     {
         "id": "955bfb84.2f11d8",
@@ -1161,9 +1131,7 @@
             "4bf08b27.0064b4"
         ],
         "x": 34,
-        "y": 1479,
-        "w": 1072,
-        "h": 442
+        "y": 1479
     },
     {
         "id": "f5b78969.be6618",
@@ -1615,7 +1583,9 @@
             "5fd8d588.9c8c7c"
         ],
         "x": 14,
-        "y": 519
+        "y": 519,
+        "w": 892,
+        "h": 282
     },
     {
         "id": "eec2fe41.6fc47",
@@ -1696,9 +1666,7 @@
             "26d4e0bb.c3f3a"
         ],
         "x": 654,
-        "y": 539,
-        "w": 932,
-        "h": 322
+        "y": 539
     },
     {
         "id": "1fee3fae.e6893",
@@ -1764,9 +1732,7 @@
             "2ce45fde.33427"
         ],
         "x": 594,
-        "y": 1219,
-        "w": 592,
-        "h": 202
+        "y": 1219
     },
     {
         "id": "452ed9f6.117cb8",
@@ -1781,9 +1747,7 @@
             "728af67f.d18cb8"
         ],
         "x": 394,
-        "y": 1359,
-        "w": 172,
-        "h": 82
+        "y": 1359
     },
     {
         "id": "c87c24f4.363dc8",
@@ -1799,9 +1763,7 @@
             "9cbf6757.a76ec8"
         ],
         "x": 44,
-        "y": 1319,
-        "w": 332,
-        "h": 122
+        "y": 1319
     },
     {
         "id": "72b450b6.03b4d",
@@ -1825,9 +1787,7 @@
             "1c31bb43.4c9505"
         ],
         "x": 54,
-        "y": 899,
-        "w": 772,
-        "h": 162
+        "y": 899
     },
     {
         "id": "abe38ad4.dae558",
@@ -1851,9 +1811,7 @@
             "217b6567.07b41a"
         ],
         "x": 874,
-        "y": 899,
-        "w": 766,
-        "h": 162
+        "y": 899
     },
     {
         "id": "84d3bbc9.a70f28",
@@ -1873,9 +1831,7 @@
             "fd41b514.4d55f8"
         ],
         "x": 1094,
-        "y": 79,
-        "w": 512,
-        "h": 122
+        "y": 79
     },
     {
         "id": "6efbe5a5.35e4cc",
@@ -1903,7 +1859,9 @@
             "e880e90a.e4b008"
         ],
         "x": 14,
-        "y": 1699
+        "y": 1699,
+        "w": 972,
+        "h": 382
     },
     {
         "id": "bcbb1fe0.e492a",
@@ -1925,7 +1883,9 @@
             "a933114d.d816d"
         ],
         "x": 10,
-        "y": 259
+        "y": 259,
+        "w": 736,
+        "h": 242
     },
     {
         "id": "7ec16513.a62d6c",
@@ -1953,7 +1913,9 @@
             "c49818265e4f0392"
         ],
         "x": 14,
-        "y": 1279
+        "y": 1279,
+        "w": 1132,
+        "h": 262
     },
     {
         "id": "b0498d092b7b9b25",
@@ -1998,9 +1960,7 @@
             "9e3a0b69d60efbc9"
         ],
         "x": 74,
-        "y": 699,
-        "w": 492,
-        "h": 382
+        "y": 699
     },
     {
         "id": "511ec5943fba0ae3",
@@ -2017,9 +1977,7 @@
             "a0fa3cbc9a9eb910"
         ],
         "x": 1254,
-        "y": 1399,
-        "w": 532,
-        "h": 122
+        "y": 1399
     },
     {
         "id": "bcb4281ae3598805",
@@ -2054,9 +2012,7 @@
             "6c1ac10a65da12be"
         ],
         "x": 74,
-        "y": 1139,
-        "w": 752,
-        "h": 582
+        "y": 1139
     },
     {
         "id": "b04365528854e88a",
@@ -2078,9 +2034,7 @@
             "5e1b3a6eb4d3b552"
         ],
         "x": 54,
-        "y": 2219,
-        "w": 772,
-        "h": 242
+        "y": 2219
     },
     {
         "id": "5187317a14d88a88",
@@ -2117,9 +2071,7 @@
             "24673fa75db6941e"
         ],
         "x": 54,
-        "y": 1759,
-        "w": 1092,
-        "h": 402
+        "y": 1759
     },
     {
         "id": "5addd3a7c909e423",
@@ -2162,9 +2114,7 @@
             "625d67be510c1eae"
         ],
         "x": 54,
-        "y": 2499,
-        "w": 1012,
-        "h": 742
+        "y": 2499
     },
     {
         "id": "6433aa0ec9372bde",
@@ -2192,9 +2142,7 @@
             "ec761bc5c44ae47d"
         ],
         "x": 34,
-        "y": 2879,
-        "w": 732,
-        "h": 522
+        "y": 2879
     },
     {
         "id": "43393c4fc3b775a7",
@@ -2214,9 +2162,7 @@
             "3fd8185ab2f235a9"
         ],
         "x": 734,
-        "y": 59,
-        "w": 482,
-        "h": 302
+        "y": 59
     },
     {
         "id": "c681dc44e2d3bb1d",
@@ -2270,9 +2216,7 @@
             "4aa8f472fa252a1e"
         ],
         "x": 14,
-        "y": 299,
-        "w": 1132,
-        "h": 362
+        "y": 299
     },
     {
         "id": "dacfcd47aec0c05a",
@@ -2289,9 +2233,7 @@
             "a7cf0a5119df01fa"
         ],
         "x": 34,
-        "y": 3919,
-        "w": 672,
-        "h": 162
+        "y": 3919
     },
     {
         "id": "2e267aabc8e94e20",
@@ -2326,9 +2268,7 @@
             "f05677b3590d90d3"
         ],
         "x": 14,
-        "y": 4179,
-        "w": 1272,
-        "h": 362
+        "y": 4179
     },
     {
         "id": "83b35ec65abcd370",
@@ -2383,9 +2323,73 @@
             "f6c1b853513e829e"
         ],
         "x": 34,
-        "y": 3439,
-        "w": 612,
-        "h": 562
+        "y": 3439
+    },
+    {
+        "id": "f591482dad1c88d8",
+        "type": "group",
+        "z": "41f3235e2124e3a2",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "7ea0f087888ffcfe",
+            "75ed70daae489624",
+            "27bf1278ea27d4ae",
+            "9cecda2fb757af87",
+            "bf5aad2f6b422d02",
+            "107c974f836a2104",
+            "6e7f0e7c43b471b7",
+            "cb8be9dd017fb758",
+            "5b716f61200c374b",
+            "03d92876f870323e"
+        ],
+        "x": 84,
+        "y": 4119
+    },
+    {
+        "id": "744e7dfa2109b681",
+        "type": "group",
+        "z": "41f3235e2124e3a2",
+        "name": "PP7 Communications",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "8b118698bee8597d",
+            "27c942602ad9335a",
+            "3947cc6e1ada983e",
+            "03e861f483ba32de",
+            "48bbbfd46787bda5"
+        ],
+        "x": 54,
+        "y": 39
+    },
+    {
+        "id": "551279d7cee9afe1",
+        "type": "group",
+        "z": "41f3235e2124e3a2",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "12518193dcf15eec",
+            "5034ac8ec08d9d16"
+        ],
+        "x": 74,
+        "y": 579
     },
     {
         "id": "77ffcbeb.3e5634",
@@ -2405,9 +2409,7 @@
             "fcd50239.7c9c8"
         ],
         "x": 434,
-        "y": 2919,
-        "w": 462,
-        "h": 162
+        "y": 2919
     },
     {
         "id": "5708436.a4e2dbc",
@@ -2426,9 +2428,7 @@
             "224081ab.df895e"
         ],
         "x": 434,
-        "y": 3099,
-        "w": 462,
-        "h": 122
+        "y": 3099
     },
     {
         "id": "1b4382d4.7ea50d",
@@ -2447,9 +2447,7 @@
             "36c6267c.7003ba"
         ],
         "x": 434,
-        "y": 3239,
-        "w": 462,
-        "h": 122
+        "y": 3239
     },
     {
         "id": "1d27da07.0c8016",
@@ -2469,9 +2467,7 @@
             "6f50575.946f3a8"
         ],
         "x": 54,
-        "y": 3179,
-        "w": 232,
-        "h": 242
+        "y": 3179
     },
     {
         "id": "b7ee310a.88129",
@@ -2489,9 +2485,7 @@
             "4cab2436.1e069c"
         ],
         "x": 62,
-        "y": 1979,
-        "w": 424,
-        "h": 122
+        "y": 1979
     },
     {
         "id": "685a97ea.429758",
@@ -2509,9 +2503,7 @@
             "8d8b5301.a77ea"
         ],
         "x": 64,
-        "y": 2399,
-        "w": 422,
-        "h": 122
+        "y": 2399
     },
     {
         "id": "e18b4c44.0e61b",
@@ -2529,9 +2521,7 @@
             "35818fc0.5929d"
         ],
         "x": 64,
-        "y": 2119,
-        "w": 422,
-        "h": 122
+        "y": 2119
     },
     {
         "id": "e5c14455.7ca878",
@@ -2549,9 +2539,7 @@
             "759aa7af.8ba348"
         ],
         "x": 64,
-        "y": 2259,
-        "w": 422,
-        "h": 122
+        "y": 2259
     },
     {
         "id": "38102d4c.5d4282",
@@ -2569,9 +2557,7 @@
             "7cbbe4cb.4e388c"
         ],
         "x": 64,
-        "y": 2539,
-        "w": 422,
-        "h": 122
+        "y": 2539
     },
     {
         "id": "97c79174.f6cf3",
@@ -2590,9 +2576,7 @@
             "3f863956.1a94e6"
         ],
         "x": 434,
-        "y": 3379,
-        "w": 462,
-        "h": 122
+        "y": 3379
     },
     {
         "id": "e5ab239c.cf84b",
@@ -2691,81 +2675,7 @@
             "ff22a0a2.ac74f"
         ],
         "x": 54,
-        "y": 39,
-        "w": 872,
-        "h": 222
-    },
-    {
-        "id": "f591482dad1c88d8",
-        "type": "group",
-        "z": "41f3235e2124e3a2",
-        "style": {
-            "stroke": "#999999",
-            "stroke-opacity": "1",
-            "fill": "none",
-            "fill-opacity": "1",
-            "label": true,
-            "label-position": "nw",
-            "color": "#a4a4a4"
-        },
-        "nodes": [
-            "7ea0f087888ffcfe",
-            "75ed70daae489624",
-            "27bf1278ea27d4ae",
-            "9cecda2fb757af87",
-            "bf5aad2f6b422d02",
-            "107c974f836a2104",
-            "6e7f0e7c43b471b7",
-            "cb8be9dd017fb758",
-            "5b716f61200c374b",
-            "03d92876f870323e"
-        ],
-        "x": 84,
-        "y": 4119,
-        "w": 642,
-        "h": 262
-    },
-    {
-        "id": "744e7dfa2109b681",
-        "type": "group",
-        "z": "41f3235e2124e3a2",
-        "name": "PP7 Communications",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "8b118698bee8597d",
-            "27c942602ad9335a",
-            "3947cc6e1ada983e",
-            "03e861f483ba32de",
-            "48bbbfd46787bda5"
-        ],
-        "x": 54,
-        "y": 39,
-        "w": 272,
-        "h": 362
-    },
-    {
-        "id": "551279d7cee9afe1",
-        "type": "group",
-        "z": "41f3235e2124e3a2",
-        "style": {
-            "stroke": "#999999",
-            "stroke-opacity": "1",
-            "fill": "none",
-            "fill-opacity": "1",
-            "label": true,
-            "label-position": "nw",
-            "color": "#a4a4a4"
-        },
-        "nodes": [
-            "12518193dcf15eec",
-            "5034ac8ec08d9d16"
-        ],
-        "x": 74,
-        "y": 579,
-        "w": 392,
-        "h": 82
+        "y": 39
     },
     {
         "id": "b36c9a8b.092df8",
