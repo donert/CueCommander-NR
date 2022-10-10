@@ -1582,12 +1582,16 @@
             "d4e305dda321dca3",
             "f8b93d9667fc0cb6",
             "cd4a32dcf0dc9d5b",
-            "26406a2209a5e5d1"
+            "26406a2209a5e5d1",
+            "ecd65a1af3555f6c",
+            "dfb2f4d763d2981d",
+            "fb6dc4271e4fee75",
+            "ca1fe26fc3b4dfce"
         ],
         "x": 14,
-        "y": 499,
-        "w": 952,
-        "h": 322
+        "y": 479,
+        "w": 1052,
+        "h": 342
     },
     {
         "id": "eec2fe41.6fc47",
@@ -3433,7 +3437,6 @@
     {
         "id": "13e3cbbba82ff43c",
         "type": "atem-network",
-        "d": true,
         "name": "",
         "ipAddress": "192.168.0.191"
     },
@@ -10974,8 +10977,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 840,
-        "y": 540,
+        "x": 860,
+        "y": 640,
         "wires": []
     },
     {
@@ -11332,7 +11335,7 @@
         "y": 540,
         "wires": [
             [
-                "bb4afb15.f41be8"
+                "ecd65a1af3555f6c"
             ]
         ]
     },
@@ -11360,7 +11363,7 @@
         "y": 580,
         "wires": [
             [
-                "bb4afb15.f41be8"
+                "ecd65a1af3555f6c"
             ]
         ]
     },
@@ -11388,7 +11391,95 @@
         "y": 620,
         "wires": [
             [
-                "bb4afb15.f41be8"
+                "ecd65a1af3555f6c"
+            ]
+        ]
+    },
+    {
+        "id": "ecd65a1af3555f6c",
+        "type": "change",
+        "z": "7014b916.6d1208",
+        "g": "85dc7af0.c16fb8",
+        "name": "join",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 750,
+        "y": 580,
+        "wires": [
+            [
+                "bb4afb15.f41be8",
+                "dfb2f4d763d2981d"
+            ]
+        ]
+    },
+    {
+        "id": "dfb2f4d763d2981d",
+        "type": "osc",
+        "z": "7014b916.6d1208",
+        "g": "85dc7af0.c16fb8",
+        "name": "",
+        "path": "",
+        "metadata": false,
+        "x": 850,
+        "y": 520,
+        "wires": [
+            [
+                "fb6dc4271e4fee75"
+            ]
+        ]
+    },
+    {
+        "id": "fb6dc4271e4fee75",
+        "type": "udp out",
+        "z": "7014b916.6d1208",
+        "g": "85dc7af0.c16fb8",
+        "name": "",
+        "addr": "127.0.0.1",
+        "iface": "",
+        "port": "54000",
+        "ipv": "udp4",
+        "outport": "",
+        "base64": false,
+        "multicast": "false",
+        "x": 940,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "ca1fe26fc3b4dfce",
+        "type": "inject",
+        "z": "7014b916.6d1208",
+        "g": "85dc7af0.c16fb8",
+        "name": "test zoomin",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "zoomin",
+        "payloadType": "str",
+        "x": 270,
+        "y": 520,
+        "wires": [
+            [
+                "f8b93d9667fc0cb6"
             ]
         ]
     },
