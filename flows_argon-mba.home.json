@@ -11820,7 +11820,7 @@
         "rules": [
             {
                 "t": "set",
-                "p": "payload",
+                "p": "topic",
                 "pt": "msg",
                 "to": "'/camera/' & $env('camera') & '/' &  msg.payload ",
                 "tot": "jsonata"
@@ -11864,7 +11864,7 @@
         "tosidebar": true,
         "console": false,
         "tostatus": true,
-        "complete": "payload",
+        "complete": "topic",
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
