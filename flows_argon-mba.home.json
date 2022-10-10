@@ -11821,7 +11821,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "'/camera/$env('ENV_VAR')/' &  msg.payload ",
+                "to": "'/camera/$env('camera')/' &  msg.payload ",
                 "tot": "jsonata"
             }
         ],
