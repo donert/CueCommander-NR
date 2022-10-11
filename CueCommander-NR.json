@@ -5327,7 +5327,7 @@
         "wires": [
             [
                 "967748a5229d9e31",
-                "9732f191458f8fe9"
+                "bd7e9e8a9840d222"
             ]
         ]
     },
@@ -5354,8 +5354,52 @@
         ],
         "outputs": 0,
         "cts": false,
-        "x": 470,
+        "x": 630,
+        "y": 2020,
+        "wires": []
+    },
+    {
+        "id": "bd7e9e8a9840d222",
+        "type": "change",
+        "z": "ee400291.7cb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "steps.text",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 440,
         "y": 2040,
+        "wires": [
+            [
+                "9732f191458f8fe9",
+                "1470aa1bc2cc27ce"
+            ]
+        ]
+    },
+    {
+        "id": "1470aa1bc2cc27ce",
+        "type": "debug",
+        "z": "ee400291.7cb",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 610,
+        "y": 2100,
         "wires": []
     },
     {
