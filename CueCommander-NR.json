@@ -2859,6 +2859,33 @@
         "h": 222
     },
     {
+        "id": "f1a1cac018967916",
+        "type": "group",
+        "z": "ee400291.7cb",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "3eaff971b4691417",
+            "7f3c542adcfaefe5",
+            "967748a5229d9e31",
+            "e744f8e44976ccc2",
+            "9732f191458f8fe9",
+            "bd7e9e8a9840d222",
+            "1470aa1bc2cc27ce"
+        ],
+        "x": 374,
+        "y": 59,
+        "w": 732,
+        "h": 202
+    },
+    {
         "id": "b36c9a8b.092df8",
         "type": "ui_tab",
         "name": "Lights",
@@ -4373,6 +4400,7 @@
         "id": "e09fe42d.e14738",
         "type": "inject",
         "z": "ee400291.7cb",
+        "d": true,
         "g": "1fee3fae.e6893",
         "name": "Load Cue Data",
         "props": [
@@ -5250,6 +5278,7 @@
         "id": "3eaff971b4691417",
         "type": "http request",
         "z": "ee400291.7cb",
+        "g": "f1a1cac018967916",
         "name": "Get Cue List",
         "method": "GET",
         "ret": "txt",
@@ -5260,8 +5289,8 @@
         "proxy": "",
         "authType": "",
         "senderr": false,
-        "x": 290,
-        "y": 1980,
+        "x": 670,
+        "y": 100,
         "wires": [
             [
                 "e744f8e44976ccc2"
@@ -5272,6 +5301,7 @@
         "id": "7f3c542adcfaefe5",
         "type": "inject",
         "z": "ee400291.7cb",
+        "g": "f1a1cac018967916",
         "name": "",
         "props": [
             {
@@ -5289,8 +5319,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 100,
-        "y": 1980,
+        "x": 480,
+        "y": 100,
         "wires": [
             [
                 "3eaff971b4691417"
@@ -5301,6 +5331,7 @@
         "id": "967748a5229d9e31",
         "type": "debug",
         "z": "ee400291.7cb",
+        "g": "f1a1cac018967916",
         "name": "Dump Cue List",
         "active": true,
         "tosidebar": true,
@@ -5310,24 +5341,25 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 280,
-        "y": 2100,
+        "x": 660,
+        "y": 220,
         "wires": []
     },
     {
         "id": "e744f8e44976ccc2",
         "type": "json",
         "z": "ee400291.7cb",
+        "g": "f1a1cac018967916",
         "name": "",
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 270,
-        "y": 2040,
+        "x": 650,
+        "y": 160,
         "wires": [
             [
                 "967748a5229d9e31",
-                "bd7e9e8a9840d222"
+                "837072d1.40d76"
             ]
         ]
     },
@@ -5335,6 +5367,7 @@
         "id": "9732f191458f8fe9",
         "type": "ui_table",
         "z": "ee400291.7cb",
+        "g": "f1a1cac018967916",
         "group": "0834dd19f5b0da94",
         "name": "",
         "order": 0,
@@ -5354,14 +5387,15 @@
         ],
         "outputs": 0,
         "cts": false,
-        "x": 630,
-        "y": 2020,
+        "x": 1010,
+        "y": 140,
         "wires": []
     },
     {
         "id": "bd7e9e8a9840d222",
         "type": "change",
         "z": "ee400291.7cb",
+        "g": "f1a1cac018967916",
         "name": "",
         "rules": [
             {
@@ -5377,11 +5411,10 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 440,
-        "y": 2040,
+        "x": 820,
+        "y": 160,
         "wires": [
             [
-                "9732f191458f8fe9",
                 "1470aa1bc2cc27ce"
             ]
         ]
@@ -5390,6 +5423,7 @@
         "id": "1470aa1bc2cc27ce",
         "type": "debug",
         "z": "ee400291.7cb",
+        "g": "f1a1cac018967916",
         "name": "",
         "active": true,
         "tosidebar": true,
@@ -5398,8 +5432,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 610,
-        "y": 2100,
+        "x": 990,
+        "y": 220,
         "wires": []
     },
     {
