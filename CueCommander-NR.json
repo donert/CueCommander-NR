@@ -4563,7 +4563,7 @@
         "z": "ee400291.7cb",
         "g": "1fee3fae.e6893",
         "name": "Read saved cues ",
-        "filename": "./cueList.json",
+        "filename": "/Users/donert/.node-red/projects/CueCommander-NR/cueList.json",
         "format": "utf8",
         "chunk": false,
         "sendError": false,
