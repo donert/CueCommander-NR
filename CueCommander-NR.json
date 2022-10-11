@@ -5151,11 +5151,11 @@
         "tosidebar": true,
         "console": false,
         "tostatus": true,
-        "complete": "payload",
+        "complete": "topic",
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 490,
+        "x": 480,
         "y": 880,
         "wires": []
     },
