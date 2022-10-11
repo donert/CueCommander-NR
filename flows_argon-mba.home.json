@@ -1943,7 +1943,9 @@
             "f8358b92a5d4d947"
         ],
         "x": 54,
-        "y": 279
+        "y": 279,
+        "w": 772,
+        "h": 222
     },
     {
         "id": "d3fbab81cf2a97fc",
@@ -11404,6 +11406,7 @@
         "id": "a5eacea7.2ac36",
         "type": "ui_table",
         "z": "7014b916.6d1208",
+        "d": true,
         "g": "bcbb1fe0.e492a",
         "group": "308c10e.9f922f",
         "name": "",
@@ -26875,6 +26878,7 @@
         "id": "54d0ea94.c1b9a4",
         "type": "ui_template",
         "z": "4ab9df2b.7b3dd",
+        "d": true,
         "g": "b0498d092b7b9b25",
         "group": "73b331f4.a8bda",
         "name": "Display image",
