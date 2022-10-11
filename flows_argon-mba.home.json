@@ -11899,7 +11899,7 @@
         "label": "stop",
         "tooltip": "",
         "color": "",
-        "bgcolor": "",
+        "bgcolor": "red",
         "className": "",
         "icon": "",
         "payload": "stop",
