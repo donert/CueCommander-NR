@@ -5236,6 +5236,74 @@
         "wires": []
     },
     {
+        "id": "3eaff971b4691417",
+        "type": "http request",
+        "z": "ee400291.7cb",
+        "name": "Get Cue List",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://192.168.0.197:8080/cs/get/cueList",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "senderr": false,
+        "x": 290,
+        "y": 1980,
+        "wires": [
+            [
+                "967748a5229d9e31"
+            ]
+        ]
+    },
+    {
+        "id": "7f3c542adcfaefe5",
+        "type": "inject",
+        "z": "ee400291.7cb",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 100,
+        "y": 1980,
+        "wires": [
+            [
+                "3eaff971b4691417"
+            ]
+        ]
+    },
+    {
+        "id": "967748a5229d9e31",
+        "type": "debug",
+        "z": "ee400291.7cb",
+        "name": "Dump Cue List",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 1980,
+        "wires": []
+    },
+    {
         "id": "75b23a68.99e7a4",
         "type": "ui_button",
         "z": "900140d4.af55",
