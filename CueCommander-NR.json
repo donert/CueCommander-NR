@@ -3801,6 +3801,17 @@
         "className": ""
     },
     {
+        "id": "0834dd19f5b0da94",
+        "type": "ui_group",
+        "name": "Dump live cue list",
+        "tab": "b36c9a8b.092df8",
+        "order": 4,
+        "disp": true,
+        "width": "16",
+        "collapse": false,
+        "className": ""
+    },
+    {
         "id": "c6213b74.2cce48",
         "type": "function",
         "z": "a3ba969f.c5f3b8",
@@ -5315,9 +5326,37 @@
         "y": 2040,
         "wires": [
             [
-                "967748a5229d9e31"
+                "967748a5229d9e31",
+                "9732f191458f8fe9"
             ]
         ]
+    },
+    {
+        "id": "9732f191458f8fe9",
+        "type": "ui_table",
+        "z": "ee400291.7cb",
+        "group": "0834dd19f5b0da94",
+        "name": "",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "columns": [
+            {
+                "field": "steps.content.text",
+                "title": "Name",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            }
+        ],
+        "outputs": 0,
+        "cts": false,
+        "x": 470,
+        "y": 2040,
+        "wires": []
     },
     {
         "id": "75b23a68.99e7a4",
