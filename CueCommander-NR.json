@@ -3531,26 +3531,6 @@
         "ipAddress": "192.168.0.191"
     },
     {
-        "id": "d3c5012c0a3326f9",
-        "type": "ui_spacer",
-        "z": "ee400291.7cb",
-        "name": "spacer",
-        "group": "446cfe7e.e013f",
-        "order": 4,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "5233e5642d988839",
-        "type": "ui_spacer",
-        "z": "ee400291.7cb",
-        "name": "spacer",
-        "group": "446cfe7e.e013f",
-        "order": 6,
-        "width": 3,
-        "height": 1
-    },
-    {
         "id": "0679d21df7abe79d",
         "type": "ui_group",
         "name": "Camera Power",
@@ -3701,6 +3681,26 @@
         "group": "efe1a1fd2aaa8d0f",
         "order": 12,
         "width": 2,
+        "height": 1
+    },
+    {
+        "id": "91f2105813c9346b",
+        "type": "ui_spacer",
+        "z": "ee400291.7cb",
+        "name": "spacer",
+        "group": "446cfe7e.e013f",
+        "order": 4,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "547ec4ff7572263d",
+        "type": "ui_spacer",
+        "z": "ee400291.7cb",
+        "name": "spacer",
+        "group": "446cfe7e.e013f",
+        "order": 6,
+        "width": 3,
         "height": 1
     },
     {
@@ -4198,7 +4198,7 @@
         "name": "Cue List",
         "order": 1,
         "width": 8,
-        "height": 4,
+        "height": 5,
         "columns": [
             {
                 "field": "cue",
@@ -4778,7 +4778,7 @@
         "name": "Quick Cue List",
         "order": 2,
         "width": 8,
-        "height": 6,
+        "height": 4,
         "columns": [
             {
                 "field": "cue",
@@ -4891,7 +4891,7 @@
         "z": "ee400291.7cb",
         "g": "83b35ec65abcd370",
         "group": "7d93d0fa.632f6",
-        "order": 1,
+        "order": 2,
         "width": 0,
         "height": 0,
         "name": "",
@@ -5042,7 +5042,7 @@
         "name": "",
         "label": "Goto Cue#",
         "group": "7d93d0fa.632f6",
-        "order": 2,
+        "order": 1,
         "width": 0,
         "height": 0,
         "options": [
