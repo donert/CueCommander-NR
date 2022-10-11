@@ -4193,7 +4193,6 @@
         "id": "ed2b752e.7b81e8",
         "type": "ui_table",
         "z": "ee400291.7cb",
-        "d": true,
         "g": "1fee3fae.e6893",
         "group": "208906fc.3b7e2a",
         "name": "Cue List",
