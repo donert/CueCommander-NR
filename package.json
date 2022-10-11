@@ -15,7 +15,7 @@
     },
     "node-red": {
         "settings": {
-            "flowFile": "flows_argon-mba.home.json",
+            "flowFile": "CueCommander-NR.json",
             "credentialsFile": "flows_argon-mba.home_cred.json"
         }
     }
