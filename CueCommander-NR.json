@@ -3939,6 +3939,17 @@
         "className": ""
     },
     {
+        "id": "605b93e75076b1e9",
+        "type": "ui_group",
+        "name": "Active Configurations",
+        "tab": "e0b6460f.51cf08",
+        "order": 6,
+        "disp": true,
+        "width": "9",
+        "collapse": false,
+        "className": ""
+    },
+    {
         "id": "c6213b74.2cce48",
         "type": "function",
         "z": "a3ba969f.c5f3b8",
@@ -27743,7 +27754,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "{\n\"devices\": {\n[\n{ \"category\": \"Projector\",\n  \"name\"    : \"East\",\n  \"ip\"      : \"192.168.0.194\",\n  \"port\"    : \"\"\n},\n{ \"category\": \"Projector\",\n  \"name\"    : \"Centre\",\n  \"ip\"      : \"192.168.0.195\",\n  \"port\"    : \"\"\n},\n{ \"category\": \"Projector\",\n  \"name\"    : \"West\",\n  \"ip\"      : \"192.168.0.196\",\n  \"port\"    : \"\"\n},\n{ \"category\": \"ProPresenter\",\n  \"name\"    : \"West\",\n  \"ip\"      : \"192.168.0.140\",\n  \"port\"    : \"1025\"\n}\n]\n\n}\n\n}",
+        "template": "{\n\"devices\":  \n[\n{ \"category\": \"Projector\",\n  \"name\"    : \"East\",\n  \"ip\"      : \"192.168.0.194\",\n  \"port\"    : \"\"\n},\n{ \"category\": \"Projector\",\n  \"name\"    : \"Centre\",\n  \"ip\"      : \"192.168.0.195\",\n  \"port\"    : \"\"\n},\n{ \"category\": \"Projector\",\n  \"name\"    : \"West\",\n  \"ip\"      : \"192.168.0.196\",\n  \"port\"    : \"\"\n},\n{ \"category\": \"ProPresenter\",\n  \"name\"    : \"West\",\n  \"ip\"      : \"192.168.0.140\",\n  \"port\"    : \"1025\"\n}\n]\n\n\n\n}",
         "output": "json",
         "x": 150,
         "y": 280,
@@ -27758,7 +27769,7 @@
         "type": "ui_table",
         "z": "805d289f.fd83a8",
         "g": "f2aad9f6.0d8f18",
-        "group": "4905c710f50a9e4b",
+        "group": "605b93e75076b1e9",
         "name": "",
         "order": 12,
         "width": 0,
