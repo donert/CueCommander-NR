@@ -386,12 +386,14 @@
             "44f7ef7eda54d4c0",
             "736cb2016d3d988e",
             "d75b68fb955b9d86",
-            "19249353773f290b"
+            "19249353773f290b",
+            "4f12f5eaf3c71aac",
+            "d21da6a9a345723b"
         ],
         "x": 34,
         "y": 699,
         "w": 832,
-        "h": 322
+        "h": 382
     },
     {
         "id": "a10197b4.719a58",
@@ -1253,8 +1255,8 @@
             "18d82ccc.80e513",
             "dd4ddea7.fffe1"
         ],
-        "x": 34,
-        "y": 1019,
+        "x": 14,
+        "y": 1959,
         "w": 1012,
         "h": 202
     },
@@ -2232,7 +2234,7 @@
             "4b19b7b3dba93624"
         ],
         "x": 34,
-        "y": 1259,
+        "y": 1299,
         "w": 472,
         "h": 282
     },
@@ -4178,8 +4180,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 130,
-        "y": 1120,
+        "x": 110,
+        "y": 2060,
         "wires": [
             [
                 "db555aa4.47f2f8",
@@ -4201,8 +4203,8 @@
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 910,
-        "y": 1180,
+        "x": 890,
+        "y": 2120,
         "wires": []
     },
     {
@@ -4216,8 +4218,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 300,
-        "y": 1180,
+        "x": 280,
+        "y": 2120,
         "wires": [
             [
                 "2c90fd9f.f92ba2"
@@ -4235,8 +4237,8 @@
         "start": "",
         "inout": "out",
         "property": "payload",
-        "x": 440,
-        "y": 1180,
+        "x": 420,
+        "y": 2120,
         "wires": [
             [
                 "385708da.b57048"
@@ -4269,8 +4271,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 3,
-        "x": 660,
-        "y": 1080,
+        "x": 640,
+        "y": 2020,
         "wires": [
             [
                 "18d82ccc.80e513"
@@ -4302,8 +4304,8 @@
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 920,
-        "y": 1140,
+        "x": 900,
+        "y": 2080,
         "wires": []
     },
     {
@@ -4326,8 +4328,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 320,
-        "y": 1080,
+        "x": 300,
+        "y": 2020,
         "wires": [
             [
                 "6e731c8e.758c44"
@@ -4345,8 +4347,8 @@
         "start": "",
         "inout": "out",
         "property": "payload",
-        "x": 490,
-        "y": 1080,
+        "x": 470,
+        "y": 2020,
         "wires": [
             [
                 "22ddcdab.0d4522"
@@ -4374,8 +4376,8 @@
             }
         ],
         "active": false,
-        "x": 910,
-        "y": 1060,
+        "x": 890,
+        "y": 2000,
         "wires": []
     },
     {
@@ -4399,8 +4401,8 @@
             }
         ],
         "active": false,
-        "x": 910,
-        "y": 1100,
+        "x": 890,
+        "y": 2040,
         "wires": []
     },
     {
@@ -4968,7 +4970,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 150,
-        "y": 1300,
+        "y": 1340,
         "wires": [
             [
                 "58c62455215e7109"
@@ -4988,7 +4990,7 @@
         "template": "- {cue: \"91.0\" , desc: \"Series Walkin\" }\n- {cue: \"92.0\" , desc: \"Series Talk Podium\"}\n- {cue: \"93.0\" , desc: \"Series Talk Vocals\"}\n- {cue: \"94.0\" , desc: \"Series Video\"}\n- {cue: \"95.0\" , desc: \"Series Message\"}\n- {cue: \"96.0\" , desc: \"Series Walkout\"}",
         "output": "str",
         "x": 140,
-        "y": 1340,
+        "y": 1380,
         "wires": [
             [
                 "934c28187a63b445"
@@ -5030,7 +5032,7 @@
         "outputs": 1,
         "cts": true,
         "x": 160,
-        "y": 1420,
+        "y": 1460,
         "wires": [
             [
                 "acfd4f93c32def6a",
@@ -5052,7 +5054,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 390,
-        "y": 1420,
+        "y": 1460,
         "wires": []
     },
     {
@@ -5063,7 +5065,7 @@
         "property": "payload",
         "name": "",
         "x": 130,
-        "y": 1380,
+        "y": 1420,
         "wires": [
             [
                 "227a8deb1bd05f21"
@@ -5080,7 +5082,7 @@
             "a5f96939.8900e8"
         ],
         "x": 95,
-        "y": 1500,
+        "y": 1540,
         "wires": []
     },
     {
@@ -5104,7 +5106,7 @@
         "to": "",
         "reg": false,
         "x": 140,
-        "y": 1460,
+        "y": 1500,
         "wires": [
             [
                 "f01ef3ada886ac8a"
@@ -5557,7 +5559,9 @@
             [
                 "736cb2016d3d988e"
             ],
-            []
+            [
+                "d21da6a9a345723b"
+            ]
         ]
     },
     {
@@ -5631,6 +5635,52 @@
         "wires": [
             [
                 "d75b68fb955b9d86"
+            ]
+        ]
+    },
+    {
+        "id": "4f12f5eaf3c71aac",
+        "type": "debug",
+        "z": "ee400291.7cb",
+        "g": "26f7e48.6e71e1c",
+        "name": "Log Error Message",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 700,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "d21da6a9a345723b",
+        "type": "change",
+        "z": "ee400291.7cb",
+        "g": "26f7e48.6e71e1c",
+        "name": "Error path",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "This should not occur. LightingEnabled is a boolean but otheriwse branch taken",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 360,
+        "y": 1040,
+        "wires": [
+            [
+                "4f12f5eaf3c71aac"
             ]
         ]
     },
