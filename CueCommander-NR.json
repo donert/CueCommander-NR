@@ -13103,7 +13103,7 @@
         "timeout": "0.5",
         "timeoutUnits": "seconds",
         "rate": "1",
-        "nbRateUnits": "1",
+        "nbRateUnits": "2",
         "rateUnits": "second",
         "randomFirst": "1",
         "randomLast": "5",
@@ -13111,7 +13111,7 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 850,
+        "x": 860,
         "y": 640,
         "wires": [
             [
