@@ -27315,7 +27315,7 @@
         "g": "08438d8f10ead9dd",
         "name": "Enable or not",
         "property": "enabled",
-        "propertyType": "env",
+        "propertyType": "flow",
         "rules": [
             {
                 "t": "true"
