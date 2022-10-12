@@ -3717,16 +3717,6 @@
         "className": ""
     },
     {
-        "id": "ac1b363e78daeb85",
-        "type": "ui_spacer",
-        "z": "805d289f.fd83a8",
-        "name": "spacer",
-        "group": "081499cdb0e45d15",
-        "order": 3,
-        "width": 5,
-        "height": 1
-    },
-    {
         "id": "13e3cbbba82ff43c",
         "type": "atem-network",
         "z": "96ac9944.5b4dd8",
@@ -3949,6 +3939,16 @@
         "width": "9",
         "collapse": false,
         "className": ""
+    },
+    {
+        "id": "6390e715a3c33172",
+        "type": "ui_spacer",
+        "z": "805d289f.fd83a8",
+        "name": "spacer",
+        "group": "081499cdb0e45d15",
+        "order": 3,
+        "width": 5,
+        "height": 1
     },
     {
         "id": "c6213b74.2cce48",
@@ -27419,7 +27419,7 @@
         "label": "Lighting",
         "tooltip": "",
         "group": "4905c710f50a9e4b",
-        "order": 0,
+        "order": 1,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -27454,7 +27454,7 @@
         "label": "Video Mixer",
         "tooltip": "",
         "group": "4905c710f50a9e4b",
-        "order": 12,
+        "order": 2,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -27489,7 +27489,7 @@
         "label": "PropPresenter",
         "tooltip": "",
         "group": "4905c710f50a9e4b",
-        "order": 13,
+        "order": 3,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -27524,7 +27524,7 @@
         "label": "Cameras",
         "tooltip": "",
         "group": "4905c710f50a9e4b",
-        "order": 14,
+        "order": 4,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -27559,7 +27559,7 @@
         "label": "Planning Centre",
         "tooltip": "",
         "group": "4905c710f50a9e4b",
-        "order": 15,
+        "order": 5,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -27757,7 +27757,7 @@
         "syntax": "mustache",
         "template": "{\n\"devices\":  \n[\n{ \"category\": \"Projector\",\n  \"name\"    : \"East\",\n  \"ip\"      : \"192.168.0.194\",\n  \"port\"    : \"\"\n},\n{ \"category\": \"Projector\",\n  \"name\"    : \"Centre\",\n  \"ip\"      : \"192.168.0.195\",\n  \"port\"    : \"\"\n},\n{ \"category\": \"Projector\",\n  \"name\"    : \"West\",\n  \"ip\"      : \"192.168.0.196\",\n  \"port\"    : \"\"\n},\n{ \"category\": \"ProPresenter\",\n  \"name\"    : \"West\",\n  \"ip\"      : \"192.168.0.140\",\n  \"port\"    : \"1025\"\n}\n]\n\n\n\n}",
         "output": "json",
-        "x": 290,
+        "x": 310,
         "y": 280,
         "wires": [
             [
@@ -27772,9 +27772,9 @@
         "g": "f2aad9f6.0d8f18",
         "group": "605b93e75076b1e9",
         "name": "",
-        "order": 12,
-        "width": 0,
-        "height": 0,
+        "order": 1,
+        "width": 9,
+        "height": 5,
         "columns": [
             {
                 "field": "category",
@@ -27868,12 +27868,12 @@
         ],
         "repeat": "",
         "crontab": "",
-        "once": false,
+        "once": true,
         "onceDelay": 0.1,
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 140,
+        "x": 150,
         "y": 280,
         "wires": [
             [
