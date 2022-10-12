@@ -2924,69 +2924,17 @@
             "8b9f40679c2ed269",
             "5082404667e21792",
             "6d724942e7a9c30c",
-            "493c8e5b6c1841f1",
-            "05abf876d14e2844",
             "ce6d392c5bc2884e",
             "67fe7b761af9b8d9",
             "62209fe6a5480281",
             "4193b3e9fc94c226",
-            "4409cda774ceb200",
-            "7df0746e20113b3b"
+            "cb22f27b18bdb1d5",
+            "3ad620f6f0a139f0"
         ],
-        "x": 48,
-        "y": 319,
-        "w": 718,
+        "x": 54,
+        "y": 339,
+        "w": 712,
         "h": 362
-    },
-    {
-        "id": "493c8e5b6c1841f1",
-        "type": "group",
-        "z": "4ab9df2b.7b3dd",
-        "g": "08438d8f10ead9dd",
-        "name": "enable it",
-        "style": {
-            "fill": "#addb7b",
-            "label": true
-        },
-        "nodes": [
-            "f60652ea91e06e4d"
-        ],
-        "env": [
-            {
-                "name": "enabled",
-                "value": "true",
-                "type": "bool"
-            }
-        ],
-        "x": 74,
-        "y": 379,
-        "w": 212,
-        "h": 82
-    },
-    {
-        "id": "05abf876d14e2844",
-        "type": "group",
-        "z": "4ab9df2b.7b3dd",
-        "g": "08438d8f10ead9dd",
-        "name": "",
-        "style": {
-            "fill": "#ff7f7f",
-            "label": true
-        },
-        "nodes": [
-            "c0ad793476f9f4f3"
-        ],
-        "env": [
-            {
-                "name": "enabled",
-                "value": "false",
-                "type": "bool"
-            }
-        ],
-        "x": 74,
-        "y": 459,
-        "w": 212,
-        "h": 82
     },
     {
         "id": "b36c9a8b.092df8",
@@ -27353,7 +27301,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 160,
-        "y": 600,
+        "y": 620,
         "wires": [
             [
                 "5082404667e21792"
@@ -27383,7 +27331,7 @@
         "repair": false,
         "outputs": 3,
         "x": 380,
-        "y": 600,
+        "y": 620,
         "wires": [
             [
                 "67fe7b761af9b8d9"
@@ -27405,8 +27353,8 @@
         "rules": [
             {
                 "t": "set",
-                "p": "payload",
-                "pt": "msg",
+                "p": "enabled",
+                "pt": "flow",
                 "to": "payload",
                 "tot": "msg"
             }
@@ -27416,73 +27364,11 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 400,
-        "y": 460,
-        "wires": [
-            [
-                "ce6d392c5bc2884e"
-            ]
-        ]
-    },
-    {
-        "id": "f60652ea91e06e4d",
-        "type": "inject",
-        "z": "4ab9df2b.7b3dd",
-        "g": "493c8e5b6c1841f1",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "v": "",
-                "vt": "date"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "enabled",
-        "payloadType": "env",
-        "x": 190,
+        "x": 380,
         "y": 420,
         "wires": [
             [
-                "6d724942e7a9c30c"
-            ]
-        ]
-    },
-    {
-        "id": "c0ad793476f9f4f3",
-        "type": "inject",
-        "z": "4ab9df2b.7b3dd",
-        "g": "05abf876d14e2844",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "v": "",
-                "vt": "date"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "enabled",
-        "payloadType": "env",
-        "x": 190,
-        "y": 500,
-        "wires": [
-            [
-                "6d724942e7a9c30c"
+                "ce6d392c5bc2884e"
             ]
         ]
     },
@@ -27500,8 +27386,8 @@
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 630,
-        "y": 460,
+        "x": 590,
+        "y": 420,
         "wires": []
     },
     {
@@ -27519,7 +27405,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 630,
-        "y": 560,
+        "y": 580,
         "wires": []
     },
     {
@@ -27537,7 +27423,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 640,
-        "y": 600,
+        "y": 620,
         "wires": []
     },
     {
@@ -27555,40 +27441,18 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 600,
-        "y": 640,
+        "y": 660,
         "wires": []
     },
     {
-        "id": "4409cda774ceb200",
-        "type": "function",
-        "z": "4ab9df2b.7b3dd",
-        "g": "08438d8f10ead9dd",
-        "name": "",
-        "func": "env.set(\"enabled\", true)\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 520,
-        "y": 380,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "7df0746e20113b3b",
+        "id": "cb22f27b18bdb1d5",
         "type": "inject",
         "z": "4ab9df2b.7b3dd",
         "g": "08438d8f10ead9dd",
-        "name": "",
+        "name": "enable it",
         "props": [
             {
                 "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
             }
         ],
         "repeat": "",
@@ -27596,13 +27460,39 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 380,
-        "y": 360,
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 180,
+        "y": 380,
         "wires": [
             [
-                "4409cda774ceb200"
+                "6d724942e7a9c30c"
+            ]
+        ]
+    },
+    {
+        "id": "3ad620f6f0a139f0",
+        "type": "inject",
+        "z": "4ab9df2b.7b3dd",
+        "g": "08438d8f10ead9dd",
+        "name": "disable it",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 180,
+        "y": 440,
+        "wires": [
+            [
+                "6d724942e7a9c30c"
             ]
         ]
     },
