@@ -2911,14 +2911,9 @@
         "id": "08438d8f10ead9dd",
         "type": "group",
         "z": "4ab9df2b.7b3dd",
+        "name": "Demo of switching a functoin on and off",
         "style": {
-            "stroke": "#999999",
-            "stroke-opacity": "1",
-            "fill": "none",
-            "fill-opacity": "1",
-            "label": true,
-            "label-position": "nw",
-            "color": "#a4a4a4"
+            "label": true
         },
         "nodes": [
             "8b9f40679c2ed269",
@@ -2931,10 +2926,10 @@
             "cb22f27b18bdb1d5",
             "3ad620f6f0a139f0"
         ],
-        "x": 54,
+        "x": 34,
         "y": 339,
-        "w": 712,
-        "h": 362
+        "w": 692,
+        "h": 242
     },
     {
         "id": "b36c9a8b.092df8",
@@ -27300,8 +27295,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 160,
-        "y": 620,
+        "x": 140,
+        "y": 500,
         "wires": [
             [
                 "5082404667e21792"
@@ -27330,8 +27325,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 3,
-        "x": 380,
-        "y": 620,
+        "x": 340,
+        "y": 500,
         "wires": [
             [
                 "67fe7b761af9b8d9"
@@ -27364,8 +27359,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 380,
-        "y": 420,
+        "x": 340,
+        "y": 400,
         "wires": [
             [
                 "ce6d392c5bc2884e"
@@ -27387,7 +27382,7 @@
         "statusVal": "payload",
         "statusType": "auto",
         "x": 590,
-        "y": 420,
+        "y": 400,
         "wires": []
     },
     {
@@ -27404,8 +27399,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 630,
-        "y": 580,
+        "x": 590,
+        "y": 460,
         "wires": []
     },
     {
@@ -27422,8 +27417,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 640,
-        "y": 620,
+        "x": 600,
+        "y": 500,
         "wires": []
     },
     {
@@ -27440,8 +27435,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 600,
-        "y": 660,
+        "x": 580,
+        "y": 540,
         "wires": []
     },
     {
@@ -27462,7 +27457,7 @@
         "topic": "",
         "payload": "true",
         "payloadType": "bool",
-        "x": 180,
+        "x": 140,
         "y": 380,
         "wires": [
             [
@@ -27488,8 +27483,8 @@
         "topic": "",
         "payload": "false",
         "payloadType": "bool",
-        "x": 180,
-        "y": 440,
+        "x": 140,
+        "y": 420,
         "wires": [
             [
                 "6d724942e7a9c30c"
