@@ -337,12 +337,15 @@
             "5708436.a4e2dbc",
             "1b4382d4.7ea50d",
             "1d27da07.0c8016",
-            "97c79174.f6cf3"
+            "97c79174.f6cf3",
+            "7f17deb07d2f042b",
+            "bc09b6ce8439b868",
+            "d325102fa51b1ae4"
         ],
-        "x": 14,
-        "y": 2759,
-        "w": 908,
-        "h": 822
+        "x": 28,
+        "y": 2699,
+        "w": 934,
+        "h": 882
     },
     {
         "id": "1a657411.db32ac",
@@ -2576,7 +2579,7 @@
             "1df17ea7.8b36d1",
             "fcd50239.7c9c8"
         ],
-        "x": 434,
+        "x": 474,
         "y": 2919,
         "w": 462,
         "h": 162
@@ -2597,7 +2600,7 @@
             "3ea94a96.b50b36",
             "224081ab.df895e"
         ],
-        "x": 434,
+        "x": 474,
         "y": 3099,
         "w": 462,
         "h": 122
@@ -2618,7 +2621,7 @@
             "553e7342.c7a70c",
             "36c6267c.7003ba"
         ],
-        "x": 434,
+        "x": 474,
         "y": 3239,
         "w": 462,
         "h": 122
@@ -2641,7 +2644,7 @@
             "6f50575.946f3a8"
         ],
         "x": 54,
-        "y": 3179,
+        "y": 3219,
         "w": 232,
         "h": 242
     },
@@ -2761,7 +2764,7 @@
             "44f303f7.96ac4c",
             "3f863956.1a94e6"
         ],
-        "x": 434,
+        "x": 474,
         "y": 3379,
         "w": 462,
         "h": 122
@@ -14955,13 +14958,12 @@
             "9d1a1985.cf8e38",
             "6d38ff1f8a651ab4"
         ],
-        "x": 95,
+        "x": 85,
         "y": 2800,
         "wires": [
             [
-                "32aa5a91.010ab6",
-                "5a8326c3.7a4c58",
-                "4fcc398f.5ad5a8"
+                "4fcc398f.5ad5a8",
+                "7f17deb07d2f042b"
             ]
         ]
     },
@@ -16180,8 +16182,8 @@
         "sendTime": "no",
         "sendInitialData": "yes",
         "sendStatusUpdates": "no",
-        "x": 250,
-        "y": 2840,
+        "x": 330,
+        "y": 2780,
         "wires": [
             [
                 "d00b1652.4bf358",
@@ -16206,7 +16208,7 @@
         "g": "5a3761.bcd618a",
         "name": "TODO - parse result",
         "info": "The main features to implement here is to process the response from the ATEM and make the web UI respond to it. For example when a transition is made on the hardware console, the UI buttons should also change.",
-        "x": 530,
+        "x": 570,
         "y": 2900,
         "wires": []
     },
@@ -16246,7 +16248,7 @@
         "payload": "{\"cmd\":\"performCut\",\"data\":{\"ME\":0}}",
         "payloadType": "json",
         "x": 170,
-        "y": 3220,
+        "y": 3260,
         "wires": [
             [
                 "d00b1652.4bf358"
@@ -16276,7 +16278,7 @@
         "payload": "{\"cmd\":\"performAuto\",\"data\":{\"ME\":0}}",
         "payloadType": "json",
         "x": 170,
-        "y": 3260,
+        "y": 3300,
         "wires": [
             [
                 "d00b1652.4bf358"
@@ -16306,7 +16308,7 @@
         "payload": "{\"cmd\":\"auxSource\",\"data\":{\"id\":1}}",
         "payloadType": "json",
         "x": 180,
-        "y": 3300,
+        "y": 3340,
         "wires": [
             [
                 "d00b1652.4bf358"
@@ -16336,7 +16338,7 @@
         "payload": "{\"cmd\":\"programInput\",\"data\":{\"ME\":0,\"videoSource\":{\"id\":3}}}",
         "payloadType": "json",
         "x": 180,
-        "y": 3340,
+        "y": 3380,
         "wires": [
             [
                 "d00b1652.4bf358"
@@ -16474,7 +16476,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 24,
-        "x": 330,
+        "x": 370,
         "y": 3080,
         "wires": [
             [
@@ -16555,7 +16557,7 @@
         "targetType": "jsonata",
         "statusVal": "",
         "statusType": "auto",
-        "x": 670,
+        "x": 710,
         "y": 2960,
         "wires": []
     },
@@ -16573,7 +16575,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 540,
+        "x": 580,
         "y": 3540,
         "wires": []
     },
@@ -16588,7 +16590,7 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 510,
+        "x": 550,
         "y": 2960,
         "wires": [
             [
@@ -16618,7 +16620,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 690,
+        "x": 730,
         "y": 3000,
         "wires": [
             [
@@ -16646,7 +16648,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 690,
+        "x": 730,
         "y": 3040,
         "wires": [
             [
@@ -16663,7 +16665,7 @@
         "links": [
             "1ac81781.75b738"
         ],
-        "x": 855,
+        "x": 895,
         "y": 3020,
         "wires": []
     },
@@ -16681,8 +16683,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 260,
-        "y": 2800,
+        "x": 340,
+        "y": 2740,
         "wires": []
     },
     {
@@ -16699,7 +16701,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 510,
+        "x": 550,
         "y": 2800,
         "wires": []
     },
@@ -16714,7 +16716,7 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 510,
+        "x": 550,
         "y": 3140,
         "wires": [
             [
@@ -16737,7 +16739,7 @@
         "targetType": "jsonata",
         "statusVal": "",
         "statusType": "auto",
-        "x": 680,
+        "x": 720,
         "y": 3140,
         "wires": []
     },
@@ -16752,7 +16754,7 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 510,
+        "x": 550,
         "y": 3280,
         "wires": [
             [
@@ -16775,7 +16777,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 670,
+        "x": 710,
         "y": 3280,
         "wires": []
     },
@@ -16802,7 +16804,7 @@
         "payload": "{\"cmd\":\"previewInput\",\"data\":{\"ME\":0,\"videoSource\":{\"id\":0}}}",
         "payloadType": "json",
         "x": 170,
-        "y": 3380,
+        "y": 3420,
         "wires": [
             [
                 "d00b1652.4bf358"
@@ -16829,7 +16831,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 690,
+        "x": 730,
         "y": 3180,
         "wires": [
             [
@@ -16846,7 +16848,7 @@
         "links": [
             "be807d43.8defe"
         ],
-        "x": 855,
+        "x": 895,
         "y": 3180,
         "wires": []
     },
@@ -16870,7 +16872,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 690,
+        "x": 730,
         "y": 3320,
         "wires": [
             [
@@ -16887,7 +16889,7 @@
         "links": [
             "be01e890.685738"
         ],
-        "x": 855,
+        "x": 895,
         "y": 3320,
         "wires": []
     },
@@ -16903,7 +16905,7 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 140,
+        "x": 180,
         "y": 2900,
         "wires": [
             [
@@ -16923,7 +16925,7 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 510,
+        "x": 550,
         "y": 3420,
         "wires": [
             [
@@ -16946,7 +16948,7 @@
         "targetType": "jsonata",
         "statusVal": "",
         "statusType": "auto",
-        "x": 690,
+        "x": 730,
         "y": 3420,
         "wires": []
     },
@@ -16970,7 +16972,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 690,
+        "x": 730,
         "y": 3460,
         "wires": [
             [
@@ -16987,7 +16989,7 @@
         "links": [
             "cf0756fa.ea2d98"
         ],
-        "x": 855,
+        "x": 895,
         "y": 3460,
         "wires": []
     },
@@ -18327,6 +18329,85 @@
         "x": 450,
         "y": 4220,
         "wires": []
+    },
+    {
+        "id": "7f17deb07d2f042b",
+        "type": "switch",
+        "z": "96ac9944.5b4dd8",
+        "g": "5a3761.bcd618a",
+        "name": "",
+        "property": "VideoMixerEnabled",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 170,
+        "y": 2800,
+        "wires": [
+            [
+                "32aa5a91.010ab6",
+                "5a8326c3.7a4c58"
+            ],
+            [
+                "d325102fa51b1ae4"
+            ]
+        ]
+    },
+    {
+        "id": "bc09b6ce8439b868",
+        "type": "ui_toast",
+        "z": "96ac9944.5b4dd8",
+        "g": "5a3761.bcd618a",
+        "position": "top right",
+        "displayTime": "2",
+        "highlight": "red",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 750,
+        "y": 2840,
+        "wires": []
+    },
+    {
+        "id": "d325102fa51b1ae4",
+        "type": "change",
+        "z": "96ac9944.5b4dd8",
+        "g": "5a3761.bcd618a",
+        "name": "Disabled Message",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Video Mixer control is disabled. See Settings to change.",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 550,
+        "y": 2840,
+        "wires": [
+            [
+                "bc09b6ce8439b868"
+            ]
+        ]
     },
     {
         "id": "4708b43d.b63d1c",
