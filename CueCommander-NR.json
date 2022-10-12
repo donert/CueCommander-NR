@@ -1976,7 +1976,7 @@
             "729215baf9ccca66",
             "f8358b92a5d4d947"
         ],
-        "x": 54,
+        "x": 34,
         "y": 99,
         "w": 772,
         "h": 222
@@ -27145,7 +27145,7 @@
         "proxy": "",
         "authType": "",
         "senderr": false,
-        "x": 380,
+        "x": 360,
         "y": 160,
         "wires": [
             [
@@ -27170,7 +27170,7 @@
         "resendOnRefresh": false,
         "templateScope": "local",
         "className": "",
-        "x": 720,
+        "x": 700,
         "y": 280,
         "wires": [
             []
@@ -27198,7 +27198,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 160,
+        "x": 140,
         "y": 140,
         "wires": [
             [
@@ -27214,7 +27214,7 @@
         "name": "",
         "action": "",
         "property": "payload",
-        "x": 530,
+        "x": 510,
         "y": 220,
         "wires": [
             [
@@ -27243,7 +27243,7 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 160,
+        "x": 140,
         "y": 180,
         "wires": [
             [
@@ -27258,7 +27258,7 @@
         "g": "b0498d092b7b9b25",
         "name": "Original code",
         "info": "You can import the flow below and change the IP address and login to match that of your personal camera - http://192.168.178.21/tmpfs/snap.jpg?usr=admin&pwd=instar.\n\nhttps://mpolinowski.github.io/devnotes/2018-11-26--node-red-and-live-video",
-        "x": 190,
+        "x": 170,
         "y": 280,
         "wires": []
     },
@@ -27269,7 +27269,7 @@
         "g": "b0498d092b7b9b25",
         "name": "TODO",
         "info": "Need to figure out the correct http URL and then integrate with the IP settings context ",
-        "x": 170,
+        "x": 150,
         "y": 240,
         "wires": []
     },
