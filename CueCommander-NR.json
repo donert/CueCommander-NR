@@ -2929,12 +2929,14 @@
             "ce6d392c5bc2884e",
             "67fe7b761af9b8d9",
             "62209fe6a5480281",
-            "4193b3e9fc94c226"
+            "4193b3e9fc94c226",
+            "4409cda774ceb200",
+            "7df0746e20113b3b"
         ],
         "x": 48,
-        "y": 353,
+        "y": 319,
         "w": 718,
-        "h": 328
+        "h": 362
     },
     {
         "id": "493c8e5b6c1841f1",
@@ -27380,7 +27382,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 3,
-        "x": 400,
+        "x": 380,
         "y": 600,
         "wires": [
             [
@@ -27415,7 +27417,7 @@
         "to": "",
         "reg": false,
         "x": 400,
-        "y": 480,
+        "y": 460,
         "wires": [
             [
                 "ce6d392c5bc2884e"
@@ -27499,7 +27501,7 @@
         "statusVal": "payload",
         "statusType": "auto",
         "x": 630,
-        "y": 480,
+        "y": 460,
         "wires": []
     },
     {
@@ -27555,6 +27557,54 @@
         "x": 600,
         "y": 640,
         "wires": []
+    },
+    {
+        "id": "4409cda774ceb200",
+        "type": "function",
+        "z": "4ab9df2b.7b3dd",
+        "g": "08438d8f10ead9dd",
+        "name": "",
+        "func": "env.set(\"enabled\", true)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7df0746e20113b3b",
+        "type": "inject",
+        "z": "4ab9df2b.7b3dd",
+        "g": "08438d8f10ead9dd",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 380,
+        "y": 360,
+        "wires": [
+            [
+                "4409cda774ceb200"
+            ]
+        ]
     },
     {
         "id": "8b29f35d23aaf038",
