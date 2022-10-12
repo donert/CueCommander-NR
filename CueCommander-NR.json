@@ -1013,7 +1013,9 @@
             "8fa7a3df.960d6"
         ],
         "x": 44,
-        "y": 19
+        "y": 19,
+        "w": 902,
+        "h": 262
     },
     {
         "id": "1976ad4e.952673",
@@ -2260,7 +2262,9 @@
             "4aa8f472fa252a1e"
         ],
         "x": 14,
-        "y": 299
+        "y": 299,
+        "w": 1132,
+        "h": 362
     },
     {
         "id": "dacfcd47aec0c05a",
@@ -2929,6 +2933,31 @@
         "x": 34,
         "y": 339,
         "w": 692,
+        "h": 242
+    },
+    {
+        "id": "1f02f351d734f2f4",
+        "type": "group",
+        "z": "805d289f.fd83a8",
+        "name": "Feature Enablemnt ",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "ba258ee493811ec9",
+            "0cd38a6fd2970c11",
+            "121f4752e443ef22",
+            "2a5d895e89804709",
+            "c7e887e50258dd5b",
+            "be5c5c51b8959c20",
+            "32be63dfe7e14d0f",
+            "df695408af6a4f4a",
+            "4c8c5f8d833da476",
+            "e25264e8a037be92"
+        ],
+        "x": 34,
+        "y": 759,
+        "w": 532,
         "h": 242
     },
     {
@@ -3881,6 +3910,17 @@
         "order": 4,
         "disp": true,
         "width": "16",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "4905c710f50a9e4b",
+        "type": "ui_group",
+        "name": "Feature Enablement",
+        "tab": "e0b6460f.51cf08",
+        "order": 5,
+        "disp": true,
+        "width": "6",
         "collapse": false,
         "className": ""
     },
@@ -27108,6 +27148,311 @@
             [
                 "855f895038c74f58"
             ]
+        ]
+    },
+    {
+        "id": "ba258ee493811ec9",
+        "type": "ui_switch",
+        "z": "805d289f.fd83a8",
+        "g": "1f02f351d734f2f4",
+        "name": "",
+        "label": "Lighting",
+        "tooltip": "",
+        "group": "4905c710f50a9e4b",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 120,
+        "y": 800,
+        "wires": [
+            [
+                "be5c5c51b8959c20"
+            ]
+        ]
+    },
+    {
+        "id": "0cd38a6fd2970c11",
+        "type": "ui_switch",
+        "z": "805d289f.fd83a8",
+        "g": "1f02f351d734f2f4",
+        "name": "",
+        "label": "Video Mixer",
+        "tooltip": "",
+        "group": "56c8bd5d.50a2e4",
+        "order": 12,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 130,
+        "y": 840,
+        "wires": [
+            [
+                "e25264e8a037be92"
+            ]
+        ]
+    },
+    {
+        "id": "121f4752e443ef22",
+        "type": "ui_switch",
+        "z": "805d289f.fd83a8",
+        "g": "1f02f351d734f2f4",
+        "name": "",
+        "label": "PropPresenter",
+        "tooltip": "",
+        "group": "56c8bd5d.50a2e4",
+        "order": 13,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 140,
+        "y": 880,
+        "wires": [
+            [
+                "4c8c5f8d833da476"
+            ]
+        ]
+    },
+    {
+        "id": "2a5d895e89804709",
+        "type": "ui_switch",
+        "z": "805d289f.fd83a8",
+        "g": "1f02f351d734f2f4",
+        "name": "",
+        "label": "Cameras",
+        "tooltip": "",
+        "group": "56c8bd5d.50a2e4",
+        "order": 14,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 120,
+        "y": 920,
+        "wires": [
+            [
+                "df695408af6a4f4a"
+            ]
+        ]
+    },
+    {
+        "id": "c7e887e50258dd5b",
+        "type": "ui_switch",
+        "z": "805d289f.fd83a8",
+        "g": "1f02f351d734f2f4",
+        "name": "",
+        "label": "Planning Centre",
+        "tooltip": "",
+        "group": "56c8bd5d.50a2e4",
+        "order": 15,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 140,
+        "y": 960,
+        "wires": [
+            [
+                "32be63dfe7e14d0f"
+            ]
+        ]
+    },
+    {
+        "id": "be5c5c51b8959c20",
+        "type": "change",
+        "z": "805d289f.fd83a8",
+        "g": "1f02f351d734f2f4",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "LightingEnabled",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 380,
+        "y": 800,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e25264e8a037be92",
+        "type": "change",
+        "z": "805d289f.fd83a8",
+        "g": "1f02f351d734f2f4",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "VideoMixerEnabled",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 390,
+        "y": 840,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4c8c5f8d833da476",
+        "type": "change",
+        "z": "805d289f.fd83a8",
+        "g": "1f02f351d734f2f4",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "ProPresenterEnabled",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 390,
+        "y": 880,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "df695408af6a4f4a",
+        "type": "change",
+        "z": "805d289f.fd83a8",
+        "g": "1f02f351d734f2f4",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "CamerasEnabled",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 380,
+        "y": 920,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "32be63dfe7e14d0f",
+        "type": "change",
+        "z": "805d289f.fd83a8",
+        "g": "1f02f351d734f2f4",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "PlanningCenterEnabled",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 400,
+        "y": 960,
+        "wires": [
+            []
         ]
     },
     {
