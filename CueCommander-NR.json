@@ -382,12 +382,16 @@
             "f2be0943.43f9b8",
             "67a052cf.4d07fc",
             "d234a895.fdae68",
-            "1cbac688fd051196"
+            "1cbac688fd051196",
+            "44f7ef7eda54d4c0",
+            "736cb2016d3d988e",
+            "d75b68fb955b9d86",
+            "19249353773f290b"
         ],
         "x": 34,
-        "y": 679,
-        "w": 612,
-        "h": 282
+        "y": 699,
+        "w": 752,
+        "h": 322
     },
     {
         "id": "a10197b4.719a58",
@@ -3980,8 +3984,8 @@
         "outport": "",
         "base64": true,
         "multicast": "false",
-        "x": 240,
-        "y": 820,
+        "x": 380,
+        "y": 840,
         "wires": []
     },
     {
@@ -4045,7 +4049,7 @@
         "g": "26f7e48.6e71e1c",
         "position": "bottom right",
         "displayTime": "1",
-        "highlight": "red",
+        "highlight": "green",
         "sendall": true,
         "outputs": 0,
         "ok": "OK",
@@ -4054,8 +4058,8 @@
         "className": "",
         "topic": "",
         "name": "",
-        "x": 250,
-        "y": 920,
+        "x": 390,
+        "y": 940,
         "wires": []
     },
     {
@@ -4077,11 +4081,10 @@
             "5f510e3fe33560d7"
         ],
         "x": 75,
-        "y": 820,
+        "y": 840,
         "wires": [
             [
-                "f45db8b7.d0b738",
-                "f2be0943.43f9b8"
+                "44f7ef7eda54d4c0"
             ]
         ]
     },
@@ -4125,8 +4128,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 240,
-        "y": 740,
+        "x": 380,
+        "y": 760,
         "wires": [
             [
                 "54d613f.2507cec",
@@ -4149,8 +4152,8 @@
         "targetType": "jsonata",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 480,
-        "y": 720,
+        "x": 620,
+        "y": 740,
         "wires": []
     },
     {
@@ -4566,11 +4569,11 @@
         "type": "delay",
         "z": "ee400291.7cb",
         "g": "26f7e48.6e71e1c",
-        "name": "Delay Update",
+        "name": "",
         "pauseType": "rate",
         "timeout": "5",
         "timeoutUnits": "seconds",
-        "rate": "2",
+        "rate": "1",
         "nbRateUnits": "1",
         "rateUnits": "second",
         "randomFirst": "1",
@@ -4579,8 +4582,8 @@
         "drop": true,
         "allowrate": false,
         "outputs": 1,
-        "x": 240,
-        "y": 880,
+        "x": 370,
+        "y": 900,
         "wires": [
             [
                 "cdd82f05.e3c48",
@@ -4922,8 +4925,8 @@
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 500,
-        "y": 780,
+        "x": 640,
+        "y": 800,
         "wires": []
     },
     {
@@ -4934,8 +4937,8 @@
         "name": "OSC to Console",
         "path": "",
         "metadata": false,
-        "x": 240,
-        "y": 780,
+        "x": 380,
+        "y": 800,
         "wires": [
             [
                 "241fcd48.6aa722"
@@ -5356,8 +5359,8 @@
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 480,
-        "y": 880,
+        "x": 620,
+        "y": 900,
         "wires": []
     },
     {
@@ -5521,6 +5524,115 @@
         "x": 990,
         "y": 220,
         "wires": []
+    },
+    {
+        "id": "44f7ef7eda54d4c0",
+        "type": "switch",
+        "z": "ee400291.7cb",
+        "g": "26f7e48.6e71e1c",
+        "name": "",
+        "property": "LightingEnabled",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 170,
+        "y": 840,
+        "wires": [
+            [
+                "f45db8b7.d0b738",
+                "f2be0943.43f9b8"
+            ],
+            [
+                "736cb2016d3d988e"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "736cb2016d3d988e",
+        "type": "delay",
+        "z": "ee400291.7cb",
+        "g": "26f7e48.6e71e1c",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 170,
+        "y": 940,
+        "wires": [
+            [
+                "19249353773f290b"
+            ]
+        ]
+    },
+    {
+        "id": "d75b68fb955b9d86",
+        "type": "ui_toast",
+        "z": "ee400291.7cb",
+        "g": "26f7e48.6e71e1c",
+        "position": "bottom right",
+        "displayTime": "1",
+        "highlight": "red",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 570,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "19249353773f290b",
+        "type": "change",
+        "z": "ee400291.7cb",
+        "g": "26f7e48.6e71e1c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Lighting Communication is disabled",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 360,
+        "y": 980,
+        "wires": [
+            [
+                "d75b68fb955b9d86"
+            ]
+        ]
     },
     {
         "id": "75b23a68.99e7a4",
