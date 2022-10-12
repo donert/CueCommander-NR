@@ -2959,11 +2959,12 @@
             "32be63dfe7e14d0f",
             "df695408af6a4f4a",
             "4c8c5f8d833da476",
-            "e25264e8a037be92"
+            "e25264e8a037be92",
+            "340c26071ab63bdf"
         ],
-        "x": 34,
+        "x": 14,
         "y": 759,
-        "w": 532,
+        "w": 732,
         "h": 322
     },
     {
@@ -27339,7 +27340,7 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 120,
+        "x": 300,
         "y": 800,
         "wires": [
             [
@@ -27374,7 +27375,7 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 130,
+        "x": 310,
         "y": 860,
         "wires": [
             [
@@ -27409,7 +27410,7 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 140,
+        "x": 320,
         "y": 980,
         "wires": [
             [
@@ -27444,7 +27445,7 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 120,
+        "x": 300,
         "y": 920,
         "wires": [
             [
@@ -27479,7 +27480,7 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 140,
+        "x": 320,
         "y": 1040,
         "wires": [
             [
@@ -27507,7 +27508,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 380,
+        "x": 560,
         "y": 800,
         "wires": [
             []
@@ -27533,7 +27534,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 390,
+        "x": 570,
         "y": 860,
         "wires": [
             []
@@ -27559,7 +27560,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 390,
+        "x": 570,
         "y": 980,
         "wires": [
             []
@@ -27585,7 +27586,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 380,
+        "x": 560,
         "y": 920,
         "wires": [
             []
@@ -27611,10 +27612,40 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 400,
+        "x": 580,
         "y": 1040,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "340c26071ab63bdf",
+        "type": "inject",
+        "z": "805d289f.fd83a8",
+        "g": "1f02f351d734f2f4",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 110,
+        "y": 920,
+        "wires": [
+            [
+                "ba258ee493811ec9",
+                "0cd38a6fd2970c11",
+                "2a5d895e89804709",
+                "121f4752e443ef22",
+                "c7e887e50258dd5b"
+            ]
         ]
     },
     {
