@@ -1599,8 +1599,6 @@
             "8393ee16.0e42a",
             "8409d8fe.4a2278",
             "db80e0a0.71098",
-            "5dfa0103.5325c",
-            "196f8b46.ad3d45",
             "bb4afb15.f41be8",
             "5fd8d588.9c8c7c",
             "d4e305dda321dca3",
@@ -1608,17 +1606,15 @@
             "cd4a32dcf0dc9d5b",
             "26406a2209a5e5d1",
             "ecd65a1af3555f6c",
-            "ca1fe26fc3b4dfce",
             "2c40920334dd0a83",
-            "2f3f4d879e3edaa1",
-            "124eb160a54cadf6",
-            "83db778a08240eda",
-            "83514694171d2f0a"
+            "83514694171d2f0a",
+            "196f8b46.ad3d45",
+            "5dfa0103.5325c"
         ],
         "x": 14,
-        "y": 519,
+        "y": 539,
         "w": 972,
-        "h": 422
+        "h": 402
     },
     {
         "id": "eec2fe41.6fc47",
@@ -1928,7 +1924,7 @@
             "e3e5b98f.91aee8",
             "a933114d.d816d"
         ],
-        "x": 30,
+        "x": 10,
         "y": 259,
         "w": 716,
         "h": 242
@@ -1981,7 +1977,9 @@
             "f8358b92a5d4d947"
         ],
         "x": 54,
-        "y": 279
+        "y": 99,
+        "w": 772,
+        "h": 222
     },
     {
         "id": "d3fbab81cf2a97fc",
@@ -2908,6 +2906,84 @@
         "y": 2213,
         "w": 884,
         "h": 994
+    },
+    {
+        "id": "08438d8f10ead9dd",
+        "type": "group",
+        "z": "4ab9df2b.7b3dd",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "8b9f40679c2ed269",
+            "5082404667e21792",
+            "6d724942e7a9c30c",
+            "493c8e5b6c1841f1",
+            "05abf876d14e2844",
+            "ce6d392c5bc2884e",
+            "67fe7b761af9b8d9",
+            "62209fe6a5480281"
+        ],
+        "x": 48,
+        "y": 353,
+        "w": 718,
+        "h": 288
+    },
+    {
+        "id": "493c8e5b6c1841f1",
+        "type": "group",
+        "z": "4ab9df2b.7b3dd",
+        "g": "08438d8f10ead9dd",
+        "name": "enable it",
+        "style": {
+            "fill": "#addb7b",
+            "label": true
+        },
+        "nodes": [
+            "f60652ea91e06e4d"
+        ],
+        "env": [
+            {
+                "name": "enabled",
+                "value": "true",
+                "type": "bool"
+            }
+        ],
+        "x": 74,
+        "y": 379,
+        "w": 192,
+        "h": 82
+    },
+    {
+        "id": "05abf876d14e2844",
+        "type": "group",
+        "z": "4ab9df2b.7b3dd",
+        "g": "08438d8f10ead9dd",
+        "name": "",
+        "style": {
+            "fill": "#ff7f7f",
+            "label": true
+        },
+        "nodes": [
+            "c0ad793476f9f4f3"
+        ],
+        "env": [
+            {
+                "name": "enabled",
+                "value": "false",
+                "type": "bool"
+            }
+        ],
+        "x": 74,
+        "y": 459,
+        "w": 192,
+        "h": 82
     },
     {
         "id": "b36c9a8b.092df8",
@@ -10684,7 +10760,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 620,
+        "x": 600,
         "y": 300,
         "wires": []
     },
@@ -11475,59 +11551,6 @@
         ]
     },
     {
-        "id": "5dfa0103.5325c",
-        "type": "inject",
-        "z": "7014b916.6d1208",
-        "g": "85dc7af0.c16fb8",
-        "name": "test powerOn",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "poweron",
-        "payloadType": "str",
-        "x": 130,
-        "y": 800,
-        "wires": [
-            [
-                "8eb0c09e.7f105"
-            ]
-        ]
-    },
-    {
-        "id": "196f8b46.ad3d45",
-        "type": "inject",
-        "z": "7014b916.6d1208",
-        "g": "85dc7af0.c16fb8",
-        "name": "test powerOff",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "poweroff",
-        "payloadType": "str",
-        "x": 130,
-        "y": 860,
-        "wires": [
-            [
-                "8eb0c09e.7f105",
-                "26406a2209a5e5d1"
-            ]
-        ]
-    },
-    {
         "id": "bb4afb15.f41be8",
         "type": "debug",
         "z": "7014b916.6d1208",
@@ -11595,7 +11618,7 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 376,
+        "x": 356,
         "y": 300,
         "wires": [
             [
@@ -11626,7 +11649,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 126,
+        "x": 106,
         "y": 340,
         "wires": [
             [
@@ -11652,7 +11675,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 146,
+        "x": 126,
         "y": 460,
         "wires": [
             [
@@ -11695,7 +11718,7 @@
         ],
         "outputs": 0,
         "cts": false,
-        "x": 596,
+        "x": 576,
         "y": 460,
         "wires": []
     },
@@ -11719,7 +11742,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 396,
+        "x": 376,
         "y": 460,
         "wires": [
             [
@@ -11750,7 +11773,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 136,
+        "x": 116,
         "y": 380,
         "wires": [
             [
@@ -11781,7 +11804,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 156,
+        "x": 136,
         "y": 420,
         "wires": [
             [
@@ -11950,32 +11973,6 @@
             [
                 "bb4afb15.f41be8",
                 "83514694171d2f0a"
-            ]
-        ]
-    },
-    {
-        "id": "ca1fe26fc3b4dfce",
-        "type": "inject",
-        "z": "7014b916.6d1208",
-        "g": "85dc7af0.c16fb8",
-        "name": "test zoomin",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "zoomin",
-        "payloadType": "str",
-        "x": 270,
-        "y": 640,
-        "wires": [
-            [
-                "f8b93d9667fc0cb6"
             ]
         ]
     },
@@ -13016,84 +13013,6 @@
         ]
     },
     {
-        "id": "2f3f4d879e3edaa1",
-        "type": "inject",
-        "z": "7014b916.6d1208",
-        "g": "85dc7af0.c16fb8",
-        "name": "test powerOn",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "poweron",
-        "payloadType": "str",
-        "x": 310,
-        "y": 560,
-        "wires": [
-            [
-                "f8b93d9667fc0cb6"
-            ]
-        ]
-    },
-    {
-        "id": "124eb160a54cadf6",
-        "type": "inject",
-        "z": "7014b916.6d1208",
-        "g": "85dc7af0.c16fb8",
-        "name": "test powerOn",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "poweron",
-        "payloadType": "str",
-        "x": 490,
-        "y": 560,
-        "wires": [
-            [
-                "cd4a32dcf0dc9d5b"
-            ]
-        ]
-    },
-    {
-        "id": "83db778a08240eda",
-        "type": "inject",
-        "z": "7014b916.6d1208",
-        "g": "85dc7af0.c16fb8",
-        "name": "test powerOn",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "poweron",
-        "payloadType": "str",
-        "x": 650,
-        "y": 560,
-        "wires": [
-            [
-                "26406a2209a5e5d1"
-            ]
-        ]
-    },
-    {
         "id": "83514694171d2f0a",
         "type": "delay",
         "z": "7014b916.6d1208",
@@ -13116,6 +13035,58 @@
         "wires": [
             [
                 "2c40920334dd0a83"
+            ]
+        ]
+    },
+    {
+        "id": "196f8b46.ad3d45",
+        "type": "inject",
+        "z": "7014b916.6d1208",
+        "g": "85dc7af0.c16fb8",
+        "name": "test powerOff",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "poweroff",
+        "payloadType": "str",
+        "x": 330,
+        "y": 580,
+        "wires": [
+            [
+                "8eb0c09e.7f105"
+            ]
+        ]
+    },
+    {
+        "id": "5dfa0103.5325c",
+        "type": "inject",
+        "z": "7014b916.6d1208",
+        "g": "85dc7af0.c16fb8",
+        "name": "test powerOn",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "poweron",
+        "payloadType": "str",
+        "x": 130,
+        "y": 580,
+        "wires": [
+            [
+                "8eb0c09e.7f105"
             ]
         ]
     },
@@ -27209,8 +27180,8 @@
         "z": "4ab9df2b.7b3dd",
         "name": "Dante",
         "info": "https://www.gearslutz.com/board/music-computers/1221989-dante-routing-without-dante-controller-possible.html",
-        "x": 180,
-        "y": 120,
+        "x": 90,
+        "y": 60,
         "wires": []
     },
     {
@@ -27229,7 +27200,7 @@
         "authType": "",
         "senderr": false,
         "x": 380,
-        "y": 340,
+        "y": 160,
         "wires": [
             [
                 "4068ec45.05b034"
@@ -27254,7 +27225,7 @@
         "templateScope": "local",
         "className": "",
         "x": 720,
-        "y": 460,
+        "y": 280,
         "wires": [
             []
         ]
@@ -27282,7 +27253,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 160,
-        "y": 320,
+        "y": 140,
         "wires": [
             [
                 "86fe9b81.31c418"
@@ -27298,7 +27269,7 @@
         "action": "",
         "property": "payload",
         "x": 530,
-        "y": 400,
+        "y": 220,
         "wires": [
             [
                 "54d0ea94.c1b9a4"
@@ -27327,7 +27298,7 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 160,
-        "y": 360,
+        "y": 180,
         "wires": [
             [
                 "86fe9b81.31c418"
@@ -27342,7 +27313,7 @@
         "name": "Original code",
         "info": "You can import the flow below and change the IP address and login to match that of your personal camera - http://192.168.178.21/tmpfs/snap.jpg?usr=admin&pwd=instar.\n\nhttps://mpolinowski.github.io/devnotes/2018-11-26--node-red-and-live-video",
         "x": 190,
-        "y": 460,
+        "y": 280,
         "wires": []
     },
     {
@@ -27353,7 +27324,209 @@
         "name": "TODO",
         "info": "Need to figure out the correct http URL and then integrate with the IP settings context ",
         "x": 170,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "8b9f40679c2ed269",
+        "type": "inject",
+        "z": "4ab9df2b.7b3dd",
+        "g": "08438d8f10ead9dd",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 160,
+        "y": 600,
+        "wires": [
+            [
+                "5082404667e21792"
+            ]
+        ]
+    },
+    {
+        "id": "5082404667e21792",
+        "type": "switch",
+        "z": "4ab9df2b.7b3dd",
+        "g": "08438d8f10ead9dd",
+        "name": "Enable or not",
+        "property": "enabled",
+        "propertyType": "env",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 400,
+        "y": 600,
+        "wires": [
+            [
+                "67fe7b761af9b8d9"
+            ],
+            [
+                "62209fe6a5480281"
+            ]
+        ]
+    },
+    {
+        "id": "6d724942e7a9c30c",
+        "type": "change",
+        "z": "4ab9df2b.7b3dd",
+        "g": "08438d8f10ead9dd",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "enabled",
+                "tot": "env"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 400,
+        "y": 480,
+        "wires": [
+            [
+                "ce6d392c5bc2884e"
+            ]
+        ]
+    },
+    {
+        "id": "f60652ea91e06e4d",
+        "type": "inject",
+        "z": "4ab9df2b.7b3dd",
+        "g": "493c8e5b6c1841f1",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
         "y": 420,
+        "wires": [
+            [
+                "6d724942e7a9c30c"
+            ]
+        ]
+    },
+    {
+        "id": "c0ad793476f9f4f3",
+        "type": "inject",
+        "z": "4ab9df2b.7b3dd",
+        "g": "05abf876d14e2844",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 500,
+        "wires": [
+            [
+                "6d724942e7a9c30c"
+            ]
+        ]
+    },
+    {
+        "id": "ce6d392c5bc2884e",
+        "type": "debug",
+        "z": "4ab9df2b.7b3dd",
+        "g": "08438d8f10ead9dd",
+        "name": "",
+        "active": true,
+        "tosidebar": false,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 630,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "67fe7b761af9b8d9",
+        "type": "debug",
+        "z": "4ab9df2b.7b3dd",
+        "g": "08438d8f10ead9dd",
+        "name": "is enabled",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 630,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "62209fe6a5480281",
+        "type": "debug",
+        "z": "4ab9df2b.7b3dd",
+        "g": "08438d8f10ead9dd",
+        "name": "is not enabled",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 640,
+        "y": 600,
         "wires": []
     },
     {
