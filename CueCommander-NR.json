@@ -390,7 +390,7 @@
         ],
         "x": 34,
         "y": 699,
-        "w": 752,
+        "w": 832,
         "h": 322
     },
     {
@@ -4059,7 +4059,7 @@
         "topic": "",
         "name": "",
         "x": 390,
-        "y": 940,
+        "y": 920,
         "wires": []
     },
     {
@@ -4583,7 +4583,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 370,
-        "y": 900,
+        "y": 880,
         "wires": [
             [
                 "cdd82f05.e3c48",
@@ -5360,7 +5360,7 @@
         "statusVal": "payload",
         "statusType": "auto",
         "x": 620,
-        "y": 900,
+        "y": 880,
         "wires": []
     },
     {
@@ -5578,8 +5578,8 @@
         "drop": true,
         "allowrate": false,
         "outputs": 1,
-        "x": 170,
-        "y": 940,
+        "x": 370,
+        "y": 980,
         "wires": [
             [
                 "19249353773f290b"
@@ -5602,7 +5602,7 @@
         "className": "",
         "topic": "",
         "name": "",
-        "x": 570,
+        "x": 750,
         "y": 980,
         "wires": []
     },
@@ -5611,13 +5611,13 @@
         "type": "change",
         "z": "ee400291.7cb",
         "g": "26f7e48.6e71e1c",
-        "name": "",
+        "name": "Error message",
         "rules": [
             {
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "Lighting Communication is disabled",
+                "to": "Lighting Communication is disabled. See Settings.",
                 "tot": "str"
             }
         ],
@@ -5626,7 +5626,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 360,
+        "x": 560,
         "y": 980,
         "wires": [
             [
