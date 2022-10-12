@@ -3725,7 +3725,7 @@
     {
         "id": "13e3cbbba82ff43c",
         "type": "atem-network",
-        "name": "",
+        "name": "ATEM Network",
         "ipAddress": "192.168.0.191"
     },
     {
@@ -16702,7 +16702,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 550,
-        "y": 2800,
+        "y": 2780,
         "wires": []
     },
     {
@@ -18366,7 +18366,7 @@
         "type": "ui_toast",
         "z": "96ac9944.5b4dd8",
         "g": "5a3761.bcd618a",
-        "position": "top right",
+        "position": "bottom right",
         "displayTime": "2",
         "highlight": "red",
         "sendall": true,
