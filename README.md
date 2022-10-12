@@ -5,11 +5,13 @@ This software is currently in alpha. It has many experimental features and yet l
 
 An Audio/Visual/Lighting automation application using the node-red platform. It enables two-way communication and control of several systems, specifically:
 
-ETC ColorSource 40AV Lighting Console via OSC Protocol
-Kramer VS88-DT Video Matrix Switch (disabled)
-Renewed Vision's ProPresenter (V7)
-Black Magic Design's ATEM
-Black Magic Design's Hyperdeck Mini video recorder
-Sony IP PTZ Video Camera via VISCA-IP (currently using the VISCAoverIP python package)
-Sony Video Projectors via PJLINK
-Planning Center Services using their API
+* ETC ColorSource 40AV Lighting Console via OSC Protocol
+* Kramer VS88-DT Video Matrix Switch (disabled)
+* Renewed Vision's ProPresenter (V7)
+* Black Magic Design's ATEM
+* Black Magic Design's Hyperdeck Mini video recorder
+* Sony IP PTZ Video Camera via VISCA-IP (currently using the VISCAOverIP python package)
+* Sony Video Projectors via PJLINK
+* Planning Center Services using their API
+
+To run the VISCAOverIP use "python3 oscToPTZ.py". The camera IP addresses are near the top of oscToPTZ.py file.
