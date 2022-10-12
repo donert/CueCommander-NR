@@ -190,7 +190,7 @@
         ],
         "x": 34,
         "y": 379,
-        "w": 882,
+        "w": 872,
         "h": 482
     },
     {
@@ -1019,12 +1019,15 @@
             "e7c0599b.768918",
             "4a74377e.5b7a58",
             "afac8255.49e2",
-            "8fa7a3df.960d6"
+            "8fa7a3df.960d6",
+            "5cda0486c5363240",
+            "b450d7c69061ea5d",
+            "3f09f9dbc35ff42e"
         ],
         "x": 44,
         "y": 19,
         "w": 902,
-        "h": 262
+        "h": 302
     },
     {
         "id": "1976ad4e.952673",
@@ -2271,7 +2274,7 @@
             "4aa8f472fa252a1e"
         ],
         "x": 14,
-        "y": 299,
+        "y": 379,
         "w": 1132,
         "h": 362
     },
@@ -14977,7 +14980,7 @@
         "links": [
             "1ac81781.75b738"
         ],
-        "x": 875,
+        "x": 865,
         "y": 680,
         "wires": []
     },
@@ -15831,7 +15834,7 @@
         "links": [
             "be807d43.8defe"
         ],
-        "x": 875,
+        "x": 865,
         "y": 620,
         "wires": []
     },
@@ -26889,7 +26892,7 @@
         "oldrc": false,
         "name": "get ip addr",
         "x": 130,
-        "y": 420,
+        "y": 500,
         "wires": [
             [
                 "ea3cda0ff378b0d1",
@@ -26922,7 +26925,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 130,
-        "y": 340,
+        "y": 420,
         "wires": [
             [
                 "0927626329e37e63"
@@ -26950,7 +26953,7 @@
         "to": "",
         "reg": false,
         "x": 340,
-        "y": 480,
+        "y": 560,
         "wires": [
             [
                 "4b5678bcc0710310"
@@ -26984,7 +26987,7 @@
         "repair": false,
         "outputs": 3,
         "x": 310,
-        "y": 540,
+        "y": 620,
         "wires": [
             [
                 "356dc9191546f848"
@@ -27023,7 +27026,7 @@
         "to": "",
         "reg": false,
         "x": 450,
-        "y": 580,
+        "y": 660,
         "wires": [
             [
                 "f2478a4db59d0b8e"
@@ -27051,7 +27054,7 @@
         "to": "",
         "reg": false,
         "x": 450,
-        "y": 620,
+        "y": 700,
         "wires": [
             [
                 "f2478a4db59d0b8e"
@@ -27069,7 +27072,7 @@
             "ec761bc5c44ae47d"
         ],
         "x": 695,
-        "y": 580,
+        "y": 660,
         "wires": []
     },
     {
@@ -27087,7 +27090,7 @@
         "layout": "col-center",
         "className": "",
         "x": 310,
-        "y": 340,
+        "y": 420,
         "wires": []
     },
     {
@@ -27125,7 +27128,7 @@
         "outputs": 0,
         "cts": false,
         "x": 1070,
-        "y": 340,
+        "y": 420,
         "wires": []
     },
     {
@@ -27149,7 +27152,7 @@
         "to": "",
         "reg": false,
         "x": 590,
-        "y": 520,
+        "y": 600,
         "wires": [
             [
                 "eed5703287d35ad0",
@@ -27179,7 +27182,7 @@
         "reduceInitType": "num",
         "reduceFixup": "",
         "x": 910,
-        "y": 340,
+        "y": 420,
         "wires": [
             [
                 "2bcbe017b5366a20",
@@ -27200,7 +27203,7 @@
         "template": "{\n\"payload\" : {\n       \"item\" : \"Location\" , \n       \"value\": \"{{payload}}\"\n},\n \n    \"parts\" : {\n        \"id\" : 1,\n        \"index\": 1 ,\n        \"count\" : 2\n    }\n}  \n",
         "output": "yaml",
         "x": 740,
-        "y": 500,
+        "y": 580,
         "wires": [
             [
                 "3f3c19418d428606"
@@ -27222,7 +27225,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1030,
-        "y": 480,
+        "y": 560,
         "wires": []
     },
     {
@@ -27248,7 +27251,7 @@
         "payload": "Test",
         "payloadType": "str",
         "x": 590,
-        "y": 440,
+        "y": 520,
         "wires": [
             [
                 "b31ed71913044737"
@@ -27283,7 +27286,7 @@
         "to": "",
         "reg": false,
         "x": 790,
-        "y": 400,
+        "y": 480,
         "wires": [
             [
                 "ed2f2b2cef43f412",
@@ -27304,7 +27307,7 @@
         "template": "{\n\"payload\" : {\n       \"item\" : \"IP Address\" , \n       \"value\": \"{{payload}}\"\n},\n \n    \"parts\" : {\n        \"id\" : 2,\n        \"index\": 2 ,\n        \"count\" : 2\n    }\n}  \n",
         "output": "json",
         "x": 560,
-        "y": 340,
+        "y": 420,
         "wires": [
             [
                 "2ce2e3d14ca5c3e8"
@@ -27339,7 +27342,7 @@
         "to": "",
         "reg": false,
         "x": 730,
-        "y": 340,
+        "y": 420,
         "wires": [
             [
                 "ed2f2b2cef43f412",
@@ -27362,7 +27365,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1040,
-        "y": 380,
+        "y": 460,
         "wires": []
     },
     {
@@ -27388,7 +27391,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 520,
-        "y": 400,
+        "y": 480,
         "wires": [
             [
                 "855f895038c74f58"
@@ -27727,6 +27730,112 @@
                 "2a5d895e89804709",
                 "121f4752e443ef22",
                 "c7e887e50258dd5b"
+            ]
+        ]
+    },
+    {
+        "id": "5cda0486c5363240",
+        "type": "template",
+        "z": "805d289f.fd83a8",
+        "g": "f2aad9f6.0d8f18",
+        "name": "UAC Config",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{\n\"devices\": {\n[\n{ \"category\": \"Projector\",\n  \"name\"    : \"East\",\n  \"ip\"      : \"192.168.0.194\",\n  \"port\"    : \"\"\n},\n{ \"category\": \"Projector\",\n  \"name\"    : \"Centre\",\n  \"ip\"      : \"192.168.0.195\",\n  \"port\"    : \"\"\n},\n{ \"category\": \"Projector\",\n  \"name\"    : \"West\",\n  \"ip\"      : \"192.168.0.196\",\n  \"port\"    : \"\"\n},\n{ \"category\": \"ProPresenter\",\n  \"name\"    : \"West\",\n  \"ip\"      : \"192.168.0.140\",\n  \"port\"    : \"1025\"\n}\n]\n\n}\n\n}",
+        "output": "json",
+        "x": 150,
+        "y": 280,
+        "wires": [
+            [
+                "3f09f9dbc35ff42e"
+            ]
+        ]
+    },
+    {
+        "id": "b450d7c69061ea5d",
+        "type": "ui_table",
+        "z": "805d289f.fd83a8",
+        "g": "f2aad9f6.0d8f18",
+        "group": "4905c710f50a9e4b",
+        "name": "",
+        "order": 12,
+        "width": 0,
+        "height": 0,
+        "columns": [
+            {
+                "field": "category",
+                "title": "Category",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "name",
+                "title": "Name",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "ip",
+                "title": "IP",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "port",
+                "title": "Port",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            }
+        ],
+        "outputs": 0,
+        "cts": false,
+        "x": 510,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "3f09f9dbc35ff42e",
+        "type": "change",
+        "z": "805d289f.fd83a8",
+        "g": "f2aad9f6.0d8f18",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.devices",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 340,
+        "y": 280,
+        "wires": [
+            [
+                "b450d7c69061ea5d"
             ]
         ]
     },
