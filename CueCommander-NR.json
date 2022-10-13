@@ -10258,7 +10258,7 @@
         "type": "function",
         "z": "17ca131.e488ced",
         "name": "Set IP parms",
-        "func": "pp = context.get(\"proj_parms\"); \n \ni = msg.payload.instance  \n \nentry = pp[i];\n \nhost = entry.ip;\nport = entry.port;\n\nmsg = {\n    instance : i,\n    payload  : msg.payload.payload,\n    host     : host,\n    port     : port,\n    topic    : msg.payload.topic\n}\n\nreturn msg;",
+        "func": "pp = context.get(\"config\").devices; \n \ni = msg.payload.instance  \n \nentry = pp[i];\n \nhost = entry.ip;\nport = entry.port;\n\nmsg = {\n    instance : i,\n    payload  : msg.payload.payload,\n    host     : host,\n    port     : port,\n    topic    : msg.payload.topic\n}\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
