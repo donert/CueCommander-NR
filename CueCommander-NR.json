@@ -10264,11 +10264,105 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 250,
-        "y": 1140,
+        "x": 290,
+        "y": 1160,
         "wires": [
-            []
+            [
+                "0b5cef79f84392bf"
+            ]
         ]
+    },
+    {
+        "id": "de9c2966fed7f8b9",
+        "type": "inject",
+        "z": "17ca131.e488ced",
+        "name": "",
+        "props": [
+            {
+                "p": "payload.instance",
+                "v": "1",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 90,
+        "y": 1120,
+        "wires": [
+            [
+                "4b671acb4caee576"
+            ]
+        ]
+    },
+    {
+        "id": "7cd5628d9523c09f",
+        "type": "inject",
+        "z": "17ca131.e488ced",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "2",
+        "payloadType": "str",
+        "x": 90,
+        "y": 1160,
+        "wires": [
+            [
+                "4b671acb4caee576"
+            ]
+        ]
+    },
+    {
+        "id": "b9ab452dbe351469",
+        "type": "inject",
+        "z": "17ca131.e488ced",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "3",
+        "payloadType": "str",
+        "x": 90,
+        "y": 1200,
+        "wires": [
+            [
+                "4b671acb4caee576"
+            ]
+        ]
+    },
+    {
+        "id": "0b5cef79f84392bf",
+        "type": "debug",
+        "z": "17ca131.e488ced",
+        "name": "",
+        "active": true,
+        "tosidebar": false,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 530,
+        "y": 1160,
+        "wires": []
     },
     {
         "id": "7bc89364.546b1c",
