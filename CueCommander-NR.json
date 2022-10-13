@@ -4004,12 +4004,12 @@
         "tab": "e0b6460f.51cf08",
         "order": 2,
         "disp": true,
-        "width": 12,
+        "width": 14,
         "collapse": false,
         "className": ""
     },
     {
-        "id": "9ca7b468f80996c4",
+        "id": "f73168424d635be1",
         "type": "ui_spacer",
         "z": "805d289f.fd83a8",
         "name": "spacer",
@@ -19645,8 +19645,8 @@
         "group": "605b93e75076b1e9",
         "name": "",
         "order": 1,
-        "width": 12,
-        "height": 5,
+        "width": 14,
+        "height": 6,
         "columns": [
             {
                 "field": "category",
@@ -19834,7 +19834,7 @@
         "label": "Projectors",
         "tooltip": "",
         "group": "4905c710f50a9e4b",
-        "order": 5,
+        "order": 6,
         "width": 0,
         "height": 0,
         "passthru": true,
