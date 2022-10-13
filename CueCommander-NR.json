@@ -27706,7 +27706,7 @@
             {
                 "field": "name",
                 "title": "Name",
-                "width": "15%",
+                "width": "25%",
                 "align": "left",
                 "formatter": "plaintext",
                 "formatterParams": {
@@ -27716,7 +27716,7 @@
             {
                 "field": "ip",
                 "title": "IP",
-                "width": "25%",
+                "width": "20%",
                 "align": "left",
                 "formatter": "plaintext",
                 "formatterParams": {
@@ -27726,7 +27726,7 @@
             {
                 "field": "port",
                 "title": "Port",
-                "width": "5%",
+                "width": "10%",
                 "align": "right",
                 "formatter": "plaintext",
                 "formatterParams": {
