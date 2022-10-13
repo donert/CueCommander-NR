@@ -27994,7 +27994,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "{\n\"devices\":  \n[\n{ \"category\": \"Projector\",\n  \"name\"    : \"East\",\n  \"ip\"      : \"192.168.0.194\",\n  \"port\"    : \"4352\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Projector\",\n  \"name\"    : \"Centre\",\n  \"ip\"      : \"192.168.0.195\",\n  \"port\"    : \"4352\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Projector\",\n  \"name\"    : \"Westx\",\n  \"ip\"      : \"192.168.0.196\",\n  \"port\"    : \"4352\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Projector\",\n  \"name\"    : \"Rear\",\n  \"ip\"      : \"192.168.0.xxx\",\n  \"port\"    : \"4352\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"ProPresenter\",\n  \"name\"    : \"PP7\",\n  \"ip\"      : \"192.168.0.140\",\n  \"port\"    : \"1025\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Lights\",\n  \"name\"    : \"Lights\",\n  \"ip\"      : \"192.168.0.197\",\n  \"port\"    : \"8005\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Cameras\",\n  \"name\"    : \"Cam 1\",\n  \"ip\"      : \"192.168.0.186\",\n  \"port\"    : \"na\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Cameras\",\n  \"name\"    : \"Cam 2\",\n  \"ip\"      : \"192.168.0.187\",\n  \"port\"    : \"na\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Cameras\",\n  \"name\"    : \"Cam 3\",\n  \"ip\"      : \"192.168.0.188\",\n  \"port\"    : \"na\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Video Mixer\",\n  \"name\"    : \"ATEM\",\n  \"ip\"      : \"192.168.0.191\",\n  \"port\"    : \"na\",\n  \"comment\"   : \"Reference only-hardcoded config\"\n},\n{ \"category\": \"Control\",\n  \"name\"    : \"CueCommmander UI\",\n  \"ip\"      : \"192.168.0.191\",\n  \"port\"    : \"na\",\n  \"comment\"   : \"Reference only-hardcoded config\"\n}\n]\n}",
+        "template": "{\n\"devices\":  \n[\n{ \"category\": \"Projector\",\n  \"name\"    : \"East\",\n  \"ip\"      : \"192.168.0.194\",\n  \"port\"    : \"4352\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Projector\",\n  \"name\"    : \"Centre\",\n  \"ip\"      : \"192.168.0.195\",\n  \"port\"    : \"4352\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Projector\",\n  \"name\"    : \"Westx\",\n  \"ip\"      : \"192.168.0.196\",\n  \"port\"    : \"4352\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Projector\",\n  \"name\"    : \"Rear\",\n  \"ip\"      : \"192.168.0.xxx\",\n  \"port\"    : \"4352\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"ProPresenter\",\n  \"name\"    : \"PP7\",\n  \"ip\"      : \"192.168.0.140\",\n  \"port\"    : \"1025\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Lights\",\n  \"name\"    : \"Lights\",\n  \"ip\"      : \"192.168.0.197\",\n  \"port\"    : \"8005\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Cameras\",\n  \"name\"    : \"Cam 1\",\n  \"ip\"      : \"192.168.0.186\",\n  \"port\"    : \"na\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Cameras\",\n  \"name\"    : \"Cam 2\",\n  \"ip\"      : \"192.168.0.187\",\n  \"port\"    : \"na\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Cameras\",\n  \"name\"    : \"Cam 3\",\n  \"ip\"      : \"192.168.0.188\",\n  \"port\"    : \"na\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Video Mixer\",\n  \"name\"    : \"ATEM\",\n  \"ip\"      : \"192.168.0.191\",\n  \"port\"    : \"na\",\n  \"comment\"   : \"Reference only-hardcoded config\"\n},\n{ \"category\": \"Control\",\n  \"name\"    : \"CueCommmander UI\",\n  \"ip\"      : \"192.168.0.145\",\n  \"port\"    : \"1880\",\n  \"url\"     : \"http://192.168.0.145:1880/ui\",\n  \"comment\"   : \"Reference only-hardcoded config\"\n}\n]\n}",
         "output": "json",
         "x": 310,
         "y": 280,
@@ -28051,7 +28051,7 @@
                 "field": "port",
                 "title": "Port",
                 "width": "",
-                "align": "left",
+                "align": "right",
                 "formatter": "plaintext",
                 "formatterParams": {
                     "target": "_blank"
@@ -28063,6 +28063,16 @@
                 "width": "",
                 "align": "left",
                 "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "url",
+                "title": "Link",
+                "width": "",
+                "align": "left",
+                "formatter": "link",
                 "formatterParams": {
                     "target": "_blank"
                 }
