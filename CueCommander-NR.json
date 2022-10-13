@@ -4029,7 +4029,7 @@
         "height": 1
     },
     {
-        "id": "a3e7eae7327611c8",
+        "id": "7bcb975298202add",
         "type": "ui_spacer",
         "z": "64cbf871.f282f8",
         "name": "spacer",
@@ -4039,7 +4039,7 @@
         "height": 1
     },
     {
-        "id": "cc0c19ee5b0b1719",
+        "id": "f3535568b6e22296",
         "type": "ui_spacer",
         "z": "64cbf871.f282f8",
         "name": "spacer",
@@ -4049,7 +4049,7 @@
         "height": 1
     },
     {
-        "id": "dfaf0d7766e2acbd",
+        "id": "3478ace8093391a9",
         "type": "ui_spacer",
         "z": "64cbf871.f282f8",
         "name": "spacer",
@@ -4059,7 +4059,7 @@
         "height": 1
     },
     {
-        "id": "8a7a67271fdcfdc1",
+        "id": "dbfd485580204ab5",
         "type": "ui_spacer",
         "z": "64cbf871.f282f8",
         "name": "spacer",
@@ -4069,7 +4069,7 @@
         "height": 1
     },
     {
-        "id": "d3343fb7a9060772",
+        "id": "351dc3d543089534",
         "type": "ui_spacer",
         "z": "64cbf871.f282f8",
         "name": "spacer",
@@ -4079,7 +4079,7 @@
         "height": 1
     },
     {
-        "id": "dceacabd3b3cc29c",
+        "id": "4ca601c4c29bbd3b",
         "type": "ui_spacer",
         "z": "64cbf871.f282f8",
         "name": "spacer",
@@ -4089,7 +4089,7 @@
         "height": 1
     },
     {
-        "id": "8ed767e12c6527cc",
+        "id": "80da7c718058ab4f",
         "type": "ui_spacer",
         "z": "64cbf871.f282f8",
         "name": "spacer",
@@ -4099,7 +4099,7 @@
         "height": 1
     },
     {
-        "id": "44cf0c3e0de6afe2",
+        "id": "9c74248165969f67",
         "type": "ui_spacer",
         "z": "64cbf871.f282f8",
         "name": "spacer",
@@ -4109,7 +4109,7 @@
         "height": 1
     },
     {
-        "id": "9072d0fa2ba27ec0",
+        "id": "e6df743dbccb6409",
         "type": "ui_spacer",
         "z": "64cbf871.f282f8",
         "name": "spacer",
@@ -4119,7 +4119,7 @@
         "height": 1
     },
     {
-        "id": "98a5a35c1e6d7fd9",
+        "id": "a3a9886287f2fd80",
         "type": "ui_spacer",
         "z": "64cbf871.f282f8",
         "name": "spacer",
@@ -18319,7 +18319,7 @@
         "name": "List of Service Types",
         "order": 1,
         "width": 10,
-        "height": 5,
+        "height": 3,
         "columns": [
             {
                 "field": "title",
@@ -18363,7 +18363,7 @@
         "name": "List of Plans",
         "order": 2,
         "width": 10,
-        "height": 4,
+        "height": 2,
         "columns": [
             {
                 "field": "title",
