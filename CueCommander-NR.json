@@ -439,12 +439,13 @@
             "249e358cad583f0a",
             "4d4b117503547dc6",
             "7fbc0a243dc962c6",
-            "09f3d46ed24e16fc"
+            "09f3d46ed24e16fc",
+            "772424849836e3fc"
         ],
         "x": 34,
         "y": 539,
         "w": 912,
-        "h": 322
+        "h": 382
     },
     {
         "id": "65220297.8c588c",
@@ -8977,8 +8978,8 @@
         "g": "422d26b0.a49cd8",
         "name": "TODO -fix logic",
         "info": "Fix logic so that a button action changes projector state, but a pulsed action which detects an external change does not cause projector communications.",
-        "x": 180,
-        "y": 140,
+        "x": 160,
+        "y": 120,
         "wires": []
     },
     {
@@ -10420,8 +10421,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 560,
-        "y": 720,
+        "x": 360,
+        "y": 700,
         "wires": []
     },
     {
@@ -10433,7 +10434,7 @@
         "pauseType": "rate",
         "timeout": "5",
         "timeoutUnits": "seconds",
-        "rate": "1",
+        "rate": "5",
         "nbRateUnits": "1",
         "rateUnits": "second",
         "randomFirst": "1",
@@ -10442,8 +10443,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 180,
-        "y": 720,
+        "x": 190,
+        "y": 740,
         "wires": [
             [
                 "75bf0357f695bcf8",
@@ -10508,8 +10509,8 @@
         "className": "",
         "topic": "",
         "name": "",
-        "x": 390,
-        "y": 820,
+        "x": 270,
+        "y": 880,
         "wires": []
     },
     {
@@ -10532,8 +10533,34 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 380,
-        "y": 780,
+        "x": 260,
+        "y": 800,
+        "wires": [
+            [
+                "772424849836e3fc"
+            ]
+        ]
+    },
+    {
+        "id": "772424849836e3fc",
+        "type": "delay",
+        "z": "17ca131.e488ced",
+        "g": "2a5510d0.88b28",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "10",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 260,
+        "y": 840,
         "wires": [
             [
                 "7fbc0a243dc962c6"
