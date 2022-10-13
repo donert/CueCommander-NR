@@ -3485,16 +3485,6 @@
         "height": 1
     },
     {
-        "id": "98cf5f2c.9a9be",
-        "type": "ui_group",
-        "name": "Click to Refresh",
-        "tab": "ab63beb4.a6246",
-        "order": 5,
-        "disp": true,
-        "width": 2,
-        "collapse": false
-    },
-    {
         "id": "4f286988.766258",
         "type": "ui_group",
         "name": "List of Plans",
@@ -4026,106 +4016,6 @@
         "group": "081499cdb0e45d15",
         "order": 3,
         "width": 5,
-        "height": 1
-    },
-    {
-        "id": "7bcb975298202add",
-        "type": "ui_spacer",
-        "z": "64cbf871.f282f8",
-        "name": "spacer",
-        "group": "2108c06a.f432e",
-        "order": 3,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "f3535568b6e22296",
-        "type": "ui_spacer",
-        "z": "64cbf871.f282f8",
-        "name": "spacer",
-        "group": "2108c06a.f432e",
-        "order": 4,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "3478ace8093391a9",
-        "type": "ui_spacer",
-        "z": "64cbf871.f282f8",
-        "name": "spacer",
-        "group": "2108c06a.f432e",
-        "order": 5,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "dbfd485580204ab5",
-        "type": "ui_spacer",
-        "z": "64cbf871.f282f8",
-        "name": "spacer",
-        "group": "2108c06a.f432e",
-        "order": 6,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "351dc3d543089534",
-        "type": "ui_spacer",
-        "z": "64cbf871.f282f8",
-        "name": "spacer",
-        "group": "2108c06a.f432e",
-        "order": 7,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "4ca601c4c29bbd3b",
-        "type": "ui_spacer",
-        "z": "64cbf871.f282f8",
-        "name": "spacer",
-        "group": "2108c06a.f432e",
-        "order": 8,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "80da7c718058ab4f",
-        "type": "ui_spacer",
-        "z": "64cbf871.f282f8",
-        "name": "spacer",
-        "group": "2108c06a.f432e",
-        "order": 9,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "9c74248165969f67",
-        "type": "ui_spacer",
-        "z": "64cbf871.f282f8",
-        "name": "spacer",
-        "group": "2108c06a.f432e",
-        "order": 10,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "e6df743dbccb6409",
-        "type": "ui_spacer",
-        "z": "64cbf871.f282f8",
-        "name": "spacer",
-        "group": "2108c06a.f432e",
-        "order": 11,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "a3a9886287f2fd80",
-        "type": "ui_spacer",
-        "z": "64cbf871.f282f8",
-        "name": "spacer",
-        "group": "2108c06a.f432e",
-        "order": 12,
-        "width": 2,
         "height": 1
     },
     {
@@ -18250,7 +18140,7 @@
         "group": "2108c06a.f432e",
         "name": "Item Details",
         "order": 2,
-        "width": 8,
+        "width": 10,
         "height": 10,
         "columns": [
             {
@@ -18319,7 +18209,7 @@
         "name": "List of Service Types",
         "order": 2,
         "width": 10,
-        "height": 3,
+        "height": 2,
         "columns": [
             {
                 "field": "title",
