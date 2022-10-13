@@ -433,12 +433,14 @@
             "19ab985d.b5c048",
             "3c314cee.d4ba94",
             "3bfc7fa1.093c9",
-            "c208d442.f81c88"
+            "c208d442.f81c88",
+            "2fc659f21a470a82",
+            "15432aeee3bed432"
         ],
-        "x": 34,
-        "y": 559,
-        "w": 592,
-        "h": 222
+        "x": 24,
+        "y": 539,
+        "w": 612,
+        "h": 262
     },
     {
         "id": "65220297.8c588c",
@@ -7762,11 +7764,11 @@
             "a2bacb69.935388",
             "9223dc40.cd804"
         ],
-        "x": 75,
-        "y": 600,
+        "x": 85,
+        "y": 620,
         "wires": [
             [
-                "88966e38.a3778"
+                "2fc659f21a470a82"
             ]
         ]
     },
@@ -9318,8 +9320,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 330,
-        "y": 600,
+        "x": 340,
+        "y": 620,
         "wires": [
             [
                 "19ab985d.b5c048"
@@ -9340,8 +9342,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 180,
-        "y": 740,
+        "x": 190,
+        "y": 760,
         "wires": []
     },
     {
@@ -9356,12 +9358,10 @@
         "arraySpltType": "len",
         "stream": false,
         "addname": "",
-        "x": 530,
-        "y": 600,
+        "x": 540,
+        "y": 620,
         "wires": [
-            [
-                "3c314cee.d4ba94"
-            ]
+            []
         ]
     },
     {
@@ -9375,8 +9375,9 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 150,
-        "y": 680,
+        "libs": [],
+        "x": 160,
+        "y": 700,
         "wires": [
             [
                 "e880b599.3f8de8",
@@ -9392,8 +9393,8 @@
         "ip": "",
         "port": "",
         "name": "",
-        "x": 330,
-        "y": 680,
+        "x": 340,
+        "y": 700,
         "wires": [
             [
                 "893b4dce.95f96"
@@ -9417,8 +9418,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 490,
-        "y": 740,
+        "x": 500,
+        "y": 760,
         "wires": []
     },
     {
@@ -10404,29 +10405,11 @@
         "wires": []
     },
     {
-        "id": "cc1a5b5621a3188d",
-        "type": "function",
-        "z": "17ca131.e488ced",
-        "name": "iterate over all projectors",
-        "func": "config = global.get(\"config\") ; \ndevices = config.devices;\nprojs   = devices.filter(x => x.category == 'Projector')\n\n// pp = flow.get(\"proj_parms\")\n\nn = projs.length\n\nout = []\n\nfor (var i = 0; i < n; i++) { \n     msgi = {\n         \"payload\" : msg.payload,\n         \"instance\" : i,\n         \"topic\": msg.topic,\n         \"ip\": projs[i].ip,\n         \"port\": projs[i].port,\n         \"name\": projs[i].name\n     }\n     out.push( msgi )\n}\n\nmsg = { \"payload\" : out }\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 270,
-        "y": 1260,
-        "wires": [
-            [
-                "0b5cef79f84392bf"
-            ]
-        ]
-    },
-    {
         "id": "15432aeee3bed432",
         "type": "inject",
         "z": "17ca131.e488ced",
-        "name": "",
+        "g": "2a5510d0.88b28",
+        "name": "test",
         "props": [
             {
                 "p": "payload"
@@ -10440,14 +10423,34 @@
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 80,
-        "y": 1260,
+        "topic": "getpowerstate",
+        "payload": "getpowerstate",
+        "payloadType": "str",
+        "x": 120,
+        "y": 580,
         "wires": [
             [
-                "cc1a5b5621a3188d"
+                "2fc659f21a470a82"
+            ]
+        ]
+    },
+    {
+        "id": "2fc659f21a470a82",
+        "type": "function",
+        "z": "17ca131.e488ced",
+        "g": "2a5510d0.88b28",
+        "name": "iterate over all projectors (new)",
+        "func": "config = global.get(\"config\") ; \ndevices = config.devices;\nprojs   = devices.filter(x => x.category == 'Projector')\n\n// pp = flow.get(\"proj_parms\")\n\nn = projs.length\n\nout = []\n\nfor (var i = 0; i < n; i++) { \n     msgi = {\n         \"payload\" : msg.payload,\n         \"instance\" : i,\n         \"topic\": msg.topic,\n         \"host\": projs[i].ip,\n         \"port\": projs[i].port,\n         \"name\": projs[i].name\n     }\n     out.push( msgi )\n}\n\nmsg = { \"payload\" : out }\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 660,
+        "wires": [
+            [
+                "3c314cee.d4ba94"
             ]
         ]
     },
