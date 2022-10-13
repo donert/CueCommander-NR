@@ -1053,7 +1053,7 @@
             "63b7930e30201dad"
         ],
         "x": 24,
-        "y": 19,
+        "y": 899,
         "w": 902,
         "h": 362
     },
@@ -2980,7 +2980,7 @@
             "2485454608506488"
         ],
         "x": 14,
-        "y": 879,
+        "y": 19,
         "w": 732,
         "h": 322
     },
@@ -3021,10 +3021,10 @@
             "ca735159a2015952",
             "ce7ec2284e930d83"
         ],
-        "x": 774,
-        "y": 79,
-        "w": 472,
-        "h": 202
+        "x": 744,
+        "y": 59,
+        "w": 482,
+        "h": 222
     },
     {
         "id": "b36c9a8b.092df8",
@@ -12163,7 +12163,7 @@
         "path": "",
         "metadata": false,
         "x": 90,
-        "y": 160,
+        "y": 140,
         "wires": [
             [
                 "245b2b2c26e6248a"
@@ -13077,7 +13077,7 @@
         "outport": "",
         "base64": false,
         "multicast": "false",
-        "x": 870,
+        "x": 850,
         "y": 240,
         "wires": []
     },
@@ -13095,7 +13095,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1100,
+        "x": 1080,
         "y": 200,
         "wires": []
     },
@@ -13110,7 +13110,7 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 870,
+        "x": 850,
         "y": 200,
         "wires": [
             [
@@ -13126,7 +13126,7 @@
         "g": "ee76cadcc50ae6d5",
         "name": "",
         "env": [],
-        "x": 910,
+        "x": 890,
         "y": 160,
         "wires": [
             [
@@ -13141,7 +13141,7 @@
         "g": "ee76cadcc50ae6d5",
         "name": "Unfinshed Development",
         "info": "It started developing the js code that could create the direct to camera messages. But then I found a python osc package that did the job and it was expedient to use that instead. \n\nPerhaps someday i will revisit that.",
-        "x": 1120,
+        "x": 1100,
         "y": 120,
         "wires": []
     },
@@ -13166,8 +13166,8 @@
         "g": "ee76cadcc50ae6d5",
         "name": "",
         "links": [],
-        "x": 825,
-        "y": 120,
+        "x": 785,
+        "y": 100,
         "wires": [
             [
                 "ee52f37864598968"
@@ -26562,7 +26562,7 @@
         ],
         "active": false,
         "x": 450,
-        "y": 100,
+        "y": 980,
         "wires": []
     },
     {
@@ -26581,7 +26581,7 @@
         ],
         "active": true,
         "x": 450,
-        "y": 60,
+        "y": 940,
         "wires": []
     },
     {
@@ -26607,7 +26607,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 130,
-        "y": 240,
+        "y": 1120,
         "wires": [
             [
                 "c5231226.09224"
@@ -26629,7 +26629,7 @@
         "statusVal": "payload",
         "statusType": "auto",
         "x": 790,
-        "y": 240,
+        "y": 1120,
         "wires": []
     },
     {
@@ -26645,7 +26645,7 @@
         "finalize": "",
         "libs": [],
         "x": 280,
-        "y": 240,
+        "y": 1120,
         "wires": [
             [
                 "17115527.73c69b"
@@ -26664,7 +26664,7 @@
         "inout": "out",
         "property": "payload",
         "x": 440,
-        "y": 240,
+        "y": 1120,
         "wires": [
             [
                 "41776ee7.52c2b"
@@ -26694,7 +26694,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 140,
-        "y": 60,
+        "y": 940,
         "wires": [
             [
                 "66042e58.b64be",
@@ -26725,7 +26725,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 130,
-        "y": 100,
+        "y": 980,
         "wires": [
             [
                 "8d312299.cae8f",
@@ -26748,7 +26748,7 @@
         "statusVal": "payload",
         "statusType": "auto",
         "x": 760,
-        "y": 180,
+        "y": 1060,
         "wires": []
     },
     {
@@ -26769,7 +26769,7 @@
         "drop": false,
         "outputs": 1,
         "x": 370,
-        "y": 180,
+        "y": 1060,
         "wires": [
             [
                 "8fa7a3df.960d6"
@@ -26784,7 +26784,7 @@
         "name": "TODO - race Condition",
         "info": "Is this code exposed to a race condition.\nWhat if the delayed message is not evaluated before the global property is set? Possible?",
         "x": 400,
-        "y": 140,
+        "y": 1020,
         "wires": []
     },
     {
@@ -26799,7 +26799,7 @@
         "initialize": "",
         "finalize": "",
         "x": 520,
-        "y": 180,
+        "y": 1060,
         "wires": [
             [
                 "e7c0599b.768918"
@@ -27354,7 +27354,7 @@
         "animate": false,
         "className": "",
         "x": 300,
-        "y": 920,
+        "y": 60,
         "wires": [
             [
                 "be5c5c51b8959c20"
@@ -27389,7 +27389,7 @@
         "animate": false,
         "className": "",
         "x": 310,
-        "y": 980,
+        "y": 120,
         "wires": [
             [
                 "e25264e8a037be92"
@@ -27424,7 +27424,7 @@
         "animate": false,
         "className": "",
         "x": 320,
-        "y": 1100,
+        "y": 240,
         "wires": [
             [
                 "4c8c5f8d833da476"
@@ -27459,7 +27459,7 @@
         "animate": false,
         "className": "",
         "x": 300,
-        "y": 1040,
+        "y": 180,
         "wires": [
             [
                 "df695408af6a4f4a"
@@ -27494,7 +27494,7 @@
         "animate": false,
         "className": "",
         "x": 320,
-        "y": 1160,
+        "y": 300,
         "wires": [
             [
                 "32be63dfe7e14d0f"
@@ -27522,7 +27522,7 @@
         "to": "",
         "reg": false,
         "x": 560,
-        "y": 920,
+        "y": 60,
         "wires": [
             []
         ]
@@ -27548,7 +27548,7 @@
         "to": "",
         "reg": false,
         "x": 570,
-        "y": 980,
+        "y": 120,
         "wires": [
             []
         ]
@@ -27574,7 +27574,7 @@
         "to": "",
         "reg": false,
         "x": 570,
-        "y": 1100,
+        "y": 240,
         "wires": [
             []
         ]
@@ -27600,7 +27600,7 @@
         "to": "",
         "reg": false,
         "x": 560,
-        "y": 1040,
+        "y": 180,
         "wires": [
             []
         ]
@@ -27626,7 +27626,7 @@
         "to": "",
         "reg": false,
         "x": 580,
-        "y": 1160,
+        "y": 300,
         "wires": [
             []
         ]
@@ -27650,7 +27650,7 @@
         "payload": "true",
         "payloadType": "bool",
         "x": 110,
-        "y": 1040,
+        "y": 180,
         "wires": [
             [
                 "ba258ee493811ec9",
@@ -27671,10 +27671,10 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "{\n\"devices\":  \n[\n{ \"category\": \"Projector\",\n  \"name\"    : \"East\",\n  \"ip\"      : \"192.168.0.194\",\n  \"port\"    : \"4352\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Projector\",\n  \"name\"    : \"Centre\",\n  \"ip\"      : \"192.168.0.195\",\n  \"port\"    : \"4352\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Projector\",\n  \"name\"    : \"Westx\",\n  \"ip\"      : \"192.168.0.196\",\n  \"port\"    : \"4352\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Projector\",\n  \"name\"    : \"Rear\",\n  \"ip\"      : \"192.168.0.xxx\",\n  \"port\"    : \"4352\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"ProPresenter\",\n  \"name\"    : \"PP7\",\n  \"ip\"      : \"192.168.0.140\",\n  \"port\"    : \"1025\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Lights\",\n  \"name\"    : \"Lights\",\n  \"ip\"      : \"192.168.0.197\",\n  \"port\"    : \"8005\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Cameras\",\n  \"name\"    : \"Cam 1\",\n  \"ip\"      : \"192.168.0.186\",\n  \"port\"    : \"na\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Cameras\",\n  \"name\"    : \"Cam 2\",\n  \"ip\"      : \"192.168.0.187\",\n  \"port\"    : \"na\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Cameras\",\n  \"name\"    : \"Cam 3\",\n  \"ip\"      : \"192.168.0.188\",\n  \"port\"    : \"na\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Video Mixer\",\n  \"name\"    : \"ATEM\",\n  \"ip\"      : \"192.168.0.191\",\n  \"port\"    : \"na\",\n  \"comment\"   : \"Reference only-hardcoded config\"\n},\n{ \"category\": \"Control\",\n  \"name\"    : \"CueCommmander UI\",\n  \"ip\"      : \"192.168.0.145\",\n  \"port\"    : \"1880\",\n  \"url\"     : \"http://192.168.0.145:1880/ui\",\n  \"comment\"   : \"Reference only-hardcoded config\"\n}\n]\n}",
+        "template": "{\n\"devices\":  \n[\n{ \"category\": \"Projector\",\n  \"name\"    : \"East\",\n  \"ip\"      : \"192.168.0.194\",\n  \"port\"    : \"4352\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Projector\",\n  \"name\"    : \"Centre\",\n  \"ip\"      : \"192.168.0.195\",\n  \"port\"    : \"4352\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Projector\",\n  \"name\"    : \"Westx\",\n  \"ip\"      : \"192.168.0.196\",\n  \"port\"    : \"4352\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Projector\",\n  \"name\"    : \"Rear\",\n  \"ip\"      : \"192.168.0.xxx\",\n  \"port\"    : \"4352\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"ProPresenter\",\n  \"name\"    : \"PP7\",\n  \"ip\"      : \"192.168.0.140\",\n  \"port\"    : \"1025\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Lights\",\n  \"name\"    : \"Lights\",\n  \"ip\"      : \"192.168.0.197\",\n  \"port\"    : \"8005\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Cameras\",\n  \"name\"    : \"Cam 1\",\n  \"ip\"      : \"192.168.0.186\",\n  \"port\"    : \"na\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Cameras\",\n  \"name\"    : \"Cam 2\",\n  \"ip\"      : \"192.168.0.187\",\n  \"port\"    : \"na\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Cameras\",\n  \"name\"    : \"Cam 3\",\n  \"ip\"      : \"192.168.0.188\",\n  \"port\"    : \"na\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Video Mixer\",\n  \"name\"    : \"ATEM\",\n  \"ip\"      : \"192.168.0.191\",\n  \"port\"    : \"na\",\n  \"comment\"   : \"Reference only-hardcoded config\"\n},\n{ \"category\": \"Control\",\n  \"name\"    : \"CueCommmander UI\",\n  \"ip\"      : \"192.168.0.145\",\n  \"port\"    : \"1880\",\n  \"url\"     : \"http://192.168.0.145:1880/ui\",\n  \"comment\"   : \"Reference only. Hardcoded config\"\n} ,\n{ \"category\": \"Control\",\n  \"name\"    : \"OSC to VISCAip\",\n  \"ip\"      : \"127.0.0.1\",\n  \"port\"    : \"54000\",\n  \"url\"     : \"\",\n  \"comment\"   : \"Reference only. Hardcoded config\"\n}\n]\n}",
         "output": "json",
         "x": 350,
-        "y": 340,
+        "y": 1220,
         "wires": [
             [
                 "3f09f9dbc35ff42e",
@@ -27696,7 +27696,7 @@
             {
                 "field": "category",
                 "title": "Category",
-                "width": "",
+                "width": "15%",
                 "align": "left",
                 "formatter": "plaintext",
                 "formatterParams": {
@@ -27706,7 +27706,7 @@
             {
                 "field": "name",
                 "title": "Name",
-                "width": "",
+                "width": "15%",
                 "align": "left",
                 "formatter": "plaintext",
                 "formatterParams": {
@@ -27716,7 +27716,7 @@
             {
                 "field": "ip",
                 "title": "IP",
-                "width": "",
+                "width": "25%",
                 "align": "left",
                 "formatter": "plaintext",
                 "formatterParams": {
@@ -27726,7 +27726,7 @@
             {
                 "field": "port",
                 "title": "Port",
-                "width": "",
+                "width": "5%",
                 "align": "right",
                 "formatter": "plaintext",
                 "formatterParams": {
@@ -27746,7 +27746,7 @@
             {
                 "field": "url",
                 "title": "Link",
-                "width": "",
+                "width": "10%",
                 "align": "left",
                 "formatter": "link",
                 "formatterParams": {
@@ -27757,7 +27757,7 @@
         "outputs": 0,
         "cts": false,
         "x": 770,
-        "y": 300,
+        "y": 1180,
         "wires": []
     },
     {
@@ -27781,7 +27781,7 @@
         "to": "",
         "reg": false,
         "x": 620,
-        "y": 300,
+        "y": 1180,
         "wires": [
             [
                 "b450d7c69061ea5d"
@@ -27811,7 +27811,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 150,
-        "y": 340,
+        "y": 1220,
         "wires": [
             [
                 "5cda0486c5363240"
@@ -27839,7 +27839,7 @@
         "to": "",
         "reg": false,
         "x": 620,
-        "y": 340,
+        "y": 1220,
         "wires": [
             []
         ]
@@ -27863,7 +27863,7 @@
         "payload": "false",
         "payloadType": "bool",
         "x": 120,
-        "y": 1100,
+        "y": 240,
         "wires": [
             [
                 "121f4752e443ef22"
