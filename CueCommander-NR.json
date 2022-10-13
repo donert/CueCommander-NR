@@ -437,12 +437,13 @@
             "2fc659f21a470a82",
             "15432aeee3bed432",
             "75bf0357f695bcf8",
-            "a7f055218d17eab3"
+            "a7f055218d17eab3",
+            "249e358cad583f0a"
         ],
         "x": 24,
         "y": 539,
         "w": 642,
-        "h": 262
+        "h": 302
     },
     {
         "id": "65220297.8c588c",
@@ -1808,27 +1809,10 @@
             "c41e00bc.b979b",
             "2ce45fde.33427"
         ],
-        "x": 594,
-        "y": 1219,
+        "x": 414,
+        "y": 1259,
         "w": 592,
         "h": 202
-    },
-    {
-        "id": "452ed9f6.117cb8",
-        "type": "group",
-        "z": "17ca131.e488ced",
-        "name": "TEST: Display Test Data",
-        "style": {
-            "fill": "#ffefbf",
-            "label": true
-        },
-        "nodes": [
-            "728af67f.d18cb8"
-        ],
-        "x": 394,
-        "y": 1359,
-        "w": 172,
-        "h": 82
     },
     {
         "id": "c87c24f4.363dc8",
@@ -3034,6 +3018,27 @@
         "y": 879,
         "w": 732,
         "h": 322
+    },
+    {
+        "id": "a1ba4d39e374bcff",
+        "type": "group",
+        "z": "17ca131.e488ced",
+        "name": "Test: parsing config",
+        "style": {
+            "fill": "#ffefbf",
+            "label": true
+        },
+        "nodes": [
+            "4b671acb4caee576",
+            "de9c2966fed7f8b9",
+            "7cd5628d9523c09f",
+            "b9ab452dbe351469",
+            "0b5cef79f84392bf"
+        ],
+        "x": 34,
+        "y": 1079,
+        "w": 612,
+        "h": 162
     },
     {
         "id": "b36c9a8b.092df8",
@@ -8658,7 +8663,7 @@
         "drop": false,
         "outputs": 1,
         "x": 480,
-        "y": 360,
+        "y": 340,
         "wires": [
             [
                 "8feb0f13.81a46"
@@ -9429,10 +9434,10 @@
         "active": true,
         "tosidebar": true,
         "console": false,
-        "tostatus": false,
+        "tostatus": true,
         "complete": "true",
         "targetType": "full",
-        "statusVal": "",
+        "statusVal": "payload",
         "statusType": "auto",
         "x": 530,
         "y": 760,
@@ -9471,8 +9476,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 780,
-        "y": 1300,
+        "x": 600,
+        "y": 1340,
         "wires": [
             [
                 "99a5a358.010ff"
@@ -9501,8 +9506,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 690,
-        "y": 1260,
+        "x": 510,
+        "y": 1300,
         "wires": [
             [
                 "76980cdf.867b74"
@@ -9520,8 +9525,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 850,
-        "y": 1340,
+        "x": 670,
+        "y": 1380,
         "wires": [
             [
                 "c41e00bc.b979b",
@@ -9635,8 +9640,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 910,
-        "y": 1380,
+        "x": 730,
+        "y": 1420,
         "wires": []
     },
     {
@@ -9659,37 +9664,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1080,
-        "y": 1340,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "728af67f.d18cb8",
-        "type": "inject",
-        "z": "17ca131.e488ced",
-        "d": true,
-        "g": "452ed9f6.117cb8",
-        "name": "start",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "1",
-        "crontab": "",
-        "once": true,
-        "onceDelay": "3",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 490,
-        "y": 1400,
+        "x": 900,
+        "y": 1380,
         "wires": [
             []
         ]
@@ -10313,6 +10289,7 @@
         "id": "4b671acb4caee576",
         "type": "function",
         "z": "17ca131.e488ced",
+        "g": "a1ba4d39e374bcff",
         "name": "filter test",
         "func": "config = global.get(\"config\") ; \ndevices = config.devices;\nprojs   = devices.filter(x => x.category == 'Projector')\n \ni = msg.payload.instance  \n \nentry = projs[i];\nnode.log(entry.name)\n \nhost = entry.ip;\nport = entry.port;\n\nres = {\n    instance : i,\n    payload  : \"test\",\n    host     : host,\n    port     : port,\n    topic    : msg.payload.topic\n}\nnode.log(  res.host)\n\nreturn res;",
         "outputs": 1,
@@ -10320,7 +10297,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 280,
+        "x": 320,
         "y": 1160,
         "wires": [
             [
@@ -10332,6 +10309,7 @@
         "id": "de9c2966fed7f8b9",
         "type": "inject",
         "z": "17ca131.e488ced",
+        "g": "a1ba4d39e374bcff",
         "name": "1",
         "props": [
             {
@@ -10345,7 +10323,7 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 90,
+        "x": 130,
         "y": 1120,
         "wires": [
             [
@@ -10357,6 +10335,7 @@
         "id": "7cd5628d9523c09f",
         "type": "inject",
         "z": "17ca131.e488ced",
+        "g": "a1ba4d39e374bcff",
         "name": "2",
         "props": [
             {
@@ -10370,7 +10349,7 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 90,
+        "x": 130,
         "y": 1160,
         "wires": [
             [
@@ -10382,6 +10361,7 @@
         "id": "b9ab452dbe351469",
         "type": "inject",
         "z": "17ca131.e488ced",
+        "g": "a1ba4d39e374bcff",
         "name": "3",
         "props": [
             {
@@ -10395,7 +10375,7 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 90,
+        "x": 130,
         "y": 1200,
         "wires": [
             [
@@ -10407,6 +10387,7 @@
         "id": "0b5cef79f84392bf",
         "type": "debug",
         "z": "17ca131.e488ced",
+        "g": "a1ba4d39e374bcff",
         "name": "",
         "active": true,
         "tosidebar": true,
@@ -10416,7 +10397,7 @@
         "targetType": "full",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 510,
+        "x": 550,
         "y": 1160,
         "wires": []
     },
@@ -10515,6 +10496,17 @@
                 "75bf0357f695bcf8"
             ]
         ]
+    },
+    {
+        "id": "249e358cad583f0a",
+        "type": "comment",
+        "z": "17ca131.e488ced",
+        "g": "2a5510d0.88b28",
+        "name": "pjlink errors",
+        "info": "It seems that if the projector with specified host and IP is not reachable, we get an incorrect error which says it is not specified.",
+        "x": 510,
+        "y": 800,
+        "wires": []
     },
     {
         "id": "7bc89364.546b1c",
@@ -28002,7 +27994,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "{\n\"devices\":  \n[\n{ \"category\": \"Projector\",\n  \"name\"    : \"East\",\n  \"ip\"      : \"192.168.0.194\",\n  \"port\"    : \"4352\"\n},\n{ \"category\": \"Projector\",\n  \"name\"    : \"Centre\",\n  \"ip\"      : \"192.168.0.195\",\n  \"port\"    : \"4352\"\n},\n{ \"category\": \"Projector\",\n  \"name\"    : \"West\",\n  \"ip\"      : \"192.168.0.196\",\n  \"port\"    : \"4352\"\n},\n{ \"category\": \"Projector\",\n  \"name\"    : \"Rear\",\n  \"ip\"      : \"192.168.0.xxx\",\n  \"port\"    : \"4352\"\n},\n{ \"category\": \"ProPresenter\",\n  \"name\"    : \"PP7\",\n  \"ip\"      : \"192.168.0.140\",\n  \"port\"    : \"1025\"\n},\n{ \"category\": \"Lights\",\n  \"name\"    : \"Lights\",\n  \"ip\"      : \"192.168.0.197\",\n  \"port\"    : \"8005\"\n},\n{ \"category\": \"Cameras\",\n  \"name\"    : \"Cam 1\",\n  \"ip\"      : \"192.168.0.186\",\n  \"port\"    : \"na\"\n},\n{ \"category\": \"Cameras\",\n  \"name\"    : \"Cam 2\",\n  \"ip\"      : \"192.168.0.187\",\n  \"port\"    : \"na\"\n},\n{ \"category\": \"Cameras\",\n  \"name\"    : \"Cam 3\",\n  \"ip\"      : \"192.168.0.188\",\n  \"port\"    : \"na\"\n}\n]\n}",
+        "template": "{\n\"devices\":  \n[\n{ \"category\": \"Projector\",\n  \"name\"    : \"East\",\n  \"ip\"      : \"192.168.0.194\",\n  \"port\"    : \"4352\",\n  comment   : \"\"\n},\n{ \"category\": \"Projector\",\n  \"name\"    : \"Centre\",\n  \"ip\"      : \"192.168.0.195\",\n  \"port\"    : \"4352\",\n  comment   : \"\"\n},\n{ \"category\": \"Projector\",\n  \"name\"    : \"West\",\n  \"ip\"      : \"192.168.0.196\",\n  \"port\"    : \"4352\",\n  comment   : \"\"\n},\n{ \"category\": \"Projector\",\n  \"name\"    : \"Rear\",\n  \"ip\"      : \"192.168.0.xxx\",\n  \"port\"    : \"4352\",\n  comment   : \"\"\n},\n{ \"category\": \"ProPresenter\",\n  \"name\"    : \"PP7\",\n  \"ip\"      : \"192.168.0.140\",\n  \"port\"    : \"1025\",\n  comment   : \"\"\n},\n{ \"category\": \"Lights\",\n  \"name\"    : \"Lights\",\n  \"ip\"      : \"192.168.0.197\",\n  \"port\"    : \"8005\",\n  comment   : \"\"\n},\n{ \"category\": \"Cameras\",\n  \"name\"    : \"Cam 1\",\n  \"ip\"      : \"192.168.0.186\",\n  \"port\"    : \"na\",\n  comment   : \"\"\n},\n{ \"category\": \"Cameras\",\n  \"name\"    : \"Cam 2\",\n  \"ip\"      : \"192.168.0.187\",\n  \"port\"    : \"na\",\n  comment   : \"\"\n},\n{ \"category\": \"Cameras\",\n  \"name\"    : \"Cam 3\",\n  \"ip\"      : \"192.168.0.188\",\n  \"port\"    : \"na\",\n  comment   : \"\"\n},\n{ \"category\": \"Video Mixer\",\n  \"name\"    : \"ATEM\",\n  \"ip\"      : \"192.168.0.191\",\n  \"port\"    : \"na\",\n  comment   : \"Reference only-hardcoded config\"\n},\n{ \"category\": \"Control\",\n  \"name\"    : \"CueCommmander UI\",\n  \"ip\"      : \"192.168.0.191\",\n  \"port\"    : \"na\",\n  comment   : \"Reference only-hardcoded config\"\n}\n]\n}",
         "output": "json",
         "x": 310,
         "y": 280,
@@ -28056,6 +28048,16 @@
             {
                 "field": "port",
                 "title": "Port",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "comment",
+                "title": "Comment",
                 "width": "",
                 "align": "left",
                 "formatter": "plaintext",
