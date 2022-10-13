@@ -3567,7 +3567,7 @@
         "type": "ui_group",
         "name": "Projector Configuration",
         "tab": "e0b6460f.51cf08",
-        "order": 5,
+        "order": 6,
         "disp": true,
         "width": "20",
         "collapse": true
@@ -3586,7 +3586,7 @@
         "type": "ui_group",
         "name": "Camera Configuration",
         "tab": "e0b6460f.51cf08",
-        "order": 4,
+        "order": 5,
         "disp": true,
         "width": "20",
         "collapse": true
@@ -3778,7 +3778,7 @@
         "type": "ui_group",
         "name": "Device Config",
         "tab": "e0b6460f.51cf08",
-        "order": 6,
+        "order": 4,
         "disp": true,
         "width": 20,
         "collapse": false,
@@ -4009,7 +4009,7 @@
         "className": ""
     },
     {
-        "id": "f73168424d635be1",
+        "id": "dbaf2ec72559ae4f",
         "type": "ui_spacer",
         "z": "805d289f.fd83a8",
         "name": "spacer",
