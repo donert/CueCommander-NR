@@ -698,7 +698,8 @@
         "z": "64cbf871.f282f8",
         "name": "Test an API request",
         "style": {
-            "label": true
+            "label": true,
+            "fill": "#ffefbf"
         },
         "nodes": [
             "de9fea50.fcb8b8",
@@ -3054,7 +3055,7 @@
         "type": "ui_tab",
         "name": "Lights",
         "icon": "fa-lightbulb-o",
-        "order": 4,
+        "order": 3,
         "disabled": false,
         "hidden": false
     },
@@ -3257,7 +3258,7 @@
         "type": "ui_tab",
         "name": "ProPresenter",
         "icon": "fa-eye",
-        "order": 6,
+        "order": 5,
         "disabled": false,
         "hidden": false
     },
@@ -3296,7 +3297,7 @@
         "type": "ui_tab",
         "name": "Video Mixer",
         "icon": "mi-switch_video ",
-        "order": 5,
+        "order": 4,
         "disabled": false,
         "hidden": false
     },
@@ -3400,7 +3401,7 @@
         "type": "ui_tab",
         "name": "Planning Centre",
         "icon": "fa-calendar",
-        "order": 7,
+        "order": 6,
         "disabled": false,
         "hidden": false
     },
@@ -3429,7 +3430,7 @@
         "type": "ui_tab",
         "name": "Video Matrix",
         "icon": "mi-apps",
-        "order": 3,
+        "order": 8,
         "disabled": false,
         "hidden": false
     },
@@ -3585,7 +3586,7 @@
         "type": "ui_tab",
         "name": "Settings",
         "icon": "settings",
-        "order": 8,
+        "order": 7,
         "disabled": false,
         "hidden": false
     },
@@ -17075,11 +17076,12 @@
         "z": "64cbf871.f282f8",
         "g": "1976ad4e.952673",
         "name": "",
-        "func": "var kys = flow.keys()\n\ntxt = \"\"\n \nfor (var k of kys) {\n    v = flow.get(k)\n    txt += k + \":\" + v + \" \"\n}\n\nmsg = { payload : txt }\n\nreturn msg;\n\n//matrix:[object Object]\n//active:[object Object]\n//matrix_ip:127.0.0.1\n//matrix_port:5000\n//active_config:Test",
+        "func": "var kys = flow.keys()\n\ntxt = \"\"\n \nfor (var k of kys) {\n    v = flow.get(k)\n    txt += k + \":\" + v + \" \"\n}\n\nmsg = { payload : txt }\n\nreturn msg;\n ",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
+        "libs": [],
         "x": 280,
         "y": 980,
         "wires": [
@@ -17585,7 +17587,9 @@
         "x": 1085,
         "y": 160,
         "wires": [
-            []
+            [
+                "13ad49572a4d23fc"
+            ]
         ]
     },
     {
@@ -17600,7 +17604,9 @@
         "x": 1105,
         "y": 360,
         "wires": [
-            []
+            [
+                "fb3df472c2d76cb1"
+            ]
         ]
     },
     {
