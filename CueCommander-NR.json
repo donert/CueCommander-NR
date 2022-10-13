@@ -13111,7 +13111,7 @@
         "z": "a3be0cff.690a5",
         "g": "534928771fae2008",
         "name": "set network parms",
-        "func": "config = global.get(\"config\");\nnode.log(\"config\")\nnode.log(String(config))\ndevices = config.devices\nnode.log(\"devices\")\nnode.log(String(devices))\n\npp = devices.filter(x => x.category == \"Propresenter\")\nnode.log(\"pp7\")\nnode.log(String(pp))\n\n//cfg = cfg.find( y => y.device == \"Propresenter\")\n\nnode.status(pp)\nnode.log(pp)\n\nurl = \"http://\" + pp.ip + \":\" + pp.port + \"/v1\" + msg.payload\n\nreturn  {\"payload\"  : msg.payload   ,\n         \"url\"       : url        \n}  ;",
+        "func": "config = global.get(\"config\");\n \ndevices = config.devices\n \npp = devices.filter(x => x.category == \"Propresenter\")\nnode.log(\"pp7\")\nnode.log(pp.ip, pp.port)\n\nnode.status(pp)\nnode.log(pp)\n\nurl = \"http://\" + pp.ip + \":\" + pp.port + \"/v1\" + msg.payload\n\nreturn  {\"payload\"  : msg.payload   ,\n         \"url\"       : url        \n}  ;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
