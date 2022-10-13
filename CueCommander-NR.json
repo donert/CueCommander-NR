@@ -5513,6 +5513,7 @@
         "id": "24e0d613.2207ba",
         "type": "ui_etable",
         "z": "17ca131.e488ced",
+        "d": true,
         "g": "955bfb84.2f11d8",
         "payload": "[{\"title\":\"Num\",\"field\":\"num\",\"width\":\"10%\",\"editor\":false},{\"title\":\"Name\",\"field\":\"name\",\"width\":\"50%\",\"editor\":true},{\"title\":\"IP Address\",\"field\":\"ip\",\"align\":\"left\",\"editor\":\"input\",\"editorParams\":{\"elementAttributes\":{\"maxlength\":\"15\"}}},{\"title\":\"Port\",\"field\":\"port\",\"align\":\"left\",\"editor\":true},{\"title\":\"Delete\",\"field\":\"delete\",\"sorter\":\"boolean\",\"hozAlign\":\"center\",\"formatter\":\"tick\",\"editor\":true}]",
         "payloadType": "json",
