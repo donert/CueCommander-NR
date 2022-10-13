@@ -439,7 +439,7 @@
         ],
         "x": 24,
         "y": 539,
-        "w": 622,
+        "w": 642,
         "h": 262
     },
     {
@@ -9321,12 +9321,10 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 340,
-        "y": 620,
+        "x": 170,
+        "y": 720,
         "wires": [
-            [
-                "19ab985d.b5c048"
-            ]
+            []
         ]
     },
     {
@@ -9343,8 +9341,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 540,
-        "y": 700,
+        "x": 560,
+        "y": 580,
         "wires": []
     },
     {
@@ -9359,10 +9357,12 @@
         "arraySpltType": "len",
         "stream": false,
         "addname": "",
-        "x": 540,
-        "y": 620,
+        "x": 270,
+        "y": 660,
         "wires": [
-            []
+            [
+                "3bfc7fa1.093c9"
+            ]
         ]
     },
     {
@@ -9377,12 +9377,10 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 160,
-        "y": 700,
+        "x": 130,
+        "y": 760,
         "wires": [
-            [
-                "3bfc7fa1.093c9"
-            ]
+            []
         ]
     },
     {
@@ -9393,8 +9391,8 @@
         "ip": "",
         "port": "",
         "name": "pjlink",
-        "x": 340,
-        "y": 700,
+        "x": 390,
+        "y": 660,
         "wires": [
             [
                 "893b4dce.95f96"
@@ -9410,7 +9408,7 @@
         "z": "17ca131.e488ced",
         "g": "2a5510d0.88b28",
         "name": "pjlink Error Output",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -9418,7 +9416,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 500,
+        "x": 530,
         "y": 760,
         "wires": []
     },
@@ -10446,12 +10444,12 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 340,
-        "y": 660,
+        "x": 350,
+        "y": 620,
         "wires": [
             [
-                "3bfc7fa1.093c9",
-                "e880b599.3f8de8"
+                "e880b599.3f8de8",
+                "19ab985d.b5c048"
             ]
         ]
     },
