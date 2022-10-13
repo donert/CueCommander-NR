@@ -1054,12 +1054,12 @@
             "3f09f9dbc35ff42e",
             "fe673b811857024d",
             "63b7930e30201dad",
-            "39eef175973fa5e3"
+            "14fd03eea740c48c"
         ],
         "x": 24,
         "y": 19,
         "w": 902,
-        "h": 362
+        "h": 382
     },
     {
         "id": "1976ad4e.952673",
@@ -28000,9 +28000,9 @@
         "y": 280,
         "wires": [
             [
-                "39eef175973fa5e3",
                 "3f09f9dbc35ff42e",
-                "63b7930e30201dad"
+                "63b7930e30201dad",
+                "14fd03eea740c48c"
             ]
         ]
     },
@@ -28159,31 +28159,6 @@
         ]
     },
     {
-        "id": "39eef175973fa5e3",
-        "type": "switch",
-        "z": "805d289f.fd83a8",
-        "g": "f2aad9f6.0d8f18",
-        "name": "",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "nempty"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 450,
-        "y": 300,
-        "wires": [
-            [
-                "3f09f9dbc35ff42e",
-                "63b7930e30201dad"
-            ]
-        ]
-    },
-    {
         "id": "2485454608506488",
         "type": "inject",
         "z": "805d289f.fd83a8",
@@ -28208,6 +28183,24 @@
                 "121f4752e443ef22"
             ]
         ]
+    },
+    {
+        "id": "14fd03eea740c48c",
+        "type": "debug",
+        "z": "805d289f.fd83a8",
+        "g": "f2aad9f6.0d8f18",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 430,
+        "y": 360,
+        "wires": []
     },
     {
         "id": "fdde3e7a.9360c",
