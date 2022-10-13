@@ -10297,7 +10297,7 @@
         "type": "function",
         "z": "17ca131.e488ced",
         "name": "Set IP parms",
-        "func": "config = global.get(\"config\") ; \ndevices = config.devices;\n\nnode.log(devices)\n \ni = msg.payload.instance  \n \nentry = pp[i];\n \nhost = entry.ip;\nport = entry.port;\n\nmsg = {\n    instance : i,\n    payload  : msg.payload.payload,\n    host     : host,\n    port     : port,\n    topic    : msg.payload.topic\n}\n\nreturn msg;",
+        "func": "config = global.get(\"config\") ; \ndevices = config.devices;\n\nnode.log(devices)\n \ni = msg.payload.instance  \n \nentry = devices[i];\n \nhost = entry.ip;\nport = entry.port;\n\nmsg = {\n    instance : i,\n    payload  : msg.payload.payload,\n    host     : host,\n    port     : port,\n    topic    : msg.payload.topic\n}\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
