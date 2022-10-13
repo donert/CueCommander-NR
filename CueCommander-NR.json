@@ -10404,6 +10404,54 @@
         "wires": []
     },
     {
+        "id": "cc1a5b5621a3188d",
+        "type": "function",
+        "z": "17ca131.e488ced",
+        "name": "iterate over all projectors",
+        "func": "pp = flow.get(\"proj_parms\")\nn = pp.length\n\nout = []\n\nfor (var i = 0; i < n; i++) { \n     msgi = {\n         \"payload\" : msg.payload,\n         \"instance\" : i,\n         \"topic\": msg.topic\n     }\n     out.push( msgi )\n}\n\nmsg = { \"payload\" : out }\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 270,
+        "y": 1260,
+        "wires": [
+            [
+                "0b5cef79f84392bf"
+            ]
+        ]
+    },
+    {
+        "id": "15432aeee3bed432",
+        "type": "inject",
+        "z": "17ca131.e488ced",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 80,
+        "y": 1260,
+        "wires": [
+            [
+                "cc1a5b5621a3188d"
+            ]
+        ]
+    },
+    {
         "id": "7bc89364.546b1c",
         "type": "udp out",
         "z": "7014b916.6d1208",
