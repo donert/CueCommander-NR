@@ -10297,7 +10297,7 @@
         "type": "function",
         "z": "17ca131.e488ced",
         "name": "filter test",
-        "func": "config = global.get(\"config\") ; \ndevices = config.devices;\nprojs   = devices.filter(x => x.category == 'Projector')\n \ni = msg.payload.instance  \n \nentry = projs[i];\nnode.log(entry.name)\n \nhost = entry.ip;\nport = entry.port;\n\nres = {\n    instance : i,\n    payload  : msg.payload.payload,\n    host     : host,\n    port     : port,\n    topic    : msg.payload.topic\n}\nnode.log(  res.host)\n\nreturn res;",
+        "func": "config = global.get(\"config\") ; \ndevices = config.devices;\nprojs   = devices.filter(x => x.category == 'Projector')\n \ni = msg.payload.instance  \n \nentry = projs[i];\nnode.log(entry.name)\n \nhost = entry.ip;\nport = entry.port;\n\nres = {\n    instance : i,\n    payload  : \"test\",\n    host     : host,\n    port     : port,\n    topic    : msg.payload.topic\n}\nnode.log(  res.host)\n\nreturn res;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
