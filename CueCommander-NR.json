@@ -436,7 +436,8 @@
             "c208d442.f81c88",
             "2fc659f21a470a82",
             "15432aeee3bed432",
-            "75bf0357f695bcf8"
+            "75bf0357f695bcf8",
+            "a7f055218d17eab3"
         ],
         "x": 24,
         "y": 539,
@@ -9374,12 +9375,11 @@
         "arraySpltType": "len",
         "stream": false,
         "addname": "",
-        "x": 270,
-        "y": 620,
+        "x": 210,
+        "y": 640,
         "wires": [
             [
-                "3bfc7fa1.093c9",
-                "75bf0357f695bcf8"
+                "a7f055218d17eab3"
             ]
         ]
     },
@@ -9409,8 +9409,8 @@
         "ip": "",
         "port": "",
         "name": "pjlink",
-        "x": 390,
-        "y": 660,
+        "x": 450,
+        "y": 700,
         "wires": [
             [
                 "893b4dce.95f96"
@@ -10488,6 +10488,33 @@
         "x": 560,
         "y": 620,
         "wires": []
+    },
+    {
+        "id": "a7f055218d17eab3",
+        "type": "delay",
+        "z": "17ca131.e488ced",
+        "g": "2a5510d0.88b28",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "5",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 380,
+        "y": 660,
+        "wires": [
+            [
+                "3bfc7fa1.093c9",
+                "75bf0357f695bcf8"
+            ]
+        ]
     },
     {
         "id": "7bc89364.546b1c",
