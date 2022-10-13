@@ -439,7 +439,7 @@
         ],
         "x": 24,
         "y": 539,
-        "w": 612,
+        "w": 622,
         "h": 262
     },
     {
@@ -3009,7 +3009,8 @@
             "df695408af6a4f4a",
             "4c8c5f8d833da476",
             "e25264e8a037be92",
-            "340c26071ab63bdf"
+            "340c26071ab63bdf",
+            "2485454608506488"
         ],
         "x": 14,
         "y": 879,
@@ -9334,7 +9335,7 @@
         "z": "17ca131.e488ced",
         "g": "2a5510d0.88b28",
         "name": "func out",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -9342,8 +9343,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 190,
-        "y": 760,
+        "x": 540,
+        "y": 700,
         "wires": []
     },
     {
@@ -9380,7 +9381,6 @@
         "y": 700,
         "wires": [
             [
-                "e880b599.3f8de8",
                 "3bfc7fa1.093c9"
             ]
         ]
@@ -9392,7 +9392,7 @@
         "g": "2a5510d0.88b28",
         "ip": "",
         "port": "",
-        "name": "",
+        "name": "pjlink",
         "x": 340,
         "y": 700,
         "wires": [
@@ -10450,7 +10450,8 @@
         "y": 660,
         "wires": [
             [
-                "3bfc7fa1.093c9"
+                "3bfc7fa1.093c9",
+                "e880b599.3f8de8"
             ]
         ]
     },
@@ -28114,6 +28115,32 @@
             [
                 "3f09f9dbc35ff42e",
                 "63b7930e30201dad"
+            ]
+        ]
+    },
+    {
+        "id": "2485454608506488",
+        "type": "inject",
+        "z": "805d289f.fd83a8",
+        "g": "1f02f351d734f2f4",
+        "name": "Test false",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 120,
+        "y": 1100,
+        "wires": [
+            [
+                "121f4752e443ef22"
             ]
         ]
     },
