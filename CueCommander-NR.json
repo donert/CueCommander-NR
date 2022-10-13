@@ -1735,12 +1735,13 @@
             "874fdd32.de193",
             "c4631f3b.ef67e",
             "3522baec.e78fc6",
-            "83a809a536ed22e5"
+            "83a809a536ed22e5",
+            "68fe5d5acefe66ac"
         ],
         "x": 774,
         "y": 659,
         "w": 555,
-        "h": 122
+        "h": 142
     },
     {
         "id": "bb661aa6.08f608",
@@ -3410,9 +3411,9 @@
         "type": "ui_group",
         "name": "Service Types",
         "tab": "ab63beb4.a6246",
-        "order": 2,
+        "order": 1,
         "disp": true,
-        "width": 8,
+        "width": 10,
         "collapse": false
     },
     {
@@ -3420,7 +3421,7 @@
         "type": "ui_group",
         "name": "Plan Details",
         "tab": "ab63beb4.a6246",
-        "order": 4,
+        "order": 3,
         "disp": true,
         "width": 10,
         "collapse": false
@@ -3488,9 +3489,9 @@
         "type": "ui_group",
         "name": "Click to Refresh",
         "tab": "ab63beb4.a6246",
-        "order": 1,
+        "order": 5,
         "disp": true,
-        "width": 4,
+        "width": 2,
         "collapse": false
     },
     {
@@ -3498,9 +3499,9 @@
         "type": "ui_group",
         "name": "List of Plans",
         "tab": "ab63beb4.a6246",
-        "order": 3,
+        "order": 2,
         "disp": true,
-        "width": 6,
+        "width": 10,
         "collapse": false
     },
     {
@@ -3508,9 +3509,9 @@
         "type": "ui_group",
         "name": "Item Details",
         "tab": "ab63beb4.a6246",
-        "order": 5,
+        "order": 4,
         "disp": true,
-        "width": 8,
+        "width": 10,
         "collapse": false
     },
     {
@@ -4025,6 +4026,106 @@
         "group": "081499cdb0e45d15",
         "order": 3,
         "width": 5,
+        "height": 1
+    },
+    {
+        "id": "a3e7eae7327611c8",
+        "type": "ui_spacer",
+        "z": "64cbf871.f282f8",
+        "name": "spacer",
+        "group": "2108c06a.f432e",
+        "order": 3,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "cc0c19ee5b0b1719",
+        "type": "ui_spacer",
+        "z": "64cbf871.f282f8",
+        "name": "spacer",
+        "group": "2108c06a.f432e",
+        "order": 4,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "dfaf0d7766e2acbd",
+        "type": "ui_spacer",
+        "z": "64cbf871.f282f8",
+        "name": "spacer",
+        "group": "2108c06a.f432e",
+        "order": 5,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "8a7a67271fdcfdc1",
+        "type": "ui_spacer",
+        "z": "64cbf871.f282f8",
+        "name": "spacer",
+        "group": "2108c06a.f432e",
+        "order": 6,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "d3343fb7a9060772",
+        "type": "ui_spacer",
+        "z": "64cbf871.f282f8",
+        "name": "spacer",
+        "group": "2108c06a.f432e",
+        "order": 7,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "dceacabd3b3cc29c",
+        "type": "ui_spacer",
+        "z": "64cbf871.f282f8",
+        "name": "spacer",
+        "group": "2108c06a.f432e",
+        "order": 8,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "8ed767e12c6527cc",
+        "type": "ui_spacer",
+        "z": "64cbf871.f282f8",
+        "name": "spacer",
+        "group": "2108c06a.f432e",
+        "order": 9,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "44cf0c3e0de6afe2",
+        "type": "ui_spacer",
+        "z": "64cbf871.f282f8",
+        "name": "spacer",
+        "group": "2108c06a.f432e",
+        "order": 10,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "9072d0fa2ba27ec0",
+        "type": "ui_spacer",
+        "z": "64cbf871.f282f8",
+        "name": "spacer",
+        "group": "2108c06a.f432e",
+        "order": 11,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "98a5a35c1e6d7fd9",
+        "type": "ui_spacer",
+        "z": "64cbf871.f282f8",
+        "name": "spacer",
+        "group": "2108c06a.f432e",
+        "order": 12,
+        "width": 2,
         "height": 1
     },
     {
@@ -16999,10 +17100,10 @@
         "name": "",
         "group": "98cf5f2c.9a9be",
         "order": 1,
-        "width": 4,
-        "height": 5,
+        "width": 0,
+        "height": 0,
         "passthru": false,
-        "label": "Refresh",
+        "label": "Clear",
         "tooltip": "Reload data from PCO",
         "color": "",
         "bgcolor": "",
@@ -17012,8 +17113,8 @@
         "payloadType": "str",
         "topic": "",
         "topicType": "str",
-        "x": 120,
-        "y": 260,
+        "x": 110,
+        "y": 220,
         "wires": [
             [
                 "895b6dd5.49a33",
@@ -17635,7 +17736,8 @@
         "links": [
             "19e3f20.91ff20e",
             "91e9792.fd66d88",
-            "c3d85252.b8012"
+            "c3d85252.b8012",
+            "68fe5d5acefe66ac"
         ],
         "x": 595,
         "y": 220,
@@ -18216,7 +18318,7 @@
         "group": "9a3fea2f.45bc08",
         "name": "List of Service Types",
         "order": 1,
-        "width": 8,
+        "width": 10,
         "height": 5,
         "columns": [
             {
@@ -18260,7 +18362,7 @@
         "group": "4f286988.766258",
         "name": "List of Plans",
         "order": 2,
-        "width": 6,
+        "width": 10,
         "height": 4,
         "columns": [
             {
@@ -18520,6 +18622,23 @@
         "wires": [
             [
                 "84226cb3ff81da33"
+            ]
+        ]
+    },
+    {
+        "id": "68fe5d5acefe66ac",
+        "type": "link in",
+        "z": "64cbf871.f282f8",
+        "g": "dea49e79.b5f4c",
+        "name": "",
+        "links": [
+            "2fca2b77.3d1134"
+        ],
+        "x": 1175,
+        "y": 760,
+        "wires": [
+            [
+                "3522baec.e78fc6"
             ]
         ]
     },
