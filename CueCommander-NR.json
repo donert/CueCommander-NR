@@ -1063,8 +1063,8 @@
             "fe673b811857024d",
             "63b7930e30201dad",
             "a97acf0ea266f2b3",
-            "9293da5dccec38fe",
-            "83c8c133bc76bf0d"
+            "83c8c133bc76bf0d",
+            "b207c9ada946e510"
         ],
         "x": 24,
         "y": 839,
@@ -20437,23 +20437,7 @@
         "y": 1200,
         "wires": [
             [
-                "9293da5dccec38fe"
-            ]
-        ]
-    },
-    {
-        "id": "9293da5dccec38fe",
-        "type": "link call",
-        "z": "805d289f.fd83a8",
-        "g": "f2aad9f6.0d8f18",
-        "name": "",
-        "links": [],
-        "timeout": "30",
-        "x": 490,
-        "y": 1220,
-        "wires": [
-            [
-                "83c8c133bc76bf0d"
+                "b207c9ada946e510"
             ]
         ]
     },
@@ -20473,6 +20457,34 @@
         "x": 670,
         "y": 1220,
         "wires": []
+    },
+    {
+        "id": "b207c9ada946e510",
+        "type": "change",
+        "z": "805d289f.fd83a8",
+        "g": "f2aad9f6.0d8f18",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 500,
+        "y": 1220,
+        "wires": [
+            [
+                "83c8c133bc76bf0d"
+            ]
+        ]
     },
     {
         "id": "8b29f35d23aaf038",
