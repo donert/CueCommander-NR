@@ -1063,13 +1063,12 @@
             "fe673b811857024d",
             "63b7930e30201dad",
             "a97acf0ea266f2b3",
-            "83c8c133bc76bf0d",
             "b207c9ada946e510"
         ],
         "x": 24,
         "y": 839,
         "w": 902,
-        "h": 422
+        "h": 402
     },
     {
         "id": "1976ad4e.952673",
@@ -20166,10 +20165,7 @@
         "x": 330,
         "y": 1160,
         "wires": [
-            [
-                "3f09f9dbc35ff42e",
-                "63b7930e30201dad"
-            ]
+            []
         ]
     },
     {
@@ -20246,7 +20242,7 @@
         ],
         "outputs": 0,
         "cts": false,
-        "x": 770,
+        "x": 850,
         "y": 1120,
         "wires": []
     },
@@ -20270,7 +20266,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 620,
+        "x": 700,
         "y": 1120,
         "wires": [
             [
@@ -20328,7 +20324,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 620,
+        "x": 700,
         "y": 1160,
         "wires": [
             []
@@ -20442,28 +20438,11 @@
         ]
     },
     {
-        "id": "83c8c133bc76bf0d",
-        "type": "debug",
-        "z": "805d289f.fd83a8",
-        "g": "f2aad9f6.0d8f18",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 670,
-        "y": 1220,
-        "wires": []
-    },
-    {
         "id": "b207c9ada946e510",
         "type": "change",
         "z": "805d289f.fd83a8",
         "g": "f2aad9f6.0d8f18",
-        "name": "",
+        "name": "=",
         "rules": [
             {
                 "t": "set",
@@ -20478,11 +20457,12 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 500,
-        "y": 1220,
+        "x": 530,
+        "y": 1140,
         "wires": [
             [
-                "83c8c133bc76bf0d"
+                "63b7930e30201dad",
+                "3f09f9dbc35ff42e"
             ]
         ]
     },
