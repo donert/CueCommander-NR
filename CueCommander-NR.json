@@ -13115,7 +13115,7 @@
         "z": "a3be0cff.690a5",
         "g": "534928771fae2008",
         "name": "set network parms",
-        "func": "config = global.get(\"config\");\n \ndevices = config.devices\n \npp = devices.filter(x => x.category == \"ProPresenter\")[0]\nnode.log(\"pp7\")\nmsg = pp.ip + ':' + pp.port\nnode.log(msg)\n\nnode.status({fill:\"red\",shape:\"dot\",text:msg });\nnode.log(msg.payload)\n\nurl = \"http://\" + pp.ip + \":\" + pp.port + \"/v1/\" + msg.payload\n\nreturn  {\"payload\"  : msg.payload   ,\n         \"url\"       : url        \n}  ;",
+        "func": "config = global.get(\"config\");\n \ndevices = config.devices\n \npp = devices.filter(x => x.category == \"ProPresenter\")[0]\nnode.log(\"pp7\")\nmsg = pp.ip + ':' + pp.port\nnode.log(msg)\n\nnode.status({fill:\"red\", shape:\"dot\", text:msg });\nnode.log(\"payload:\" + msg.payload)\n\nurl = \"http://\" + pp.ip + \":\" + pp.port + \"/v1/\" + msg.payload\n\nreturn  {\"payload\" : msg.payload   ,\n         \"url\"     : url        \n}  ;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
