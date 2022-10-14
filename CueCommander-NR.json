@@ -3050,8 +3050,8 @@
             "d23699ff5823c741",
             "2ca934df9ddfe135"
         ],
-        "x": 14,
-        "y": 1719,
+        "x": 594,
+        "y": 419,
         "w": 482,
         "h": 302
     },
@@ -12952,8 +12952,8 @@
         "topic": "",
         "payload": "/clear/layer/media",
         "payloadType": "str",
-        "x": 130,
-        "y": 1760,
+        "x": 710,
+        "y": 460,
         "wires": [
             [
                 "d23699ff5823c741"
@@ -12978,8 +12978,8 @@
         "topic": "",
         "payload": "/trigger/next",
         "payloadType": "str",
-        "x": 110,
-        "y": 1920,
+        "x": 690,
+        "y": 620,
         "wires": [
             [
                 "d23699ff5823c741"
@@ -13004,8 +13004,8 @@
         "topic": "",
         "payload": "/clear/layer/slide",
         "payloadType": "str",
-        "x": 120,
-        "y": 1800,
+        "x": 700,
+        "y": 500,
         "wires": [
             [
                 "d23699ff5823c741"
@@ -13030,8 +13030,8 @@
         "topic": "",
         "payload": "/trigger/previous",
         "payloadType": "str",
-        "x": 120,
-        "y": 1880,
+        "x": 700,
+        "y": 580,
         "wires": [
             [
                 "d23699ff5823c741"
@@ -13056,8 +13056,8 @@
         "topic": "",
         "payload": "/clear/group/0/trigger",
         "payloadType": "str",
-        "x": 110,
-        "y": 1840,
+        "x": 690,
+        "y": 540,
         "wires": [
             [
                 "d23699ff5823c741"
@@ -13075,8 +13075,8 @@
             "03e861f483ba32de",
             "26dfc34fabc71728"
         ],
-        "x": 455,
-        "y": 1840,
+        "x": 1035,
+        "y": 540,
         "wires": []
     },
     {
@@ -13097,8 +13097,8 @@
         "topic": "",
         "payload": "/props",
         "payloadType": "str",
-        "x": 110,
-        "y": 1980,
+        "x": 690,
+        "y": 680,
         "wires": [
             [
                 "d23699ff5823c741"
@@ -13111,7 +13111,7 @@
         "z": "a3be0cff.690a5",
         "g": "534928771fae2008",
         "name": "set network parms",
-        "func": "config = global.get(\"config\");\n \ndevices = config.devices\n \npp = devices.filter(x => x.category == \"ProPresenter\")\nnode.log(\"pp7\")\nnode.log(pp.ip, pp.port)\n\nnode.status({fill:\"red\",shape:\"dot\",text:pp.name });\nnode.log(pp)\n\nurl = \"http://\" + pp.ip + \":\" + pp.port + \"/v1\" + msg.payload\n\nreturn  {\"payload\"  : msg.payload   ,\n         \"url\"       : url        \n}  ;",
+        "func": "config = global.get(\"config\");\n \ndevices = config.devices\n \npp = devices.filter(x => x.category == \"ProPresenter\")\nnode.log(\"pp7\")\nnode.log(pp.ip, pp.port)\n\nnode.status({fill:\"red\",shape:\"dot\",text:\"pp.name\" });\nnode.log(pp)\n\nurl = \"http://\" + pp.ip + \":\" + pp.port + \"/v1\" + msg.payload\n\nreturn  {\"payload\"  : msg.payload   ,\n         \"url\"       : url        \n}  ;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
