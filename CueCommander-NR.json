@@ -11634,10 +11634,12 @@
         "tooltip": "",
         "color": "",
         "bgcolor": "red",
+        "className": "",
         "icon": "fa-step-backward",
-        "payload": "{\"action\":\"presentationTriggerPrevious\"}",
+        "payload": "/trigger/next",
         "payloadType": "str",
         "topic": "",
+        "topicType": "str",
         "x": 100,
         "y": 580,
         "wires": [
@@ -11781,7 +11783,6 @@
             "212c8a23.89a926",
             "2f95f0b3.8eed8",
             "349710b1.7d373",
-            "ab8c3479.57b8c8",
             "eb7e9bd5.ba3358",
             "25f30529.58cd3a"
         ],
@@ -11800,7 +11801,7 @@
         "g": "c54cb139.4f73d",
         "name": "",
         "links": [
-            "50760767.509eb8"
+            "26dfc34fabc71728"
         ],
         "x": 275,
         "y": 560,
@@ -13178,7 +13179,8 @@
         "g": "534928771fae2008",
         "name": "PP7 Communications",
         "links": [
-            "d23699ff5823c741"
+            "d23699ff5823c741",
+            "ab8c3479.57b8c8"
         ],
         "x": 75,
         "y": 60,
