@@ -1061,12 +1061,15 @@
             "b450d7c69061ea5d",
             "3f09f9dbc35ff42e",
             "fe673b811857024d",
-            "63b7930e30201dad"
+            "63b7930e30201dad",
+            "a97acf0ea266f2b3",
+            "9293da5dccec38fe",
+            "83c8c133bc76bf0d"
         ],
         "x": 24,
         "y": 839,
         "w": 902,
-        "h": 362
+        "h": 422
     },
     {
         "id": "1976ad4e.952673",
@@ -3080,7 +3083,7 @@
         ],
         "x": 34,
         "y": 19,
-        "w": 632,
+        "w": 752,
         "h": 382
     },
     {
@@ -13141,7 +13144,7 @@
         "authType": "",
         "senderr": false,
         "x": 170,
-        "y": 200,
+        "y": 220,
         "wires": [
             [
                 "bccd61396bc62dc3"
@@ -13206,7 +13209,7 @@
         "repair": false,
         "outputs": 2,
         "x": 170,
-        "y": 240,
+        "y": 260,
         "wires": [
             [
                 "aa5a261da044d485"
@@ -13374,7 +13377,7 @@
         "repair": false,
         "outputs": 2,
         "x": 280,
-        "y": 140,
+        "y": 160,
         "wires": [
             [
                 "f236dad6ce3afb78"
@@ -13428,8 +13431,8 @@
         "className": "",
         "topic": "",
         "name": "",
-        "x": 550,
-        "y": 160,
+        "x": 670,
+        "y": 120,
         "wires": []
     },
     {
@@ -20160,7 +20163,7 @@
         "syntax": "mustache",
         "template": "{\n\"devices\":  \n[\n{ \"category\": \"Projector\",\n  \"name\"    : \"East\",\n  \"ip\"      : \"192.168.0.194\",\n  \"port\"    : \"4352\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Projector\",\n  \"name\"    : \"Centre\",\n  \"ip\"      : \"192.168.0.195\",\n  \"port\"    : \"4352\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Projector\",\n  \"name\"    : \"Westx\",\n  \"ip\"      : \"192.168.0.196\",\n  \"port\"    : \"4352\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Projector\",\n  \"name\"    : \"Rear\",\n  \"ip\"      : \"192.168.0.xxx\",\n  \"port\"    : \"4352\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"ProPresenter\",\n  \"name\"    : \"PP7\",\n  \"ip\"      : \"192.168.0.140\",\n  \"port\"    : \"1025\",\n  \"url\"     : \"http://192.168.140.1:1025/v1/control/\"\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Lights\",\n  \"name\"    : \"Lights\",\n  \"ip\"      : \"192.168.0.197\",\n  \"port\"    : \"8005\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Cameras\",\n  \"name\"    : \"Cam 1\",\n  \"ip\"      : \"192.168.0.186\",\n  \"port\"    : \"na\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Cameras\",\n  \"name\"    : \"Cam 2\",\n  \"ip\"      : \"192.168.0.187\",\n  \"port\"    : \"na\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Cameras\",\n  \"name\"    : \"Cam 3\",\n  \"ip\"      : \"192.168.0.188\",\n  \"port\"    : \"na\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Video Mixer\",\n  \"name\"    : \"ATEM\",\n  \"ip\"      : \"192.168.0.191\",\n  \"port\"    : \"na\",\n  \"comment\"   : \"Reference only-hardcoded config\"\n},\n{ \"category\": \"Control\",\n  \"name\"    : \"CueCommmander UI\",\n  \"ip\"      : \"192.168.0.145\",\n  \"port\"    : \"1880\",\n  \"url\"     : \"http://192.168.0.145:1880/ui\",\n  \"comment\"   : \"Reference only. Hardcoded config\"\n} ,\n{ \"category\": \"Control\",\n  \"name\"    : \"OSC to VISCAip\",\n  \"ip\"      : \"127.0.0.1\",\n  \"port\"    : \"54000\",\n  \"url\"     : \"\",\n  \"comment\"   : \"Reference only. Hardcoded config\"\n}\n]\n}",
         "output": "json",
-        "x": 350,
+        "x": 330,
         "y": 1160,
         "wires": [
             [
@@ -20301,7 +20304,7 @@
         "y": 1160,
         "wires": [
             [
-                "5cda0486c5363240"
+                "a97acf0ea266f2b3"
             ]
         ]
     },
@@ -20417,6 +20420,59 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "a97acf0ea266f2b3",
+        "type": "template",
+        "z": "805d289f.fd83a8",
+        "g": "f2aad9f6.0d8f18",
+        "name": "Test Config",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{\n\"devices\":  \n[\n{ \"category\": \"Projector\",\n  \"name\"    : \"East\",\n  \"ip\"      : \"192.168.0.194\",\n  \"port\"    : \"4352\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Projector\",\n  \"name\"    : \"Centre\",\n  \"ip\"      : \"192.168.0.195\",\n  \"port\"    : \"4352\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Projector\",\n  \"name\"    : \"Westx\",\n  \"ip\"      : \"192.168.0.196\",\n  \"port\"    : \"4352\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Projector\",\n  \"name\"    : \"Rear\",\n  \"ip\"      : \"192.168.0.xxx\",\n  \"port\"    : \"4352\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"ProPresenter\",\n  \"name\"    : \"PP7\",\n  \"ip\"      : \"127.0.0.1\",\n  \"port\"    : \"1025\",\n  \"url\"     : \"http://127.0.0.1:1025/v1/control/\"\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Lights\",\n  \"name\"    : \"Lights\",\n  \"ip\"      : \"192.168.0.197\",\n  \"port\"    : \"8005\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Cameras\",\n  \"name\"    : \"Cam 1\",\n  \"ip\"      : \"192.168.0.186\",\n  \"port\"    : \"na\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Cameras\",\n  \"name\"    : \"Cam 2\",\n  \"ip\"      : \"192.168.0.187\",\n  \"port\"    : \"na\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Cameras\",\n  \"name\"    : \"Cam 3\",\n  \"ip\"      : \"192.168.0.188\",\n  \"port\"    : \"na\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Video Mixer\",\n  \"name\"    : \"ATEM\",\n  \"ip\"      : \"192.168.0.191\",\n  \"port\"    : \"na\",\n  \"comment\"   : \"Reference only-hardcoded config\"\n},\n{ \"category\": \"Control\",\n  \"name\"    : \"CueCommmander UI\",\n  \"ip\"      : \"127.0.0.1\",\n  \"port\"    : \"1880\",\n  \"url\"     : \"http://192.168.0.145:1880/ui\",\n  \"comment\"   : \"Reference only. Hardcoded config\"\n} ,\n{ \"category\": \"Control\",\n  \"name\"    : \"OSC to VISCAip\",\n  \"ip\"      : \"127.0.0.1\",\n  \"port\"    : \"54000\",\n  \"url\"     : \"\",\n  \"comment\"   : \"Reference only. Hardcoded config\"\n}\n]\n}",
+        "output": "json",
+        "x": 330,
+        "y": 1200,
+        "wires": [
+            [
+                "9293da5dccec38fe"
+            ]
+        ]
+    },
+    {
+        "id": "9293da5dccec38fe",
+        "type": "link call",
+        "z": "805d289f.fd83a8",
+        "g": "f2aad9f6.0d8f18",
+        "name": "",
+        "links": [],
+        "timeout": "30",
+        "x": 490,
+        "y": 1220,
+        "wires": [
+            [
+                "83c8c133bc76bf0d"
+            ]
+        ]
+    },
+    {
+        "id": "83c8c133bc76bf0d",
+        "type": "debug",
+        "z": "805d289f.fd83a8",
+        "g": "f2aad9f6.0d8f18",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 670,
+        "y": 1220,
+        "wires": []
     },
     {
         "id": "8b29f35d23aaf038",
