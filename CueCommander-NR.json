@@ -3079,7 +3079,8 @@
             "88d34557a466de43",
             "f236dad6ce3afb78",
             "b6f613457e106ecd",
-            "2cc8d6c8aa7e56ad"
+            "2cc8d6c8aa7e56ad",
+            "e773c92603f8a1c2"
         ],
         "x": 34,
         "y": 19,
@@ -13385,7 +13386,7 @@
             ],
             [
                 "b0d85b58d7f56e63",
-                "2cc8d6c8aa7e56ad"
+                "e773c92603f8a1c2"
             ]
         ]
     },
@@ -13442,7 +13443,7 @@
         "type": "debug",
         "z": "a3be0cff.690a5",
         "g": "534928771fae2008",
-        "name": "",
+        "name": "pre enable check",
         "active": true,
         "tosidebar": true,
         "console": false,
@@ -13451,8 +13452,26 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 410,
+        "x": 450,
         "y": 60,
+        "wires": []
+    },
+    {
+        "id": "e773c92603f8a1c2",
+        "type": "debug",
+        "z": "a3be0cff.690a5",
+        "g": "534928771fae2008",
+        "name": "to http",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 570,
+        "y": 160,
         "wires": []
     },
     {
