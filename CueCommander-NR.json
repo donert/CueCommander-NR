@@ -13469,7 +13469,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "/v1/playlist/active",
+                "to": "/playlist/active",
                 "tot": "str"
             }
         ],
@@ -13497,7 +13497,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "/v1/presentation/active",
+                "to": "/presentation/active",
                 "tot": "str"
             }
         ],
@@ -13525,7 +13525,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "/v1/status/slide",
+                "to": "/status/slide",
                 "tot": "str"
             }
         ],
