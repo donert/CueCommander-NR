@@ -4124,6 +4124,25 @@
         "height": 1
     },
     {
+        "id": "74d3bc6d.dd56e4",
+        "type": "ui_group",
+        "name": "Table",
+        "tab": "6fc9e7af.0b5ce8",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "6fc9e7af.0b5ce8",
+        "type": "ui_tab",
+        "name": "Tabletest",
+        "icon": "dashboard",
+        "order": 16,
+        "disabled": false,
+        "hidden": false
+    },
+    {
         "id": "c6213b74.2cce48",
         "type": "function",
         "z": "a3ba969f.c5f3b8",
@@ -13738,6 +13757,73 @@
         "statusType": "auto",
         "x": 1080,
         "y": 620,
+        "wires": []
+    },
+    {
+        "id": "eaf979e3.db65e8",
+        "type": "function",
+        "z": "a3be0cff.690a5",
+        "name": "ArrayBuilder",
+        "func": "var arr = [\n    {\"First Name\": \"Paul\", \"Last Name\": \"Doe\", \"Age\": 24},\n    {\"First Name\": \"Greg\", \"Last Name\": \"Jones\", \"Age\": 31},\n    {\"First Name\": \"Able\", \"Last Name\": \"Smith\", \"Age\": 29}\n];\nmsg.payload = arr;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 370,
+        "y": 2520,
+        "wires": [
+            [
+                "4202828c.2e162c",
+                "1f129007.047d5"
+            ]
+        ]
+    },
+    {
+        "id": "4202828c.2e162c",
+        "type": "ui_table",
+        "z": "a3be0cff.690a5",
+        "group": "74d3bc6d.dd56e4",
+        "name": "",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "columns": [],
+        "outputs": 0,
+        "cts": false,
+        "x": 550,
+        "y": 2520,
+        "wires": []
+    },
+    {
+        "id": "3210ef3b.718cb",
+        "type": "inject",
+        "z": "a3be0cff.690a5",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 2520,
+        "wires": [
+            [
+                "eaf979e3.db65e8"
+            ]
+        ]
+    },
+    {
+        "id": "1f129007.047d5",
+        "type": "debug",
+        "z": "a3be0cff.690a5",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 520,
+        "y": 2580,
         "wires": []
     },
     {
