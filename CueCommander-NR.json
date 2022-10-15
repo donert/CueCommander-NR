@@ -595,16 +595,17 @@
         },
         "nodes": [
             "349710b1.7d373",
-            "a22e6b3a.248af8",
             "ca6ec6d6.c89908",
             "41739e60.00a7c",
-            "7ee522ab.4bfb6c",
             "bdbcf3f6.145bb",
-            "d2f4f486.a18a58"
+            "d2f4f486.a18a58",
+            "6e4c9958913056f7",
+            "7be24fe935a8dec7",
+            "b6bb55b7525d4e2d"
         ],
         "x": 14,
         "y": 839,
-        "w": 762,
+        "w": 842,
         "h": 162
     },
     {
@@ -11814,6 +11815,7 @@
         "id": "3bb16c88.749214",
         "type": "ui_button",
         "z": "a3be0cff.690a5",
+        "d": true,
         "g": "85bfeabb.c569f8",
         "name": "",
         "group": "b97ff6b2.560288",
@@ -11872,6 +11874,7 @@
         "id": "19f9ac10.374204",
         "type": "ui_button",
         "z": "a3be0cff.690a5",
+        "d": true,
         "g": "85bfeabb.c569f8",
         "name": "",
         "group": "b97ff6b2.560288",
@@ -12078,7 +12081,7 @@
         "links": [
             "26dfc34fabc71728"
         ],
-        "x": 735,
+        "x": 815,
         "y": 940,
         "wires": []
     },
@@ -12115,26 +12118,6 @@
             [
                 "55bd85c6.6ed45c",
                 "ee6b47ae.9b4c58"
-            ]
-        ]
-    },
-    {
-        "id": "a22e6b3a.248af8",
-        "type": "template",
-        "z": "a3be0cff.690a5",
-        "g": "7dfc3cbb.7e95c4",
-        "name": "presentationSlideIndex",
-        "field": "payload",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "{\n    \"action\": \"presentationSlideIndex\"\n}",
-        "output": "str",
-        "x": 580,
-        "y": 920,
-        "wires": [
-            [
-                "349710b1.7d373"
             ]
         ]
     },
@@ -12254,26 +12237,6 @@
         ]
     },
     {
-        "id": "7ee522ab.4bfb6c",
-        "type": "template",
-        "z": "a3be0cff.690a5",
-        "g": "7dfc3cbb.7e95c4",
-        "name": "presentationCurrent",
-        "field": "payload",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "{\n    \"action\": \"presentationCurrent\",\n    \"presentationSlideQuality\": 10\n}",
-        "output": "str",
-        "x": 580,
-        "y": 960,
-        "wires": [
-            [
-                "349710b1.7d373"
-            ]
-        ]
-    },
-    {
         "id": "bdbcf3f6.145bb",
         "type": "link in",
         "z": "a3be0cff.690a5",
@@ -12306,13 +12269,15 @@
         "randomLast": "5",
         "randomUnits": "seconds",
         "drop": false,
+        "allowrate": false,
         "outputs": 1,
         "x": 360,
         "y": 920,
         "wires": [
             [
-                "a22e6b3a.248af8",
-                "7ee522ab.4bfb6c"
+                "6e4c9958913056f7",
+                "7be24fe935a8dec7",
+                "b6bb55b7525d4e2d"
             ]
         ],
         "info": "Just a dummy node to concentrate inputs and fan outs. No delay needed."
@@ -13492,6 +13457,90 @@
         "x": 190,
         "y": 60,
         "wires": []
+    },
+    {
+        "id": "6e4c9958913056f7",
+        "type": "change",
+        "z": "a3be0cff.690a5",
+        "g": "7dfc3cbb.7e95c4",
+        "name": "playlist/active",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "/v1/playlist/active",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 560,
+        "y": 880,
+        "wires": [
+            [
+                "349710b1.7d373"
+            ]
+        ]
+    },
+    {
+        "id": "7be24fe935a8dec7",
+        "type": "change",
+        "z": "a3be0cff.690a5",
+        "g": "7dfc3cbb.7e95c4",
+        "name": "presentation/active",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "/v1/presentation/active",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 570,
+        "y": 960,
+        "wires": [
+            [
+                "349710b1.7d373"
+            ]
+        ]
+    },
+    {
+        "id": "b6bb55b7525d4e2d",
+        "type": "change",
+        "z": "a3be0cff.690a5",
+        "g": "7dfc3cbb.7e95c4",
+        "name": "status/slide",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "/v1/status/slide",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 550,
+        "y": 920,
+        "wires": [
+            [
+                "349710b1.7d373"
+            ]
+        ]
     },
     {
         "id": "9871bf8e.2fa56",
