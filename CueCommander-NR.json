@@ -3053,8 +3053,8 @@
         "nodes": [
             "d23699ff5823c741"
         ],
-        "x": 1094,
-        "y": 499,
+        "x": 24,
+        "y": 519,
         "w": 86,
         "h": 82
     },
@@ -3082,7 +3082,7 @@
         "x": 14,
         "y": 19,
         "w": 792,
-        "h": 462
+        "h": 402
     },
     {
         "id": "df7d79ce617335b0",
@@ -3101,7 +3101,7 @@
         ],
         "x": 834,
         "y": 159,
-        "w": 372,
+        "w": 332,
         "h": 202
     },
     {
@@ -3119,6 +3119,40 @@
         "x": 834,
         "y": 379,
         "w": 352,
+        "h": 82
+    },
+    {
+        "id": "de8a99cbceb3bb71",
+        "type": "group",
+        "z": "a3be0cff.690a5",
+        "name": "presentation/active",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "31684aba4277a0ea",
+            "ee0e6bd186800415"
+        ],
+        "x": 834,
+        "y": 479,
+        "w": 392,
+        "h": 82
+    },
+    {
+        "id": "efb37696f1583fcf",
+        "type": "group",
+        "z": "a3be0cff.690a5",
+        "name": "playlist/active",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "01727ac603a9478a",
+            "d9756ff7d2aec744"
+        ],
+        "x": 834,
+        "y": 579,
+        "w": 372,
         "h": 82
     },
     {
@@ -12942,8 +12976,8 @@
             "03e861f483ba32de",
             "26dfc34fabc71728"
         ],
-        "x": 1135,
-        "y": 540,
+        "x": 65,
+        "y": 560,
         "wires": []
     },
     {
@@ -12983,7 +13017,7 @@
         "authType": "",
         "senderr": false,
         "x": 150,
-        "y": 280,
+        "y": 300,
         "wires": [
             [
                 "bccd61396bc62dc3"
@@ -13004,8 +13038,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 170,
-        "y": 440,
+        "x": 330,
+        "y": 380,
         "wires": []
     },
     {
@@ -13035,7 +13069,7 @@
         "type": "switch",
         "z": "a3be0cff.690a5",
         "g": "534928771fae2008",
-        "name": "",
+        "name": "Process Response",
         "property": "url",
         "propertyType": "msg",
         "rules": [
@@ -13070,8 +13104,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 5,
-        "x": 150,
-        "y": 360,
+        "x": 350,
+        "y": 300,
         "wires": [
             [
                 "619305a133e9b804"
@@ -13079,8 +13113,12 @@
             [
                 "a5f22dd99c8b5a7e"
             ],
-            [],
-            [],
+            [
+                "31684aba4277a0ea"
+            ],
+            [
+                "01727ac603a9478a"
+            ],
             [
                 "4cbfee48455b2d54"
             ]
@@ -13584,7 +13622,7 @@
         "type": "debug",
         "z": "a3be0cff.690a5",
         "g": "df7d79ce617335b0",
-        "name": "",
+        "name": "props",
         "active": true,
         "tosidebar": true,
         "console": false,
@@ -13593,7 +13631,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1090,
+        "x": 1070,
         "y": 220,
         "wires": []
     },
@@ -13630,6 +13668,76 @@
         "statusType": "auto",
         "x": 1070,
         "y": 420,
+        "wires": []
+    },
+    {
+        "id": "31684aba4277a0ea",
+        "type": "json",
+        "z": "a3be0cff.690a5",
+        "g": "de8a99cbceb3bb71",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 910,
+        "y": 520,
+        "wires": [
+            [
+                "ee0e6bd186800415"
+            ]
+        ]
+    },
+    {
+        "id": "ee0e6bd186800415",
+        "type": "debug",
+        "z": "a3be0cff.690a5",
+        "g": "de8a99cbceb3bb71",
+        "name": "presentation/active",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1090,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "01727ac603a9478a",
+        "type": "json",
+        "z": "a3be0cff.690a5",
+        "g": "efb37696f1583fcf",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 910,
+        "y": 620,
+        "wires": [
+            [
+                "d9756ff7d2aec744"
+            ]
+        ]
+    },
+    {
+        "id": "d9756ff7d2aec744",
+        "type": "debug",
+        "z": "a3be0cff.690a5",
+        "g": "efb37696f1583fcf",
+        "name": "playlist/active",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1080,
+        "y": 620,
         "wires": []
     },
     {
