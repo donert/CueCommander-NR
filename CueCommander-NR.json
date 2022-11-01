@@ -486,7 +486,9 @@
             "2d020fb4.2fd23",
             "d7653fa1.bf7e4",
             "422d26b0.a49cd8",
-            "eb69de6a.fb725"
+            "eb69de6a.fb725",
+            "bf5aebf33975bb95",
+            "c0c45e0c1d6b58b3"
         ],
         "x": 28,
         "y": 13,
@@ -3170,6 +3172,25 @@
         "h": 142
     },
     {
+        "id": "4d2bded709725f5d",
+        "type": "group",
+        "z": "17ca131.e488ced",
+        "name": "Send to Event Log",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "ab74d6723018c225",
+            "5d840c7f33a077a9",
+            "109546774ad81fc0",
+            "646a84e302bda9b7"
+        ],
+        "x": 814,
+        "y": 539,
+        "w": 332,
+        "h": 142
+    },
+    {
         "id": "b36c9a8b.092df8",
         "type": "ui_tab",
         "name": "Lights",
@@ -4448,7 +4469,8 @@
         "wires": [
             [
                 "2d020fb4.2fd23",
-                "a2bacb69.935388"
+                "a2bacb69.935388",
+                "c0c45e0c1d6b58b3"
             ]
         ]
     },
@@ -4480,7 +4502,7 @@
         "links": [
             "846bf1bd.3fb21"
         ],
-        "x": 235,
+        "x": 265,
         "y": 420,
         "wires": []
     },
@@ -5299,7 +5321,7 @@
         "y": 180,
         "wires": [
             [
-                "eb69de6a.fb725"
+                "bf5aebf33975bb95"
             ]
         ]
     },
@@ -5327,7 +5349,7 @@
         "y": 220,
         "wires": [
             [
-                "eb69de6a.fb725"
+                "bf5aebf33975bb95"
             ]
         ]
     },
@@ -6631,6 +6653,124 @@
                 "3baa8be701d7bc5b"
             ]
         ]
+    },
+    {
+        "id": "bf5aebf33975bb95",
+        "type": "change",
+        "z": "17ca131.e488ced",
+        "g": "74d2eb49.51fe34",
+        "name": "=",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 810,
+        "y": 200,
+        "wires": [
+            [
+                "eb69de6a.fb725"
+            ]
+        ]
+    },
+    {
+        "id": "ab74d6723018c225",
+        "type": "change",
+        "z": "17ca131.e488ced",
+        "g": "4d2bded709725f5d",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "'{ \"category\": \"Proj\",   \t \"level\"    : \"Info\",  \t \"timestamp\"      : ' &\t   $millis()  \t & '   ,   \t \"event\"    : \"' \t & msg.topic \t & ':'  \t & msg.payload \t & '\" }'",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1000,
+        "y": 580,
+        "wires": [
+            [
+                "5d840c7f33a077a9"
+            ]
+        ]
+    },
+    {
+        "id": "5d840c7f33a077a9",
+        "type": "json",
+        "z": "17ca131.e488ced",
+        "g": "4d2bded709725f5d",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 990,
+        "y": 640,
+        "wires": [
+            [
+                "109546774ad81fc0"
+            ]
+        ]
+    },
+    {
+        "id": "109546774ad81fc0",
+        "type": "link out",
+        "z": "17ca131.e488ced",
+        "g": "4d2bded709725f5d",
+        "name": "lights to event log",
+        "mode": "link",
+        "links": [
+            "084445fc7ab1aa20"
+        ],
+        "x": 1105,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "646a84e302bda9b7",
+        "type": "link in",
+        "z": "17ca131.e488ced",
+        "g": "4d2bded709725f5d",
+        "name": "proj event log",
+        "links": [
+            "c0c45e0c1d6b58b3"
+        ],
+        "x": 855,
+        "y": 580,
+        "wires": [
+            [
+                "ab74d6723018c225"
+            ]
+        ]
+    },
+    {
+        "id": "c0c45e0c1d6b58b3",
+        "type": "link out",
+        "z": "17ca131.e488ced",
+        "g": "74d2eb49.51fe34",
+        "name": "",
+        "mode": "link",
+        "links": [
+            "646a84e302bda9b7"
+        ],
+        "x": 265,
+        "y": 460,
+        "wires": []
     },
     {
         "id": "8eb0c09e.7f105",
@@ -24640,7 +24780,8 @@
             "6bb6811a1b8f1bac",
             "485295c9e9f22ced",
             "78db80b74e3494bd",
-            "24cc5c254a5880c9"
+            "24cc5c254a5880c9",
+            "109546774ad81fc0"
         ],
         "x": 195,
         "y": 60,
