@@ -85,13 +85,14 @@ dispatcher = dispatcher.Dispatcher()
 dispatcher.map("/camera/*", cameraHandler)
 
 ip = "127.0.0.1"  # "192.168.0.105" # 
-port = 54000
+port = 54001
 
 try:
     server = osc_server.ThreadingOSCUDPServer((ip, port), dispatcher)
+    log.info("Serving on {}".format(server.server_address))
+    server.serve_forever()
 except:
 	log.error(f'Could not connect at {ip} {port}'  )
 
 #log.debug("Sending to %s: %r", ip, command)
-log.info("Serving on {}".format(server.server_address))
-server.serve_forever()
+
