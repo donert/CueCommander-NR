@@ -2525,7 +2525,7 @@
             "5ab39447922ff260",
             "cecb8ad5099913b8"
         ],
-        "x": 564,
+        "x": 744,
         "y": 639,
         "w": 622,
         "h": 222
@@ -4178,16 +4178,6 @@
         "collapse": false
     },
     {
-        "id": "3af843f2.ab6fdc",
-        "type": "ui_group",
-        "name": "Projector Configuration",
-        "tab": "e0b6460f.51cf08",
-        "order": 7,
-        "disp": true,
-        "width": "20",
-        "collapse": true
-    },
-    {
         "id": "e0b6460f.51cf08",
         "type": "ui_tab",
         "name": "Settings",
@@ -4195,27 +4185,6 @@
         "order": 7,
         "disabled": false,
         "hidden": false
-    },
-    {
-        "id": "e3bd771e.d08b78",
-        "type": "ui_group",
-        "name": "Camera Configuration",
-        "tab": "e0b6460f.51cf08",
-        "order": 6,
-        "disp": true,
-        "width": "20",
-        "collapse": true
-    },
-    {
-        "id": "73b331f4.a8bda",
-        "type": "ui_group",
-        "name": "Camera Preview Prototype",
-        "tab": null,
-        "order": 1,
-        "disp": true,
-        "width": "6",
-        "collapse": false,
-        "className": ""
     },
     {
         "id": "721af69.d130208",
@@ -4485,16 +4454,6 @@
         "className": ""
     },
     {
-        "id": "74d3bc6d.dd56e4",
-        "type": "ui_group",
-        "name": "Table",
-        "tab": "",
-        "order": 1,
-        "disp": true,
-        "width": "6",
-        "collapse": false
-    },
-    {
         "id": "9cf61db997ea662a",
         "type": "ui_group",
         "name": "Current PP Status",
@@ -4583,8 +4542,8 @@
         "name": "Default",
         "tab": "6aa2803ac415ba07",
         "order": 1,
-        "disp": true,
-        "width": "6",
+        "disp": false,
+        "width": "24",
         "collapse": false,
         "className": ""
     },
@@ -14619,7 +14578,7 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 750,
+        "x": 930,
         "y": 680,
         "wires": [
             [
@@ -14823,7 +14782,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1000,
+        "x": 1180,
         "y": 720,
         "wires": [
             [
@@ -14841,7 +14800,7 @@
         "links": [
             "3e8592d98870eb4c"
         ],
-        "x": 1145,
+        "x": 1325,
         "y": 720,
         "wires": []
     },
@@ -15161,7 +15120,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 810,
+        "x": 990,
         "y": 720,
         "wires": [
             [
@@ -15199,7 +15158,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 980,
+        "x": 1160,
         "y": 760,
         "wires": [
             [
@@ -15525,7 +15484,7 @@
         "links": [
             "d023dae84a64fe57"
         ],
-        "x": 605,
+        "x": 785,
         "y": 720,
         "wires": [
             [
@@ -15744,7 +15703,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 710,
+        "x": 890,
         "y": 760,
         "wires": []
     },
@@ -15758,7 +15717,7 @@
             "31684aba4277a0ea"
         ],
         "uncaught": false,
-        "x": 710,
+        "x": 890,
         "y": 820,
         "wires": [
             [
@@ -15780,7 +15739,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 910,
+        "x": 1090,
         "y": 820,
         "wires": []
     },
@@ -36698,8 +36657,8 @@
         "method": "get",
         "upload": false,
         "swaggerDoc": "",
-        "x": 180,
-        "y": 140,
+        "x": 100,
+        "y": 120,
         "wires": [
             [
                 "2fb1c354.d04e3c"
@@ -36715,8 +36674,8 @@
         "filenameType": "str",
         "format": "",
         "allProps": false,
-        "x": 500,
-        "y": 140,
+        "x": 310,
+        "y": 180,
         "wires": [
             [
                 "c9e28681.361d78"
@@ -36749,8 +36708,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 610,
-        "y": 220,
+        "x": 230,
+        "y": 240,
         "wires": [
             [
                 "88974243.7768c"
@@ -36762,92 +36721,26 @@
         "type": "http response",
         "z": "467482a7d0378f22",
         "name": "",
-        "x": 870,
-        "y": 260,
+        "x": 250,
+        "y": 300,
         "wires": []
     },
     {
-        "id": "edf7c3598dedc18a",
-        "type": "exec",
-        "z": "467482a7d0378f22",
-        "command": "pwd",
-        "addpay": "",
-        "append": "",
-        "useSpawn": "false",
-        "timer": "",
-        "winHide": false,
-        "oldrc": false,
-        "name": "",
-        "x": 150,
-        "y": 420,
-        "wires": [
-            [
-                "b41c687a67f13cfe"
-            ],
-            [],
-            []
-        ]
-    },
-    {
-        "id": "b41c687a67f13cfe",
-        "type": "debug",
-        "z": "467482a7d0378f22",
-        "name": "debug 1",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 420,
-        "y": 480,
-        "wires": []
-    },
-    {
-        "id": "b4c50313e14153e1",
-        "type": "inject",
-        "z": "467482a7d0378f22",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 140,
-        "y": 280,
-        "wires": [
-            [
-                "edf7c3598dedc18a"
-            ]
-        ]
-    },
-    {
-        "id": "b66571fe580728d8",
-        "type": "ui_text",
+        "id": "8a267c679e712886",
+        "type": "ui_iframe",
         "z": "467482a7d0378f22",
         "group": "e4b8b89464b2aa06",
-        "order": 0,
-        "width": "4",
-        "height": "2",
-        "name": "",
-        "label": "Click for Help",
-        "format": "<a href='/help' target=\"_blank\">Help</a>",
-        "layout": "col-center",
-        "className": "",
-        "x": 520,
-        "y": 680,
-        "wires": []
+        "name": "iframe for Help",
+        "order": 1,
+        "width": 24,
+        "height": 37,
+        "url": "http://127.0.0.1:1880/help",
+        "origin": "*",
+        "scale": 100,
+        "x": 120,
+        "y": 60,
+        "wires": [
+            []
+        ]
     }
 ]
