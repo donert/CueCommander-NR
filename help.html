@@ -1,0 +1,153 @@
+<html>
+
+ <style type="text/css">
+.tg  {border-collapse:collapse;border-color:#9ABAD9;border-spacing:0;}
+.tg td{background-color:#EBF5FF;border-color:#9ABAD9;border-style:solid;border-width:1px;color:#444;
+  font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{background-color:#409cff;border-color:#9ABAD9;border-style:solid;border-width:1px;color:#fff;
+  font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-hmp3{background-color:#D2E4FC;text-align:left;vertical-align:top}
+.tg .tg-q7lj{background-color:#34696d;font-size:large;font-weight:bold;text-align:left;vertical-align:top}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+</style>
+<body>
+<h1>Help</h1>
+
+<h2>API Calls</h2>
+
+<h3>Camera Cues</h3>
+
+The general form of the camera cue url is:
+<pre> 
+http://<hostname>:<port>/cq?cmd=___&parm=____&num=___
+</pre>
+
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-q7lj">cmd</th>
+    <th class="tg-q7lj">parm</th>
+    <th class="tg-q7lj">num</th>
+    <th class="tg-q7lj">Example</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0lax">power</td>
+    <td class="tg-0lax">on|off</td>
+    <td class="tg-0lax">camera #</td>
+    <td class="tg-0lax">http://127.0.0.1/cq?cmd=power&amp;parm=on&amp;num=1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">tally</td>
+    <td class="tg-0lax">on|off</td>
+    <td class="tg-0lax">camera #</td>
+    <td class="tg-0lax">http://127.0.0.1/cq?cmd=tally&amp;parm=on&amp;num=1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">move</td>
+    <td class="tg-0lax">left|right|up|down|in|out|stop|zoomstop</td>
+    <td class="tg-0lax">camera #</td>
+    <td class="tg-0lax">http://127.0.0.1/cq?cmd=move&amp;parm=left&amp;num=1</td>
+  </tr>
+</tbody>
+</table>
+
+<h3>Light Cues</h3>
+
+The general form of the light cue url is:
+<pre> 
+http://<hostname>:<port>/lq?cmd=___&parm=____ 
+</pre>
+ 
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-q7lj">cmd</th>
+    <th class="tg-q7lj">parm</th>
+    <th class="tg-q7lj">Example</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0lax">gotocue</td>
+    <td class="tg-0lax">xxx.y</td>
+    <td class="tg-0lax">http://127.0.0.1:1880:/lq?cmd=gotocue&amp;parm=123.4</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">pause</td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">go</td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none">goback</span></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+  </tr>
+</tbody>
+</table>
+
+<h3>Video Cues</h3>
+
+The general form of the video cue url to control an ATEM is:
+<pre> 
+http://<hostname>:<port>/vq?cmd=___&parm=____ 
+</pre>
+
+ 
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-q7lj">cmd</th>
+    <th class="tg-q7lj">parm</th>
+    <th class="tg-q7lj">Example</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0lax">programinput<br></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax">http://127.0.0.1:1880:/vq?cmd=programinput&amp;parm=?</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none">previewinput</span></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none">auxsource</span></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none">performcut</span></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none">performauto</span></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none">upstreamkeyer</span></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none">macroaction</span></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+  </tr>
+</tbody>
+</table>
+ 
+ 
+ 
+</body>
+</html>
