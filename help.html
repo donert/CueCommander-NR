@@ -19,11 +19,13 @@
 
 <h2>API Calls</h2>
 
+There are many system functions which can be triggered via an http request. Lights, Cameras and Video switcher can be controlled this way.
+
 <h3>Camera Cues</h3>
 
 The general form of the camera cue url is:
 <pre> 
-http://<hostname>:<port>/cq?cmd=___&parm=____&num=___
+http://&lt;hostname>:&lt;port>/cq?cmd=___&parm=____&num=___
 </pre>
 
 <table class="tg">
@@ -61,7 +63,7 @@ http://<hostname>:<port>/cq?cmd=___&parm=____&num=___
 
 The general form of the light cue url is:
 <pre> 
-http://<hostname>:<port>/lq?cmd=___&parm=____ 
+http://&lt;hostname>:&lt;port>/lq?cmd=___&parm=____ 
 </pre>
  
 <table class="tg">
@@ -100,9 +102,8 @@ http://<hostname>:<port>/lq?cmd=___&parm=____
 
 The general form of the video cue url to control an ATEM is:
 <pre> 
-http://<hostname>:<port>/vq?cmd=___&parm=____ 
+http://&lt;hostname>:&lt;port>/vq?cmd=___&parm=____ 
 </pre>
-
  
 <table class="tg">
 <thead>
@@ -150,8 +151,6 @@ http://<hostname>:<port>/vq?cmd=___&parm=____
   </tr>
 </tbody>
 </table>
- 
- 
  
 </body>
 </html>
