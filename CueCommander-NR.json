@@ -431,8 +431,8 @@
             "9fc2e0d6f0a51545",
             "25444250f2ab0854"
         ],
-        "x": 34,
-        "y": 259,
+        "x": 24,
+        "y": 439,
         "w": 702,
         "h": 202
     },
@@ -2363,7 +2363,8 @@
             "340c26071ab63bdf",
             "2485454608506488",
             "5b6ed601fe3d6697",
-            "a08cab5d87a64ab2"
+            "a08cab5d87a64ab2",
+            "718f6b2b339f074e"
         ],
         "x": 14,
         "y": 19,
@@ -3004,12 +3005,14 @@
             "ed99bc7b.e0c6e",
             "9223dc40.cd804",
             "44b455af8d9f7429",
-            "2c73d23ac28f3ff3"
+            "2c73d23ac28f3ff3",
+            "9b44b75adc5634ab",
+            "a5868668641b392c"
         ],
         "x": 34,
-        "y": 37,
+        "y": 39,
         "w": 902,
-        "h": 202
+        "h": 240
     },
     {
         "id": "e660fb746dfbb567",
@@ -3845,6 +3848,7 @@
     {
         "id": "871ea368.15c4e",
         "type": "ui_tab",
+        "d": true,
         "name": "Projectors",
         "icon": "mi-tv",
         "order": 1,
@@ -4917,8 +4921,8 @@
             "9223dc40.cd804",
             "a2bacb69.935388"
         ],
-        "x": 75,
-        "y": 340,
+        "x": 65,
+        "y": 520,
         "wires": [
             [
                 "2fc659f21a470a82"
@@ -5405,8 +5409,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 630,
-        "y": 340,
+        "x": 620,
+        "y": 520,
         "wires": []
     },
     {
@@ -5421,8 +5425,8 @@
         "arraySpltType": "len",
         "stream": false,
         "addname": "",
-        "x": 120,
-        "y": 400,
+        "x": 110,
+        "y": 580,
         "wires": [
             [
                 "25444250f2ab0854"
@@ -6274,8 +6278,8 @@
         "topic": "getpowerstate",
         "payload": "getpowerstate",
         "payloadType": "str",
-        "x": 200,
-        "y": 300,
+        "x": 190,
+        "y": 480,
         "wires": [
             [
                 "2fc659f21a470a82"
@@ -6294,8 +6298,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 270,
-        "y": 340,
+        "x": 260,
+        "y": 520,
         "wires": [
             [
                 "e880b599.3f8de8",
@@ -6317,8 +6321,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 630,
-        "y": 380,
+        "x": 620,
+        "y": 560,
         "wires": []
     },
     {
@@ -6339,8 +6343,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 460,
-        "y": 400,
+        "x": 450,
+        "y": 580,
         "wires": [
             [
                 "75bf0357f695bcf8",
@@ -7296,8 +7300,8 @@
         "links": [
             "1aab876da9371937"
         ],
-        "x": 675,
-        "y": 420,
+        "x": 665,
+        "y": 600,
         "wires": []
     },
     {
@@ -7367,8 +7371,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 290,
-        "y": 400,
+        "x": 280,
+        "y": 580,
         "wires": [
             [
                 "a7f055218d17eab3"
@@ -7482,7 +7486,7 @@
         "topic": "",
         "topicType": "str",
         "x": 140,
-        "y": 160,
+        "y": 200,
         "wires": [
             [
                 "5b15cf8f.9919e",
@@ -7519,7 +7523,7 @@
         "to": "",
         "reg": false,
         "x": 760,
-        "y": 118,
+        "y": 158,
         "wires": [
             [
                 "9223dc40.cd804"
@@ -7554,7 +7558,7 @@
         "to": "",
         "reg": false,
         "x": 740,
-        "y": 78,
+        "y": 118,
         "wires": [
             [
                 "9223dc40.cd804"
@@ -7589,7 +7593,7 @@
         "to": "",
         "reg": false,
         "x": 760,
-        "y": 158,
+        "y": 198,
         "wires": [
             [
                 "9223dc40.cd804"
@@ -7624,7 +7628,7 @@
         "to": "",
         "reg": false,
         "x": 760,
-        "y": 198,
+        "y": 238,
         "wires": [
             [
                 "9223dc40.cd804"
@@ -7641,7 +7645,7 @@
             "846bf1bd.3fb21"
         ],
         "x": 895,
-        "y": 100,
+        "y": 140,
         "wires": []
     },
     {
@@ -7675,7 +7679,7 @@
         "y": 120,
         "wires": [
             [
-                "8feb0f13.81a46"
+                "9b44b75adc5634ab"
             ]
         ]
     },
@@ -7707,7 +7711,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 130,
-        "y": 80,
+        "y": 160,
         "wires": [
             [
                 "8feb0f13.81a46"
@@ -7748,6 +7752,34 @@
         "statusType": "auto",
         "x": 600,
         "y": 760,
+        "wires": []
+    },
+    {
+        "id": "9b44b75adc5634ab",
+        "type": "debug",
+        "z": "17ca131.e488ced",
+        "g": "74d2eb49.51fe34",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "a5868668641b392c",
+        "type": "comment",
+        "z": "17ca131.e488ced",
+        "g": "74d2eb49.51fe34",
+        "name": "Why Projector control disabled",
+        "info": "Something is happending that is causes the projectros to change input to InpUt A. Projectotr control disabled until that is diagnosed and repaired.",
+        "x": 330,
+        "y": 80,
         "wires": []
     },
     {
@@ -27143,8 +27175,7 @@
                 "0cd38a6fd2970c11",
                 "2a5d895e89804709",
                 "121f4752e443ef22",
-                "c7e887e50258dd5b",
-                "5b6ed601fe3d6697"
+                "c7e887e50258dd5b"
             ]
         ]
     },
@@ -27560,6 +27591,32 @@
             ],
             [
                 "8d312299.cae8f"
+            ]
+        ]
+    },
+    {
+        "id": "718f6b2b339f074e",
+        "type": "inject",
+        "z": "805d289f.fd83a8",
+        "g": "1f02f351d734f2f4",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 110,
+        "y": 360,
+        "wires": [
+            [
+                "5b6ed601fe3d6697"
             ]
         ]
     },
