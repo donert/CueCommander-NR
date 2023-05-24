@@ -46,7 +46,7 @@
         "id": "64cbf871.f282f8",
         "type": "tab",
         "label": "UI Planning Centre",
-        "disabled": false,
+        "disabled": true,
         "info": "Intergration with Planning centre"
     },
     {
@@ -26080,6 +26080,16 @@
         ]
     },
     {
+        "id": "85ac6626ba547696",
+        "type": "comment",
+        "z": "64cbf871.f282f8",
+        "name": "function disabled explanation",
+        "info": "I originally created this with the concept of driving cue automation from planning Centre. Since then, Propresenter introduced their API and that is a much better fit. This feautre is no longer needed, but will leave the code here for a bit",
+        "x": 160,
+        "y": 100,
+        "wires": []
+    },
+    {
         "id": "8d312299.cae8f",
         "type": "config",
         "z": "805d289f.fd83a8",
@@ -26945,6 +26955,7 @@
         "id": "c7e887e50258dd5b",
         "type": "ui_switch",
         "z": "805d289f.fd83a8",
+        "d": true,
         "g": "1f02f351d734f2f4",
         "name": "",
         "label": "Planning Centre",
