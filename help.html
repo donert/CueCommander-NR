@@ -19,7 +19,7 @@
 
 <h2>API Calls</h2>
 
-There are many system functions which can be triggered via an http request. Lights, Cameras and Video switcher can be controlled this way.
+There are many system functions which can be triggered via an http request. Lights, Cameras, Propresenter and Video switcher can be controlled this way.
 
 <h3>Camera Cues</h3>
 
@@ -149,6 +149,40 @@ http://&lt;hostname>:&lt;port>/vq?cmd=___&parm=____
     <td class="tg-0lax"></td>
     <td class="tg-0lax"></td>
   </tr>
+</tbody>
+</table>
+ 
+ 
+<h3>ProPresnter Cues</h3>
+
+Only Propresenter 7 is supported. The general form of the ProPresenter cue url is:
+<pre> 
+http://&lt;hostname>:&lt;port>/pq?cmd=___&parm=____&num=____  
+</pre>
+ 
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-q7lj">cmd</th>
+    <th class="tg-q7lj">parm</th>
+    <th class="tg-q7lj">num</th>
+    <th class="tg-q7lj">Example</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0lax">clearlayer</td>
+    <td class="tg-0lax">slide</td>
+    <td class="tg-0lax">number</td>
+    <td class="tg-0lax">http://127.0.0.1:1880:/pq?cmd=clearlayer&amp;parm=slide&amp;num=3<br/>This will clear the slide layer in 3 seconds.</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none">propclear</span></td>
+    <td class="tg-0lax">name of prop</td>
+    <td class="tg-0lax">not applicable</td>
+    <td class="tg-0lax">http://127.0.0.1:1880:/pq?cmd=propclear&amp;parm=name of prop<br/>This will clear the prop with name "name of prop".</td>
+  </tr>
+   
 </tbody>
 </table>
  
