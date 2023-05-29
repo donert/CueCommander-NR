@@ -15,9 +15,15 @@ def byteSet(by, value, position):
 	return by
 
 class Commands:
-	TallyOn = bytearray.fromhex("017E010A0002FF")
-	TallyOff = bytearray.fromhex('017E010A0003FF')
-	PowerOn = bytearray.fromhex("8101040002ff")
+# https://www.sony.net/Products/CameraSystem/CA/BRC_X1000_BRC_H800/Technical_Document/C456100121.pdf 
+# Tally ON/OFF 8x 01 7E 01 0A 00 0p FF p: 2=On, 3=Off
+#	TallyOn  = bytearray.fromhex("017E010A0002FF")
+#	TallyOff = bytearray.fromhex('017E010A0003FF')
+
+	TallyOn  = bytearray.fromhex("81017E010A0002FF")
+	TallyOff = bytearray.fromhex("81017E010A0003FF")
+
+	PowerOn  = bytearray.fromhex("8101040002ff")
 	PowerOff = bytearray.fromhex("8101040003ff")
 	ZoomStop = bytearray.fromhex("8101040700ff")
 	ZoomTele = bytearray.fromhex("8101040702ff")
