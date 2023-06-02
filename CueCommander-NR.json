@@ -1943,41 +1943,33 @@
         "id": "2e267aabc8e94e20",
         "type": "group",
         "z": "96ac9944.5b4dd8",
+        "name": "Handle Propresenter",
         "style": {
-            "stroke": "#999999",
-            "stroke-opacity": "1",
-            "fill": "none",
-            "fill-opacity": "1",
-            "label": true,
-            "label-position": "nw",
-            "color": "#a4a4a4"
+            "label": true
         },
         "nodes": [
             "2c57d5ed8223848c",
             "435d74fa6d0e0525",
-            "3bb5b2a8b67473d9",
             "32660b99d8ee5118",
             "770b41d2fd905b93",
-            "ce30b7b70ab0b1e9",
             "d5e87bb8c016a097",
             "836fdf46eff96526",
             "e1cb76ab134cbad5",
             "f05a4895472c62d5",
-            "a4230f95d7d7e26b",
-            "6a737fdfa8aafb93",
             "bde8554cd2d28fbc",
-            "f2abfc7dd8e41052",
             "6d38ff1f8a651ab4",
             "f05677b3590d90d3",
             "83efeac99c86c0f4",
             "055a540b83c0c3a2",
             "b8e5946a7364e6b3",
-            "4721a7cd1277e914"
+            "4721a7cd1277e914",
+            "f1fdb5a342409993",
+            "5a93cbfa02e8e87c"
         ],
-        "x": 1194,
-        "y": 119,
-        "w": 1052,
-        "h": 362
+        "x": 1204,
+        "y": 39,
+        "w": 1042,
+        "h": 407
     },
     {
         "id": "83b35ec65abcd370",
@@ -3289,20 +3281,19 @@
             "2ece2d4d.2a5002",
             "3af4f9c3.3fa406",
             "0995226901628529",
-            "43c5e078f5fa1fd2",
             "70fe67f422b98ce9",
             "0d08ba8f73a495da",
             "0ebb6d9b8fba0e6a",
             "e515e59f3182d2bc",
             "6228b116a93313db",
-            "b9527f6f88617525",
             "8e8ba6063788964f",
             "db80f72133580c95",
-            "7dc6994b597a43d7"
+            "7dc6994b597a43d7",
+            "2d40dc0e7cc5c004"
         ],
-        "x": 974,
-        "y": 879,
-        "w": 952,
+        "x": 934,
+        "y": 679,
+        "w": 972,
         "h": 522
     },
     {
@@ -3616,12 +3607,11 @@
         "type": "junction",
         "z": "96ac9944.5b4dd8",
         "g": "77c46321.0fddbc",
-        "x": 1620,
-        "y": 1160,
+        "x": 1580,
+        "y": 960,
         "wires": [
             [
-                "3af4f9c3.3fa406",
-                "43c5e078f5fa1fd2"
+                "3af4f9c3.3fa406"
             ]
         ]
     },
@@ -3630,8 +3620,8 @@
         "type": "junction",
         "z": "96ac9944.5b4dd8",
         "g": "77c46321.0fddbc",
-        "x": 1340,
-        "y": 940,
+        "x": 1300,
+        "y": 740,
         "wires": [
             [
                 "e515e59f3182d2bc"
@@ -3832,19 +3822,6 @@
             [
                 "d5e87bb8c016a097",
                 "6d38ff1f8a651ab4"
-            ]
-        ]
-    },
-    {
-        "id": "b8e5946a7364e6b3",
-        "type": "junction",
-        "z": "96ac9944.5b4dd8",
-        "g": "2e267aabc8e94e20",
-        "x": 1520,
-        "y": 420,
-        "wires": [
-            [
-                "4721a7cd1277e914"
             ]
         ]
     },
@@ -20783,32 +20760,6 @@
         "wires": []
     },
     {
-        "id": "3bb5b2a8b67473d9",
-        "type": "inject",
-        "z": "96ac9944.5b4dd8",
-        "g": "2e267aabc8e94e20",
-        "name": "test vx program input 5",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "Vx:ProgramInput:5",
-        "payloadType": "str",
-        "x": 1340,
-        "y": 280,
-        "wires": [
-            [
-                "b8e5946a7364e6b3"
-            ]
-        ]
-    },
-    {
         "id": "32660b99d8ee5118",
         "type": "function",
         "z": "96ac9944.5b4dd8",
@@ -20865,7 +20816,8 @@
         "y": 240,
         "wires": [
             [
-                "836fdf46eff96526"
+                "836fdf46eff96526",
+                "5a93cbfa02e8e87c"
             ],
             [
                 "e1cb76ab134cbad5"
@@ -20875,32 +20827,6 @@
             ],
             [
                 "f05a4895472c62d5"
-            ]
-        ]
-    },
-    {
-        "id": "ce30b7b70ab0b1e9",
-        "type": "inject",
-        "z": "96ac9944.5b4dd8",
-        "g": "2e267aabc8e94e20",
-        "name": "test vx preview input 6",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "Vx:PreviewInput:6",
-        "payloadType": "str",
-        "x": 1340,
-        "y": 320,
-        "wires": [
-            [
-                "b8e5946a7364e6b3"
             ]
         ]
     },
@@ -20982,58 +20908,6 @@
         ]
     },
     {
-        "id": "a4230f95d7d7e26b",
-        "type": "inject",
-        "z": "96ac9944.5b4dd8",
-        "g": "2e267aabc8e94e20",
-        "name": "test vx upstream key true",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "Vq:UpStreamKey:true",
-        "payloadType": "str",
-        "x": 1350,
-        "y": 360,
-        "wires": [
-            [
-                "b8e5946a7364e6b3"
-            ]
-        ]
-    },
-    {
-        "id": "6a737fdfa8aafb93",
-        "type": "inject",
-        "z": "96ac9944.5b4dd8",
-        "g": "2e267aabc8e94e20",
-        "name": "test vx upstream key false",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "Vx:UpStreamKey:false",
-        "payloadType": "str",
-        "x": 1350,
-        "y": 400,
-        "wires": [
-            [
-                "b8e5946a7364e6b3"
-            ]
-        ]
-    },
-    {
         "id": "bde8554cd2d28fbc",
         "type": "template",
         "z": "96ac9944.5b4dd8",
@@ -21053,32 +20927,6 @@
             ]
         ],
         "info": "The inbound payload is the macro number"
-    },
-    {
-        "id": "f2abfc7dd8e41052",
-        "type": "inject",
-        "z": "96ac9944.5b4dd8",
-        "g": "2e267aabc8e94e20",
-        "name": "test vx macro 5",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "Vx:Macro:5",
-        "payloadType": "str",
-        "x": 1320,
-        "y": 440,
-        "wires": [
-            [
-                "b8e5946a7364e6b3"
-            ]
-        ]
     },
     {
         "id": "6d38ff1f8a651ab4",
@@ -21108,8 +20956,8 @@
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 1630,
-        "y": 160,
+        "x": 1590,
+        "y": 140,
         "wires": []
     },
     {
@@ -22140,8 +21988,8 @@
         "payload": "0",
         "payloadType": "str",
         "topic": "",
-        "x": 1470,
-        "y": 960,
+        "x": 1430,
+        "y": 760,
         "wires": [
             [
                 "70fe67f422b98ce9"
@@ -22167,8 +22015,8 @@
         "payload": "2",
         "payloadType": "str",
         "topic": "",
-        "x": 1470,
-        "y": 1040,
+        "x": 1430,
+        "y": 840,
         "wires": [
             [
                 "70fe67f422b98ce9"
@@ -22194,8 +22042,8 @@
         "payload": "1",
         "payloadType": "str",
         "topic": "",
-        "x": 1470,
-        "y": 1000,
+        "x": 1430,
+        "y": 800,
         "wires": [
             [
                 "70fe67f422b98ce9"
@@ -22221,8 +22069,8 @@
         "payload": "3",
         "payloadType": "str",
         "topic": "",
-        "x": 1470,
-        "y": 1080,
+        "x": 1430,
+        "y": 880,
         "wires": [
             [
                 "70fe67f422b98ce9"
@@ -22248,8 +22096,8 @@
         "payload": "4",
         "payloadType": "str",
         "topic": "",
-        "x": 1470,
-        "y": 1120,
+        "x": 1430,
+        "y": 920,
         "wires": [
             [
                 "70fe67f422b98ce9"
@@ -22275,8 +22123,8 @@
         "payload": "6",
         "payloadType": "str",
         "topic": "",
-        "x": 1470,
-        "y": 1200,
+        "x": 1430,
+        "y": 1000,
         "wires": [
             [
                 "70fe67f422b98ce9"
@@ -22302,8 +22150,8 @@
         "payload": "5",
         "payloadType": "str",
         "topic": "",
-        "x": 1470,
-        "y": 1160,
+        "x": 1430,
+        "y": 960,
         "wires": [
             [
                 "70fe67f422b98ce9"
@@ -22329,8 +22177,8 @@
         "payload": "3010",
         "payloadType": "str",
         "topic": "",
-        "x": 1470,
-        "y": 1320,
+        "x": 1430,
+        "y": 1120,
         "wires": [
             [
                 "70fe67f422b98ce9"
@@ -22356,8 +22204,8 @@
         "payload": "3020",
         "payloadType": "str",
         "topic": "",
-        "x": 1470,
-        "y": 1360,
+        "x": 1430,
+        "y": 1160,
         "wires": [
             [
                 "70fe67f422b98ce9"
@@ -22383,8 +22231,8 @@
         "payload": "7",
         "payloadType": "str",
         "topic": "",
-        "x": 1470,
-        "y": 1240,
+        "x": 1430,
+        "y": 1040,
         "wires": [
             [
                 "70fe67f422b98ce9"
@@ -22410,8 +22258,8 @@
         "payload": "8",
         "payloadType": "str",
         "topic": "",
-        "x": 1470,
-        "y": 1280,
+        "x": 1430,
+        "y": 1080,
         "wires": [
             [
                 "70fe67f422b98ce9"
@@ -22427,8 +22275,8 @@
         "links": [
             "1ac81781.75b738"
         ],
-        "x": 1885,
-        "y": 1220,
+        "x": 1845,
+        "y": 1020,
         "wires": []
     },
     {
@@ -22443,8 +22291,8 @@
         "syntax": "mustache",
         "template": "  {\n        \"cmd\": \"programInput\",\n        \"data\": {\n            \"ME\": 0,\n            \"videoSource\": {\n                \"id\": {{payload}}\n            }\n        }\n    }\n ",
         "output": "json",
-        "x": 1760,
-        "y": 1220,
+        "x": 1720,
+        "y": 1020,
         "wires": [
             [
                 "2ece2d4d.2a5002"
@@ -22460,30 +22308,13 @@
         "links": [
             "a7cf0a5119df01fa"
         ],
-        "x": 1645,
-        "y": 1300,
+        "x": 1605,
+        "y": 1100,
         "wires": [
             [
                 "3af4f9c3.3fa406"
             ]
         ]
-    },
-    {
-        "id": "43c5e078f5fa1fd2",
-        "type": "debug",
-        "z": "96ac9944.5b4dd8",
-        "g": "77c46321.0fddbc",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1810,
-        "y": 1080,
-        "wires": []
     },
     {
         "id": "0d08ba8f73a495da",
@@ -22507,8 +22338,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 3,
-        "x": 1120,
-        "y": 940,
+        "x": 1080,
+        "y": 740,
         "wires": [
             [
                 "0ebb6d9b8fba0e6a"
@@ -22516,9 +22347,7 @@
             [
                 "7dc6994b597a43d7"
             ],
-            [
-                "b9527f6f88617525"
-            ]
+            []
         ]
     },
     {
@@ -22541,8 +22370,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1270,
-        "y": 920,
+        "x": 1230,
+        "y": 720,
         "wires": [
             [
                 "db80f72133580c95"
@@ -22620,8 +22449,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 12,
-        "x": 1250,
-        "y": 1140,
+        "x": 1210,
+        "y": 940,
         "wires": [
             [
                 "9bc9910e.d3c25"
@@ -22670,30 +22499,13 @@
         "links": [
             "a1f8c7d85a64df60"
         ],
-        "x": 1015,
-        "y": 940,
+        "x": 975,
+        "y": 740,
         "wires": [
             [
                 "0d08ba8f73a495da"
             ]
         ]
-    },
-    {
-        "id": "b9527f6f88617525",
-        "type": "debug",
-        "z": "96ac9944.5b4dd8",
-        "g": "77c46321.0fddbc",
-        "name": "debug 6",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1120,
-        "y": 1000,
-        "wires": []
     },
     {
         "id": "8e8ba6063788964f",
@@ -22709,8 +22521,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1220,
-        "y": 1320,
+        "x": 1180,
+        "y": 1120,
         "wires": []
     },
     {
@@ -22733,8 +22545,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1270,
-        "y": 960,
+        "x": 1230,
+        "y": 760,
         "wires": [
             [
                 "db80f72133580c95"
@@ -23482,9 +23294,9 @@
         "z": "96ac9944.5b4dd8",
         "g": "2e267aabc8e94e20",
         "name": "TODO Intergrate with event handler",
-        "info": "This needs to be integrated with the http and UI handler.",
-        "x": 1740,
-        "y": 420,
+        "info": "This needs to be integrated with the http and UI handler.\nTHe Propresenter source side needs to emit \nthe new standard messages. ",
+        "x": 1920,
+        "y": 120,
         "wires": []
     },
     {
@@ -24093,6 +23905,71 @@
         "wires": [
             [
                 "555f0c5f50b8e5ac"
+            ]
+        ]
+    },
+    {
+        "id": "2d40dc0e7cc5c004",
+        "type": "comment",
+        "z": "96ac9944.5b4dd8",
+        "g": "77c46321.0fddbc",
+        "name": "ToDO - need to refactor these alternate paths",
+        "info": "They should not enter at this point but rather act via standard message",
+        "x": 1710,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "f1fdb5a342409993",
+        "type": "change",
+        "z": "96ac9944.5b4dd8",
+        "g": "2e267aabc8e94e20",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "parm",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2060,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5a93cbfa02e8e87c",
+        "type": "change",
+        "z": "96ac9944.5b4dd8",
+        "g": "2e267aabc8e94e20",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "cmd",
+                "pt": "msg",
+                "to": "programinput",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1850,
+        "y": 80,
+        "wires": [
+            [
+                "f1fdb5a342409993"
             ]
         ]
     },
