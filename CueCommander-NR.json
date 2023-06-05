@@ -302,9 +302,9 @@
             "38102d4c.5d4282",
             "dfce0a668d40eccb"
         ],
-        "x": 28,
+        "x": 18,
         "y": 1973,
-        "w": 974,
+        "w": 984,
         "h": 388
     },
     {
@@ -338,7 +338,9 @@
             "de1b6933cddb9df6",
             "01f335cd5a5f6b11",
             "1d7972ead8406838",
-            "cc0a71f458751cea"
+            "cc0a71f458751cea",
+            "7f5333f54039126a",
+            "6342cda5560f00ba"
         ],
         "x": 14,
         "y": 2379,
@@ -364,9 +366,7 @@
             "4b1c1f856661af50"
         ],
         "x": 34,
-        "y": 79,
-        "w": 432,
-        "h": 162
+        "y": 79
     },
     {
         "id": "26f7e48.6e71e1c",
@@ -401,9 +401,7 @@
             "f2b215c66ba0a91c"
         ],
         "x": 34,
-        "y": 753,
-        "w": 1418,
-        "h": 488
+        "y": 753
     },
     {
         "id": "a10197b4.719a58",
@@ -503,9 +501,7 @@
             "8e73c0a3bb7138f6"
         ],
         "x": 14,
-        "y": 59,
-        "w": 692,
-        "h": 162
+        "y": 59
     },
     {
         "id": "c54cb139.4f73d",
@@ -815,9 +811,7 @@
             "afdc0609070f7d1c"
         ],
         "x": 14,
-        "y": 719,
-        "w": 912,
-        "h": 322
+        "y": 719
     },
     {
         "id": "c8d8db35.9a9e88",
@@ -1466,9 +1460,7 @@
             "9db1e8a6c6542da8"
         ],
         "x": 14,
-        "y": 539,
-        "w": 1092,
-        "h": 162
+        "y": 539
     },
     {
         "id": "eec2fe41.6fc47",
@@ -1577,9 +1569,7 @@
             "743ed796.8d5508"
         ],
         "x": 24,
-        "y": 459,
-        "w": 832,
-        "h": 262
+        "y": 459
     },
     {
         "id": "c459911f.288c6",
@@ -1596,9 +1586,7 @@
             "93d6c2d3.a86a7"
         ],
         "x": 24,
-        "y": 299,
-        "w": 722,
-        "h": 122
+        "y": 299
     },
     {
         "id": "a983bc11.746d",
@@ -1731,9 +1719,7 @@
             "6e4e66cf6abb5faa"
         ],
         "x": 874,
-        "y": 3239,
-        "w": 972,
-        "h": 402
+        "y": 3239
     },
     {
         "id": "bcbb1fe0.e492a",
@@ -1754,9 +1740,7 @@
             "a933114d.d816d"
         ],
         "x": 10,
-        "y": 299,
-        "w": 716,
-        "h": 202
+        "y": 299
     },
     {
         "id": "b0498d092b7b9b25",
@@ -1829,8 +1813,8 @@
             "625d67be510c1eae",
             "0c8d0f92ee07e42f"
         ],
-        "x": 1174,
-        "y": 2799,
+        "x": 34,
+        "y": 1979,
         "w": 1112,
         "h": 622
     },
@@ -1884,9 +1868,7 @@
             "723d62dd07fbf52d"
         ],
         "x": 34,
-        "y": 1299,
-        "w": 512,
-        "h": 262
+        "y": 1299
     },
     {
         "id": "50abd8f9327f05ea",
@@ -1961,15 +1943,14 @@
             "f05677b3590d90d3",
             "83efeac99c86c0f4",
             "055a540b83c0c3a2",
-            "b8e5946a7364e6b3",
             "4721a7cd1277e914",
             "f1fdb5a342409993",
             "5a93cbfa02e8e87c"
         ],
-        "x": 1204,
-        "y": 39,
+        "x": 34,
+        "y": 599,
         "w": 1042,
-        "h": 407
+        "h": 302
     },
     {
         "id": "83b35ec65abcd370",
@@ -1992,9 +1973,7 @@
             "6cab352a2c035e31"
         ],
         "x": 34,
-        "y": 1599,
-        "w": 612,
-        "h": 302
+        "y": 1599
     },
     {
         "id": "f591482dad1c88d8",
@@ -2046,9 +2025,9 @@
             "6f6dbca91274644b",
             "c51a78e0cba0f35b"
         ],
-        "x": 34,
+        "x": 4,
         "y": 119,
-        "w": 1072,
+        "w": 1102,
         "h": 302
     },
     {
@@ -2096,9 +2075,7 @@
             "1470aa1bc2cc27ce"
         ],
         "x": 554,
-        "y": 59,
-        "w": 732,
-        "h": 202
+        "y": 59
     },
     {
         "id": "17309520137816ca",
@@ -2120,9 +2097,7 @@
             "a8137b3234b7bec3"
         ],
         "x": 28,
-        "y": 1219,
-        "w": 884,
-        "h": 1048
+        "y": 1219
     },
     {
         "id": "1f02f351d734f2f4",
@@ -2192,9 +2167,7 @@
             "ce7ec2284e930d83"
         ],
         "x": 864,
-        "y": 2999,
-        "w": 482,
-        "h": 222
+        "y": 2999
     },
     {
         "id": "ef38c433b5664af7",
@@ -2393,12 +2366,14 @@
             "848734dc3f206801",
             "4f9cacece335d9ac",
             "66a32fbad80af261",
-            "c907402382cbc981"
+            "c907402382cbc981",
+            "ae2a24cd8556d4b8",
+            "897e1d51480610de"
         ],
         "x": 1194,
-        "y": 1039,
+        "y": 1019,
         "w": 932,
-        "h": 162
+        "h": 142
     },
     {
         "id": "24b66573302654fa",
@@ -2475,9 +2450,7 @@
             "527ead6b917dbea4"
         ],
         "x": 614,
-        "y": 1059,
-        "w": 332,
-        "h": 142
+        "y": 1059
     },
     {
         "id": "360cb29c3a03b895",
@@ -2534,9 +2507,7 @@
             "0a0279495a8c76a5"
         ],
         "x": 34,
-        "y": 2999,
-        "w": 712,
-        "h": 142
+        "y": 2999
     },
     {
         "id": "7b81d39b2b7a4180",
@@ -2573,9 +2544,7 @@
             "fbba09129504c598"
         ],
         "x": 34,
-        "y": 2299,
-        "w": 892,
-        "h": 662
+        "y": 2299
     },
     {
         "id": "6a8daa7d30d25b64",
@@ -2633,9 +2602,7 @@
             "d90326e0a16228b4"
         ],
         "x": 34,
-        "y": 1999,
-        "w": 1092,
-        "h": 502
+        "y": 1999
     },
     {
         "id": "78ab1158b3db0f83",
@@ -2663,7 +2630,6 @@
             "80832e95ab957d1e",
             "bf5a2c9571ced28d",
             "05a26f45377d9a56",
-            "f2f4b2f713b7bfe6",
             "0fe4993b9ad9a81d",
             "fa5c198b40892123",
             "b5cb8ca2cd16e934",
@@ -2672,12 +2638,16 @@
             "38f6b8097733ea20",
             "45f13207a4e09f7c",
             "7e3e7a8ef21f033e",
-            "1aa733010cf157a6"
+            "1aa733010cf157a6",
+            "39f2f1743cf2c2e9",
+            "97b59cc9c05d79db",
+            "ac67f3c69a107409",
+            "0f5890a2b4d3c736"
         ],
         "x": 34,
-        "y": 99,
+        "y": 59,
         "w": 1102,
-        "h": 542
+        "h": 482
     },
     {
         "id": "0f75adccc23123b3",
@@ -2825,12 +2795,12 @@
             "35848a52e6d9d503",
             "80c4462470807fab",
             "4c3b94ff03d2d8fa",
-            "2097dfbec6913922"
+            "7087e69da0ea870f"
         ],
         "x": 1054,
         "y": 39,
         "w": 1172,
-        "h": 542
+        "h": 442
     },
     {
         "id": "25e2e72fbdf37a5d",
@@ -2876,6 +2846,181 @@
         "h": 182
     },
     {
+        "id": "731219d38de814f1",
+        "type": "group",
+        "z": "96ac9944.5b4dd8",
+        "name": "Handle Tally",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "487bf57a4fcc72bf",
+            "5d8eeb0fe4232fff",
+            "dee4432c4efb14e6",
+            "3eb5dbd26a420b4d",
+            "16856d29a6d25506",
+            "52ec4043bddcb2ab",
+            "a1f8c7d85a64df60",
+            "731968da42049195",
+            "363e4e4a72e896bc",
+            "11e058263dcec395",
+            "01c0009ac0f46e4a",
+            "1d0847d23cef92f5"
+        ],
+        "x": 24,
+        "y": 3479,
+        "w": 752,
+        "h": 242
+    },
+    {
+        "id": "77c46321.0fddbc",
+        "type": "group",
+        "z": "96ac9944.5b4dd8",
+        "name": "Program Radio Buttons",
+        "style": {
+            "label": true,
+            "fill": "#ffbfbf",
+            "stroke": "#000000",
+            "color": "#000000"
+        },
+        "nodes": [
+            "9bc9910e.d3c25",
+            "4bc7b146.9a2e6",
+            "9440a6bc.692198",
+            "4a8c694a.de8488",
+            "3bef5bb.e0eb7a4",
+            "83058452.948478",
+            "60046696.022888",
+            "6e729b1b.779de4",
+            "187a5c2d.00d2a4",
+            "5e6f5451.70e16c",
+            "fb6cd77a.f88b58",
+            "2ece2d4d.2a5002",
+            "3af4f9c3.3fa406",
+            "0995226901628529",
+            "70fe67f422b98ce9",
+            "0d08ba8f73a495da",
+            "0ebb6d9b8fba0e6a",
+            "e515e59f3182d2bc",
+            "6228b116a93313db",
+            "8e8ba6063788964f",
+            "db80f72133580c95",
+            "7dc6994b597a43d7",
+            "2d40dc0e7cc5c004"
+        ],
+        "x": 934,
+        "y": 859,
+        "w": 972,
+        "h": 522
+    },
+    {
+        "id": "97c79174.f6cf3",
+        "type": "group",
+        "z": "96ac9944.5b4dd8",
+        "name": "Handle Aux Input",
+        "style": {
+            "fill": "#ffffff",
+            "label": true
+        },
+        "nodes": [
+            "8a1af2c.aee871",
+            "d9892746.1eb768",
+            "44f303f7.96ac4c",
+            "45acd7f28cbb058c",
+            "30e7b1efb9b40b90"
+        ],
+        "x": 24,
+        "y": 2999,
+        "w": 412,
+        "h": 122
+    },
+    {
+        "id": "77ffcbeb.3e5634",
+        "type": "group",
+        "z": "96ac9944.5b4dd8",
+        "name": "Handle Cut or Auto Transition",
+        "style": {
+            "label": true,
+            "fill": "#bfdbef"
+        },
+        "nodes": [
+            "cddc4bf5.642908",
+            "9e1d09e5.a81398",
+            "1df17ea7.8b36d1",
+            "fcd50239.7c9c8",
+            "29c7cff1dda138da",
+            "747058b789dd81ad"
+        ],
+        "x": 24,
+        "y": 3139,
+        "w": 432,
+        "h": 162
+    },
+    {
+        "id": "5708436.a4e2dbc",
+        "type": "group",
+        "z": "96ac9944.5b4dd8",
+        "name": "Handle Program Input",
+        "style": {
+            "label": true,
+            "fill": "#ffbfbf"
+        },
+        "nodes": [
+            "277a15ca.d9396a",
+            "3ea94a96.b50b36",
+            "224081ab.df895e",
+            "d502c250654e9ee6",
+            "45b1ba609978657c"
+        ],
+        "x": 24,
+        "y": 2859,
+        "w": 382,
+        "h": 122
+    },
+    {
+        "id": "1b4382d4.7ea50d",
+        "type": "group",
+        "z": "96ac9944.5b4dd8",
+        "name": "Handle Preview Input",
+        "style": {
+            "label": true,
+            "fill": "#e3f3d3"
+        },
+        "nodes": [
+            "6c111a6e.d268a4",
+            "553e7342.c7a70c",
+            "5669684a040d3584",
+            "36c6267c.7003ba",
+            "c5c9cb390a209eeb"
+        ],
+        "x": 454,
+        "y": 2859,
+        "w": 392,
+        "h": 122
+    },
+    {
+        "id": "1d27da07.0c8016",
+        "type": "group",
+        "z": "96ac9944.5b4dd8",
+        "name": "For Development and Debugging",
+        "style": {
+            "fill": "#d1d1d1",
+            "label": true
+        },
+        "nodes": [
+            "26399e98.83bdc2",
+            "26fbeee6.822da2",
+            "7503250b.47bccc",
+            "2db44156.4fcd6e",
+            "6f50575.946f3a8",
+            "555f0c5f50b8e5ac"
+        ],
+        "x": 1014,
+        "y": 2119,
+        "w": 252,
+        "h": 242
+    },
+    {
         "id": "e660fb746dfbb567",
         "type": "group",
         "z": "7014b916.6d1208",
@@ -2907,9 +3052,7 @@
             }
         ],
         "x": 54,
-        "y": 1299,
-        "w": 832,
-        "h": 302
+        "y": 1299
     },
     {
         "id": "7730591b301c60cc",
@@ -2943,9 +3086,7 @@
             }
         ],
         "x": 54,
-        "y": 1619,
-        "w": 832,
-        "h": 302
+        "y": 1619
     },
     {
         "id": "724f9b9d163cf440",
@@ -2979,9 +3120,7 @@
             }
         ],
         "x": 54,
-        "y": 1939,
-        "w": 832,
-        "h": 302
+        "y": 1939
     },
     {
         "id": "b7ee310a.88129",
@@ -2997,9 +3136,9 @@
             "332196b2b1027d39",
             "abddd6e3ed488d95"
         ],
-        "x": 274,
+        "x": 264,
         "y": 1999,
-        "w": 442,
+        "w": 452,
         "h": 82
     },
     {
@@ -3016,9 +3155,9 @@
             "24fe830d36981eb3",
             "0f40ecd9e68ce3b8"
         ],
-        "x": 54,
+        "x": 44,
         "y": 2199,
-        "w": 442,
+        "w": 452,
         "h": 82
     },
     {
@@ -3035,9 +3174,9 @@
             "1dae92970a0edb9a",
             "a142407ffd770ccf"
         ],
-        "x": 54,
+        "x": 44,
         "y": 2099,
-        "w": 442,
+        "w": 452,
         "h": 82
     },
     {
@@ -3054,9 +3193,9 @@
             "b2d4699784c9527b",
             "b15bd8e70af7caff"
         ],
-        "x": 534,
+        "x": 524,
         "y": 2099,
-        "w": 442,
+        "w": 452,
         "h": 82
     },
     {
@@ -3073,9 +3212,9 @@
             "4d9ae0c58b752f8e",
             "ea5815f3434dbb63"
         ],
-        "x": 534,
+        "x": 524,
         "y": 2199,
-        "w": 442,
+        "w": 452,
         "h": 82
     },
     {
@@ -3204,9 +3343,7 @@
             "66e3d6a83ecdc509"
         ],
         "x": 1014,
-        "y": 779,
-        "w": 412,
-        "h": 162
+        "y": 779
     },
     {
         "id": "3087ae29047e1f3c",
@@ -3227,181 +3364,6 @@
         "y": 559,
         "w": 272,
         "h": 182
-    },
-    {
-        "id": "731219d38de814f1",
-        "type": "group",
-        "z": "96ac9944.5b4dd8",
-        "name": "Handle Tally",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "487bf57a4fcc72bf",
-            "5d8eeb0fe4232fff",
-            "dee4432c4efb14e6",
-            "3eb5dbd26a420b4d",
-            "16856d29a6d25506",
-            "52ec4043bddcb2ab",
-            "a1f8c7d85a64df60",
-            "731968da42049195",
-            "363e4e4a72e896bc",
-            "11e058263dcec395",
-            "01c0009ac0f46e4a",
-            "1d0847d23cef92f5"
-        ],
-        "x": 24,
-        "y": 3479,
-        "w": 752,
-        "h": 242
-    },
-    {
-        "id": "77c46321.0fddbc",
-        "type": "group",
-        "z": "96ac9944.5b4dd8",
-        "name": "Program Radio Buttons",
-        "style": {
-            "label": true,
-            "fill": "#ffbfbf",
-            "stroke": "#000000",
-            "color": "#000000"
-        },
-        "nodes": [
-            "9bc9910e.d3c25",
-            "4bc7b146.9a2e6",
-            "9440a6bc.692198",
-            "4a8c694a.de8488",
-            "3bef5bb.e0eb7a4",
-            "83058452.948478",
-            "60046696.022888",
-            "6e729b1b.779de4",
-            "187a5c2d.00d2a4",
-            "5e6f5451.70e16c",
-            "fb6cd77a.f88b58",
-            "2ece2d4d.2a5002",
-            "3af4f9c3.3fa406",
-            "0995226901628529",
-            "70fe67f422b98ce9",
-            "0d08ba8f73a495da",
-            "0ebb6d9b8fba0e6a",
-            "e515e59f3182d2bc",
-            "6228b116a93313db",
-            "8e8ba6063788964f",
-            "db80f72133580c95",
-            "7dc6994b597a43d7",
-            "2d40dc0e7cc5c004"
-        ],
-        "x": 934,
-        "y": 679,
-        "w": 972,
-        "h": 522
-    },
-    {
-        "id": "97c79174.f6cf3",
-        "type": "group",
-        "z": "96ac9944.5b4dd8",
-        "name": "Handle Aux Input",
-        "style": {
-            "fill": "#ffffff",
-            "label": true
-        },
-        "nodes": [
-            "8a1af2c.aee871",
-            "d9892746.1eb768",
-            "44f303f7.96ac4c",
-            "45acd7f28cbb058c",
-            "30e7b1efb9b40b90"
-        ],
-        "x": 24,
-        "y": 2999,
-        "w": 412,
-        "h": 122
-    },
-    {
-        "id": "77ffcbeb.3e5634",
-        "type": "group",
-        "z": "96ac9944.5b4dd8",
-        "name": "Handle Cut or Auto Transition",
-        "style": {
-            "label": true,
-            "fill": "#bfdbef"
-        },
-        "nodes": [
-            "cddc4bf5.642908",
-            "9e1d09e5.a81398",
-            "1df17ea7.8b36d1",
-            "fcd50239.7c9c8",
-            "29c7cff1dda138da",
-            "747058b789dd81ad"
-        ],
-        "x": 24,
-        "y": 3139,
-        "w": 432,
-        "h": 162
-    },
-    {
-        "id": "5708436.a4e2dbc",
-        "type": "group",
-        "z": "96ac9944.5b4dd8",
-        "name": "Handle Program Input",
-        "style": {
-            "label": true,
-            "fill": "#ffbfbf"
-        },
-        "nodes": [
-            "277a15ca.d9396a",
-            "3ea94a96.b50b36",
-            "224081ab.df895e",
-            "d502c250654e9ee6",
-            "45b1ba609978657c"
-        ],
-        "x": 24,
-        "y": 2859,
-        "w": 382,
-        "h": 122
-    },
-    {
-        "id": "1b4382d4.7ea50d",
-        "type": "group",
-        "z": "96ac9944.5b4dd8",
-        "name": "Handle Preview Input",
-        "style": {
-            "label": true,
-            "fill": "#e3f3d3"
-        },
-        "nodes": [
-            "6c111a6e.d268a4",
-            "553e7342.c7a70c",
-            "5669684a040d3584",
-            "36c6267c.7003ba",
-            "c5c9cb390a209eeb"
-        ],
-        "x": 454,
-        "y": 2859,
-        "w": 392,
-        "h": 122
-    },
-    {
-        "id": "1d27da07.0c8016",
-        "type": "group",
-        "z": "96ac9944.5b4dd8",
-        "name": "For Development and Debugging",
-        "style": {
-            "fill": "#d1d1d1",
-            "label": true
-        },
-        "nodes": [
-            "26399e98.83bdc2",
-            "26fbeee6.822da2",
-            "7503250b.47bccc",
-            "2db44156.4fcd6e",
-            "6f50575.946f3a8",
-            "555f0c5f50b8e5ac"
-        ],
-        "x": 1014,
-        "y": 2119,
-        "w": 252,
-        "h": 242
     },
     {
         "id": "a552506bc8ab8fc7",
@@ -3550,8 +3512,8 @@
         "type": "junction",
         "z": "41f3235e2124e3a2",
         "g": "5addd3a7c909e423",
-        "x": 1620,
-        "y": 3180,
+        "x": 460,
+        "y": 2320,
         "wires": [
             [
                 "03ccce0cf990ff92"
@@ -3608,7 +3570,7 @@
         "z": "96ac9944.5b4dd8",
         "g": "77c46321.0fddbc",
         "x": 1580,
-        "y": 960,
+        "y": 1140,
         "wires": [
             [
                 "3af4f9c3.3fa406"
@@ -3621,7 +3583,7 @@
         "z": "96ac9944.5b4dd8",
         "g": "77c46321.0fddbc",
         "x": 1300,
-        "y": 740,
+        "y": 920,
         "wires": [
             [
                 "e515e59f3182d2bc"
@@ -3816,8 +3778,8 @@
         "type": "junction",
         "z": "96ac9944.5b4dd8",
         "g": "2e267aabc8e94e20",
-        "x": 2040,
-        "y": 220,
+        "x": 870,
+        "y": 780,
         "wires": [
             [
                 "d5e87bb8c016a097",
@@ -3830,8 +3792,8 @@
         "type": "junction",
         "z": "96ac9944.5b4dd8",
         "g": "2e267aabc8e94e20",
-        "x": 1500,
-        "y": 240,
+        "x": 330,
+        "y": 800,
         "wires": [
             [
                 "32660b99d8ee5118"
@@ -14077,14 +14039,14 @@
         "type": "function",
         "z": "a3be0cff.690a5",
         "g": "534928771fae2008",
-        "name": "set network parms",
+        "name": "set network parms 2333",
         "func": "config = global.get(\"config\");\n \ndevices = config.devices\n \npp = devices.filter(x => x.category == \"ProPresenter\")[0]\n//node.log(\"pp7\")\nstat = pp.ip + ':' + pp.port\n//node.log(stat)\n\nnode.status({fill:\"red\", shape:\"dot\", text:stat });\n//node.log(\"payload:\" + msg.payload)\n\nurl = \"http://\" + pp.ip + \":\" + pp.port + \"/v1\" + msg.payload\n\nreturn  {\"payload\" : msg.payload   ,\n         \"url\"     : url        \n}  ;",
         "outputs": 1,
-        "noerr": 0,
+        "noerr": 13,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 210,
+        "x": 230,
         "y": 120,
         "wires": [
             [
@@ -16109,9 +16071,9 @@
         "wires": [
             [
                 "dc50ae3b27f150e1",
-                "202d37b25efcb48a",
                 "a43cb0039df0e3aa",
-                "ca20992f40dedd2e"
+                "ca20992f40dedd2e",
+                "7087e69da0ea870f"
             ]
         ]
     },
@@ -16236,8 +16198,8 @@
         "name": "",
         "statusCode": "",
         "headers": {},
-        "x": 1850,
-        "y": 500,
+        "x": 1750,
+        "y": 440,
         "wires": []
     },
     {
@@ -16270,8 +16232,8 @@
         "syntax": "mustache",
         "template": "<html><body><ul>\n<li>category  : {{category}}</li>   \n<li>event    : {{event}}</li>\n</ul></body></html>",
         "output": "str",
-        "x": 1660,
-        "y": 500,
+        "x": 1580,
+        "y": 440,
         "wires": [
             [
                 "2f03d9ee90e52582"
@@ -16420,15 +16382,30 @@
         "wires": []
     },
     {
-        "id": "2097dfbec6913922",
-        "type": "comment",
+        "id": "7087e69da0ea870f",
+        "type": "switch",
         "z": "a3be0cff.690a5",
         "g": "390d5b4557c906f8",
-        "name": "To Do - only respond to http if the request was an http",
-        "info": "",
-        "x": 1760,
-        "y": 540,
-        "wires": []
+        "name": "http only",
+        "property": "source",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "http",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1540,
+        "y": 400,
+        "wires": [
+            [
+                "202d37b25efcb48a"
+            ]
+        ]
     },
     {
         "id": "5ea11d01ecb2994d",
@@ -16519,8 +16496,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 1280,
-        "y": 2860,
+        "x": 140,
+        "y": 2040,
         "wires": [
             [
                 "6daddb00ec26b8df"
@@ -16542,8 +16519,8 @@
         "proxy": "",
         "authType": "",
         "senderr": false,
-        "x": 1750,
-        "y": 2860,
+        "x": 610,
+        "y": 2040,
         "wires": [
             [
                 "37f0cb453d02cea8"
@@ -16559,8 +16536,8 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 1320,
-        "y": 2920,
+        "x": 180,
+        "y": 2100,
         "wires": [
             [
                 "deef244e15244f20"
@@ -16587,8 +16564,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1550,
-        "y": 2920,
+        "x": 410,
+        "y": 2100,
         "wires": [
             [
                 "8763371b51617537",
@@ -16610,8 +16587,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2150,
-        "y": 3280,
+        "x": 1010,
+        "y": 2460,
         "wires": []
     },
     {
@@ -16647,8 +16624,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 4,
-        "x": 1310,
-        "y": 3140,
+        "x": 170,
+        "y": 2320,
         "wires": [
             [
                 "625d67be510c1eae"
@@ -16680,8 +16657,8 @@
         "arraySpltType": "len",
         "stream": false,
         "addname": "",
-        "x": 1870,
-        "y": 2920,
+        "x": 730,
+        "y": 2100,
         "wires": [
             [
                 "27356d8699c3d6f1"
@@ -16708,8 +16685,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1330,
-        "y": 3020,
+        "x": 190,
+        "y": 2200,
         "wires": [
             [
                 "0c8d0f92ee07e42f"
@@ -16734,8 +16711,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1790,
-        "y": 3240,
+        "x": 650,
+        "y": 2420,
         "wires": [
             [
                 "1d1b5b698f51b5cc"
@@ -16760,8 +16737,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 1940,
-        "y": 3240,
+        "x": 800,
+        "y": 2420,
         "wires": [
             [
                 "c05a2f35752a2c50",
@@ -16784,8 +16761,8 @@
         "proxy": "",
         "authType": "",
         "senderr": false,
-        "x": 1940,
-        "y": 3380,
+        "x": 800,
+        "y": 2560,
         "wires": [
             [
                 "f480023965d909b6"
@@ -16806,8 +16783,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2040,
-        "y": 2840,
+        "x": 900,
+        "y": 2020,
         "wires": []
     },
     {
@@ -16829,8 +16806,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1870,
-        "y": 2860,
+        "x": 730,
+        "y": 2040,
         "wires": [
             [
                 "804c8c93bf399e90"
@@ -16895,8 +16872,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1960,
-        "y": 3280,
+        "x": 820,
+        "y": 2460,
         "wires": [
             [
                 "e66338cab2336f7f",
@@ -16918,8 +16895,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2160,
-        "y": 3380,
+        "x": 1020,
+        "y": 2560,
         "wires": []
     },
     {
@@ -16944,8 +16921,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 1740,
-        "y": 3380,
+        "x": 600,
+        "y": 2560,
         "wires": [
             [
                 "593dfff661c7d42c"
@@ -16966,8 +16943,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2170,
-        "y": 3240,
+        "x": 1030,
+        "y": 2420,
         "wires": []
     },
     {
@@ -17255,8 +17232,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1600,
-        "y": 2860,
+        "x": 460,
+        "y": 2040,
         "wires": [
             [
                 "b421104ce78f2e8b"
@@ -17283,8 +17260,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1450,
-        "y": 2860,
+        "x": 310,
+        "y": 2040,
         "wires": [
             [
                 "7452f60ce0258510"
@@ -17323,8 +17300,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1940,
-        "y": 3320,
+        "x": 800,
+        "y": 2500,
         "wires": [
             [
                 "593dfff661c7d42c"
@@ -17464,8 +17441,8 @@
         "links": [
             "2c57d5ed8223848c"
         ],
-        "x": 1695,
-        "y": 3200,
+        "x": 555,
+        "y": 2280,
         "wires": []
     },
     {
@@ -17597,8 +17574,8 @@
         "name": "send to light console",
         "mode": "link",
         "links": [],
-        "x": 1415,
-        "y": 3100,
+        "x": 275,
+        "y": 2280,
         "wires": []
     },
     {
@@ -17641,10 +17618,10 @@
         "type": "function",
         "z": "41f3235e2124e3a2",
         "g": "744e7dfa2109b681",
-        "name": "set network parms",
+        "name": "set network parms 233336",
         "func": "cfg = flow.get(\"config_ip_port\");\n\ncfg = cfg.find( y => y.device == \"Propresenter\")\n\nnode.status(cfg)\nnode.log(cfg)\n\nurl = \"http://\" + cfg.ip + \":\" + cfg.port + \"/v1\" + msg.payload\n\nreturn  {\"payload\"  : msg.payload   ,\n         \"url\"       : url        \n}  ;",
         "outputs": 1,
-        "noerr": 0,
+        "noerr": 9,
         "initialize": "",
         "finalize": "",
         "libs": [],
@@ -17936,8 +17913,8 @@
             "1ac81781.75b738",
             "40cf067289330bd3"
         ],
-        "x": 1965,
-        "y": 1160,
+        "x": 1895,
+        "y": 1100,
         "wires": []
     },
     {
@@ -17971,13 +17948,27 @@
         "type": "change",
         "z": "41f3235e2124e3a2",
         "g": "15b97b41d117c04a",
-        "name": "",
+        "name": "format event",
         "rules": [
+            {
+                "t": "set",
+                "p": "source",
+                "pt": "msg",
+                "to": "propresenter",
+                "tot": "str"
+            },
             {
                 "t": "set",
                 "p": "cmd",
                 "pt": "msg",
                 "to": "$split(payload, \":\")[1]",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "parm",
+                "pt": "msg",
+                "to": "$split(payload, \":\")[2]",
                 "tot": "jsonata"
             },
             {
@@ -17993,11 +17984,13 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1540,
+        "x": 1410,
         "y": 1080,
         "wires": [
             [
-                "1a97cbd2dcd4e6e5"
+                "1a97cbd2dcd4e6e5",
+                "ae2a24cd8556d4b8",
+                "897e1d51480610de"
             ]
         ]
     },
@@ -18027,7 +18020,7 @@
         "links": [
             "01492bd8cce6e39b"
         ],
-        "x": 1305,
+        "x": 1235,
         "y": 1080,
         "wires": [
             [
@@ -18646,7 +18639,7 @@
         "type": "debug",
         "z": "41f3235e2124e3a2",
         "g": "24b66573302654fa",
-        "name": "",
+        "name": "poll err fcbopn",
         "active": true,
         "tosidebar": false,
         "console": false,
@@ -18655,7 +18648,7 @@
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 330,
+        "x": 340,
         "y": 780,
         "wires": []
     },
@@ -18664,10 +18657,10 @@
         "type": "function",
         "z": "41f3235e2124e3a2",
         "g": "24b66573302654fa",
-        "name": "set network parms",
+        "name": "set network parms 233420",
         "func": "config = global.get(\"config\");\n \ndevices = config.devices\n \npp = devices.filter(x => x.category == \"ProPresenter\")[0]\n//node.log(\"pp7\")\nstat = pp.ip + ':' + pp.port\n//node.log(stat)\n\nnode.status({fill:\"red\", shape:\"dot\", text:stat });\n//node.log(\"payload:\" + msg.payload)\n\nurl = \"http://\" + pp.ip + \":\" + pp.port + \"/v1\" + msg.payload\n\n\nreturn  {\"payload\" : msg.payload   ,\n         \"url\"     : url        \n}  ;",
         "outputs": 1,
-        "noerr": 0,
+        "noerr": 13,
         "initialize": "",
         "finalize": "",
         "libs": [],
@@ -19189,6 +19182,38 @@
         "info": "",
         "x": 530,
         "y": 1580,
+        "wires": []
+    },
+    {
+        "id": "ae2a24cd8556d4b8",
+        "type": "debug",
+        "z": "41f3235e2124e3a2",
+        "g": "15b97b41d117c04a",
+        "name": "debug 11",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1580,
+        "y": 1120,
+        "wires": []
+    },
+    {
+        "id": "897e1d51480610de",
+        "type": "link out",
+        "z": "41f3235e2124e3a2",
+        "g": "15b97b41d117c04a",
+        "name": "from pp handle vq",
+        "mode": "link",
+        "links": [
+            "fa5c198b40892123"
+        ],
+        "x": 1585,
+        "y": 1060,
         "wires": []
     },
     {
@@ -20470,7 +20495,7 @@
         "name": "TODO",
         "info": " - Test everything with an actual ATEM\n - Verify the Aux source message structures.",
         "x": 490,
-        "y": 60,
+        "y": 40,
         "wires": []
     },
     {
@@ -20739,8 +20764,8 @@
         "links": [
             "03ccce0cf990ff92"
         ],
-        "x": 1425,
-        "y": 200,
+        "x": 255,
+        "y": 760,
         "wires": [
             [
                 "f05677b3590d90d3",
@@ -20755,8 +20780,8 @@
         "g": "2e267aabc8e94e20",
         "name": "Video Cues",
         "info": "Vx:ProgramInput:x\nVx:PreviewInput:x\nVx:UpStreamKey:on :off\nVx:Macro:x",
-        "x": 1300,
-        "y": 160,
+        "x": 130,
+        "y": 720,
         "wires": []
     },
     {
@@ -20771,8 +20796,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1570,
-        "y": 240,
+        "x": 400,
+        "y": 800,
         "wires": [
             [
                 "770b41d2fd905b93"
@@ -20812,8 +20837,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 4,
-        "x": 1690,
-        "y": 240,
+        "x": 520,
+        "y": 800,
         "wires": [
             [
                 "836fdf46eff96526",
@@ -20843,8 +20868,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2140,
-        "y": 220,
+        "x": 970,
+        "y": 780,
         "wires": []
     },
     {
@@ -20859,8 +20884,8 @@
         "syntax": "mustache",
         "template": "{\n\"cmd\": \"ProgramInput\"   ,\n\"data\":{\"ME\":0,\n        \"videoSource\":{\n            \"id\": {{payload}} \n            }\n        }\n}",
         "output": "json",
-        "x": 1880,
-        "y": 180,
+        "x": 710,
+        "y": 740,
         "wires": [
             [
                 "055a540b83c0c3a2"
@@ -20879,8 +20904,8 @@
         "syntax": "mustache",
         "template": "{\n\"cmd\": \"PreviewInput\"   ,\n\"data\":{\"ME\":0,\n        \"videoSource\":{\n            \"id\": {{payload}} \n            }\n        }\n}",
         "output": "json",
-        "x": 1880,
-        "y": 220,
+        "x": 710,
+        "y": 780,
         "wires": [
             [
                 "055a540b83c0c3a2"
@@ -20899,8 +20924,8 @@
         "syntax": "mustache",
         "template": " {\n    \"cmd\": \"upstreamKeyer\",\n    \"data\": {\n        \"ME\": 0,\n        \"id\": 0,\n        \"state\":  {{payload}} \n    }\n}",
         "output": "json",
-        "x": 1890,
-        "y": 300,
+        "x": 720,
+        "y": 860,
         "wires": [
             [
                 "055a540b83c0c3a2"
@@ -20919,8 +20944,8 @@
         "syntax": "mustache",
         "template": "{\n    \"cmd\": \"macroAction\",\n    \"data\": {\n        \"macroId\": \"{{payload}}\" ,\n        \"action\": \"run\"\n    }\n}",
         "output": "json",
-        "x": 1850,
-        "y": 260,
+        "x": 680,
+        "y": 820,
         "wires": [
             [
                 "055a540b83c0c3a2"
@@ -20938,8 +20963,8 @@
         "links": [
             "1ac81781.75b738"
         ],
-        "x": 2095,
-        "y": 260,
+        "x": 925,
+        "y": 820,
         "wires": []
     },
     {
@@ -20956,8 +20981,8 @@
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 1590,
-        "y": 140,
+        "x": 420,
+        "y": 700,
         "wires": []
     },
     {
@@ -21035,7 +21060,8 @@
         "y": 2660,
         "wires": [
             [
-                "bc09b6ce8439b868"
+                "bc09b6ce8439b868",
+                "7f5333f54039126a"
             ]
         ]
     },
@@ -21125,7 +21151,7 @@
         "upload": false,
         "swaggerDoc": "",
         "x": 110,
-        "y": 300,
+        "y": 260,
         "wires": [
             [
                 "05a26f45377d9a56"
@@ -21138,8 +21164,8 @@
         "z": "96ac9944.5b4dd8",
         "g": "78ab1158b3db0f83",
         "name": "switch cmd",
-        "property": "payload.cmd",
-        "propertyType": "msg",
+        "property": "$lower(payload.cmd)",
+        "propertyType": "jsonata",
         "rules": [
             {
                 "t": "eq",
@@ -21184,7 +21210,7 @@
         "repair": false,
         "outputs": 8,
         "x": 580,
-        "y": 260,
+        "y": 220,
         "wires": [
             [
                 "b5cb8ca2cd16e934"
@@ -21223,7 +21249,7 @@
             "f7e9a17c62841c4f"
         ],
         "x": 585,
-        "y": 360,
+        "y": 320,
         "wires": []
     },
     {
@@ -21236,7 +21262,7 @@
             "02daa5be54df7acb"
         ],
         "x": 645,
-        "y": 420,
+        "y": 380,
         "wires": [
             [
                 "8a47ba19abc1fb74"
@@ -21260,7 +21286,7 @@
         "topic": "",
         "name": "unknown vq ",
         "x": 1040,
-        "y": 420,
+        "y": 380,
         "wires": []
     },
     {
@@ -21284,7 +21310,7 @@
         "to": "",
         "reg": false,
         "x": 790,
-        "y": 420,
+        "y": 380,
         "wires": [
             [
                 "3c77fd14383508cb",
@@ -21298,7 +21324,7 @@
         "type": "debug",
         "z": "96ac9944.5b4dd8",
         "g": "78ab1158b3db0f83",
-        "name": "",
+        "name": "debug 13",
         "active": true,
         "tosidebar": true,
         "console": false,
@@ -21307,8 +21333,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1020,
-        "y": 460,
+        "x": 1030,
+        "y": 420,
         "wires": []
     },
     {
@@ -21322,7 +21348,7 @@
             "084445fc7ab1aa20"
         ],
         "x": 915,
-        "y": 500,
+        "y": 460,
         "wires": []
     },
     {
@@ -21335,10 +21361,10 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "{ \"category\" : \"{{category}}\",   \n \"level\"     : \"{{level}}\"   ,  \n \"timestamp\" : \"{{millis}}\"  ,   \n \"event\"     : \"{{event}}\" \n}",
+        "template": "{ \"category\" : \"{{category}}\",   \n \"level\"     : \"{{level}}\"   ,  \n \"timestamp\" : \"{{millis}}\"  ,   \n \"event\"     : \"{{event}}\" ,\n \"source\"    : \"{{source}}\",\n \"cmd\"       : \"{{cmd}}\"\n}",
         "output": "json",
         "x": 770,
-        "y": 500,
+        "y": 460,
         "wires": [
             [
                 "52cfebc6258af914",
@@ -21388,13 +21414,13 @@
         "to": "",
         "reg": false,
         "x": 290,
-        "y": 240,
+        "y": 200,
         "wires": [
             [
                 "f3193666b7fcdacc",
-                "80832e95ab957d1e",
                 "c85324108ad17e28",
-                "c049199e02f58777"
+                "c049199e02f58777",
+                "39f2f1743cf2c2e9"
             ]
         ]
     },
@@ -21433,7 +21459,7 @@
         "to": "",
         "reg": false,
         "x": 790,
-        "y": 460,
+        "y": 420,
         "wires": [
             [
                 "f3193666b7fcdacc"
@@ -21452,7 +21478,7 @@
             "1ac81781.75b738"
         ],
         "x": 1045,
-        "y": 260,
+        "y": 220,
         "wires": []
     },
     {
@@ -21460,11 +21486,11 @@
         "type": "http response",
         "z": "96ac9944.5b4dd8",
         "g": "78ab1158b3db0f83",
-        "name": "",
+        "name": "send http response",
         "statusCode": "",
         "headers": {},
-        "x": 820,
-        "y": 600,
+        "x": 570,
+        "y": 480,
         "wires": []
     },
     {
@@ -21476,13 +21502,13 @@
         "active": true,
         "tosidebar": true,
         "console": false,
-        "tostatus": false,
+        "tostatus": true,
         "complete": "true",
         "targetType": "full",
         "statusVal": "",
-        "statusType": "auto",
+        "statusType": "counter",
         "x": 580,
-        "y": 160,
+        "y": 120,
         "wires": []
     },
     {
@@ -21497,8 +21523,8 @@
         "syntax": "mustache",
         "template": "<html><body><ul>\n<li>category  : {{category}}</li>   \n<li>event    : {{event}}</li>\n</ul></body></html>",
         "output": "str",
-        "x": 630,
-        "y": 600,
+        "x": 500,
+        "y": 440,
         "wires": [
             [
                 "12ea73b73d93deef"
@@ -21516,15 +21542,8 @@
                 "t": "set",
                 "p": "event",
                 "pt": "msg",
-                "to": "UI Rq:",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "source",
-                "pt": "msg",
-                "to": "UI",
-                "tot": "str"
+                "to": "source & \" Rq:\"",
+                "tot": "jsonata"
             }
         ],
         "action": "",
@@ -21533,10 +21552,11 @@
         "to": "",
         "reg": false,
         "x": 270,
-        "y": 180,
+        "y": 140,
         "wires": [
             [
-                "7b411f5fa5d1f708"
+                "7b411f5fa5d1f708",
+                "ac67f3c69a107409"
             ]
         ]
     },
@@ -21560,6 +21580,13 @@
                 "pt": "msg",
                 "to": "http",
                 "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "cmd",
+                "pt": "msg",
+                "to": "payload.cmd",
+                "tot": "msg"
             }
         ],
         "action": "",
@@ -21568,23 +21595,12 @@
         "to": "",
         "reg": false,
         "x": 270,
-        "y": 300,
+        "y": 260,
         "wires": [
             [
                 "7b411f5fa5d1f708"
             ]
         ]
-    },
-    {
-        "id": "f2f4b2f713b7bfe6",
-        "type": "comment",
-        "z": "96ac9944.5b4dd8",
-        "g": "78ab1158b3db0f83",
-        "name": "todo add switch to bypass ui requests",
-        "info": "",
-        "x": 340,
-        "y": 600,
-        "wires": []
     },
     {
         "id": "0fe4993b9ad9a81d",
@@ -21601,7 +21617,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 940,
-        "y": 540,
+        "y": 500,
         "wires": []
     },
     {
@@ -21609,13 +21625,16 @@
         "type": "link in",
         "z": "96ac9944.5b4dd8",
         "g": "78ab1158b3db0f83",
-        "name": "",
-        "links": [],
+        "name": "atem handle event",
+        "links": [
+            "897e1d51480610de"
+        ],
         "x": 105,
-        "y": 180,
+        "y": 140,
         "wires": [
             [
-                "bf5a2c9571ced28d"
+                "bf5a2c9571ced28d",
+                "97b59cc9c05d79db"
             ]
         ]
     },
@@ -21632,7 +21651,7 @@
         "template": "{\n\"cmd\": \"ProgramInput\"   ,\n\"data\":{\"ME\":0,\n        \"videoSource\":{\n            \"id\": {{payload.parm}} \n            }\n        }\n}",
         "output": "json",
         "x": 830,
-        "y": 140,
+        "y": 100,
         "wires": [
             [
                 "3731bed88a890359"
@@ -21652,7 +21671,7 @@
         "template": "{\n\"cmd\": \"PreviewInput\"   ,\n\"data\":{\"ME\":0,\n        \"videoSource\":{\n            \"id\": {{payload.parm}} \n            }\n        }\n}",
         "output": "json",
         "x": 830,
-        "y": 180,
+        "y": 140,
         "wires": [
             [
                 "3731bed88a890359"
@@ -21672,7 +21691,7 @@
         "template": "{\n    \"payload\": {\n        \"cmd\": \"auxSource\",\n        \"data\": {\n            \"ME\": 0,\n            \"videoSource\": {\n                \"id\": {{payload.parm}}\n            }\n        }\n    }\n}",
         "output": "json",
         "x": 820,
-        "y": 220,
+        "y": 180,
         "wires": [
             [
                 "3731bed88a890359"
@@ -21692,7 +21711,7 @@
         "template": "{\n    \"cmd\": \"performCut\",\n    \"data\": {\n        \"ME\": 0\n    }\n}",
         "output": "json",
         "x": 820,
-        "y": 260,
+        "y": 220,
         "wires": [
             [
                 "3731bed88a890359"
@@ -21712,7 +21731,7 @@
         "template": "{\n    \"cmd\": \"performAuto\",\n    \"data\": {\n        \"ME\": 0\n    }\n}",
         "output": "str",
         "x": 820,
-        "y": 300,
+        "y": 260,
         "wires": [
             [
                 "3731bed88a890359"
@@ -21732,7 +21751,7 @@
         "template": " {\n    \"cmd\": \"upstreamKeyer\",\n    \"data\": {\n        \"ME\": 0,\n        \"id\": 0,\n        \"state\":  {{payload.parm}} \n    }\n}",
         "output": "json",
         "x": 830,
-        "y": 340,
+        "y": 300,
         "wires": [
             [
                 "3731bed88a890359"
@@ -21752,7 +21771,7 @@
         "template": "{\n    \"cmd\": \"macroAction\",\n    \"data\": {\n        \"macroId\": \"{{payload.parm}}\" ,\n        \"action\": \"run\"\n    }\n}",
         "output": "json",
         "x": 820,
-        "y": 380,
+        "y": 340,
         "wires": [
             [
                 "3731bed88a890359"
@@ -21790,7 +21809,8 @@
                 "32aa5a91.010ab6"
             ],
             [
-                "cd57c1d478d65a05"
+                "cd57c1d478d65a05",
+                "6342cda5560f00ba"
             ]
         ]
     },
@@ -21804,12 +21824,12 @@
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "\"Test Mode - ATEM disabled\"",
+        "complete": "\"Test Mode - ATEM bypassed\"",
         "targetType": "jsonata",
         "statusVal": "",
         "statusType": "auto",
-        "x": 550,
-        "y": 2600,
+        "x": 580,
+        "y": 2580,
         "wires": []
     },
     {
@@ -21989,7 +22009,7 @@
         "payloadType": "str",
         "topic": "",
         "x": 1430,
-        "y": 760,
+        "y": 940,
         "wires": [
             [
                 "70fe67f422b98ce9"
@@ -22016,7 +22036,7 @@
         "payloadType": "str",
         "topic": "",
         "x": 1430,
-        "y": 840,
+        "y": 1020,
         "wires": [
             [
                 "70fe67f422b98ce9"
@@ -22043,7 +22063,7 @@
         "payloadType": "str",
         "topic": "",
         "x": 1430,
-        "y": 800,
+        "y": 980,
         "wires": [
             [
                 "70fe67f422b98ce9"
@@ -22070,7 +22090,7 @@
         "payloadType": "str",
         "topic": "",
         "x": 1430,
-        "y": 880,
+        "y": 1060,
         "wires": [
             [
                 "70fe67f422b98ce9"
@@ -22097,7 +22117,7 @@
         "payloadType": "str",
         "topic": "",
         "x": 1430,
-        "y": 920,
+        "y": 1100,
         "wires": [
             [
                 "70fe67f422b98ce9"
@@ -22124,7 +22144,7 @@
         "payloadType": "str",
         "topic": "",
         "x": 1430,
-        "y": 1000,
+        "y": 1180,
         "wires": [
             [
                 "70fe67f422b98ce9"
@@ -22151,7 +22171,7 @@
         "payloadType": "str",
         "topic": "",
         "x": 1430,
-        "y": 960,
+        "y": 1140,
         "wires": [
             [
                 "70fe67f422b98ce9"
@@ -22178,7 +22198,7 @@
         "payloadType": "str",
         "topic": "",
         "x": 1430,
-        "y": 1120,
+        "y": 1300,
         "wires": [
             [
                 "70fe67f422b98ce9"
@@ -22205,7 +22225,7 @@
         "payloadType": "str",
         "topic": "",
         "x": 1430,
-        "y": 1160,
+        "y": 1340,
         "wires": [
             [
                 "70fe67f422b98ce9"
@@ -22232,7 +22252,7 @@
         "payloadType": "str",
         "topic": "",
         "x": 1430,
-        "y": 1040,
+        "y": 1220,
         "wires": [
             [
                 "70fe67f422b98ce9"
@@ -22259,7 +22279,7 @@
         "payloadType": "str",
         "topic": "",
         "x": 1430,
-        "y": 1080,
+        "y": 1260,
         "wires": [
             [
                 "70fe67f422b98ce9"
@@ -22276,7 +22296,7 @@
             "1ac81781.75b738"
         ],
         "x": 1845,
-        "y": 1020,
+        "y": 1200,
         "wires": []
     },
     {
@@ -22292,7 +22312,7 @@
         "template": "  {\n        \"cmd\": \"programInput\",\n        \"data\": {\n            \"ME\": 0,\n            \"videoSource\": {\n                \"id\": {{payload}}\n            }\n        }\n    }\n ",
         "output": "json",
         "x": 1720,
-        "y": 1020,
+        "y": 1200,
         "wires": [
             [
                 "2ece2d4d.2a5002"
@@ -22309,7 +22329,7 @@
             "a7cf0a5119df01fa"
         ],
         "x": 1605,
-        "y": 1100,
+        "y": 1280,
         "wires": [
             [
                 "3af4f9c3.3fa406"
@@ -22339,7 +22359,7 @@
         "repair": false,
         "outputs": 3,
         "x": 1080,
-        "y": 740,
+        "y": 920,
         "wires": [
             [
                 "0ebb6d9b8fba0e6a"
@@ -22371,7 +22391,7 @@
         "to": "",
         "reg": false,
         "x": 1230,
-        "y": 720,
+        "y": 900,
         "wires": [
             [
                 "db80f72133580c95"
@@ -22450,7 +22470,7 @@
         "repair": false,
         "outputs": 12,
         "x": 1210,
-        "y": 940,
+        "y": 1120,
         "wires": [
             [
                 "9bc9910e.d3c25"
@@ -22500,7 +22520,7 @@
             "a1f8c7d85a64df60"
         ],
         "x": 975,
-        "y": 740,
+        "y": 920,
         "wires": [
             [
                 "0d08ba8f73a495da"
@@ -22522,7 +22542,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1180,
-        "y": 1120,
+        "y": 1300,
         "wires": []
     },
     {
@@ -22546,7 +22566,7 @@
         "to": "",
         "reg": false,
         "x": 1230,
-        "y": 760,
+        "y": 940,
         "wires": [
             [
                 "db80f72133580c95"
@@ -23295,8 +23315,8 @@
         "g": "2e267aabc8e94e20",
         "name": "TODO Intergrate with event handler",
         "info": "This needs to be integrated with the http and UI handler.\nTHe Propresenter source side needs to emit \nthe new standard messages. ",
-        "x": 1920,
-        "y": 120,
+        "x": 750,
+        "y": 680,
         "wires": []
     },
     {
@@ -23916,7 +23936,7 @@
         "name": "ToDO - need to refactor these alternate paths",
         "info": "They should not enter at this point but rather act via standard message",
         "x": 1710,
-        "y": 1060,
+        "y": 1240,
         "wires": []
     },
     {
@@ -23939,8 +23959,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2060,
-        "y": 80,
+        "x": 890,
+        "y": 640,
         "wires": [
             []
         ]
@@ -23965,13 +23985,121 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1850,
-        "y": 80,
+        "x": 680,
+        "y": 640,
         "wires": [
             [
                 "f1fdb5a342409993"
             ]
         ]
+    },
+    {
+        "id": "39f2f1743cf2c2e9",
+        "type": "switch",
+        "z": "96ac9944.5b4dd8",
+        "g": "78ab1158b3db0f83",
+        "name": "only http",
+        "property": "source",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "http",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 460,
+        "y": 400,
+        "wires": [
+            [
+                "80832e95ab957d1e"
+            ]
+        ]
+    },
+    {
+        "id": "97b59cc9c05d79db",
+        "type": "debug",
+        "z": "96ac9944.5b4dd8",
+        "g": "78ab1158b3db0f83",
+        "name": "debug 12",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 220,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "ac67f3c69a107409",
+        "type": "debug",
+        "z": "96ac9944.5b4dd8",
+        "g": "78ab1158b3db0f83",
+        "name": "debug 14",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 420,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "0f5890a2b4d3c736",
+        "type": "comment",
+        "z": "96ac9944.5b4dd8",
+        "g": "78ab1158b3db0f83",
+        "name": "switch was based on msg.payload.cmd",
+        "info": "",
+        "x": 670,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "7f5333f54039126a",
+        "type": "debug",
+        "z": "96ac9944.5b4dd8",
+        "g": "5a3761.bcd618a",
+        "name": "atem disabled",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 640,
+        "y": 2720,
+        "wires": []
+    },
+    {
+        "id": "6342cda5560f00ba",
+        "type": "debug",
+        "z": "96ac9944.5b4dd8",
+        "g": "5a3761.bcd618a",
+        "name": "debug 15",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 2620,
+        "wires": []
     },
     {
         "id": "e7c0599b.768918",
