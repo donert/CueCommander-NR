@@ -24,12 +24,12 @@ The current configuration is stored in the global.config context item.
 
 # Standard Event Elements
 
-| Element | Description |
-|---------|-------------|
-|         |             |
-|         |             |
-|         |             |
-|         |             |
-|         |             |
+| Element      | Description                                                                                                                   |
+|--------------|-------------------------------------------------------------------------------------------------------------------------------|
+| msg.event    |                                                                                                                               |
+| msg.level    | Values include info, warn, error                                                                                              |
+| msg.category | Indicates the subsystem category of the event. Values include Projector, ProPresenter, Lights, Cameras, Video Mixer, Control. |
+| msg.millis   | Timestamp that the event was created.                                                                                         |
+| msg.source   | Indicates the source of the event. Values include http, ui, internal                                                          |
 
 : Event Elements
