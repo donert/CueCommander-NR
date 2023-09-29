@@ -538,10 +538,13 @@
             "865ea7d7fbf1ee90",
             "cd1ac294767f67ad",
             "2a65449d30a4d9ed",
-            "bc40ba21ea89a651"
+            "bc40ba21ea89a651",
+            "54b618f573e0d6a5"
         ],
         "x": 34,
-        "y": 2139
+        "y": 2139,
+        "w": 952,
+        "h": 322
     },
     {
         "id": "7dfc3cbb.7e95c4",
@@ -564,7 +567,9 @@
             "91b646678b1004cc"
         ],
         "x": 24,
-        "y": 2479
+        "y": 2479,
+        "w": 652,
+        "h": 202
     },
     {
         "id": "8ad3a579.ea8288",
@@ -584,7 +589,9 @@
             "a2e428e8.108d28"
         ],
         "x": 44,
-        "y": 2699
+        "y": 2699,
+        "w": 562,
+        "h": 162
     },
     {
         "id": "7269a2d8.645c0c",
@@ -2188,7 +2195,9 @@
             "d23699ff5823c741"
         ],
         "x": 704,
-        "y": 39
+        "y": 39,
+        "w": 86,
+        "h": 82
     },
     {
         "id": "534928771fae2008",
@@ -2220,7 +2229,9 @@
             "e538429ba7dd29e8"
         ],
         "x": 8,
-        "y": 19
+        "y": 19,
+        "w": 998,
+        "h": 602
     },
     {
         "id": "df7d79ce617335b0",
@@ -2238,7 +2249,9 @@
             "135e0fa7b7360c23"
         ],
         "x": 34,
-        "y": 1219
+        "y": 1219,
+        "w": 482,
+        "h": 162
     },
     {
         "id": "25bb1c8478dea52c",
@@ -2258,7 +2271,9 @@
             "1d70cd6c160c6644"
         ],
         "x": 44,
-        "y": 1399
+        "y": 1399,
+        "w": 652,
+        "h": 162
     },
     {
         "id": "de8a99cbceb3bb71",
@@ -2280,7 +2295,9 @@
             "cecb8ad5099913b8"
         ],
         "x": 564,
-        "y": 1139
+        "y": 1139,
+        "w": 622,
+        "h": 222
     },
     {
         "id": "efb37696f1583fcf",
@@ -2300,7 +2317,9 @@
             "133b4a402a995c62"
         ],
         "x": 34,
-        "y": 1579
+        "y": 1579,
+        "w": 762,
+        "h": 122
     },
     {
         "id": "da1fb65e0b403415",
@@ -2317,7 +2336,9 @@
             "3e8592d98870eb4c"
         ],
         "x": 924,
-        "y": 1579
+        "y": 1579,
+        "w": 492,
+        "h": 122
     },
     {
         "id": "e73524794151ecbb",
@@ -2340,7 +2361,9 @@
             "a0e4138d893e1cb6"
         ],
         "x": 44,
-        "y": 1719
+        "y": 1719,
+        "w": 732,
+        "h": 242
     },
     {
         "id": "15b97b41d117c04a",
@@ -2421,7 +2444,9 @@
             "485295c9e9f22ced"
         ],
         "x": 1434,
-        "y": 759
+        "y": 759,
+        "w": 252,
+        "h": 142
     },
     {
         "id": "f912df7263a6a90a",
@@ -2801,7 +2826,9 @@
             "1860b51f9daac4ab"
         ],
         "x": 14,
-        "y": 639
+        "y": 639,
+        "w": 1372,
+        "h": 502
     },
     {
         "id": "25e2e72fbdf37a5d",
@@ -3012,7 +3039,9 @@
             "70f531a2361f0db3"
         ],
         "x": 44,
-        "y": 1999
+        "y": 1999,
+        "w": 632,
+        "h": 122
     },
     {
         "id": "e660fb746dfbb567",
@@ -3302,7 +3331,9 @@
             "b0d85b58d7f56e63"
         ],
         "x": 34,
-        "y": 239
+        "y": 239,
+        "w": 612,
+        "h": 82
     },
     {
         "id": "f84de4e32d54e734",
@@ -11141,9 +11172,9 @@
         "type": "comment",
         "z": "7014b916.6d1208",
         "g": "7d817ae0b8327b7c",
-        "name": "TODO",
+        "name": "TODO camera IP hardcode",
         "info": "The osc server code has the camera IP addresses and camera qty hardcoded in it. \n\nNeed to remove that hard coding and supply via command line. \n\nLonger term, it would be nice to fet rid of the python server altogether and do it all in nore-red.",
-        "x": 110,
+        "x": 170,
         "y": 3100,
         "wires": []
     },
@@ -13670,7 +13701,6 @@
         "id": "3bb16c88.749214",
         "type": "ui_button",
         "z": "a3be0cff.690a5",
-        "d": true,
         "g": "85bfeabb.c569f8",
         "name": "",
         "group": "b97ff6b2.560288",
@@ -13684,7 +13714,7 @@
         "bgcolor": "",
         "className": "",
         "icon": "fa-speaker",
-        "payload": "/clear/audio",
+        "payload": "/clear/layer/audio",
         "payloadType": "str",
         "topic": "",
         "topicType": "str",
@@ -17004,6 +17034,32 @@
             [
                 "bef6f52df7d65a0b",
                 "80c4462470807fab"
+            ]
+        ]
+    },
+    {
+        "id": "54b618f573e0d6a5",
+        "type": "inject",
+        "z": "a3be0cff.690a5",
+        "g": "85bfeabb.c569f8",
+        "name": "clear audio",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "/clear/group/0/trigger",
+        "payloadType": "str",
+        "x": 140,
+        "y": 2380,
+        "wires": [
+            [
+                "3bb16c88.749214"
             ]
         ]
     },
