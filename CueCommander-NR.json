@@ -339,7 +339,8 @@
             "1d7972ead8406838",
             "cc0a71f458751cea",
             "7f5333f54039126a",
-            "6342cda5560f00ba"
+            "6342cda5560f00ba",
+            "73a5a931b753e2d6"
         ],
         "x": 14,
         "y": 2379,
@@ -365,7 +366,9 @@
             "4b1c1f856661af50"
         ],
         "x": 34,
-        "y": 79
+        "y": 79,
+        "w": 432,
+        "h": 162
     },
     {
         "id": "26f7e48.6e71e1c",
@@ -400,7 +403,9 @@
             "f2b215c66ba0a91c"
         ],
         "x": 34,
-        "y": 753
+        "y": 753,
+        "w": 1418,
+        "h": 488
     },
     {
         "id": "a10197b4.719a58",
@@ -1517,11 +1522,11 @@
             "4e318fff.2f414",
             "851b5714.714348",
             "380817e7.0d4d58",
-            "adeb0e6d.dc05b",
             "320b1f78.2913c",
             "102af5b4.89f82a",
-            "23a29d32.4ebce2",
-            "aa409703.25a2d8"
+            "aa409703.25a2d8",
+            "904565488c09a4c2",
+            "a4175d541f6b8f22"
         ],
         "x": 34,
         "y": 1659,
@@ -1552,7 +1557,9 @@
             "743ed796.8d5508"
         ],
         "x": 24,
-        "y": 459
+        "y": 459,
+        "w": 832,
+        "h": 262
     },
     {
         "id": "c459911f.288c6",
@@ -1569,7 +1576,9 @@
             "93d6c2d3.a86a7"
         ],
         "x": 24,
-        "y": 299
+        "y": 299,
+        "w": 722,
+        "h": 122
     },
     {
         "id": "a983bc11.746d",
@@ -1855,7 +1864,9 @@
             "723d62dd07fbf52d"
         ],
         "x": 34,
-        "y": 1299
+        "y": 1299,
+        "w": 512,
+        "h": 262
     },
     {
         "id": "50abd8f9327f05ea",
@@ -1960,7 +1971,9 @@
             "6cab352a2c035e31"
         ],
         "x": 34,
-        "y": 1599
+        "y": 1599,
+        "w": 612,
+        "h": 302
     },
     {
         "id": "f591482dad1c88d8",
@@ -2062,7 +2075,9 @@
             "1470aa1bc2cc27ce"
         ],
         "x": 554,
-        "y": 59
+        "y": 59,
+        "w": 732,
+        "h": 202
     },
     {
         "id": "17309520137816ca",
@@ -2581,7 +2596,9 @@
             "d90326e0a16228b4"
         ],
         "x": 34,
-        "y": 1999
+        "y": 1999,
+        "w": 1092,
+        "h": 502
     },
     {
         "id": "78ab1158b3db0f83",
@@ -2972,9 +2989,9 @@
             "6f50575.946f3a8",
             "555f0c5f50b8e5ac"
         ],
-        "x": 1004,
+        "x": 1064,
         "y": 2119,
-        "w": 262,
+        "w": 402,
         "h": 242
     },
     {
@@ -3324,7 +3341,9 @@
             "66e3d6a83ecdc509"
         ],
         "x": 1014,
-        "y": 779
+        "y": 779,
+        "w": 412,
+        "h": 162
     },
     {
         "id": "3087ae29047e1f3c",
@@ -3389,7 +3408,8 @@
             "5a08e6e65dfbc0e8",
             "3a07af28d5fe3aae",
             "25cf873edc86d706",
-            "97acfe75fe50c7b0"
+            "97acfe75fe50c7b0",
+            "91535749197c095c"
         ],
         "x": 24,
         "y": 3319,
@@ -3821,7 +3841,7 @@
         "type": "junction",
         "z": "96ac9944.5b4dd8",
         "g": "1d27da07.0c8016",
-        "x": 1240,
+        "x": 1440,
         "y": 2160,
         "wires": [
             [
@@ -3867,6 +3887,20 @@
         "wires": [
             [
                 "731968da42049195"
+            ]
+        ]
+    },
+    {
+        "id": "a4175d541f6b8f22",
+        "type": "junction",
+        "z": "17ca131.e488ced",
+        "g": "bb661aa6.08f608",
+        "x": 60,
+        "y": 1740,
+        "wires": [
+            [
+                "851b5714.714348",
+                "320b1f78.2913c"
             ]
         ]
     },
@@ -5399,11 +5433,12 @@
         "z": "17ca131.e488ced",
         "g": "bb661aa6.08f608",
         "name": "save to flow context",
-        "func": "//msg.key identifies projector: prj1, prj2 etc\n//msg.topic is parameter\n\n//TODO: Make this more scalable rather than hardcoded to 4 items.\n\nprj = msg.instance;\n\n//switch(msg.instance) {\n//  case 1:\n// /   prj = \"1\";\n//    break;\n    \n//  case 2:\n//    prj = \"2\";\n//    break;\n    \n//  case 3:\n//    prj = \"3\";\n//    break;    \n    \n//  case 4:\n//    prj = \"4\";\n//    break;    \n    \n//  default:\n//    prj = \"?\";/\n//}\n\nswitch(msg.topic) {\n    case \"getlamps\":\n        key = \"lamp\"\n        val = msg.payload[0].hours ;\n        break;\n    case \"getpowerstate\":\n        key= \"power\"\n        val = (msg.payload == 0  ? \"Off\" : \"On\");\n        break;\n    case \"getname\":\n        key= \"name\"\n        val = msg.payload  ;\n        break; \n    case \"getinput\":\n        key= \"input\"\n        val = msg.payload.source  ;\n        break;           \n    default:\n        key = \"unknown\"\n        val = \"?\"\n}\n  \nfk = \"ps_\" + String(prj) + \"_\" + key\nfv = val\n\nflow.set(fk,fv)\n\nreturn msg;",
+        "func": "//msg.key identifies projector: prj1, prj2 etc\n//msg.topic is parameter\n\n//TODO: Make this more scalable rather than hardcoded to 4 items.\n\nconst prj = msg.instance;\n\n//switch(msg.instance) {\n//  case 1:\n// /   prj = \"1\";\n//    break;\n    \n//  case 2:\n//    prj = \"2\";\n//    break;\n    \n//  case 3:\n//    prj = \"3\";\n//    break;    \n    \n//  case 4:\n//    prj = \"4\";\n//    break;    \n    \n//  default:\n//    prj = \"?\";/\n//}\nvar key, val;\n\nswitch(msg.topic) {\n    case \"getlamps\":\n        key = \"lamp\"\n        val = msg.payload[0].hours ;\n        break;\n    case \"getpowerstate\":\n        key= \"power\"\n        val = (msg.payload == 0  ? \"Off\" : \"On\");\n        break;\n    case \"getname\":\n        key= \"name\"\n        val = msg.payload  ;\n        break; \n    case \"getinput\":\n        key= \"input\"\n        val = msg.payload.source  ;\n        break;           \n    default:\n        key = \"unknown\"\n        val = \"?\"\n}\n  \nconst fk = \"ps_\" + String(prj) + \"_\" + key\nconst fv = val\n\nflow.set(fk,fv)\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
+        "libs": [],
         "x": 360,
         "y": 1740,
         "wires": [
@@ -5454,26 +5489,6 @@
         "x": 150,
         "y": 1820,
         "wires": []
-    },
-    {
-        "id": "adeb0e6d.dc05b",
-        "type": "function",
-        "z": "17ca131.e488ced",
-        "g": "bb661aa6.08f608",
-        "name": "clone",
-        "func": "\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "x": 110,
-        "y": 1740,
-        "wires": [
-            [
-                "851b5714.714348",
-                "320b1f78.2913c"
-            ]
-        ]
     },
     {
         "id": "102af5b4.89f82a",
@@ -5538,17 +5553,6 @@
                 "25444250f2ab0854"
             ]
         ]
-    },
-    {
-        "id": "23a29d32.4ebce2",
-        "type": "comment",
-        "z": "17ca131.e488ced",
-        "g": "bb661aa6.08f608",
-        "name": "todo refactor the function tp be more scalable",
-        "info": "",
-        "x": 430,
-        "y": 1700,
-        "wires": []
     },
     {
         "id": "aa409703.25a2d8",
@@ -7921,6 +7925,17 @@
                 "343ecb61.5d9144"
             ]
         ]
+    },
+    {
+        "id": "904565488c09a4c2",
+        "type": "comment",
+        "z": "17ca131.e488ced",
+        "g": "bb661aa6.08f608",
+        "name": "todo wire into source",
+        "info": "",
+        "x": 160,
+        "y": 1700,
+        "wires": []
     },
     {
         "id": "8eb0c09e.7f105",
@@ -21708,7 +21723,7 @@
             "32aa5a91.010ab6"
         ],
         "uncaught": false,
-        "x": 540,
+        "x": 90,
         "y": 2420,
         "wires": [
             []
@@ -24017,7 +24032,7 @@
         "topic": "",
         "payload": "{\"cmd\":\"performCut\",\"data\":{\"ME\":0}}",
         "payloadType": "json",
-        "x": 1130,
+        "x": 1190,
         "y": 2160,
         "wires": [
             [
@@ -24047,7 +24062,7 @@
         "topic": "",
         "payload": "{\"cmd\":\"performAuto\",\"data\":{\"ME\":0}}",
         "payloadType": "json",
-        "x": 1130,
+        "x": 1190,
         "y": 2200,
         "wires": [
             [
@@ -24077,7 +24092,7 @@
         "topic": "",
         "payload": "{\"cmd\":\"auxSource\",\"data\":{\"id\":1}}",
         "payloadType": "json",
-        "x": 1130,
+        "x": 1190,
         "y": 2240,
         "wires": [
             [
@@ -24107,7 +24122,7 @@
         "topic": "",
         "payload": "{\"cmd\":\"programInput\",\"data\":{\"ME\":0,\"videoSource\":{\"id\":3}}}",
         "payloadType": "json",
-        "x": 1140,
+        "x": 1200,
         "y": 2320,
         "wires": [
             [
@@ -24137,7 +24152,7 @@
         "topic": "",
         "payload": "{\"cmd\":\"previewInput\",\"data\":{\"ME\":0,\"videoSource\":{\"id\":0}}}",
         "payloadType": "json",
-        "x": 1130,
+        "x": 1190,
         "y": 2280,
         "wires": [
             [
@@ -24690,6 +24705,28 @@
         "statusType": "auto",
         "x": 580,
         "y": 3440,
+        "wires": []
+    },
+    {
+        "id": "91535749197c095c",
+        "type": "comment",
+        "z": "96ac9944.5b4dd8",
+        "g": "731219d38de814f1",
+        "name": "TODO - test button colour",
+        "info": "",
+        "x": 950,
+        "y": 3360,
+        "wires": []
+    },
+    {
+        "id": "73a5a931b753e2d6",
+        "type": "comment",
+        "z": "96ac9944.5b4dd8",
+        "g": "5a3761.bcd618a",
+        "name": "The ATEM node always tries to connect. ",
+        "info": "don't know of a way to turn it off (automatically) when ATEM is not present on the network (ie testing)",
+        "x": 640,
+        "y": 2460,
         "wires": []
     },
     {
