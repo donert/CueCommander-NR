@@ -500,7 +500,9 @@
             "8e73c0a3bb7138f6"
         ],
         "x": 14,
-        "y": 59
+        "y": 59,
+        "w": 692,
+        "h": 162
     },
     {
         "id": "85bfeabb.c569f8",
@@ -788,7 +790,9 @@
             "afdc0609070f7d1c"
         ],
         "x": 14,
-        "y": 719
+        "y": 719,
+        "w": 912,
+        "h": 322
     },
     {
         "id": "c8d8db35.9a9e88",
@@ -1437,7 +1441,9 @@
             "9db1e8a6c6542da8"
         ],
         "x": 14,
-        "y": 539
+        "y": 539,
+        "w": 1092,
+        "h": 162
     },
     {
         "id": "eec2fe41.6fc47",
@@ -1696,7 +1702,9 @@
             "6e4e66cf6abb5faa"
         ],
         "x": 874,
-        "y": 3239
+        "y": 3239,
+        "w": 972,
+        "h": 402
     },
     {
         "id": "bcbb1fe0.e492a",
@@ -1717,7 +1725,9 @@
             "a933114d.d816d"
         ],
         "x": 10,
-        "y": 299
+        "y": 299,
+        "w": 716,
+        "h": 202
     },
     {
         "id": "b0498d092b7b9b25",
@@ -2074,7 +2084,9 @@
             "a8137b3234b7bec3"
         ],
         "x": 28,
-        "y": 1219
+        "y": 1219,
+        "w": 884,
+        "h": 1048
     },
     {
         "id": "1f02f351d734f2f4",
@@ -2144,7 +2156,9 @@
             "ce7ec2284e930d83"
         ],
         "x": 864,
-        "y": 2999
+        "y": 2999,
+        "w": 482,
+        "h": 222
     },
     {
         "id": "ef38c433b5664af7",
@@ -2409,7 +2423,9 @@
             "527ead6b917dbea4"
         ],
         "x": 614,
-        "y": 1059
+        "y": 1059,
+        "w": 332,
+        "h": 142
     },
     {
         "id": "360cb29c3a03b895",
@@ -2466,7 +2482,9 @@
             "0a0279495a8c76a5"
         ],
         "x": 34,
-        "y": 2999
+        "y": 2999,
+        "w": 712,
+        "h": 142
     },
     {
         "id": "7b81d39b2b7a4180",
@@ -2503,7 +2521,9 @@
             "fbba09129504c598"
         ],
         "x": 34,
-        "y": 2299
+        "y": 2299,
+        "w": 892,
+        "h": 662
     },
     {
         "id": "6a8daa7d30d25b64",
@@ -2810,33 +2830,6 @@
         "h": 182
     },
     {
-        "id": "731219d38de814f1",
-        "type": "group",
-        "z": "96ac9944.5b4dd8",
-        "name": "Handle Tally",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "487bf57a4fcc72bf",
-            "5d8eeb0fe4232fff",
-            "dee4432c4efb14e6",
-            "3eb5dbd26a420b4d",
-            "16856d29a6d25506",
-            "52ec4043bddcb2ab",
-            "a1f8c7d85a64df60",
-            "731968da42049195",
-            "363e4e4a72e896bc",
-            "11e058263dcec395",
-            "01c0009ac0f46e4a",
-            "1d0847d23cef92f5"
-        ],
-        "x": 24,
-        "y": 3479,
-        "w": 752,
-        "h": 242
-    },
-    {
         "id": "77c46321.0fddbc",
         "type": "group",
         "z": "96ac9944.5b4dd8",
@@ -3036,7 +3029,9 @@
             }
         ],
         "x": 54,
-        "y": 1299
+        "y": 1299,
+        "w": 832,
+        "h": 302
     },
     {
         "id": "7730591b301c60cc",
@@ -3070,7 +3065,9 @@
             }
         ],
         "x": 54,
-        "y": 1619
+        "y": 1619,
+        "w": 832,
+        "h": 302
     },
     {
         "id": "724f9b9d163cf440",
@@ -3104,7 +3101,9 @@
             }
         ],
         "x": 54,
-        "y": 1939
+        "y": 1939,
+        "w": 832,
+        "h": 302
     },
     {
         "id": "b7ee310a.88129",
@@ -3346,6 +3345,56 @@
         "y": 559,
         "w": 272,
         "h": 182
+    },
+    {
+        "id": "01fe472270a676c6",
+        "type": "group",
+        "z": "96ac9944.5b4dd8",
+        "name": "Test Tally",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "984f0f2d5bb4eac2",
+            "4fc95b73493a1e56",
+            "c9b2c8a3821202d0",
+            "fa2928f4a0bcf1c3"
+        ],
+        "x": 34,
+        "y": 3619,
+        "w": 232,
+        "h": 162
+    },
+    {
+        "id": "731219d38de814f1",
+        "type": "group",
+        "z": "96ac9944.5b4dd8",
+        "name": "Handle Tally",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "487bf57a4fcc72bf",
+            "5d8eeb0fe4232fff",
+            "dee4432c4efb14e6",
+            "3eb5dbd26a420b4d",
+            "16856d29a6d25506",
+            "52ec4043bddcb2ab",
+            "a1f8c7d85a64df60",
+            "731968da42049195",
+            "363e4e4a72e896bc",
+            "11e058263dcec395",
+            "01c0009ac0f46e4a",
+            "1d0847d23cef92f5",
+            "5a08e6e65dfbc0e8",
+            "3a07af28d5fe3aae",
+            "25cf873edc86d706",
+            "97acfe75fe50c7b0"
+        ],
+        "x": 24,
+        "y": 3319,
+        "w": 1062,
+        "h": 262
     },
     {
         "id": "a552506bc8ab8fc7",
@@ -3805,6 +3854,19 @@
                 "4c3b94ff03d2d8fa",
                 "80c4462470807fab",
                 "4aa62049f4b1394f"
+            ]
+        ]
+    },
+    {
+        "id": "fa2928f4a0bcf1c3",
+        "type": "junction",
+        "z": "96ac9944.5b4dd8",
+        "g": "01fe472270a676c6",
+        "x": 240,
+        "y": 3700,
+        "wires": [
+            [
+                "731968da42049195"
             ]
         ]
     },
@@ -22285,149 +22347,6 @@
         "wires": []
     },
     {
-        "id": "487bf57a4fcc72bf",
-        "type": "link in",
-        "z": "96ac9944.5b4dd8",
-        "g": "731219d38de814f1",
-        "name": "Handle Tally",
-        "links": [
-            "75a4fd4de666883e"
-        ],
-        "x": 65,
-        "y": 3520,
-        "wires": [
-            [
-                "5d8eeb0fe4232fff",
-                "3eb5dbd26a420b4d"
-            ]
-        ]
-    },
-    {
-        "id": "5d8eeb0fe4232fff",
-        "type": "debug",
-        "z": "96ac9944.5b4dd8",
-        "g": "731219d38de814f1",
-        "name": "tally response",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 230,
-        "y": 3520,
-        "wires": []
-    },
-    {
-        "id": "dee4432c4efb14e6",
-        "type": "split",
-        "z": "96ac9944.5b4dd8",
-        "g": "731219d38de814f1",
-        "name": "",
-        "splt": "\\n",
-        "spltType": "str",
-        "arraySplt": 1,
-        "arraySpltType": "len",
-        "stream": false,
-        "addname": "index",
-        "x": 390,
-        "y": 3560,
-        "wires": [
-            [
-                "52ec4043bddcb2ab",
-                "a1f8c7d85a64df60",
-                "731968da42049195"
-            ]
-        ]
-    },
-    {
-        "id": "3eb5dbd26a420b4d",
-        "type": "change",
-        "z": "96ac9944.5b4dd8",
-        "g": "731219d38de814f1",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "payload.data",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 220,
-        "y": 3560,
-        "wires": [
-            [
-                "dee4432c4efb14e6"
-            ]
-        ]
-    },
-    {
-        "id": "16856d29a6d25506",
-        "type": "debug",
-        "z": "96ac9944.5b4dd8",
-        "g": "731219d38de814f1",
-        "name": "debug 5",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 660,
-        "y": 3520,
-        "wires": []
-    },
-    {
-        "id": "52ec4043bddcb2ab",
-        "type": "switch",
-        "z": "96ac9944.5b4dd8",
-        "g": "731219d38de814f1",
-        "name": "",
-        "property": "payload.program.tally",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "true"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 530,
-        "y": 3520,
-        "wires": [
-            [
-                "16856d29a6d25506"
-            ]
-        ]
-    },
-    {
-        "id": "a1f8c7d85a64df60",
-        "type": "link out",
-        "z": "96ac9944.5b4dd8",
-        "g": "731219d38de814f1",
-        "name": "from handle Tally",
-        "mode": "link",
-        "links": [
-            "6228b116a93313db",
-            "d99387946562fcf0"
-        ],
-        "x": 525,
-        "y": 3580,
-        "wires": []
-    },
-    {
         "id": "9bc9910e.d3c25",
         "type": "ui_button",
         "z": "96ac9944.5b4dd8",
@@ -23607,146 +23526,6 @@
         ]
     },
     {
-        "id": "731968da42049195",
-        "type": "switch",
-        "z": "96ac9944.5b4dd8",
-        "g": "731219d38de814f1",
-        "name": "map ATEM input to camera",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "5",
-                "vt": "num"
-            },
-            {
-                "t": "eq",
-                "v": "6",
-                "vt": "num"
-            },
-            {
-                "t": "eq",
-                "v": "7",
-                "vt": "num"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 3,
-        "x": 420,
-        "y": 3640,
-        "wires": [
-            [
-                "363e4e4a72e896bc"
-            ],
-            [
-                "11e058263dcec395"
-            ],
-            [
-                "01c0009ac0f46e4a"
-            ]
-        ]
-    },
-    {
-        "id": "363e4e4a72e896bc",
-        "type": "change",
-        "z": "96ac9944.5b4dd8",
-        "g": "731219d38de814f1",
-        "name": "5 > 1",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "1",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 610,
-        "y": 3600,
-        "wires": [
-            [
-                "1d0847d23cef92f5"
-            ]
-        ]
-    },
-    {
-        "id": "11e058263dcec395",
-        "type": "change",
-        "z": "96ac9944.5b4dd8",
-        "g": "731219d38de814f1",
-        "name": "6 > 2",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "2",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 610,
-        "y": 3640,
-        "wires": [
-            [
-                "1d0847d23cef92f5"
-            ]
-        ]
-    },
-    {
-        "id": "01c0009ac0f46e4a",
-        "type": "change",
-        "z": "96ac9944.5b4dd8",
-        "g": "731219d38de814f1",
-        "name": "7 > 3",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "3",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 610,
-        "y": 3680,
-        "wires": [
-            [
-                "1d0847d23cef92f5"
-            ]
-        ]
-    },
-    {
-        "id": "1d0847d23cef92f5",
-        "type": "link out",
-        "z": "96ac9944.5b4dd8",
-        "g": "731219d38de814f1",
-        "name": "from ATEM Tally",
-        "mode": "link",
-        "links": [
-            "4fbe7095.907c4"
-        ],
-        "x": 735,
-        "y": 3640,
-        "wires": []
-    },
-    {
         "id": "83efeac99c86c0f4",
         "type": "comment",
         "z": "96ac9944.5b4dd8",
@@ -24502,6 +24281,415 @@
         "statusType": "auto",
         "x": 560,
         "y": 2620,
+        "wires": []
+    },
+    {
+        "id": "984f0f2d5bb4eac2",
+        "type": "inject",
+        "z": "96ac9944.5b4dd8",
+        "g": "01fe472270a676c6",
+        "name": "test 5",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "5",
+        "payloadType": "str",
+        "x": 130,
+        "y": 3660,
+        "wires": [
+            [
+                "fa2928f4a0bcf1c3"
+            ]
+        ]
+    },
+    {
+        "id": "4fc95b73493a1e56",
+        "type": "inject",
+        "z": "96ac9944.5b4dd8",
+        "g": "01fe472270a676c6",
+        "name": "test 6",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "6",
+        "payload": "",
+        "payloadType": "str",
+        "x": 130,
+        "y": 3700,
+        "wires": [
+            [
+                "fa2928f4a0bcf1c3"
+            ]
+        ]
+    },
+    {
+        "id": "c9b2c8a3821202d0",
+        "type": "inject",
+        "z": "96ac9944.5b4dd8",
+        "g": "01fe472270a676c6",
+        "name": "test 7",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "7",
+        "payload": "",
+        "payloadType": "str",
+        "x": 130,
+        "y": 3740,
+        "wires": [
+            [
+                "fa2928f4a0bcf1c3"
+            ]
+        ]
+    },
+    {
+        "id": "487bf57a4fcc72bf",
+        "type": "link in",
+        "z": "96ac9944.5b4dd8",
+        "g": "731219d38de814f1",
+        "name": "Handle Tally",
+        "links": [
+            "75a4fd4de666883e"
+        ],
+        "x": 65,
+        "y": 3380,
+        "wires": [
+            [
+                "5d8eeb0fe4232fff",
+                "3eb5dbd26a420b4d"
+            ]
+        ]
+    },
+    {
+        "id": "5d8eeb0fe4232fff",
+        "type": "debug",
+        "z": "96ac9944.5b4dd8",
+        "g": "731219d38de814f1",
+        "name": "tally response",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 230,
+        "y": 3380,
+        "wires": []
+    },
+    {
+        "id": "dee4432c4efb14e6",
+        "type": "split",
+        "z": "96ac9944.5b4dd8",
+        "g": "731219d38de814f1",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "index",
+        "x": 390,
+        "y": 3420,
+        "wires": [
+            [
+                "52ec4043bddcb2ab",
+                "a1f8c7d85a64df60",
+                "731968da42049195",
+                "97acfe75fe50c7b0"
+            ]
+        ]
+    },
+    {
+        "id": "3eb5dbd26a420b4d",
+        "type": "change",
+        "z": "96ac9944.5b4dd8",
+        "g": "731219d38de814f1",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.data",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 220,
+        "y": 3420,
+        "wires": [
+            [
+                "dee4432c4efb14e6"
+            ]
+        ]
+    },
+    {
+        "id": "16856d29a6d25506",
+        "type": "debug",
+        "z": "96ac9944.5b4dd8",
+        "g": "731219d38de814f1",
+        "name": "debug 5",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 680,
+        "y": 3360,
+        "wires": []
+    },
+    {
+        "id": "52ec4043bddcb2ab",
+        "type": "switch",
+        "z": "96ac9944.5b4dd8",
+        "g": "731219d38de814f1",
+        "name": "",
+        "property": "payload.program.tally",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 530,
+        "y": 3360,
+        "wires": [
+            [
+                "16856d29a6d25506"
+            ]
+        ]
+    },
+    {
+        "id": "a1f8c7d85a64df60",
+        "type": "link out",
+        "z": "96ac9944.5b4dd8",
+        "g": "731219d38de814f1",
+        "name": "from handle Tally",
+        "mode": "link",
+        "links": [
+            "6228b116a93313db",
+            "d99387946562fcf0"
+        ],
+        "x": 575,
+        "y": 3400,
+        "wires": []
+    },
+    {
+        "id": "731968da42049195",
+        "type": "switch",
+        "z": "96ac9944.5b4dd8",
+        "g": "731219d38de814f1",
+        "name": "map ATEM input to camera",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "5",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "6",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "7",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 600,
+        "y": 3500,
+        "wires": [
+            [
+                "363e4e4a72e896bc"
+            ],
+            [
+                "11e058263dcec395"
+            ],
+            [
+                "01c0009ac0f46e4a"
+            ]
+        ]
+    },
+    {
+        "id": "363e4e4a72e896bc",
+        "type": "change",
+        "z": "96ac9944.5b4dd8",
+        "g": "731219d38de814f1",
+        "name": "5 > 1",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "1",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 790,
+        "y": 3460,
+        "wires": [
+            [
+                "1d0847d23cef92f5"
+            ]
+        ]
+    },
+    {
+        "id": "11e058263dcec395",
+        "type": "change",
+        "z": "96ac9944.5b4dd8",
+        "g": "731219d38de814f1",
+        "name": "6 > 2",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "2",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 790,
+        "y": 3500,
+        "wires": [
+            [
+                "1d0847d23cef92f5"
+            ]
+        ]
+    },
+    {
+        "id": "01c0009ac0f46e4a",
+        "type": "change",
+        "z": "96ac9944.5b4dd8",
+        "g": "731219d38de814f1",
+        "name": "7 > 3",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "3",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 790,
+        "y": 3540,
+        "wires": [
+            [
+                "1d0847d23cef92f5"
+            ]
+        ]
+    },
+    {
+        "id": "1d0847d23cef92f5",
+        "type": "link out",
+        "z": "96ac9944.5b4dd8",
+        "g": "731219d38de814f1",
+        "name": "from ATEM Tally",
+        "mode": "link",
+        "links": [
+            "4fbe7095.907c4"
+        ],
+        "x": 915,
+        "y": 3500,
+        "wires": []
+    },
+    {
+        "id": "3a07af28d5fe3aae",
+        "type": "comment",
+        "z": "96ac9944.5b4dd8",
+        "g": "731219d38de814f1",
+        "name": "Switch camera lights",
+        "info": "",
+        "x": 970,
+        "y": 3540,
+        "wires": []
+    },
+    {
+        "id": "25cf873edc86d706",
+        "type": "comment",
+        "z": "96ac9944.5b4dd8",
+        "g": "731219d38de814f1",
+        "name": "Change button colour",
+        "info": "",
+        "x": 720,
+        "y": 3400,
+        "wires": []
+    },
+    {
+        "id": "97acfe75fe50c7b0",
+        "type": "debug",
+        "z": "96ac9944.5b4dd8",
+        "g": "731219d38de814f1",
+        "name": "debug 18",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 580,
+        "y": 3440,
         "wires": []
     },
     {
