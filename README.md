@@ -13,5 +13,3 @@ An Audio/Visual/Lighting automation application using the node-red platform. It 
 * Sony IP PTZ Video Camera via VISCA-IP (currently using the VISCAOverIP python package)
 * Sony Video Projectors via PJLINK
 * Planning Center Services using their API
-
-To run the VISCAOverIP use "python3 oscToPTZ.py". The camera IP addresses are near the top of oscToPTZ.py file.
