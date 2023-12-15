@@ -377,7 +377,8 @@
         "name": "Main Communications",
         "style": {
             "label": true,
-            "color": "#000000"
+            "color": "#000000",
+            "fill": "#e3f3d3"
         },
         "nodes": [
             "241fcd48.6aa722",
@@ -3493,12 +3494,15 @@
             "ff93bb908b8ba5ae",
             "cabb70e79886c488",
             "308780d2468636ea",
-            "395d6c08aa4ac3f8"
+            "395d6c08aa4ac3f8",
+            "f0288be5bc522de9",
+            "145651ca287066fb",
+            "5a22c276687a3101"
         ],
         "x": 54,
         "y": 2579,
         "w": 412,
-        "h": 122
+        "h": 202
     },
     {
         "id": "eb627db3f36881b7",
@@ -3539,12 +3543,15 @@
             "4e1b1efede33cbbe",
             "5d0145dad033f1c8",
             "365378af1c8ae081",
-            "6d16d50f4a30caf6"
+            "6d16d50f4a30caf6",
+            "f6b739d054a8db73",
+            "bc2d3eab8d72d52d",
+            "4320deca3fa42868"
         ],
         "x": 54,
-        "y": 2719,
+        "y": 2799,
         "w": 412,
-        "h": 122
+        "h": 202
     },
     {
         "id": "c51cfe74402f799b",
@@ -3578,7 +3585,8 @@
             "0195fce4a16e3616",
             "bbc1304c73a3c4bf",
             "1389927c17aaae31",
-            "21ece2adbe7667ab"
+            "21ece2adbe7667ab",
+            "3436382b1f37bdd4"
         ],
         "x": 494,
         "y": 2434,
@@ -3610,7 +3618,7 @@
         "z": "ee400291.7cb",
         "name": "Looks",
         "style": {
-            "fill": "#e3f3d3",
+            "fill": "#bfdbef",
             "label": true
         },
         "nodes": [
@@ -3624,7 +3632,114 @@
         "x": 28,
         "y": 2408,
         "w": 1364,
-        "h": 539
+        "h": 619
+    },
+    {
+        "id": "3e16b207ba4e1296",
+        "type": "group",
+        "z": "ee400291.7cb",
+        "name": "",
+        "style": {
+            "fill": "#92d04f",
+            "label": true
+        },
+        "nodes": [
+            "46ee93d2c079bdea"
+        ],
+        "x": 974,
+        "y": 999,
+        "w": 292,
+        "h": 82
+    },
+    {
+        "id": "05c3a21ac1cd5c65",
+        "type": "group",
+        "z": "ee400291.7cb",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "c574577c1941fc5e",
+            "e6f921b7d77e532f",
+            "bc7515fbf9d5cb3d",
+            "452d263d9cc1b07d",
+            "90c14080a192bb10",
+            "1b47819666e7fa58",
+            "26969e7f88db2450"
+        ],
+        "x": 34,
+        "y": 3039,
+        "w": 412,
+        "h": 202
+    },
+    {
+        "id": "75e0c0054c897b11",
+        "type": "group",
+        "z": "ee400291.7cb",
+        "name": "Clear Controls",
+        "style": {
+            "fill": "#dbcbe7",
+            "label": true
+        },
+        "nodes": [
+            "38a23807775dde44",
+            "e21e8f5b96551c68",
+            "70f9010babd6247b",
+            "0438e5ad9cf02083",
+            "b064ee5dc0df0bd3",
+            "cf0747024cca1405",
+            "41eff65c0a974eba",
+            "171b83748f34f988",
+            "9f519e3a7eb96eda",
+            "7e324b0a1e1c2dee",
+            "18bf39efa22c3a05",
+            "678d664692834560",
+            "769f44e41b101d1d",
+            "18f986df8d7cf336"
+        ],
+        "x": 474,
+        "y": 3039,
+        "w": 722,
+        "h": 282
+    },
+    {
+        "id": "da364ef2722b2f7d",
+        "type": "group",
+        "z": "ee400291.7cb",
+        "name": "Programming Aids",
+        "style": {
+            "fill": "#bfdbef",
+            "label": true
+        },
+        "nodes": [
+            "4811a91083302abc",
+            "b74d22784d74533b",
+            "9506dee2ae70e9e8",
+            "a70c90c84f349922",
+            "9fc70e6b5add848f",
+            "2f2d9653c542aa33",
+            "2287e65897becd68",
+            "f481935da7c1fb5f",
+            "cd32689869ae8895",
+            "c68fff7840e515c6",
+            "992da2c3f006328b",
+            "17f4319e37a82b65",
+            "bc6dee3699fb23ea",
+            "6028fe963840f699",
+            "cfb83ab34066696a",
+            "27caf598f1b1f6aa",
+            "4340e09e84462a1e"
+        ],
+        "x": 34,
+        "y": 3359,
+        "w": 1002,
+        "h": 502
     },
     {
         "id": "a552506bc8ab8fc7",
@@ -4123,7 +4238,7 @@
         "y": 2800,
         "wires": [
             [
-                "1389927c17aaae31"
+                "3436382b1f37bdd4"
             ]
         ]
     },
@@ -4762,26 +4877,6 @@
         "className": ""
     },
     {
-        "id": "91f2105813c9346b",
-        "type": "ui_spacer",
-        "z": "ee400291.7cb",
-        "name": "spacer",
-        "group": "446cfe7e.e013f",
-        "order": 4,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "547ec4ff7572263d",
-        "type": "ui_spacer",
-        "z": "ee400291.7cb",
-        "name": "spacer",
-        "group": "446cfe7e.e013f",
-        "order": 6,
-        "width": 3,
-        "height": 1
-    },
-    {
         "id": "bf92c639d58e9d52",
         "type": "ui_group",
         "name": "Test or Prod",
@@ -5045,6 +5140,59 @@
         "width": "6",
         "collapse": false,
         "className": ""
+    },
+    {
+        "id": "b6af0ae0df9d3a39",
+        "type": "ui_group",
+        "name": "Clear",
+        "tab": "b36c9a8b.092df8",
+        "order": 6,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "a0d2379726c5b29d",
+        "type": "ui_group",
+        "name": "Programming Aids",
+        "tab": "b36c9a8b.092df8",
+        "order": 7,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "aa77273aba5e6bc4",
+        "type": "ui_group",
+        "name": "Quick Selects",
+        "tab": "b36c9a8b.092df8",
+        "order": 8,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d3f3963b42fc7892",
+        "type": "ui_spacer",
+        "z": "ee400291.7cb",
+        "name": "spacer",
+        "group": "446cfe7e.e013f",
+        "order": 4,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "3178c18f7526760f",
+        "type": "ui_spacer",
+        "z": "ee400291.7cb",
+        "name": "spacer",
+        "group": "446cfe7e.e013f",
+        "order": 6,
+        "width": 3,
+        "height": 1
     },
     {
         "id": "c6213b74.2cce48",
@@ -11716,7 +11864,9 @@
             "bb3bef9bb4ee98d1",
             "91108f49ada24ad4",
             "7e7e52fe54c56052",
-            "8fb7a0958c03c1c9"
+            "8fb7a0958c03c1c9",
+            "171b83748f34f988",
+            "b74d22784d74533b"
         ],
         "x": 95,
         "y": 900,
@@ -12755,7 +12905,7 @@
         "g": "f1a1cac018967916",
         "group": "0834dd19f5b0da94",
         "name": "",
-        "order": 0,
+        "order": 1,
         "width": 0,
         "height": 0,
         "columns": [
@@ -14024,7 +14174,7 @@
         "fieldType": "msg",
         "format": "json",
         "syntax": "mustache",
-        "template": "[\n    {\n        \"ch\": 49,\n        \"lvl\": 100,\n        \"hs\": [\n            240,\n            100\n        ]\n    },\n    {\n        \"ch\": 50,\n        \"lvl\": 100,\n        \"hs\": [\n            247,\n            100\n        ]\n    },\n    {\n        \"ch\": 51,\n        \"lvl\": 100,\n        \"hs\": [\n            254,\n            100\n        ]\n    },\n    {\n        \"ch\": 52,\n        \"lvl\": 100,\n        \"hs\": [\n            261,\n            100\n        ]\n    },\n    {\n        \"ch\": 53,\n        \"lvl\": 100,\n        \"hs\": [\n            268,\n            100\n        ]\n    },\n    {\n        \"ch\": 54,\n        \"lvl\": 100,\n        \"hs\": [\n            275,\n            100\n        ]\n    },\n    {\n        \"ch\": 55,\n        \"lvl\": 100,\n        \"hs\": [\n            282,\n            100\n        ]\n    },\n    {\n        \"ch\": 45,\n        \"lvl\": 100,\n        \"hs\": [\n            289,\n            100\n        ]\n    },\n    {\n        \"ch\": 46,\n        \"lvl\": 100,\n        \"hs\": [\n            296,\n            100\n        ]\n    },\n    {\n        \"ch\": 47,\n        \"lvl\": 100,\n        \"hs\": [\n            304,\n            100\n        ]\n    },\n    {\n        \"ch\": 48,\n        \"lvl\": 100,\n        \"hs\": [\n            311,\n            100\n        ]\n    },\n    {\n        \"ch\": 56,\n        \"lvl\": 100,\n        \"hs\": [\n            318,\n            100\n        ]\n    },\n    {\n        \"ch\": 57,\n        \"lvl\": 100,\n        \"hs\": [\n            325,\n            100\n        ]\n    },\n    {\n        \"ch\": 58,\n        \"lvl\": 100,\n        \"hs\": [\n            332,\n            100\n        ]\n    },\n    {\n        \"ch\": 59,\n        \"lvl\": 100,\n        \"hs\": [\n            339,\n            100\n        ]\n    },\n    {\n        \"ch\": 60,\n        \"lvl\": 100,\n        \"hs\": [\n            346,\n            100\n        ]\n    },\n    {\n        \"ch\": 61,\n        \"lvl\": 100,\n        \"hs\": [\n            353,\n            100\n        ]\n    },\n    {\n        \"ch\": 62,\n        \"lvl\": 100,\n        \"hs\": [\n            360,\n            100\n        ]\n    }\n ]",
+        "template": "[\n    {\n        \"ch\": 49,\n        \"lvl\": 100,\n        \"hs\": [\n            240,\n            100\n        ]\n    },\n    {\n        \"ch\": 50,\n        \"lvl\": 100,\n        \"hs\": [\n            247,\n            100\n        ]\n    },\n    {\n        \"ch\": 51,\n        \"lvl\": 100,\n        \"hs\": [\n            254,\n            100\n        ]\n    },\n    {\n        \"ch\": 52,\n        \"lvl\": 100,\n        \"hs\": [\n            261,\n            100\n        ]\n    },\n    {\n        \"ch\": 53,\n        \"lvl\": 100,\n        \"hs\": [\n            268,\n            100\n        ]\n    },\n    {\n        \"ch\": 54,\n        \"lvl\": 100,\n        \"hs\": [\n            275,\n            100\n        ]\n    },\n    {\n        \"ch\": 55,\n        \"lvl\": 100,\n        \"hs\": [\n            282,\n            100\n        ]\n    },\n    {\n        \"ch\": 45,\n        \"lvl\": 100,\n        \"hs\": [\n            289,\n            100\n        ]\n    },\n    {\n        \"ch\": 46,\n        \"lvl\": 100,\n        \"hs\": [\n            296,\n            100\n        ]\n    },\n    {\n        \"ch\": 47,\n        \"lvl\": 100,\n        \"hs\": [\n            304,\n            100\n        ]\n    },\n    {\n        \"ch\": 48,\n        \"lvl\": 100,\n        \"hs\": [\n            311,\n            100\n        ]\n    },\n    {\n        \"ch\": 56,\n        \"lvl\": 100,\n        \"hs\": [\n            318,\n            100\n        ]\n    },\n    {\n        \"ch\": 57,\n        \"lvl\": 100,\n        \"hs\": [\n            325,\n            100\n        ]\n    },\n    {\n        \"ch\": 58,\n        \"lvl\": 100,\n        \"hs\": [\n            332,\n            100\n        ]\n    },\n    {\n        \"ch\": 59,\n        \"lvl\": 100,\n        \"hs\": [\n            339,\n            100\n        ]\n    },\n    {\n        \"ch\": 60,\n        \"lvl\": 100,\n        \"hs\": [\n            346,\n            100\n        ]\n    },\n    {\n        \"ch\": 61,\n        \"lvl\": 100,\n        \"hs\": [\n            353,\n            100\n        ]\n    },\n    {\n        \"ch\": 62,\n        \"lvl\": 100,\n        \"hs\": [\n            359,\n            100\n        ]\n    }\n ]",
         "output": "json",
         "x": 340,
         "y": 2620,
@@ -14040,7 +14190,7 @@
         "type": "inject",
         "z": "ee400291.7cb",
         "g": "4e0030df4e68c382",
-        "name": "Walls B to R",
+        "name": "Walls B->R",
         "props": [
             {
                 "p": "payload"
@@ -14057,7 +14207,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 170,
+        "x": 160,
         "y": 2620,
         "wires": [
             [
@@ -14126,10 +14276,10 @@
         "fieldType": "msg",
         "format": "json",
         "syntax": "mustache",
-        "template": "[\n    {\n        \"ch\": 49,\n        \"lvl\": 100,\n        \"hs\": [\n            0,\n            100\n        ]\n    },\n    {\n        \"ch\": 50,\n        \"lvl\": 100,\n        \"hs\": [\n            4,\n            100\n        ]\n    },\n    {\n        \"ch\": 51,\n        \"lvl\": 100,\n        \"hs\": [\n            7,\n            100\n        ]\n    },\n    {\n        \"ch\": 52,\n        \"lvl\": 100,\n        \"hs\": [\n            11,\n            100\n        ]\n    },\n    {\n        \"ch\": 53,\n        \"lvl\": 100,\n        \"hs\": [\n            14,\n            100\n        ]\n    },\n    {\n        \"ch\": 54,\n        \"lvl\": 100,\n        \"hs\": [\n            18,\n            100\n        ]\n    },\n    {\n        \"ch\": 55,\n        \"lvl\": 100,\n        \"hs\": [\n            21,\n            100\n        ]\n    },\n    {\n        \"ch\": 45,\n        \"lvl\": 100,\n        \"hs\": [\n            25,\n            100\n        ]\n    },\n    {\n        \"ch\": 46,\n        \"lvl\": 100,\n        \"hs\": [\n            28,\n            100\n        ]\n    },\n    {\n        \"ch\": 47,\n        \"lvl\": 100,\n        \"hs\": [\n            32,\n            100\n        ]\n    },\n    {\n        \"ch\": 48,\n        \"lvl\": 100,\n        \"hs\": [\n            35,\n            100\n        ]\n    },\n    {\n        \"ch\": 56,\n        \"lvl\": 100,\n        \"hs\": [\n            39,\n            100\n        ]\n    },\n    {\n        \"ch\": 57,\n        \"lvl\": 100,\n        \"hs\": [\n            42,\n            100\n        ]\n    },\n    {\n        \"ch\": 58,\n        \"lvl\": 100,\n        \"hs\": [\n            46,\n            100\n        ]\n    },\n    {\n        \"ch\": 59,\n        \"lvl\": 100,\n        \"hs\": [\n            49,\n            100\n        ]\n    },\n    {\n        \"ch\": 60,\n        \"lvl\": 100,\n        \"hs\": [\n            53,\n            100\n        ]\n    },\n    {\n        \"ch\": 61,\n        \"lvl\": 100,\n        \"hs\": [\n            56,\n            100\n        ]\n    },\n    {\n        \"ch\": 62,\n        \"lvl\": 100,\n        \"hs\": [\n            60,\n            100\n        ]\n    }\n ]",
+        "template": "[\n    {\n        \"ch\": 49,\n        \"lvl\": 100,\n        \"hs\": [\n            0,\n            100\n        ]\n    },\n    {\n        \"ch\": 50,\n        \"lvl\": 100,\n        \"hs\": [\n            2,\n            100\n        ]\n    },\n    {\n        \"ch\": 51,\n        \"lvl\": 100,\n        \"hs\": [\n            5,\n            100\n        ]\n    },\n    {\n        \"ch\": 52,\n        \"lvl\": 100,\n        \"hs\": [\n            7,\n            100\n        ]\n    },\n    {\n        \"ch\": 53,\n        \"lvl\": 100,\n        \"hs\": [\n            10,\n            100\n        ]\n    },\n    {\n        \"ch\": 54,\n        \"lvl\": 100,\n        \"hs\": [\n            12,\n            100\n        ]\n    },\n    {\n        \"ch\": 55,\n        \"lvl\": 100,\n        \"hs\": [\n            15,\n            100\n        ]\n    },\n    {\n        \"ch\": 45,\n        \"lvl\": 100,\n        \"hs\": [\n            17,\n            100\n        ]\n    },\n    {\n        \"ch\": 46,\n        \"lvl\": 100,\n        \"hs\": [\n            20,\n            100\n        ]\n    },\n    {\n        \"ch\": 47,\n        \"lvl\": 100,\n        \"hs\": [\n            22,\n            100\n        ]\n    },\n    {\n        \"ch\": 48,\n        \"lvl\": 100,\n        \"hs\": [\n            25,\n            100\n        ]\n    },\n    {\n        \"ch\": 56,\n        \"lvl\": 100,\n        \"hs\": [\n            27,\n            100\n        ]\n    },\n    {\n        \"ch\": 57,\n        \"lvl\": 100,\n        \"hs\": [\n            30,\n            100\n        ]\n    },\n    {\n        \"ch\": 58,\n        \"lvl\": 100,\n        \"hs\": [\n            32,\n            100\n        ]\n    },\n    {\n        \"ch\": 59,\n        \"lvl\": 100,\n        \"hs\": [\n            35,\n            100\n        ]\n    },\n    {\n        \"ch\": 60,\n        \"lvl\": 100,\n        \"hs\": [\n            37,\n            100\n        ]\n    },\n    {\n        \"ch\": 61,\n        \"lvl\": 100,\n        \"hs\": [\n            40,\n            100\n        ]\n    },\n    {\n        \"ch\": 62,\n        \"lvl\": 100,\n        \"hs\": [\n            42,\n            100\n        ]\n    }]",
         "output": "json",
         "x": 340,
-        "y": 2760,
+        "y": 2840,
         "wires": [
             [
                 "365378af1c8ae081"
@@ -14160,7 +14310,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 170,
-        "y": 2760,
+        "y": 2840,
         "wires": [
             [
                 "4e1b1efede33cbbe"
@@ -14178,7 +14328,7 @@
             "21ece2adbe7667ab"
         ],
         "x": 425,
-        "y": 2760,
+        "y": 2880,
         "wires": []
     },
     {
@@ -14220,7 +14370,7 @@
             "21ece2adbe7667ab"
         ],
         "x": 425,
-        "y": 2620,
+        "y": 2660,
         "wires": []
     },
     {
@@ -14442,7 +14592,7 @@
         "z": "ee400291.7cb",
         "g": "c51cfe74402f799b",
         "name": "Set a Look Channel",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -14460,7 +14610,7 @@
         "z": "ee400291.7cb",
         "g": "c51cfe74402f799b",
         "name": "Set A Look Parm",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -14529,7 +14679,7 @@
                 "t": "set",
                 "p": "topic",
                 "pt": "msg",
-                "to": "\"/cs/color/select/\" & payload.hs[0] & '/' & payload.hs[1]",
+                "to": "\"/cs/color/hs/\" & payload.hs[0] & '/' & payload.hs[1]",
                 "tot": "jsonata"
             }
         ],
@@ -14557,7 +14707,11 @@
             "7b3763b492377c72",
             "308780d2468636ea",
             "365378af1c8ae081",
-            "43c2292e7d77dc8d"
+            "43c2292e7d77dc8d",
+            "38a6b2dc45806e74",
+            "ebbada715c2bdc83",
+            "bc7515fbf9d5cb3d",
+            "ccbe7f922e2ce232"
         ],
         "x": 535,
         "y": 2480,
@@ -14574,12 +14728,12 @@
         "g": "5cad90d99094d9a2",
         "name": "",
         "group": "1a58511c941998c3",
-        "order": 2,
+        "order": 3,
         "width": 0,
         "height": 0,
         "passthru": false,
-        "label": "Walls R to Y",
-        "tooltip": "",
+        "label": "Walls R>Y",
+        "tooltip": "Walls fade Red>Yellow 49>55+45>48+56>62",
         "color": "",
         "bgcolor": "",
         "className": "",
@@ -14589,7 +14743,7 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 170,
-        "y": 2800,
+        "y": 2880,
         "wires": [
             [
                 "4e1b1efede33cbbe"
@@ -14607,8 +14761,8 @@
         "width": 0,
         "height": 0,
         "passthru": false,
-        "label": "Walls B to R",
-        "tooltip": "",
+        "label": "Walls B>R",
+        "tooltip": "Walls fade from B to Red 49>55+45>48+56>62",
         "color": "",
         "bgcolor": "",
         "className": "",
@@ -14632,7 +14786,7 @@
         "g": "c6652a873359cc83",
         "name": "",
         "group": "1a58511c941998c3",
-        "order": 0,
+        "order": 7,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -14651,6 +14805,1276 @@
         "wires": [
             [
                 "1c2c2e16fd601aae"
+            ]
+        ]
+    },
+    {
+        "id": "46ee93d2c079bdea",
+        "type": "comment",
+        "z": "ee400291.7cb",
+        "g": "3e16b207ba4e1296",
+        "name": "OSC Command References",
+        "info": "See [ColourSource OSC Reference Page](https://support.etcconnect.com/ETC/Consoles/ColorSource/ColorSource_20_and_40_AV/OSC_Commands_for_ColorSource_AV_Console)",
+        "x": 1120,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "3436382b1f37bdd4",
+        "type": "delay",
+        "z": "ee400291.7cb",
+        "g": "c51cfe74402f799b",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "0.05",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 610,
+        "y": 2660,
+        "wires": [
+            [
+                "1389927c17aaae31"
+            ]
+        ]
+    },
+    {
+        "id": "f6b739d054a8db73",
+        "type": "template",
+        "z": "ee400291.7cb",
+        "g": "5cad90d99094d9a2",
+        "name": "pillars to match",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "json",
+        "syntax": "mustache",
+        "template": "[{\n    \"ch\": 41,\n    \"lvl\": 100,\n    \"hs\": [\n        15,\n        100\n    ]\n},\n \n{\n    \"ch\": 42,\n    \"lvl\": 100,\n    \"hs\": [\n        20,\n        100\n    ]\n},\n{\n    \"ch\": 43,\n    \"lvl\": 100,\n    \"hs\": [\n        22,\n        100\n    ]\n},\n \n{\n    \"ch\": 44,\n    \"lvl\": 100,\n    \"hs\": [\n        27,\n        100\n    ]\n}]",
+        "output": "json",
+        "x": 340,
+        "y": 2920,
+        "wires": [
+            [
+                "365378af1c8ae081"
+            ]
+        ],
+        "info": "Lamba function for Excel\n\n{\"ch\": 49, \"lvl\": 100, \"hs\": [240,100] }\n\nhs\n=lambda(h,s, concat(\" \"\"hs\"\": [ \" , round(h,0), \",\", round(s,0), \"]\") )\n\nch\n=lambda(c, concat(\" \"\"ch\"\": \" , c) )\n\nlvl\n=lambda(l, concat(\" \"\"lvl\"\": \" , l) )\n \nchsl \n=lambda(c,h,s,l, textjoin(\",\" , FALSE, \" {\", ch(c) ,  lvl(l) , hs(h,s)  ))\n=lambda(c,h,s,l, concat(\" {\", ch(c) , \",\" ,   lvl(l) , \",\"  , hs(h,s) , \"},\" ))"
+    },
+    {
+        "id": "bc2d3eab8d72d52d",
+        "type": "inject",
+        "z": "ee400291.7cb",
+        "g": "5cad90d99094d9a2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 160,
+        "y": 2960,
+        "wires": [
+            [
+                "f6b739d054a8db73"
+            ]
+        ]
+    },
+    {
+        "id": "f0288be5bc522de9",
+        "type": "inject",
+        "z": "ee400291.7cb",
+        "g": "4e0030df4e68c382",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 160,
+        "y": 2740,
+        "wires": [
+            [
+                "145651ca287066fb"
+            ]
+        ]
+    },
+    {
+        "id": "145651ca287066fb",
+        "type": "template",
+        "z": "ee400291.7cb",
+        "g": "4e0030df4e68c382",
+        "name": "pillars to match",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "json",
+        "syntax": "mustache",
+        "template": "[\n    \n    {\n        \"ch\": 41,\n        \"lvl\": 100,\n        \"hs\": [\n            282,\n            100\n        ]\n    },\n    \n    {\n        \"ch\": 42,\n        \"lvl\": 100,\n        \"hs\": [\n            296,\n            100\n        ]\n    },\n    {\n        \"ch\": 43,\n        \"lvl\": 100,\n        \"hs\": [\n            304,\n            100\n        ]\n    },\n     \n    {\n        \"ch\": 44,\n        \"lvl\": 100,\n        \"hs\": [\n            318,\n            100\n        ]\n    } \n ]",
+        "output": "json",
+        "x": 360,
+        "y": 2700,
+        "wires": [
+            [
+                "308780d2468636ea"
+            ]
+        ],
+        "info": "Lamba function for Excel\n\n{\"ch\": 49, \"lvl\": 100, \"hs\": [240,100] }\n\nhs\n=lambda(h,s, concat(\" \"\"hs\"\": [ \" , round(h,0), \",\", round(s,0), \"]\") )\n\nch\n=lambda(c, concat(\" \"\"ch\"\": \" , c) )\n\nlvl\n=lambda(l, concat(\" \"\"lvl\"\": \" , l) )\n \nchsl \n=lambda(c,h,s,l, textjoin(\",\" , FALSE, \" {\", ch(c) ,  lvl(l) , hs(h,s)  ))\n=lambda(c,h,s,l, concat(\" {\", ch(c) , \",\" ,   lvl(l) , \",\"  , hs(h,s) , \"},\" ))"
+    },
+    {
+        "id": "5a22c276687a3101",
+        "type": "ui_button",
+        "z": "ee400291.7cb",
+        "g": "4e0030df4e68c382",
+        "name": "",
+        "group": "1a58511c941998c3",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Pillars B>R ",
+        "tooltip": "Pillars from Blue to Red matching Walls 41>44",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 190,
+        "y": 2700,
+        "wires": [
+            [
+                "145651ca287066fb"
+            ]
+        ]
+    },
+    {
+        "id": "4320deca3fa42868",
+        "type": "ui_button",
+        "z": "ee400291.7cb",
+        "g": "5cad90d99094d9a2",
+        "name": "",
+        "group": "1a58511c941998c3",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Pillars R>Y",
+        "tooltip": "Pillars from Red to Yellow matching Walls 41>44",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 170,
+        "y": 2920,
+        "wires": [
+            [
+                "f6b739d054a8db73"
+            ]
+        ]
+    },
+    {
+        "id": "c574577c1941fc5e",
+        "type": "template",
+        "z": "ee400291.7cb",
+        "g": "05c3a21ac1cd5c65",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "json",
+        "syntax": "mustache",
+        "template": "[\n    {\n        \"ch\": 49,\n        \"lvl\": 100,\n        \"hs\": [\n            300,\n            100\n        ]\n    },\n    {\n        \"ch\": 50,\n        \"lvl\": 100,\n        \"hs\": [\n            302,\n            100\n        ]\n    },\n    {\n        \"ch\": 51,\n        \"lvl\": 100,\n        \"hs\": [\n            305,\n            100\n        ]\n    },\n    {\n        \"ch\": 52,\n        \"lvl\": 100,\n        \"hs\": [\n            307,\n            100\n        ]\n    },\n    {\n        \"ch\": 53,\n        \"lvl\": 100,\n        \"hs\": [\n            310,\n            100\n        ]\n    },\n    {\n        \"ch\": 54,\n        \"lvl\": 100,\n        \"hs\": [\n            312,\n            100\n        ]\n    },\n    {\n        \"ch\": 55,\n        \"lvl\": 100,\n        \"hs\": [\n            315,\n            100\n        ]\n    },\n    {\n        \"ch\": 45,\n        \"lvl\": 100,\n        \"hs\": [\n            317,\n            100\n        ]\n    },\n    {\n        \"ch\": 46,\n        \"lvl\": 100,\n        \"hs\": [\n            320,\n            100\n        ]\n    },\n    {\n        \"ch\": 47,\n        \"lvl\": 100,\n        \"hs\": [\n            322,\n            100\n        ]\n    },\n    {\n        \"ch\": 48,\n        \"lvl\": 100,\n        \"hs\": [\n            325,\n            100\n        ]\n    },\n    {\n        \"ch\": 56,\n        \"lvl\": 100,\n        \"hs\": [\n            327,\n            100\n        ]\n    },\n    {\n        \"ch\": 57,\n        \"lvl\": 100,\n        \"hs\": [\n            330,\n            100\n        ]\n    },\n    {\n        \"ch\": 58,\n        \"lvl\": 100,\n        \"hs\": [\n            332,\n            100\n        ]\n    },\n    {\n        \"ch\": 59,\n        \"lvl\": 100,\n        \"hs\": [\n            335,\n            100\n        ]\n    },\n    {\n        \"ch\": 60,\n        \"lvl\": 100,\n        \"hs\": [\n            337,\n            100\n        ]\n    },\n    {\n        \"ch\": 61,\n        \"lvl\": 100,\n        \"hs\": [\n            340,\n            100\n        ]\n    },\n    {\n        \"ch\": 62,\n        \"lvl\": 100,\n        \"hs\": [\n            359,\n            100\n        ]\n    }]",
+        "output": "json",
+        "x": 320,
+        "y": 3080,
+        "wires": [
+            [
+                "bc7515fbf9d5cb3d"
+            ]
+        ],
+        "info": "Lamba function for Excel\n\n{\"ch\": 49, \"lvl\": 100, \"hs\": [240,100] }\n\nhs\n=lambda(h,s, concat(\" \"\"hs\"\": [ \" , round(h,0), \",\", round(s,0), \"]\") )\n\nch\n=lambda(c, concat(\" \"\"ch\"\": \" , c) )\n\nlvl\n=lambda(l, concat(\" \"\"lvl\"\": \" , l) )\n \nchsl \n=lambda(c,h,s,l, textjoin(\",\" , FALSE, \" {\", ch(c) ,  lvl(l) , hs(h,s)  ))\n=lambda(c,h,s,l, concat(\" {\", ch(c) , \",\" ,   lvl(l) , \",\"  , hs(h,s) , \"},\" ))"
+    },
+    {
+        "id": "e6f921b7d77e532f",
+        "type": "inject",
+        "z": "ee400291.7cb",
+        "g": "05c3a21ac1cd5c65",
+        "name": "Walls R to M",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 3080,
+        "wires": [
+            [
+                "c574577c1941fc5e"
+            ]
+        ]
+    },
+    {
+        "id": "bc7515fbf9d5cb3d",
+        "type": "link out",
+        "z": "ee400291.7cb",
+        "g": "05c3a21ac1cd5c65",
+        "name": "link out 18",
+        "mode": "link",
+        "links": [
+            "21ece2adbe7667ab"
+        ],
+        "x": 405,
+        "y": 3120,
+        "wires": []
+    },
+    {
+        "id": "452d263d9cc1b07d",
+        "type": "ui_button",
+        "z": "ee400291.7cb",
+        "g": "05c3a21ac1cd5c65",
+        "name": "",
+        "group": "1a58511c941998c3",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Walls R>M",
+        "tooltip": "Walls fade Red>Magenta 49>55+45>48+56>62",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 150,
+        "y": 3120,
+        "wires": [
+            [
+                "c574577c1941fc5e"
+            ]
+        ]
+    },
+    {
+        "id": "90c14080a192bb10",
+        "type": "template",
+        "z": "ee400291.7cb",
+        "g": "05c3a21ac1cd5c65",
+        "name": "pillars to match",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "json",
+        "syntax": "mustache",
+        "template": "[\n    {\n        \"ch\": 41,\n        \"lvl\": 100,\n        \"hs\": [\n            315,\n            100\n        ]\n    },\n    {\n        \"ch\": 42,\n        \"lvl\": 100,\n        \"hs\": [\n            320,\n            100\n        ]\n    },\n    {\n        \"ch\": 43,\n        \"lvl\": 100,\n        \"hs\": [\n            322,\n            100\n        ]\n    },\n    {\n        \"ch\": 44,\n        \"lvl\": 100,\n        \"hs\": [\n            327,\n            100\n        ]\n    }]",
+        "output": "json",
+        "x": 320,
+        "y": 3160,
+        "wires": [
+            [
+                "bc7515fbf9d5cb3d"
+            ]
+        ],
+        "info": "Lamba function for Excel\n\n{\"ch\": 49, \"lvl\": 100, \"hs\": [240,100] }\n\nhs\n=lambda(h,s, concat(\" \"\"hs\"\": [ \" , round(h,0), \",\", round(s,0), \"]\") )\n\nch\n=lambda(c, concat(\" \"\"ch\"\": \" , c) )\n\nlvl\n=lambda(l, concat(\" \"\"lvl\"\": \" , l) )\n \nchsl \n=lambda(c,h,s,l, textjoin(\",\" , FALSE, \" {\", ch(c) ,  lvl(l) , hs(h,s)  ))\n=lambda(c,h,s,l, concat(\" {\", ch(c) , \",\" ,   lvl(l) , \",\"  , hs(h,s) , \"},\" ))"
+    },
+    {
+        "id": "1b47819666e7fa58",
+        "type": "inject",
+        "z": "ee400291.7cb",
+        "g": "05c3a21ac1cd5c65",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 3200,
+        "wires": [
+            [
+                "90c14080a192bb10"
+            ]
+        ]
+    },
+    {
+        "id": "26969e7f88db2450",
+        "type": "ui_button",
+        "z": "ee400291.7cb",
+        "g": "05c3a21ac1cd5c65",
+        "name": "",
+        "group": "1a58511c941998c3",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Pillars R>M",
+        "tooltip": "Pillars from Red to Magenta matching Walls 41>44",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 150,
+        "y": 3160,
+        "wires": [
+            [
+                "90c14080a192bb10"
+            ]
+        ]
+    },
+    {
+        "id": "9a79e411d05f942a",
+        "type": "comment",
+        "z": "ee400291.7cb",
+        "name": "",
+        "info": "/cs/key/clearall\n/cs/key/clearplaybacks\n/cs/key/clearcues\n/cs/key/clearchannels\n/cs/key/clearselection\n/cs/key/blackout",
+        "x": 360,
+        "y": 3280,
+        "wires": []
+    },
+    {
+        "id": "38a23807775dde44",
+        "type": "inject",
+        "z": "ee400291.7cb",
+        "g": "75e0c0054c897b11",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 580,
+        "y": 3200,
+        "wires": [
+            [
+                "678d664692834560"
+            ]
+        ]
+    },
+    {
+        "id": "cf0747024cca1405",
+        "type": "inject",
+        "z": "ee400291.7cb",
+        "g": "75e0c0054c897b11",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 580,
+        "y": 3080,
+        "wires": [
+            [
+                "41eff65c0a974eba"
+            ]
+        ]
+    },
+    {
+        "id": "b064ee5dc0df0bd3",
+        "type": "inject",
+        "z": "ee400291.7cb",
+        "g": "75e0c0054c897b11",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 580,
+        "y": 3120,
+        "wires": [
+            [
+                "7e324b0a1e1c2dee"
+            ]
+        ]
+    },
+    {
+        "id": "0438e5ad9cf02083",
+        "type": "inject",
+        "z": "ee400291.7cb",
+        "g": "75e0c0054c897b11",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 580,
+        "y": 3160,
+        "wires": [
+            [
+                "18bf39efa22c3a05"
+            ]
+        ]
+    },
+    {
+        "id": "70f9010babd6247b",
+        "type": "inject",
+        "z": "ee400291.7cb",
+        "g": "75e0c0054c897b11",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 580,
+        "y": 3240,
+        "wires": [
+            [
+                "769f44e41b101d1d"
+            ]
+        ]
+    },
+    {
+        "id": "e21e8f5b96551c68",
+        "type": "inject",
+        "z": "ee400291.7cb",
+        "g": "75e0c0054c897b11",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 580,
+        "y": 3280,
+        "wires": [
+            [
+                "18f986df8d7cf336"
+            ]
+        ]
+    },
+    {
+        "id": "41eff65c0a974eba",
+        "type": "ui_button",
+        "z": "ee400291.7cb",
+        "g": "75e0c0054c897b11",
+        "name": "",
+        "group": "b6af0ae0df9d3a39",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "Clear Cues",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "/cs/key/clearcues",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 750,
+        "y": 3080,
+        "wires": [
+            [
+                "9f519e3a7eb96eda"
+            ]
+        ]
+    },
+    {
+        "id": "171b83748f34f988",
+        "type": "link out",
+        "z": "ee400291.7cb",
+        "g": "75e0c0054c897b11",
+        "name": "link out 19",
+        "mode": "link",
+        "links": [
+            "a5f96939.8900e8"
+        ],
+        "x": 1155,
+        "y": 3160,
+        "wires": []
+    },
+    {
+        "id": "9f519e3a7eb96eda",
+        "type": "change",
+        "z": "ee400291.7cb",
+        "g": "75e0c0054c897b11",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1020,
+        "y": 3160,
+        "wires": [
+            [
+                "171b83748f34f988"
+            ]
+        ]
+    },
+    {
+        "id": "7e324b0a1e1c2dee",
+        "type": "ui_button",
+        "z": "ee400291.7cb",
+        "g": "75e0c0054c897b11",
+        "name": "",
+        "group": "b6af0ae0df9d3a39",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "Clear All",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "/cs/key/clearall",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 740,
+        "y": 3120,
+        "wires": [
+            [
+                "9f519e3a7eb96eda"
+            ]
+        ]
+    },
+    {
+        "id": "18bf39efa22c3a05",
+        "type": "ui_button",
+        "z": "ee400291.7cb",
+        "g": "75e0c0054c897b11",
+        "name": "",
+        "group": "b6af0ae0df9d3a39",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "Clear Playbacks",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "/cs/key/clearplaybacks",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 760,
+        "y": 3160,
+        "wires": [
+            [
+                "9f519e3a7eb96eda"
+            ]
+        ]
+    },
+    {
+        "id": "678d664692834560",
+        "type": "ui_button",
+        "z": "ee400291.7cb",
+        "g": "75e0c0054c897b11",
+        "name": "",
+        "group": "b6af0ae0df9d3a39",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "Clear Channels",
+        "tooltip": "Clear Active Channels",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "/cs/key/clearchannels",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 760,
+        "y": 3200,
+        "wires": [
+            [
+                "9f519e3a7eb96eda"
+            ]
+        ]
+    },
+    {
+        "id": "769f44e41b101d1d",
+        "type": "ui_button",
+        "z": "ee400291.7cb",
+        "g": "75e0c0054c897b11",
+        "name": "",
+        "group": "b6af0ae0df9d3a39",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "Clear Selection",
+        "tooltip": "Clear selected channels",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "/cs/key/clearselection",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 760,
+        "y": 3240,
+        "wires": [
+            [
+                "9f519e3a7eb96eda"
+            ]
+        ]
+    },
+    {
+        "id": "18f986df8d7cf336",
+        "type": "ui_button",
+        "z": "ee400291.7cb",
+        "g": "75e0c0054c897b11",
+        "name": "",
+        "group": "b6af0ae0df9d3a39",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "Blackout",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "/cs/key/blackout",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 740,
+        "y": 3280,
+        "wires": [
+            [
+                "9f519e3a7eb96eda"
+            ]
+        ]
+    },
+    {
+        "id": "4811a91083302abc",
+        "type": "split",
+        "z": "ee400291.7cb",
+        "g": "da364ef2722b2f7d",
+        "name": "",
+        "splt": "+",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "x": 390,
+        "y": 3460,
+        "wires": [
+            [
+                "9506dee2ae70e9e8"
+            ]
+        ]
+    },
+    {
+        "id": "b74d22784d74533b",
+        "type": "link out",
+        "z": "ee400291.7cb",
+        "g": "da364ef2722b2f7d",
+        "name": "link out 20",
+        "mode": "link",
+        "links": [
+            "a5f96939.8900e8"
+        ],
+        "x": 995,
+        "y": 3560,
+        "wires": []
+    },
+    {
+        "id": "9506dee2ae70e9e8",
+        "type": "change",
+        "z": "ee400291.7cb",
+        "g": "da364ef2722b2f7d",
+        "name": "Select",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "\"/cs/chan/add/\" &  payload  ",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 810,
+        "y": 3520,
+        "wires": [
+            [
+                "b74d22784d74533b"
+            ]
+        ]
+    },
+    {
+        "id": "a70c90c84f349922",
+        "type": "ui_slider",
+        "z": "ee400291.7cb",
+        "g": "da364ef2722b2f7d",
+        "name": "",
+        "label": "Level",
+        "tooltip": "Level of selected channels",
+        "group": "a0d2379726c5b29d",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": "100",
+        "step": "5",
+        "className": "",
+        "x": 110,
+        "y": 3580,
+        "wires": [
+            [
+                "9fc70e6b5add848f"
+            ]
+        ]
+    },
+    {
+        "id": "9fc70e6b5add848f",
+        "type": "change",
+        "z": "ee400291.7cb",
+        "g": "da364ef2722b2f7d",
+        "name": "Level",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "\"/cs/chan/at/\" & payload",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 390,
+        "y": 3580,
+        "wires": [
+            [
+                "b74d22784d74533b"
+            ]
+        ]
+    },
+    {
+        "id": "2f2d9653c542aa33",
+        "type": "ui_button",
+        "z": "ee400291.7cb",
+        "g": "da364ef2722b2f7d",
+        "name": "",
+        "group": "aa77273aba5e6bc4",
+        "order": 2,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "Select Walls ",
+        "tooltip": "49>55+41>44+56>62",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "49+50+51+52+53+54+55+45+46+47+48+56+57+58+59+60+61+62",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 130,
+        "y": 3440,
+        "wires": [
+            [
+                "4811a91083302abc"
+            ]
+        ]
+    },
+    {
+        "id": "2287e65897becd68",
+        "type": "ui_button",
+        "z": "ee400291.7cb",
+        "g": "da364ef2722b2f7d",
+        "name": "",
+        "group": "a0d2379726c5b29d",
+        "order": 2,
+        "width": "2",
+        "height": "1",
+        "passthru": false,
+        "label": "Red",
+        "tooltip": "",
+        "color": "white",
+        "bgcolor": "red",
+        "className": "",
+        "icon": "",
+        "payload": "1",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 110,
+        "y": 3620,
+        "wires": [
+            [
+                "f481935da7c1fb5f"
+            ]
+        ]
+    },
+    {
+        "id": "f481935da7c1fb5f",
+        "type": "change",
+        "z": "ee400291.7cb",
+        "g": "da364ef2722b2f7d",
+        "name": "Colour",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "\"/cs/color/select/\" & payload",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 390,
+        "y": 3620,
+        "wires": [
+            [
+                "b74d22784d74533b"
+            ]
+        ]
+    },
+    {
+        "id": "cd32689869ae8895",
+        "type": "ui_button",
+        "z": "ee400291.7cb",
+        "g": "da364ef2722b2f7d",
+        "name": "",
+        "group": "a0d2379726c5b29d",
+        "order": 3,
+        "width": "2",
+        "height": "1",
+        "passthru": false,
+        "label": "Amber",
+        "tooltip": "",
+        "color": "white",
+        "bgcolor": "amber",
+        "className": "",
+        "icon": "",
+        "payload": "2",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 110,
+        "y": 3660,
+        "wires": [
+            [
+                "f481935da7c1fb5f"
+            ]
+        ]
+    },
+    {
+        "id": "c68fff7840e515c6",
+        "type": "ui_button",
+        "z": "ee400291.7cb",
+        "g": "da364ef2722b2f7d",
+        "name": "",
+        "group": "a0d2379726c5b29d",
+        "order": 4,
+        "width": "2",
+        "height": "1",
+        "passthru": false,
+        "label": "Yellow",
+        "tooltip": "",
+        "color": "black",
+        "bgcolor": "yellow",
+        "className": "",
+        "icon": "",
+        "payload": "3",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 110,
+        "y": 3700,
+        "wires": [
+            [
+                "f481935da7c1fb5f"
+            ]
+        ]
+    },
+    {
+        "id": "992da2c3f006328b",
+        "type": "ui_button",
+        "z": "ee400291.7cb",
+        "g": "da364ef2722b2f7d",
+        "name": "",
+        "group": "a0d2379726c5b29d",
+        "order": 5,
+        "width": "2",
+        "height": "1",
+        "passthru": false,
+        "label": "Green",
+        "tooltip": "",
+        "color": "black",
+        "bgcolor": "green",
+        "className": "",
+        "icon": "",
+        "payload": "5",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 110,
+        "y": 3740,
+        "wires": [
+            [
+                "f481935da7c1fb5f"
+            ]
+        ]
+    },
+    {
+        "id": "17f4319e37a82b65",
+        "type": "ui_button",
+        "z": "ee400291.7cb",
+        "g": "da364ef2722b2f7d",
+        "name": "",
+        "group": "a0d2379726c5b29d",
+        "order": 6,
+        "width": "2",
+        "height": "1",
+        "passthru": false,
+        "label": "Blue",
+        "tooltip": "",
+        "color": "white",
+        "bgcolor": "Blue",
+        "className": "",
+        "icon": "",
+        "payload": "11",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 110,
+        "y": 3780,
+        "wires": [
+            [
+                "f481935da7c1fb5f"
+            ]
+        ]
+    },
+    {
+        "id": "bc6dee3699fb23ea",
+        "type": "ui_button",
+        "z": "ee400291.7cb",
+        "g": "da364ef2722b2f7d",
+        "name": "",
+        "group": "a0d2379726c5b29d",
+        "order": 7,
+        "width": "2",
+        "height": "1",
+        "passthru": false,
+        "label": "Magenta",
+        "tooltip": "",
+        "color": "white",
+        "bgcolor": "Magenta",
+        "className": "",
+        "icon": "",
+        "payload": "13",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 120,
+        "y": 3820,
+        "wires": [
+            [
+                "f481935da7c1fb5f"
+            ]
+        ]
+    },
+    {
+        "id": "6028fe963840f699",
+        "type": "ui_button",
+        "z": "ee400291.7cb",
+        "g": "da364ef2722b2f7d",
+        "name": "",
+        "group": "aa77273aba5e6bc4",
+        "order": 3,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "Select Floor Pars ",
+        "tooltip": "34>40",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "34+35+36+37+38+39+40",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 150,
+        "y": 3400,
+        "wires": [
+            [
+                "4811a91083302abc"
+            ]
+        ]
+    },
+    {
+        "id": "cfb83ab34066696a",
+        "type": "ui_button",
+        "z": "ee400291.7cb",
+        "g": "da364ef2722b2f7d",
+        "name": "",
+        "group": "aa77273aba5e6bc4",
+        "order": 4,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "Select OH Pars ",
+        "tooltip": "20>22+24>26",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "20+21+22+24+25+26",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 140,
+        "y": 3480,
+        "wires": [
+            [
+                "4811a91083302abc"
+            ]
+        ]
+    },
+    {
+        "id": "27caf598f1b1f6aa",
+        "type": "ui_button",
+        "z": "ee400291.7cb",
+        "g": "da364ef2722b2f7d",
+        "name": "",
+        "group": "aa77273aba5e6bc4",
+        "order": 5,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "Select Thrust",
+        "tooltip": "4+18+19+23",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "4+18+19+23",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 130,
+        "y": 3520,
+        "wires": [
+            [
+                "4811a91083302abc"
+            ]
+        ]
+    },
+    {
+        "id": "47d692fa8592e6ed",
+        "type": "ui_button",
+        "z": "ee400291.7cb",
+        "name": "",
+        "group": "aa77273aba5e6bc4",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "Clear Selection",
+        "tooltip": "Clear selected channels",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "/cs/key/clearselection",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 711.4285888671875,
+        "y": 3368.571533203125,
+        "wires": [
+            [
+                "9f519e3a7eb96eda"
+            ]
+        ]
+    },
+    {
+        "id": "4340e09e84462a1e",
+        "type": "ui_button",
+        "z": "ee400291.7cb",
+        "g": "da364ef2722b2f7d",
+        "name": "",
+        "group": "aa77273aba5e6bc4",
+        "order": 6,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "Select Pillars",
+        "tooltip": "41+42+43+44",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "41+42+43+44",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 130,
+        "y": 3560,
+        "wires": [
+            [
+                "4811a91083302abc"
             ]
         ]
     },
