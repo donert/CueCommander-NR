@@ -420,10 +420,13 @@
         "nodes": [
             "75b23a68.99e7a4",
             "9f4d2041.3c78c",
-            "aea3b623.0f4e98"
+            "aea3b623.0f4e98",
+            "f3835335cb922019"
         ],
         "x": 14,
-        "y": 39
+        "y": 39,
+        "w": 282,
+        "h": 162
     },
     {
         "id": "2a5510d0.88b28",
@@ -668,7 +671,8 @@
         "name": "Reaper Communications",
         "style": {
             "label": true,
-            "color": "#000000"
+            "color": "#000000",
+            "fill": "#e3f3d3"
         },
         "nodes": [
             "41667957.f0c5c8",
@@ -678,11 +682,14 @@
             "15a28147.32956f",
             "287fcd27.d4d002",
             "1cd95068.dc966",
-            "df612cee.24c59",
-            "4d303fb1.3dc85"
+            "3a414fe4971434a2",
+            "dcba1e4ff0204379",
+            "14afc9f0d62e60ec"
         ],
         "x": 14,
-        "y": 239
+        "y": 239,
+        "w": 852,
+        "h": 262
     },
     {
         "id": "c259391c.942cb8",
@@ -703,7 +710,9 @@
             "aa878be6.c99d68"
         ],
         "x": 14,
-        "y": 419
+        "y": 419,
+        "w": 632,
+        "h": 202
     },
     {
         "id": "82af0e98.67e37",
@@ -734,7 +743,9 @@
             "539a640d.2eba2c"
         ],
         "x": 14,
-        "y": 119
+        "y": 119,
+        "w": 1032,
+        "h": 282
     },
     {
         "id": "c8fec1d2.064bb",
@@ -756,7 +767,9 @@
             "a3d85371.0512"
         ],
         "x": 14,
-        "y": 739
+        "y": 739,
+        "w": 672,
+        "h": 162
     },
     {
         "id": "1e37c12f.d68b2f",
@@ -771,7 +784,9 @@
             "97e8301a.40084"
         ],
         "x": 14,
-        "y": 639
+        "y": 639,
+        "w": 332,
+        "h": 82
     },
     {
         "id": "aa34448f.507d08",
@@ -1044,52 +1059,9 @@
             "4333b442.5d00ac"
         ],
         "x": 14,
-        "y": 919
-    },
-    {
-        "id": "e7bba871.092a48",
-        "type": "group",
-        "z": "900140d4.af55",
-        "name": "Configuration Management",
-        "style": {
-            "label": true,
-            "color": "#000000"
-        },
-        "nodes": [
-            "4d5e939e.99d01c",
-            "98b07a65.117958",
-            "399bc5d9.b0f21a",
-            "993ecc70.9107d",
-            "de5c12fe.143a3",
-            "b01a15ef.41b7a8",
-            "5f169663.423658",
-            "7789af31.932ca",
-            "c94c396c.efa728",
-            "cab251ea.9e8c1"
-        ],
-        "x": 14,
-        "y": 499
-    },
-    {
-        "id": "24319489.d01d3c",
-        "type": "group",
-        "z": "900140d4.af55",
-        "name": "Configuration Management",
-        "style": {
-            "label": true,
-            "color": "#ff0000"
-        },
-        "nodes": [
-            "2c4a8344.10a37c",
-            "5e5a6cac.e4a434",
-            "fbfeef13.e074d",
-            "c5095ec1.9615c",
-            "a4235536.05d3f8",
-            "a21a574f.1475f8",
-            "7cbdc7e5.63eef8"
-        ],
-        "x": 34,
-        "y": 719
+        "y": 919,
+        "w": 1032,
+        "h": 202
     },
     {
         "id": "67bf8f34.14b37",
@@ -13854,7 +13826,7 @@
         "z": "ee400291.7cb",
         "g": "26f7e48.6e71e1c",
         "name": "lights Network parms",
-        "func": "config = global.get(\"config\") ; \n\ndevices = config.devices;\n\ndevs   = devices.filter(x => x.category == 'Lights')\n  \ni = 0\n  \nentry = devs[i]; //  only support one console\n \nhost = entry.ip;\nport = entry.port;\n\nres = {\n    num : i,\n    payload  : msg.payload,\n    ip       : host,\n    port     : port,\n    topic    : msg.topic,\n    millis   : msg.millis,\n    source   : msg.source\n}\n \nreturn res;",
+        "func": "const config = global.get(\"config\") ; \n\nconst devices = config.devices;\n\nconst devs   = devices.filter(x => x.category == 'Lights')\n  \nconst i = 0\n  \nconst entry = devs[i]; //  only support one console\n \nconst host = entry.ip;\nconst port = entry.port;\n\nconst res = {\n    num : i,\n    payload  : msg.payload,\n    ip       : host,\n    port     : port,\n    topic    : msg.topic,\n    millis   : msg.millis,\n    source   : msg.source\n}\n \nreturn res;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -30305,7 +30277,7 @@
         "y": 80,
         "wires": [
             [
-                "41667957.f0c5c8"
+                "f3835335cb922019"
             ]
         ]
     },
@@ -30332,7 +30304,7 @@
         "y": 120,
         "wires": [
             [
-                "41667957.f0c5c8"
+                "f3835335cb922019"
             ]
         ]
     },
@@ -30359,7 +30331,7 @@
         "y": 160,
         "wires": [
             [
-                "41667957.f0c5c8"
+                "f3835335cb922019"
             ]
         ]
     },
@@ -30371,12 +30343,11 @@
         "name": "Reaper",
         "path": "",
         "metadata": false,
-        "x": 220,
-        "y": 280,
+        "x": 340,
+        "y": 300,
         "wires": [
             [
-                "aed7144b.1408e8",
-                "df612cee.24c59"
+                "dcba1e4ff0204379"
             ]
         ]
     },
@@ -30393,8 +30364,8 @@
         "outport": "",
         "base64": false,
         "multicast": "false",
-        "x": 630,
-        "y": 280,
+        "x": 710,
+        "y": 300,
         "wires": []
     },
     {
@@ -30412,8 +30383,8 @@
         "raw": false,
         "topic": "",
         "name": "",
-        "x": 410,
-        "y": 320,
+        "x": 750,
+        "y": 340,
         "wires": []
     },
     {
@@ -30430,7 +30401,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 530,
-        "y": 440,
+        "y": 460,
         "wires": []
     },
     {
@@ -30442,7 +30413,7 @@
         "path": "",
         "metadata": false,
         "x": 330,
-        "y": 440,
+        "y": 460,
         "wires": [
             [
                 "aa5f91b1.e0846"
@@ -30457,7 +30428,7 @@
         "name": "todo reaper is sending arrays of items - need to figure out how to filter them",
         "info": "",
         "x": 310,
-        "y": 400,
+        "y": 420,
         "wires": []
     },
     {
@@ -30473,473 +30444,12 @@
         "group": "",
         "datatype": "buffer",
         "x": 100,
-        "y": 440,
+        "y": 460,
         "wires": [
             [
                 "15a28147.32956f"
             ]
         ]
-    },
-    {
-        "id": "df612cee.24c59",
-        "type": "change",
-        "z": "900140d4.af55",
-        "g": "10fffc0.07f4c04",
-        "name": "Set IP Parms",
-        "rules": [
-            {
-                "t": "set",
-                "p": "ip",
-                "pt": "msg",
-                "to": "reaper_ip",
-                "tot": "flow"
-            },
-            {
-                "t": "set",
-                "p": "port",
-                "pt": "msg",
-                "to": "reaper_port",
-                "tot": "flow"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 390,
-        "y": 280,
-        "wires": [
-            [
-                "6e438961.633b58",
-                "4d303fb1.3dc85"
-            ]
-        ]
-    },
-    {
-        "id": "4d303fb1.3dc85",
-        "type": "debug",
-        "z": "900140d4.af55",
-        "g": "10fffc0.07f4c04",
-        "name": "Current Config",
-        "active": true,
-        "tosidebar": false,
-        "console": false,
-        "tostatus": true,
-        "complete": "msg.ip & \":\" & msg.port",
-        "targetType": "jsonata",
-        "statusVal": "payload",
-        "statusType": "auto",
-        "x": 660,
-        "y": 320,
-        "wires": []
-    },
-    {
-        "id": "4d5e939e.99d01c",
-        "type": "inject",
-        "z": "900140d4.af55",
-        "g": "e7bba871.092a48",
-        "name": "pulse",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "7",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 110,
-        "y": 600,
-        "wires": [
-            [
-                "399bc5d9.b0f21a",
-                "5f169663.423658"
-            ]
-        ]
-    },
-    {
-        "id": "98b07a65.117958",
-        "type": "debug",
-        "z": "900140d4.af55",
-        "g": "e7bba871.092a48",
-        "name": "Reaper Config",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": true,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "payload",
-        "statusType": "auto",
-        "x": 900,
-        "y": 660,
-        "wires": []
-    },
-    {
-        "id": "399bc5d9.b0f21a",
-        "type": "function",
-        "z": "900140d4.af55",
-        "g": "e7bba871.092a48",
-        "name": "",
-        "func": "var kys = flow.keys()\n\ntxt = \"\"\n \nfor (var k of kys) {\n    v = flow.get(k)\n    txt += k + \":\" + v + \" \"\n}\n\nmsg = { payload : txt }\n\nreturn msg;\n\n//matrix:[object Object]\n//active:[object Object]\n//matrix_ip:127.0.0.1\n//matrix_port:5000\n//active_config:Test",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "x": 280,
-        "y": 660,
-        "wires": [
-            [
-                "993ecc70.9107d"
-            ]
-        ]
-    },
-    {
-        "id": "993ecc70.9107d",
-        "type": "rbe",
-        "z": "900140d4.af55",
-        "g": "e7bba871.092a48",
-        "name": "Change?",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "property": "payload",
-        "x": 420,
-        "y": 660,
-        "wires": [
-            [
-                "98b07a65.117958"
-            ]
-        ]
-    },
-    {
-        "id": "de5c12fe.143a3",
-        "type": "switch",
-        "z": "900140d4.af55",
-        "g": "e7bba871.092a48",
-        "name": "Prod or Test?",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "Prod",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "Test",
-                "vt": "str"
-            },
-            {
-                "t": "else"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 3,
-        "x": 640,
-        "y": 560,
-        "wires": [
-            [
-                "c94c396c.efa728"
-            ],
-            [
-                "cab251ea.9e8c1"
-            ],
-            [
-                "b01a15ef.41b7a8"
-            ]
-        ],
-        "outputLabels": [
-            "Prod",
-            "Test",
-            ""
-        ]
-    },
-    {
-        "id": "b01a15ef.41b7a8",
-        "type": "debug",
-        "z": "900140d4.af55",
-        "g": "e7bba871.092a48",
-        "name": "Config Error",
-        "active": true,
-        "tosidebar": true,
-        "console": true,
-        "tostatus": true,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "payload",
-        "statusType": "auto",
-        "x": 900,
-        "y": 620,
-        "wires": []
-    },
-    {
-        "id": "5f169663.423658",
-        "type": "change",
-        "z": "900140d4.af55",
-        "g": "e7bba871.092a48",
-        "name": "Get Global state",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "active_config",
-                "tot": "global"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 300,
-        "y": 560,
-        "wires": [
-            [
-                "7789af31.932ca"
-            ]
-        ]
-    },
-    {
-        "id": "7789af31.932ca",
-        "type": "rbe",
-        "z": "900140d4.af55",
-        "g": "e7bba871.092a48",
-        "name": "Changed?",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "property": "payload",
-        "x": 470,
-        "y": 560,
-        "wires": [
-            [
-                "de5c12fe.143a3"
-            ]
-        ]
-    },
-    {
-        "id": "2c4a8344.10a37c",
-        "type": "inject",
-        "z": "900140d4.af55",
-        "g": "24319489.d01d3c",
-        "name": "Pulse",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "63",
-        "crontab": "",
-        "once": true,
-        "onceDelay": "1",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 130,
-        "y": 840,
-        "wires": [
-            [
-                "5e5a6cac.e4a434"
-            ]
-        ]
-    },
-    {
-        "id": "5e5a6cac.e4a434",
-        "type": "change",
-        "z": "900140d4.af55",
-        "g": "24319489.d01d3c",
-        "name": "Set IP Parms",
-        "rules": [
-            {
-                "t": "set",
-                "p": "ip",
-                "pt": "msg",
-                "to": "reaper_ip",
-                "tot": "flow"
-            },
-            {
-                "t": "set",
-                "p": "port",
-                "pt": "msg",
-                "to": "reaper_port",
-                "tot": "flow"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 310,
-        "y": 840,
-        "wires": [
-            [
-                "fbfeef13.e074d"
-            ]
-        ]
-    },
-    {
-        "id": "fbfeef13.e074d",
-        "type": "rbe",
-        "z": "900140d4.af55",
-        "g": "24319489.d01d3c",
-        "name": "check IP",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "property": "ip",
-        "x": 300,
-        "y": 880,
-        "wires": [
-            [
-                "a4235536.05d3f8"
-            ]
-        ]
-    },
-    {
-        "id": "c5095ec1.9615c",
-        "type": "debug",
-        "z": "900140d4.af55",
-        "g": "24319489.d01d3c",
-        "name": "IP Changed",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 430,
-        "y": 920,
-        "wires": []
-    },
-    {
-        "id": "a4235536.05d3f8",
-        "type": "change",
-        "z": "900140d4.af55",
-        "g": "24319489.d01d3c",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "\"Reaper Configuration Changed. New network parms are:\" &  msg.ip & \":\" & msg.port",
-                "tot": "jsonata"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 240,
-        "y": 920,
-        "wires": [
-            [
-                "c5095ec1.9615c",
-                "7cbdc7e5.63eef8"
-            ]
-        ]
-    },
-    {
-        "id": "a21a574f.1475f8",
-        "type": "comment",
-        "z": "900140d4.af55",
-        "g": "24319489.d01d3c",
-        "name": "Pick a config to make active  ",
-        "info": "",
-        "x": 380,
-        "y": 760,
-        "wires": []
-    },
-    {
-        "id": "7cbdc7e5.63eef8",
-        "type": "debug",
-        "z": "900140d4.af55",
-        "g": "24319489.d01d3c",
-        "name": "Current Config",
-        "active": true,
-        "tosidebar": false,
-        "console": false,
-        "tostatus": true,
-        "complete": "msg.ip & \":\" & msg.port",
-        "targetType": "jsonata",
-        "statusVal": "payload",
-        "statusType": "auto",
-        "x": 440,
-        "y": 960,
-        "wires": []
-    },
-    {
-        "id": "c94c396c.efa728",
-        "type": "config",
-        "z": "900140d4.af55",
-        "g": "e7bba871.092a48",
-        "name": "Prod Config",
-        "properties": [
-            {
-                "p": "reaper_ip",
-                "pt": "flow",
-                "to": "192.168.0.145",
-                "tot": "str"
-            },
-            {
-                "p": "reaper_port",
-                "pt": "flow",
-                "to": "8112",
-                "tot": "str"
-            }
-        ],
-        "active": false,
-        "x": 890,
-        "y": 540,
-        "wires": []
-    },
-    {
-        "id": "cab251ea.9e8c1",
-        "type": "config",
-        "z": "900140d4.af55",
-        "g": "e7bba871.092a48",
-        "name": "Test Config",
-        "properties": [
-            {
-                "p": "reaper_ip",
-                "pt": "flow",
-                "to": "192.168.86.21",
-                "tot": "str"
-            },
-            {
-                "p": "reaper_port",
-                "pt": "flow",
-                "to": "8112",
-                "tot": "str"
-            }
-        ],
-        "active": false,
-        "x": 890,
-        "y": 580,
-        "wires": []
     },
     {
         "id": "63b69913.ddef78",
@@ -30950,6 +30460,86 @@
         "x": 460,
         "y": 80,
         "wires": []
+    },
+    {
+        "id": "3a414fe4971434a2",
+        "type": "link in",
+        "z": "900140d4.af55",
+        "g": "10fffc0.07f4c04",
+        "name": "link in 6",
+        "links": [
+            "f3835335cb922019"
+        ],
+        "x": 65,
+        "y": 280,
+        "wires": [
+            [
+                "14afc9f0d62e60ec"
+            ]
+        ]
+    },
+    {
+        "id": "f3835335cb922019",
+        "type": "link out",
+        "z": "900140d4.af55",
+        "g": "a10197b4.719a58",
+        "name": "link out 17",
+        "mode": "link",
+        "links": [
+            "3a414fe4971434a2"
+        ],
+        "x": 255,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "dcba1e4ff0204379",
+        "type": "function",
+        "z": "900140d4.af55",
+        "g": "10fffc0.07f4c04",
+        "name": "Network parms",
+        "func": "const config = global.get(\"config\") ; \n\nconst devices = config.devices;\n\nconst devs   = devices.filter(x => x.category == 'Reaper')\n  \nconst i = 0\n  \nconst entry = devs[i]; //  only support one \n \nconst host = entry.ip;\nconst port = entry.port;\n\nconst res = {\n    num : i,\n    payload  : msg.payload,\n    ip       : host,\n    port     : port,\n    topic    : msg.topic,\n    millis   : msg.millis,\n    source   : msg.source\n}\n \nreturn res;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 300,
+        "wires": [
+            [
+                "6e438961.633b58",
+                "aed7144b.1408e8"
+            ]
+        ]
+    },
+    {
+        "id": "14afc9f0d62e60ec",
+        "type": "switch",
+        "z": "900140d4.af55",
+        "g": "10fffc0.07f4c04",
+        "name": "enabled?",
+        "property": "ReaperEnabled",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "false"
+            },
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 180,
+        "y": 280,
+        "wires": [
+            [],
+            [
+                "41667957.f0c5c8"
+            ]
+        ]
     },
     {
         "id": "571df172.152f8",
