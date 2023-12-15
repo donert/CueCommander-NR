@@ -4339,7 +4339,7 @@
         "type": "ui_tab",
         "name": "Lights",
         "icon": "fa-lightbulb-o",
-        "order": 3,
+        "order": 2,
         "disabled": false,
         "hidden": false
     },
@@ -4466,7 +4466,7 @@
         "type": "ui_tab",
         "name": "Recording",
         "icon": "fa-save",
-        "order": 12,
+        "order": 10,
         "disabled": false,
         "hidden": false
     },
@@ -4506,7 +4506,7 @@
         "type": "ui_tab",
         "name": "Cameras",
         "icon": "fa-camera",
-        "order": 2,
+        "order": 3,
         "disabled": false,
         "hidden": false
     },
@@ -4700,7 +4700,7 @@
         "d": true,
         "name": "Video Matrix",
         "icon": "mi-apps",
-        "order": 10,
+        "order": 9,
         "disabled": false,
         "hidden": false
     },
@@ -4988,7 +4988,7 @@
         "type": "ui_tab",
         "name": "Help",
         "icon": "dashboard",
-        "order": 12,
+        "order": 11,
         "disabled": false,
         "hidden": false
     },

@@ -3641,16 +3641,16 @@
             "17f4319e37a82b65",
             "bc6dee3699fb23ea",
             "ee442eaeabc7edcc",
-            "d71c6058b1f0489b",
             "77e8421770f18991",
-            "8b0688a96337376c",
             "59f12c4061c66f95",
-            "c1c86149b770f350"
+            "c1c86149b770f350",
+            "0cb0479ab5f73b6a",
+            "9db5c8b2c607a943"
         ],
         "x": 624,
         "y": 3259,
-        "w": 782,
-        "h": 362
+        "w": 602,
+        "h": 482
     },
     {
         "id": "3dc91e7a7be02d7b",
@@ -15718,31 +15718,12 @@
         "topicType": "msg",
         "className": "",
         "x": 730,
-        "y": 3580,
+        "y": 3660,
         "wires": [
             [
-                "d71c6058b1f0489b",
                 "77e8421770f18991"
             ]
         ]
-    },
-    {
-        "id": "d71c6058b1f0489b",
-        "type": "debug",
-        "z": "ee400291.7cb",
-        "g": "da364ef2722b2f7d",
-        "name": "debug 25",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1040,
-        "y": 3560,
-        "wires": []
     },
     {
         "id": "77e8421770f18991",
@@ -15764,31 +15745,14 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1040,
-        "y": 3480,
+        "x": 900,
+        "y": 3660,
         "wires": [
             [
                 "59f12c4061c66f95",
                 "c1c86149b770f350"
             ]
         ]
-    },
-    {
-        "id": "8b0688a96337376c",
-        "type": "debug",
-        "z": "ee400291.7cb",
-        "g": "da364ef2722b2f7d",
-        "name": "debug 26",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1300,
-        "y": 3480,
-        "wires": []
     },
     {
         "id": "59f12c4061c66f95",
@@ -15810,8 +15774,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1050,
-        "y": 3520,
+        "x": 910,
+        "y": 3700,
         "wires": [
             [
                 "c1c86149b770f350"
@@ -15838,11 +15802,67 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1240,
-        "y": 3400,
+        "x": 1120,
+        "y": 3680,
         "wires": [
             [
-                "8b0688a96337376c",
+                "b74d22784d74533b"
+            ]
+        ]
+    },
+    {
+        "id": "0cb0479ab5f73b6a",
+        "type": "ui_button",
+        "z": "ee400291.7cb",
+        "g": "da364ef2722b2f7d",
+        "name": "",
+        "group": "a0d2379726c5b29d",
+        "order": 8,
+        "width": 2,
+        "height": 1,
+        "passthru": false,
+        "label": "Random",
+        "tooltip": "",
+        "color": "white",
+        "bgcolor": "black",
+        "className": "",
+        "icon": "",
+        "payload": " ",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 720,
+        "y": 3580,
+        "wires": [
+            [
+                "9db5c8b2c607a943"
+            ]
+        ]
+    },
+    {
+        "id": "9db5c8b2c607a943",
+        "type": "change",
+        "z": "ee400291.7cb",
+        "g": "da364ef2722b2f7d",
+        "name": "HueSat",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "\"/cs/color/hs/\" & $floor($random()*360) & '/' & $floor($random()*100)",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 900,
+        "y": 3580,
+        "wires": [
+            [
                 "b74d22784d74533b"
             ]
         ]
