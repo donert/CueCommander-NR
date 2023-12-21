@@ -2337,7 +2337,7 @@
             "897e1d51480610de"
         ],
         "x": 1194,
-        "y": 1019,
+        "y": 979,
         "w": 932,
         "h": 142
     },
@@ -2378,7 +2378,8 @@
             "6ac012330e57488b",
             "be88fda2c2bc799c",
             "ae910805c8bea431",
-            "1f61ca2e715109b7"
+            "1f61ca2e715109b7",
+            "1711229475f29d64"
         ],
         "x": 14,
         "y": 459,
@@ -2435,8 +2436,8 @@
             "b853f81cdd50bcdd",
             "40cf067289330bd3"
         ],
-        "x": 1194,
-        "y": 1279,
+        "x": 794,
+        "y": 1319,
         "w": 532,
         "h": 142
     },
@@ -2792,12 +2793,15 @@
             "fe75a03fe558e32e",
             "82a3de9da8351c3b",
             "75faaeba2fb0b84e",
-            "31c80336e8704072"
+            "31c80336e8704072",
+            "dc1096017e72e484",
+            "cc6ba350464cec21",
+            "d41d3c0e37087525"
         ],
         "x": 24,
-        "y": 1211.5,
-        "w": 682,
-        "h": 149.5
+        "y": 1179,
+        "w": 742,
+        "h": 222
     },
     {
         "id": "dc7bde737a93041b",
@@ -2818,7 +2822,7 @@
             "db837f669fd0c06b"
         ],
         "x": 1194,
-        "y": 799,
+        "y": 779,
         "w": 772,
         "h": 182
     },
@@ -3814,12 +3818,36 @@
             "b339164dc4f970e6",
             "d1b1987c143ad0f9",
             "e79e402bb733cee5",
-            "5eda2c4fdddf10d9"
+            "5eda2c4fdddf10d9",
+            "2adf64227565092e"
         ],
         "x": 24,
         "y": 4279,
         "w": 1092,
         "h": 422
+    },
+    {
+        "id": "0362ea214175bb32",
+        "type": "group",
+        "z": "41f3235e2124e3a2",
+        "name": "Handle Lp - Lighting Playback",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "e46533be4892c722",
+            "8f97f77a7cb9b71d",
+            "699992f4d985dfce",
+            "adeabe75f89b48fc",
+            "570cbb7b3e437dff",
+            "0ebc4b97ecb31f4f",
+            "60f7c3ccf537ddfd",
+            "eb6d44b04096e2cc"
+        ],
+        "x": 1194,
+        "y": 1139,
+        "w": 752,
+        "h": 202
     },
     {
         "id": "a552506bc8ab8fc7",
@@ -12133,7 +12161,8 @@
             "7e7e52fe54c56052",
             "b74d22784d74533b",
             "bb3bef9bb4ee98d1",
-            "c1f3ad0ebdf837e6"
+            "c1f3ad0ebdf837e6",
+            "adeabe75f89b48fc"
         ],
         "x": 95,
         "y": 900,
@@ -16271,7 +16300,7 @@
         "z": "ee400291.7cb",
         "g": "da364ef2722b2f7d",
         "name": "debug 25",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -17011,7 +17040,7 @@
         "z": "ee400291.7cb",
         "g": "cd1f9accfe9f4a9e",
         "name": "debug 26",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -17395,6 +17424,35 @@
         "wires": [
             [
                 "2fb43344a3fd0dcc"
+            ]
+        ]
+    },
+    {
+        "id": "2adf64227565092e",
+        "type": "ui_button",
+        "z": "ee400291.7cb",
+        "g": "cd1f9accfe9f4a9e",
+        "name": "",
+        "group": "35e60a5342e359c8",
+        "order": 0,
+        "width": "2",
+        "height": "1",
+        "passthru": false,
+        "label": "Solo deAct",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": " ",
+        "payloadType": "str",
+        "topic": "/cs/playback/20/activate",
+        "topicType": "str",
+        "x": 170,
+        "y": 4360,
+        "wires": [
+            [
+                "e79e402bb733cee5"
             ]
         ]
     },
@@ -22352,7 +22410,7 @@
         "template": "  {\n        \"cmd\": \"{{cmd}}\",\n        \"data\": {\n            \"ME\": 0,\n            \"videoSource\": {\n                \"id\": {{number}}\n            }\n        }\n    }\n ",
         "output": "json",
         "x": 1740,
-        "y": 1080,
+        "y": 1040,
         "wires": [
             [
                 "66a32fbad80af261",
@@ -22372,7 +22430,7 @@
             "40cf067289330bd3"
         ],
         "x": 1895,
-        "y": 1100,
+        "y": 1060,
         "wires": []
     },
     {
@@ -22394,7 +22452,7 @@
         "payload": "Vq:programInput:1",
         "payloadType": "str",
         "x": 1330,
-        "y": 1120,
+        "y": 1080,
         "wires": [
             [
                 "4f9cacece335d9ac"
@@ -22443,7 +22501,7 @@
         "to": "",
         "reg": false,
         "x": 1410,
-        "y": 1080,
+        "y": 1040,
         "wires": [
             [
                 "1a97cbd2dcd4e6e5",
@@ -22466,7 +22524,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 2010,
-        "y": 1080,
+        "y": 1040,
         "wires": []
     },
     {
@@ -22479,7 +22537,7 @@
             "01492bd8cce6e39b"
         ],
         "x": 1235,
-        "y": 1080,
+        "y": 1040,
         "wires": [
             [
                 "4f9cacece335d9ac"
@@ -22804,11 +22862,16 @@
                 "t": "cont",
                 "v": "Pq:",
                 "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "Lp:",
+                "vt": "str"
             }
         ],
         "checkall": "true",
         "repair": false,
-        "outputs": 3,
+        "outputs": 4,
         "x": 440,
         "y": 1100,
         "wires": [
@@ -22820,6 +22883,9 @@
             ],
             [
                 "6ac012330e57488b"
+            ],
+            [
+                "1711229475f29d64"
             ]
         ]
     },
@@ -23165,8 +23231,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1580,
-        "y": 1320,
+        "x": 1180,
+        "y": 1360,
         "wires": [
             [
                 "b7be951ff63429d5"
@@ -23182,8 +23248,8 @@
         "property": "payload",
         "action": "obj",
         "pretty": false,
-        "x": 1570,
-        "y": 1380,
+        "x": 1170,
+        "y": 1420,
         "wires": [
             [
                 "24cc5c254a5880c9"
@@ -23200,8 +23266,8 @@
         "links": [
             "084445fc7ab1aa20"
         ],
-        "x": 1685,
-        "y": 1380,
+        "x": 1285,
+        "y": 1420,
         "wires": []
     },
     {
@@ -23224,8 +23290,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1380,
-        "y": 1320,
+        "x": 980,
+        "y": 1360,
         "wires": [
             [
                 "d0f8104285e93310"
@@ -23269,12 +23335,13 @@
         "syntax": "mustache",
         "template": "{\n    \"cmd\": \"propclear\",\n    \"parm\": \"{{propname}}\"\n}",
         "output": "json",
-        "x": 350,
-        "y": 1260,
+        "x": 390,
+        "y": 1240,
         "wires": [
             [
                 "82a3de9da8351c3b",
-                "eec1c05dc2fac24d"
+                "eec1c05dc2fac24d",
+                "d41d3c0e37087525"
             ]
         ]
     },
@@ -23288,7 +23355,7 @@
         "links": [
             "69d416aa12377823"
         ],
-        "x": 525,
+        "x": 585,
         "y": 1320,
         "wires": []
     },
@@ -23298,7 +23365,7 @@
         "z": "41f3235e2124e3a2",
         "g": "25e2e72fbdf37a5d",
         "name": "Auto Clear Prop",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": true,
@@ -23306,7 +23373,7 @@
         "targetType": "full",
         "statusVal": "propname",
         "statusType": "msg",
-        "x": 580,
+        "x": 640,
         "y": 1260,
         "wires": []
     },
@@ -23351,14 +23418,22 @@
                 "t": "cont",
                 "v": "Pq:",
                 "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "Lp:",
+                "vt": "str"
             }
         ],
         "checkall": "true",
         "repair": false,
-        "outputs": 3,
+        "outputs": 4,
         "x": 170,
         "y": 1260,
         "wires": [
+            [
+                "fe75a03fe558e32e"
+            ],
             [
                 "fe75a03fe558e32e"
             ],
@@ -23420,7 +23495,7 @@
         "repair": false,
         "outputs": 1,
         "x": 1340,
-        "y": 940,
+        "y": 920,
         "wires": [
             [
                 "be166b60f8e2b140"
@@ -23448,7 +23523,7 @@
         "to": "",
         "reg": false,
         "x": 1460,
-        "y": 840,
+        "y": 820,
         "wires": [
             [
                 "c8314b468fd54362"
@@ -23474,7 +23549,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 1580,
-        "y": 880,
+        "y": 860,
         "wires": [
             [
                 "a404a4e88a356caf"
@@ -23502,7 +23577,7 @@
         "to": "",
         "reg": false,
         "x": 1570,
-        "y": 940,
+        "y": 920,
         "wires": [
             [
                 "8a8b6bc710582915",
@@ -23525,7 +23600,7 @@
         "statusVal": "",
         "statusType": "msg",
         "x": 1860,
-        "y": 880,
+        "y": 860,
         "wires": []
     },
     {
@@ -23539,7 +23614,7 @@
             "3bfa9706740e360a"
         ],
         "x": 1925,
-        "y": 940,
+        "y": 920,
         "wires": []
     },
     {
@@ -23552,7 +23627,7 @@
             "6ac012330e57488b"
         ],
         "x": 1235,
-        "y": 880,
+        "y": 860,
         "wires": [
             [
                 "0b54ee8a5b44ae9c",
@@ -23585,8 +23660,8 @@
             "939b05e7ead0928b",
             "e17d42692f676aa8"
         ],
-        "x": 1235,
-        "y": 1320,
+        "x": 835,
+        "y": 1360,
         "wires": [
             [
                 "b853f81cdd50bcdd"
@@ -23604,7 +23679,7 @@
             "40cf067289330bd3"
         ],
         "x": 1305,
-        "y": 840,
+        "y": 820,
         "wires": []
     },
     {
@@ -23658,7 +23733,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1580,
-        "y": 1120,
+        "y": 1080,
         "wires": []
     },
     {
@@ -23672,7 +23747,7 @@
             "fa5c198b40892123"
         ],
         "x": 1585,
-        "y": 1060,
+        "y": 1020,
         "wires": []
     },
     {
@@ -24192,6 +24267,284 @@
             [
                 "755eaf6e941d6c31",
                 "0a32ab7c9ac2f25a"
+            ]
+        ]
+    },
+    {
+        "id": "1711229475f29d64",
+        "type": "link out",
+        "z": "41f3235e2124e3a2",
+        "g": "24b66573302654fa",
+        "name": "toLPThandler",
+        "mode": "link",
+        "links": [
+            "e46533be4892c722"
+        ],
+        "x": 815,
+        "y": 1140,
+        "wires": []
+    },
+    {
+        "id": "e46533be4892c722",
+        "type": "link in",
+        "z": "41f3235e2124e3a2",
+        "g": "0362ea214175bb32",
+        "name": "Lpt_handler",
+        "links": [
+            "1711229475f29d64"
+        ],
+        "x": 1235,
+        "y": 1180,
+        "wires": [
+            [
+                "570cbb7b3e437dff"
+            ]
+        ]
+    },
+    {
+        "id": "8f97f77a7cb9b71d",
+        "type": "change",
+        "z": "41f3235e2124e3a2",
+        "g": "0362ea214175bb32",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "\"/cs/playback/\" & payload.parm",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1360,
+        "y": 1280,
+        "wires": [
+            [
+                "699992f4d985dfce",
+                "adeabe75f89b48fc"
+            ]
+        ]
+    },
+    {
+        "id": "699992f4d985dfce",
+        "type": "debug",
+        "z": "41f3235e2124e3a2",
+        "g": "0362ea214175bb32",
+        "name": "debug 27",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1840,
+        "y": 1300,
+        "wires": []
+    },
+    {
+        "id": "adeabe75f89b48fc",
+        "type": "link out",
+        "z": "41f3235e2124e3a2",
+        "g": "0362ea214175bb32",
+        "name": "link out 26",
+        "mode": "link",
+        "links": [
+            "a5f96939.8900e8"
+        ],
+        "x": 1795,
+        "y": 1260,
+        "wires": []
+    },
+    {
+        "id": "dc1096017e72e484",
+        "type": "change",
+        "z": "41f3235e2124e3a2",
+        "g": "25e2e72fbdf37a5d",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "propname",
+                "pt": "msg",
+                "to": "$replace(propname,\"&#x2F\", '/')",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 250,
+        "y": 1340,
+        "wires": [
+            [
+                "fe75a03fe558e32e",
+                "cc6ba350464cec21"
+            ]
+        ]
+    },
+    {
+        "id": "cc6ba350464cec21",
+        "type": "debug",
+        "z": "41f3235e2124e3a2",
+        "g": "25e2e72fbdf37a5d",
+        "name": "debug 28",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 460,
+        "y": 1360,
+        "wires": []
+    },
+    {
+        "id": "d41d3c0e37087525",
+        "type": "debug",
+        "z": "41f3235e2124e3a2",
+        "g": "25e2e72fbdf37a5d",
+        "name": "debug 29",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 620,
+        "y": 1220,
+        "wires": []
+    },
+    {
+        "id": "570cbb7b3e437dff",
+        "type": "change",
+        "z": "41f3235e2124e3a2",
+        "g": "0362ea214175bb32",
+        "name": "format event",
+        "rules": [
+            {
+                "t": "set",
+                "p": "source",
+                "pt": "msg",
+                "to": "propresenter",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "cmd",
+                "pt": "msg",
+                "to": "$split(payload, \":\")[1]",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "parm",
+                "pt": "msg",
+                "to": "$split(payload, \":\")[2]",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "number",
+                "pt": "msg",
+                "to": "$split(payload, \":\")[2]",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1370,
+        "y": 1180,
+        "wires": [
+            [
+                "0ebc4b97ecb31f4f",
+                "60f7c3ccf537ddfd"
+            ]
+        ]
+    },
+    {
+        "id": "0ebc4b97ecb31f4f",
+        "type": "debug",
+        "z": "41f3235e2124e3a2",
+        "g": "0362ea214175bb32",
+        "name": "debug 30",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1820,
+        "y": 1180,
+        "wires": []
+    },
+    {
+        "id": "60f7c3ccf537ddfd",
+        "type": "switch",
+        "z": "41f3235e2124e3a2",
+        "g": "0362ea214175bb32",
+        "name": "",
+        "property": "cmd",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "activate",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1550,
+        "y": 1220,
+        "wires": [
+            [
+                "eb6d44b04096e2cc"
+            ]
+        ]
+    },
+    {
+        "id": "eb6d44b04096e2cc",
+        "type": "change",
+        "z": "41f3235e2124e3a2",
+        "g": "0362ea214175bb32",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "\"/cs/playback/\" & parm & \"/activate\"",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1700,
+        "y": 1220,
+        "wires": [
+            [
+                "adeabe75f89b48fc"
             ]
         ]
     },
