@@ -2697,11 +2697,12 @@
             "73fd1724bb0fcf8f",
             "6b579171f844ee76",
             "29caec0c0b177f96",
-            "dea0a5308e04724a"
+            "dea0a5308e04724a",
+            "81b022b3de64b0d3"
         ],
         "x": 34,
         "y": 679,
-        "w": 792,
+        "w": 1012,
         "h": 362
     },
     {
@@ -2723,12 +2724,13 @@
             "44b455af8d9f7429",
             "2c73d23ac28f3ff3",
             "9b44b75adc5634ab",
-            "a5868668641b392c"
+            "a5868668641b392c",
+            "00d0175795023c4a"
         ],
         "x": 34,
         "y": 39,
         "w": 902,
-        "h": 240
+        "h": 242
     },
     {
         "id": "390d5b4557c906f8",
@@ -6664,7 +6666,7 @@
         "type": "debug",
         "z": "17ca131.e488ced",
         "g": "72b450b6.03b4d",
-        "name": "monitor",
+        "name": "Prj Rsp",
         "active": false,
         "tosidebar": true,
         "console": false,
@@ -8022,7 +8024,7 @@
         "ip": "",
         "port": "",
         "name": "pjlink",
-        "x": 590,
+        "x": 830,
         "y": 800,
         "wires": [
             [
@@ -8074,9 +8076,9 @@
         "y": 780,
         "wires": [
             [
-                "d2d88a605ed9b57b",
                 "96ed6bcf52a2c8b3",
-                "29caec0c0b177f96"
+                "29caec0c0b177f96",
+                "81b022b3de64b0d3"
             ],
             [
                 "4f29d652cf48fc44"
@@ -8677,7 +8679,7 @@
         "links": [
             "b364d28604bdf3d3"
         ],
-        "x": 765,
+        "x": 1005,
         "y": 780,
         "wires": []
     },
@@ -8710,6 +8712,69 @@
         "x": 160,
         "y": 1700,
         "wires": []
+    },
+    {
+        "id": "00d0175795023c4a",
+        "type": "inject",
+        "z": "17ca131.e488ced",
+        "g": "74d2eb49.51fe34",
+        "name": "test lamps",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "source",
+                "v": "test",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 240,
+        "wires": [
+            [
+                "5b15cf8f.9919e"
+            ]
+        ]
+    },
+    {
+        "id": "81b022b3de64b0d3",
+        "type": "change",
+        "z": "17ca131.e488ced",
+        "g": "cb38a53c1b2c6ea8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 660,
+        "y": 800,
+        "wires": [
+            [
+                "d2d88a605ed9b57b"
+            ]
+        ]
     },
     {
         "id": "8eb0c09e.7f105",

@@ -3830,22 +3830,24 @@
         "id": "0362ea214175bb32",
         "type": "group",
         "z": "41f3235e2124e3a2",
-        "name": "Handle Lpt - Lighting Pass THru",
+        "name": "Handle Lp - Lighting Playback",
         "style": {
             "label": true
         },
         "nodes": [
             "e46533be4892c722",
-            "6836dbe86d281fcf",
             "8f97f77a7cb9b71d",
-            "83f4a78e742ea641",
             "699992f4d985dfce",
-            "adeabe75f89b48fc"
+            "adeabe75f89b48fc",
+            "570cbb7b3e437dff",
+            "0ebc4b97ecb31f4f",
+            "60f7c3ccf537ddfd",
+            "eb6d44b04096e2cc"
         ],
         "x": 1194,
         "y": 1139,
-        "w": 782,
-        "h": 162
+        "w": 752,
+        "h": 202
     },
     {
         "id": "a552506bc8ab8fc7",
@@ -22863,7 +22865,7 @@
             },
             {
                 "t": "cont",
-                "v": "Lpt:",
+                "v": "Lp:",
                 "vt": "str"
             }
         ],
@@ -23419,7 +23421,7 @@
             },
             {
                 "t": "cont",
-                "v": "Lpt:",
+                "v": "Lp:",
                 "vt": "str"
             }
         ],
@@ -23439,7 +23441,7 @@
                 "fe75a03fe558e32e"
             ],
             [
-                "dc1096017e72e484"
+                "fe75a03fe558e32e"
             ]
         ]
     },
@@ -24295,20 +24297,9 @@
         "y": 1180,
         "wires": [
             [
-                "8f97f77a7cb9b71d"
+                "570cbb7b3e437dff"
             ]
         ]
-    },
-    {
-        "id": "6836dbe86d281fcf",
-        "type": "comment",
-        "z": "41f3235e2124e3a2",
-        "g": "0362ea214175bb32",
-        "name": "Everything after the colon is sent to the console",
-        "info": "",
-        "x": 1460,
-        "y": 1180,
-        "wires": []
     },
     {
         "id": "8f97f77a7cb9b71d",
@@ -24321,7 +24312,7 @@
                 "t": "set",
                 "p": "topic",
                 "pt": "msg",
-                "to": "$substring(msg.payload,4)",
+                "to": "\"/cs/playback/\" & payload.parm",
                 "tot": "jsonata"
             }
         ],
@@ -24331,24 +24322,13 @@
         "to": "",
         "reg": false,
         "x": 1360,
-        "y": 1220,
+        "y": 1280,
         "wires": [
             [
                 "699992f4d985dfce",
                 "adeabe75f89b48fc"
             ]
         ]
-    },
-    {
-        "id": "83f4a78e742ea641",
-        "type": "comment",
-        "z": "41f3235e2124e3a2",
-        "g": "0362ea214175bb32",
-        "name": "Todo - commas aren't handled correctly",
-        "info": "",
-        "x": 1800,
-        "y": 1180,
-        "wires": []
     },
     {
         "id": "699992f4d985dfce",
@@ -24364,8 +24344,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1600,
-        "y": 1260,
+        "x": 1840,
+        "y": 1300,
         "wires": []
     },
     {
@@ -24378,8 +24358,8 @@
         "links": [
             "a5f96939.8900e8"
         ],
-        "x": 1555,
-        "y": 1220,
+        "x": 1795,
+        "y": 1260,
         "wires": []
     },
     {
@@ -24446,6 +24426,127 @@
         "x": 620,
         "y": 1220,
         "wires": []
+    },
+    {
+        "id": "570cbb7b3e437dff",
+        "type": "change",
+        "z": "41f3235e2124e3a2",
+        "g": "0362ea214175bb32",
+        "name": "format event",
+        "rules": [
+            {
+                "t": "set",
+                "p": "source",
+                "pt": "msg",
+                "to": "propresenter",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "cmd",
+                "pt": "msg",
+                "to": "$split(payload, \":\")[1]",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "parm",
+                "pt": "msg",
+                "to": "$split(payload, \":\")[2]",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "number",
+                "pt": "msg",
+                "to": "$split(payload, \":\")[2]",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1370,
+        "y": 1180,
+        "wires": [
+            [
+                "0ebc4b97ecb31f4f",
+                "60f7c3ccf537ddfd"
+            ]
+        ]
+    },
+    {
+        "id": "0ebc4b97ecb31f4f",
+        "type": "debug",
+        "z": "41f3235e2124e3a2",
+        "g": "0362ea214175bb32",
+        "name": "debug 30",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1820,
+        "y": 1180,
+        "wires": []
+    },
+    {
+        "id": "60f7c3ccf537ddfd",
+        "type": "switch",
+        "z": "41f3235e2124e3a2",
+        "g": "0362ea214175bb32",
+        "name": "",
+        "property": "cmd",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "activate",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1550,
+        "y": 1220,
+        "wires": [
+            [
+                "eb6d44b04096e2cc"
+            ]
+        ]
+    },
+    {
+        "id": "eb6d44b04096e2cc",
+        "type": "change",
+        "z": "41f3235e2124e3a2",
+        "g": "0362ea214175bb32",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "\"/cs/playback/\" & parm & \"/activate\"",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1700,
+        "y": 1220,
+        "wires": [
+            [
+                "adeabe75f89b48fc"
+            ]
+        ]
     },
     {
         "id": "9871bf8e.2fa56",
