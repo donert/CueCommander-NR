@@ -3732,6 +3732,33 @@
         "h": 387
     },
     {
+        "id": "96bc8a5df8acc28b",
+        "type": "group",
+        "z": "ee400291.7cb",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "7ee64af33eed3254",
+            "ab775138e601551f",
+            "21a52286c3569ce3",
+            "ea8ce18668ae87f7",
+            "57733720f796a058",
+            "4612afe09be2909a",
+            "697940576f58b7c3"
+        ],
+        "x": 1014,
+        "y": 2959,
+        "w": 452,
+        "h": 162
+    },
+    {
         "id": "a552506bc8ab8fc7",
         "type": "junction",
         "z": "17ca131.e488ced",
@@ -5268,12 +5295,12 @@
         "tab": "b36c9a8b.092df8",
         "order": 8,
         "disp": true,
-        "width": "6",
+        "width": "8",
         "collapse": false,
         "className": ""
     },
     {
-        "id": "e21a22d15cc10f61",
+        "id": "9376b81b6847faa9",
         "type": "ui_spacer",
         "z": "ee400291.7cb",
         "name": "spacer",
@@ -5283,7 +5310,17 @@
         "height": 1
     },
     {
-        "id": "79b77da7f6488253",
+        "id": "c162a39624dd6077",
+        "type": "ui_spacer",
+        "z": "ee400291.7cb",
+        "name": "spacer",
+        "group": "a0d2379726c5b29d",
+        "order": 1,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "bd441ad76f72553e",
         "type": "ui_spacer",
         "z": "ee400291.7cb",
         "name": "spacer",
@@ -5293,7 +5330,7 @@
         "height": 1
     },
     {
-        "id": "17f6dcae8cc0109e",
+        "id": "9bb5798ecfde9231",
         "type": "ui_spacer",
         "z": "ee400291.7cb",
         "name": "spacer",
@@ -5303,7 +5340,7 @@
         "height": 1
     },
     {
-        "id": "ab1c2fc42f497ae6",
+        "id": "ceefd54921438224",
         "type": "ui_spacer",
         "z": "ee400291.7cb",
         "name": "spacer",
@@ -5313,7 +5350,17 @@
         "height": 1
     },
     {
-        "id": "f67e69af399f1eee",
+        "id": "b356764433d5bee5",
+        "type": "ui_spacer",
+        "z": "ee400291.7cb",
+        "name": "spacer",
+        "group": "a0d2379726c5b29d",
+        "order": 23,
+        "width": 7,
+        "height": 1
+    },
+    {
+        "id": "ff5ef91be1889fac",
         "type": "ui_spacer",
         "z": "ee400291.7cb",
         "name": "spacer",
@@ -5323,7 +5370,7 @@
         "height": 1
     },
     {
-        "id": "a44d96d78a2d3389",
+        "id": "9659b3cad46f7184",
         "type": "ui_spacer",
         "z": "ee400291.7cb",
         "name": "spacer",
@@ -5333,7 +5380,7 @@
         "height": 1
     },
     {
-        "id": "a9f77c5454840fed",
+        "id": "3e55801ea4187679",
         "type": "ui_spacer",
         "z": "ee400291.7cb",
         "name": "spacer",
@@ -5343,7 +5390,7 @@
         "height": 1
     },
     {
-        "id": "71cbd7cfdfd1d4ad",
+        "id": "2a45e5400d93eb50",
         "type": "ui_spacer",
         "z": "ee400291.7cb",
         "name": "spacer",
@@ -5353,7 +5400,37 @@
         "height": 1
     },
     {
-        "id": "a54912858c02af94",
+        "id": "4ddaa9cf952c7349",
+        "type": "ui_spacer",
+        "z": "ee400291.7cb",
+        "name": "spacer",
+        "group": "1a58511c941998c3",
+        "order": 14,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "26c17a7e9e6152da",
+        "type": "ui_spacer",
+        "z": "ee400291.7cb",
+        "name": "spacer",
+        "group": "1a58511c941998c3",
+        "order": 15,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "b34a4e2c50b258e1",
+        "type": "ui_spacer",
+        "z": "ee400291.7cb",
+        "name": "spacer",
+        "group": "1a58511c941998c3",
+        "order": 17,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "6063348431cfb76b",
         "type": "ui_spacer",
         "z": "ee400291.7cb",
         "name": "spacer",
@@ -5363,7 +5440,7 @@
         "height": 1
     },
     {
-        "id": "58380cc9d85728c9",
+        "id": "c4cb4bdf15de612a",
         "type": "ui_spacer",
         "z": "ee400291.7cb",
         "name": "spacer",
@@ -5373,33 +5450,43 @@
         "height": 1
     },
     {
-        "id": "d67d714ba4573b9c",
+        "id": "cefde3695bc1e20f",
         "type": "ui_spacer",
         "z": "ee400291.7cb",
         "name": "spacer",
         "group": "aa77273aba5e6bc4",
-        "order": 15,
+        "order": 9,
         "width": 2,
         "height": 1
     },
     {
-        "id": "43a7ea4c68433d8d",
+        "id": "b8028031ad6c034f",
         "type": "ui_spacer",
         "z": "ee400291.7cb",
         "name": "spacer",
         "group": "aa77273aba5e6bc4",
-        "order": 19,
-        "width": 6,
+        "order": 14,
+        "width": 4,
         "height": 1
     },
     {
-        "id": "d2398938d5cdf489",
+        "id": "33b81966548b6a9a",
+        "type": "ui_spacer",
+        "z": "ee400291.7cb",
+        "name": "spacer",
+        "group": "aa77273aba5e6bc4",
+        "order": 16,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "fec762d597ad0f99",
         "type": "ui_spacer",
         "z": "ee400291.7cb",
         "name": "spacer",
         "group": "35e60a5342e359c8",
         "order": 2,
-        "width": 4,
+        "width": 6,
         "height": 1
     },
     {
@@ -14682,7 +14769,8 @@
             "38a6b2dc45806e74",
             "ebbada715c2bdc83",
             "bc7515fbf9d5cb3d",
-            "ccbe7f922e2ce232"
+            "ccbe7f922e2ce232",
+            "ab775138e601551f"
         ],
         "x": 95,
         "y": 2480,
@@ -15403,7 +15491,7 @@
         "g": "3dc91e7a7be02d7b",
         "name": "",
         "group": "aa77273aba5e6bc4",
-        "order": 16,
+        "order": 10,
         "width": 2,
         "height": 1,
         "passthru": false,
@@ -15432,7 +15520,7 @@
         "g": "3dc91e7a7be02d7b",
         "name": "",
         "group": "aa77273aba5e6bc4",
-        "order": 17,
+        "order": 12,
         "width": 2,
         "height": 1,
         "passthru": false,
@@ -15461,7 +15549,7 @@
         "g": "3dc91e7a7be02d7b",
         "name": "",
         "group": "aa77273aba5e6bc4",
-        "order": 18,
+        "order": 8,
         "width": 2,
         "height": 1,
         "passthru": false,
@@ -16085,7 +16173,7 @@
         "name": "",
         "label": "HSL Form",
         "group": "a0d2379726c5b29d",
-        "order": 22,
+        "order": 24,
         "width": 0,
         "height": 0,
         "options": [
@@ -16274,7 +16362,7 @@
         "g": "da364ef2722b2f7d",
         "name": "",
         "group": "a0d2379726c5b29d",
-        "order": 1,
+        "order": 22,
         "width": 1,
         "height": 1,
         "passthru": false,
@@ -17107,8 +17195,8 @@
         "width": 2,
         "height": 1,
         "passthru": false,
-        "label": "Stars",
-        "tooltip": "63>64",
+        "label": "GOBOs",
+        "tooltip": "Wall GOBOs 63>64",
         "color": "",
         "bgcolor": "",
         "className": "",
@@ -17117,7 +17205,7 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 110,
+        "x": 120,
         "y": 4000,
         "wires": [
             [
@@ -17132,7 +17220,7 @@
         "g": "3dc91e7a7be02d7b",
         "name": "",
         "group": "aa77273aba5e6bc4",
-        "order": 8,
+        "order": 18,
         "width": 2,
         "height": 1,
         "passthru": false,
@@ -17161,7 +17249,7 @@
         "g": "3dc91e7a7be02d7b",
         "name": "",
         "group": "aa77273aba5e6bc4",
-        "order": 9,
+        "order": 20,
         "width": 2,
         "height": 1,
         "passthru": false,
@@ -17190,7 +17278,7 @@
         "g": "3dc91e7a7be02d7b",
         "name": "",
         "group": "aa77273aba5e6bc4",
-        "order": 10,
+        "order": 19,
         "width": 2,
         "height": 1,
         "passthru": false,
@@ -17248,7 +17336,7 @@
         "g": "3dc91e7a7be02d7b",
         "name": "",
         "group": "aa77273aba5e6bc4",
-        "order": 12,
+        "order": 17,
         "width": 2,
         "height": 1,
         "passthru": false,
@@ -17277,7 +17365,7 @@
         "g": "3dc91e7a7be02d7b",
         "name": "",
         "group": "aa77273aba5e6bc4",
-        "order": 13,
+        "order": 15,
         "width": 2,
         "height": 1,
         "passthru": false,
@@ -17306,7 +17394,7 @@
         "g": "3dc91e7a7be02d7b",
         "name": "",
         "group": "aa77273aba5e6bc4",
-        "order": 14,
+        "order": 13,
         "width": 2,
         "height": 1,
         "passthru": false,
@@ -17434,6 +17522,170 @@
         "x": 1080,
         "y": 1080,
         "wires": []
+    },
+    {
+        "id": "7ee64af33eed3254",
+        "type": "template",
+        "z": "ee400291.7cb",
+        "g": "96bc8a5df8acc28b",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "json",
+        "syntax": "mustache",
+        "template": "[\n    {\n        \"ch\": 49,\n        \"lvl\": 100,\n        \"hs\": [\n            20,\n            100\n        ]\n    },\n    {\n        \"ch\": 50,\n        \"lvl\": 100,\n        \"hs\": [\n            21,\n            100\n        ]\n    },\n    {\n        \"ch\": 51,\n        \"lvl\": 100,\n        \"hs\": [\n            22,\n            100\n        ]\n    },\n    {\n        \"ch\": 52,\n        \"lvl\": 100,\n        \"hs\": [\n            23,\n            100\n        ]\n    },\n    {\n        \"ch\": 53,\n        \"lvl\": 100,\n        \"hs\": [\n            24,\n            100\n        ]\n    },\n    {\n        \"ch\": 54,\n        \"lvl\": 100,\n        \"hs\": [\n            24,\n            100\n        ]\n    },\n    {\n        \"ch\": 55,\n        \"lvl\": 100,\n        \"hs\": [\n            25,\n            100\n        ]\n    },\n    {\n        \"ch\": 45,\n        \"lvl\": 100,\n        \"hs\": [\n            26,\n            100\n        ]\n    },\n    {\n        \"ch\": 46,\n        \"lvl\": 100,\n        \"hs\": [\n            27,\n            100\n        ]\n    },\n    {\n        \"ch\": 47,\n        \"lvl\": 100,\n        \"hs\": [\n            28,\n            100\n        ]\n    },\n    {\n        \"ch\": 48,\n        \"lvl\": 100,\n        \"hs\": [\n            29,\n            100\n        ]\n    },\n    {\n        \"ch\": 56,\n        \"lvl\": 100,\n        \"hs\": [\n            30,\n            100\n        ]\n    },\n    {\n        \"ch\": 57,\n        \"lvl\": 100,\n        \"hs\": [\n            31,\n            100\n        ]\n    },\n    {\n        \"ch\": 58,\n        \"lvl\": 100,\n        \"hs\": [\n            31,\n            100\n        ]\n    },\n    {\n        \"ch\": 59,\n        \"lvl\": 100,\n        \"hs\": [\n            32,\n            100\n        ]\n    },\n    {\n        \"ch\": 60,\n        \"lvl\": 100,\n        \"hs\": [\n            33,\n            100\n        ]\n    },\n    {\n        \"ch\": 61,\n        \"lvl\": 100,\n        \"hs\": [\n            34,\n            100\n        ]\n    },\n    {\n        \"ch\": 62,\n        \"lvl\": 100,\n        \"hs\": [\n            35,\n            100\n        ]\n    }\n ]",
+        "output": "json",
+        "x": 1260,
+        "y": 3000,
+        "wires": [
+            [
+                "ab775138e601551f"
+            ]
+        ],
+        "info": "Lamba function for Excel\n\n{\"ch\": 49, \"lvl\": 100, \"hs\": [240,100] }\n\nhs\n=lambda(h,s, concat(\" \"\"hs\"\": [ \" , round(h,0), \",\", round(s,0), \"]\") )\n\nch\n=lambda(c, concat(\" \"\"ch\"\": \" , c) )\n\nlvl\n=lambda(l, concat(\" \"\"lvl\"\": \" , l) )\n \nchsl \n=lambda(c,h,s,l, textjoin(\",\" , FALSE, \" {\", ch(c) ,  lvl(l) , hs(h,s)  ))\n=lambda(c,h,s,l, concat(\" {\", ch(c) , \",\" ,   lvl(l) , \",\"  , hs(h,s) , \"},\" ))"
+    },
+    {
+        "id": "ab775138e601551f",
+        "type": "link out",
+        "z": "ee400291.7cb",
+        "g": "96bc8a5df8acc28b",
+        "name": "link out 27",
+        "mode": "link",
+        "links": [
+            "21ece2adbe7667ab"
+        ],
+        "x": 1425,
+        "y": 3040,
+        "wires": []
+    },
+    {
+        "id": "21a52286c3569ce3",
+        "type": "ui_button",
+        "z": "ee400291.7cb",
+        "g": "96bc8a5df8acc28b",
+        "name": "",
+        "group": "1a58511c941998c3",
+        "order": 12,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "Walls MS",
+        "tooltip": "Walls fade Missions Sunday",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1100,
+        "y": 3000,
+        "wires": [
+            [
+                "7ee64af33eed3254"
+            ]
+        ]
+    },
+    {
+        "id": "ea8ce18668ae87f7",
+        "type": "template",
+        "z": "ee400291.7cb",
+        "g": "96bc8a5df8acc28b",
+        "name": "pillars to match",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "json",
+        "syntax": "mustache",
+        "template": "[\n{\n    \"ch\": 41,\n    \"lvl\": 61,\n    \"hs\": [\n        25,\n        100\n    ]\n},\n{\n    \"ch\": 42,\n    \"lvl\": 0,\n    \"hs\": [\n        27,\n        100\n    ]\n},\n{\n    \"ch\": 43,\n    \"lvl\": 100,\n    \"hs\": [\n        28,\n        100\n    ]\n},\n{\n    \"ch\": 44,\n    \"lvl\": 100,\n    \"hs\": [\n        30,\n        100\n    ]\n}    \n    \n ]",
+        "output": "json",
+        "x": 1280,
+        "y": 3040,
+        "wires": [
+            [
+                "ab775138e601551f"
+            ]
+        ],
+        "info": "Lamba function for Excel\n\n{\"ch\": 49, \"lvl\": 100, \"hs\": [240,100] }\n\nhs\n=lambda(h,s, concat(\" \"\"hs\"\": [ \" , round(h,0), \",\", round(s,0), \"]\") )\n\nch\n=lambda(c, concat(\" \"\"ch\"\": \" , c) )\n\nlvl\n=lambda(l, concat(\" \"\"lvl\"\": \" , l) )\n \nchsl \n=lambda(c,h,s,l, textjoin(\",\" , FALSE, \" {\", ch(c) ,  lvl(l) , hs(h,s)  ))\n=lambda(c,h,s,l, concat(\" {\", ch(c) , \",\" ,   lvl(l) , \",\"  , hs(h,s) , \"},\" ))"
+    },
+    {
+        "id": "57733720f796a058",
+        "type": "ui_button",
+        "z": "ee400291.7cb",
+        "g": "96bc8a5df8acc28b",
+        "name": "",
+        "group": "1a58511c941998c3",
+        "order": 13,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "Pillars MS",
+        "tooltip": "Pillars Missions Sunday",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1100,
+        "y": 3040,
+        "wires": [
+            [
+                "ea8ce18668ae87f7"
+            ]
+        ]
+    },
+    {
+        "id": "4612afe09be2909a",
+        "type": "ui_button",
+        "z": "ee400291.7cb",
+        "g": "96bc8a5df8acc28b",
+        "name": "",
+        "group": "1a58511c941998c3",
+        "order": 16,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "Stained Glass MS",
+        "tooltip": "Stained Glass Missions Sunday",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1130,
+        "y": 3080,
+        "wires": [
+            [
+                "697940576f58b7c3"
+            ]
+        ]
+    },
+    {
+        "id": "697940576f58b7c3",
+        "type": "template",
+        "z": "ee400291.7cb",
+        "g": "96bc8a5df8acc28b",
+        "name": "sg to match",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "json",
+        "syntax": "mustache",
+        "template": "[\n{\n    \"ch\": 40,\n    \"lvl\": 100,\n    \"hs\": [\n        14,\n        100\n    ]\n},\n{\n    \"ch\": 34,\n    \"lvl\": 100,\n    \"hs\": [\n        16,\n        100\n    ]\n},\n{\n    \"ch\": 35,\n    \"lvl\": 100,\n    \"hs\": [\n        19,\n        100\n    ]\n},\n{\n    \"ch\": 36,\n    \"lvl\": 100,\n    \"hs\": [\n        21,\n        100\n    ]\n},\n{\n    \"ch\": 37,\n    \"lvl\": 100,\n    \"hs\": [\n        23,\n        100\n    ]\n},\n{\n    \"ch\": 38,\n    \"lvl\": 100,\n    \"hs\": [\n        26,\n        100\n    ]\n},\n{\n    \"ch\": 76,\n    \"lvl\": 100,\n    \"hs\": [\n        28,\n        100\n    ]\n},\n{\n    \"ch\": 78,\n    \"lvl\": 100,\n    \"hs\": [\n        30,\n        100\n    ]\n},\n{\n    \"ch\": 79,\n    \"lvl\": 100,\n    \"hs\": [\n        33,\n        100\n    ]\n},\n{\n    \"ch\": 80,\n    \"lvl\": 100,\n    \"hs\": [\n        35,\n        100\n    ]\n}\n ]",
+        "output": "json",
+        "x": 1330,
+        "y": 3080,
+        "wires": [
+            [
+                "ab775138e601551f"
+            ]
+        ],
+        "info": "Lamba function for Excel\n\n{\"ch\": 49, \"lvl\": 100, \"hs\": [240,100] }\n\nhs\n=lambda(h,s, concat(\" \"\"hs\"\": [ \" , round(h,0), \",\", round(s,0), \"]\") )\n\nch\n=lambda(c, concat(\" \"\"ch\"\": \" , c) )\n\nlvl\n=lambda(l, concat(\" \"\"lvl\"\": \" , l) )\n \nchsl \n=lambda(c,h,s,l, textjoin(\",\" , FALSE, \" {\", ch(c) ,  lvl(l) , hs(h,s)  ))\n=lambda(c,h,s,l, concat(\" {\", ch(c) , \",\" ,   lvl(l) , \",\"  , hs(h,s) , \"},\" ))"
     },
     {
         "id": "1e9dc9a1.038cb6",
