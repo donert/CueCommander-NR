@@ -3169,15 +3169,11 @@
             "e12bc98ac9e8866d",
             "78e6e014573cc3a7",
             "1a98fec417ef92e0",
-            "796d2468bb4de209",
-            "44f3f545d48e2c61",
-            "1d14b0faa4ac7620",
             "6bb775ba1e440513",
             "1ea6cf8f4e8c2d33",
             "100a3e5853aca816",
             "e6976755aefa577c",
             "b0bc4cb102ea1b28",
-            "c04e0837b3f60d1e",
             "0436d7a82a7a1ee3"
         ],
         "x": 34,
@@ -3320,6 +3316,33 @@
         ],
         "x": 1194,
         "y": 1139
+    },
+    {
+        "id": "96bc8a5df8acc28b",
+        "type": "group",
+        "z": "ee400291.7cb",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "7ee64af33eed3254",
+            "ab775138e601551f",
+            "21a52286c3569ce3",
+            "ea8ce18668ae87f7",
+            "57733720f796a058",
+            "4612afe09be2909a",
+            "697940576f58b7c3"
+        ],
+        "x": 1014,
+        "y": 2959,
+        "w": 452,
+        "h": 162
     },
     {
         "id": "e660fb746dfbb567",
@@ -3730,33 +3753,6 @@
         "y": 2439,
         "w": 872,
         "h": 387
-    },
-    {
-        "id": "96bc8a5df8acc28b",
-        "type": "group",
-        "z": "ee400291.7cb",
-        "style": {
-            "stroke": "#999999",
-            "stroke-opacity": "1",
-            "fill": "none",
-            "fill-opacity": "1",
-            "label": true,
-            "label-position": "nw",
-            "color": "#a4a4a4"
-        },
-        "nodes": [
-            "7ee64af33eed3254",
-            "ab775138e601551f",
-            "21a52286c3569ce3",
-            "ea8ce18668ae87f7",
-            "57733720f796a058",
-            "4612afe09be2909a",
-            "697940576f58b7c3"
-        ],
-        "x": 1014,
-        "y": 2959,
-        "w": 452,
-        "h": 162
     },
     {
         "id": "a552506bc8ab8fc7",
@@ -14770,7 +14766,8 @@
             "ebbada715c2bdc83",
             "bc7515fbf9d5cb3d",
             "ccbe7f922e2ce232",
-            "ab775138e601551f"
+            "ab775138e601551f",
+            "58e712526deacae7"
         ],
         "x": 95,
         "y": 2480,
@@ -15907,7 +15904,7 @@
         "fieldType": "msg",
         "format": "json",
         "syntax": "mustache",
-        "template": "[{\"ch\":  36, \"col\": 2 , \"lvl\": 100} ,\n {\"ch\": 37, \"col\": 10, \"lvl\": 100} ,\n {\"ch\": 38, \"col\": 14, \"lvl\":100},\n\n {\"ch\": 34, \"col\": 1, \"lvl\":100},\n {\"ch\": 35, \"col\": 5, \"lvl\":100},\n {\"ch\": 40, \"col\": 11, \"lvl\": 100},\n \n {\"ch\": 41, \"col\": 13, \"lvl\": 100},\n {\"ch\": 42, \"col\": 13, \"lvl\":100},\n {\"ch\": 43, \"col\": 13, \"lvl\": 100},\n {\"ch\": 44, \"col\": 13, \"lvl\":100},\n\n {\n    \"ch\": 76,\n    \"col\": 1,\n    \"lvl\": 100\n},\n\n{\n    \"ch\": 78,\n    \"col\": 2,\n    \"lvl\": 100\n},\n{\n    \"ch\": 79,\n    \"col\": 5,\n    \"lvl\": 100\n},\n{\n    \"ch\": 80,\n    \"col\": 12,\n    \"lvl\": 100\n}\n ]",
+        "template": "[\n {\"ch\": 34, \"col\": 2, \"lvl\":  33} ,\n {\"ch\": 35, \"col\": 2, \"lvl\":  33} ,\n {\"ch\": 36, \"col\": 2, \"lvl\":  33} ,\n\n {\"ch\": 76, \"col\": 2, \"lvl\":  33} ,\n {\"ch\": 77, \"col\": 2, \"lvl\":  33} ,\n {\"ch\": 78, \"col\": 2, \"lvl\":  33} ,\n \n {\"ch\": 79, \"col\": 2, \"lvl\": 100}  ,\n {\"ch\": 15, \"col\": 2, \"lvl\":  50}\n ]",
         "output": "json",
         "x": 800,
         "y": 3140,
@@ -15930,35 +15927,6 @@
         "x": 945,
         "y": 3140,
         "wires": []
-    },
-    {
-        "id": "4e89d68d2cc8f090",
-        "type": "ui_button",
-        "z": "ee400291.7cb",
-        "g": "c6652a873359cc83",
-        "name": "",
-        "group": "1a58511c941998c3",
-        "order": 10,
-        "width": 3,
-        "height": 1,
-        "passthru": false,
-        "label": "Stained Glass",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 640,
-        "y": 3140,
-        "wires": [
-            [
-                "1c2c2e16fd601aae"
-            ]
-        ]
     },
     {
         "id": "ee442eaeabc7edcc",
@@ -17214,93 +17182,6 @@
         ]
     },
     {
-        "id": "796d2468bb4de209",
-        "type": "ui_button",
-        "z": "ee400291.7cb",
-        "g": "3dc91e7a7be02d7b",
-        "name": "",
-        "group": "aa77273aba5e6bc4",
-        "order": 18,
-        "width": 2,
-        "height": 1,
-        "passthru": false,
-        "label": "Trees",
-        "tooltip": "74",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "74",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 110,
-        "y": 4120,
-        "wires": [
-            [
-                "b0bc4cb102ea1b28"
-            ]
-        ]
-    },
-    {
-        "id": "44f3f545d48e2c61",
-        "type": "ui_button",
-        "z": "ee400291.7cb",
-        "g": "3dc91e7a7be02d7b",
-        "name": "",
-        "group": "aa77273aba5e6bc4",
-        "order": 20,
-        "width": 2,
-        "height": 1,
-        "passthru": false,
-        "label": "Man Front",
-        "tooltip": "77",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "77",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 130,
-        "y": 4080,
-        "wires": [
-            [
-                "b0bc4cb102ea1b28"
-            ]
-        ]
-    },
-    {
-        "id": "1d14b0faa4ac7620",
-        "type": "ui_button",
-        "z": "ee400291.7cb",
-        "g": "3dc91e7a7be02d7b",
-        "name": "",
-        "group": "aa77273aba5e6bc4",
-        "order": 19,
-        "width": 2,
-        "height": 1,
-        "passthru": false,
-        "label": "Man Glow",
-        "tooltip": "75 inside glow",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "75",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 130,
-        "y": 4040,
-        "wires": [
-            [
-                "b0bc4cb102ea1b28"
-            ]
-        ]
-    },
-    {
         "id": "100a3e5853aca816",
         "type": "ui_button",
         "z": "ee400291.7cb",
@@ -17352,35 +17233,6 @@
         "topicType": "msg",
         "x": 390,
         "y": 4140,
-        "wires": [
-            [
-                "b0bc4cb102ea1b28"
-            ]
-        ]
-    },
-    {
-        "id": "c04e0837b3f60d1e",
-        "type": "ui_button",
-        "z": "ee400291.7cb",
-        "g": "3dc91e7a7be02d7b",
-        "name": "",
-        "group": "aa77273aba5e6bc4",
-        "order": 15,
-        "width": 2,
-        "height": 1,
-        "passthru": false,
-        "label": "West Win",
-        "tooltip": "76+78>80 West Window",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "76+78+79+80",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 300,
-        "y": 3960,
         "wires": [
             [
                 "b0bc4cb102ea1b28"
@@ -17686,6 +17538,144 @@
             ]
         ],
         "info": "Lamba function for Excel\n\n{\"ch\": 49, \"lvl\": 100, \"hs\": [240,100] }\n\nhs\n=lambda(h,s, concat(\" \"\"hs\"\": [ \" , round(h,0), \",\", round(s,0), \"]\") )\n\nch\n=lambda(c, concat(\" \"\"ch\"\": \" , c) )\n\nlvl\n=lambda(l, concat(\" \"\"lvl\"\": \" , l) )\n \nchsl \n=lambda(c,h,s,l, textjoin(\",\" , FALSE, \" {\", ch(c) ,  lvl(l) , hs(h,s)  ))\n=lambda(c,h,s,l, concat(\" {\", ch(c) , \",\" ,   lvl(l) , \",\"  , hs(h,s) , \"},\" ))"
+    },
+    {
+        "id": "58e712526deacae7",
+        "type": "link out",
+        "z": "ee400291.7cb",
+        "name": "link out 28",
+        "mode": "link",
+        "links": [
+            "21ece2adbe7667ab"
+        ],
+        "x": 945,
+        "y": 3220,
+        "wires": []
+    },
+    {
+        "id": "52009c0f8b08dcf5",
+        "type": "template",
+        "z": "ee400291.7cb",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "json",
+        "syntax": "mustache",
+        "template": "[\n {\"ch\": 37, \"col\": 2, \"lvl\": 0} ,\n {\"ch\": 38, \"col\": 2, \"lvl\":50}  \n ]",
+        "output": "json",
+        "x": 800,
+        "y": 3240,
+        "wires": [
+            [
+                "58e712526deacae7"
+            ]
+        ]
+    },
+    {
+        "id": "826e397b8c17eed9",
+        "type": "template",
+        "z": "ee400291.7cb",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "json",
+        "syntax": "mustache",
+        "template": "[\n {\"ch\": 37, \"col\": 2, \"lvl\": 50} ,\n {\"ch\": 38, \"col\": 2, \"lvl\":0}  \n ]",
+        "output": "json",
+        "x": 800,
+        "y": 3200,
+        "wires": [
+            [
+                "58e712526deacae7"
+            ]
+        ]
+    },
+    {
+        "id": "074b44dddad73bc7",
+        "type": "inject",
+        "z": "ee400291.7cb",
+        "name": "38 bot",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 610,
+        "y": 3240,
+        "wires": [
+            [
+                "52009c0f8b08dcf5"
+            ]
+        ]
+    },
+    {
+        "id": "cdb349638dc14ccd",
+        "type": "inject",
+        "z": "ee400291.7cb",
+        "name": "37 top",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 610,
+        "y": 3200,
+        "wires": [
+            [
+                "826e397b8c17eed9"
+            ]
+        ]
+    },
+    {
+        "id": "4e89d68d2cc8f090",
+        "type": "ui_button",
+        "z": "ee400291.7cb",
+        "g": "c6652a873359cc83",
+        "name": "",
+        "group": "1a58511c941998c3",
+        "order": 10,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "Tabernacle",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 630,
+        "y": 3140,
+        "wires": [
+            [
+                "1c2c2e16fd601aae"
+            ]
+        ]
     },
     {
         "id": "1e9dc9a1.038cb6",
