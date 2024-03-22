@@ -3755,6 +3755,33 @@
         "h": 387
     },
     {
+        "id": "38470ba56eed5eef",
+        "type": "group",
+        "z": "ee400291.7cb",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "052c39ed51d1736c",
+            "73e5d2c058797607",
+            "8768a4297ab1ce2f",
+            "a7fbea713165a203",
+            "45f278af418e25d7",
+            "9bee249992bc2183",
+            "fb6fe5e16bb73bdf"
+        ],
+        "x": 1034,
+        "y": 2719,
+        "w": 422,
+        "h": 202
+    },
+    {
         "id": "a552506bc8ab8fc7",
         "type": "junction",
         "z": "17ca131.e488ced",
@@ -5296,9 +5323,9 @@
         "className": ""
     },
     {
-        "id": "9376b81b6847faa9",
+        "id": "fb837c41995deba7",
         "type": "ui_spacer",
-        "z": "ee400291.7cb",
+        "z": "17ca131.e488ced",
         "name": "spacer",
         "group": "446cfe7e.e013f",
         "order": 4,
@@ -5306,19 +5333,9 @@
         "height": 1
     },
     {
-        "id": "c162a39624dd6077",
+        "id": "6afd4134aa2e62ed",
         "type": "ui_spacer",
-        "z": "ee400291.7cb",
-        "name": "spacer",
-        "group": "a0d2379726c5b29d",
-        "order": 1,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "bd441ad76f72553e",
-        "type": "ui_spacer",
-        "z": "ee400291.7cb",
+        "z": "17ca131.e488ced",
         "name": "spacer",
         "group": "a0d2379726c5b29d",
         "order": 8,
@@ -5326,9 +5343,9 @@
         "height": 1
     },
     {
-        "id": "9bb5798ecfde9231",
+        "id": "3bde13d4690547b4",
         "type": "ui_spacer",
-        "z": "ee400291.7cb",
+        "z": "17ca131.e488ced",
         "name": "spacer",
         "group": "a0d2379726c5b29d",
         "order": 18,
@@ -5336,9 +5353,9 @@
         "height": 1
     },
     {
-        "id": "ceefd54921438224",
+        "id": "4a8b594aeff38dd5",
         "type": "ui_spacer",
-        "z": "ee400291.7cb",
+        "z": "17ca131.e488ced",
         "name": "spacer",
         "group": "a0d2379726c5b29d",
         "order": 20,
@@ -5346,19 +5363,19 @@
         "height": 1
     },
     {
-        "id": "b356764433d5bee5",
+        "id": "ec3057cde518efb0",
         "type": "ui_spacer",
-        "z": "ee400291.7cb",
+        "z": "17ca131.e488ced",
         "name": "spacer",
         "group": "a0d2379726c5b29d",
-        "order": 23,
-        "width": 7,
+        "order": 22,
+        "width": 8,
         "height": 1
     },
     {
-        "id": "ff5ef91be1889fac",
+        "id": "e665aeda269e8cd1",
         "type": "ui_spacer",
-        "z": "ee400291.7cb",
+        "z": "17ca131.e488ced",
         "name": "spacer",
         "group": "1a58511c941998c3",
         "order": 3,
@@ -5366,9 +5383,9 @@
         "height": 1
     },
     {
-        "id": "9659b3cad46f7184",
+        "id": "15115b235faeed51",
         "type": "ui_spacer",
-        "z": "ee400291.7cb",
+        "z": "17ca131.e488ced",
         "name": "spacer",
         "group": "1a58511c941998c3",
         "order": 6,
@@ -5376,9 +5393,9 @@
         "height": 1
     },
     {
-        "id": "3e55801ea4187679",
+        "id": "95ba194505e9a3bb",
         "type": "ui_spacer",
-        "z": "ee400291.7cb",
+        "z": "17ca131.e488ced",
         "name": "spacer",
         "group": "1a58511c941998c3",
         "order": 9,
@@ -5386,9 +5403,9 @@
         "height": 1
     },
     {
-        "id": "2a45e5400d93eb50",
+        "id": "1a31f32a6d449099",
         "type": "ui_spacer",
-        "z": "ee400291.7cb",
+        "z": "17ca131.e488ced",
         "name": "spacer",
         "group": "1a58511c941998c3",
         "order": 11,
@@ -5396,9 +5413,9 @@
         "height": 1
     },
     {
-        "id": "4ddaa9cf952c7349",
+        "id": "1d158357b64ff4a1",
         "type": "ui_spacer",
-        "z": "ee400291.7cb",
+        "z": "17ca131.e488ced",
         "name": "spacer",
         "group": "1a58511c941998c3",
         "order": 14,
@@ -5406,9 +5423,9 @@
         "height": 1
     },
     {
-        "id": "26c17a7e9e6152da",
+        "id": "9b672ec1c855b244",
         "type": "ui_spacer",
-        "z": "ee400291.7cb",
+        "z": "17ca131.e488ced",
         "name": "spacer",
         "group": "1a58511c941998c3",
         "order": 15,
@@ -5416,9 +5433,9 @@
         "height": 1
     },
     {
-        "id": "b34a4e2c50b258e1",
+        "id": "e8e7b140dce12ff1",
         "type": "ui_spacer",
-        "z": "ee400291.7cb",
+        "z": "17ca131.e488ced",
         "name": "spacer",
         "group": "1a58511c941998c3",
         "order": 17,
@@ -5426,9 +5443,9 @@
         "height": 1
     },
     {
-        "id": "6063348431cfb76b",
+        "id": "28156a5bb4fb6338",
         "type": "ui_spacer",
-        "z": "ee400291.7cb",
+        "z": "17ca131.e488ced",
         "name": "spacer",
         "group": "b6af0ae0df9d3a39",
         "order": 4,
@@ -5436,9 +5453,9 @@
         "height": 1
     },
     {
-        "id": "c4cb4bdf15de612a",
+        "id": "de4b80ce0bb767e5",
         "type": "ui_spacer",
-        "z": "ee400291.7cb",
+        "z": "17ca131.e488ced",
         "name": "spacer",
         "group": "b6af0ae0df9d3a39",
         "order": 8,
@@ -5446,9 +5463,9 @@
         "height": 1
     },
     {
-        "id": "cefde3695bc1e20f",
+        "id": "d3e135262cb8195f",
         "type": "ui_spacer",
-        "z": "ee400291.7cb",
+        "z": "17ca131.e488ced",
         "name": "spacer",
         "group": "aa77273aba5e6bc4",
         "order": 9,
@@ -5456,29 +5473,19 @@
         "height": 1
     },
     {
-        "id": "b8028031ad6c034f",
+        "id": "e048c3a08111099e",
         "type": "ui_spacer",
-        "z": "ee400291.7cb",
+        "z": "17ca131.e488ced",
         "name": "spacer",
         "group": "aa77273aba5e6bc4",
         "order": 14,
-        "width": 4,
+        "width": 6,
         "height": 1
     },
     {
-        "id": "33b81966548b6a9a",
+        "id": "dd5d2394a71fe0a2",
         "type": "ui_spacer",
-        "z": "ee400291.7cb",
-        "name": "spacer",
-        "group": "aa77273aba5e6bc4",
-        "order": 16,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "fec762d597ad0f99",
-        "type": "ui_spacer",
-        "z": "ee400291.7cb",
+        "z": "17ca131.e488ced",
         "name": "spacer",
         "group": "35e60a5342e359c8",
         "order": 2,
@@ -14767,7 +14774,8 @@
             "bc7515fbf9d5cb3d",
             "ccbe7f922e2ce232",
             "ab775138e601551f",
-            "58e712526deacae7"
+            "58e712526deacae7",
+            "a7fbea713165a203"
         ],
         "x": 95,
         "y": 2480,
@@ -16141,7 +16149,7 @@
         "name": "",
         "label": "HSL Form",
         "group": "a0d2379726c5b29d",
-        "order": 24,
+        "order": 23,
         "width": 0,
         "height": 0,
         "options": [
@@ -16330,7 +16338,7 @@
         "g": "da364ef2722b2f7d",
         "name": "",
         "group": "a0d2379726c5b29d",
-        "order": 22,
+        "order": 1,
         "width": 1,
         "height": 1,
         "passthru": false,
@@ -17217,7 +17225,7 @@
         "g": "3dc91e7a7be02d7b",
         "name": "",
         "group": "aa77273aba5e6bc4",
-        "order": 17,
+        "order": 15,
         "width": 2,
         "height": 1,
         "passthru": false,
@@ -17674,6 +17682,174 @@
         "wires": [
             [
                 "1c2c2e16fd601aae"
+            ]
+        ]
+    },
+    {
+        "id": "052c39ed51d1736c",
+        "type": "ui_button",
+        "z": "ee400291.7cb",
+        "g": "38470ba56eed5eef",
+        "name": "",
+        "group": "1a58511c941998c3",
+        "order": 17,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "P Sunday",
+        "tooltip": "Palm Sunday",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1120,
+        "y": 2760,
+        "wires": [
+            [
+                "45f278af418e25d7"
+            ]
+        ]
+    },
+    {
+        "id": "73e5d2c058797607",
+        "type": "ui_button",
+        "z": "ee400291.7cb",
+        "g": "38470ba56eed5eef",
+        "name": "",
+        "group": "1a58511c941998c3",
+        "order": 17,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "G.F.",
+        "tooltip": "Good Friday",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1110,
+        "y": 2800,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8768a4297ab1ce2f",
+        "type": "ui_button",
+        "z": "ee400291.7cb",
+        "g": "38470ba56eed5eef",
+        "name": "",
+        "group": "1a58511c941998c3",
+        "order": 17,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Easter",
+        "tooltip": "Easter Sunday",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1110,
+        "y": 2840,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a7fbea713165a203",
+        "type": "link out",
+        "z": "ee400291.7cb",
+        "g": "38470ba56eed5eef",
+        "name": "link out 29",
+        "mode": "link",
+        "links": [
+            "21ece2adbe7667ab"
+        ],
+        "x": 1415,
+        "y": 2800,
+        "wires": []
+    },
+    {
+        "id": "45f278af418e25d7",
+        "type": "template",
+        "z": "ee400291.7cb",
+        "g": "38470ba56eed5eef",
+        "name": "Palm Sunday",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "json",
+        "syntax": "mustache",
+        "template": "[\n[\n    {\n        \"ch\": 35,\n        \"lvl\": 100,\n        \"hs\": [\n            120,\n            100\n        ]\n    },\n   {\n    \"ch\": 37,\n    \"lvl\": 100,\n    \"hs\": [\n        120,\n        100\n    ]\n},\n{\n    \"ch\": 38,\n    \"lvl\": 100,\n    \"hs\": [\n        120,\n        100\n    ]\n},\n{\n    \"ch\": 39,\n    \"lvl\": 100,\n    \"hs\": [\n        120,\n        100\n    ]\n},\n{\n    \"ch\": 40,\n    \"lvl\": 100,\n    \"hs\": [\n        120,\n        100\n    ]\n},\n{\n    \"ch\": 34,\n    \"lvl\": 100,\n    \"hs\": [\n        300,\n        100\n    ]\n},\n{\n    \"ch\": 36,\n    \"lvl\": 100,\n    \"hs\": [\n        300,\n        100\n    ]\n},\n]\n\n\n{\n    \"ch\": 41,\n    \"lvl\": 100,\n    \"hs\": [\n        300,\n        100\n    ]\n},\n{\n    \"ch\": 42,\n    \"lvl\": 100,\n    \"hs\": [\n        300,\n        100\n    ]\n},\n{\n    \"ch\": 43,\n    \"lvl\": 100,\n    \"hs\": [\n        300,\n        100\n    ]\n},\n{\n    \"ch\": 44,\n    \"lvl\": 100,\n    \"hs\": [\n        300,\n        100\n    ]\n}\n\n ]",
+        "output": "json",
+        "x": 1300,
+        "y": 2760,
+        "wires": [
+            [
+                "a7fbea713165a203"
+            ]
+        ],
+        "info": "Lamba function for Excel\n\n{\"ch\": 49, \"lvl\": 100, \"hs\": [240,100] }\n\nhs\n=lambda(h,s, concat(\" \"\"hs\"\": [ \" , round(h,0), \",\", round(s,0), \"]\") )\n\nch\n=lambda(c, concat(\" \"\"ch\"\": \" , c) )\n\nlvl\n=lambda(l, concat(\" \"\"lvl\"\": \" , l) )\n \nchsl \n=lambda(c,h,s,l, textjoin(\",\" , FALSE, \" {\", ch(c) ,  lvl(l) , hs(h,s)  ))\n=lambda(c,h,s,l, concat(\" {\", ch(c) , \",\" ,   lvl(l) , \",\"  , hs(h,s) , \"},\" ))"
+    },
+    {
+        "id": "9bee249992bc2183",
+        "type": "template",
+        "z": "ee400291.7cb",
+        "g": "38470ba56eed5eef",
+        "name": "Most Holy",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "json",
+        "syntax": "mustache",
+        "template": "[\n\n   {\n    \"ch\": 78,\n    \"col\": 2,\n    \"lvl\": 33\n},\n{\n    \"ch\": 79,\n    \"col\": 2,\n    \"lvl\": 100\n}\n\n ]",
+        "output": "json",
+        "x": 1310,
+        "y": 2880,
+        "wires": [
+            [
+                "a7fbea713165a203"
+            ]
+        ],
+        "info": "Lamba function for Excel\n\n{\"ch\": 49, \"lvl\": 100, \"hs\": [240,100] }\n\nhs\n=lambda(h,s, concat(\" \"\"hs\"\": [ \" , round(h,0), \",\", round(s,0), \"]\") )\n\nch\n=lambda(c, concat(\" \"\"ch\"\": \" , c) )\n\nlvl\n=lambda(l, concat(\" \"\"lvl\"\": \" , l) )\n \nchsl \n=lambda(c,h,s,l, textjoin(\",\" , FALSE, \" {\", ch(c) ,  lvl(l) , hs(h,s)  ))\n=lambda(c,h,s,l, concat(\" {\", ch(c) , \",\" ,   lvl(l) , \",\"  , hs(h,s) , \"},\" ))"
+    },
+    {
+        "id": "fb6fe5e16bb73bdf",
+        "type": "ui_button",
+        "z": "ee400291.7cb",
+        "g": "38470ba56eed5eef",
+        "name": "",
+        "group": "1a58511c941998c3",
+        "order": 17,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Most Holy",
+        "tooltip": "Inner Tabernacle",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1130,
+        "y": 2880,
+        "wires": [
+            [
+                "9bee249992bc2183"
             ]
         ]
     },
