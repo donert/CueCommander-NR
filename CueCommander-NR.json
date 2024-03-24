@@ -983,7 +983,9 @@
             "3d435315bda1dee0"
         ],
         "x": 14,
-        "y": 819
+        "y": 819,
+        "w": 972,
+        "h": 262
     },
     {
         "id": "1976ad4e.952673",
@@ -1472,7 +1474,7 @@
         ],
         "x": 34,
         "y": 1659,
-        "w": 942,
+        "w": 932,
         "h": 262
     },
     {
@@ -1708,7 +1710,9 @@
             "a0fa3cbc9a9eb910"
         ],
         "x": 1234,
-        "y": 119
+        "y": 119,
+        "w": 532,
+        "h": 122
     },
     {
         "id": "5addd3a7c909e423",
@@ -1745,7 +1749,9 @@
             "0c8d0f92ee07e42f"
         ],
         "x": 34,
-        "y": 2079
+        "y": 2079,
+        "w": 1112,
+        "h": 622
     },
     {
         "id": "6433aa0ec9372bde",
@@ -1774,7 +1780,9 @@
             "35a9ac404b44fbcf"
         ],
         "x": 34,
-        "y": 1419
+        "y": 1419,
+        "w": 732,
+        "h": 522
     },
     {
         "id": "c681dc44e2d3bb1d",
@@ -1827,7 +1835,9 @@
             "d04b81a31c52af06"
         ],
         "x": 14,
-        "y": 439
+        "y": 439,
+        "w": 1112,
+        "h": 342
     },
     {
         "id": "dacfcd47aec0c05a",
@@ -1921,7 +1931,9 @@
             "939b05e7ead0928b"
         ],
         "x": 1184,
-        "y": 459
+        "y": 459,
+        "w": 988,
+        "h": 308
     },
     {
         "id": "744e7dfa2109b681",
@@ -1948,7 +1960,9 @@
             "c51a78e0cba0f35b"
         ],
         "x": 14,
-        "y": 99
+        "y": 99,
+        "w": 1092,
+        "h": 322
     },
     {
         "id": "551279d7cee9afe1",
@@ -1968,7 +1982,9 @@
             "5034ac8ec08d9d16"
         ],
         "x": 14,
-        "y": -1
+        "y": -1,
+        "w": 392,
+        "h": 82
     },
     {
         "id": "f1a1cac018967916",
@@ -2045,7 +2061,9 @@
             "718f6b2b339f074e"
         ],
         "x": 14,
-        "y": 19
+        "y": 19,
+        "w": 772,
+        "h": 382
     },
     {
         "id": "a1ba4d39e374bcff",
@@ -2273,7 +2291,9 @@
             "897e1d51480610de"
         ],
         "x": 1194,
-        "y": 979
+        "y": 979,
+        "w": 932,
+        "h": 142
     },
     {
         "id": "24b66573302654fa",
@@ -2316,7 +2336,9 @@
             "1711229475f29d64"
         ],
         "x": 14,
-        "y": 459
+        "y": 459,
+        "w": 958,
+        "h": 722
     },
     {
         "id": "4c1b3619e44e3c8d",
@@ -2367,7 +2389,9 @@
             "40cf067289330bd3"
         ],
         "x": 794,
-        "y": 1319
+        "y": 1319,
+        "w": 532,
+        "h": 142
     },
     {
         "id": "4d2bded709725f5d",
@@ -2725,7 +2749,9 @@
             "d41d3c0e37087525"
         ],
         "x": 24,
-        "y": 1179
+        "y": 1179,
+        "w": 742,
+        "h": 222
     },
     {
         "id": "dc7bde737a93041b",
@@ -2746,7 +2772,9 @@
             "db837f669fd0c06b"
         ],
         "x": 1194,
-        "y": 779
+        "y": 779,
+        "w": 772,
+        "h": 182
     },
     {
         "id": "77c46321.0fddbc",
@@ -2987,7 +3015,9 @@
             "d7762a84d43445a8"
         ],
         "x": 874,
-        "y": 1459
+        "y": 1459,
+        "w": 1072,
+        "h": 602
     },
     {
         "id": "672e0d1b3f870b04",
@@ -3315,7 +3345,9 @@
             "eb6d44b04096e2cc"
         ],
         "x": 1194,
-        "y": 1139
+        "y": 1139,
+        "w": 752,
+        "h": 202
     },
     {
         "id": "96bc8a5df8acc28b",
@@ -3343,6 +3375,33 @@
         "y": 2959,
         "w": 452,
         "h": 162
+    },
+    {
+        "id": "38470ba56eed5eef",
+        "type": "group",
+        "z": "ee400291.7cb",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "052c39ed51d1736c",
+            "73e5d2c058797607",
+            "8768a4297ab1ce2f",
+            "a7fbea713165a203",
+            "45f278af418e25d7",
+            "9bee249992bc2183",
+            "fb6fe5e16bb73bdf"
+        ],
+        "x": 1034,
+        "y": 2719,
+        "w": 422,
+        "h": 202
     },
     {
         "id": "e660fb746dfbb567",
@@ -3635,7 +3694,9 @@
             "c5ddb3805b984770"
         ],
         "x": 54,
-        "y": 679
+        "y": 679,
+        "w": 892,
+        "h": 82
     },
     {
         "id": "f2b215c66ba0a91c",
@@ -3673,7 +3734,9 @@
             "cb8be9dd017fb758"
         ],
         "x": 1874,
-        "y": 559
+        "y": 559,
+        "w": 272,
+        "h": 182
     },
     {
         "id": "7a76c27df1bad320",
@@ -3753,33 +3816,6 @@
         "y": 2439,
         "w": 872,
         "h": 387
-    },
-    {
-        "id": "38470ba56eed5eef",
-        "type": "group",
-        "z": "ee400291.7cb",
-        "style": {
-            "stroke": "#999999",
-            "stroke-opacity": "1",
-            "fill": "none",
-            "fill-opacity": "1",
-            "label": true,
-            "label-position": "nw",
-            "color": "#a4a4a4"
-        },
-        "nodes": [
-            "052c39ed51d1736c",
-            "73e5d2c058797607",
-            "8768a4297ab1ce2f",
-            "a7fbea713165a203",
-            "45f278af418e25d7",
-            "9bee249992bc2183",
-            "fb6fe5e16bb73bdf"
-        ],
-        "x": 1034,
-        "y": 2719,
-        "w": 422,
-        "h": 202
     },
     {
         "id": "a552506bc8ab8fc7",
@@ -17738,7 +17774,9 @@
         "x": 1110,
         "y": 2800,
         "wires": [
-            []
+            [
+                "a7fbea713165a203"
+            ]
         ]
     },
     {
@@ -17765,7 +17803,9 @@
         "x": 1110,
         "y": 2840,
         "wires": [
-            []
+            [
+                "a7fbea713165a203"
+            ]
         ]
     },
     {
@@ -17792,7 +17832,7 @@
         "fieldType": "msg",
         "format": "json",
         "syntax": "mustache",
-        "template": "[\n[\n    {\n        \"ch\": 35,\n        \"lvl\": 100,\n        \"hs\": [\n            120,\n            100\n        ]\n    },\n   {\n    \"ch\": 37,\n    \"lvl\": 100,\n    \"hs\": [\n        120,\n        100\n    ]\n},\n{\n    \"ch\": 38,\n    \"lvl\": 100,\n    \"hs\": [\n        120,\n        100\n    ]\n},\n{\n    \"ch\": 39,\n    \"lvl\": 100,\n    \"hs\": [\n        120,\n        100\n    ]\n},\n{\n    \"ch\": 40,\n    \"lvl\": 100,\n    \"hs\": [\n        120,\n        100\n    ]\n},\n{\n    \"ch\": 34,\n    \"lvl\": 100,\n    \"hs\": [\n        300,\n        100\n    ]\n},\n{\n    \"ch\": 36,\n    \"lvl\": 100,\n    \"hs\": [\n        300,\n        100\n    ]\n},\n]\n\n\n{\n    \"ch\": 41,\n    \"lvl\": 100,\n    \"hs\": [\n        300,\n        100\n    ]\n},\n{\n    \"ch\": 42,\n    \"lvl\": 100,\n    \"hs\": [\n        300,\n        100\n    ]\n},\n{\n    \"ch\": 43,\n    \"lvl\": 100,\n    \"hs\": [\n        300,\n        100\n    ]\n},\n{\n    \"ch\": 44,\n    \"lvl\": 100,\n    \"hs\": [\n        300,\n        100\n    ]\n}\n\n ]",
+        "template": "[\n\n    {\n        \"ch\": 35,\n        \"lvl\": 100,\n        \"hs\": [\n            120,\n            100\n        ]\n    },\n   {\n    \"ch\": 37,\n    \"lvl\": 100,\n    \"hs\": [\n        120,\n        100\n    ]\n},\n{\n    \"ch\": 38,\n    \"lvl\": 100,\n    \"hs\": [\n        120,\n        100\n    ]\n},\n{\n    \"ch\": 39,\n    \"lvl\": 100,\n    \"hs\": [\n        120,\n        100\n    ]\n},\n{\n    \"ch\": 40,\n    \"lvl\": 100,\n    \"hs\": [\n        120,\n        100\n    ]\n},\n{\n    \"ch\": 34,\n    \"lvl\": 100,\n    \"hs\": [\n        300,\n        100\n    ]\n},\n{\n    \"ch\": 36,\n    \"lvl\": 100,\n    \"hs\": [\n        300,\n        100\n    ]\n},\n\n{\n    \"ch\": 41,\n    \"lvl\": 100,\n    \"hs\": [\n        300,\n        100\n    ]\n},\n{\n    \"ch\": 42,\n    \"lvl\": 100,\n    \"hs\": [\n        300,\n        100\n    ]\n},\n{\n    \"ch\": 43,\n    \"lvl\": 100,\n    \"hs\": [\n        300,\n        100\n    ]\n},\n{\n    \"ch\": 44,\n    \"lvl\": 100,\n    \"hs\": [\n        300,\n        100\n    ]\n}\n\n ]",
         "output": "json",
         "x": 1300,
         "y": 2760,
@@ -30674,7 +30714,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "{\n\"devices\":  \n[\n{ \"category\": \"Projector\",\n  \"name\"    : \"East\",\n  \"ip\"      : \"192.168.0.194\",\n  \"port\"    : \"4352\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Projector\",\n  \"name\"    : \"Centre\",\n  \"ip\"      : \"192.168.0.193\",\n  \"port\"    : \"4352\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Projector\",\n  \"name\"    : \"West\",\n  \"ip\"      : \"192.168.0.195\",\n  \"port\"    : \"4352\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Projector\",\n  \"name\"    : \"Rear\",\n  \"ip\"      : \"192.168.0.183\",\n  \"port\"    : \"4352\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"ProPresenter\",\n  \"name\"    : \"PP7\",\n  \"ip\"      : \"192.168.0.140\",\n  \"port\"    : \"1025\",\n  \"url\"     : \"http://192.168.140.1:1025/v1/control/\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Lights\",\n  \"name\"    : \"Lights\",\n  \"ip\"      : \"192.168.0.197\",\n  \"port\"    : \"8005\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Cameras\",\n  \"name\"    : \"Cam 1\",\n  \"ip\"      : \"192.168.0.186\",\n  \"port\"    : \"na\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Cameras\",\n  \"name\"    : \"Cam 2\",\n  \"ip\"      : \"192.168.0.187\",\n  \"port\"    : \"na\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Cameras\",\n  \"name\"    : \"Cam 3\",\n  \"ip\"      : \"192.168.0.188\",\n  \"port\"    : \"na\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Video Mixer\",\n  \"name\"    : \"ATEM\",\n  \"ip\"      : \"192.168.0.191\",\n  \"port\"    : \"na\",\n  \"comment\"   : \"Reference only-hardcoded config\"\n},\n{ \"category\": \"Control\",\n  \"name\"    : \"CueCommmander UI\",\n  \"ip\"      : \"192.168.0.145\",\n  \"port\"    : \"1880\",\n  \"url\"     : \"http://192.168.0.145:1880/ui\",\n  \"comment\"   : \"Reference only. Hardcoded config\"\n} ,\n{ \"category\": \"Control\",\n  \"name\"    : \"OSC to VISCAip\",\n  \"ip\"      : \"127.0.0.1\",\n  \"port\"    : \"54000\",\n  \"url\"     : \"\",\n  \"comment\"   : \"Reference only. Hardcoded config\"\n}\n]\n}",
+        "template": "{\n\"devices\":  \n[\n{ \"category\": \"Projector\",\n  \"name\"    : \"East\",\n  \"ip\"      : \"192.168.0.194\",\n  \"port\"    : \"4352\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Projector\",\n  \"name\"    : \"Centre\",\n  \"ip\"      : \"192.168.0.193\",\n  \"port\"    : \"4352\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Projector\",\n  \"name\"    : \"West\",\n  \"ip\"      : \"192.168.0.195\",\n  \"port\"    : \"4352\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Projector\",\n  \"name\"    : \"Rear\",\n  \"ip\"      : \"192.168.0.183\",\n  \"port\"    : \"4352\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"ProPresenter\",\n  \"name\"    : \"PP7\",\n  \"ip\"      : \"192.168.0.210\",\n  \"port\"    : \"1025\",\n  \"url\"     : \"http://192.168.140.1:1025/v1/control/\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Lights\",\n  \"name\"    : \"Lights\",\n  \"ip\"      : \"192.168.0.197\",\n  \"port\"    : \"8005\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Cameras\",\n  \"name\"    : \"Cam 1\",\n  \"ip\"      : \"192.168.0.186\",\n  \"port\"    : \"na\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Cameras\",\n  \"name\"    : \"Cam 2\",\n  \"ip\"      : \"192.168.0.187\",\n  \"port\"    : \"na\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Cameras\",\n  \"name\"    : \"Cam 3\",\n  \"ip\"      : \"192.168.0.188\",\n  \"port\"    : \"na\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Video Mixer\",\n  \"name\"    : \"ATEM\",\n  \"ip\"      : \"192.168.0.191\",\n  \"port\"    : \"na\",\n  \"comment\"   : \"Reference only-hardcoded config\"\n},\n{ \"category\": \"Control\",\n  \"name\"    : \"CueCommmander UI\",\n  \"ip\"      : \"192.168.0.145\",\n  \"port\"    : \"1880\",\n  \"url\"     : \"http://192.168.0.145:1880/ui\",\n  \"comment\"   : \"Reference only. Hardcoded config\"\n} ,\n{ \"category\": \"Control\",\n  \"name\"    : \"OSC to VISCAip\",\n  \"ip\"      : \"127.0.0.1\",\n  \"port\"    : \"54000\",\n  \"url\"     : \"\",\n  \"comment\"   : \"Reference only. Hardcoded config\"\n}\n]\n}",
         "output": "json",
         "x": 430,
         "y": 1000,
