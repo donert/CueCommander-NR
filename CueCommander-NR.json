@@ -983,9 +983,7 @@
             "3d435315bda1dee0"
         ],
         "x": 14,
-        "y": 819,
-        "w": 972,
-        "h": 262
+        "y": 819
     },
     {
         "id": "1976ad4e.952673",
@@ -1710,9 +1708,7 @@
             "a0fa3cbc9a9eb910"
         ],
         "x": 1234,
-        "y": 119,
-        "w": 532,
-        "h": 122
+        "y": 119
     },
     {
         "id": "5addd3a7c909e423",
@@ -1749,9 +1745,7 @@
             "0c8d0f92ee07e42f"
         ],
         "x": 34,
-        "y": 2079,
-        "w": 1112,
-        "h": 622
+        "y": 2079
     },
     {
         "id": "6433aa0ec9372bde",
@@ -1780,9 +1774,7 @@
             "35a9ac404b44fbcf"
         ],
         "x": 34,
-        "y": 1419,
-        "w": 732,
-        "h": 522
+        "y": 1419
     },
     {
         "id": "c681dc44e2d3bb1d",
@@ -1835,9 +1827,7 @@
             "d04b81a31c52af06"
         ],
         "x": 14,
-        "y": 439,
-        "w": 1112,
-        "h": 342
+        "y": 439
     },
     {
         "id": "dacfcd47aec0c05a",
@@ -1931,9 +1921,7 @@
             "939b05e7ead0928b"
         ],
         "x": 1184,
-        "y": 459,
-        "w": 988,
-        "h": 308
+        "y": 459
     },
     {
         "id": "744e7dfa2109b681",
@@ -1960,9 +1948,7 @@
             "c51a78e0cba0f35b"
         ],
         "x": 14,
-        "y": 99,
-        "w": 1092,
-        "h": 322
+        "y": 99
     },
     {
         "id": "551279d7cee9afe1",
@@ -1982,9 +1968,7 @@
             "5034ac8ec08d9d16"
         ],
         "x": 14,
-        "y": -1,
-        "w": 392,
-        "h": 82
+        "y": -1
     },
     {
         "id": "f1a1cac018967916",
@@ -2061,9 +2045,7 @@
             "718f6b2b339f074e"
         ],
         "x": 14,
-        "y": 19,
-        "w": 772,
-        "h": 382
+        "y": 19
     },
     {
         "id": "a1ba4d39e374bcff",
@@ -2291,9 +2273,7 @@
             "897e1d51480610de"
         ],
         "x": 1194,
-        "y": 979,
-        "w": 932,
-        "h": 142
+        "y": 979
     },
     {
         "id": "24b66573302654fa",
@@ -2336,9 +2316,7 @@
             "1711229475f29d64"
         ],
         "x": 14,
-        "y": 459,
-        "w": 958,
-        "h": 722
+        "y": 459
     },
     {
         "id": "4c1b3619e44e3c8d",
@@ -2389,9 +2367,7 @@
             "40cf067289330bd3"
         ],
         "x": 794,
-        "y": 1319,
-        "w": 532,
-        "h": 142
+        "y": 1319
     },
     {
         "id": "4d2bded709725f5d",
@@ -2749,9 +2725,7 @@
             "d41d3c0e37087525"
         ],
         "x": 24,
-        "y": 1179,
-        "w": 742,
-        "h": 222
+        "y": 1179
     },
     {
         "id": "dc7bde737a93041b",
@@ -2772,9 +2746,7 @@
             "db837f669fd0c06b"
         ],
         "x": 1194,
-        "y": 779,
-        "w": 772,
-        "h": 182
+        "y": 779
     },
     {
         "id": "77c46321.0fddbc",
@@ -3015,9 +2987,7 @@
             "d7762a84d43445a8"
         ],
         "x": 874,
-        "y": 1459,
-        "w": 1072,
-        "h": 602
+        "y": 1459
     },
     {
         "id": "672e0d1b3f870b04",
@@ -3345,9 +3315,7 @@
             "eb6d44b04096e2cc"
         ],
         "x": 1194,
-        "y": 1139,
-        "w": 752,
-        "h": 202
+        "y": 1139
     },
     {
         "id": "96bc8a5df8acc28b",
@@ -3391,16 +3359,16 @@
         },
         "nodes": [
             "052c39ed51d1736c",
-            "73e5d2c058797607",
             "8768a4297ab1ce2f",
             "a7fbea713165a203",
             "45f278af418e25d7",
             "9bee249992bc2183",
-            "fb6fe5e16bb73bdf"
+            "fb6fe5e16bb73bdf",
+            "3409f674462346e6"
         ],
         "x": 1034,
         "y": 2719,
-        "w": 422,
+        "w": 462,
         "h": 202
     },
     {
@@ -3694,9 +3662,7 @@
             "c5ddb3805b984770"
         ],
         "x": 54,
-        "y": 679,
-        "w": 892,
-        "h": 82
+        "y": 679
     },
     {
         "id": "f2b215c66ba0a91c",
@@ -3734,9 +3700,7 @@
             "cb8be9dd017fb758"
         ],
         "x": 1874,
-        "y": 559,
-        "w": 272,
-        "h": 182
+        "y": 559
     },
     {
         "id": "7a76c27df1bad320",
@@ -3816,6 +3780,31 @@
         "y": 2439,
         "w": 872,
         "h": 387
+    },
+    {
+        "id": "b4854709446f38f8",
+        "type": "group",
+        "z": "ee400291.7cb",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "1eeee07085bee65e",
+            "744041c293fb6e1a",
+            "583be69120670a07",
+            "c6aefe6455ecd787",
+            "fb3bd1e960a31655"
+        ],
+        "x": 1014,
+        "y": 3119,
+        "w": 452,
+        "h": 122
     },
     {
         "id": "a552506bc8ab8fc7",
@@ -5359,9 +5348,9 @@
         "className": ""
     },
     {
-        "id": "fb837c41995deba7",
+        "id": "6c57f5ed5654512b",
         "type": "ui_spacer",
-        "z": "17ca131.e488ced",
+        "z": "ee400291.7cb",
         "name": "spacer",
         "group": "446cfe7e.e013f",
         "order": 4,
@@ -5369,9 +5358,9 @@
         "height": 1
     },
     {
-        "id": "6afd4134aa2e62ed",
+        "id": "4b873ecedd987a80",
         "type": "ui_spacer",
-        "z": "17ca131.e488ced",
+        "z": "ee400291.7cb",
         "name": "spacer",
         "group": "a0d2379726c5b29d",
         "order": 8,
@@ -5379,39 +5368,39 @@
         "height": 1
     },
     {
-        "id": "3bde13d4690547b4",
+        "id": "2389c2cf86e27b56",
         "type": "ui_spacer",
-        "z": "17ca131.e488ced",
+        "z": "ee400291.7cb",
         "name": "spacer",
         "group": "a0d2379726c5b29d",
         "order": 18,
-        "width": 1,
+        "width": 7,
         "height": 1
     },
     {
-        "id": "4a8b594aeff38dd5",
+        "id": "ecb877c508a90ed1",
         "type": "ui_spacer",
-        "z": "17ca131.e488ced",
+        "z": "ee400291.7cb",
         "name": "spacer",
         "group": "a0d2379726c5b29d",
-        "order": 20,
+        "order": 19,
         "width": 2,
         "height": 1
     },
     {
-        "id": "ec3057cde518efb0",
+        "id": "983a902a5aa810b0",
         "type": "ui_spacer",
-        "z": "17ca131.e488ced",
+        "z": "ee400291.7cb",
         "name": "spacer",
         "group": "a0d2379726c5b29d",
-        "order": 22,
-        "width": 8,
+        "order": 21,
+        "width": 2,
         "height": 1
     },
     {
-        "id": "e665aeda269e8cd1",
+        "id": "296837c798a7186f",
         "type": "ui_spacer",
-        "z": "17ca131.e488ced",
+        "z": "ee400291.7cb",
         "name": "spacer",
         "group": "1a58511c941998c3",
         "order": 3,
@@ -5419,9 +5408,9 @@
         "height": 1
     },
     {
-        "id": "15115b235faeed51",
+        "id": "4ff898c579e45ead",
         "type": "ui_spacer",
-        "z": "17ca131.e488ced",
+        "z": "ee400291.7cb",
         "name": "spacer",
         "group": "1a58511c941998c3",
         "order": 6,
@@ -5429,9 +5418,9 @@
         "height": 1
     },
     {
-        "id": "95ba194505e9a3bb",
+        "id": "2f7d67fa765019b7",
         "type": "ui_spacer",
-        "z": "17ca131.e488ced",
+        "z": "ee400291.7cb",
         "name": "spacer",
         "group": "1a58511c941998c3",
         "order": 9,
@@ -5439,49 +5428,39 @@
         "height": 1
     },
     {
-        "id": "1a31f32a6d449099",
+        "id": "9301cd1c1ca9c797",
         "type": "ui_spacer",
-        "z": "17ca131.e488ced",
+        "z": "ee400291.7cb",
         "name": "spacer",
         "group": "1a58511c941998c3",
-        "order": 11,
-        "width": 5,
-        "height": 1
-    },
-    {
-        "id": "1d158357b64ff4a1",
-        "type": "ui_spacer",
-        "z": "17ca131.e488ced",
-        "name": "spacer",
-        "group": "1a58511c941998c3",
-        "order": 14,
+        "order": 12,
         "width": 2,
         "height": 1
     },
     {
-        "id": "9b672ec1c855b244",
+        "id": "c892fb0afca144bc",
         "type": "ui_spacer",
-        "z": "17ca131.e488ced",
+        "z": "ee400291.7cb",
         "name": "spacer",
         "group": "1a58511c941998c3",
         "order": 15,
-        "width": 3,
-        "height": 1
-    },
-    {
-        "id": "e8e7b140dce12ff1",
-        "type": "ui_spacer",
-        "z": "17ca131.e488ced",
-        "name": "spacer",
-        "group": "1a58511c941998c3",
-        "order": 17,
         "width": 2,
         "height": 1
     },
     {
-        "id": "28156a5bb4fb6338",
+        "id": "5c579057025f0e9d",
         "type": "ui_spacer",
-        "z": "17ca131.e488ced",
+        "z": "ee400291.7cb",
+        "name": "spacer",
+        "group": "1a58511c941998c3",
+        "order": 22,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "af7e9b7d7149d545",
+        "type": "ui_spacer",
+        "z": "ee400291.7cb",
         "name": "spacer",
         "group": "b6af0ae0df9d3a39",
         "order": 4,
@@ -5489,9 +5468,9 @@
         "height": 1
     },
     {
-        "id": "de4b80ce0bb767e5",
+        "id": "afc3a6a710ae00c6",
         "type": "ui_spacer",
-        "z": "17ca131.e488ced",
+        "z": "ee400291.7cb",
         "name": "spacer",
         "group": "b6af0ae0df9d3a39",
         "order": 8,
@@ -5499,9 +5478,9 @@
         "height": 1
     },
     {
-        "id": "d3e135262cb8195f",
+        "id": "b7a2b3265fe23238",
         "type": "ui_spacer",
-        "z": "17ca131.e488ced",
+        "z": "ee400291.7cb",
         "name": "spacer",
         "group": "aa77273aba5e6bc4",
         "order": 9,
@@ -5509,9 +5488,9 @@
         "height": 1
     },
     {
-        "id": "e048c3a08111099e",
+        "id": "371f170d71464e7c",
         "type": "ui_spacer",
-        "z": "17ca131.e488ced",
+        "z": "ee400291.7cb",
         "name": "spacer",
         "group": "aa77273aba5e6bc4",
         "order": 14,
@@ -5519,9 +5498,9 @@
         "height": 1
     },
     {
-        "id": "dd5d2394a71fe0a2",
+        "id": "288864dd47b898c2",
         "type": "ui_spacer",
-        "z": "17ca131.e488ced",
+        "z": "ee400291.7cb",
         "name": "spacer",
         "group": "35e60a5342e359c8",
         "order": 2,
@@ -14811,7 +14790,8 @@
             "ccbe7f922e2ce232",
             "ab775138e601551f",
             "58e712526deacae7",
-            "a7fbea713165a203"
+            "a7fbea713165a203",
+            "583be69120670a07"
         ],
         "x": 95,
         "y": 2480,
@@ -15211,7 +15191,7 @@
         "label": "Level",
         "tooltip": "Level of selected channels",
         "group": "a0d2379726c5b29d",
-        "order": 21,
+        "order": 22,
         "width": 8,
         "height": 1,
         "passthru": false,
@@ -15990,7 +15970,7 @@
         "showLightness": true,
         "square": "false",
         "dynOutput": "false",
-        "order": 19,
+        "order": 20,
         "width": 4,
         "height": 1,
         "passthru": true,
@@ -17461,7 +17441,7 @@
         "g": "96bc8a5df8acc28b",
         "name": "",
         "group": "1a58511c941998c3",
-        "order": 12,
+        "order": 10,
         "width": 3,
         "height": 1,
         "passthru": false,
@@ -17511,7 +17491,7 @@
         "g": "96bc8a5df8acc28b",
         "name": "",
         "group": "1a58511c941998c3",
-        "order": 13,
+        "order": 11,
         "width": 3,
         "height": 1,
         "passthru": false,
@@ -17540,7 +17520,7 @@
         "g": "96bc8a5df8acc28b",
         "name": "",
         "group": "1a58511c941998c3",
-        "order": 16,
+        "order": 17,
         "width": 3,
         "height": 1,
         "passthru": false,
@@ -17699,7 +17679,7 @@
         "g": "c6652a873359cc83",
         "name": "",
         "group": "1a58511c941998c3",
-        "order": 10,
+        "order": 16,
         "width": 3,
         "height": 1,
         "passthru": false,
@@ -17728,9 +17708,9 @@
         "g": "38470ba56eed5eef",
         "name": "",
         "group": "1a58511c941998c3",
-        "order": 17,
-        "width": 0,
-        "height": 0,
+        "order": 18,
+        "width": 2,
+        "height": 1,
         "passthru": false,
         "label": "P Sunday",
         "tooltip": "Palm Sunday",
@@ -17751,47 +17731,18 @@
         ]
     },
     {
-        "id": "73e5d2c058797607",
-        "type": "ui_button",
-        "z": "ee400291.7cb",
-        "g": "38470ba56eed5eef",
-        "name": "",
-        "group": "1a58511c941998c3",
-        "order": 17,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "G.F.",
-        "tooltip": "Good Friday",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 1110,
-        "y": 2800,
-        "wires": [
-            [
-                "a7fbea713165a203"
-            ]
-        ]
-    },
-    {
         "id": "8768a4297ab1ce2f",
         "type": "ui_button",
         "z": "ee400291.7cb",
         "g": "38470ba56eed5eef",
         "name": "",
         "group": "1a58511c941998c3",
-        "order": 17,
-        "width": 0,
-        "height": 0,
+        "order": 20,
+        "width": 2,
+        "height": 1,
         "passthru": false,
-        "label": "Easter",
-        "tooltip": "Easter Sunday",
+        "label": "FPars ES",
+        "tooltip": "Floor Pars Easter Sunday",
         "color": "",
         "bgcolor": "",
         "className": "",
@@ -17800,11 +17751,11 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 1110,
-        "y": 2840,
+        "x": 1120,
+        "y": 2820,
         "wires": [
             [
-                "a7fbea713165a203"
+                "3409f674462346e6"
             ]
         ]
     },
@@ -17818,7 +17769,7 @@
         "links": [
             "21ece2adbe7667ab"
         ],
-        "x": 1415,
+        "x": 1455,
         "y": 2800,
         "wires": []
     },
@@ -17834,7 +17785,7 @@
         "syntax": "mustache",
         "template": "[\n\n    {\n        \"ch\": 35,\n        \"lvl\": 100,\n        \"hs\": [\n            120,\n            100\n        ]\n    },\n   {\n    \"ch\": 37,\n    \"lvl\": 100,\n    \"hs\": [\n        120,\n        100\n    ]\n},\n{\n    \"ch\": 38,\n    \"lvl\": 100,\n    \"hs\": [\n        120,\n        100\n    ]\n},\n{\n    \"ch\": 39,\n    \"lvl\": 100,\n    \"hs\": [\n        120,\n        100\n    ]\n},\n{\n    \"ch\": 40,\n    \"lvl\": 100,\n    \"hs\": [\n        120,\n        100\n    ]\n},\n{\n    \"ch\": 34,\n    \"lvl\": 100,\n    \"hs\": [\n        300,\n        100\n    ]\n},\n{\n    \"ch\": 36,\n    \"lvl\": 100,\n    \"hs\": [\n        300,\n        100\n    ]\n},\n\n{\n    \"ch\": 41,\n    \"lvl\": 100,\n    \"hs\": [\n        300,\n        100\n    ]\n},\n{\n    \"ch\": 42,\n    \"lvl\": 100,\n    \"hs\": [\n        300,\n        100\n    ]\n},\n{\n    \"ch\": 43,\n    \"lvl\": 100,\n    \"hs\": [\n        300,\n        100\n    ]\n},\n{\n    \"ch\": 44,\n    \"lvl\": 100,\n    \"hs\": [\n        300,\n        100\n    ]\n}\n\n ]",
         "output": "json",
-        "x": 1300,
+        "x": 1290,
         "y": 2760,
         "wires": [
             [
@@ -17871,9 +17822,9 @@
         "g": "38470ba56eed5eef",
         "name": "",
         "group": "1a58511c941998c3",
-        "order": 17,
-        "width": 0,
-        "height": 0,
+        "order": 21,
+        "width": 2,
+        "height": 1,
         "passthru": false,
         "label": "Most Holy",
         "tooltip": "Inner Tabernacle",
@@ -17892,6 +17843,141 @@
                 "9bee249992bc2183"
             ]
         ]
+    },
+    {
+        "id": "1eeee07085bee65e",
+        "type": "ui_button",
+        "z": "ee400291.7cb",
+        "g": "b4854709446f38f8",
+        "name": "",
+        "group": "1a58511c941998c3",
+        "order": 13,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "Walls A>R>P",
+        "tooltip": "Walls fade Amber to Purple",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1110,
+        "y": 3160,
+        "wires": [
+            [
+                "744041c293fb6e1a"
+            ]
+        ]
+    },
+    {
+        "id": "744041c293fb6e1a",
+        "type": "template",
+        "z": "ee400291.7cb",
+        "g": "b4854709446f38f8",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "json",
+        "syntax": "mustache",
+        "template": "[{\n    \"ch\": 49,\n    \"lvl\": 100,\n    \"hs\": [\n        35,\n        100\n    ]\n},\n{\n    \"ch\": 50,\n    \"lvl\": 100,\n    \"hs\": [\n        31,\n        99\n    ]\n},\n{\n    \"ch\": 51,\n    \"lvl\": 100,\n    \"hs\": [\n        26,\n        99\n    ]\n},\n{\n    \"ch\": 52,\n    \"lvl\": 100,\n    \"hs\": [\n        22,\n        98\n    ]\n},\n{\n    \"ch\": 53,\n    \"lvl\": 100,\n    \"hs\": [\n        18,\n        97\n    ]\n},\n{\n    \"ch\": 54,\n    \"lvl\": 100,\n    \"hs\": [\n        13,\n        96\n    ]\n},\n{\n    \"ch\": 55,\n    \"lvl\": 100,\n    \"hs\": [\n        9,\n        96\n    ]\n},\n{\n    \"ch\": 45,\n    \"lvl\": 100,\n    \"hs\": [\n        4,\n        95\n    ]\n},\n{\n    \"ch\": 46,\n    \"lvl\": 100,\n    \"hs\": [\n        0,\n        94\n    ]\n},\n{\n    \"ch\": 47,\n    \"lvl\": 100,\n    \"hs\": [\n        0,\n        93\n    ]\n},\n{\n    \"ch\": 48,\n    \"lvl\": 100,\n    \"hs\": [\n        350,\n        93\n    ]\n},\n{\n    \"ch\": 56,\n    \"lvl\": 100,\n    \"hs\": [\n        339,\n        92\n    ]\n},\n{\n    \"ch\": 57,\n    \"lvl\": 100,\n    \"hs\": [\n        329,\n        91\n    ]\n},\n{\n    \"ch\": 58,\n    \"lvl\": 100,\n    \"hs\": [\n        319,\n        90\n    ]\n},\n{\n    \"ch\": 59,\n    \"lvl\": 100,\n    \"hs\": [\n        308,\n        90\n    ]\n},\n{\n    \"ch\": 60,\n    \"lvl\": 100,\n    \"hs\": [\n        298,\n        89\n    ]\n},\n{\n    \"ch\": 61,\n    \"lvl\": 100,\n    \"hs\": [\n        287,\n        88\n    ]\n},\n{\n    \"ch\": 62,\n    \"lvl\": 100,\n    \"hs\": [\n        277,\n        87\n    ]\n}]",
+        "output": "json",
+        "x": 1280,
+        "y": 3160,
+        "wires": [
+            [
+                "583be69120670a07"
+            ]
+        ],
+        "info": "Lamba function for Excel\n\n{\"ch\": 49, \"lvl\": 100, \"hs\": [240,100] }\n\nhs\n=lambda(h,s, concat(\" \"\"hs\"\": [ \" , round(h,0), \",\", round(s,0), \"]\") )\n\nch\n=lambda(c, concat(\" \"\"ch\"\": \" , c) )\n\nlvl\n=lambda(l, concat(\" \"\"lvl\"\": \" , l) )\n \nchsl \n=lambda(c,h,s,l, textjoin(\",\" , FALSE, \" {\", ch(c) ,  lvl(l) , hs(h,s)  ))\n=lambda(c,h,s,l, concat(\" {\", ch(c) , \",\" ,   lvl(l) , \",\"  , hs(h,s) , \"},\" ))"
+    },
+    {
+        "id": "583be69120670a07",
+        "type": "link out",
+        "z": "ee400291.7cb",
+        "g": "b4854709446f38f8",
+        "name": "link out 30",
+        "mode": "link",
+        "links": [
+            "21ece2adbe7667ab"
+        ],
+        "x": 1425,
+        "y": 3160,
+        "wires": []
+    },
+    {
+        "id": "c6aefe6455ecd787",
+        "type": "ui_button",
+        "z": "ee400291.7cb",
+        "g": "b4854709446f38f8",
+        "name": "",
+        "group": "1a58511c941998c3",
+        "order": 14,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "Pillars A>R>P",
+        "tooltip": "Pillars Amber to Red to Purple",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1120,
+        "y": 3200,
+        "wires": [
+            [
+                "fb3bd1e960a31655"
+            ]
+        ]
+    },
+    {
+        "id": "fb3bd1e960a31655",
+        "type": "template",
+        "z": "ee400291.7cb",
+        "g": "b4854709446f38f8",
+        "name": "pillars to match",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "json",
+        "syntax": "mustache",
+        "template": "[\n    {\n        \"ch\": 41,\n        \"lvl\": 100,\n        \"hs\": [\n            9,\n            96\n        ]\n    },\n    {\n        \"ch\": 42,\n        \"lvl\": 100,\n        \"hs\": [\n            0,\n            94\n        ]\n    },\n    {\n        \"ch\": 43,\n        \"lvl\": 100,\n        \"hs\": [\n            0,\n            93\n        ]\n    },\n    {\n        \"ch\": 44,\n        \"lvl\": 100,\n        \"hs\": [\n            339,\n            92\n        ]\n    }\n]",
+        "output": "json",
+        "x": 1300,
+        "y": 3200,
+        "wires": [
+            [
+                "583be69120670a07"
+            ]
+        ],
+        "info": "Lamba function for Excel\n\n{\"ch\": 49, \"lvl\": 100, \"hs\": [240,100] }\n\nhs\n=lambda(h,s, concat(\" \"\"hs\"\": [ \" , round(h,0), \",\", round(s,0), \"]\") )\n\nch\n=lambda(c, concat(\" \"\"ch\"\": \" , c) )\n\nlvl\n=lambda(l, concat(\" \"\"lvl\"\": \" , l) )\n \nchsl \n=lambda(c,h,s,l, textjoin(\",\" , FALSE, \" {\", ch(c) ,  lvl(l) , hs(h,s)  ))\n=lambda(c,h,s,l, concat(\" {\", ch(c) , \",\" ,   lvl(l) , \",\"  , hs(h,s) , \"},\" ))"
+    },
+    {
+        "id": "3409f674462346e6",
+        "type": "template",
+        "z": "ee400291.7cb",
+        "g": "38470ba56eed5eef",
+        "name": "pillars to match",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "json",
+        "syntax": "mustache",
+        "template": "[\n    {\n        \"ch\": 34,\n        \"col\": 13,\n        \"lvl\": 90\n    },\n    {\n        \"ch\": 35,\n        \"col\": 13,\n        \"lvl\": 90\n    },\n    {\n        \"ch\": 36,\n        \"col\": 13,\n        \"lvl\": 90\n    },\n    {\n        \"ch\": 37,\n        \"col\": 7,\n        \"lvl\": 50\n    },\n    {\n        \"ch\": 38,\n        \"col\": 7,\n        \"lvl\": 50\n    },\n    {\n        \"ch\": 39,\n        \"col\": 7,\n        \"lvl\": 50\n    },\n    {\n        \"ch\": 40,\n        \"col\": 7,\n        \"lvl\": 50\n    }\n]",
+        "output": "json",
+        "x": 1300,
+        "y": 2820,
+        "wires": [
+            [
+                "a7fbea713165a203"
+            ]
+        ],
+        "info": "Lamba function for Excel\n\n{\"ch\": 49, \"lvl\": 100, \"hs\": [240,100] }\n\nhs\n=lambda(h,s, concat(\" \"\"hs\"\": [ \" , round(h,0), \",\", round(s,0), \"]\") )\n\nch\n=lambda(c, concat(\" \"\"ch\"\": \" , c) )\n\nlvl\n=lambda(l, concat(\" \"\"lvl\"\": \" , l) )\n \nchsl \n=lambda(c,h,s,l, textjoin(\",\" , FALSE, \" {\", ch(c) ,  lvl(l) , hs(h,s)  ))\n=lambda(c,h,s,l, concat(\" {\", ch(c) , \",\" ,   lvl(l) , \",\"  , hs(h,s) , \"},\" ))"
     },
     {
         "id": "1e9dc9a1.038cb6",
