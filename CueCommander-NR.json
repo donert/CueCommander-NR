@@ -43,6 +43,14 @@
         "info": "The main communication engine is provided by\n[this](https://github.com/haydendonald/blackmagic-atem-nodered/blob/master/howToUse.md)\n\nThis relies heavily on \n[this](https://www.skaarhoj.com/fileadmin/BMDPROTOCOL.html)"
     },
     {
+        "id": "423652b85f130c5f",
+        "type": "tab",
+        "label": "ATEM-VISA Tally",
+        "disabled": false,
+        "info": "This flow picks up the tally messages from the ATEM and fires tally command to the Sony Cameras.",
+        "env": []
+    },
+    {
         "id": "805d289f.fd83a8",
         "type": "tab",
         "label": "Settings",
@@ -213,7 +221,9 @@
             "f34ca22e8149ed8e"
         ],
         "x": 14,
-        "y": 1399
+        "y": 1399,
+        "w": 912,
+        "h": 562
     },
     {
         "id": "db849107.39fd1",
@@ -248,7 +258,9 @@
             "d067977dc59a0a26"
         ],
         "x": 14,
-        "y": 899
+        "y": 899,
+        "w": 882,
+        "h": 482
     },
     {
         "id": "ba4bbd3e.8196d",
@@ -274,7 +286,9 @@
             "900fe0b426429e10"
         ],
         "x": 954,
-        "y": 1459
+        "y": 1459,
+        "w": 912,
+        "h": 222
     },
     {
         "id": "d8d55245.49726",
@@ -297,7 +311,9 @@
             "dfce0a668d40eccb"
         ],
         "x": 18,
-        "y": 1973
+        "y": 1973,
+        "w": 984,
+        "h": 388
     },
     {
         "id": "5a3761.bcd618a",
@@ -334,8 +350,10 @@
             "6342cda5560f00ba",
             "73a5a931b753e2d6"
         ],
-        "x": 14,
-        "y": 2379
+        "x": 4,
+        "y": 2379,
+        "w": 1352,
+        "h": 462
     },
     {
         "id": "1a657411.db32ac",
@@ -759,38 +777,6 @@
         "y": 639
     },
     {
-        "id": "aa34448f.507d08",
-        "type": "group",
-        "z": "7014b916.6d1208",
-        "name": "Tally Control",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "4fbe7095.907c4",
-            "8e4e786e.795218",
-            "789be6f7.596f48",
-            "553cdcd6.b3bdd4",
-            "ba95bc57.7353c",
-            "45d3886e.bf37d8",
-            "4798d940.414508",
-            "71cf7e55ec08a15c",
-            "3527a575b28478e5",
-            "f756e794346a0cf2",
-            "c866f0e2500f9050",
-            "dd55fe08ff99ad51",
-            "5a6ae96af2d23af4",
-            "1f5c8b632f8b0a06",
-            "0411af299e99f813",
-            "d72d0243e5e4159c",
-            "afdc0609070f7d1c"
-        ],
-        "x": 14,
-        "y": 719,
-        "w": 912,
-        "h": 322
-    },
-    {
         "id": "c8d8db35.9a9e88",
         "type": "group",
         "z": "c7f9390d.cde5e8",
@@ -983,7 +969,9 @@
             "3d435315bda1dee0"
         ],
         "x": 14,
-        "y": 819
+        "y": 819,
+        "w": 972,
+        "h": 262
     },
     {
         "id": "1976ad4e.952673",
@@ -1064,7 +1052,9 @@
             "722ecb18.5be2a4"
         ],
         "x": 14,
-        "y": 19
+        "y": 19,
+        "w": 1232,
+        "h": 122
     },
     {
         "id": "ab73d704.a2b218",
@@ -1095,7 +1085,9 @@
             "94d50b40.9a1db8"
         ],
         "x": 14,
-        "y": 539
+        "y": 539,
+        "w": 842,
+        "h": 362
     },
     {
         "id": "198b8aae.a04e95",
@@ -1126,7 +1118,9 @@
             "3fb8b36e.2b326c"
         ],
         "x": 14,
-        "y": 919
+        "y": 919,
+        "w": 822,
+        "h": 362
     },
     {
         "id": "c1d39fd1.f7305",
@@ -1157,7 +1151,9 @@
             "5925d0f4.ad994"
         ],
         "x": 14,
-        "y": 1299
+        "y": 1299,
+        "w": 862,
+        "h": 362
     },
     {
         "id": "dae8aea7.d1275",
@@ -1188,7 +1184,9 @@
             "bbc0755b.d66798"
         ],
         "x": 14,
-        "y": 1679
+        "y": 1679,
+        "w": 862,
+        "h": 362
     },
     {
         "id": "34b67c90.057094",
@@ -1219,7 +1217,9 @@
             "8fe828b2.8907a8"
         ],
         "x": 14,
-        "y": 2059
+        "y": 2059,
+        "w": 862,
+        "h": 362
     },
     {
         "id": "cadcb100.753eb",
@@ -1250,7 +1250,9 @@
             "7f8e66d0.a8da78"
         ],
         "x": 14,
-        "y": 2439
+        "y": 2439,
+        "w": 862,
+        "h": 362
     },
     {
         "id": "37b481c2.03719e",
@@ -1281,7 +1283,9 @@
             "8a3f5df6.b2876"
         ],
         "x": 14,
-        "y": 2819
+        "y": 2819,
+        "w": 842,
+        "h": 362
     },
     {
         "id": "1f480a84.7e36a5",
@@ -1304,7 +1308,9 @@
             "4de1ab2e.329e74"
         ],
         "x": 14,
-        "y": 3193
+        "y": 3193,
+        "w": 788,
+        "h": 508
     },
     {
         "id": "4eefb8e2.42fac8",
@@ -1335,7 +1341,9 @@
             "4f97abdd.d1abf4"
         ],
         "x": 14,
-        "y": 159
+        "y": 159,
+        "w": 822,
+        "h": 362
     },
     {
         "id": "faf3623e.eecb6",
@@ -1390,7 +1398,7 @@
             "9db1e8a6c6542da8"
         ],
         "x": 14,
-        "y": 539,
+        "y": 279,
         "w": 1092,
         "h": 162
     },
@@ -1474,7 +1482,7 @@
         ],
         "x": 34,
         "y": 1659,
-        "w": 932,
+        "w": 942,
         "h": 262
     },
     {
@@ -1649,8 +1657,8 @@
             "6f622a44.31d1f4",
             "6e4e66cf6abb5faa"
         ],
-        "x": 874,
-        "y": 3239,
+        "x": 794,
+        "y": 2819,
         "w": 972,
         "h": 402
     },
@@ -1672,8 +1680,8 @@
             "e3e5b98f.91aee8",
             "a933114d.d816d"
         ],
-        "x": 10,
-        "y": 299,
+        "x": 730,
+        "y": 59,
         "w": 716,
         "h": 202
     },
@@ -1693,7 +1701,9 @@
             "f8358b92a5d4d947"
         ],
         "x": 34,
-        "y": 99
+        "y": 99,
+        "w": 562,
+        "h": 222
     },
     {
         "id": "511ec5943fba0ae3",
@@ -1827,7 +1837,9 @@
             "d04b81a31c52af06"
         ],
         "x": 14,
-        "y": 439
+        "y": 439,
+        "w": 1112,
+        "h": 342
     },
     {
         "id": "dacfcd47aec0c05a",
@@ -1844,7 +1856,9 @@
             "a7cf0a5119df01fa"
         ],
         "x": 34,
-        "y": 3939
+        "y": 3519,
+        "w": 672,
+        "h": 162
     },
     {
         "id": "2e267aabc8e94e20",
@@ -1872,8 +1886,10 @@
             "f1fdb5a342409993",
             "5a93cbfa02e8e87c"
         ],
-        "x": 34,
-        "y": 599
+        "x": 24,
+        "y": 559,
+        "w": 1042,
+        "h": 302
     },
     {
         "id": "83b35ec65abcd370",
@@ -2013,7 +2029,7 @@
             "a8137b3234b7bec3"
         ],
         "x": 28,
-        "y": 1219,
+        "y": 679,
         "w": 884,
         "h": 1048
     },
@@ -2043,7 +2059,9 @@
             "718f6b2b339f074e"
         ],
         "x": 14,
-        "y": 19
+        "y": 19,
+        "w": 772,
+        "h": 382
     },
     {
         "id": "a1ba4d39e374bcff",
@@ -2083,8 +2101,8 @@
             "ce7ec2284e930d83"
         ],
         "x": 864,
-        "y": 2999,
-        "w": 482,
+        "y": 2579,
+        "w": 492,
         "h": 222
     },
     {
@@ -2348,8 +2366,8 @@
             "78db80b74e3494bd",
             "527ead6b917dbea4"
         ],
-        "x": 614,
-        "y": 1059,
+        "x": 24,
+        "y": 479,
         "w": 332,
         "h": 142
     },
@@ -2405,8 +2423,8 @@
             "a3c06f8b92ae22c7",
             "0a0279495a8c76a5"
         ],
-        "x": 34,
-        "y": 2999,
+        "x": 54,
+        "y": 2579,
         "w": 712,
         "h": 142
     },
@@ -2444,8 +2462,8 @@
             "b057a14c0a366bac",
             "fbba09129504c598"
         ],
-        "x": 34,
-        "y": 2299,
+        "x": 54,
+        "y": 1779,
         "w": 892,
         "h": 662
     },
@@ -2469,8 +2487,10 @@
             "578a08345fdcb279",
             "efea50f67e892110"
         ],
-        "x": 174,
-        "y": 59
+        "x": 154,
+        "y": 39,
+        "w": 672,
+        "h": 262
     },
     {
         "id": "c1c40e84c24ee447",
@@ -2543,7 +2563,9 @@
             "d80cb6f88401b4f4"
         ],
         "x": 24,
-        "y": 59
+        "y": 59,
+        "w": 1132,
+        "h": 462
     },
     {
         "id": "0f75adccc23123b3",
@@ -2789,7 +2811,9 @@
             "2d40dc0e7cc5c004"
         ],
         "x": 934,
-        "y": 859
+        "y": 859,
+        "w": 972,
+        "h": 522
     },
     {
         "id": "97c79174.f6cf3",
@@ -2808,7 +2832,9 @@
             "30e7b1efb9b40b90"
         ],
         "x": 24,
-        "y": 2999
+        "y": 2999,
+        "w": 412,
+        "h": 122
     },
     {
         "id": "77ffcbeb.3e5634",
@@ -2828,7 +2854,9 @@
             "747058b789dd81ad"
         ],
         "x": 24,
-        "y": 3139
+        "y": 3139,
+        "w": 432,
+        "h": 162
     },
     {
         "id": "5708436.a4e2dbc",
@@ -2847,7 +2875,9 @@
             "45b1ba609978657c"
         ],
         "x": 24,
-        "y": 2859
+        "y": 2859,
+        "w": 382,
+        "h": 122
     },
     {
         "id": "1b4382d4.7ea50d",
@@ -2866,7 +2896,9 @@
             "c5c9cb390a209eeb"
         ],
         "x": 454,
-        "y": 2859
+        "y": 2859,
+        "w": 392,
+        "h": 122
     },
     {
         "id": "1d27da07.0c8016",
@@ -2886,7 +2918,9 @@
             "555f0c5f50b8e5ac"
         ],
         "x": 1064,
-        "y": 2119
+        "y": 2119,
+        "w": 402,
+        "h": 242
     },
     {
         "id": "c54cb139.4f73d",
@@ -2909,23 +2943,6 @@
         "y": 1979
     },
     {
-        "id": "01fe472270a676c6",
-        "type": "group",
-        "z": "96ac9944.5b4dd8",
-        "name": "Test Tally",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "984f0f2d5bb4eac2",
-            "4fc95b73493a1e56",
-            "c9b2c8a3821202d0",
-            "fa2928f4a0bcf1c3"
-        ],
-        "x": 34,
-        "y": 3619
-    },
-    {
         "id": "731219d38de814f1",
         "type": "group",
         "z": "96ac9944.5b4dd8",
@@ -2941,18 +2958,14 @@
             "16856d29a6d25506",
             "52ec4043bddcb2ab",
             "a1f8c7d85a64df60",
-            "731968da42049195",
-            "363e4e4a72e896bc",
-            "11e058263dcec395",
-            "01c0009ac0f46e4a",
-            "1d0847d23cef92f5",
-            "3a07af28d5fe3aae",
             "25cf873edc86d706",
             "97acfe75fe50c7b0",
             "91535749197c095c"
         ],
         "x": 24,
-        "y": 3319
+        "y": 3319,
+        "w": 1062,
+        "h": 162
     },
     {
         "id": "6b48eb843954f3c6",
@@ -3405,7 +3418,7 @@
             }
         ],
         "x": 54,
-        "y": 1299,
+        "y": 759,
         "w": 832,
         "h": 302
     },
@@ -3441,7 +3454,7 @@
             }
         ],
         "x": 54,
-        "y": 1619,
+        "y": 1079,
         "w": 832,
         "h": 302
     },
@@ -3477,7 +3490,7 @@
             }
         ],
         "x": 54,
-        "y": 1939,
+        "y": 1399,
         "w": 832,
         "h": 302
     },
@@ -3496,7 +3509,9 @@
             "abddd6e3ed488d95"
         ],
         "x": 264,
-        "y": 1999
+        "y": 1999,
+        "w": 452,
+        "h": 82
     },
     {
         "id": "685a97ea.429758",
@@ -3513,7 +3528,9 @@
             "0f40ecd9e68ce3b8"
         ],
         "x": 44,
-        "y": 2199
+        "y": 2199,
+        "w": 452,
+        "h": 82
     },
     {
         "id": "e18b4c44.0e61b",
@@ -3530,7 +3547,9 @@
             "a142407ffd770ccf"
         ],
         "x": 44,
-        "y": 2099
+        "y": 2099,
+        "w": 452,
+        "h": 82
     },
     {
         "id": "e5c14455.7ca878",
@@ -3547,7 +3566,9 @@
             "b15bd8e70af7caff"
         ],
         "x": 524,
-        "y": 2099
+        "y": 2099,
+        "w": 452,
+        "h": 82
     },
     {
         "id": "38102d4c.5d4282",
@@ -3564,7 +3585,9 @@
             "ea5815f3434dbb63"
         ],
         "x": 524,
-        "y": 2199
+        "y": 2199,
+        "w": 452,
+        "h": 82
     },
     {
         "id": "e5ab239c.cf84b",
@@ -3609,7 +3632,9 @@
             "e3031e85.521a2"
         ],
         "x": 394,
-        "y": 3219
+        "y": 3219,
+        "w": 382,
+        "h": 362
     },
     {
         "id": "22d220a4.a89f5",
@@ -3780,6 +3805,199 @@
         ],
         "x": 54,
         "y": 2439
+    },
+    {
+        "id": "atem-tally-config",
+        "type": "group",
+        "z": "423652b85f130c5f",
+        "name": "ATEM Tally Configuration",
+        "nodes": [],
+        "x": 350,
+        "y": 110
+    },
+    {
+        "id": "atem-monitor",
+        "type": "group",
+        "z": "423652b85f130c5f",
+        "name": "ATEM Monitor",
+        "nodes": [],
+        "x": 350,
+        "y": 110
+    },
+    {
+        "id": "camera-control",
+        "type": "group",
+        "z": "423652b85f130c5f",
+        "name": "Camera Control",
+        "nodes": [
+            "6e4b5b3b09fe2ca2",
+            "6ddb092cf27358cf"
+        ],
+        "x": 335,
+        "y": 100
+    },
+    {
+        "id": "manual-test",
+        "type": "group",
+        "z": "423652b85f130c5f",
+        "name": "Manual Testing",
+        "nodes": [],
+        "x": 350,
+        "y": 110
+    },
+    {
+        "id": "f742936aa5ed41f9",
+        "type": "group",
+        "z": "423652b85f130c5f",
+        "name": "ATEM Tally Configuration",
+        "nodes": [],
+        "x": 570,
+        "y": 150
+    },
+    {
+        "id": "13867dc7c0bb8014",
+        "type": "group",
+        "z": "423652b85f130c5f",
+        "name": "ATEM Monitor",
+        "nodes": [],
+        "x": 570,
+        "y": 150
+    },
+    {
+        "id": "ecdeb7b557458284",
+        "type": "group",
+        "z": "423652b85f130c5f",
+        "name": "Camera Control",
+        "nodes": [
+            "b453e4558f331469",
+            "7a07df94445096fb"
+        ],
+        "x": 570,
+        "y": 100
+    },
+    {
+        "id": "100b263c39406f9a",
+        "type": "group",
+        "z": "423652b85f130c5f",
+        "name": "Manual Testing",
+        "nodes": [],
+        "x": 570,
+        "y": 150,
+        "w": 40,
+        "h": 40
+    },
+    {
+        "id": "atem-config",
+        "type": "group",
+        "z": "423652b85f130c5f",
+        "g": "d3819f7fd7316fa9",
+        "name": "ATEM Configuration",
+        "style": {
+            "stroke": "#999999",
+            "fill": "#f8f8f8",
+            "label": true
+        },
+        "nodes": [
+            "camera-mapping"
+        ],
+        "x": 74,
+        "y": 739,
+        "w": 232,
+        "h": 82
+    },
+    {
+        "id": "ae1631da7c07deea",
+        "type": "group",
+        "z": "423652b85f130c5f",
+        "name": "Future Code",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "ce871722b83b1b55",
+            "facef3d2d6f84ad0",
+            "f73e0e218b829f44",
+            "dff1cac793acba7e",
+            "ae737bd20a32fa1a",
+            "5333e9371bea4e27",
+            "f448a13b9e33d540",
+            "5b66c99e42b0ec25",
+            "709030d6a6c1ed5a",
+            "3437d8ca193071c2",
+            "4ca9d8c17983c7e6",
+            "5fe7c1f65673a84a",
+            "02aafefbb85113c4",
+            "cc3f24b838e00fee"
+        ],
+        "x": 794,
+        "y": 219,
+        "w": 892,
+        "h": 262
+    },
+    {
+        "id": "bedc93b3c9ad126c",
+        "type": "group",
+        "z": "7014b916.6d1208",
+        "name": "install python packages",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "9ee6db48058b27ac",
+            "75eea368818d4536",
+            "465003ed618ad7a9"
+        ],
+        "x": 54,
+        "y": 2751.5,
+        "w": 632,
+        "h": 97
+    },
+    {
+        "id": "62eebb1405644852",
+        "type": "group",
+        "z": "423652b85f130c5f",
+        "name": "Stop message repetition",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "2a0364e56444c32e",
+            "2619e44493c725c3",
+            "573c6995cde8d5d9"
+        ],
+        "x": 34,
+        "y": 479,
+        "w": 672,
+        "h": 82
+    },
+    {
+        "id": "d3819f7fd7316fa9",
+        "type": "group",
+        "z": "423652b85f130c5f",
+        "name": "Experimental",
+        "style": {
+            "fill": "#ffbfbf",
+            "label": true
+        },
+        "nodes": [
+            "528480a06fdb0263",
+            "b222d93435e1751b",
+            "960d574a6ceb4f53",
+            "b10fa3a4237bf022",
+            "3e7d1d3995f3bd66",
+            "911d4cf27226431f",
+            "6cd70d21c40ceaef",
+            "a2985a09f315883c",
+            "30823278da1dbd3f",
+            "mapping-debug",
+            "240476b41eb8bfdb",
+            "atem-config",
+            "2a9226e65b9f23a3"
+        ],
+        "x": 34,
+        "y": 579,
+        "w": 932,
+        "h": 282
     },
     {
         "id": "a552506bc8ab8fc7",
@@ -4047,65 +4265,6 @@
         ]
     },
     {
-        "id": "1f5c8b632f8b0a06",
-        "type": "junction",
-        "z": "7014b916.6d1208",
-        "g": "aa34448f.507d08",
-        "x": 700,
-        "y": 900,
-        "wires": [
-            [
-                "789be6f7.596f48",
-                "45d3886e.bf37d8"
-            ]
-        ]
-    },
-    {
-        "id": "0411af299e99f813",
-        "type": "junction",
-        "z": "7014b916.6d1208",
-        "g": "aa34448f.507d08",
-        "x": 300,
-        "y": 820,
-        "wires": [
-            [
-                "71cf7e55ec08a15c",
-                "5a6ae96af2d23af4",
-                "c866f0e2500f9050"
-            ]
-        ]
-    },
-    {
-        "id": "d72d0243e5e4159c",
-        "type": "junction",
-        "z": "7014b916.6d1208",
-        "g": "aa34448f.507d08",
-        "x": 300,
-        "y": 900,
-        "wires": [
-            [
-                "dd55fe08ff99ad51",
-                "3527a575b28478e5",
-                "c866f0e2500f9050"
-            ]
-        ]
-    },
-    {
-        "id": "afdc0609070f7d1c",
-        "type": "junction",
-        "z": "7014b916.6d1208",
-        "g": "aa34448f.507d08",
-        "x": 300,
-        "y": 980,
-        "wires": [
-            [
-                "f756e794346a0cf2",
-                "5a6ae96af2d23af4",
-                "3527a575b28478e5"
-            ]
-        ]
-    },
-    {
         "id": "be88fda2c2bc799c",
         "type": "junction",
         "z": "41f3235e2124e3a2",
@@ -4179,8 +4338,8 @@
         "type": "junction",
         "z": "96ac9944.5b4dd8",
         "g": "2e267aabc8e94e20",
-        "x": 870,
-        "y": 780,
+        "x": 860,
+        "y": 740,
         "wires": [
             [
                 "d5e87bb8c016a097",
@@ -4193,8 +4352,8 @@
         "type": "junction",
         "z": "96ac9944.5b4dd8",
         "g": "2e267aabc8e94e20",
-        "x": 330,
-        "y": 800,
+        "x": 320,
+        "y": 760,
         "wires": [
             [
                 "32660b99d8ee5118"
@@ -4239,19 +4398,6 @@
                 "4c3b94ff03d2d8fa",
                 "80c4462470807fab",
                 "4aa62049f4b1394f"
-            ]
-        ]
-    },
-    {
-        "id": "fa2928f4a0bcf1c3",
-        "type": "junction",
-        "z": "96ac9944.5b4dd8",
-        "g": "01fe472270a676c6",
-        "x": 240,
-        "y": 3700,
-        "wires": [
-            [
-                "731968da42049195"
             ]
         ]
     },
@@ -4469,6 +4615,59 @@
         "wires": [
             [
                 "09e74d0c1d5210ee"
+            ]
+        ]
+    },
+    {
+        "id": "240476b41eb8bfdb",
+        "type": "junction",
+        "z": "423652b85f130c5f",
+        "g": "d3819f7fd7316fa9",
+        "x": 780,
+        "y": 680,
+        "wires": [
+            [
+                "b10fa3a4237bf022",
+                "3e7d1d3995f3bd66"
+            ]
+        ]
+    },
+    {
+        "id": "5fe7c1f65673a84a",
+        "type": "junction",
+        "z": "423652b85f130c5f",
+        "g": "ae1631da7c07deea",
+        "x": 1160,
+        "y": 400,
+        "wires": [
+            [
+                "ae737bd20a32fa1a"
+            ]
+        ]
+    },
+    {
+        "id": "02aafefbb85113c4",
+        "type": "junction",
+        "z": "423652b85f130c5f",
+        "g": "ae1631da7c07deea",
+        "x": 1500,
+        "y": 400,
+        "wires": [
+            [
+                "709030d6a6c1ed5a"
+            ]
+        ]
+    },
+    {
+        "id": "cc3f24b838e00fee",
+        "type": "junction",
+        "z": "423652b85f130c5f",
+        "g": "ae1631da7c07deea",
+        "x": 980,
+        "y": 320,
+        "wires": [
+            [
+                "ce871722b83b1b55"
             ]
         ]
     },
@@ -8786,29 +8985,10 @@
         "animate": true,
         "className": "",
         "x": 310,
-        "y": 620,
+        "y": 360,
         "wires": [
             [
                 "d4e305dda321dca3"
-            ]
-        ]
-    },
-    {
-        "id": "4fbe7095.907c4",
-        "type": "link in",
-        "z": "7014b916.6d1208",
-        "g": "aa34448f.507d08",
-        "name": "Set Camera Tally ",
-        "links": [
-            "1d0847d23cef92f5"
-        ],
-        "x": 95,
-        "y": 760,
-        "wires": [
-            [
-                "0411af299e99f813",
-                "d72d0243e5e4159c",
-                "afdc0609070f7d1c"
             ]
         ]
     },
@@ -8830,8 +9010,8 @@
         "onceDelay": 0.1,
         "topic": "powerOn",
         "payloadType": "str",
-        "x": 980,
-        "y": 3300,
+        "x": 900,
+        "y": 2880,
         "wires": [
             [
                 "b3eb0067.40bfa"
@@ -8852,8 +9032,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1700,
-        "y": 3360,
+        "x": 1620,
+        "y": 2940,
         "wires": []
     },
     {
@@ -8867,8 +9047,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 1210,
-        "y": 3520,
+        "x": 1130,
+        "y": 3100,
         "wires": [
             []
         ]
@@ -8884,8 +9064,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 1210,
-        "y": 3560,
+        "x": 1130,
+        "y": 3140,
         "wires": [
             []
         ]
@@ -8908,8 +9088,8 @@
         "onceDelay": 0.1,
         "topic": "powerOff",
         "payloadType": "str",
-        "x": 980,
-        "y": 3340,
+        "x": 900,
+        "y": 2920,
         "wires": [
             [
                 "b3eb0067.40bfa"
@@ -8927,8 +9107,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 1440,
-        "y": 3520,
+        "x": 1360,
+        "y": 3100,
         "wires": [
             []
         ]
@@ -8944,8 +9124,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 1440,
-        "y": 3560,
+        "x": 1360,
+        "y": 3140,
         "wires": [
             []
         ]
@@ -8968,8 +9148,8 @@
         "onceDelay": 0.1,
         "topic": "tallyOn",
         "payloadType": "str",
-        "x": 970,
-        "y": 3380,
+        "x": 890,
+        "y": 2960,
         "wires": [
             [
                 "b3eb0067.40bfa"
@@ -8993,8 +9173,8 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "tallyOff",
-        "x": 970,
-        "y": 3420,
+        "x": 890,
+        "y": 3000,
         "wires": [
             [
                 "b3eb0067.40bfa"
@@ -9012,8 +9192,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 1220,
-        "y": 3600,
+        "x": 1140,
+        "y": 3180,
         "wires": [
             []
         ]
@@ -9036,8 +9216,8 @@
         "onceDelay": 0.1,
         "topic": "reset",
         "payloadType": "str",
-        "x": 970,
-        "y": 3460,
+        "x": 890,
+        "y": 3040,
         "wires": [
             [
                 "b3eb0067.40bfa"
@@ -9058,8 +9238,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 600,
-        "y": 380,
+        "x": 1320,
+        "y": 140,
         "wires": []
     },
     {
@@ -9067,8 +9247,8 @@
         "type": "subflow:a3ba969f.c5f3b8",
         "z": "7014b916.6d1208",
         "g": "6efbe5a5.35e4cc",
-        "x": 1250,
-        "y": 3340,
+        "x": 1170,
+        "y": 2920,
         "wires": [
             [
                 "6f622a44.31d1f4"
@@ -9095,134 +9275,13 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1460,
-        "y": 3340,
+        "x": 1380,
+        "y": 2920,
         "wires": [
             [
                 "abc8164b.de4628"
             ]
         ]
-    },
-    {
-        "id": "8e4e786e.795218",
-        "type": "inject",
-        "z": "7014b916.6d1208",
-        "g": "aa34448f.507d08",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "3",
-        "payloadType": "str",
-        "x": 110,
-        "y": 980,
-        "wires": [
-            [
-                "afdc0609070f7d1c"
-            ]
-        ]
-    },
-    {
-        "id": "789be6f7.596f48",
-        "type": "debug",
-        "z": "7014b916.6d1208",
-        "g": "aa34448f.507d08",
-        "name": "tally result",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 820,
-        "y": 820,
-        "wires": []
-    },
-    {
-        "id": "553cdcd6.b3bdd4",
-        "type": "inject",
-        "z": "7014b916.6d1208",
-        "g": "aa34448f.507d08",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "2",
-        "payloadType": "str",
-        "x": 110,
-        "y": 900,
-        "wires": [
-            [
-                "d72d0243e5e4159c"
-            ]
-        ]
-    },
-    {
-        "id": "ba95bc57.7353c",
-        "type": "inject",
-        "z": "7014b916.6d1208",
-        "g": "aa34448f.507d08",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "1",
-        "payloadType": "str",
-        "x": 110,
-        "y": 820,
-        "wires": [
-            [
-                "0411af299e99f813"
-            ]
-        ]
-    },
-    {
-        "id": "45d3886e.bf37d8",
-        "type": "link out",
-        "z": "7014b916.6d1208",
-        "g": "aa34448f.507d08",
-        "name": "",
-        "mode": "link",
-        "links": [
-            "47152b92eaeb477f"
-        ],
-        "x": 785,
-        "y": 900,
-        "wires": []
-    },
-    {
-        "id": "4798d940.414508",
-        "type": "comment",
-        "z": "7014b916.6d1208",
-        "g": "aa34448f.507d08",
-        "name": "TODO - link to ATEM",
-        "info": "As coded, this logic fire the tally messages based on manual trigger. \n\nThis needs to be augmented to listen to the ATEM messages to automate the action.",
-        "x": 260,
-        "y": 760,
-        "wires": []
     },
     {
         "id": "bb4afb15.f41be8",
@@ -9239,7 +9298,7 @@
         "statusVal": "payload",
         "statusType": "auto",
         "x": 960,
-        "y": 580,
+        "y": 320,
         "wires": []
     },
     {
@@ -9253,8 +9312,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 350,
-        "y": 380,
+        "x": 1070,
+        "y": 140,
         "wires": [
             [
                 "6f0fa0df.6600b"
@@ -9284,8 +9343,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 106,
-        "y": 340,
+        "x": 826,
+        "y": 100,
         "wires": [
             [
                 "6e4dbe43.5cb02"
@@ -9310,8 +9369,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 126,
-        "y": 460,
+        "x": 846,
+        "y": 220,
         "wires": [
             [
                 "c679017d.eefb6"
@@ -9353,8 +9412,8 @@
         ],
         "outputs": 0,
         "cts": false,
-        "x": 576,
-        "y": 460,
+        "x": 1296,
+        "y": 220,
         "wires": []
     },
     {
@@ -9377,8 +9436,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 376,
-        "y": 460,
+        "x": 1096,
+        "y": 220,
         "wires": [
             [
                 "a5eacea7.2ac36"
@@ -9408,8 +9467,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 110,
-        "y": 380,
+        "x": 830,
+        "y": 140,
         "wires": [
             [
                 "6e4dbe43.5cb02"
@@ -9439,8 +9498,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 110,
-        "y": 420,
+        "x": 830,
+        "y": 180,
         "wires": [
             [
                 "6e4dbe43.5cb02"
@@ -9478,7 +9537,7 @@
         "to": "",
         "reg": false,
         "x": 450,
-        "y": 620,
+        "y": 360,
         "wires": [
             [
                 "f8b93d9667fc0cb6",
@@ -9508,7 +9567,7 @@
         "to": "",
         "reg": false,
         "x": 630,
-        "y": 580,
+        "y": 320,
         "wires": [
             [
                 "ecd65a1af3555f6c"
@@ -9536,7 +9595,7 @@
         "to": "",
         "reg": false,
         "x": 630,
-        "y": 620,
+        "y": 360,
         "wires": [
             [
                 "ecd65a1af3555f6c"
@@ -9564,7 +9623,7 @@
         "to": "",
         "reg": false,
         "x": 630,
-        "y": 660,
+        "y": 400,
         "wires": [
             [
                 "ecd65a1af3555f6c"
@@ -9592,7 +9651,7 @@
         "to": "",
         "reg": false,
         "x": 770,
-        "y": 620,
+        "y": 360,
         "wires": [
             [
                 "bb4afb15.f41be8",
@@ -9622,7 +9681,7 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 130,
-        "y": 1560,
+        "y": 1020,
         "wires": [
             [
                 "1fffe4f019074c25"
@@ -9651,7 +9710,7 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 260,
-        "y": 1560,
+        "y": 1020,
         "wires": [
             [
                 "1fffe4f019074c25"
@@ -9680,7 +9739,7 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 390,
-        "y": 1560,
+        "y": 1020,
         "wires": [
             [
                 "1fffe4f019074c25"
@@ -9709,7 +9768,7 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 190,
-        "y": 1380,
+        "y": 840,
         "wires": [
             [
                 "1fffe4f019074c25"
@@ -9738,7 +9797,7 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 470,
-        "y": 1380,
+        "y": 840,
         "wires": [
             [
                 "1fffe4f019074c25"
@@ -9767,7 +9826,7 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 330,
-        "y": 1340,
+        "y": 800,
         "wires": [
             [
                 "1fffe4f019074c25"
@@ -9796,7 +9855,7 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 330,
-        "y": 1380,
+        "y": 840,
         "wires": [
             [
                 "1fffe4f019074c25"
@@ -9825,7 +9884,7 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 330,
-        "y": 1420,
+        "y": 880,
         "wires": [
             [
                 "1fffe4f019074c25"
@@ -9845,7 +9904,8 @@
             "462dbb3329e5b754",
             "c4be91c0f785813a",
             "f2156563bd6337ca",
-            "420d09ae304d8242"
+            "420d09ae304d8242",
+            "c325db92bd85a232"
         ],
         "x": 55,
         "y": 100,
@@ -9910,7 +9970,7 @@
         "to": "",
         "reg": false,
         "x": 560,
-        "y": 1500,
+        "y": 960,
         "wires": [
             [
                 "dbfa147e05622b83",
@@ -9931,7 +9991,7 @@
             "47152b92eaeb477f"
         ],
         "x": 675,
-        "y": 1520,
+        "y": 980,
         "wires": []
     },
     {
@@ -9949,7 +10009,7 @@
         "statusVal": "payload",
         "statusType": "auto",
         "x": 750,
-        "y": 1480,
+        "y": 940,
         "wires": []
     },
     {
@@ -9975,7 +10035,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 160,
-        "y": 1340,
+        "y": 800,
         "wires": [
             [
                 "3eee8cc190c89d05"
@@ -10004,7 +10064,7 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 130,
-        "y": 1880,
+        "y": 1340,
         "wires": [
             [
                 "ed4cd3c78d3ba7bb"
@@ -10033,7 +10093,7 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 260,
-        "y": 1880,
+        "y": 1340,
         "wires": [
             [
                 "ed4cd3c78d3ba7bb"
@@ -10062,7 +10122,7 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 390,
-        "y": 1880,
+        "y": 1340,
         "wires": [
             [
                 "ed4cd3c78d3ba7bb"
@@ -10091,7 +10151,7 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 190,
-        "y": 1700,
+        "y": 1160,
         "wires": [
             [
                 "ed4cd3c78d3ba7bb"
@@ -10120,7 +10180,7 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 470,
-        "y": 1700,
+        "y": 1160,
         "wires": [
             [
                 "ed4cd3c78d3ba7bb"
@@ -10149,7 +10209,7 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 330,
-        "y": 1660,
+        "y": 1120,
         "wires": [
             [
                 "ed4cd3c78d3ba7bb"
@@ -10178,7 +10238,7 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 330,
-        "y": 1700,
+        "y": 1160,
         "wires": [
             [
                 "ed4cd3c78d3ba7bb"
@@ -10207,7 +10267,7 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 330,
-        "y": 1740,
+        "y": 1200,
         "wires": [
             [
                 "ed4cd3c78d3ba7bb"
@@ -10235,7 +10295,7 @@
         "to": "",
         "reg": false,
         "x": 560,
-        "y": 1820,
+        "y": 1280,
         "wires": [
             [
                 "659ec9e467790f9d",
@@ -10255,7 +10315,7 @@
             "47152b92eaeb477f"
         ],
         "x": 675,
-        "y": 1840,
+        "y": 1300,
         "wires": []
     },
     {
@@ -10273,7 +10333,7 @@
         "statusVal": "payload",
         "statusType": "auto",
         "x": 750,
-        "y": 1800,
+        "y": 1260,
         "wires": []
     },
     {
@@ -10299,7 +10359,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 160,
-        "y": 1660,
+        "y": 1120,
         "wires": [
             [
                 "8610e793c2567238"
@@ -10328,7 +10388,7 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 130,
-        "y": 2200,
+        "y": 1660,
         "wires": [
             [
                 "d9a82d1d05280479"
@@ -10357,7 +10417,7 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 260,
-        "y": 2200,
+        "y": 1660,
         "wires": [
             [
                 "d9a82d1d05280479"
@@ -10386,7 +10446,7 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 390,
-        "y": 2200,
+        "y": 1660,
         "wires": [
             [
                 "d9a82d1d05280479"
@@ -10415,7 +10475,7 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 190,
-        "y": 2020,
+        "y": 1480,
         "wires": [
             [
                 "d9a82d1d05280479"
@@ -10444,7 +10504,7 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 470,
-        "y": 2020,
+        "y": 1480,
         "wires": [
             [
                 "d9a82d1d05280479"
@@ -10473,7 +10533,7 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 330,
-        "y": 1980,
+        "y": 1440,
         "wires": [
             [
                 "d9a82d1d05280479"
@@ -10502,7 +10562,7 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 330,
-        "y": 2020,
+        "y": 1480,
         "wires": [
             [
                 "d9a82d1d05280479"
@@ -10531,7 +10591,7 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 330,
-        "y": 2060,
+        "y": 1520,
         "wires": [
             [
                 "d9a82d1d05280479"
@@ -10559,7 +10619,7 @@
         "to": "",
         "reg": false,
         "x": 560,
-        "y": 2140,
+        "y": 1600,
         "wires": [
             [
                 "75664708bf799e87",
@@ -10579,7 +10639,7 @@
             "47152b92eaeb477f"
         ],
         "x": 675,
-        "y": 2160,
+        "y": 1620,
         "wires": []
     },
     {
@@ -10597,7 +10657,7 @@
         "statusVal": "payload",
         "statusType": "auto",
         "x": 750,
-        "y": 2120,
+        "y": 1580,
         "wires": []
     },
     {
@@ -10623,7 +10683,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 160,
-        "y": 1980,
+        "y": 1440,
         "wires": [
             [
                 "8d83360e31787fed"
@@ -10649,7 +10709,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 950,
-        "y": 620,
+        "y": 360,
         "wires": [
             [
                 "462dbb3329e5b754",
@@ -10676,7 +10736,7 @@
         "payload": "poweroff",
         "payloadType": "str",
         "x": 130,
-        "y": 640,
+        "y": 380,
         "wires": [
             [
                 "8eb0c09e.7f105"
@@ -10702,7 +10762,7 @@
         "payload": "poweron",
         "payloadType": "str",
         "x": 130,
-        "y": 600,
+        "y": 340,
         "wires": [
             [
                 "8eb0c09e.7f105"
@@ -10802,7 +10862,7 @@
         "base64": false,
         "multicast": "false",
         "x": 970,
-        "y": 3180,
+        "y": 2760,
         "wires": []
     },
     {
@@ -10820,7 +10880,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1200,
-        "y": 3140,
+        "y": 2720,
         "wires": []
     },
     {
@@ -10835,7 +10895,7 @@
         "initialize": "",
         "finalize": "",
         "x": 970,
-        "y": 3140,
+        "y": 2720,
         "wires": [
             [
                 "c14c50f79bd70e68",
@@ -10851,7 +10911,7 @@
         "name": "",
         "env": [],
         "x": 1010,
-        "y": 3100,
+        "y": 2680,
         "wires": [
             [
                 "70d66574d2f1db3a"
@@ -10866,7 +10926,7 @@
         "name": "Unfinshed Development",
         "info": "It started developing the js code that could create the direct to camera messages. But then I found a python osc package that did the job and it was expedient to use that instead. \n\nPerhaps someday i will revisit that.",
         "x": 1220,
-        "y": 3060,
+        "y": 2640,
         "wires": []
     },
     {
@@ -10880,7 +10940,7 @@
             "47152b92eaeb477f"
         ],
         "x": 1065,
-        "y": 620,
+        "y": 360,
         "wires": []
     },
     {
@@ -10891,178 +10951,10 @@
         "name": "",
         "links": [],
         "x": 905,
-        "y": 3040,
+        "y": 2620,
         "wires": [
             [
                 "ee52f37864598968"
-            ]
-        ]
-    },
-    {
-        "id": "71cf7e55ec08a15c",
-        "type": "change",
-        "z": "7014b916.6d1208",
-        "g": "aa34448f.507d08",
-        "name": "cam 1 TallyOn",
-        "rules": [
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "/camera/1/tallyon",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 520,
-        "y": 800,
-        "wires": [
-            [
-                "1f5c8b632f8b0a06"
-            ]
-        ]
-    },
-    {
-        "id": "3527a575b28478e5",
-        "type": "change",
-        "z": "7014b916.6d1208",
-        "g": "aa34448f.507d08",
-        "name": "cam 1 TallyOff",
-        "rules": [
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "/camera/1/tallyoff",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 520,
-        "y": 840,
-        "wires": [
-            [
-                "1f5c8b632f8b0a06"
-            ]
-        ]
-    },
-    {
-        "id": "5a6ae96af2d23af4",
-        "type": "change",
-        "z": "7014b916.6d1208",
-        "g": "aa34448f.507d08",
-        "name": "cam 2 TallyOff",
-        "rules": [
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "/camera/2/tallyoff",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 520,
-        "y": 920,
-        "wires": [
-            [
-                "1f5c8b632f8b0a06"
-            ]
-        ]
-    },
-    {
-        "id": "dd55fe08ff99ad51",
-        "type": "change",
-        "z": "7014b916.6d1208",
-        "g": "aa34448f.507d08",
-        "name": "cam 2 TallyOn",
-        "rules": [
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "/camera/2/tallyon",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 520,
-        "y": 880,
-        "wires": [
-            [
-                "1f5c8b632f8b0a06"
-            ]
-        ]
-    },
-    {
-        "id": "f756e794346a0cf2",
-        "type": "change",
-        "z": "7014b916.6d1208",
-        "g": "aa34448f.507d08",
-        "name": "cam 3 TallyOn",
-        "rules": [
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "/camera/3/tallyon",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 520,
-        "y": 960,
-        "wires": [
-            [
-                "1f5c8b632f8b0a06"
-            ]
-        ]
-    },
-    {
-        "id": "c866f0e2500f9050",
-        "type": "change",
-        "z": "7014b916.6d1208",
-        "g": "aa34448f.507d08",
-        "name": "cam 3 TallyOff",
-        "rules": [
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "/camera/3/tallyoff",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 520,
-        "y": 1000,
-        "wires": [
-            [
-                "1f5c8b632f8b0a06"
             ]
         ]
     },
@@ -11086,8 +10978,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 800,
-        "y": 1100,
+        "x": 210,
+        "y": 520,
         "wires": [
             [
                 "73a016d62ade1fb4"
@@ -11103,8 +10995,8 @@
         "property": "payload",
         "action": "obj",
         "pretty": false,
-        "x": 790,
-        "y": 1160,
+        "x": 200,
+        "y": 580,
         "wires": [
             [
                 "78db80b74e3494bd"
@@ -11121,8 +11013,8 @@
         "links": [
             "084445fc7ab1aa20"
         ],
-        "x": 905,
-        "y": 1160,
+        "x": 315,
+        "y": 580,
         "wires": []
     },
     {
@@ -11138,8 +11030,8 @@
             "9db1e8a6c6542da8",
             "b1faf2d094a04b1d"
         ],
-        "x": 655,
-        "y": 1100,
+        "x": 65,
+        "y": 520,
         "wires": [
             [
                 "b45a8182f2980bcb"
@@ -11158,7 +11050,7 @@
             "8e9e47516edd034d"
         ],
         "x": 1065,
-        "y": 660,
+        "y": 400,
         "wires": []
     },
     {
@@ -11173,7 +11065,7 @@
             "8e9e47516edd034d"
         ],
         "x": 675,
-        "y": 1560,
+        "y": 1020,
         "wires": []
     },
     {
@@ -11188,7 +11080,7 @@
             "8e9e47516edd034d"
         ],
         "x": 675,
-        "y": 1880,
+        "y": 1340,
         "wires": []
     },
     {
@@ -11203,7 +11095,7 @@
             "8e9e47516edd034d"
         ],
         "x": 675,
-        "y": 2200,
+        "y": 1660,
         "wires": []
     },
     {
@@ -11216,8 +11108,8 @@
         "method": "get",
         "upload": false,
         "swaggerDoc": "",
-        "x": 120,
-        "y": 2560,
+        "x": 140,
+        "y": 2040,
         "wires": [
             [
                 "e2b60d378f1ff4bf",
@@ -11232,8 +11124,8 @@
         "g": "7b81d39b2b7a4180",
         "name": "/cq?cmd=___&parm=____&num=___",
         "info": "cmd=power\nparm=on|off\nnum=#\n\ncmd=tally\nparm=on|off\nnum=#\n\ncmd=move\nparm=left|right|up|down|in|out|stop|zoomstop\nnum=#",
-        "x": 200,
-        "y": 2340,
+        "x": 220,
+        "y": 1820,
         "wires": []
     },
     {
@@ -11267,8 +11159,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 4,
-        "x": 310,
-        "y": 2560,
+        "x": 330,
+        "y": 2040,
         "wires": [
             [
                 "2dadda50db0dd859"
@@ -11340,8 +11232,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 9,
-        "x": 530,
-        "y": 2440,
+        "x": 550,
+        "y": 1920,
         "wires": [
             [
                 "c7fc3cc31ef54ff0"
@@ -11398,8 +11290,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 3,
-        "x": 520,
-        "y": 2540,
+        "x": 540,
+        "y": 2020,
         "wires": [
             [
                 "b057a14c0a366bac"
@@ -11438,8 +11330,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 3,
-        "x": 530,
-        "y": 2620,
+        "x": 550,
+        "y": 2100,
         "wires": [
             [
                 "19a9049df42b21dc"
@@ -11462,8 +11354,8 @@
         "links": [
             "a6beef2e4d351108"
         ],
-        "x": 315,
-        "y": 2620,
+        "x": 335,
+        "y": 2100,
         "wires": []
     },
     {
@@ -11476,8 +11368,8 @@
         "links": [
             "a6beef2e4d351108"
         ],
-        "x": 695,
-        "y": 2500,
+        "x": 715,
+        "y": 1980,
         "wires": []
     },
     {
@@ -11490,8 +11382,8 @@
         "links": [
             "a6beef2e4d351108"
         ],
-        "x": 695,
-        "y": 2580,
+        "x": 715,
+        "y": 2060,
         "wires": []
     },
     {
@@ -11504,8 +11396,8 @@
         "links": [
             "a6beef2e4d351108"
         ],
-        "x": 695,
-        "y": 2660,
+        "x": 715,
+        "y": 2140,
         "wires": []
     },
     {
@@ -11520,8 +11412,8 @@
             "8ab4baa05c432766",
             "772e0cedc8cf58c1"
         ],
-        "x": 375,
-        "y": 2720,
+        "x": 395,
+        "y": 2200,
         "wires": [
             [
                 "0ea712e0fa714e39"
@@ -11544,8 +11436,8 @@
         "className": "",
         "topic": "",
         "name": "unknown cq ",
-        "x": 770,
-        "y": 2720,
+        "x": 790,
+        "y": 2200,
         "wires": []
     },
     {
@@ -11568,8 +11460,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 520,
-        "y": 2720,
+        "x": 540,
+        "y": 2200,
         "wires": [
             [
                 "a883c2407ab8e269",
@@ -11592,8 +11484,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 750,
-        "y": 2760,
+        "x": 770,
+        "y": 2240,
         "wires": []
     },
     {
@@ -11606,8 +11498,8 @@
         "links": [
             "084445fc7ab1aa20"
         ],
-        "x": 535,
-        "y": 2860,
+        "x": 555,
+        "y": 2340,
         "wires": []
     },
     {
@@ -11622,8 +11514,8 @@
         "syntax": "mustache",
         "template": "{ \"category\" : \"Camera\",   \n \"level\"     : \"{{level}}\"  ,  \n \"timestamp\" :  \"{{millis}}\"    ,   \n \"event\"     : \"Request: /cq {{payload.num}} {{payload.cmd}} {{payload.parm}}\" \n}",
         "output": "json",
-        "x": 320,
-        "y": 2860,
+        "x": 340,
+        "y": 2340,
         "wires": [
             [
                 "3fbcdeb59b50f9b4"
@@ -11664,8 +11556,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 260,
-        "y": 2800,
+        "x": 280,
+        "y": 2280,
         "wires": [
             [
                 "3b13a664c6120ed1",
@@ -11707,8 +11599,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 520,
-        "y": 2760,
+        "x": 540,
+        "y": 2240,
         "wires": [
             [
                 "3b13a664c6120ed1"
@@ -11742,8 +11634,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 740,
-        "y": 2420,
+        "x": 760,
+        "y": 1900,
         "wires": [
             [
                 "420d09ae304d8242"
@@ -11761,8 +11653,8 @@
             "47152b92eaeb477f",
             "527ead6b917dbea4"
         ],
-        "x": 885,
-        "y": 2540,
+        "x": 905,
+        "y": 2020,
         "wires": []
     },
     {
@@ -11792,8 +11684,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 740,
-        "y": 2620,
+        "x": 760,
+        "y": 2100,
         "wires": [
             [
                 "420d09ae304d8242"
@@ -11808,8 +11700,8 @@
         "name": "",
         "statusCode": "",
         "headers": {},
-        "x": 550,
-        "y": 2920,
+        "x": 570,
+        "y": 2400,
         "wires": []
     },
     {
@@ -11825,8 +11717,8 @@
         "winHide": false,
         "oldrc": false,
         "name": "osc2PTZ",
-        "x": 340,
-        "y": 3060,
+        "x": 360,
+        "y": 2640,
         "wires": [
             [
                 "24ce9c0f503f33ea"
@@ -11859,8 +11751,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 150,
-        "y": 3060,
+        "x": 170,
+        "y": 2640,
         "wires": [
             [
                 "0a2c7b62f2a52669"
@@ -11881,8 +11773,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 610,
-        "y": 3040,
+        "x": 630,
+        "y": 2620,
         "wires": []
     },
     {
@@ -11912,8 +11804,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 740,
-        "y": 2540,
+        "x": 760,
+        "y": 2020,
         "wires": [
             [
                 "420d09ae304d8242"
@@ -11932,8 +11824,8 @@
         "syntax": "mustache",
         "template": "<html><body>\n  \"category\" : \"Camera\",   \n   \"event\"     : \"Request: {{req.route.path}} {{payload.num}} {{payload.cmd}} {{payload.parm}}\" \n \n</body></html>",
         "output": "str",
-        "x": 360,
-        "y": 2920,
+        "x": 380,
+        "y": 2400,
         "wires": [
             [
                 "0aa5df4213d7e977"
@@ -11954,8 +11846,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 610,
-        "y": 3080,
+        "x": 630,
+        "y": 2660,
         "wires": []
     },
     {
@@ -11965,8 +11857,8 @@
         "g": "7d817ae0b8327b7c",
         "name": "TODO camera IP hardcode",
         "info": "The osc server code has the camera IP addresses and camera qty hardcoded in it. \n\nNeed to remove that hard coding and supply via command line. \n\nLonger term, it would be nice to fet rid of the python server altogether and do it all in nore-red.",
-        "x": 170,
-        "y": 3100,
+        "x": 190,
+        "y": 2680,
         "wires": []
     },
     {
@@ -11977,7 +11869,7 @@
         "name": "How the Camera Number works",
         "info": "In each Camera Control block there is an environment variable set at the block level. That environment variable is then retrieved in the \"build message\" component.",
         "x": 190,
-        "y": 1260,
+        "y": 720,
         "wires": []
     },
     {
@@ -11987,8 +11879,8 @@
         "g": "6efbe5a5.35e4cc",
         "name": "Not used",
         "info": "This was protyping how to correctly format the VISCA messages before sending to a cmaera.",
-        "x": 1140,
-        "y": 3280,
+        "x": 1060,
+        "y": 2860,
         "wires": []
     },
     {
@@ -12013,6 +11905,7 @@
         "id": "9ee6db48058b27ac",
         "type": "inject",
         "z": "7014b916.6d1208",
+        "g": "bedc93b3c9ad126c",
         "name": "",
         "props": [
             {
@@ -12030,8 +11923,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 120,
-        "y": 3180,
+        "x": 160,
+        "y": 2800,
         "wires": [
             [
                 "465003ed618ad7a9"
@@ -12042,6 +11935,7 @@
         "id": "75eea368818d4536",
         "type": "debug",
         "z": "7014b916.6d1208",
+        "g": "bedc93b3c9ad126c",
         "name": "debug 8",
         "active": true,
         "tosidebar": true,
@@ -12050,14 +11944,15 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 540,
-        "y": 3180,
+        "x": 580,
+        "y": 2800,
         "wires": []
     },
     {
         "id": "465003ed618ad7a9",
         "type": "exec",
         "z": "7014b916.6d1208",
+        "g": "bedc93b3c9ad126c",
         "command": "pip3 install python-osc",
         "addpay": "",
         "append": "",
@@ -12066,8 +11961,8 @@
         "winHide": false,
         "oldrc": false,
         "name": "",
-        "x": 320,
-        "y": 3180,
+        "x": 360,
+        "y": 2800,
         "wires": [
             [],
             [
@@ -12091,7 +11986,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 740,
-        "y": 1400,
+        "y": 860,
         "wires": []
     },
     {
@@ -26536,7 +26431,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 150,
-        "y": 3980,
+        "y": 3560,
         "wires": [
             []
         ]
@@ -26554,7 +26449,7 @@
         "finalize": "",
         "libs": [],
         "x": 360,
-        "y": 3980,
+        "y": 3560,
         "wires": [
             [
                 "6b7c32af476c0feb",
@@ -26576,7 +26471,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 590,
-        "y": 3980,
+        "y": 3560,
         "wires": []
     },
     {
@@ -26590,7 +26485,7 @@
             "0995226901628529"
         ],
         "x": 495,
-        "y": 4060,
+        "y": 3640,
         "wires": []
     },
     {
@@ -26602,8 +26497,8 @@
         "links": [
             "03ccce0cf990ff92"
         ],
-        "x": 255,
-        "y": 760,
+        "x": 245,
+        "y": 720,
         "wires": [
             [
                 "f05677b3590d90d3",
@@ -26618,8 +26513,8 @@
         "g": "2e267aabc8e94e20",
         "name": "Video Cues",
         "info": "Vx:ProgramInput:x\nVx:PreviewInput:x\nVx:UpStreamKey:on :off\nVx:Macro:x",
-        "x": 130,
-        "y": 720,
+        "x": 120,
+        "y": 680,
         "wires": []
     },
     {
@@ -26634,8 +26529,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 400,
-        "y": 800,
+        "x": 390,
+        "y": 760,
         "wires": [
             [
                 "770b41d2fd905b93"
@@ -26675,8 +26570,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 4,
-        "x": 520,
-        "y": 800,
+        "x": 510,
+        "y": 760,
         "wires": [
             [
                 "836fdf46eff96526",
@@ -26706,8 +26601,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 970,
-        "y": 780,
+        "x": 960,
+        "y": 740,
         "wires": []
     },
     {
@@ -26722,8 +26617,8 @@
         "syntax": "mustache",
         "template": "{\n\"cmd\": \"ProgramInput\"   ,\n\"data\":{\"ME\":0,\n        \"videoSource\":{\n            \"id\": {{payload}} \n            }\n        }\n}",
         "output": "json",
-        "x": 710,
-        "y": 740,
+        "x": 700,
+        "y": 700,
         "wires": [
             [
                 "055a540b83c0c3a2"
@@ -26742,8 +26637,8 @@
         "syntax": "mustache",
         "template": "{\n\"cmd\": \"PreviewInput\"   ,\n\"data\":{\"ME\":0,\n        \"videoSource\":{\n            \"id\": {{payload}} \n            }\n        }\n}",
         "output": "json",
-        "x": 710,
-        "y": 780,
+        "x": 700,
+        "y": 740,
         "wires": [
             [
                 "055a540b83c0c3a2"
@@ -26762,8 +26657,8 @@
         "syntax": "mustache",
         "template": " {\n    \"cmd\": \"upstreamKeyer\",\n    \"data\": {\n        \"ME\": 0,\n        \"id\": 0,\n        \"state\":  {{payload}} \n    }\n}",
         "output": "json",
-        "x": 720,
-        "y": 860,
+        "x": 710,
+        "y": 820,
         "wires": [
             [
                 "055a540b83c0c3a2"
@@ -26782,8 +26677,8 @@
         "syntax": "mustache",
         "template": "{\n    \"cmd\": \"macroAction\",\n    \"data\": {\n        \"macroId\": \"{{payload}}\" ,\n        \"action\": \"run\"\n    }\n}",
         "output": "json",
-        "x": 680,
-        "y": 820,
+        "x": 670,
+        "y": 780,
         "wires": [
             [
                 "055a540b83c0c3a2"
@@ -26801,8 +26696,8 @@
         "links": [
             "1ac81781.75b738"
         ],
-        "x": 925,
-        "y": 820,
+        "x": 915,
+        "y": 780,
         "wires": []
     },
     {
@@ -26819,8 +26714,8 @@
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 420,
-        "y": 700,
+        "x": 410,
+        "y": 660,
         "wires": []
     },
     {
@@ -27604,7 +27499,7 @@
         "name": "react Tally",
         "mode": "link",
         "links": [
-            "487bf57a4fcc72bf"
+            "dc5c49e27a0a9f25"
         ],
         "x": 1305,
         "y": 2560,
@@ -28796,8 +28691,8 @@
         "g": "2e267aabc8e94e20",
         "name": "TODO Intergrate with event handler",
         "info": "This needs to be integrated with the http and UI handler.\nTHe Propresenter source side needs to emit \nthe new standard messages. ",
-        "x": 750,
-        "y": 680,
+        "x": 740,
+        "y": 640,
         "wires": []
     },
     {
@@ -29440,8 +29335,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 890,
-        "y": 640,
+        "x": 880,
+        "y": 600,
         "wires": [
             []
         ]
@@ -29466,8 +29361,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 680,
-        "y": 640,
+        "x": 670,
+        "y": 600,
         "wires": [
             [
                 "f1fdb5a342409993"
@@ -29548,100 +29443,12 @@
         "wires": []
     },
     {
-        "id": "984f0f2d5bb4eac2",
-        "type": "inject",
-        "z": "96ac9944.5b4dd8",
-        "g": "01fe472270a676c6",
-        "name": "test 5",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "5",
-        "payloadType": "str",
-        "x": 130,
-        "y": 3660,
-        "wires": [
-            [
-                "fa2928f4a0bcf1c3"
-            ]
-        ]
-    },
-    {
-        "id": "4fc95b73493a1e56",
-        "type": "inject",
-        "z": "96ac9944.5b4dd8",
-        "g": "01fe472270a676c6",
-        "name": "test 6",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "6",
-        "payload": "",
-        "payloadType": "str",
-        "x": 130,
-        "y": 3700,
-        "wires": [
-            [
-                "fa2928f4a0bcf1c3"
-            ]
-        ]
-    },
-    {
-        "id": "c9b2c8a3821202d0",
-        "type": "inject",
-        "z": "96ac9944.5b4dd8",
-        "g": "01fe472270a676c6",
-        "name": "test 7",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "7",
-        "payload": "",
-        "payloadType": "str",
-        "x": 130,
-        "y": 3740,
-        "wires": [
-            [
-                "fa2928f4a0bcf1c3"
-            ]
-        ]
-    },
-    {
         "id": "487bf57a4fcc72bf",
         "type": "link in",
         "z": "96ac9944.5b4dd8",
         "g": "731219d38de814f1",
         "name": "Handle Tally",
-        "links": [
-            "75a4fd4de666883e"
-        ],
+        "links": [],
         "x": 65,
         "y": 3380,
         "wires": [
@@ -29687,7 +29494,6 @@
             [
                 "52ec4043bddcb2ab",
                 "a1f8c7d85a64df60",
-                "731968da42049195",
                 "97acfe75fe50c7b0"
             ]
         ]
@@ -29778,157 +29584,6 @@
         "wires": []
     },
     {
-        "id": "731968da42049195",
-        "type": "switch",
-        "z": "96ac9944.5b4dd8",
-        "g": "731219d38de814f1",
-        "name": "map ATEM input to camera",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "5",
-                "vt": "num"
-            },
-            {
-                "t": "eq",
-                "v": "6",
-                "vt": "num"
-            },
-            {
-                "t": "eq",
-                "v": "7",
-                "vt": "num"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 3,
-        "x": 600,
-        "y": 3500,
-        "wires": [
-            [
-                "363e4e4a72e896bc"
-            ],
-            [
-                "11e058263dcec395"
-            ],
-            [
-                "01c0009ac0f46e4a"
-            ]
-        ]
-    },
-    {
-        "id": "363e4e4a72e896bc",
-        "type": "change",
-        "z": "96ac9944.5b4dd8",
-        "g": "731219d38de814f1",
-        "name": "5 > 1",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "1",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 790,
-        "y": 3460,
-        "wires": [
-            [
-                "1d0847d23cef92f5"
-            ]
-        ]
-    },
-    {
-        "id": "11e058263dcec395",
-        "type": "change",
-        "z": "96ac9944.5b4dd8",
-        "g": "731219d38de814f1",
-        "name": "6 > 2",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "2",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 790,
-        "y": 3500,
-        "wires": [
-            [
-                "1d0847d23cef92f5"
-            ]
-        ]
-    },
-    {
-        "id": "01c0009ac0f46e4a",
-        "type": "change",
-        "z": "96ac9944.5b4dd8",
-        "g": "731219d38de814f1",
-        "name": "7 > 3",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "3",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 790,
-        "y": 3540,
-        "wires": [
-            [
-                "1d0847d23cef92f5"
-            ]
-        ]
-    },
-    {
-        "id": "1d0847d23cef92f5",
-        "type": "link out",
-        "z": "96ac9944.5b4dd8",
-        "g": "731219d38de814f1",
-        "name": "from ATEM Tally",
-        "mode": "link",
-        "links": [
-            "4fbe7095.907c4"
-        ],
-        "x": 915,
-        "y": 3500,
-        "wires": []
-    },
-    {
-        "id": "3a07af28d5fe3aae",
-        "type": "comment",
-        "z": "96ac9944.5b4dd8",
-        "g": "731219d38de814f1",
-        "name": "Switch camera lights",
-        "info": "",
-        "x": 970,
-        "y": 3540,
-        "wires": []
-    },
-    {
         "id": "25cf873edc86d706",
         "type": "comment",
         "z": "96ac9944.5b4dd8",
@@ -29977,6 +29632,957 @@
         "x": 640,
         "y": 2460,
         "wires": []
+    },
+    {
+        "id": "528480a06fdb0263",
+        "type": "function",
+        "z": "423652b85f130c5f",
+        "g": "d3819f7fd7316fa9",
+        "name": "Configuration",
+        "func": "// ATEM Configuration\nflow.set('atemIp', '192.168.0.191');\nflow.set('atemPort', 9910);\n\n// Map ATEM inputs to camera IP addresses\n// Format: {input_number: {ip: 'camera_ip_address', port: port_number}}\nconst cameraMap = {\n    5: {ip: '192.168.0.186', port: 52381},\n    6: {ip: '192.168.0.187', port: 52381},\n    7: {ip: '192.168.0.188', port: 52381},\n    //4: {ip: '192.168.1.103', port: 52381},\n    // Add more camera mappings as needed\n    // 5: {ip: '192.168.1.104', port: 52381},\n    // 6: {ip: '192.168.1.105', port: 52381},\n    // 7: {ip: '192.168.1.106', port: 52381},\n    // 8: {ip: '192.168.1.107', port: 52381}\n};\n\nflow.set('cameraMap', cameraMap);\n\n// Track previous program state to avoid unnecessary updates\nflow.set('previousProgram', null);\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 180,
+        "y": 820,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b222d93435e1751b",
+        "type": "function",
+        "z": "423652b85f130c5f",
+        "g": "d3819f7fd7316fa9",
+        "name": "Generate Tally ON VISCA Command",
+        "func": "\n// Extract camera information\nconst camera = msg.payload;\n\n// Create VISCA command to turn tally light ON\n// VISCA over IP command format for tally on: 81 01 7E 01 0A 00 03 FF\nconst viscaCommand = Buffer.from([0x81, 0x01, 0x7E, 0x01, 0x0A, 0x00, 0x03, 0xFF]);\n\n// Create TCP message\nmsg.payload = viscaCommand;\nmsg.ip = camera.ip;\nmsg.port = camera.port;\n\nnode.status({fill:\"green\", shape:\"dot\", text:`Tally ON - Camera ${camera.input} (${camera.ip})` });\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 660,
+        "wires": [
+            [
+                "240476b41eb8bfdb"
+            ]
+        ]
+    },
+    {
+        "id": "960d574a6ceb4f53",
+        "type": "function",
+        "z": "423652b85f130c5f",
+        "g": "d3819f7fd7316fa9",
+        "name": "Generate Tally OFF VISCA Command",
+        "func": "\n// Extract camera information\nconst camera = msg.payload;\n\n// Create VISCA command to turn tally light OFF\n// VISCA over IP command format for tally off: 81 01 7E 01 0A 00 02 FF\nconst viscaCommand = Buffer.from([0x81, 0x01, 0x7E, 0x01, 0x0A, 0x00, 0x02, 0xFF]);\n\n// Create TCP message\nmsg.payload = viscaCommand;\nmsg.ip = camera.ip;\nmsg.port = camera.port;\n\nnode.status({fill:\"red\", shape:\"ring\", text:`Tally OFF - Camera ${camera.input} (${camera.ip})` });\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 700,
+        "wires": [
+            [
+                "240476b41eb8bfdb"
+            ]
+        ]
+    },
+    {
+        "id": "8c0918791cdd43b8",
+        "type": "debug",
+        "z": "423652b85f130c5f",
+        "name": "post camera select",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 690,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "b453e4558f331469",
+        "type": "debug",
+        "z": "423652b85f130c5f",
+        "g": "ecdeb7b557458284",
+        "name": "pre osc",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "b10fa3a4237bf022",
+        "type": "debug",
+        "z": "423652b85f130c5f",
+        "g": "d3819f7fd7316fa9",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 860,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "3e7d1d3995f3bd66",
+        "type": "udp out",
+        "z": "423652b85f130c5f",
+        "g": "d3819f7fd7316fa9",
+        "name": "",
+        "addr": "",
+        "iface": "",
+        "port": "",
+        "ipv": "udp4",
+        "outport": "",
+        "base64": false,
+        "multicast": "false",
+        "x": 850,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "7a07df94445096fb",
+        "type": "debug",
+        "z": "423652b85f130c5f",
+        "g": "ecdeb7b557458284",
+        "name": "post tally sw",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 670,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "6e4b5b3b09fe2ca2",
+        "type": "switch",
+        "z": "423652b85f130c5f",
+        "g": "camera-control",
+        "name": "pick tally",
+        "property": "payload.cmd",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "tally",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 420,
+        "y": 140,
+        "wires": [
+            [
+                "7a07df94445096fb",
+                "6ddb092cf27358cf"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "6eceb09b8f15bcea",
+        "type": "function",
+        "z": "423652b85f130c5f",
+        "name": "make array",
+        "func": "// Initialize an array for storing the new messages\nlet messages = [];\nconst data = msg.payload.data; // Access the payload's data\n\n// Check if data is an object\nif (data && typeof data === 'object') {\n    // Iterate over each key-value pair in the data\n    for (let key in data) {\n        if (data.hasOwnProperty(key)) { // Ensure it's a direct property\n            // Create a new message with the current object and set the index\n            messages.push({\n                index: key, // Set index as the key\n                payload: data[key] // Set the payload as the corresponding object\n            });\n        }\n    }\n}\n\n// Return the array of messages; if empty, nothing will be sent\nreturn [messages.map(msg => ({payload: msg}))]; // Format the return for each messages",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 220,
+        "wires": [
+            [
+                "c0af3af32db16a4e"
+            ]
+        ]
+    },
+    {
+        "id": "c0af3af32db16a4e",
+        "type": "switch",
+        "z": "423652b85f130c5f",
+        "name": "camera range",
+        "property": "payload.index",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "btwn",
+                "v": "5",
+                "vt": "num",
+                "v2": "7",
+                "v2t": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 440,
+        "y": 260,
+        "wires": [
+            [
+                "27ec307ad71ca1b3"
+            ]
+        ]
+    },
+    {
+        "id": "27ec307ad71ca1b3",
+        "type": "change",
+        "z": "423652b85f130c5f",
+        "name": "set camera and tally",
+        "rules": [
+            {
+                "t": "set",
+                "p": "camera",
+                "pt": "msg",
+                "to": "$string($number(payload.index)-4)",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "tally",
+                "pt": "msg",
+                "to": "payload.payload.program.tally",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 460,
+        "y": 300,
+        "wires": [
+            [
+                "8c0918791cdd43b8",
+                "91b51836869651a1"
+            ]
+        ]
+    },
+    {
+        "id": "91b51836869651a1",
+        "type": "function",
+        "z": "423652b85f130c5f",
+        "name": "format osc topic",
+        "func": "\nconst cmd = msg.tally ? \"tallyon\" : \"tallyoff\"\n\nmsg.topic = \"/camera/\" + msg.camera + \"/\" +cmd;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 340,
+        "wires": [
+            [
+                "b453e4558f331469",
+                "0db0c13567216240"
+            ]
+        ]
+    },
+    {
+        "id": "0db0c13567216240",
+        "type": "change",
+        "z": "423652b85f130c5f",
+        "name": "",
+        "rules": [
+            {
+                "t": "delete",
+                "p": "payload",
+                "pt": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 450,
+        "y": 380,
+        "wires": [
+            [
+                "c325db92bd85a232"
+            ]
+        ]
+    },
+    {
+        "id": "6ddb092cf27358cf",
+        "type": "function",
+        "z": "423652b85f130c5f",
+        "g": "camera-control",
+        "name": "repeat msg",
+        "func": "\n// Store the new message payload\nvar newMsg = msg.payload;\n\n// Store the current message in flow context\nvar lastMessage = flow.get('lastMessage');\n\n// If no message is stored or the message has changed\nif (lastMessage === undefined || lastMessage !== newMsg) {\n    // Save the new message\n    flow.set('lastMessage', newMsg);\n\n    // Reset any existing repeater\n    clearInterval(flow.get('repeaterInterval'));\n\n    // Create a new repeater\n    var interval = setInterval(function () {\n        // Send the current message to the output\n        node.send({ payload: flow.get('lastMessage') });\n    }, 500); // Repeat every 500ms\n\n    // Store the interval ID so we can clear it later\n    flow.set('repeaterInterval', interval);\n}\n\n// Also pass through the original message immediately\nreturn { payload: newMsg };\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 180,
+        "wires": [
+            [
+                "6eceb09b8f15bcea",
+                "7b482b6ff6799dc0"
+            ]
+        ]
+    },
+    {
+        "id": "911d4cf27226431f",
+        "type": "switch",
+        "z": "423652b85f130c5f",
+        "g": "d3819f7fd7316fa9",
+        "name": "Route Tally Messages",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "tally-on",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "tally-off",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 340,
+        "y": 680,
+        "wires": [
+            [
+                "b222d93435e1751b"
+            ],
+            [
+                "960d574a6ceb4f53"
+            ]
+        ]
+    },
+    {
+        "id": "6cd70d21c40ceaef",
+        "type": "function",
+        "z": "423652b85f130c5f",
+        "g": "d3819f7fd7316fa9",
+        "name": "Tally 5",
+        "func": "const messages = [];\nconst cameraMap = flow.get('cameraMap');\nconst programInput = 5;\n\n        messages.push({\n            topic: 'tally-on',\n            payload: {\n                ip: cameraMap[programInput].ip,\n                port: cameraMap[programInput].port,\n                input: programInput\n            }\n        });\n    \nreturn [messages];\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 170,
+        "y": 700,
+        "wires": [
+            [
+                "911d4cf27226431f"
+            ]
+        ]
+    },
+    {
+        "id": "a2985a09f315883c",
+        "type": "inject",
+        "z": "423652b85f130c5f",
+        "g": "d3819f7fd7316fa9",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 740,
+        "wires": [
+            [
+                "6cd70d21c40ceaef"
+            ]
+        ]
+    },
+    {
+        "id": "30823278da1dbd3f",
+        "type": "function",
+        "z": "423652b85f130c5f",
+        "g": "d3819f7fd7316fa9",
+        "name": "Tally 6",
+        "func": "const messages = [];\nconst cameraMap = flow.get('cameraMap');\nconst programInput = 6;\n\n        messages.push({\n            topic: 'tally-on',\n            payload: {\n                ip: cameraMap[programInput].ip,\n                port: cameraMap[programInput].port,\n                input: programInput\n            }\n        });\n    \nreturn [messages];\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 170,
+        "y": 660,
+        "wires": [
+            [
+                "911d4cf27226431f"
+            ]
+        ]
+    },
+    {
+        "id": "2a0364e56444c32e",
+        "type": "function",
+        "z": "423652b85f130c5f",
+        "g": "62eebb1405644852",
+        "name": "Stop retransmission",
+        "func": "// Clear the message in flow context\nflow.set(\"lastMessage\", \"\");\n\n// Reset the repeater interval if it's already running\nif (flow.get(\"repeaterInterval\")) {\n    clearInterval(flow.get(\"repeaterInterval\"));\n}\n\n// Output the message immediately as well\nreturn {payload: msg.payload};",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 520,
+        "wires": [
+            [
+                "573c6995cde8d5d9"
+            ]
+        ]
+    },
+    {
+        "id": "2619e44493c725c3",
+        "type": "inject",
+        "z": "423652b85f130c5f",
+        "g": "62eebb1405644852",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "0 12-15 * * *",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Stopped",
+        "payloadType": "str",
+        "x": 140,
+        "y": 520,
+        "wires": [
+            [
+                "2a0364e56444c32e"
+            ]
+        ]
+    },
+    {
+        "id": "573c6995cde8d5d9",
+        "type": "debug",
+        "z": "423652b85f130c5f",
+        "g": "62eebb1405644852",
+        "name": "Retransmission stopped",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 550,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "40e923c387183fcd",
+        "type": "inject",
+        "z": "423652b85f130c5f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 100,
+        "y": 180,
+        "wires": [
+            [
+                "6ddb092cf27358cf"
+            ]
+        ]
+    },
+    {
+        "id": "7b482b6ff6799dc0",
+        "type": "debug",
+        "z": "423652b85f130c5f",
+        "name": "debug 1",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "mapping-debug",
+        "type": "debug",
+        "z": "423652b85f130c5f",
+        "g": "d3819f7fd7316fa9",
+        "name": "Camera Mapping Debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 430,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "camera-mapping",
+        "type": "function",
+        "z": "423652b85f130c5f",
+        "g": "atem-config",
+        "name": "Camera Mapping",
+        "func": "// Camera mapping configuration\nconst cameraMapping = [\n    // Map ATEM inputs to camera IP addresses and indices\n    // Format: {atemInput: <number>, cameraIP: '<ip address>', cameraIndex: <number>}\n    {atemInput: 1, cameraIP: '192.168.1.100', cameraIndex: 1},\n    {atemInput: 2, cameraIP: '192.168.1.101', cameraIndex: 2},\n    {atemInput: 3, cameraIP: '192.168.1.102', cameraIndex: 3},\n    {atemInput: 4, cameraIP: '192.168.1.103', cameraIndex: 4},\n    {atemInput: 5, cameraIP: '192.168.1.104', cameraIndex: 5},\n    {atemInput: 6, cameraIP: '192.168.1.105', cameraIndex: 6},\n    {atemInput: 7, cameraIP: '192.168.1.106', cameraIndex: 7},\n    {atemInput: 8, cameraIP: '192.168.1.107', cameraIndex: 8}\n];\n\n// Store the mapping in global context for use in other nodes\nglobal.set('cameraMapping', cameraMapping);\n\n// Return the mapping to see it in debug node\nreturn {payload: cameraMapping};\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "// Initialize camera mapping on deployment\nconst cameraMapping = [\n    // Map ATEM inputs to camera IP addresses and indices\n    // Format: {atemInput: <number>, cameraIP: '<ip address>', cameraIndex: <number>}\n    {atemInput: 1, cameraIP: '192.168.1.100', cameraIndex: 1},\n    {atemInput: 2, cameraIP: '192.168.1.101', cameraIndex: 2},\n    {atemInput: 3, cameraIP: '192.168.1.102', cameraIndex: 3},\n    {atemInput: 4, cameraIP: '192.168.1.103', cameraIndex: 4},\n    {atemInput: 5, cameraIP: '192.168.1.104', cameraIndex: 5},\n    {atemInput: 6, cameraIP: '192.168.1.105', cameraIndex: 6},\n    {atemInput: 7, cameraIP: '192.168.1.106', cameraIndex: 7},\n    {atemInput: 8, cameraIP: '192.168.1.107', cameraIndex: 8}\n];\n\nglobal.set('cameraMapping', cameraMapping);",
+        "finalize": "",
+        "libs": [],
+        "x": 190,
+        "y": 780,
+        "wires": [
+            [
+                "mapping-debug"
+            ]
+        ]
+    },
+    {
+        "id": "dc5c49e27a0a9f25",
+        "type": "link in",
+        "z": "423652b85f130c5f",
+        "name": "from ATEM",
+        "links": [
+            "75a4fd4de666883e"
+        ],
+        "x": 65,
+        "y": 40,
+        "wires": [
+            [
+                "6e4b5b3b09fe2ca2"
+            ]
+        ]
+    },
+    {
+        "id": "2732fa36dbc0e239",
+        "type": "comment",
+        "z": "423652b85f130c5f",
+        "name": "See Flow Comments for descriptions",
+        "info": "",
+        "x": 410,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "c325db92bd85a232",
+        "type": "link out",
+        "z": "423652b85f130c5f",
+        "name": "out to cameras",
+        "mode": "link",
+        "links": [
+            "47152b92eaeb477f"
+        ],
+        "x": 375,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "ce871722b83b1b55",
+        "type": "switch",
+        "z": "423652b85f130c5f",
+        "g": "ae1631da7c07deea",
+        "name": "pick camera inputs",
+        "property": "payload.index",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "5",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "6",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "7",
+                "vt": "num"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 3,
+        "x": 930,
+        "y": 400,
+        "wires": [
+            [
+                "facef3d2d6f84ad0"
+            ],
+            [
+                "f73e0e218b829f44"
+            ],
+            [
+                "dff1cac793acba7e"
+            ]
+        ]
+    },
+    {
+        "id": "facef3d2d6f84ad0",
+        "type": "change",
+        "z": "423652b85f130c5f",
+        "g": "ae1631da7c07deea",
+        "name": "5 > 1",
+        "rules": [
+            {
+                "t": "set",
+                "p": "camera",
+                "pt": "msg",
+                "to": "1",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1090,
+        "y": 360,
+        "wires": [
+            [
+                "5fe7c1f65673a84a"
+            ]
+        ]
+    },
+    {
+        "id": "f73e0e218b829f44",
+        "type": "change",
+        "z": "423652b85f130c5f",
+        "g": "ae1631da7c07deea",
+        "name": "6 > 2",
+        "rules": [
+            {
+                "t": "set",
+                "p": "camera",
+                "pt": "msg",
+                "to": "2",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1090,
+        "y": 400,
+        "wires": [
+            [
+                "5fe7c1f65673a84a"
+            ]
+        ]
+    },
+    {
+        "id": "dff1cac793acba7e",
+        "type": "change",
+        "z": "423652b85f130c5f",
+        "g": "ae1631da7c07deea",
+        "name": "7 > 3",
+        "rules": [
+            {
+                "t": "set",
+                "p": "camera",
+                "pt": "msg",
+                "to": "3",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1090,
+        "y": 440,
+        "wires": [
+            [
+                "5fe7c1f65673a84a"
+            ]
+        ]
+    },
+    {
+        "id": "ae737bd20a32fa1a",
+        "type": "switch",
+        "z": "423652b85f130c5f",
+        "g": "ae1631da7c07deea",
+        "name": "tally on or off?",
+        "property": "tally",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1260,
+        "y": 400,
+        "wires": [
+            [
+                "5333e9371bea4e27"
+            ],
+            [
+                "f448a13b9e33d540"
+            ]
+        ]
+    },
+    {
+        "id": "5333e9371bea4e27",
+        "type": "change",
+        "z": "423652b85f130c5f",
+        "g": "ae1631da7c07deea",
+        "name": "tallyon",
+        "rules": [
+            {
+                "t": "set",
+                "p": "cmd",
+                "pt": "msg",
+                "to": "tallyon",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1410,
+        "y": 380,
+        "wires": [
+            [
+                "02aafefbb85113c4"
+            ]
+        ]
+    },
+    {
+        "id": "f448a13b9e33d540",
+        "type": "change",
+        "z": "423652b85f130c5f",
+        "g": "ae1631da7c07deea",
+        "name": "tally off",
+        "rules": [
+            {
+                "t": "set",
+                "p": "cmd",
+                "pt": "msg",
+                "to": "tallyoff",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1420,
+        "y": 420,
+        "wires": [
+            [
+                "02aafefbb85113c4"
+            ]
+        ]
+    },
+    {
+        "id": "5b66c99e42b0ec25",
+        "type": "inject",
+        "z": "423652b85f130c5f",
+        "g": "ae1631da7c07deea",
+        "name": "5 false",
+        "props": [
+            {
+                "p": "tally",
+                "v": "false",
+                "vt": "bool"
+            },
+            {
+                "p": "payload.index",
+                "v": "5",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 890,
+        "y": 340,
+        "wires": [
+            [
+                "cc3f24b838e00fee"
+            ]
+        ]
+    },
+    {
+        "id": "709030d6a6c1ed5a",
+        "type": "debug",
+        "z": "423652b85f130c5f",
+        "g": "ae1631da7c07deea",
+        "name": "debug 32",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1580,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "3437d8ca193071c2",
+        "type": "inject",
+        "z": "423652b85f130c5f",
+        "g": "ae1631da7c07deea",
+        "name": "6 true",
+        "props": [
+            {
+                "p": "tally",
+                "v": "true",
+                "vt": "bool"
+            },
+            {
+                "p": "payload.index",
+                "v": "6",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 890,
+        "y": 300,
+        "wires": [
+            [
+                "cc3f24b838e00fee"
+            ]
+        ]
+    },
+    {
+        "id": "4ca9d8c17983c7e6",
+        "type": "comment",
+        "z": "423652b85f130c5f",
+        "g": "ae1631da7c07deea",
+        "name": "Future code",
+        "info": "This node chain is mean to replace some of the current code , such as function 'format osc topic' and\nthe \"set camera and tally\" node.",
+        "x": 890,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "2a9226e65b9f23a3",
+        "type": "inject",
+        "z": "423652b85f130c5f",
+        "g": "d3819f7fd7316fa9",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 620,
+        "wires": [
+            [
+                "30823278da1dbd3f"
+            ]
+        ]
     },
     {
         "id": "e7c0599b.768918",
@@ -31443,8 +32049,8 @@
         ],
         "outputs": 0,
         "cts": false,
-        "x": 720,
-        "y": 280,
+        "x": 700,
+        "y": 260,
         "wires": []
     },
     {
@@ -31464,8 +32070,8 @@
         "defer": "50",
         "timeout": "86400000",
         "distinction": "topic",
-        "x": 360,
-        "y": 240,
+        "x": 340,
+        "y": 220,
         "wires": [
             [
                 "e1fd63172cf9c6ab"
@@ -31486,8 +32092,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 670,
-        "y": 140,
+        "x": 650,
+        "y": 120,
         "wires": []
     },
     {
@@ -31518,8 +32124,8 @@
             "a489bc9f004929d2",
             "91108f49ada24ad4"
         ],
-        "x": 215,
-        "y": 120,
+        "x": 195,
+        "y": 100,
         "wires": [
             [
                 "31e6436b4c18306e",
@@ -31541,8 +32147,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 680,
-        "y": 180,
+        "x": 660,
+        "y": 160,
         "wires": []
     },
     {
@@ -31572,8 +32178,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 380,
-        "y": 140,
+        "x": 360,
+        "y": 120,
         "wires": [
             [
                 "62dd44072067e460",
@@ -31595,8 +32201,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 370,
-        "y": 100,
+        "x": 350,
+        "y": 80,
         "wires": []
     },
     {
@@ -31611,8 +32217,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 550,
-        "y": 240,
+        "x": 530,
+        "y": 220,
         "wires": [
             [
                 "578a08345fdcb279"
@@ -31693,8 +32299,8 @@
         ],
         "outputs": 0,
         "cts": false,
-        "x": 710,
-        "y": 240,
+        "x": 690,
+        "y": 220,
         "wires": []
     },
     {
@@ -31714,8 +32320,8 @@
         "defer": "50",
         "timeout": "900000",
         "distinction": "topic",
-        "x": 360,
-        "y": 280,
+        "x": 340,
+        "y": 260,
         "wires": [
             [
                 "6a4693f74b22d948"
