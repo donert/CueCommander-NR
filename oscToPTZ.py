@@ -84,7 +84,7 @@ def cameraHandler(address, *args):
 dispatcher = dispatcher.Dispatcher()
 dispatcher.map("/camera/*", cameraHandler)
 
-ip = "127.0.0.1"  # "192.168.0.105" # 
+ip = "0.0.0.0" # "127.0.0.1"  # "192.168.0.105" # 
 port = 54001
 
 try:
