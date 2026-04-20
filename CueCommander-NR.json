@@ -4829,8 +4829,8 @@
         "t": "set",
         "p": "parm",
         "pt": "msg",
-        "to": "{\"file\":\"~/uacdata/input_map_saved_1.json\"}",
-        "tot": "json"
+        "to": "{\"file\": $env('HOME') & '/uacdata/input_map_saved_1.json'}",
+        "tot": "jsonata"
       }
     ],
     "action": "",
@@ -4857,8 +4857,8 @@
         "t": "set",
         "p": "parm",
         "pt": "msg",
-        "to": "{\"file\":\"~/uacdata/input_map_saved_2.json\"}",
-        "tot": "json"
+        "to": "{\"file\": $env('HOME') & '/uacdata/input_map_saved_2.json'}",
+        "tot": "jsonata"
       }
     ],
     "action": "",
@@ -4885,8 +4885,8 @@
         "t": "set",
         "p": "parm",
         "pt": "msg",
-        "to": "{\"file\":\"~/uacdata/input_map_saved_1.json\"}",
-        "tot": "json"
+        "to": "{\"file\": $env('HOME') & '/uacdata/input_map_saved_1.json'}",
+        "tot": "jsonata"
       }
     ],
     "action": "",
@@ -4913,8 +4913,8 @@
         "t": "set",
         "p": "parm",
         "pt": "msg",
-        "to": "{\"file\":\"~/uacdata/input_map_saved_2.json\"}",
-        "tot": "json"
+        "to": "{\"file\": $env('HOME') & '/uacdata/input_map_saved_2.json'}",
+        "tot": "jsonata"
       }
     ],
     "action": "",
@@ -4941,8 +4941,8 @@
         "t": "set",
         "p": "parm",
         "pt": "msg",
-        "to": "{\"file\":\"~/uacdata/input_map_defaults.json\"}",
-        "tot": "json"
+        "to": "{\"file\": $env('HOME') & '/uacdata/input_map_defaults.json'}",
+        "tot": "jsonata"
       }
     ],
     "action": "",
@@ -20526,8 +20526,8 @@
         "t": "set",
         "p": "parm",
         "pt": "msg",
-        "to": "{\"file\":\"~/uacdata/input_map_saved_1.json\"}",
-        "tot": "json"
+        "to": "{\"file\": $env('HOME') & '/uacdata/input_map_saved_1.json'}",
+        "tot": "jsonata"
       }
     ],
     "action": "",
@@ -22793,8 +22793,8 @@
         "t": "set",
         "p": "parm",
         "pt": "msg",
-        "to": "{\"file\":\"~/uacdata/input_map_saved_1.json\"}",
-        "tot": "json"
+        "to": "{\"file\": $env('HOME') & '/uacdata/input_map_saved_1.json'}",
+        "tot": "jsonata"
       }
     ],
     "action": "",
