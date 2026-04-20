@@ -4829,7 +4829,7 @@
         "t": "set",
         "p": "parm",
         "pt": "msg",
-        "to": "{\"file\":\"~/Documents/UACTech/uacdata/input_map_saved_1.json\"}",
+        "to": "{\"file\":\"~/uacdata/input_map_saved_1.json\"}",
         "tot": "json"
       }
     ],
@@ -4857,7 +4857,7 @@
         "t": "set",
         "p": "parm",
         "pt": "msg",
-        "to": "{\"file\":\"~/Documents/UACTech/uacdata/input_map_saved_2.json\"}",
+        "to": "{\"file\":\"~/uacdata/input_map_saved_2.json\"}",
         "tot": "json"
       }
     ],
@@ -4885,7 +4885,7 @@
         "t": "set",
         "p": "parm",
         "pt": "msg",
-        "to": "{\"file\":\"~/Documents/UACTech/uacdata/input_map_saved_1.json\"}",
+        "to": "{\"file\":\"~/uacdata/input_map_saved_1.json\"}",
         "tot": "json"
       }
     ],
@@ -4913,7 +4913,7 @@
         "t": "set",
         "p": "parm",
         "pt": "msg",
-        "to": "{\"file\":\"~/Documents/UACTech/uacdata/input_map_saved_2.json\"}",
+        "to": "{\"file\":\"~/uacdata/input_map_saved_2.json\"}",
         "tot": "json"
       }
     ],
@@ -4941,7 +4941,7 @@
         "t": "set",
         "p": "parm",
         "pt": "msg",
-        "to": "{\"file\":\"~/Documents/UACTech/uacdata/input_map_defaults.json\"}",
+        "to": "{\"file\":\"~/uacdata/input_map_defaults.json\"}",
         "tot": "json"
       }
     ],
@@ -20526,7 +20526,7 @@
         "t": "set",
         "p": "parm",
         "pt": "msg",
-        "to": "{\"file\":\"~/Documents/UACTech/uacdata/input_map_saved_1.json\"}",
+        "to": "{\"file\":\"~/uacdata/input_map_saved_1.json\"}",
         "tot": "json"
       }
     ],
@@ -20760,7 +20760,7 @@
     "z": "e129baae6748abb5",
     "g": "c676b4f381bd3048",
     "name": "Read parameters File",
-    "filename": "~/Documents/UACTech/uacdata/parameters.json",
+    "filename": "~/uacdata/parameters.json",
     "filenameType": "str",
     "format": "utf8",
     "chunk": false,
@@ -22793,7 +22793,7 @@
         "t": "set",
         "p": "parm",
         "pt": "msg",
-        "to": "{\"file\":\"~/Documents/UACTech/uacdata/input_map_saved_1.json\"}",
+        "to": "{\"file\":\"~/uacdata/input_map_saved_1.json\"}",
         "tot": "json"
       }
     ],
