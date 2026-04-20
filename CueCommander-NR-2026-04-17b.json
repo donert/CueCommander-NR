@@ -139,13 +139,6 @@
         "info": ""
     },
     {
-        "id": "tab-api-network",
-        "type": "tab",
-        "label": "API",
-        "disabled": false,
-        "info": "Network ping sweep and HTTP API for UAC Tech Assistant dashboard."
-    },
-    {
         "id": "a3ba969f.c5f3b8",
         "type": "subflow",
         "name": "Create Camera Message",
@@ -472,7 +465,7 @@
         ],
         "x": 24,
         "y": 439,
-        "w": 702,
+        "w": 712,
         "h": 202
     },
     {
@@ -507,9 +500,9 @@
             "d4f3f05c.7616e",
             "8cfbb4ee.75d588"
         ],
-        "x": 34,
+        "x": 14,
         "y": 2759,
-        "w": 742,
+        "w": 762,
         "h": 462
     },
     {
@@ -1474,9 +1467,9 @@
             "904565488c09a4c2",
             "a4175d541f6b8f22"
         ],
-        "x": 34,
+        "x": 24,
         "y": 1659,
-        "w": 932,
+        "w": 992,
         "h": 262
     },
     {
@@ -1539,7 +1532,7 @@
         ],
         "x": 34,
         "y": 3459,
-        "w": 592,
+        "w": 612,
         "h": 202
     },
     {
@@ -1555,9 +1548,9 @@
             "d8351720.dca718",
             "9cbf6757.a76ec8"
         ],
-        "x": 34,
+        "x": 4,
         "y": 3839,
-        "w": 332,
+        "w": 382,
         "h": 122
     },
     {
@@ -1580,7 +1573,7 @@
         ],
         "x": 64,
         "y": 1119,
-        "w": 782,
+        "w": 812,
         "h": 282
     },
     {
@@ -1599,9 +1592,9 @@
             "e0dbeb1c.db9378",
             "217b6567.07b41a"
         ],
-        "x": 31,
+        "x": 21,
         "y": 1479,
-        "w": 766,
+        "w": 796,
         "h": 162
     },
     {
@@ -1623,7 +1616,7 @@
         ],
         "x": 34,
         "y": 3679,
-        "w": 512,
+        "w": 522,
         "h": 122
     },
     {
@@ -2378,7 +2371,7 @@
         ],
         "x": 744,
         "y": 499,
-        "w": 222,
+        "w": 232,
         "h": 142
     },
     {
@@ -2555,9 +2548,9 @@
             "d795392857a0de8b",
             "e12aee2892f205c0"
         ],
-        "x": 34,
+        "x": 24,
         "y": 2279,
-        "w": 852,
+        "w": 872,
         "h": 262
     },
     {
@@ -2586,9 +2579,9 @@
             "a552506bc8ab8fc7",
             "1890b34bd8d0b929"
         ],
-        "x": 34,
+        "x": 14,
         "y": 1959,
-        "w": 1312,
+        "w": 1332,
         "h": 302
     },
     {
@@ -2645,9 +2638,9 @@
             "a5868668641b392c",
             "00d0175795023c4a"
         ],
-        "x": 34,
+        "x": 24,
         "y": 39,
-        "w": 902,
+        "w": 912,
         "h": 242
     },
     {
@@ -3561,7 +3554,9 @@
             "8b03669232c07f4f"
         ],
         "x": 34,
-        "y": 19
+        "y": 19,
+        "w": 692,
+        "h": 362
     },
     {
         "id": "4087c918580b9fc5",
@@ -3582,7 +3577,9 @@
             "bf6e86fc2349386f"
         ],
         "x": 854,
-        "y": 379
+        "y": 379,
+        "w": 1012,
+        "h": 162
     },
     {
         "id": "05d42b475fb7457a",
@@ -3607,7 +3604,9 @@
             "0109059893bfe289"
         ],
         "x": 44,
-        "y": 759
+        "y": 759,
+        "w": 1182,
+        "h": 142
     },
     {
         "id": "de4f01ed2797ddd4",
@@ -3637,7 +3636,9 @@
             "893c2450f29d923a"
         ],
         "x": 44,
-        "y": 959
+        "y": 959,
+        "w": 1362,
+        "h": 282
     },
     {
         "id": "bc807561859246ce",
@@ -3662,7 +3663,9 @@
             "daa88583d6125e64"
         ],
         "x": 34,
-        "y": 1279
+        "y": 1279,
+        "w": 1132,
+        "h": 162
     },
     {
         "id": "10fc9e6fb24126a2",
@@ -3682,7 +3685,9 @@
             "72d7795b2d99ddef"
         ],
         "x": 14,
-        "y": 539
+        "y": 539,
+        "w": 462,
+        "h": 202
     },
     {
         "id": "e660fb746dfbb567",
@@ -34517,77 +34522,6 @@
         ]
     },
     {
-        "id": "0d5d7cc4b8e84bc1",
-        "type": "http in",
-        "z": "19d5331c153e82dd",
-        "g": "bc807561859246ce",
-        "name": "GET /api/videohub/crosspoints",
-        "url": "/api/videohub/crosspoints",
-        "method": "get",
-        "upload": false,
-        "swaggerDoc": "",
-        "x": 220,
-        "y": 1440,
-        "wires": [
-            [
-                "ec0aa24d1a20425f"
-            ]
-        ]
-    },
-    {
-        "id": "ec0aa24d1a20425f",
-        "type": "function",
-        "z": "19d5331c153e82dd",
-        "g": "bc807561859246ce",
-        "name": "Build Crosspoints API",
-        "func": "const state = flow.get('videohub') || {};\nconst outputRouting = state.outputRouting || {};\nconst outputLabels = state.outputLabels || {};\nconst inputLabels = state.inputLabels || {};\nconst numOutputs = parseInt(state.device?.['Video outputs']) || 0;\n\nif (!state.device || !state.outputRouting) {\n    msg.statusCode = 503;\n    msg.payload = {\n        error: 'Videohub data not available',\n        ready: false\n    };\n    return msg;\n}\n\nconst crosspoints = [];\nfor (let o = 0; o < numOutputs; o++) {\n    const inputIndex = outputRouting[o];\n    const inputNumber = inputIndex !== undefined ? Number(inputIndex) + 1 : null;\n    crosspoints.push({\n        output: o + 1,\n        outputLabel: outputLabels[o] || `Output ${o + 1}`,\n        input: inputNumber,\n        inputLabel: inputIndex !== undefined ? (inputLabels[inputIndex] || `Input ${inputNumber}`) : null\n    });\n}\n\nmsg.payload = {\n    ready: true,\n    device: state.device['Model name'] || 'Unknown',\n    crosspoints: crosspoints\n};\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 520,
-        "y": 1440,
-        "wires": [
-            [
-                "7e81dfb27af8440c",
-                "4f85a7ea30854226"
-            ]
-        ]
-    },
-    {
-        "id": "7e81dfb27af8440c",
-        "type": "http response",
-        "z": "19d5331c153e82dd",
-        "g": "bc807561859246ce",
-        "name": "Send API Response",
-        "statusCode": "",
-        "headers": {
-            "Content-Type": "application/json"
-        },
-        "x": 830,
-        "y": 1440,
-        "wires": []
-    },
-    {
-        "id": "4f85a7ea30854226",
-        "type": "debug",
-        "z": "19d5331c153e82dd",
-        "g": "bc807561859246ce",
-        "name": "Crosspoints API Output",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 830,
-        "y": 1500,
-        "wires": []
-    },
-    {
         "id": "e23fa1a8a90e79ab",
         "type": "template",
         "z": "19d5331c153e82dd",
@@ -44809,167 +44743,5 @@
                 "37ecbe5a74891d79"
             ]
         ]
-    },
-    {
-        "id": "inject-ping-sweep",
-        "type": "inject",
-        "z": "tab-api-network",
-        "name": "Every 30s",
-        "props": [],
-        "repeat": "30",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 2,
-        "topic": "",
-        "x": 120,
-        "y": 80,
-        "wires": [
-            [
-                "fn-build-targets"
-            ]
-        ]
-    },
-    {
-        "id": "fn-build-targets",
-        "type": "function",
-        "z": "tab-api-network",
-        "name": "Build target list",
-        "func": "var targets = [\n    { asset_tag: \"CDWU-0009\", nic: \"\", ip: \"192.168.0.145\" },\n    { asset_tag: \"ZAKU-0001\", nic: \"\", ip: \"192.168.0.182\" },\n    { asset_tag: \"ZVCU-A001\", nic: \"\", ip: \"192.168.0.186\" },\n    { asset_tag: \"ZVCU-A002\", nic: \"\", ip: \"192.168.0.187\" },\n    { asset_tag: \"ZVCU-A003\", nic: \"\", ip: \"192.168.0.188\" },\n    { asset_tag: \"ZVKU-A004\", nic: \"\", ip: \"192.168.0.185\" },\n    { asset_tag: \"ZVKU-A001\", nic: \"\", ip: \"192.168.206.7\" },\n    { asset_tag: \"ZVRU-A001\", nic: \"\", ip: \"192.168.0.189\" },\n    { asset_tag: \"ZVRU-A002\", nic: \"\", ip: \"192.168.0.190\" },\n    { asset_tag: \"ZVVU-A001\", nic: \"\", ip: \"192.168.0.193\" },\n    { asset_tag: \"ZVVU-A002\", nic: \"\", ip: \"192.168.0.194\" },\n    { asset_tag: \"ZVVU-A003\", nic: \"\", ip: \"192.168.0.195\" },\n    { asset_tag: \"ZVVU-0001\", nic: \"\", ip: \"192.168.0.183\" },\n\n \n\n    { asset_tag: \"ZAMU-A001\", nic: \"\", ip: \"192.168.200.134\" },\n    { asset_tag: \"ZLKU-C001\", nic: \"\", ip: \"192.168.0.197\" },\n    { asset_tag: \"ZAMU-B001\", nic: \"\", ip: \"192.168.200.154\" },\n    { asset_tag: \"ZAMU-B002\", nic: \"\", ip: \"192.168.200.132\" },\n    { asset_tag: \"ZAMU-B003\", nic: \"\", ip: \"192.168.200.170\" },\n    { asset_tag: \"CSWU1\", nic: \"\", ip: \"192.168.0.53\" },\n\n    { asset_tag: \"CUMU-E001\", nic: \"\", ip: \"192.168.0.166\" },\n    { asset_tag: \"CUMU-G001\", nic: \"en1\", ip: \"192.168.0.207\" },\n    { asset_tag: \"CUMU-G001\", nic: \"en11\", ip: \"192.168.0.130\" },\n    { asset_tag: \"CUMU-G001\", nic: \"en0\", ip: \"192.168.200.11\" },\n    { asset_tag: \"CUMU-G002\", nic: \"en0\", ip: \"192.168.200.129\" },\n    { asset_tag: \"CUMU-E001\", nic: \"en6\", ip: \"192.168.0.122\" },\n    { asset_tag: \"CUMU-E001\", nic: \"en0\", ip: \"192.168.200.10\" },\n    { asset_tag: \"2308-0003\", nic: \"\", ip: \"192.168.0.208\" },\n    { asset_tag: \"ZVIU-G001\", nic: \"\", ip: \"192.168.201.102\" },\n    { asset_tag: \"2507-0700\", nic: \"\", ip: \"192.168.201.104\" },\n    { asset_tag: \"2601-2800\", nic: \"\", ip: \"192.168.201.106\" }\n];\n\nflow.set('network_ping_targets', targets);\nmsg.targets = targets;\nreturn msg;   ",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 300,
-        "y": 80,
-        "wires": [
-            [
-                "fn-init-results"
-            ]
-        ]
-    },
-    {
-        "id": "fn-init-results",
-        "type": "function",
-        "z": "tab-api-network",
-        "name": "Init results store",
-        "func": "// Initialise an in-progress results array and store the targets for the\n// collector to match against.\nvar targets = msg.targets;\nvar pending = targets.map(function(t) {\n    return { asset_tag: t.asset_tag, nic: t.nic, ip: t.ip,\n             packets_sent: 3, packets_received: null,\n             avg_ms: null, loss_pct: null, status: 'unknown' };\n});\nflow.set('network_ping_pending', JSON.parse(JSON.stringify(pending)));\nflow.set('network_ping_count', 0);\nflow.set('network_ping_total', targets.length);\n// Fan out one message per target\nvar msgs = targets.map(function(t) {\n    return { payload: t };\n});\nreturn [msgs];",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 500,
-        "y": 80,
-        "wires": [
-            [
-                "exec-ping"
-            ]
-        ]
-    },
-    {
-        "id": "exec-ping",
-        "type": "exec",
-        "z": "tab-api-network",
-        "command": "ping -c 3 -t 5",
-        "addpay": "payload.ip",
-        "append": "",
-        "useSpawn": "false",
-        "timer": "10",
-        "winHide": false,
-        "oldrc": false,
-        "name": "ping",
-        "x": 690,
-        "y": 80,
-        "wires": [
-            [
-                "fn-parse-ping"
-            ],
-            [
-                "fn-parse-ping"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "fn-parse-ping",
-        "type": "function",
-        "z": "tab-api-network",
-        "name": "Parse ping output",
-        "func": "// msg.payload  = stdout from ping\n// msg._msgid    = used to correlate back to original target (Node-RED preserves _msgid on split)\n// We stored the target in msg.payload before exec replaced it; exec puts stdout in msg.payload.\n// The original target ip is recoverable from the ping output first line.\nvar stdout = (typeof msg.payload === 'string') ? msg.payload : '';\nvar stderr = (typeof msg.payload2 === 'string') ? msg.payload2 : '';\nvar combined = stdout + stderr;\n\n// Extract IP from \"PING x.x.x.x\" line\nvar ipMatch = combined.match(/PING\\s+[^\\s]*\\s+\\(([^)]+)\\)/) ||\n              combined.match(/PING\\s+([\\d.]+)/);\nvar ip = ipMatch ? ipMatch[1] : null;\n\nvar result = {\n    ip: ip,\n    packets_sent: 3,\n    packets_received: 0,\n    avg_ms: null,\n    loss_pct: 100,\n    status: 'down'\n};\n\n// Parse \"3 packets transmitted, 3 packets received, 0.0% packet loss\"\nvar statsMatch = combined.match(/(\\d+) packets transmitted,\\s*(\\d+) (?:packets )?received,\\s*([\\d.]+)% packet loss/);\nif (statsMatch) {\n    result.packets_sent = parseInt(statsMatch[1]);\n    result.packets_received = parseInt(statsMatch[2]);\n    result.loss_pct = parseFloat(statsMatch[3]);\n}\n\n// Parse \"round-trip min/avg/max/stddev = 1.234/2.345/3.456/0.567 ms\"\nvar rttMatch = combined.match(/min\\/avg\\/max.*?=\\s*[\\d.]+\\/([\\d.]+)\\//);\nif (rttMatch) {\n    result.avg_ms = parseFloat(rttMatch[1]);\n}\n\nif (result.loss_pct === 0 && result.avg_ms !== null) {\n    result.status = result.avg_ms > 50 ? 'high_latency' : 'ok';\n} else if (result.loss_pct > 0 && result.packets_received > 0) {\n    result.status = 'down'; // partial loss still counts as down\n} else {\n    result.status = 'down';\n}\n\nmsg.pingResult = result;\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 890,
-        "y": 80,
-        "wires": [
-            [
-                "fn-collect-results"
-            ]
-        ]
-    },
-    {
-        "id": "fn-collect-results",
-        "type": "function",
-        "z": "tab-api-network",
-        "name": "Collect & store results",
-        "func": "var result = msg.pingResult;\nvar pending = flow.get('network_ping_pending') || [];\nvar count = (flow.get('network_ping_count') || 0) + 1;\nvar total = flow.get('network_ping_total') || pending.length;\n\n// Match by IP\nvar idx = pending.findIndex(function(r) { return r.ip === result.ip; });\nif (idx >= 0) {\n    pending[idx].packets_sent     = result.packets_sent;\n    pending[idx].packets_received = result.packets_received;\n    pending[idx].avg_ms           = result.avg_ms;\n    pending[idx].loss_pct         = result.loss_pct;\n    pending[idx].status           = result.status;\n}\n\nflow.set('network_ping_pending', pending);\nflow.set('network_ping_count', count);\n\n// When all results are in, commit to the stable cache\nif (count >= total) {\n    flow.set('network_ping_results', JSON.parse(JSON.stringify(pending)));\n    flow.set('network_ping_generated_at', new Date().toISOString());\n    flow.set('network_ping_count', 0);\n}\n\nreturn null; // no output — HTTP handler reads from flow context",
-        "outputs": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1110,
-        "y": 80,
-        "wires": []
-    },
-    {
-        "id": "http-in-network-status",
-        "type": "http in",
-        "z": "tab-api-network",
-        "name": "GET /api/network/status",
-        "url": "/api/network/status",
-        "method": "get",
-        "upload": false,
-        "swaggerDoc": "",
-        "x": 160,
-        "y": 220,
-        "wires": [
-            [
-                "fn-serve-network-status"
-            ]
-        ]
-    },
-    {
-        "id": "fn-serve-network-status",
-        "type": "function",
-        "z": "tab-api-network",
-        "name": "Build response",
-        "func": "var results = flow.get('network_ping_results');\nvar generatedAt = flow.get('network_ping_generated_at');\n\nif (!results) {\n    msg.statusCode = 503;\n    msg.payload = { error: 'No ping data yet — sweep in progress or not started' };\n} else {\n    msg.statusCode = 200;\n    msg.payload = {\n        generated_at: generatedAt,\n        results: results\n    };\n}\n\nmsg.headers = { 'Content-Type': 'application/json' };\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 400,
-        "y": 220,
-        "wires": [
-            [
-                "http-out-network-status"
-            ]
-        ]
-    },
-    {
-        "id": "http-out-network-status",
-        "type": "http response",
-        "z": "tab-api-network",
-        "name": "",
-        "statusCode": "",
-        "headers": {},
-        "x": 590,
-        "y": 220,
-        "wires": []
     }
 ]
