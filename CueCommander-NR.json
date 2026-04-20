@@ -4829,7 +4829,7 @@
         "t": "set",
         "p": "parm",
         "pt": "msg",
-        "to": "{\"file\":\"/Users/donert/Documents/UACTech/uacdata/input_map_saved_1.json\"}",
+        "to": "{\"file\":\"~/Documents/UACTech/uacdata/input_map_saved_1.json\"}",
         "tot": "json"
       }
     ],
@@ -4857,7 +4857,7 @@
         "t": "set",
         "p": "parm",
         "pt": "msg",
-        "to": "{\"file\":\"/Users/donert/Documents/UACTech/uacdata/input_map_saved_2.json\"}",
+        "to": "{\"file\":\"~/Documents/UACTech/uacdata/input_map_saved_2.json\"}",
         "tot": "json"
       }
     ],
@@ -4885,7 +4885,7 @@
         "t": "set",
         "p": "parm",
         "pt": "msg",
-        "to": "{\"file\":\"/Users/donert/Documents/UACTech/uacdata/input_map_saved_1.json\"}",
+        "to": "{\"file\":\"~/Documents/UACTech/uacdata/input_map_saved_1.json\"}",
         "tot": "json"
       }
     ],
@@ -4913,7 +4913,7 @@
         "t": "set",
         "p": "parm",
         "pt": "msg",
-        "to": "{\"file\":\"/Users/donert/Documents/UACTech/uacdata/input_map_saved_2.json\"}",
+        "to": "{\"file\":\"~/Documents/UACTech/uacdata/input_map_saved_2.json\"}",
         "tot": "json"
       }
     ],
@@ -4941,7 +4941,7 @@
         "t": "set",
         "p": "parm",
         "pt": "msg",
-        "to": "{\"file\":\"/Users/donert/Documents/UACTech/uacdata/input_map_defaults.json\"}",
+        "to": "{\"file\":\"~/Documents/UACTech/uacdata/input_map_defaults.json\"}",
         "tot": "json"
       }
     ],
@@ -20526,7 +20526,7 @@
         "t": "set",
         "p": "parm",
         "pt": "msg",
-        "to": "{\"file\":\"/Users/donert/Documents/UACTech/uacdata/input_map_saved_1.json\"}",
+        "to": "{\"file\":\"~/Documents/UACTech/uacdata/input_map_saved_1.json\"}",
         "tot": "json"
       }
     ],
@@ -20760,7 +20760,7 @@
     "z": "e129baae6748abb5",
     "g": "c676b4f381bd3048",
     "name": "Read parameters File",
-    "filename": "/Users/donert/Documents/UACTech/uacdata/parameters.json",
+    "filename": "~/Documents/UACTech/uacdata/parameters.json",
     "filenameType": "str",
     "format": "utf8",
     "chunk": false,
@@ -22793,7 +22793,7 @@
         "t": "set",
         "p": "parm",
         "pt": "msg",
-        "to": "{\"file\":\"/Users/donert/Documents/UACTech/uacdata/input_map_saved_1.json\"}",
+        "to": "{\"file\":\"~/Documents/UACTech/uacdata/input_map_saved_1.json\"}",
         "tot": "json"
       }
     ],
@@ -35853,7 +35853,7 @@
     "z": "ee400291.7cb",
     "g": "1fee3fae.e6893",
     "name": "Read saved cues ",
-    "filename": "/Users/donert/.node-red/projects/CueCommander-NR/cueList.json",
+    "filename": "~/.node-red/projects/CueCommander-NR/cueList.json",
     "format": "utf8",
     "chunk": false,
     "sendError": false,
@@ -59957,7 +59957,7 @@
     "z": "4ebbc72.a9eae38",
     "g": "82af0e98.67e37",
     "name": "Read Marker File",
-    "filename": "/Users/donert/Documents/UACTech/AudioMarker.wav",
+    "filename": "~/Documents/UACTech/AudioMarker.wav",
     "format": "",
     "chunk": false,
     "sendError": false,
@@ -60112,7 +60112,7 @@
     "z": "4ebbc72.a9eae38",
     "g": "c259391c.942cb8",
     "name": "Read Marker File",
-    "filename": "/Users/donert/Documents/UACTech/AudioMarker.wav",
+    "filename": "~/Documents/UACTech/AudioMarker.wav",
     "format": "",
     "chunk": false,
     "sendError": false,
