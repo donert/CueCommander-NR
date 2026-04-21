@@ -16400,7 +16400,8 @@
     "wires": [
       [
         "kl_osc_dec",
-        "kl_udp_rawdbg"
+        "kl_udp_rawdbg",
+        "kl_udp_warn_fn"
       ]
     ]
   },
@@ -68226,5 +68227,20 @@
     "x": 440,
     "y": 2260,
     "wires": []
+  },
+  {
+    "id": "kl_udp_warn_fn",
+    "type": "function",
+    "z": "f776e354064ecd6e",
+    "g": "kl_grp_listener",
+    "name": "UDP rx warn",
+    "func": "node.warn(\"UDP rx on 9112: \" + (msg.payload ? msg.payload.length : 0) + \" bytes from \" + (msg.ip||\"?\"));\nreturn null;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 330,
+    "y": 2180,
+    "wires": [
+      []
+    ]
   }
 ]
