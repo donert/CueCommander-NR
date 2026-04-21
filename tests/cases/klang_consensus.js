@@ -242,6 +242,8 @@ module.exports = [
                 assert(resp.body.ok === true, 'ok should be true on 202');
                 assert(typeof resp.body.estimated_duration_s === 'number', 'estimated_duration_s required');
             }
+            // Clear the sweep flag so it doesn't affect subsequent runs or the live dashboard
+            await api.setState({ klang_sweep_active: false });
         },
     },
 
