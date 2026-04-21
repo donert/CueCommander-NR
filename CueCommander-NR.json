@@ -16401,7 +16401,8 @@
             [
                 "kl_osc_dec",
                 "kl_udp_rawdbg",
-                "kl_udp_warn_fn"
+                "kl_udp_warn_fn",
+                "kl_userinfo_parser"
             ]
         ]
     },
@@ -68242,5 +68243,21 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "kl_userinfo_parser",
+        "type": "function",
+        "z": "f776e354064ecd6e",
+        "g": "kl_grp_listener",
+        "name": "Parse UserInfo (raw)",
+        "func": "// Direct OSC bundle parser — bypasses osc decoder for UserInfo extraction\nconst buf = Buffer.isBuffer(msg.payload) ? msg.payload : null;\nif (!buf || buf.length < 16) return null;\n\n// Must start with '#bundle'\nif (buf.toString('ascii', 0, 7) !== '#bundle') return null;\n\nfunction readOscString(b, offset) {\n    let end = offset;\n    while (end < b.length && b[end] !== 0) end++;\n    const str = b.toString('utf8', offset, end);\n    const padded = Math.ceil((end - offset + 1) / 4) * 4;\n    return { value: str, next: offset + padded };\n}\n\n// Skip '#bundle\u0000' (8 bytes) + NTP timetag (8 bytes)\nlet pos = 16;\nconst mi = flow.get('klang_mix_info') || {};\nlet found = 0;\n\nwhile (pos + 4 <= buf.length) {\n    const msgSize = buf.readInt32BE(pos);\n    pos += 4;\n    if (msgSize <= 0 || pos + msgSize > buf.length) break;\n    const msgEnd = pos + msgSize;\n\n    // Check address\n    const addr = readOscString(buf, pos);\n    if (addr.value !== '/KLANGapp/control/UserInfo') { pos = msgEnd; continue; }\n\n    // Read type tag — should start with ',ssi'\n    const typeTag = readOscString(buf, addr.next);\n    const types = typeTag.value.slice(1); // strip leading ','\n    if (types.length < 3 || types[0] !== 's' || types[1] !== 's' || types[2] !== 'i') {\n        pos = msgEnd; continue;\n    }\n\n    // Read args[0]=mixName (s), args[1]=preset (s), args[2]=mixNum (i)\n    let argPos = typeTag.next;\n    const arg0 = readOscString(buf, argPos);\n    const arg1 = readOscString(buf, arg0.next);\n    const mixNum = buf.readInt32BE(arg1.next);\n    const mixName = arg0.value;\n    const preset  = arg1.value;\n\n    if (mixName && mixNum >= 1 && mixNum <= 32) {\n        mi[String(mixNum)] = { mix_name: mixName, preset, last_updated: new Date().toISOString() };\n        found++;\n    }\n    pos = msgEnd;\n}\n\nif (found > 0) {\n    flow.set('klang_mix_info', mi);\n    node.warn('UserInfo parsed: ' + found + ' in packet, total=' + Object.keys(mi).length);\n}\nreturn null;",
+        "outputs": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 2160,
+        "wires": []
     }
 ]
