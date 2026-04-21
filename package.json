@@ -2,6 +2,9 @@
     "name": "CueCommander-NR",
     "description": "An AVL automation application ",
     "version": "0.0.1",
+    "scripts": {
+        "test": "node tests/run_tests.js"
+    },
     "dependencies": {
         "node-red-contrib-ui-etable": "4.6.3",
         "node-red-dashboard": "2.25.0",

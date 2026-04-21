@@ -1,0 +1,10 @@
+[
+  { "mic_name": "Mic 01", "vocal_name": "Alice",   "iem_pack": "Pack A", "active": true,  "reaper_channel": 1, "klang_channel": 1, "dlive_channel": 1, "shure": { "ch": 1, "ip": "192.168.1.100", "port": 2202 } },
+  { "mic_name": "Mic 02", "vocal_name": "Bob",     "iem_pack": "Pack B", "active": true,  "reaper_channel": 2, "klang_channel": 2, "dlive_channel": 2, "shure": { "ch": 2, "ip": "192.168.1.100", "port": 2202 } },
+  { "mic_name": "Mic 03", "vocal_name": "Carol",   "iem_pack": "Pack C", "active": true,  "reaper_channel": 3, "klang_channel": 3, "dlive_channel": 3, "shure": { "ch": 3, "ip": "192.168.1.100", "port": 2202 } },
+  { "mic_name": "Mic 04", "vocal_name": "",        "iem_pack": "",       "active": true,  "reaper_channel": 4, "klang_channel": 4, "dlive_channel": 4, "shure": { "ch": 4, "ip": "192.168.1.100", "port": 2202 } },
+  { "mic_name": "Mic 05", "vocal_name": "Dave",    "iem_pack": "Pack D", "active": false, "reaper_channel": 5, "klang_channel": 5, "dlive_channel": 5, "shure": { "ch": 5, "ip": "192.168.1.100", "port": 2202 } },
+  { "mic_name": "Mic 06", "vocal_name": "Eve",     "iem_pack": "Pack E", "active": false, "reaper_channel": 6, "klang_channel": 6, "dlive_channel": 6, "shure": { "ch": 6, "ip": "192.168.1.100", "port": 2202 } },
+  { "mic_name": "Mic 07", "vocal_name": "Frank",   "iem_pack": "Pack F", "active": true,  "reaper_channel": 7, "klang_channel": 7, "dlive_channel": 7, "shure": { "ch": 7, "ip": "192.168.1.100", "port": 2202 } },
+  { "mic_name": "Mic 08", "vocal_name": "Grace",   "iem_pack": "Pack G", "active": true,  "reaper_channel": 8, "klang_channel": 8, "dlive_channel": 8, "shure": { "ch": 8, "ip": "192.168.1.100", "port": 2202 } }
+]
