@@ -20750,7 +20750,7 @@
     "y": 320,
     "wires": [
       [
-        "b06ea69238f9a6d5"
+        "ccmgmt_set_parms_path"
       ]
     ]
   },
@@ -20760,8 +20760,8 @@
     "z": "e129baae6748abb5",
     "g": "c676b4f381bd3048",
     "name": "Read parameters File",
-    "filename": "~/uacdata/parameters.json",
-    "filenameType": "str",
+    "filename": "",
+    "filenameType": "msg",
     "format": "utf8",
     "chunk": false,
     "sendError": false,
@@ -68158,6 +68158,34 @@
     "wires": [
       [
         "vh_junction"
+      ]
+    ]
+  },
+  {
+    "id": "ccmgmt_set_parms_path",
+    "type": "change",
+    "z": "e129baae6748abb5",
+    "g": "c676b4f381bd3048",
+    "name": "set parms path",
+    "rules": [
+      {
+        "t": "set",
+        "p": "filename",
+        "pt": "msg",
+        "to": "$env('HOME') & '/uacdata/parameters.json'",
+        "tot": "jsonata"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 210,
+    "y": 320,
+    "wires": [
+      [
+        "b06ea69238f9a6d5"
       ]
     ]
   }
