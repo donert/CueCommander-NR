@@ -49482,7 +49482,8 @@
         "01f335cd5a5f6b11"
       ],
       [
-        "1d7972ead8406838"
+        "1d7972ead8406838",
+        "atem_tally_fn"
       ],
       [
         "cc0a71f458751cea"
@@ -53013,7 +53014,7 @@
     "z": "423652b85f130c5f",
     "g": "d3819f7fd7316fa9",
     "name": "Configuration",
-    "func": "// ATEM Configuration\nflow.set('atemIp', '192.168.0.191');\nflow.set('atemPort', 9910);\n\n// Map ATEM inputs to camera IP addresses\n// Format: {input_number: {ip: 'camera_ip_address', port: port_number}}\nconst cameraMap = {\n    5: {ip: '192.168.0.186', port: 52381},\n    6: {ip: '192.168.0.187', port: 52381},\n    7: {ip: '192.168.0.188', port: 52381},\n    //4: {ip: '192.168.1.103', port: 52381},\n    // Add more camera mappings as needed\n    // 5: {ip: '192.168.1.104', port: 52381},\n    // 6: {ip: '192.168.1.105', port: 52381},\n    // 7: {ip: '192.168.1.106', port: 52381},\n    // 8: {ip: '192.168.1.107', port: 52381}\n};\n\nflow.set('cameraMap', cameraMap);\n\n// Track previous program state to avoid unnecessary updates\nflow.set('previousProgram', null);\n\nreturn msg;",
+    "func": "// ATEM Configuration\nflow.set('atemIp', '192.168.201.106');\nflow.set('atemPort', 9910);\n\n// Map ATEM inputs to camera IP addresses  (inputs 1, 2, 3)\n// Update IPs to match current network if needed\nconst cameraMap = {\n    1: {ip: '192.168.0.186', port: 52381},\n    2: {ip: '192.168.0.187', port: 52381},\n    3: {ip: '192.168.0.188', port: 52381},\n};\n\nflow.set('cameraMap', cameraMap);\nflow.set('atem_me1_program', 0);\nflow.set('atem_me2_program', 0);\n\nreturn msg;",
     "outputs": 1,
     "noerr": 0,
     "initialize": "",
@@ -53213,9 +53214,9 @@
     "rules": [
       {
         "t": "btwn",
-        "v": "5",
+        "v": "1",
         "vt": "num",
-        "v2": "7",
+        "v2": "3",
         "v2t": "num"
       }
     ],
@@ -53240,7 +53241,7 @@
         "t": "set",
         "p": "camera",
         "pt": "msg",
-        "to": "$string($number(payload.index)-4)",
+        "to": "$string($number(payload.index))",
         "tot": "jsonata"
       },
       {
@@ -68313,5 +68314,59 @@
     "x": 680,
     "y": 800,
     "wires": []
+  },
+  {
+    "id": "atem_tally_fn",
+    "type": "function",
+    "z": "423652b85f130c5f",
+    "g": "d3819f7fd7316fa9",
+    "name": "atem_tally_fn",
+    "func": "// ATEM program-input tally handler\n// Tracks ME1 + ME2 program sources; sends tally ON/OFF for cameras 1,2,3\n// SuperSource (id=6000) on ME1 \u2192 also consider ME2's active camera\nconst CAMERA_INPUTS = [1, 2, 3];\nconst SUPERSOURCE_ID = 6000;\n\nconst data = msg.payload && msg.payload.data ? msg.payload.data : null;\nif (!data || data.videoSource == null) return null;\n\nconst me        = (data.ME != null) ? Number(data.ME) : 0;\nconst sourceId  = Number(data.videoSource.id);\n\nif (me === 0) {\n    flow.set('atem_me1_program', sourceId);\n} else if (me === 1) {\n    flow.set('atem_me2_program', sourceId);\n} else {\n    return null;\n}\n\nconst me1 = flow.get('atem_me1_program') || 0;\nconst me2 = flow.get('atem_me2_program') || 0;\n\n// Determine which cameras should be live\nconst activeCameras = new Set();\nif (CAMERA_INPUTS.includes(me1)) {\n    activeCameras.add(me1);\n}\nif (me1 === SUPERSOURCE_ID && CAMERA_INPUTS.includes(me2)) {\n    activeCameras.add(me2);\n}\n\nconst cameraMap = flow.get('cameraMap') || {};\nconst tallyMsgs = [];\nCAMERA_INPUTS.forEach(cam => {\n    if (!cameraMap[cam]) return;\n    tallyMsgs.push({\n        topic: activeCameras.has(cam) ? 'tally-on' : 'tally-off',\n        payload: { ip: cameraMap[cam].ip, port: cameraMap[cam].port, input: cam }\n    });\n});\n\nconst meLabel  = `ME${me + 1}`;\nconst activeList = activeCameras.size > 0 ? `Cam ${[...activeCameras].sort().join(',')}` : 'none';\nconst statusTxt = `${meLabel} src=${sourceId} \u2192 tally: ${activeList}`;\nnode.status({ fill: activeCameras.size ? 'green' : 'grey', shape: 'dot', text: statusTxt });\n\n// UI Event Log message\nconst logMsg = {\n    payload: {\n        timestamp: Date.now(),\n        level: 'Info',\n        category: 'ATEM',\n        source: meLabel + ' programInput',\n        event: statusTxt\n    },\n    topic: 'atem-tally-' + Date.now()\n};\n\nreturn [tallyMsgs.length ? tallyMsgs : null, logMsg];\n",
+    "outputs": 2,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 700,
+    "y": 200,
+    "wires": [
+      [
+        "911d4cf27226431f"
+      ],
+      [
+        "atem_ui_evtlog_lout"
+      ]
+    ]
+  },
+  {
+    "id": "atem_ui_evtlog_lout",
+    "type": "link out",
+    "z": "423652b85f130c5f",
+    "g": "d3819f7fd7316fa9",
+    "name": "ATEM \u2192 UI Event Log",
+    "mode": "link",
+    "links": [
+      "atem_ui_evtlog_in"
+    ],
+    "x": 900,
+    "y": 200,
+    "wires": []
+  },
+  {
+    "id": "atem_ui_evtlog_in",
+    "type": "link in",
+    "z": "6b06821f7149c1fa",
+    "g": "6a8daa7d30d25b64",
+    "name": "ATEM UI Event Log",
+    "links": [
+      "atem_ui_evtlog_lout"
+    ],
+    "x": 100,
+    "y": 600,
+    "wires": [
+      [
+        "31e6436b4c18306e"
+      ]
+    ]
   }
 ]
