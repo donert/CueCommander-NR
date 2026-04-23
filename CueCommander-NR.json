@@ -49483,7 +49483,7 @@
       ],
       [
         "1d7972ead8406838",
-        "atem_tally_fn"
+        "atem_pi_lout"
       ],
       [
         "cc0a71f458751cea"
@@ -68321,7 +68321,7 @@
     "z": "423652b85f130c5f",
     "g": "d3819f7fd7316fa9",
     "name": "atem_tally_fn",
-    "func": "// ATEM program-input tally handler\n// Tracks ME1 + ME2 program sources; sends tally ON/OFF for cameras 1,2,3\n// SuperSource (id=6000) on ME1 \u2192 also consider ME2's active camera\nconst CAMERA_INPUTS = [1, 2, 3];\nconst SUPERSOURCE_ID = 6000;\n\nconst data = msg.payload && msg.payload.data ? msg.payload.data : null;\nif (!data || data.videoSource == null) return null;\n\nconst me        = (data.ME != null) ? Number(data.ME) : 0;\nconst sourceId  = Number(data.videoSource.id);\n\nif (me === 0) {\n    flow.set('atem_me1_program', sourceId);\n} else if (me === 1) {\n    flow.set('atem_me2_program', sourceId);\n} else {\n    return null;\n}\n\nconst me1 = flow.get('atem_me1_program') || 0;\nconst me2 = flow.get('atem_me2_program') || 0;\n\n// Determine which cameras should be live\nconst activeCameras = new Set();\nif (CAMERA_INPUTS.includes(me1)) {\n    activeCameras.add(me1);\n}\nif (me1 === SUPERSOURCE_ID && CAMERA_INPUTS.includes(me2)) {\n    activeCameras.add(me2);\n}\n\nconst cameraMap = flow.get('cameraMap') || {};\nconst tallyMsgs = [];\nCAMERA_INPUTS.forEach(cam => {\n    if (!cameraMap[cam]) return;\n    tallyMsgs.push({\n        topic: activeCameras.has(cam) ? 'tally-on' : 'tally-off',\n        payload: { ip: cameraMap[cam].ip, port: cameraMap[cam].port, input: cam }\n    });\n});\n\nconst meLabel  = `ME${me + 1}`;\nconst activeList = activeCameras.size > 0 ? `Cam ${[...activeCameras].sort().join(',')}` : 'none';\nconst statusTxt = `${meLabel} src=${sourceId} \u2192 tally: ${activeList}`;\nnode.status({ fill: activeCameras.size ? 'green' : 'grey', shape: 'dot', text: statusTxt });\n\n// UI Event Log message\nconst logMsg = {\n    payload: {\n        timestamp: Date.now(),\n        level: 'Info',\n        category: 'ATEM',\n        source: meLabel + ' programInput',\n        event: statusTxt\n    },\n    topic: 'atem-tally-' + Date.now()\n};\n\nreturn [tallyMsgs.length ? tallyMsgs : null, logMsg];\n",
+    "func": "// ATEM program-input tally handler\nconst CAMERA_INPUTS = [1, 2, 3];\nconst SUPERSOURCE_ID = 6000;\n\nnode.warn('atem_tally_fn called: ' + JSON.stringify(msg.payload));\n\nconst pl   = msg.payload || {};\nconst data = pl.data || {};\nconst vs   = data.videoSource || data.source || {};\nconst me       = (data.ME != null) ? Number(data.ME) : 0;\nconst sourceId = vs.id != null ? Number(vs.id) : (pl.parm != null ? Number(pl.parm) : null);\n\nif (sourceId === null || isNaN(sourceId)) {\n    node.warn('atem_tally_fn: could not extract sourceId from: ' + JSON.stringify(pl));\n    return null;\n}\n\nif (me === 0) {\n    flow.set('atem_me1_program', sourceId);\n} else if (me === 1) {\n    flow.set('atem_me2_program', sourceId);\n} else {\n    return null;\n}\n\nconst me1 = flow.get('atem_me1_program') || 0;\nconst me2 = flow.get('atem_me2_program') || 0;\n\nconst activeCameras = new Set();\nif (CAMERA_INPUTS.includes(me1)) activeCameras.add(me1);\nif (me1 === SUPERSOURCE_ID && CAMERA_INPUTS.includes(me2)) activeCameras.add(me2);\n\nconst cameraMap = flow.get('cameraMap') || {};\nconst tallyMsgs = [];\nCAMERA_INPUTS.forEach(cam => {\n    if (!cameraMap[cam]) return;\n    tallyMsgs.push({\n        topic: activeCameras.has(cam) ? 'tally-on' : 'tally-off',\n        payload: { ip: cameraMap[cam].ip, port: cameraMap[cam].port, input: cam }\n    });\n});\n\nconst meLabel   = `ME${me + 1}`;\nconst activeList = activeCameras.size ? `Cam ${[...activeCameras].sort().join(',')}` : 'none';\nconst statusTxt  = `${meLabel} src=${sourceId} \u2192 tally: ${activeList}`;\nnode.warn('atem_tally_fn: ' + statusTxt);\nnode.status({ fill: activeCameras.size ? 'green' : 'grey', shape: 'dot', text: statusTxt });\n\nconst logMsg = {\n    payload: {\n        timestamp: Date.now(),\n        level: 'Info',\n        category: 'ATEM',\n        source: meLabel + ' programInput',\n        event: statusTxt\n    },\n    topic: 'atem-tally-' + Date.now()\n};\n\nreturn [tallyMsgs.length ? tallyMsgs : null, logMsg];\n",
     "outputs": 2,
     "noerr": 0,
     "initialize": "",
@@ -68366,6 +68366,36 @@
     "wires": [
       [
         "31e6436b4c18306e"
+      ]
+    ]
+  },
+  {
+    "id": "atem_pi_lout",
+    "type": "link out",
+    "z": "96ac9944.5b4dd8",
+    "name": "\u2192 ATEM tally fn",
+    "mode": "link",
+    "links": [
+      "atem_pi_lin"
+    ],
+    "x": 1200,
+    "y": 400,
+    "wires": []
+  },
+  {
+    "id": "atem_pi_lin",
+    "type": "link in",
+    "z": "423652b85f130c5f",
+    "g": "d3819f7fd7316fa9",
+    "name": "\u2190 programInput",
+    "links": [
+      "atem_pi_lout"
+    ],
+    "x": 100,
+    "y": 200,
+    "wires": [
+      [
+        "atem_tally_fn"
       ]
     ]
   }
