@@ -49314,7 +49314,8 @@
     "wires": [
       [
         "d00b1652.4bf358",
-        "d9e359da.e94058"
+        "d9e359da.e94058",
+        "atem_any_event_warn"
       ]
     ]
   },
@@ -49483,7 +49484,8 @@
       ],
       [
         "1d7972ead8406838",
-        "atem_pi_lout"
+        "atem_pi_lout",
+        "atem_pi_warn"
       ],
       [
         "cc0a71f458751cea"
@@ -68397,6 +68399,34 @@
       [
         "atem_tally_fn"
       ]
+    ]
+  },
+  {
+    "id": "atem_any_event_warn",
+    "type": "function",
+    "z": "96ac9944.5b4dd8",
+    "name": "ATEM event warn",
+    "func": "node.warn('ATEM event: cmd=' + (msg.payload && msg.payload.cmd) + ' data=' + JSON.stringify(msg.payload && msg.payload.data));\nreturn null;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 400,
+    "y": 50,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "atem_pi_warn",
+    "type": "function",
+    "z": "96ac9944.5b4dd8",
+    "name": "programInput warn",
+    "func": "node.warn('ATEM programInput: ' + JSON.stringify(msg.payload));\nreturn null;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 1200,
+    "y": 350,
+    "wires": [
+      []
     ]
   }
 ]
