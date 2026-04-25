@@ -7130,7 +7130,7 @@
     "type": "ui-table",
     "z": "6b06821f7149c1fa",
     "g": "07f6b5ce795e8fc0",
-    "group": "1a36bed2504fb8b3",
+    "group": "",
     "name": "show table",
     "label": "debug table",
     "order": 4,
@@ -8004,8 +8004,8 @@
     "type": "ui-switch",
     "z": "6b06821f7149c1fa",
     "g": "07f6b5ce795e8fc0",
-    "name": "Filter 1 sec messages",
-    "label": "Filter 1 sec messages",
+    "name": "Exclude 1-sec keepalives",
+    "label": "Exclude 1-sec keepalives",
     "group": "1a36bed2504fb8b3",
     "order": 3,
     "width": 3,
@@ -22053,7 +22053,7 @@
     "z": "4d690c6c100a12d9",
     "g": "f38307b2d36c7727",
     "name": "SELECT based on filters",
-    "func": "const timefilter  = global.get(\"filtertime\")  ?? 3600000;\nconst depthfilter = global.get(\"filterdepth\") ?? 99;\n\nconst now = new Date();\n\nconst epochMillis = now.getTime();\nconst starttime = epochMillis - Number(timefilter);\nconst depthLimit = Number(depthfilter);\n \nmsg.topic = `SELECT * from eventlog \nWHERE millis > ${starttime} \nAND depth < ${depthLimit}\nORDER BY millis DESC\n;`;\n\nreturn msg;",
+    "func": "const filtertime  = global.get(\"filtertime\")  ?? 60000;\nconst filterdepth = global.get(\"filterdepth\") ?? 2;\nconst filter1sec  = global.get(\"filter1sec\")  ?? true;\n\nconst now = new Date();\nconst epochMillis = now.getTime();\nconst starttime = epochMillis - Number(filtertime);\nconst depthLimit = Number(filterdepth);\nconst exclude1sec = filter1sec ? 1 : 0;\n\nmsg.topic = `SELECT * from eventlog \nWHERE millis > ${starttime} \nAND depth < ${depthLimit}\nAND (\n       ( NOT ${exclude1sec} AND cmd = '/cc/scheduled/1sec' )\n       OR\n       (cmd != '/cc/scheduled/1sec')\n)\nORDER BY millis DESC\n;`;\nreturn msg;",
     "outputs": 1,
     "timeout": "",
     "noerr": 0,
@@ -68518,6 +68518,43 @@
       [
         "atem_tally_fn"
       ]
+    ]
+  },
+  {
+    "id": "eventlog_startup_init",
+    "type": "inject",
+    "z": "4d690c6c100a12d9",
+    "g": "f38307b2d36c7727",
+    "name": "Init filter defaults",
+    "props": [
+      {
+        "p": "filtertime",
+        "pt": "global",
+        "v": "60000",
+        "vt": "num"
+      },
+      {
+        "p": "filterdepth",
+        "pt": "global",
+        "v": "2",
+        "vt": "num"
+      },
+      {
+        "p": "filter1sec",
+        "pt": "global",
+        "v": "true",
+        "vt": "bool"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": true,
+    "onceDelay": "0.1",
+    "topic": "",
+    "x": 190,
+    "y": 500,
+    "wires": [
+      []
     ]
   }
 ]
