@@ -7375,24 +7375,6 @@
     ]
   },
   {
-    "id": "dae8159b18140dc1",
-    "type": "ui-markdown",
-    "z": "6b06821f7149c1fa",
-    "g": "07f6b5ce795e8fc0",
-    "group": "1a36bed2504fb8b3",
-    "name": "",
-    "order": 7,
-    "width": 0,
-    "height": 0,
-    "content": "Events in table: {{ msg?.payload[0].count }}",
-    "className": "",
-    "x": 730,
-    "y": 1260,
-    "wires": [
-      []
-    ]
-  },
-  {
     "id": "bb84abf5acaf0475",
     "type": "debug",
     "z": "6b06821f7149c1fa",
@@ -22047,8 +22029,8 @@
     "z": "4d690c6c100a12d9",
     "g": "f38307b2d36c7727",
     "group": "1a36bed2504fb8b3",
-    "name": "show table",
-    "label": "debug table",
+    "name": "Event Log",
+    "label": "Event Log",
     "order": 5,
     "width": 0,
     "height": 0,
