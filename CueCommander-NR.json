@@ -70163,6 +70163,11 @@
         "vt": "str"
       },
       {
+        "t": "eq",
+        "v": "/cc/lights/huesat",
+        "vt": "str"
+      },
+      {
         "t": "else"
       }
     ],
@@ -70195,6 +70200,9 @@
       ],
       [
         "f0e1d2c3b4a59690"
+      ],
+      [
+        "f0e1d2c3b4a59706"
       ],
       []
     ]
@@ -70694,6 +70702,182 @@
     "from": "",
     "to": "",
     "reg": false,
+    "wires": [
+      [
+        "f0e1d2c3b4a59681"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a59700",
+    "type": "ui-group",
+    "name": "Colour Picker",
+    "page": "f0e1d2c3b4a59603",
+    "width": "6",
+    "height": "1",
+    "order": 6,
+    "showTitle": true,
+    "className": "",
+    "visible": "true",
+    "disabled": "false"
+  },
+  {
+    "id": "f0e1d2c3b4a59701",
+    "type": "ui-slider",
+    "z": "f0e1d2c3b4a59601",
+    "group": "f0e1d2c3b4a59700",
+    "name": "",
+    "label": "Hue (0–360)",
+    "order": 1,
+    "width": "6",
+    "height": "1",
+    "passthru": false,
+    "outs": "all",
+    "topic": "/cc/lights/hue",
+    "topicType": "str",
+    "min": "0",
+    "max": "360",
+    "step": "1",
+    "wires": [
+      [
+        "f0e1d2c3b4a59705"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a59702",
+    "type": "ui-slider",
+    "z": "f0e1d2c3b4a59601",
+    "group": "f0e1d2c3b4a59700",
+    "name": "",
+    "label": "Saturation %",
+    "order": 2,
+    "width": "6",
+    "height": "1",
+    "passthru": false,
+    "outs": "all",
+    "topic": "/cc/lights/sat",
+    "topicType": "str",
+    "min": "0",
+    "max": "100",
+    "step": "1",
+    "wires": [
+      [
+        "f0e1d2c3b4a59705"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a59703",
+    "type": "ui-slider",
+    "z": "f0e1d2c3b4a59601",
+    "group": "f0e1d2c3b4a59700",
+    "name": "",
+    "label": "Level %",
+    "order": 3,
+    "width": "6",
+    "height": "1",
+    "passthru": false,
+    "outs": "all",
+    "topic": "/cc/lights/level",
+    "topicType": "str",
+    "min": "0",
+    "max": "100",
+    "step": "1",
+    "wires": [
+      [
+        "f0e1d2c3b4a59705"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a59704",
+    "type": "ui-template",
+    "z": "f0e1d2c3b4a59601",
+    "group": "f0e1d2c3b4a59700",
+    "name": "colour swatch",
+    "order": 4,
+    "width": "6",
+    "height": "2",
+    "head": "",
+    "format": "<template>\n  <div style=\"padding:4px\">\n    <div :style=\"{background:'hsl('+h+','+s+'%,'+l+'%)',height:'44px',borderRadius:'6px'}\"></div>\n    <div style=\"text-align:center;font-size:11px;margin-top:3px;opacity:0.6\">\n      H:{{h}} &nbsp; S:{{s}}% &nbsp; L:{{l}}%\n    </div>\n  </div>\n</template>\n<script>\n  export default {\n    data() { return { h: 0, s: 100, l: 50 } },\n    methods: {\n      onMsgReceived(msg) {\n        if (msg.payload && typeof msg.payload === 'object') {\n          if (msg.payload.h !== undefined) this.h = msg.payload.h;\n          if (msg.payload.s !== undefined) this.s = msg.payload.s;\n          if (msg.payload.l !== undefined) this.l = msg.payload.l;\n        }\n      }\n    }\n  }\n</script>",
+    "storeOutMessages": true,
+    "passthru": false,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a59705",
+    "type": "function",
+    "z": "f0e1d2c3b4a59601",
+    "name": "hs combiner",
+    "func": "const cmd = msg.topic;\nconst val = Number(msg.payload);\n\nlet h = flow.get('lights_h') || 0;\nlet s = flow.get('lights_s') || 100;\nlet l = flow.get('lights_l') || 50;\n\nif (cmd === '/cc/lights/hue') {\n  h = val;\n  flow.set('lights_h', h);\n  msg.payload = { cmd: '/cc/lights/huesat', parm: h + '/' + s };\n} else if (cmd === '/cc/lights/sat') {\n  s = val;\n  flow.set('lights_s', s);\n  msg.payload = { cmd: '/cc/lights/huesat', parm: h + '/' + s };\n} else {\n  // /cc/lights/level — pass through unchanged\n  l = val;\n  flow.set('lights_l', l);\n  msg.payload = { cmd: '/cc/lights/level', parm: String(val) };\n}\n\nreturn [ msg, { payload: { h, s, l } } ];",
+    "outputs": 2,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "wires": [
+      [
+        "f0e1d2c3b4a59650"
+      ],
+      [
+        "f0e1d2c3b4a59704"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a59706",
+    "type": "change",
+    "z": "f0e1d2c3b4a59602",
+    "name": "huesat",
+    "rules": [
+      {
+        "t": "set",
+        "p": "topic",
+        "pt": "msg",
+        "to": "\"/cs/color/hs/\" & parm",
+        "tot": "jsonata"
+      },
+      {
+        "t": "set",
+        "p": "payload",
+        "pt": "msg",
+        "to": "",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "wires": [
+      [
+        "f0e1d2c3b4a59707"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a59707",
+    "type": "delay",
+    "z": "f0e1d2c3b4a59602",
+    "name": "huesat rate limit",
+    "pauseType": "rate",
+    "timeout": "1",
+    "timeoutUnits": "seconds",
+    "rate": "10",
+    "nbRateUnits": "1",
+    "rateUnits": "second",
+    "randomFirst": "1",
+    "randomLast": "5",
+    "randomUnits": "seconds",
+    "drop": false,
+    "allowrate": false,
+    "outputs": 1,
     "wires": [
       [
         "f0e1d2c3b4a59681"
