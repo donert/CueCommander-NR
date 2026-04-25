@@ -70800,7 +70800,7 @@
     "width": "6",
     "height": "2",
     "head": "",
-    "format": "<template>\n  <div style=\"padding:4px\">\n    <div :style=\"{background:'hsl('+h+','+s+'%,'+l+'%)',height:'44px',borderRadius:'6px'}\"></div>\n    <div style=\"text-align:center;font-size:11px;margin-top:3px;opacity:0.6\">\n      H:{{h}} &nbsp; S:{{s}}% &nbsp; L:{{l}}%\n    </div>\n  </div>\n</template>\n<script>\n  export default {\n    data() { return { h: 0, s: 100, l: 50 } },\n    methods: {\n      onMsgReceived(msg) {\n        if (msg.payload && typeof msg.payload === 'object') {\n          if (msg.payload.h !== undefined) this.h = msg.payload.h;\n          if (msg.payload.s !== undefined) this.s = msg.payload.s;\n          if (msg.payload.l !== undefined) this.l = msg.payload.l;\n        }\n      }\n    }\n  }\n</script>",
+    "format": "<template>\n  <div style=\"padding:4px\">\n    <div :style=\"{\n      background: (msg && msg.payload)\n        ? 'hsl(' + msg.payload.h + ',' + msg.payload.s + '%,' + msg.payload.l + '%)'\n        : 'hsl(0,0%,30%)',\n      height: '44px',\n      borderRadius: '6px'\n    }\"></div>\n    <div style=\"text-align:center;font-size:11px;margin-top:3px;opacity:0.6\">\n      <span v-if=\"msg && msg.payload\">\n        H:{{ msg.payload.h }}&nbsp;&nbsp;S:{{ msg.payload.s }}%&nbsp;&nbsp;L:{{ msg.payload.l }}%\n      </span>\n      <span v-else>move a slider</span>\n    </div>\n  </div>\n</template>",
     "storeOutMessages": true,
     "passthru": false,
     "resendOnRefresh": true,
@@ -70808,7 +70808,9 @@
     "className": "",
     "wires": [
       []
-    ]
+    ],
+    "page": "",
+    "ui": ""
   },
   {
     "id": "f0e1d2c3b4a59705",
