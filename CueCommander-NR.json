@@ -70885,5 +70885,99 @@
         "f0e1d2c3b4a59681"
       ]
     ]
+  },
+  {
+    "id": "f0e1d2c3b4a59710",
+    "type": "ui-group",
+    "name": "Goto Cue",
+    "page": "f0e1d2c3b4a59603",
+    "width": "6",
+    "height": "1",
+    "order": 7,
+    "showTitle": true,
+    "className": "",
+    "visible": "true",
+    "disabled": "false"
+  },
+  {
+    "id": "f0e1d2c3b4a59711",
+    "type": "ui-text-input",
+    "z": "f0e1d2c3b4a59601",
+    "group": "f0e1d2c3b4a59710",
+    "name": "",
+    "label": "Cue #",
+    "tooltip": "Enter cue number",
+    "order": 1,
+    "width": "4",
+    "height": "1",
+    "topic": "",
+    "topicType": "str",
+    "mode": "number",
+    "clearAfterSend": false,
+    "sendOnChange": false,
+    "sendOnBlur": true,
+    "className": "",
+    "wires": [
+      [
+        "f0e1d2c3b4a59713"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a59712",
+    "type": "ui-button",
+    "z": "f0e1d2c3b4a59601",
+    "group": "f0e1d2c3b4a59710",
+    "name": "",
+    "label": "Fire",
+    "order": 2,
+    "width": "2",
+    "height": "1",
+    "emulateClick": false,
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "#aa3300",
+    "className": "",
+    "icon": "",
+    "iconPosition": "left",
+    "payload": "{}",
+    "payloadType": "json",
+    "topic": "",
+    "topicType": "str",
+    "wires": [
+      [
+        "f0e1d2c3b4a59714"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a59713",
+    "type": "function",
+    "z": "f0e1d2c3b4a59601",
+    "name": "store cue#",
+    "func": "flow.set('goto_cue_num', msg.payload);\nreturn null;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a59714",
+    "type": "function",
+    "z": "f0e1d2c3b4a59601",
+    "name": "fire cue#",
+    "func": "const cue = flow.get('goto_cue_num');\nif (cue == null || cue === '') {\n  node.warn('Goto Cue: no cue number set');\n  return null;\n}\nmsg.payload = { cmd: '/cc/lights/gotocue', parm: String(cue) };\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "wires": [
+      [
+        "f0e1d2c3b4a59650"
+      ]
+    ]
   }
 ]
