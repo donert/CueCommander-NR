@@ -53185,7 +53185,28 @@
         "6ddb092cf27358cf",
         "atem_tally_event_fn"
       ],
-      []
+      [
+        "atem_pi_tally_fn"
+      ]
+    ]
+  },
+  {
+    "id": "atem_pi_tally_fn",
+    "type": "function",
+    "z": "423652b85f130c5f",
+    "name": "atem_pi_tally_fn",
+    "func": "if (!msg.payload || msg.payload.cmd !== 'programInput') return null;\nconst CAMERA_INPUTS = [1, 2, 3];\nconst SUPERSOURCE_ID = 6000;\nconst data = msg.payload.data || {};\n\n// data is dict keyed by ME index string: \"0\"=ME1, \"1\"=ME2\nconst me1Input = data['0'] ? Number(data['0'].inputNumber) : 0;\nconst me2Input = data['1'] ? Number(data['1'].inputNumber) : 0;\n\nconst activeCameras = new Set();\nif (CAMERA_INPUTS.includes(me1Input)) activeCameras.add(me1Input);\nif (me1Input === SUPERSOURCE_ID && CAMERA_INPUTS.includes(me2Input)) activeCameras.add(me2Input);\nif (CAMERA_INPUTS.includes(me2Input)) activeCameras.add(me2Input);\n\nconst cameraMap = flow.get('cameraMap') || {};\nconst tallyMsgs = [];\nCAMERA_INPUTS.forEach(cam => {\n    if (!cameraMap[cam]) return;\n    tallyMsgs.push({\n        topic: activeCameras.has(cam) ? 'tally-on' : 'tally-off',\n        payload: { ip: cameraMap[cam].ip, port: cameraMap[cam].port, input: cam }\n    });\n});\nconst activeList = activeCameras.size ? 'Cam ' + [...activeCameras].sort().join(',') + ' ON' : 'All OFF';\nnode.warn('atem_pi_tally: ME1=' + me1Input + ' ME2=' + me2Input + ' -> ' + activeList);\nreturn [tallyMsgs.length ? tallyMsgs : null];",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 670,
+    "y": 240,
+    "wires": [
+      [
+        "911d4cf27226431f"
+      ]
     ]
   },
   {
