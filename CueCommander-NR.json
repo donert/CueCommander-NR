@@ -53182,9 +53182,29 @@
     "wires": [
       [
         "7a07df94445096fb",
-        "6ddb092cf27358cf"
+        "6ddb092cf27358cf",
+        "atem_tally_event_fn"
       ],
       []
+    ]
+  },
+  {
+    "id": "atem_tally_event_fn",
+    "type": "function",
+    "z": "423652b85f130c5f",
+    "name": "atem_tally_event_fn",
+    "func": "const CAMERA_INPUTS = [1, 2, 3];\nconst tallyData = msg.payload && msg.payload.data ? msg.payload.data : null;\nif (!tallyData) return null;\n\nconst cameraMap = flow.get('cameraMap') || {};\nconst tallyMsgs = [];\nCAMERA_INPUTS.forEach(cam => {\n    if (!cameraMap[cam]) return;\n    const entry = tallyData[String(cam)];\n    const isProgram = entry && entry.program && entry.program.tally === true;\n    tallyMsgs.push({\n        topic: isProgram ? 'tally-on' : 'tally-off',\n        payload: { ip: cameraMap[cam].ip, port: cameraMap[cam].port, input: cam }\n    });\n});\nconst active = CAMERA_INPUTS.filter(c => tallyData[String(c)] && tallyData[String(c)].program && tallyData[String(c)].program.tally);\nnode.warn('atem_tally_event: ' + (active.length ? 'Cam ' + active.join(',') + ' ON' : 'All OFF'));\nreturn [tallyMsgs.length ? tallyMsgs : null];",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 670,
+    "y": 200,
+    "wires": [
+      [
+        "911d4cf27226431f"
+      ]
     ]
   },
   {
