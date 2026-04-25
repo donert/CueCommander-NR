@@ -23318,7 +23318,7 @@
     "id": "423652b85f130c5f",
     "type": "tab",
     "label": "ATEM-VISCA Tally",
-    "disabled": false,
+    "disabled": true,
     "info": "This flow picks up the tally messages from the ATEM and fires tally command to the Sony Cameras.",
     "env": []
   },
