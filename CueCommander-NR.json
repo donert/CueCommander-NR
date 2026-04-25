@@ -53195,8 +53195,8 @@
     "type": "function",
     "z": "423652b85f130c5f",
     "name": "atem_pi_tally_fn",
-    "func": "if (!msg.payload || msg.payload.cmd !== 'programInput') return null;\nconst CAMERA_INPUTS = [1, 2, 3];\nconst SUPERSOURCE_ID = 6000;\nconst data = msg.payload.data || {};\n\n// data is dict keyed by ME index string: \"0\"=ME1, \"1\"=ME2\nconst me1Input = data['0'] ? Number(data['0'].inputNumber) : 0;\nconst me2Input = data['1'] ? Number(data['1'].inputNumber) : 0;\n\nconst activeCameras = new Set();\nif (CAMERA_INPUTS.includes(me1Input)) activeCameras.add(me1Input);\nif (me1Input === SUPERSOURCE_ID && CAMERA_INPUTS.includes(me2Input)) activeCameras.add(me2Input);\nif (CAMERA_INPUTS.includes(me2Input)) activeCameras.add(me2Input);\n\nconst cameraMap = flow.get('cameraMap') || {};\nconst tallyMsgs = [];\nCAMERA_INPUTS.forEach(cam => {\n    if (!cameraMap[cam]) return;\n    tallyMsgs.push({\n        topic: activeCameras.has(cam) ? 'tally-on' : 'tally-off',\n        payload: { ip: cameraMap[cam].ip, port: cameraMap[cam].port, input: cam }\n    });\n});\nconst activeList = activeCameras.size ? 'Cam ' + [...activeCameras].sort().join(',') + ' ON' : 'All OFF';\nnode.warn('atem_pi_tally: ME1=' + me1Input + ' ME2=' + me2Input + ' -> ' + activeList);\nreturn [tallyMsgs.length ? tallyMsgs : null];",
-    "outputs": 1,
+    "func": "if (!msg.payload || msg.payload.cmd !== 'programInput') return null;\nconst CAMERA_INPUTS = [1, 2, 3];\nconst SUPERSOURCE_ID = 6000;\nconst data = msg.payload.data || {};\n\n// data is dict keyed by ME index string: \"0\"=ME1, \"1\"=ME2\nconst me1Input = data['0'] ? Number(data['0'].inputNumber) : 0;\nconst me2Input = data['1'] ? Number(data['1'].inputNumber) : 0;\n\nconst activeCameras = new Set();\nif (CAMERA_INPUTS.includes(me1Input)) activeCameras.add(me1Input);\nif (me1Input === SUPERSOURCE_ID && CAMERA_INPUTS.includes(me2Input)) activeCameras.add(me2Input);\nif (CAMERA_INPUTS.includes(me2Input)) activeCameras.add(me2Input);\n\nconst cameraMap = flow.get('cameraMap') || {};\nconst tallyMsgs = [];\nCAMERA_INPUTS.forEach(cam => {\n    if (!cameraMap[cam]) return;\n    tallyMsgs.push({\n        topic: activeCameras.has(cam) ? 'tally-on' : 'tally-off',\n        payload: { ip: cameraMap[cam].ip, port: cameraMap[cam].port, input: cam }\n    });\n});\nconst activeList = activeCameras.size ? 'Cam ' + [...activeCameras].sort().join(',') + ' ON' : 'All OFF';\nconst statusTxt = 'ME1=' + me1Input + ' ME2=' + me2Input + ' -> ' + activeList;\nnode.warn('atem_pi_tally: ' + statusTxt);\nconst evtMsg = {\n    payload: { timestamp: Date.now(), level: 'Info', category: 'ATEM', source: 'atem_pi_tally', event: statusTxt },\n    topic: 'atem-tally-' + Date.now()\n};\nreturn [tallyMsgs.length ? tallyMsgs : null, evtMsg];",
+    "outputs": 2,
     "noerr": 0,
     "initialize": "",
     "finalize": "",
@@ -53206,6 +53206,9 @@
     "wires": [
       [
         "911d4cf27226431f"
+      ],
+      [
+        "atem_ui_evtlog_lout"
       ]
     ]
   },
@@ -53214,8 +53217,8 @@
     "type": "function",
     "z": "423652b85f130c5f",
     "name": "atem_tally_event_fn",
-    "func": "const CAMERA_INPUTS = [1, 2, 3];\nconst tallyData = msg.payload && msg.payload.data ? msg.payload.data : null;\nif (!tallyData) return null;\n\nconst cameraMap = flow.get('cameraMap') || {};\nconst tallyMsgs = [];\nCAMERA_INPUTS.forEach(cam => {\n    if (!cameraMap[cam]) return;\n    const entry = tallyData[String(cam)];\n    const isProgram = entry && entry.program && entry.program.tally === true;\n    tallyMsgs.push({\n        topic: isProgram ? 'tally-on' : 'tally-off',\n        payload: { ip: cameraMap[cam].ip, port: cameraMap[cam].port, input: cam }\n    });\n});\nconst active = CAMERA_INPUTS.filter(c => tallyData[String(c)] && tallyData[String(c)].program && tallyData[String(c)].program.tally);\nnode.warn('atem_tally_event: ' + (active.length ? 'Cam ' + active.join(',') + ' ON' : 'All OFF'));\nreturn [tallyMsgs.length ? tallyMsgs : null];",
-    "outputs": 1,
+    "func": "const CAMERA_INPUTS = [1, 2, 3];\nconst tallyData = msg.payload && msg.payload.data ? msg.payload.data : null;\nif (!tallyData) return null;\n\nconst cameraMap = flow.get('cameraMap') || {};\nconst tallyMsgs = [];\nCAMERA_INPUTS.forEach(cam => {\n    if (!cameraMap[cam]) return;\n    const entry = tallyData[String(cam)];\n    const isProgram = entry && entry.program && entry.program.tally === true;\n    tallyMsgs.push({\n        topic: isProgram ? 'tally-on' : 'tally-off',\n        payload: { ip: cameraMap[cam].ip, port: cameraMap[cam].port, input: cam }\n    });\n});\nconst active = CAMERA_INPUTS.filter(c => tallyData[String(c)] && tallyData[String(c)].program && tallyData[String(c)].program.tally);\nconst statusTxt = active.length ? 'Cam ' + active.join(',') + ' ON' : 'All OFF';\nnode.warn('atem_tally_event: ' + statusTxt);\nconst evtMsg = {\n    payload: { timestamp: Date.now(), level: 'Info', category: 'ATEM', source: 'atem_tally_event', event: statusTxt },\n    topic: 'atem-tally-' + Date.now()\n};\nreturn [tallyMsgs.length ? tallyMsgs : null, evtMsg];",
+    "outputs": 2,
     "noerr": 0,
     "initialize": "",
     "finalize": "",
@@ -53225,6 +53228,9 @@
     "wires": [
       [
         "911d4cf27226431f"
+      ],
+      [
+        "atem_ui_evtlog_lout"
       ]
     ]
   },
@@ -68281,7 +68287,7 @@
     "z": "f776e354064ecd6e",
     "g": "kl_grp_listener",
     "name": "UDP rx warn",
-    "func": "node.warn(\"UDP rx on 9112: \" + (msg.payload ? msg.payload.length : 0) + \" bytes from \" + (msg.ip||\"?\"));\nreturn null;",
+    "func": "// UDP rx on 9112 - silenced (too verbose)\nreturn null;",
     "outputs": 1,
     "noerr": 0,
     "x": 330,
@@ -68450,7 +68456,7 @@
     "type": "function",
     "z": "96ac9944.5b4dd8",
     "name": "ATEM event warn",
-    "func": "node.warn('ATEM event: cmd=' + (msg.payload && msg.payload.cmd) + ' data=' + JSON.stringify(msg.payload && msg.payload.data));\nreturn null;",
+    "func": "// diagnostic node - silenced\nreturn null;",
     "outputs": 1,
     "noerr": 0,
     "x": 400,
@@ -68464,7 +68470,7 @@
     "type": "function",
     "z": "96ac9944.5b4dd8",
     "name": "programInput warn",
-    "func": "node.warn('ATEM programInput: ' + JSON.stringify(msg.payload));\nreturn null;",
+    "func": "// diagnostic node - silenced\nreturn null;",
     "outputs": 1,
     "noerr": 0,
     "x": 1200,
@@ -68509,14 +68515,17 @@
     "z": "423652b85f130c5f",
     "g": "d3819f7fd7316fa9",
     "name": "log HTTP recv",
-    "func": "node.warn('atem HTTP recv: ' + JSON.stringify(msg.payload));\nreturn msg;",
-    "outputs": 1,
+    "func": "const evtMsg = {\n    payload: {\n        timestamp: Date.now(),\n        level: \"Info\",\n        category: \"ATEM\",\n        source: \"Companion HTTP\",\n        event: \"programChange recv: \" + JSON.stringify(msg.payload)\n    },\n    topic: \"atem-http-\" + Date.now()\n};\nreturn [msg, evtMsg];",
+    "outputs": 2,
     "noerr": 0,
     "x": 340,
     "y": 140,
     "wires": [
       [
         "atem_tally_fn"
+      ],
+      [
+        "atem_ui_evtlog_lout"
       ]
     ]
   },
