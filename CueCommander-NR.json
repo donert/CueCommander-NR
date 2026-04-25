@@ -69086,7 +69086,7 @@
     "className": "",
     "icon": "",
     "iconPosition": "left",
-    "payload": "{\"cmd\":\"/cc/lights/color\",\"parm\":\"0\"}",
+    "payload": "{\"cmd\":\"/cc/lights/level\",\"parm\":\"0\"}",
     "payloadType": "json",
     "topic": "",
     "topicType": "str",
@@ -69113,7 +69113,7 @@
     "className": "",
     "icon": "",
     "iconPosition": "left",
-    "payload": "{\"cmd\":\"/cc/lights/color\",\"parm\":\"25\"}",
+    "payload": "{\"cmd\":\"/cc/lights/level\",\"parm\":\"25\"}",
     "payloadType": "json",
     "topic": "",
     "topicType": "str",
@@ -69140,7 +69140,7 @@
     "className": "",
     "icon": "",
     "iconPosition": "left",
-    "payload": "{\"cmd\":\"/cc/lights/color\",\"parm\":\"33\"}",
+    "payload": "{\"cmd\":\"/cc/lights/level\",\"parm\":\"33\"}",
     "payloadType": "json",
     "topic": "",
     "topicType": "str",
@@ -69167,7 +69167,7 @@
     "className": "",
     "icon": "",
     "iconPosition": "left",
-    "payload": "{\"cmd\":\"/cc/lights/color\",\"parm\":\"50\"}",
+    "payload": "{\"cmd\":\"/cc/lights/level\",\"parm\":\"50\"}",
     "payloadType": "json",
     "topic": "",
     "topicType": "str",
@@ -69194,7 +69194,7 @@
     "className": "",
     "icon": "",
     "iconPosition": "left",
-    "payload": "{\"cmd\":\"/cc/lights/color\",\"parm\":\"66\"}",
+    "payload": "{\"cmd\":\"/cc/lights/level\",\"parm\":\"66\"}",
     "payloadType": "json",
     "topic": "",
     "topicType": "str",
@@ -69221,7 +69221,7 @@
     "className": "",
     "icon": "",
     "iconPosition": "left",
-    "payload": "{\"cmd\":\"/cc/lights/color\",\"parm\":\"75\"}",
+    "payload": "{\"cmd\":\"/cc/lights/level\",\"parm\":\"75\"}",
     "payloadType": "json",
     "topic": "",
     "topicType": "str",
@@ -69248,7 +69248,7 @@
     "className": "",
     "icon": "",
     "iconPosition": "left",
-    "payload": "{\"cmd\":\"/cc/lights/color\",\"parm\":\"100\"}",
+    "payload": "{\"cmd\":\"/cc/lights/level\",\"parm\":\"100\"}",
     "payloadType": "json",
     "topic": "",
     "topicType": "str",
@@ -70158,6 +70158,11 @@
         "vt": "str"
       },
       {
+        "t": "eq",
+        "v": "/cc/lights/level",
+        "vt": "str"
+      },
+      {
         "t": "else"
       }
     ],
@@ -70187,6 +70192,9 @@
       ],
       [
         "f0e1d2c3b4a5966d"
+      ],
+      [
+        "f0e1d2c3b4a59690"
       ],
       []
     ]
@@ -70658,6 +70666,38 @@
     "statusType": "auto",
     "wires": [
       []
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a59690",
+    "type": "change",
+    "z": "f0e1d2c3b4a59602",
+    "name": "level",
+    "rules": [
+      {
+        "t": "set",
+        "p": "topic",
+        "pt": "msg",
+        "to": "\"/cs/chan/at/\" & parm",
+        "tot": "jsonata"
+      },
+      {
+        "t": "set",
+        "p": "payload",
+        "pt": "msg",
+        "to": "",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "wires": [
+      [
+        "f0e1d2c3b4a59681"
+      ]
     ]
   }
 ]
