@@ -70979,5 +70979,100 @@
         "f0e1d2c3b4a59650"
       ]
     ]
+  },
+  {
+    "id": "f0e1d2c3b4a59720",
+    "type": "ui-group",
+    "name": "Quick Cues",
+    "page": "f0e1d2c3b4a59603",
+    "width": "6",
+    "height": "1",
+    "order": 8,
+    "showTitle": true,
+    "className": "",
+    "visible": "true",
+    "disabled": "false"
+  },
+  {
+    "id": "f0e1d2c3b4a59721",
+    "type": "ui-table",
+    "z": "f0e1d2c3b4a59601",
+    "group": "f0e1d2c3b4a59720",
+    "name": "Quick Cue List",
+    "label": "Quick Cues",
+    "order": 1,
+    "width": "6",
+    "height": "8",
+    "maxrows": "6",
+    "passthru": false,
+    "autocols": false,
+    "showSearch": false,
+    "deselect": true,
+    "selectionType": "click",
+    "columns": [
+      {
+        "title": "Cue",
+        "key": "cue",
+        "keyType": "key",
+        "type": "text",
+        "width": "20%",
+        "align": "start"
+      },
+      {
+        "title": "Description",
+        "key": "desc",
+        "keyType": "key",
+        "type": "text",
+        "width": "",
+        "align": "start"
+      }
+    ],
+    "mobileBreakpoint": "sm",
+    "mobileBreakpointType": "defaults",
+    "action": "replace",
+    "className": "",
+    "wires": [
+      [
+        "f0e1d2c3b4a59723"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a59722",
+    "type": "inject",
+    "z": "f0e1d2c3b4a59601",
+    "name": "init quick cues",
+    "props": [
+      {
+        "p": "payload",
+        "v": "[{\"cue\":\"91.0\",\"desc\":\"Series Walkin\"},{\"cue\":\"92.0\",\"desc\":\"Series Talk Podium\"},{\"cue\":\"93.0\",\"desc\":\"Series Talk Vocals\"},{\"cue\":\"94.0\",\"desc\":\"Series Video\"},{\"cue\":\"95.0\",\"desc\":\"Series Message\"},{\"cue\":\"96.0\",\"desc\":\"Series Walkout\"}]",
+        "vt": "json"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": true,
+    "onceDelay": 0.5,
+    "wires": [
+      [
+        "f0e1d2c3b4a59721"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a59723",
+    "type": "function",
+    "z": "f0e1d2c3b4a59601",
+    "name": "quick cue click",
+    "func": "if (!msg.payload || !msg.payload.cue) return null;\nmsg.payload = { cmd: '/cc/lights/gotocue', parm: String(msg.payload.cue) };\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "wires": [
+      [
+        "f0e1d2c3b4a59650"
+      ]
+    ]
   }
 ]
