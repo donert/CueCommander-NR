@@ -6030,8 +6030,8 @@
         "t": "set",
         "p": "parm",
         "pt": "msg",
-        "to": "{}",
-        "tot": "json"
+        "to": "payload",
+        "tot": "msg"
       }
     ],
     "action": "",
