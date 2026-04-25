@@ -68446,7 +68446,7 @@
     "y": 140,
     "wires": [
       [
-        "atem_tally_fn"
+        "atem_http_recv_warn"
       ]
     ]
   },
@@ -68461,5 +68461,22 @@
     "x": 900,
     "y": 260,
     "wires": []
+  },
+  {
+    "id": "atem_http_recv_warn",
+    "type": "function",
+    "z": "423652b85f130c5f",
+    "g": "d3819f7fd7316fa9",
+    "name": "log HTTP recv",
+    "func": "node.warn('atem HTTP recv: ' + JSON.stringify(msg.payload));\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 340,
+    "y": 140,
+    "wires": [
+      [
+        "atem_tally_fn"
+      ]
+    ]
   }
 ]
