@@ -7131,7 +7131,7 @@
     "z": "6b06821f7149c1fa",
     "g": "6a8daa7d30d25b64",
     "name": "Build INSERT SQL",
-    "func": "const m = msg ;\n\n// protect against missing data\nconst millis = Number.isFinite(Number(msg.millis)) ? Number(msg.millis) : Date.now();\nconst depth = Number.isFinite(Number(msg.depth)) ? Number(msg.depth) : 0;\n\nconst sparm = JSON.stringify(msg.parm);\n\nconst d = new Date(msg.millis)\n//sv does ISO formatting\nconst ds = d.toLocaleString('sv', { timeZoneName: 'short' });\n \nmsg.topic = `INSERT INTO eventlog (\n    payload, topic, parm, cmd, source\n    , message, flow\n    , level, millis, timestamp\n    , depth\n    , _msgid, _orgmsgid\n) VALUES (\n    '${m.payload}',\n    '${m.topic}',\n    '${sparm}' ,\n    '${m.cmd}',\n    '${m.source}',\n    '${m.message}',\n    '${m.flow}',\n    '${m.level}',\n     ${millis},\n    '${ds}',\n     ${depth},\n     '${m._msgid}',\n     '${m._orgmsgid}'\n);`;\n\nreturn msg;",
+    "func": "const m = msg;\nconst esc = v => (v == null ? '' : String(v).replace(/'/g, \"''\"));\n\nconst millis = Number.isFinite(Number(msg.millis)) ? Number(msg.millis) : Date.now();\nconst depth  = Number.isFinite(Number(msg.depth))  ? Number(msg.depth)  : 0;\nconst sparm  = JSON.stringify(msg.parm);\n\nconst d  = new Date(millis);\nconst ds = d.toLocaleString('sv', { timeZoneName: 'short' });\n\nmsg.topic = `INSERT INTO eventlog (\n    payload, topic, parm, cmd, source\n    , message, flow\n    , level, millis, timestamp\n    , depth\n    , _msgid, _orgmsgid\n) VALUES (\n    '${esc(m.payload)}',\n    '${esc(m.topic)}',\n    '${esc(sparm)}',\n    '${esc(m.cmd)}',\n    '${esc(m.source)}',\n    '${esc(m.message)}',\n    '${esc(m.flow)}',\n    '${esc(m.level)}',\n     ${millis},\n    '${ds}',\n     ${depth},\n    '${esc(m._msgid)}',\n    '${esc(m._orgmsgid)}'\n);`;\nreturn msg;",
     "outputs": 1,
     "timeout": "",
     "noerr": 0,
@@ -11524,20 +11524,10 @@
   },
   {
     "id": "06349aef8de7fe67",
-    "type": "change",
+    "type": "function",
     "z": "f776e354064ecd6e",
     "g": "f7bd1c04e1280895",
-    "name": "message",
-    "rules": [
-      {
-        "t": "set",
-        "p": "message",
-        "pt": "msg",
-        "to": "to Klang",
-        "tot": "str"
-      }
-    ],
-    "action": "",
+    "name": "to Klang log gate",
     "property": "",
     "from": "",
     "to": "",
@@ -11548,7 +11538,9 @@
       [
         "a356d037250f137b"
       ]
-    ]
+    ],
+    "func": "// Skip raw OSC packets from /cc/klang internal processing\n// (they have no cmd/source/millis so would produce malformed log entries)\nif (!msg.cmd) return null;\n\nmsg.message = 'to Klang';\nmsg.millis  = msg.millis  || Date.now();\nmsg.source  = msg.source  || 'UI Klang';\nmsg.depth   = msg.depth   || 1;\nreturn msg;",
+    "outputs": 1
   },
   {
     "id": "3ffa7d0f3960309d",
