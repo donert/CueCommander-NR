@@ -68563,7 +68563,35 @@
     "x": 190,
     "y": 500,
     "wires": [
-      []
+      [
+        "eventlog_ui_init_fn"
+      ]
+    ]
+  },
+  {
+    "id": "eventlog_ui_init_fn",
+    "type": "function",
+    "z": "4d690c6c100a12d9",
+    "g": "f38307b2d36c7727",
+    "name": "set UI defaults",
+    "func": "// Send default values to UI filter widgets so they show correct selection on startup\nreturn [\n    {payload: '60000'},  // duration radio: 1 minute\n    {payload: '2'},      // depth radio: 1 (value '2' = depth<2)\n    {payload: true}      // exclude 1-sec switch: on\n];",
+    "outputs": 3,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 360,
+    "y": 500,
+    "wires": [
+      [
+        "4a474751a3bf5f60"
+      ],
+      [
+        "1112632c3dd7a1f8"
+      ],
+      [
+        "37c75c6928771478"
+      ]
     ]
   }
 ]
