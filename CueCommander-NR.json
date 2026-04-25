@@ -105,7 +105,7 @@
     "id": "2924702c.b33a7",
     "type": "subflow",
     "name": "ui-table handler",
-    "info": "# ui-table handler\nUniversal handler for ui-table.\n## features\n- buffer table data\n- add or update individual rows or cells of the table\n- delete rows\n- clear tableData\n- handle column width\n- handle column order\n- hide und unhide columns\n- hide and unhide rows\n- records row order\n- support for nested columns [(column groups)](http://tabulator.info/examples/4.7#column-groups)\n- support for child rows (_children) [(nested data trees)](http://tabulator.info/examples/4.7#tree)\n\nFor real life example see:\n\n**syslog server** for logfile like table with filters\n\n**remote device table** for dynamically updated table with context menues\n\n**irrigation system** for sortable rows\n\n## sending data to ui-tabel\n\n- sending an `array` as discribed in ui-table will replace the complete table and delete all table edits\n  \n  if `msg.keepEdits=true` is added the existing edits will be kept.\n- send an `object` containing the updated properties of a table row by sending msg.<tableDataProp>.\n\n  The table is updated using the `updateOrAddData` command. You can alter the command used by adding the `msg.tabulatorCommand` and `msg.tabulatorParameter`\n\n```\nmsg.tabulatorCommand=\"addData\";\nmsg.tabulatorParameter=[true];\n```\n## configuration\n- `tabulator` json formatted object containing configuration of the table. See ui-table for more details.\n- `property` property of the msg object that contains the data to be passed to ui-table. I.e. *state* `msg.state`\n- `index` index column to identify individual rows. Each message containing data must have a unique `msg.topic` to identify the row. Messages without this `msg.topic` will be droped. It is not nessesary but possible to display the index column in the table. Do not enable editing on this column otherwise you will loose the connection and another row will be added to the table as soon as a new message arrives!\n\n   Defaults to *$topic* `msg.state.$topic`\n- `maxRows`maximum number of rows held by table widget. If grater than **0** the amount of rows in ui-table is limited. For this to work the index row must be a Number. \u00b4rows < currentID-maxRows\u00b4 will be deleted.\n- `maxStore`maximum number of rows stored by this node for replay if a client connects. If grater than **0** the amount of rows in flow context is limited. for this to work the index row must be a Number. \u00b4rows < currentID-maxStore\u00b4 will be deleted.\n- `dashboard` name of the dashboard tab to only update the table if the dashboard is visible. If empty the table will be updated on every tab change and connect.\n- `context` configuration of context data. The subflow will save or cache data in the flows context using `$parent.`. \n   **tableData** caches the incoming data to restore it on `ui-control\u00b4 *change* messages.\n   **tableConfig** saves column width and order to save the interactive table layot\n   **tableEdit** saves edits on the table data otherwise it would be overwritten when new data arrives\n```json\n{\n    \"tableData\": {\n        \"name\": \"tableData\"\n    },\n    \"tableConfig\": {\n        \"name\": \"tableConfig\",\n        \"storage\": \"file\"\n    },\n    \"tableEdit\": {\n        \"name\": \"tableEdit\",\n        \"storage\": \"file\"\n    }\n}\n```\n\n## commands\ncommands can be passed by sending a object as `msg.payload`\n\n```json\n{\n    \"command\": \"delete\",\n    \"object\": \"columnOrder\"\n}\n```\n\n- `deleteTable` tableCache\n- `deleteRow` delete single row. `object` matching index property\n- `ignoreRow` delete single row and put it on an ignore list. `object` matching index property\n- `unIgnoreRow`remove row from the ignore list.  `object` matching index property\n- `unIgnoreRows`delte the ignore list. \n- `deleteRowOrder` delete custom row order\n- `deleteColumnOrder` delete custom column order\n  This is important if you add or delete columns in the tabulator config otherwise the columns most likely don`t show up\n- `deleteColumnWidth` delete custom column width\n- `columnHide` hide a column. `object` matching column field\n- `columnUnHide` unhide a column. `object` matching column field\n- `columnsUnHide` unhide all hidden columns.\n- `setMaxStore` set maximum amount of rows in cache\n- `setMaxDisplay` set maximum amout of rows in ui-table\n- `getTable` get table data (as displayed) as an array (on 2nd output)\n \n## background\nui-table warps the powerfull tabluator library.  This subflow makes it easier to unleash the powerfull features of ui-table",
+    "info": "# ui-table handler\nUniversal handler for ui-table.\n## features\n- buffer table data\n- add or update individual rows or cells of the table\n- delete rows\n- clear tableData\n- handle column width\n- handle column order\n- hide und unhide columns\n- hide and unhide rows\n- records row order\n- support for nested columns [(column groups)](http://tabulator.info/examples/4.7#column-groups)\n- support for child rows (_children) [(nested data trees)](http://tabulator.info/examples/4.7#tree)\n\nFor real life example see:\n\n**syslog server** for logfile like table with filters\n\n**remote device table** for dynamically updated table with context menues\n\n**irrigation system** for sortable rows\n\n## sending data to ui-tabel\n\n- sending an `array` as discribed in ui-table will replace the complete table and delete all table edits\n  \n  if `msg.keepEdits=true` is added the existing edits will be kept.\n- send an `object` containing the updated properties of a table row by sending msg.<tableDataProp>.\n\n  The table is updated using the `updateOrAddData` command. You can alter the command used by adding the `msg.tabulatorCommand` and `msg.tabulatorParameter`\n\n```\nmsg.tabulatorCommand=\"addData\";\nmsg.tabulatorParameter=[true];\n```\n## configuration\n- `tabulator` json formatted object containing configuration of the table. See ui-table for more details.\n- `property` property of the msg object that contains the data to be passed to ui-table. I.e. *state* `msg.state`\n- `index` index column to identify individual rows. Each message containing data must have a unique `msg.topic` to identify the row. Messages without this `msg.topic` will be droped. It is not nessesary but possible to display the index column in the table. Do not enable editing on this column otherwise you will loose the connection and another row will be added to the table as soon as a new message arrives!\n\n   Defaults to *$topic* `msg.state.$topic`\n- `maxRows`maximum number of rows held by table widget. If grater than **0** the amount of rows in ui-table is limited. For this to work the index row must be a Number. ´rows < currentID-maxRows´ will be deleted.\n- `maxStore`maximum number of rows stored by this node for replay if a client connects. If grater than **0** the amount of rows in flow context is limited. for this to work the index row must be a Number. ´rows < currentID-maxStore´ will be deleted.\n- `dashboard` name of the dashboard tab to only update the table if the dashboard is visible. If empty the table will be updated on every tab change and connect.\n- `context` configuration of context data. The subflow will save or cache data in the flows context using `$parent.`. \n   **tableData** caches the incoming data to restore it on `ui-control´ *change* messages.\n   **tableConfig** saves column width and order to save the interactive table layot\n   **tableEdit** saves edits on the table data otherwise it would be overwritten when new data arrives\n```json\n{\n    \"tableData\": {\n        \"name\": \"tableData\"\n    },\n    \"tableConfig\": {\n        \"name\": \"tableConfig\",\n        \"storage\": \"file\"\n    },\n    \"tableEdit\": {\n        \"name\": \"tableEdit\",\n        \"storage\": \"file\"\n    }\n}\n```\n\n## commands\ncommands can be passed by sending a object as `msg.payload`\n\n```json\n{\n    \"command\": \"delete\",\n    \"object\": \"columnOrder\"\n}\n```\n\n- `deleteTable` tableCache\n- `deleteRow` delete single row. `object` matching index property\n- `ignoreRow` delete single row and put it on an ignore list. `object` matching index property\n- `unIgnoreRow`remove row from the ignore list.  `object` matching index property\n- `unIgnoreRows`delte the ignore list. \n- `deleteRowOrder` delete custom row order\n- `deleteColumnOrder` delete custom column order\n  This is important if you add or delete columns in the tabulator config otherwise the columns most likely don`t show up\n- `deleteColumnWidth` delete custom column width\n- `columnHide` hide a column. `object` matching column field\n- `columnUnHide` unhide a column. `object` matching column field\n- `columnsUnHide` unhide all hidden columns.\n- `setMaxStore` set maximum amount of rows in cache\n- `setMaxDisplay` set maximum amout of rows in ui-table\n- `getTable` get table data (as displayed) as an array (on 2nd output)\n \n## background\nui-table warps the powerfull tabluator library.  This subflow makes it easier to unleash the powerfull features of ui-table",
     "category": "dashboard",
     "in": [
       {
@@ -144,7 +144,7 @@
       {
         "name": "tabulator",
         "type": "json",
-        "value": "{\"tabulator\":{\"responsiveLayout\":\"collapse\",\"responsiveLayoutCollapseStartOpen\":false,\"index\":\"$name\",\"layout\":\"fitColumns\",\"movableColumns\":true,\"groupBy\":\"\",\"columnResized\":\"function(column){     var newColumn = {         field: column._column.field,         visible: column._column.visible,         width: column._column.width,         widthFixed: column._column.widthFixed,         widthStyled: column._column.widthStyled     }; this.send({topic:this.config.topic,ui_control:{callback:'columnResized',columnWidths:newColumn}}); }\",\"columnMoved\":\"function(column, columns){     var newColumns=[];     columns.forEach(function (column) {         newColumns.push({'field': column._column.definition.field, 'title': column._column.definition.title});     });     this.send({topic:this.config.topic,ui_control:{callback:'columnMoved',columns:newColumns}}); }\",\"rowFormatter\":\"function(row){     var data = row.getData();     switch (data.$state) {         case \\\"lost\\\":             row.getElement().style.backgroundColor = \\\"#9e2e66\\\";             row.getElement().style.color = \\\"#a6a6a6\\\";             break;         case \\\"sleeping\\\":             row.getElement().style.backgroundColor = \\\"#336699\\\";             break;         case \\\"disconnected\\\":             row.getElement().style.backgroundColor = \\\"#cc3300\\\";             row.getElement().style.color = \\\"#a6a6a6\\\";             break;         case \\\"alert\\\":             row.getElement().style.backgroundColor = \\\"#A6A6DF\\\";             break;         case \\\"init\\\":             row.getElement().style.backgroundColor = \\\"#f2f20d\\\";             break;         case \\\"ready\\\":             row.getElement().style.backgroundColor = \\\"\\\";             row.getElement().style.color = \\\"\\\";             break;         } }\",\"columns\":[{\"formatter\":\"responsiveCollapse\",\"width\":30,\"minWidth\":30,\"align\":\"center\",\"resizable\":false,\"headerSort\":false,\"frozen\":true,\"title\":\"expand\",\"field\":\"expand\",\"headerVertical\":\"flip\"},{\"formatter\":\"function(cell, formatterParams, onRendered) {      var html = cell.getValue(); return html;  }\",\"title\":\"State\",\"field\":\"$stateIcon\",\"width\":100,\"frozen\":true,\"headerVertical\":\"flip\"},{\"formatter\":\"function(cell, formatterParams, onRendered) {     var html = cell.getValue(); return html;  }\",\"title\":\"Signal\",\"field\":\"signalIcon\",\"width\":100,\"frozen\":true,\"headerVertical\":\"flip\"},{\"title\":\"Name\",\"field\":\"$name\",\"width\":100,\"frozen\":true,\"headerVertical\":\"flip\"},{\"title\":\"State\",\"field\":\"$state\",\"width\":100,\"align\":\"center\",\"headerVertical\":\"flip\"},{\"title\":\"last-ready\",\"field\":\"lastSeenreadyFormatted\",\"width\":100,\"align\":\"left\",\"headerVertical\":\"flip\"},{\"title\":\"Homie\",\"field\":\"$homie\",\"width\":100,\"align\":\"left\",\"headerVertical\":\"flip\"},{\"title\":\"Platform\",\"field\":\"$implementation\",\"width\":100,\"align\":\"left\",\"headerVertical\":\"flip\"},{\"title\":\"Statistics\",\"columns\":[{\"title\":\"Interval\",\"field\":\"interval\",\"width\":100,\"headerVertical\":\"flip\"},{\"formatterParams\":{\"outputFormat\":\"d hh:mm:ss\",\"inputFormat\":\"seconds\",\"invalidPlaceholder\":\"(unknown)\"},\"title\":\"Uptime\",\"field\":\"uptime\",\"formatter\":\"function(cell, formatterParams, onRendered){     var pad = function (num) {         return (\\\"0\\\"+num).slice(-2);     };     var secs = Number(cell.getValue());     if (Number.isNaN(secs)) return;     var minutes = Math.floor(secs / 60);     secs = secs%60;     var hours = Math.floor(minutes/60);     minutes = minutes%60;     var days = Math.floor(hours/24);     hours = hours%24;     if (days>0)         return days+\\\"d \\\"+pad(hours)+\\\":\\\"+pad(minutes);     else         return pad(hours)+\\\":\\\"+pad(minutes)+\\\":\\\"+pad(secs); }\",\"width\":100,\"headerVertical\":\"flip\"},{\"formatterParams\":{\"min\":0,\"max\":100,\"color\":[\"red\",\"orange\",\"green\"],\"legend\":\"function (value) {if (value>0) return \\\"<span style='color:#FFFFFF;'>\\\"+value+\\\" %</span>\\\"; else return; }\",\"legendColor\":\"#FFFFFF\",\"legendAlign\":\"center\"},\"title\":\"Signal\",\"field\":\"signal\",\"formatter\":\"progress\",\"width\":100,\"headerVertical\":\"flip\"},{\"formatterParams\":{\"min\":2.5,\"max\":3.5,\"color\":[\"red\",\"green\",\"red\"],\"legend\":\"function (value) { if (value>0) return \\\"<span style='color:#FFFFFF;'>\\\"+value+\\\" V</span>\\\"; else return; }\",\"legendColor\":\"#101010\",\"legendAlign\":\"center\"},\"title\":\"Supply\",\"field\":\"supply\",\"formatter\":\"progress\",\"width\":100,\"headerVertical\":\"flip\"},{\"formatterParams\":{\"min\":0,\"max\":100,\"color\":[\"red\",\"orange\",\"green\"],\"legend\":\"function (value) {     if (value>0)         return \\\"<span style='color:#FFFFFF;'>\\\"+value+\\\" %</span>\\\";     else         return; }\",\"legendColor\":\"#101010\",\"legendAlign\":\"center\"},\"title\":\"Battery\",\"field\":\"battery\",\"formatter\":\"progress\",\"width\":100,\"headerVertical\":\"flip\"},{\"formatterParams\":{\"min\":0,\"max\":100000,\"color\":[\"red\",\"orange\",\"green\"],\"legend\":\"function (value) { if (value>0) return \\\"<span style='color:#FFFFFF;'>\\\"+(value/1024).toFixed(2)+\\\" kB</span>\\\"; else return; }\",\"legendColor\":\"#101010\",\"legendAlign\":\"center\"},\"title\":\"Memory\",\"field\":\"freeheap\",\"formatter\":\"progress\",\"width\":100,\"headerVertical\":\"flip\"},{\"formatterParams\":{\"target\":\"_blank\",\"min\":0,\"max\":100,\"color\":[\"red\",\"orange\",\"green\"],\"legend\":\"function (value) {     if (value>0)         return \\\"<span style='color:#FFFFFF;'>\\\"+value+\\\" %</span>\\\";     else         return; }\",\"legendColor\":\"#101010\",\"legendAlign\":\"center\"},\"title\":\"CPU load\",\"field\":\"cpuload\",\"formatter\":\"progress\",\"width\":100,\"headerVertical\":\"flip\"},{\"formatterParams\":{\"min\":20,\"max\":60,\"color\":[\"green\",\"orange\",\"red\"],\"legend\":\"function (value) { if (value>0) return \\\"<span style='color:#FFFFFF;'>\\\"+value+\\\" \u00b0C</span>\\\"; else return; }\",\"legendColor\":\"#101010\",\"legendAlign\":\"center\"},\"title\":\"CPU temp\",\"field\":\"cputemp\",\"formatter\":\"progress\",\"width\":100,\"headerVertical\":\"flip\"}]},{\"title\":\"Firmware\",\"columns\":[{\"formatter\":\"link\",\"formatterParams\":{\"labelField\":\"$localip\",\"urlPrefix\":\"http://\",\"target\":\"_blank\"},\"title\":\"IP\",\"field\":\"$localip\",\"width\":100},{\"title\":\"mac\",\"field\":\"$mac\",\"width\":100},{\"title\":\"Accsess Point\",\"field\":\"SSID\",\"width\":100},{\"title\":\"Firmware\",\"field\":\"name\",\"width\":100},{\"title\":\"Version\",\"field\":\"version\",\"width\":100},{\"title\":\"Last Boot Cause\",\"field\":\"lastBootCause\",\"width\":100},{\"title\":\"Reset Reason\",\"field\":\"resetReason\",\"width\":100}]}]},\"customHeight\":12}",
+        "value": "{\"tabulator\":{\"responsiveLayout\":\"collapse\",\"responsiveLayoutCollapseStartOpen\":false,\"index\":\"$name\",\"layout\":\"fitColumns\",\"movableColumns\":true,\"groupBy\":\"\",\"columnResized\":\"function(column){     var newColumn = {         field: column._column.field,         visible: column._column.visible,         width: column._column.width,         widthFixed: column._column.widthFixed,         widthStyled: column._column.widthStyled     }; this.send({topic:this.config.topic,ui_control:{callback:'columnResized',columnWidths:newColumn}}); }\",\"columnMoved\":\"function(column, columns){     var newColumns=[];     columns.forEach(function (column) {         newColumns.push({'field': column._column.definition.field, 'title': column._column.definition.title});     });     this.send({topic:this.config.topic,ui_control:{callback:'columnMoved',columns:newColumns}}); }\",\"rowFormatter\":\"function(row){     var data = row.getData();     switch (data.$state) {         case \\\"lost\\\":             row.getElement().style.backgroundColor = \\\"#9e2e66\\\";             row.getElement().style.color = \\\"#a6a6a6\\\";             break;         case \\\"sleeping\\\":             row.getElement().style.backgroundColor = \\\"#336699\\\";             break;         case \\\"disconnected\\\":             row.getElement().style.backgroundColor = \\\"#cc3300\\\";             row.getElement().style.color = \\\"#a6a6a6\\\";             break;         case \\\"alert\\\":             row.getElement().style.backgroundColor = \\\"#A6A6DF\\\";             break;         case \\\"init\\\":             row.getElement().style.backgroundColor = \\\"#f2f20d\\\";             break;         case \\\"ready\\\":             row.getElement().style.backgroundColor = \\\"\\\";             row.getElement().style.color = \\\"\\\";             break;         } }\",\"columns\":[{\"formatter\":\"responsiveCollapse\",\"width\":30,\"minWidth\":30,\"align\":\"center\",\"resizable\":false,\"headerSort\":false,\"frozen\":true,\"title\":\"expand\",\"field\":\"expand\",\"headerVertical\":\"flip\"},{\"formatter\":\"function(cell, formatterParams, onRendered) {      var html = cell.getValue(); return html;  }\",\"title\":\"State\",\"field\":\"$stateIcon\",\"width\":100,\"frozen\":true,\"headerVertical\":\"flip\"},{\"formatter\":\"function(cell, formatterParams, onRendered) {     var html = cell.getValue(); return html;  }\",\"title\":\"Signal\",\"field\":\"signalIcon\",\"width\":100,\"frozen\":true,\"headerVertical\":\"flip\"},{\"title\":\"Name\",\"field\":\"$name\",\"width\":100,\"frozen\":true,\"headerVertical\":\"flip\"},{\"title\":\"State\",\"field\":\"$state\",\"width\":100,\"align\":\"center\",\"headerVertical\":\"flip\"},{\"title\":\"last-ready\",\"field\":\"lastSeenreadyFormatted\",\"width\":100,\"align\":\"left\",\"headerVertical\":\"flip\"},{\"title\":\"Homie\",\"field\":\"$homie\",\"width\":100,\"align\":\"left\",\"headerVertical\":\"flip\"},{\"title\":\"Platform\",\"field\":\"$implementation\",\"width\":100,\"align\":\"left\",\"headerVertical\":\"flip\"},{\"title\":\"Statistics\",\"columns\":[{\"title\":\"Interval\",\"field\":\"interval\",\"width\":100,\"headerVertical\":\"flip\"},{\"formatterParams\":{\"outputFormat\":\"d hh:mm:ss\",\"inputFormat\":\"seconds\",\"invalidPlaceholder\":\"(unknown)\"},\"title\":\"Uptime\",\"field\":\"uptime\",\"formatter\":\"function(cell, formatterParams, onRendered){     var pad = function (num) {         return (\\\"0\\\"+num).slice(-2);     };     var secs = Number(cell.getValue());     if (Number.isNaN(secs)) return;     var minutes = Math.floor(secs / 60);     secs = secs%60;     var hours = Math.floor(minutes/60);     minutes = minutes%60;     var days = Math.floor(hours/24);     hours = hours%24;     if (days>0)         return days+\\\"d \\\"+pad(hours)+\\\":\\\"+pad(minutes);     else         return pad(hours)+\\\":\\\"+pad(minutes)+\\\":\\\"+pad(secs); }\",\"width\":100,\"headerVertical\":\"flip\"},{\"formatterParams\":{\"min\":0,\"max\":100,\"color\":[\"red\",\"orange\",\"green\"],\"legend\":\"function (value) {if (value>0) return \\\"<span style='color:#FFFFFF;'>\\\"+value+\\\" %</span>\\\"; else return; }\",\"legendColor\":\"#FFFFFF\",\"legendAlign\":\"center\"},\"title\":\"Signal\",\"field\":\"signal\",\"formatter\":\"progress\",\"width\":100,\"headerVertical\":\"flip\"},{\"formatterParams\":{\"min\":2.5,\"max\":3.5,\"color\":[\"red\",\"green\",\"red\"],\"legend\":\"function (value) { if (value>0) return \\\"<span style='color:#FFFFFF;'>\\\"+value+\\\" V</span>\\\"; else return; }\",\"legendColor\":\"#101010\",\"legendAlign\":\"center\"},\"title\":\"Supply\",\"field\":\"supply\",\"formatter\":\"progress\",\"width\":100,\"headerVertical\":\"flip\"},{\"formatterParams\":{\"min\":0,\"max\":100,\"color\":[\"red\",\"orange\",\"green\"],\"legend\":\"function (value) {     if (value>0)         return \\\"<span style='color:#FFFFFF;'>\\\"+value+\\\" %</span>\\\";     else         return; }\",\"legendColor\":\"#101010\",\"legendAlign\":\"center\"},\"title\":\"Battery\",\"field\":\"battery\",\"formatter\":\"progress\",\"width\":100,\"headerVertical\":\"flip\"},{\"formatterParams\":{\"min\":0,\"max\":100000,\"color\":[\"red\",\"orange\",\"green\"],\"legend\":\"function (value) { if (value>0) return \\\"<span style='color:#FFFFFF;'>\\\"+(value/1024).toFixed(2)+\\\" kB</span>\\\"; else return; }\",\"legendColor\":\"#101010\",\"legendAlign\":\"center\"},\"title\":\"Memory\",\"field\":\"freeheap\",\"formatter\":\"progress\",\"width\":100,\"headerVertical\":\"flip\"},{\"formatterParams\":{\"target\":\"_blank\",\"min\":0,\"max\":100,\"color\":[\"red\",\"orange\",\"green\"],\"legend\":\"function (value) {     if (value>0)         return \\\"<span style='color:#FFFFFF;'>\\\"+value+\\\" %</span>\\\";     else         return; }\",\"legendColor\":\"#101010\",\"legendAlign\":\"center\"},\"title\":\"CPU load\",\"field\":\"cpuload\",\"formatter\":\"progress\",\"width\":100,\"headerVertical\":\"flip\"},{\"formatterParams\":{\"min\":20,\"max\":60,\"color\":[\"green\",\"orange\",\"red\"],\"legend\":\"function (value) { if (value>0) return \\\"<span style='color:#FFFFFF;'>\\\"+value+\\\" °C</span>\\\"; else return; }\",\"legendColor\":\"#101010\",\"legendAlign\":\"center\"},\"title\":\"CPU temp\",\"field\":\"cputemp\",\"formatter\":\"progress\",\"width\":100,\"headerVertical\":\"flip\"}]},{\"title\":\"Firmware\",\"columns\":[{\"formatter\":\"link\",\"formatterParams\":{\"labelField\":\"$localip\",\"urlPrefix\":\"http://\",\"target\":\"_blank\"},\"title\":\"IP\",\"field\":\"$localip\",\"width\":100},{\"title\":\"mac\",\"field\":\"$mac\",\"width\":100},{\"title\":\"Accsess Point\",\"field\":\"SSID\",\"width\":100},{\"title\":\"Firmware\",\"field\":\"name\",\"width\":100},{\"title\":\"Version\",\"field\":\"version\",\"width\":100},{\"title\":\"Last Boot Cause\",\"field\":\"lastBootCause\",\"width\":100},{\"title\":\"Reset Reason\",\"field\":\"resetReason\",\"width\":100}]}]},\"customHeight\":12}",
         "ui": {
           "icon": "font-awesome/fa-table",
           "label": {
@@ -274,7 +274,7 @@
     "id": "ce2b50575018483a",
     "type": "subflow",
     "name": "ui-table handler (1)",
-    "info": "# ui-table handler\nUniversal handler for ui-table.\n## features\n- buffer table data\n- add or update individual rows or cells of the table\n- delete rows\n- clear tableData\n- handle column width\n- handle column order\n- hide und unhide columns\n- hide and unhide rows\n- records row order\n- support for nested columns [(column groups)](http://tabulator.info/examples/4.7#column-groups)\n- support for child rows (_children) [(nested data trees)](http://tabulator.info/examples/4.7#tree)\n\nFor real life example see:\n\n**syslog server** for logfile like table with filters\n\n**remote device table** for dynamically updated table with context menues\n\n**irrigation system** for sortable rows\n\n## sending data to ui-tabel\n\n- sending an `array` as discribed in ui-table will replace the complete table and delete all table edits\n  \n  if `msg.keepEdits=true` is added the existing edits will be kept.\n- send an `object` containing the updated properties of a table row by sending msg.<tableDataProp>.\n\n  The table is updated using the `updateOrAddData` command. You can alter the command used by adding the `msg.tabulatorCommand` and `msg.tabulatorParameter`\n\n```\nmsg.tabulatorCommand=\"addData\";\nmsg.tabulatorParameter=[true];\n```\n## configuration\n- `tabulator` json formatted object containing configuration of the table. See ui-table for more details.\n- `property` property of the msg object that contains the data to be passed to ui-table. I.e. *state* `msg.state`\n- `index` index column to identify individual rows. Each message containing data must have a unique `msg.topic` to identify the row. Messages without this `msg.topic` will be droped. It is not nessesary but possible to display the index column in the table. Do not enable editing on this column otherwise you will loose the connection and another row will be added to the table as soon as a new message arrives!\n\n   Defaults to *$topic* `msg.state.$topic`\n- `maxRows`maximum number of rows held by table widget. If grater than **0** the amount of rows in ui-table is limited. For this to work the index row must be a Number. \u00b4rows < currentID-maxRows\u00b4 will be deleted.\n- `maxStore`maximum number of rows stored by this node for replay if a client connects. If grater than **0** the amount of rows in flow context is limited. for this to work the index row must be a Number. \u00b4rows < currentID-maxStore\u00b4 will be deleted.\n- `dashboard` name of the dashboard tab to only update the table if the dashboard is visible. If empty the table will be updated on every tab change and connect.\n- `context` configuration of context data. The subflow will save or cache data in the flows context using `$parent.`. \n   **tableData** caches the incoming data to restore it on `ui-control\u00b4 *change* messages.\n   **tableConfig** saves column width and order to save the interactive table layot\n   **tableEdit** saves edits on the table data otherwise it would be overwritten when new data arrives\n```json\n{\n    \"tableData\": {\n        \"name\": \"tableData\"\n    },\n    \"tableConfig\": {\n        \"name\": \"tableConfig\",\n        \"storage\": \"file\"\n    },\n    \"tableEdit\": {\n        \"name\": \"tableEdit\",\n        \"storage\": \"file\"\n    }\n}\n```\n\n## commands\ncommands can be passed by sending a object as `msg.payload`\n\n```json\n{\n    \"command\": \"delete\",\n    \"object\": \"columnOrder\"\n}\n```\n\n- `deleteTable` tableCache\n- `deleteRow` delete single row. `object` matching index property\n- `ignoreRow` delete single row and put it on an ignore list. `object` matching index property\n- `unIgnoreRow`remove row from the ignore list.  `object` matching index property\n- `unIgnoreRows`delte the ignore list. \n- `deleteRowOrder` delete custom row order\n- `deleteColumnOrder` delete custom column order\n  This is important if you add or delete columns in the tabulator config otherwise the columns most likely don`t show up\n- `deleteColumnWidth` delete custom column width\n- `columnHide` hide a column. `object` matching column field\n- `columnUnHide` unhide a column. `object` matching column field\n- `columnsUnHide` unhide all hidden columns.\n- `setMaxStore` set maximum amount of rows in cache\n- `setMaxDisplay` set maximum amout of rows in ui-table\n- `getTable` get table data (as displayed) as an array (on 2nd output)\n \n## background\nui-table warps the powerfull tabluator library.  This subflow makes it easier to unleash the powerfull features of ui-table",
+    "info": "# ui-table handler\nUniversal handler for ui-table.\n## features\n- buffer table data\n- add or update individual rows or cells of the table\n- delete rows\n- clear tableData\n- handle column width\n- handle column order\n- hide und unhide columns\n- hide and unhide rows\n- records row order\n- support for nested columns [(column groups)](http://tabulator.info/examples/4.7#column-groups)\n- support for child rows (_children) [(nested data trees)](http://tabulator.info/examples/4.7#tree)\n\nFor real life example see:\n\n**syslog server** for logfile like table with filters\n\n**remote device table** for dynamically updated table with context menues\n\n**irrigation system** for sortable rows\n\n## sending data to ui-tabel\n\n- sending an `array` as discribed in ui-table will replace the complete table and delete all table edits\n  \n  if `msg.keepEdits=true` is added the existing edits will be kept.\n- send an `object` containing the updated properties of a table row by sending msg.<tableDataProp>.\n\n  The table is updated using the `updateOrAddData` command. You can alter the command used by adding the `msg.tabulatorCommand` and `msg.tabulatorParameter`\n\n```\nmsg.tabulatorCommand=\"addData\";\nmsg.tabulatorParameter=[true];\n```\n## configuration\n- `tabulator` json formatted object containing configuration of the table. See ui-table for more details.\n- `property` property of the msg object that contains the data to be passed to ui-table. I.e. *state* `msg.state`\n- `index` index column to identify individual rows. Each message containing data must have a unique `msg.topic` to identify the row. Messages without this `msg.topic` will be droped. It is not nessesary but possible to display the index column in the table. Do not enable editing on this column otherwise you will loose the connection and another row will be added to the table as soon as a new message arrives!\n\n   Defaults to *$topic* `msg.state.$topic`\n- `maxRows`maximum number of rows held by table widget. If grater than **0** the amount of rows in ui-table is limited. For this to work the index row must be a Number. ´rows < currentID-maxRows´ will be deleted.\n- `maxStore`maximum number of rows stored by this node for replay if a client connects. If grater than **0** the amount of rows in flow context is limited. for this to work the index row must be a Number. ´rows < currentID-maxStore´ will be deleted.\n- `dashboard` name of the dashboard tab to only update the table if the dashboard is visible. If empty the table will be updated on every tab change and connect.\n- `context` configuration of context data. The subflow will save or cache data in the flows context using `$parent.`. \n   **tableData** caches the incoming data to restore it on `ui-control´ *change* messages.\n   **tableConfig** saves column width and order to save the interactive table layot\n   **tableEdit** saves edits on the table data otherwise it would be overwritten when new data arrives\n```json\n{\n    \"tableData\": {\n        \"name\": \"tableData\"\n    },\n    \"tableConfig\": {\n        \"name\": \"tableConfig\",\n        \"storage\": \"file\"\n    },\n    \"tableEdit\": {\n        \"name\": \"tableEdit\",\n        \"storage\": \"file\"\n    }\n}\n```\n\n## commands\ncommands can be passed by sending a object as `msg.payload`\n\n```json\n{\n    \"command\": \"delete\",\n    \"object\": \"columnOrder\"\n}\n```\n\n- `deleteTable` tableCache\n- `deleteRow` delete single row. `object` matching index property\n- `ignoreRow` delete single row and put it on an ignore list. `object` matching index property\n- `unIgnoreRow`remove row from the ignore list.  `object` matching index property\n- `unIgnoreRows`delte the ignore list. \n- `deleteRowOrder` delete custom row order\n- `deleteColumnOrder` delete custom column order\n  This is important if you add or delete columns in the tabulator config otherwise the columns most likely don`t show up\n- `deleteColumnWidth` delete custom column width\n- `columnHide` hide a column. `object` matching column field\n- `columnUnHide` unhide a column. `object` matching column field\n- `columnsUnHide` unhide all hidden columns.\n- `setMaxStore` set maximum amount of rows in cache\n- `setMaxDisplay` set maximum amout of rows in ui-table\n- `getTable` get table data (as displayed) as an array (on 2nd output)\n \n## background\nui-table warps the powerfull tabluator library.  This subflow makes it easier to unleash the powerfull features of ui-table",
     "category": "dashboard",
     "in": [
       {
@@ -323,7 +323,7 @@
       {
         "name": "tabulator",
         "type": "json",
-        "value": "{\"tabulator\":{\"responsiveLayout\":\"collapse\",\"responsiveLayoutCollapseStartOpen\":false,\"index\":\"$name\",\"layout\":\"fitColumns\",\"movableColumns\":true,\"groupBy\":\"\",\"columnResized\":\"function(column){     var newColumn = {         field: column._column.field,         visible: column._column.visible,         width: column._column.width,         widthFixed: column._column.widthFixed,         widthStyled: column._column.widthStyled     }; this.send({topic:this.config.topic,ui_control:{callback:'columnResized',columnWidths:newColumn}}); }\",\"columnMoved\":\"function(column, columns){     var newColumns=[];     columns.forEach(function (column) {         newColumns.push({'field': column._column.definition.field, 'title': column._column.definition.title});     });     this.send({topic:this.config.topic,ui_control:{callback:'columnMoved',columns:newColumns}}); }\",\"rowFormatter\":\"function(row){     var data = row.getData();     switch (data.$state) {         case \\\"lost\\\":             row.getElement().style.backgroundColor = \\\"#9e2e66\\\";             row.getElement().style.color = \\\"#a6a6a6\\\";             break;         case \\\"sleeping\\\":             row.getElement().style.backgroundColor = \\\"#336699\\\";             break;         case \\\"disconnected\\\":             row.getElement().style.backgroundColor = \\\"#cc3300\\\";             row.getElement().style.color = \\\"#a6a6a6\\\";             break;         case \\\"alert\\\":             row.getElement().style.backgroundColor = \\\"#A6A6DF\\\";             break;         case \\\"init\\\":             row.getElement().style.backgroundColor = \\\"#f2f20d\\\";             break;         case \\\"ready\\\":             row.getElement().style.backgroundColor = \\\"\\\";             row.getElement().style.color = \\\"\\\";             break;         } }\",\"columns\":[{\"formatter\":\"responsiveCollapse\",\"width\":30,\"minWidth\":30,\"align\":\"center\",\"resizable\":false,\"headerSort\":false,\"frozen\":true,\"title\":\"expand\",\"field\":\"expand\",\"headerVertical\":\"flip\"},{\"formatter\":\"function(cell, formatterParams, onRendered) {      var html = cell.getValue(); return html;  }\",\"title\":\"State\",\"field\":\"$stateIcon\",\"width\":100,\"frozen\":true,\"headerVertical\":\"flip\"},{\"formatter\":\"function(cell, formatterParams, onRendered) {     var html = cell.getValue(); return html;  }\",\"title\":\"Signal\",\"field\":\"signalIcon\",\"width\":100,\"frozen\":true,\"headerVertical\":\"flip\"},{\"title\":\"Name\",\"field\":\"$name\",\"width\":100,\"frozen\":true,\"headerVertical\":\"flip\"},{\"title\":\"State\",\"field\":\"$state\",\"width\":100,\"align\":\"center\",\"headerVertical\":\"flip\"},{\"title\":\"last-ready\",\"field\":\"lastSeenreadyFormatted\",\"width\":100,\"align\":\"left\",\"headerVertical\":\"flip\"},{\"title\":\"Homie\",\"field\":\"$homie\",\"width\":100,\"align\":\"left\",\"headerVertical\":\"flip\"},{\"title\":\"Platform\",\"field\":\"$implementation\",\"width\":100,\"align\":\"left\",\"headerVertical\":\"flip\"},{\"title\":\"Statistics\",\"columns\":[{\"title\":\"Interval\",\"field\":\"interval\",\"width\":100,\"headerVertical\":\"flip\"},{\"formatterParams\":{\"outputFormat\":\"d hh:mm:ss\",\"inputFormat\":\"seconds\",\"invalidPlaceholder\":\"(unknown)\"},\"title\":\"Uptime\",\"field\":\"uptime\",\"formatter\":\"function(cell, formatterParams, onRendered){     var pad = function (num) {         return (\\\"0\\\"+num).slice(-2);     };     var secs = Number(cell.getValue());     if (Number.isNaN(secs)) return;     var minutes = Math.floor(secs / 60);     secs = secs%60;     var hours = Math.floor(minutes/60);     minutes = minutes%60;     var days = Math.floor(hours/24);     hours = hours%24;     if (days>0)         return days+\\\"d \\\"+pad(hours)+\\\":\\\"+pad(minutes);     else         return pad(hours)+\\\":\\\"+pad(minutes)+\\\":\\\"+pad(secs); }\",\"width\":100,\"headerVertical\":\"flip\"},{\"formatterParams\":{\"min\":0,\"max\":100,\"color\":[\"red\",\"orange\",\"green\"],\"legend\":\"function (value) {if (value>0) return \\\"<span style='color:#FFFFFF;'>\\\"+value+\\\" %</span>\\\"; else return; }\",\"legendColor\":\"#FFFFFF\",\"legendAlign\":\"center\"},\"title\":\"Signal\",\"field\":\"signal\",\"formatter\":\"progress\",\"width\":100,\"headerVertical\":\"flip\"},{\"formatterParams\":{\"min\":2.5,\"max\":3.5,\"color\":[\"red\",\"green\",\"red\"],\"legend\":\"function (value) { if (value>0) return \\\"<span style='color:#FFFFFF;'>\\\"+value+\\\" V</span>\\\"; else return; }\",\"legendColor\":\"#101010\",\"legendAlign\":\"center\"},\"title\":\"Supply\",\"field\":\"supply\",\"formatter\":\"progress\",\"width\":100,\"headerVertical\":\"flip\"},{\"formatterParams\":{\"min\":0,\"max\":100,\"color\":[\"red\",\"orange\",\"green\"],\"legend\":\"function (value) {     if (value>0)         return \\\"<span style='color:#FFFFFF;'>\\\"+value+\\\" %</span>\\\";     else         return; }\",\"legendColor\":\"#101010\",\"legendAlign\":\"center\"},\"title\":\"Battery\",\"field\":\"battery\",\"formatter\":\"progress\",\"width\":100,\"headerVertical\":\"flip\"},{\"formatterParams\":{\"min\":0,\"max\":100000,\"color\":[\"red\",\"orange\",\"green\"],\"legend\":\"function (value) { if (value>0) return \\\"<span style='color:#FFFFFF;'>\\\"+(value/1024).toFixed(2)+\\\" kB</span>\\\"; else return; }\",\"legendColor\":\"#101010\",\"legendAlign\":\"center\"},\"title\":\"Memory\",\"field\":\"freeheap\",\"formatter\":\"progress\",\"width\":100,\"headerVertical\":\"flip\"},{\"formatterParams\":{\"target\":\"_blank\",\"min\":0,\"max\":100,\"color\":[\"red\",\"orange\",\"green\"],\"legend\":\"function (value) {     if (value>0)         return \\\"<span style='color:#FFFFFF;'>\\\"+value+\\\" %</span>\\\";     else         return; }\",\"legendColor\":\"#101010\",\"legendAlign\":\"center\"},\"title\":\"CPU load\",\"field\":\"cpuload\",\"formatter\":\"progress\",\"width\":100,\"headerVertical\":\"flip\"},{\"formatterParams\":{\"min\":20,\"max\":60,\"color\":[\"green\",\"orange\",\"red\"],\"legend\":\"function (value) { if (value>0) return \\\"<span style='color:#FFFFFF;'>\\\"+value+\\\" \u00b0C</span>\\\"; else return; }\",\"legendColor\":\"#101010\",\"legendAlign\":\"center\"},\"title\":\"CPU temp\",\"field\":\"cputemp\",\"formatter\":\"progress\",\"width\":100,\"headerVertical\":\"flip\"}]},{\"title\":\"Firmware\",\"columns\":[{\"formatter\":\"link\",\"formatterParams\":{\"labelField\":\"$localip\",\"urlPrefix\":\"http://\",\"target\":\"_blank\"},\"title\":\"IP\",\"field\":\"$localip\",\"width\":100},{\"title\":\"mac\",\"field\":\"$mac\",\"width\":100},{\"title\":\"Accsess Point\",\"field\":\"SSID\",\"width\":100},{\"title\":\"Firmware\",\"field\":\"name\",\"width\":100},{\"title\":\"Version\",\"field\":\"version\",\"width\":100},{\"title\":\"Last Boot Cause\",\"field\":\"lastBootCause\",\"width\":100},{\"title\":\"Reset Reason\",\"field\":\"resetReason\",\"width\":100}]}]},\"customHeight\":12}",
+        "value": "{\"tabulator\":{\"responsiveLayout\":\"collapse\",\"responsiveLayoutCollapseStartOpen\":false,\"index\":\"$name\",\"layout\":\"fitColumns\",\"movableColumns\":true,\"groupBy\":\"\",\"columnResized\":\"function(column){     var newColumn = {         field: column._column.field,         visible: column._column.visible,         width: column._column.width,         widthFixed: column._column.widthFixed,         widthStyled: column._column.widthStyled     }; this.send({topic:this.config.topic,ui_control:{callback:'columnResized',columnWidths:newColumn}}); }\",\"columnMoved\":\"function(column, columns){     var newColumns=[];     columns.forEach(function (column) {         newColumns.push({'field': column._column.definition.field, 'title': column._column.definition.title});     });     this.send({topic:this.config.topic,ui_control:{callback:'columnMoved',columns:newColumns}}); }\",\"rowFormatter\":\"function(row){     var data = row.getData();     switch (data.$state) {         case \\\"lost\\\":             row.getElement().style.backgroundColor = \\\"#9e2e66\\\";             row.getElement().style.color = \\\"#a6a6a6\\\";             break;         case \\\"sleeping\\\":             row.getElement().style.backgroundColor = \\\"#336699\\\";             break;         case \\\"disconnected\\\":             row.getElement().style.backgroundColor = \\\"#cc3300\\\";             row.getElement().style.color = \\\"#a6a6a6\\\";             break;         case \\\"alert\\\":             row.getElement().style.backgroundColor = \\\"#A6A6DF\\\";             break;         case \\\"init\\\":             row.getElement().style.backgroundColor = \\\"#f2f20d\\\";             break;         case \\\"ready\\\":             row.getElement().style.backgroundColor = \\\"\\\";             row.getElement().style.color = \\\"\\\";             break;         } }\",\"columns\":[{\"formatter\":\"responsiveCollapse\",\"width\":30,\"minWidth\":30,\"align\":\"center\",\"resizable\":false,\"headerSort\":false,\"frozen\":true,\"title\":\"expand\",\"field\":\"expand\",\"headerVertical\":\"flip\"},{\"formatter\":\"function(cell, formatterParams, onRendered) {      var html = cell.getValue(); return html;  }\",\"title\":\"State\",\"field\":\"$stateIcon\",\"width\":100,\"frozen\":true,\"headerVertical\":\"flip\"},{\"formatter\":\"function(cell, formatterParams, onRendered) {     var html = cell.getValue(); return html;  }\",\"title\":\"Signal\",\"field\":\"signalIcon\",\"width\":100,\"frozen\":true,\"headerVertical\":\"flip\"},{\"title\":\"Name\",\"field\":\"$name\",\"width\":100,\"frozen\":true,\"headerVertical\":\"flip\"},{\"title\":\"State\",\"field\":\"$state\",\"width\":100,\"align\":\"center\",\"headerVertical\":\"flip\"},{\"title\":\"last-ready\",\"field\":\"lastSeenreadyFormatted\",\"width\":100,\"align\":\"left\",\"headerVertical\":\"flip\"},{\"title\":\"Homie\",\"field\":\"$homie\",\"width\":100,\"align\":\"left\",\"headerVertical\":\"flip\"},{\"title\":\"Platform\",\"field\":\"$implementation\",\"width\":100,\"align\":\"left\",\"headerVertical\":\"flip\"},{\"title\":\"Statistics\",\"columns\":[{\"title\":\"Interval\",\"field\":\"interval\",\"width\":100,\"headerVertical\":\"flip\"},{\"formatterParams\":{\"outputFormat\":\"d hh:mm:ss\",\"inputFormat\":\"seconds\",\"invalidPlaceholder\":\"(unknown)\"},\"title\":\"Uptime\",\"field\":\"uptime\",\"formatter\":\"function(cell, formatterParams, onRendered){     var pad = function (num) {         return (\\\"0\\\"+num).slice(-2);     };     var secs = Number(cell.getValue());     if (Number.isNaN(secs)) return;     var minutes = Math.floor(secs / 60);     secs = secs%60;     var hours = Math.floor(minutes/60);     minutes = minutes%60;     var days = Math.floor(hours/24);     hours = hours%24;     if (days>0)         return days+\\\"d \\\"+pad(hours)+\\\":\\\"+pad(minutes);     else         return pad(hours)+\\\":\\\"+pad(minutes)+\\\":\\\"+pad(secs); }\",\"width\":100,\"headerVertical\":\"flip\"},{\"formatterParams\":{\"min\":0,\"max\":100,\"color\":[\"red\",\"orange\",\"green\"],\"legend\":\"function (value) {if (value>0) return \\\"<span style='color:#FFFFFF;'>\\\"+value+\\\" %</span>\\\"; else return; }\",\"legendColor\":\"#FFFFFF\",\"legendAlign\":\"center\"},\"title\":\"Signal\",\"field\":\"signal\",\"formatter\":\"progress\",\"width\":100,\"headerVertical\":\"flip\"},{\"formatterParams\":{\"min\":2.5,\"max\":3.5,\"color\":[\"red\",\"green\",\"red\"],\"legend\":\"function (value) { if (value>0) return \\\"<span style='color:#FFFFFF;'>\\\"+value+\\\" V</span>\\\"; else return; }\",\"legendColor\":\"#101010\",\"legendAlign\":\"center\"},\"title\":\"Supply\",\"field\":\"supply\",\"formatter\":\"progress\",\"width\":100,\"headerVertical\":\"flip\"},{\"formatterParams\":{\"min\":0,\"max\":100,\"color\":[\"red\",\"orange\",\"green\"],\"legend\":\"function (value) {     if (value>0)         return \\\"<span style='color:#FFFFFF;'>\\\"+value+\\\" %</span>\\\";     else         return; }\",\"legendColor\":\"#101010\",\"legendAlign\":\"center\"},\"title\":\"Battery\",\"field\":\"battery\",\"formatter\":\"progress\",\"width\":100,\"headerVertical\":\"flip\"},{\"formatterParams\":{\"min\":0,\"max\":100000,\"color\":[\"red\",\"orange\",\"green\"],\"legend\":\"function (value) { if (value>0) return \\\"<span style='color:#FFFFFF;'>\\\"+(value/1024).toFixed(2)+\\\" kB</span>\\\"; else return; }\",\"legendColor\":\"#101010\",\"legendAlign\":\"center\"},\"title\":\"Memory\",\"field\":\"freeheap\",\"formatter\":\"progress\",\"width\":100,\"headerVertical\":\"flip\"},{\"formatterParams\":{\"target\":\"_blank\",\"min\":0,\"max\":100,\"color\":[\"red\",\"orange\",\"green\"],\"legend\":\"function (value) {     if (value>0)         return \\\"<span style='color:#FFFFFF;'>\\\"+value+\\\" %</span>\\\";     else         return; }\",\"legendColor\":\"#101010\",\"legendAlign\":\"center\"},\"title\":\"CPU load\",\"field\":\"cpuload\",\"formatter\":\"progress\",\"width\":100,\"headerVertical\":\"flip\"},{\"formatterParams\":{\"min\":20,\"max\":60,\"color\":[\"green\",\"orange\",\"red\"],\"legend\":\"function (value) { if (value>0) return \\\"<span style='color:#FFFFFF;'>\\\"+value+\\\" °C</span>\\\"; else return; }\",\"legendColor\":\"#101010\",\"legendAlign\":\"center\"},\"title\":\"CPU temp\",\"field\":\"cputemp\",\"formatter\":\"progress\",\"width\":100,\"headerVertical\":\"flip\"}]},{\"title\":\"Firmware\",\"columns\":[{\"formatter\":\"link\",\"formatterParams\":{\"labelField\":\"$localip\",\"urlPrefix\":\"http://\",\"target\":\"_blank\"},\"title\":\"IP\",\"field\":\"$localip\",\"width\":100},{\"title\":\"mac\",\"field\":\"$mac\",\"width\":100},{\"title\":\"Accsess Point\",\"field\":\"SSID\",\"width\":100},{\"title\":\"Firmware\",\"field\":\"name\",\"width\":100},{\"title\":\"Version\",\"field\":\"version\",\"width\":100},{\"title\":\"Last Boot Cause\",\"field\":\"lastBootCause\",\"width\":100},{\"title\":\"Reset Reason\",\"field\":\"resetReason\",\"width\":100}]}]},\"customHeight\":12}",
         "ui": {
           "icon": "font-awesome/fa-table",
           "label": {
@@ -8431,6 +8431,12 @@
         "case": false
       },
       {
+        "t": "regex",
+        "v": "^/cc/lights/.*",
+        "vt": "str",
+        "case": false
+      },
+      {
         "t": "else"
       }
     ],
@@ -8463,6 +8469,9 @@
       ],
       [
         "8673a2a8378b1bee"
+      ],
+      [
+        "f0e1d2c3b4a59660"
       ],
       [
         "5c2b358579d28e46"
@@ -16292,7 +16301,7 @@
     "z": "f776e354064ecd6e",
     "g": "kl_grp_listener",
     "name": "Parse Klang State",
-    "func": "const addr = msg.topic;\nconst args = Array.isArray(msg.payload) ? msg.payload : [msg.payload];\n\n// osc.js may return args as [{type,value}] objects or raw values \u2014 handle both\nfunction argVal(a) { return (a && typeof a === 'object' && 'value' in a) ? a.value : a; }\n\nfunction handleUserInfo(uiArgs) {\n    if (!uiArgs || uiArgs.length < 3) return;\n    const mixName = String(argVal(uiArgs[0]));\n    const preset  = String(argVal(uiArgs[1]));\n    const raw     = argVal(uiArgs[2]);\n    const mixNum  = typeof raw === 'number' ? raw : parseInt(raw);\n    if (!mixName || isNaN(mixNum) || mixNum < 1) return;\n    const mi = flow.get('klang_mix_info') || {};\n    mi[String(mixNum)] = { mix_name: mixName, preset, last_updated: new Date().toISOString() };\n    flow.set('klang_mix_info', mi);\n}\n\nif (addr === '/KLANGapp/control/UserInfo') {\n    handleUserInfo(args);\n} else if (addr === 'bundle') {\n    for (const item of (args || [])) {\n        if (item && item.address === '/KLANGapp/control/UserInfo') {\n            handleUserInfo(Array.isArray(item.args) ? item.args : [item.args]);\n        }\n    }\n} else {\n    // Fabrik channel attribute /Kf/ui/<mix>/ch/<ch>/<attr>  (unit tests)\n    const chMatch = addr && addr.match(/^/Kf/ui/(d+)/ch/(d+)/(w+)$/);\n    if (chMatch) {\n        const mix = parseInt(chMatch[1]), ch = parseInt(chMatch[2]), attr = chMatch[3];\n        const TRACKED = ['name', 'mute', 'visible', 'solo'];\n        if (TRACKED.includes(attr)) {\n            const st = flow.get('klang_live_state') || {};\n            const key = mix + ':' + ch;\n            const entry = st[key] || {};\n            entry[attr] = args[0];\n            entry.last_updated = new Date().toISOString();\n            st[key] = entry;\n            flow.set('klang_live_state', st);\n        }\n    }\n}\nreturn null;",
+    "func": "const addr = msg.topic;\nconst args = Array.isArray(msg.payload) ? msg.payload : [msg.payload];\n\n// osc.js may return args as [{type,value}] objects or raw values — handle both\nfunction argVal(a) { return (a && typeof a === 'object' && 'value' in a) ? a.value : a; }\n\nfunction handleUserInfo(uiArgs) {\n    if (!uiArgs || uiArgs.length < 3) return;\n    const mixName = String(argVal(uiArgs[0]));\n    const preset  = String(argVal(uiArgs[1]));\n    const raw     = argVal(uiArgs[2]);\n    const mixNum  = typeof raw === 'number' ? raw : parseInt(raw);\n    if (!mixName || isNaN(mixNum) || mixNum < 1) return;\n    const mi = flow.get('klang_mix_info') || {};\n    mi[String(mixNum)] = { mix_name: mixName, preset, last_updated: new Date().toISOString() };\n    flow.set('klang_mix_info', mi);\n}\n\nif (addr === '/KLANGapp/control/UserInfo') {\n    handleUserInfo(args);\n} else if (addr === 'bundle') {\n    for (const item of (args || [])) {\n        if (item && item.address === '/KLANGapp/control/UserInfo') {\n            handleUserInfo(Array.isArray(item.args) ? item.args : [item.args]);\n        }\n    }\n} else {\n    // Fabrik channel attribute /Kf/ui/<mix>/ch/<ch>/<attr>  (unit tests)\n    const chMatch = addr && addr.match(/^/Kf/ui/(d+)/ch/(d+)/(w+)$/);\n    if (chMatch) {\n        const mix = parseInt(chMatch[1]), ch = parseInt(chMatch[2]), attr = chMatch[3];\n        const TRACKED = ['name', 'mute', 'visible', 'solo'];\n        if (TRACKED.includes(attr)) {\n            const st = flow.get('klang_live_state') || {};\n            const key = mix + ':' + ch;\n            const entry = st[key] || {};\n            entry[attr] = args[0];\n            entry.last_updated = new Date().toISOString();\n            st[key] = entry;\n            flow.set('klang_live_state', st);\n        }\n    }\n}\nreturn null;",
     "outputs": 1,
     "timeout": "",
     "noerr": 0,
@@ -16326,7 +16335,7 @@
     "z": "f776e354064ecd6e",
     "g": "kl_grp_connect",
     "name": "Handle connect",
-    "func": "const old = flow.get('klang_sweep_timers') || [];\nold.forEach(t => clearTimeout(t));\n\nconst params = global.get('parameters') || [];\nconst findP = (dev, n) => (params.find(p => p.category==='Klang' && p.device_name===dev && p.name===n) || {}).value;\nconst konductorIp   = findP('Konductor', 'ip')   || '192.168.200.146';\nconst konductorPort = parseInt(findP('Konductor', 'port') || '9110');\nconst rcvPort = 9111;\nconst secPort = 50716;\nconst uid     = '221e';\n\nconst startedAt = new Date().toISOString();\nflow.set('klang_live_state', {});\nflow.set('klang_mix_info', {});\nflow.set('klang_sweep_active', true);\nflow.set('klang_sweep_mix', 0);\nflow.set('klang_sweep_started_at', startedAt);\nglobal.set('klang_sweep_active', true);\nglobal.set('klang_sweep_started_at', startedAt);\nglobal.set('klang_sweep_mix', 0);\n\nfunction oscStr(s) {\n    const raw = Buffer.from(s + '\\0', 'utf8');\n    const b = Buffer.alloc(Math.ceil(raw.length / 4) * 4, 0);\n    raw.copy(b);\n    return b;\n}\nfunction oscInt(n) { const b = Buffer.alloc(4); b.writeInt32BE(n, 0); return b; }\n\nfunction udpSend(pkt) {\n    node.send([null, null, null, { payload: pkt, ip: konductorIp, port: konductorPort }]);\n}\n\n// ConnectRequest: ,iiisss  [rcvPort, secPort, 40, osStr, '0', uid]\nconst connectPkt = Buffer.concat([\n    oscStr('/KLANGfabrik/control/ConnectRequest'),\n    oscStr(',iiisss'),\n    oscInt(rcvPort), oscInt(secPort), oscInt(40),\n    oscStr('Mac OSX 13.7.8'), oscStr('0'), oscStr(uid),\n]);\nudpSend(connectPkt);\nnode.warn('kl_conn_fn: starting sweep \u2192 ' + konductorIp + ':' + konductorPort);\n\n// SwitchUser: ,isiTs  [mixNum, '', 0, T(zero-width), uid]\nfunction switchUserPkt(m) {\n    return Buffer.concat([\n        oscStr('/KLANGfabrik/control/SwitchUser'),\n        oscStr(',isiTs'),\n        oscInt(m), oscStr(''), oscInt(0),\n        // T type has no data bytes\n        oscStr(uid),\n    ]);\n}\n\nconst timers = [];\nfor (let mix = 1; mix <= 16; mix++) {\n    const m = mix;\n    timers.push(setTimeout(() => {\n        global.set('klang_sweep_mix', m);\n        flow.set('klang_sweep_mix', m);\n        udpSend(switchUserPkt(m));\n    }, 500 + (m - 1) * 600));\n}\n\ntimers.push(setTimeout(() => {\n    flow.set('klang_sweep_active', false);\n    global.set('klang_sweep_active', false);\n    const mi = Object.keys(flow.get('klang_mix_info') || {}).length;\n    const ls = Object.keys(flow.get('klang_live_state') || {}).length;\n    node.warn('kl_conn_fn: done \u2014 ' + mi + ' mixes, ' + ls + ' channel entries');\n    node.send([null, null, { payload: true }, null]);\n}, 500 + 16 * 600 + 500));\n\nflow.set('klang_sweep_timers', timers);",
+    "func": "const old = flow.get('klang_sweep_timers') || [];\nold.forEach(t => clearTimeout(t));\n\nconst params = global.get('parameters') || [];\nconst findP = (dev, n) => (params.find(p => p.category==='Klang' && p.device_name===dev && p.name===n) || {}).value;\nconst konductorIp   = findP('Konductor', 'ip')   || '192.168.200.146';\nconst konductorPort = parseInt(findP('Konductor', 'port') || '9110');\nconst rcvPort = 9111;\nconst secPort = 50716;\nconst uid     = '221e';\n\nconst startedAt = new Date().toISOString();\nflow.set('klang_live_state', {});\nflow.set('klang_mix_info', {});\nflow.set('klang_sweep_active', true);\nflow.set('klang_sweep_mix', 0);\nflow.set('klang_sweep_started_at', startedAt);\nglobal.set('klang_sweep_active', true);\nglobal.set('klang_sweep_started_at', startedAt);\nglobal.set('klang_sweep_mix', 0);\n\nfunction oscStr(s) {\n    const raw = Buffer.from(s + '\\0', 'utf8');\n    const b = Buffer.alloc(Math.ceil(raw.length / 4) * 4, 0);\n    raw.copy(b);\n    return b;\n}\nfunction oscInt(n) { const b = Buffer.alloc(4); b.writeInt32BE(n, 0); return b; }\n\nfunction udpSend(pkt) {\n    node.send([null, null, null, { payload: pkt, ip: konductorIp, port: konductorPort }]);\n}\n\n// ConnectRequest: ,iiisss  [rcvPort, secPort, 40, osStr, '0', uid]\nconst connectPkt = Buffer.concat([\n    oscStr('/KLANGfabrik/control/ConnectRequest'),\n    oscStr(',iiisss'),\n    oscInt(rcvPort), oscInt(secPort), oscInt(40),\n    oscStr('Mac OSX 13.7.8'), oscStr('0'), oscStr(uid),\n]);\nudpSend(connectPkt);\nnode.warn('kl_conn_fn: starting sweep → ' + konductorIp + ':' + konductorPort);\n\n// SwitchUser: ,isiTs  [mixNum, '', 0, T(zero-width), uid]\nfunction switchUserPkt(m) {\n    return Buffer.concat([\n        oscStr('/KLANGfabrik/control/SwitchUser'),\n        oscStr(',isiTs'),\n        oscInt(m), oscStr(''), oscInt(0),\n        // T type has no data bytes\n        oscStr(uid),\n    ]);\n}\n\nconst timers = [];\nfor (let mix = 1; mix <= 16; mix++) {\n    const m = mix;\n    timers.push(setTimeout(() => {\n        global.set('klang_sweep_mix', m);\n        flow.set('klang_sweep_mix', m);\n        udpSend(switchUserPkt(m));\n    }, 500 + (m - 1) * 600));\n}\n\ntimers.push(setTimeout(() => {\n    flow.set('klang_sweep_active', false);\n    global.set('klang_sweep_active', false);\n    const mi = Object.keys(flow.get('klang_mix_info') || {}).length;\n    const ls = Object.keys(flow.get('klang_live_state') || {}).length;\n    node.warn('kl_conn_fn: done — ' + mi + ' mixes, ' + ls + ' channel entries');\n    node.send([null, null, { payload: true }, null]);\n}, 500 + 16 * 600 + 500));\n\nflow.set('klang_sweep_timers', timers);",
     "outputs": 4,
     "timeout": "",
     "noerr": 0,
@@ -16356,7 +16365,7 @@
     "type": "link out",
     "z": "f776e354064ecd6e",
     "g": "kl_grp_connect",
-    "name": "\u2192 klang comms",
+    "name": "→ klang comms",
     "mode": "link",
     "links": [
       "fc14052b61f54c21"
@@ -16370,7 +16379,7 @@
     "type": "link in",
     "z": "f776e354064ecd6e",
     "g": "kl_grp_consensus",
-    "name": "bc \u2190 sweep",
+    "name": "bc ← sweep",
     "links": [],
     "x": 95,
     "y": 2340,
@@ -16385,7 +16394,7 @@
     "type": "link in",
     "z": "f776e354064ecd6e",
     "g": "kl_grp_consensus",
-    "name": "bc \u2190 cmd",
+    "name": "bc ← cmd",
     "links": [],
     "x": 175,
     "y": 2380,
@@ -16401,7 +16410,7 @@
     "z": "f776e354064ecd6e",
     "g": "kl_grp_consensus",
     "name": "Build Consensus",
-    "func": "const testMode = global.get('klang_test_mode');\nconst state = testMode\n    ? (global.get('klang_live_state') || {})\n    : (flow.get('klang_live_state') || {});\nconst mixInfo = testMode ? {} : (flow.get('klang_mix_info') || {});\nconst stateKeys = Object.keys(state);\nconst mixInfoKeys = Object.keys(mixInfo);\n\nif (stateKeys.length === 0 && mixInfoKeys.length === 0) {\n    const errMsg = {\n        level: 'ERROR', message: 'buildConsensus: live state is empty',\n        cmd: '/cc/klang/buildConsensus', flow: '/cc/klang', depth: 1, millis: Date.now()\n    };\n    global.set('klang_master_mix', null);\n    global.set('klang_variances', null);\n    node.send([errMsg, null, null]);\n    return null;\n}\n\n// Phase 1: mix names discovered, no per-channel data yet\nif (stateKeys.length === 0 && mixInfoKeys.length > 0) {\n    const generatedAt = new Date().toISOString();\n    const mixes = {};\n    for (const [k, v] of Object.entries(mixInfo)) {\n        mixes[k] = { mix_name: v.mix_name, preset: v.preset };\n    }\n    const masterMix = {\n        generated_at: generatedAt,\n        channels_with_data: 0,\n        mix_count: mixInfoKeys.length,\n        mixes,\n        channels: {},\n        phase: 'mix_names_only'\n    };\n    flow.set('klang_master_mix', masterMix);\n    global.set('klang_master_mix', masterMix);\n\n    const varianceReport = {\n        generated_at: generatedAt,\n        total_variances: 0,\n        variances: [],\n        note: 'Per-channel data pending \u2014 Klang auth not yet implemented'\n    };\n    flow.set('klang_variances', varianceReport);\n    global.set('klang_variances', varianceReport);\n\n    node.send([\n        { level: 'INFO', message: 'Mix names discovered: ' + mixInfoKeys.length + ' mixes, per-channel data pending',\n          cmd: '/cc/klang/buildConsensus', flow: '/cc/klang', depth: 1, millis: Date.now() },\n        { payload: { ok: true, generated_at: generatedAt, channels_with_data: 0, mix_count: mixInfoKeys.length, total_variances: 0 } },\n        null\n    ]);\n    return null;\n}\n\n// Full channel consensus (Phase 2 / unit tests)\nconst TRACKED  = ['name', 'mute', 'visible', 'solo'];\nconst SEVERITY = { name: 'warning', mute: 'critical', visible: 'warning', solo: 'warning' };\n\n// Accumulate votes[ch][attr][jsonVal] = { count, mixes[] }\nconst votes = {};\nfor (const key of stateKeys) {\n    const [mixStr, chStr] = key.split(':');\n    const mix = parseInt(mixStr);\n    const ch  = parseInt(chStr);\n    const e   = state[key];\n    if (!votes[ch]) votes[ch] = {};\n    for (const attr of TRACKED) {\n        if (e[attr] === undefined) continue;\n        const v = JSON.stringify(e[attr]);\n        if (!votes[ch][attr]) votes[ch][attr] = {};\n        if (!votes[ch][attr][v]) votes[ch][attr][v] = { count: 0, mixes: [] };\n        votes[ch][attr][v].count++;\n        votes[ch][attr][v].mixes.push(mix);\n    }\n}\n\n// Resolve consensus: plurality, tie-break by lowest mix number\nconst channels = {};\nfor (const ch of Object.keys(votes)) {\n    channels[ch] = {};\n    for (const attr of TRACKED) {\n        if (!votes[ch][attr]) continue;\n        const candidates = Object.entries(votes[ch][attr]);\n        candidates.sort((a, b) =>\n            b[1].count !== a[1].count\n                ? b[1].count - a[1].count\n                : Math.min(...a[1].mixes) - Math.min(...b[1].mixes)\n        );\n        const [topVal, topInfo] = candidates[0];\n        const total = candidates.reduce((s, [, v]) => s + v.count, 0);\n        channels[ch][attr] = {\n            consensus:   JSON.parse(topVal),\n            vote_count:  topInfo.count,\n            total_votes: total\n        };\n    }\n}\n\nconst generatedAt = new Date().toISOString();\nconst mixes = {};\nfor (const [k, v] of Object.entries(mixInfo)) {\n    mixes[k] = { mix_name: v.mix_name, preset: v.preset };\n}\nconst masterMix = {\n    generated_at: generatedAt,\n    channels_with_data: Object.keys(channels).length,\n    mix_count: 16,\n    mixes,\n    channels\n};\nflow.set('klang_master_mix', masterMix);\nglobal.set('klang_master_mix', masterMix);\n\n// Compute variances\nconst variances = [];\nfor (const key of stateKeys) {\n    const [mixStr, chStr] = key.split(':');\n    const mix = parseInt(mixStr);\n    const ch  = parseInt(chStr);\n    const e   = state[key];\n    const cons = channels[ch] || {};\n    for (const attr of TRACKED) {\n        if (e[attr] === undefined) continue;\n        const c = cons[attr];\n        if (!c) continue;\n        if (JSON.stringify(e[attr]) !== JSON.stringify(c.consensus)) {\n            variances.push({\n                mix, channel: ch, attribute: attr,\n                consensus: c.consensus,\n                actual:    e[attr],\n                severity:  SEVERITY[attr],\n                vote_count:  c.vote_count,\n                total_votes: c.total_votes\n            });\n        }\n    }\n}\n\nconst critCount = variances.filter(v => v.severity === 'critical').length;\nconst varianceReport = {\n    generated_at: generatedAt,\n    total_variances: variances.length,\n    critical_count: critCount,\n    variances\n};\nflow.set('klang_variances', varianceReport);\nglobal.set('klang_variances', varianceReport);\n\nconst logLevel = variances.length > 0 ? 'WARN' : 'INFO';\nconst logMsg   = `Consensus built: ${masterMix.channels_with_data} channels, ${variances.length} variances`;\n\nnode.send([\n    { level: logLevel, message: logMsg, cmd: '/cc/klang/buildConsensus', flow: '/cc/klang', depth: 1, millis: Date.now() },\n    { payload: { ok: true, generated_at: generatedAt, channels_with_data: masterMix.channels_with_data, mix_count: 16, total_variances: variances.length } },\n    null\n]);\nreturn null;",
+    "func": "const testMode = global.get('klang_test_mode');\nconst state = testMode\n    ? (global.get('klang_live_state') || {})\n    : (flow.get('klang_live_state') || {});\nconst mixInfo = testMode ? {} : (flow.get('klang_mix_info') || {});\nconst stateKeys = Object.keys(state);\nconst mixInfoKeys = Object.keys(mixInfo);\n\nif (stateKeys.length === 0 && mixInfoKeys.length === 0) {\n    const errMsg = {\n        level: 'ERROR', message: 'buildConsensus: live state is empty',\n        cmd: '/cc/klang/buildConsensus', flow: '/cc/klang', depth: 1, millis: Date.now()\n    };\n    global.set('klang_master_mix', null);\n    global.set('klang_variances', null);\n    node.send([errMsg, null, null]);\n    return null;\n}\n\n// Phase 1: mix names discovered, no per-channel data yet\nif (stateKeys.length === 0 && mixInfoKeys.length > 0) {\n    const generatedAt = new Date().toISOString();\n    const mixes = {};\n    for (const [k, v] of Object.entries(mixInfo)) {\n        mixes[k] = { mix_name: v.mix_name, preset: v.preset };\n    }\n    const masterMix = {\n        generated_at: generatedAt,\n        channels_with_data: 0,\n        mix_count: mixInfoKeys.length,\n        mixes,\n        channels: {},\n        phase: 'mix_names_only'\n    };\n    flow.set('klang_master_mix', masterMix);\n    global.set('klang_master_mix', masterMix);\n\n    const varianceReport = {\n        generated_at: generatedAt,\n        total_variances: 0,\n        variances: [],\n        note: 'Per-channel data pending — Klang auth not yet implemented'\n    };\n    flow.set('klang_variances', varianceReport);\n    global.set('klang_variances', varianceReport);\n\n    node.send([\n        { level: 'INFO', message: 'Mix names discovered: ' + mixInfoKeys.length + ' mixes, per-channel data pending',\n          cmd: '/cc/klang/buildConsensus', flow: '/cc/klang', depth: 1, millis: Date.now() },\n        { payload: { ok: true, generated_at: generatedAt, channels_with_data: 0, mix_count: mixInfoKeys.length, total_variances: 0 } },\n        null\n    ]);\n    return null;\n}\n\n// Full channel consensus (Phase 2 / unit tests)\nconst TRACKED  = ['name', 'mute', 'visible', 'solo'];\nconst SEVERITY = { name: 'warning', mute: 'critical', visible: 'warning', solo: 'warning' };\n\n// Accumulate votes[ch][attr][jsonVal] = { count, mixes[] }\nconst votes = {};\nfor (const key of stateKeys) {\n    const [mixStr, chStr] = key.split(':');\n    const mix = parseInt(mixStr);\n    const ch  = parseInt(chStr);\n    const e   = state[key];\n    if (!votes[ch]) votes[ch] = {};\n    for (const attr of TRACKED) {\n        if (e[attr] === undefined) continue;\n        const v = JSON.stringify(e[attr]);\n        if (!votes[ch][attr]) votes[ch][attr] = {};\n        if (!votes[ch][attr][v]) votes[ch][attr][v] = { count: 0, mixes: [] };\n        votes[ch][attr][v].count++;\n        votes[ch][attr][v].mixes.push(mix);\n    }\n}\n\n// Resolve consensus: plurality, tie-break by lowest mix number\nconst channels = {};\nfor (const ch of Object.keys(votes)) {\n    channels[ch] = {};\n    for (const attr of TRACKED) {\n        if (!votes[ch][attr]) continue;\n        const candidates = Object.entries(votes[ch][attr]);\n        candidates.sort((a, b) =>\n            b[1].count !== a[1].count\n                ? b[1].count - a[1].count\n                : Math.min(...a[1].mixes) - Math.min(...b[1].mixes)\n        );\n        const [topVal, topInfo] = candidates[0];\n        const total = candidates.reduce((s, [, v]) => s + v.count, 0);\n        channels[ch][attr] = {\n            consensus:   JSON.parse(topVal),\n            vote_count:  topInfo.count,\n            total_votes: total\n        };\n    }\n}\n\nconst generatedAt = new Date().toISOString();\nconst mixes = {};\nfor (const [k, v] of Object.entries(mixInfo)) {\n    mixes[k] = { mix_name: v.mix_name, preset: v.preset };\n}\nconst masterMix = {\n    generated_at: generatedAt,\n    channels_with_data: Object.keys(channels).length,\n    mix_count: 16,\n    mixes,\n    channels\n};\nflow.set('klang_master_mix', masterMix);\nglobal.set('klang_master_mix', masterMix);\n\n// Compute variances\nconst variances = [];\nfor (const key of stateKeys) {\n    const [mixStr, chStr] = key.split(':');\n    const mix = parseInt(mixStr);\n    const ch  = parseInt(chStr);\n    const e   = state[key];\n    const cons = channels[ch] || {};\n    for (const attr of TRACKED) {\n        if (e[attr] === undefined) continue;\n        const c = cons[attr];\n        if (!c) continue;\n        if (JSON.stringify(e[attr]) !== JSON.stringify(c.consensus)) {\n            variances.push({\n                mix, channel: ch, attribute: attr,\n                consensus: c.consensus,\n                actual:    e[attr],\n                severity:  SEVERITY[attr],\n                vote_count:  c.vote_count,\n                total_votes: c.total_votes\n            });\n        }\n    }\n}\n\nconst critCount = variances.filter(v => v.severity === 'critical').length;\nconst varianceReport = {\n    generated_at: generatedAt,\n    total_variances: variances.length,\n    critical_count: critCount,\n    variances\n};\nflow.set('klang_variances', varianceReport);\nglobal.set('klang_variances', varianceReport);\n\nconst logLevel = variances.length > 0 ? 'WARN' : 'INFO';\nconst logMsg   = `Consensus built: ${masterMix.channels_with_data} channels, ${variances.length} variances`;\n\nnode.send([\n    { level: logLevel, message: logMsg, cmd: '/cc/klang/buildConsensus', flow: '/cc/klang', depth: 1, millis: Date.now() },\n    { payload: { ok: true, generated_at: generatedAt, channels_with_data: masterMix.channels_with_data, mix_count: 16, total_variances: variances.length } },\n    null\n]);\nreturn null;",
     "outputs": 3,
     "timeout": "",
     "noerr": 0,
@@ -16425,7 +16434,7 @@
     "type": "link out",
     "z": "f776e354064ecd6e",
     "g": "kl_grp_consensus",
-    "name": "\u2192 event log INFO",
+    "name": "→ event log INFO",
     "mode": "link",
     "links": [
       "4ebc74cedf7f2223"
@@ -16457,7 +16466,7 @@
     "type": "link out",
     "z": "f776e354064ecd6e",
     "g": "kl_grp_connect",
-    "name": "\u2192 event log",
+    "name": "→ event log",
     "mode": "link",
     "links": [
       "4ebc74cedf7f2223"
@@ -23081,7 +23090,7 @@
     "z": "a1b2c3d4e5f60001",
     "g": "kl_api_grp",
     "name": "POST /api/klang/buildconsensus",
-    "func": "const token = msg.req.headers['x-api-token'];\nconst validToken = flow.get('api_token') || 'vn-api-changeme';\nif (!token || token !== validToken) {\n    msg.statusCode = 401;\n    msg.payload = { error: 'Unauthorized' };\n    return msg;\n}\n\nconst sweepActive = global.get('klang_sweep_active') || false;\nif (sweepActive) {\n    const startedAt = global.get('klang_sweep_started_at') || '?';\n    msg.statusCode = 409;\n    msg.payload = { ok: false, error: 'Sweep already in progress', started_at: startedAt };\n    return [msg, null];\n}\n\nconst hubMsg = {\n    cmd: '/cc/klang/connect',\n    parm: {}, source: 'http-api',\n    flow: 'HTTP API', level: 'INFO',\n    millis: Date.now(), depth: 1,\n    message: 'POST /api/klang/buildconsensus \u2014 triggering sweep'\n};\n\nmsg.statusCode = 202;\nmsg.payload = {\n    ok: true,\n    message: 'Sweep started. ~17s. Poll GET /api/klang/status for completion.',\n    sweep_started_at: new Date().toISOString(),\n    estimated_duration_s: 17\n};\nreturn [msg, hubMsg];\n",
+    "func": "const token = msg.req.headers['x-api-token'];\nconst validToken = flow.get('api_token') || 'vn-api-changeme';\nif (!token || token !== validToken) {\n    msg.statusCode = 401;\n    msg.payload = { error: 'Unauthorized' };\n    return msg;\n}\n\nconst sweepActive = global.get('klang_sweep_active') || false;\nif (sweepActive) {\n    const startedAt = global.get('klang_sweep_started_at') || '?';\n    msg.statusCode = 409;\n    msg.payload = { ok: false, error: 'Sweep already in progress', started_at: startedAt };\n    return [msg, null];\n}\n\nconst hubMsg = {\n    cmd: '/cc/klang/connect',\n    parm: {}, source: 'http-api',\n    flow: 'HTTP API', level: 'INFO',\n    millis: Date.now(), depth: 1,\n    message: 'POST /api/klang/buildconsensus — triggering sweep'\n};\n\nmsg.statusCode = 202;\nmsg.payload = {\n    ok: true,\n    message: 'Sweep started. ~17s. Poll GET /api/klang/status for completion.',\n    sweep_started_at: new Date().toISOString(),\n    estimated_duration_s: 17\n};\nreturn [msg, hubMsg];\n",
     "outputs": 2,
     "timeout": "",
     "noerr": 0,
@@ -23115,7 +23124,7 @@
     "type": "link out",
     "z": "a1b2c3d4e5f60001",
     "g": "kl_api_grp",
-    "name": "\u2192 message hub",
+    "name": "→ message hub",
     "mode": "link",
     "links": [
       "b33643a1f31204d1"
@@ -57355,7 +57364,7 @@
     "z": "19d5331c153e82dd",
     "g": "bc807561859246ce",
     "name": "Build HTML Table",
-    "func": "const state = msg.payload;\n\nif (!state.device || !state.outputRouting) {\n    msg.payload = '<p style=\"color: red;\">No Videohub data available</p>';\n    return msg;\n}\n\nconst inputLabels = state.inputLabels || {};\nconst outputLabels = state.outputLabels || {};\nconst outputRouting = state.outputRouting || {};\n\n// Get counts from device info\nconst numInputs = parseInt(state.device['Video inputs']) || 0;\nconst numOutputs = parseInt(state.device['Video outputs']) || 0;\n\n// Build HTML\nlet html = `\n<!DOCTYPE html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Videohub Routing Matrix</title>\n    <style>\n        body {\n            margin: 0;\n            padding: 20px;\n            font-family: Arial, sans-serif;\n            background-color: #f5f5f5;\n        }\n        .header {\n            background: white;\n            padding: 20px;\n            margin-bottom: 10px;\n            border-radius: 8px;\n            box-shadow: 0 2px 4px rgba(0,0,0,0.1);\n        }\n        h1 {\n            margin: 0 0 10px 0;\n            color: #333;\n        }\n        .device-info {\n            padding: 10px;\n            background: #f0f0f0;\n            border-radius: 4px;\n        }\n        .table-container {\n            background: white;\n            border-radius: 8px;\n            box-shadow: 0 2px 4px rgba(0,0,0,0.1);\n            height: calc(100vh - 200px);\n            overflow: scroll;\n            position: relative;\n        }\n        table {\n            border-collapse: collapse;\n        }\n        th, td {\n            min-width: 50px;\n            height: 40px;\n            border: 1px solid #ddd;\n            padding: 8px;\n            text-align: center;\n            background: white;\n        }\n        /* Freeze first column */\n        th:first-child,\n        td:first-child {\n            position: sticky;\n            left: 0;\n            z-index: 2;\n            background: #2196F3;\n            color: white;\n            font-weight: bold;\n            text-align: left;\n            min-width: 150px;\n            border-right: 2px solid #333;\n        }\n        /* Freeze header row */\n        thead th {\n            position: sticky;\n            top: 0;\n            z-index: 3;\n            background: #4CAF50;\n            color: white;\n            font-weight: bold;\n            padding: 10px 8px;\n        }\n        /* Top-left corner cell */\n        thead th:first-child {\n            z-index: 4;\n            background: #1976D2;\n        }\n        .output-label {\n            writing-mode: vertical-rl;\n            text-orientation: mixed;\n            white-space: nowrap;\n        }\n        .port-number {\n            font-size: 0.75em;\n            opacity: 0.8;\n            display: block;\n            margin-top: 4px;\n        }\n        .routed {\n            background-color: #4CAF50 !important;\n            color: white;\n            font-weight: bold;\n            font-size: 1.2em;\n        }\n        .not-routed {\n            background-color: #fafafa;\n        }\n    </style>\n</head>\n<body>\n    <div class=\"header\">\n        <h1>Videohub Routing Matrix</h1>\n        <div class=\"device-info\">\n            <strong>Device:</strong> ${state.device['Model name'] || 'Unknown'} | \n            <strong>Inputs:</strong> ${numInputs} | \n            <strong>Outputs:</strong> ${numOutputs}\n        </div>\n    </div>\n    <div class=\"table-container\">\n        <table>\n            <thead>\n                <tr>\n                    <th>Outputs \u2b95<br/>Inputs \u2b07</th>\n`;\n\n// Output column headers\nfor (let o = 0; o < numOutputs; o++) {\n    const label = outputLabels[o] || `Output ${o + 1}`;\n    html += `                    <th>\n                        <div class=\"output-label\">${label}<span class=\"port-number\">[${o + 1}]</span></div>\n                    </th>\n`;\n}\n\nhtml += `                </tr>\n            </thead>\n            <tbody>\n`;\n\n// Input rows\nfor (let i = 0; i < numInputs; i++) {\n    const inputLabel = inputLabels[i] || `Input ${i + 1}`;\n    html += `                <tr>\n                    <td>${inputLabel}<span class=\"port-number\">[${i + 1}]</span></td>\n`;\n    \n    // Check each output for this input\n    for (let o = 0; o < numOutputs; o++) {\n        const isRouted = outputRouting[o] == i;\n        const className = isRouted ? 'routed' : 'not-routed';\n        const content = isRouted ? '\u2713' : '';\n        html += `                    <td class=\"${className}\">${content}</td>\n`;\n    }\n    \n    html += `                </tr>\n`;\n}\n\nhtml += `            </tbody>\n        </table>\n    </div>\n</body>\n</html>\n`;\n\nmsg.payload = html;\nreturn msg;",
+    "func": "const state = msg.payload;\n\nif (!state.device || !state.outputRouting) {\n    msg.payload = '<p style=\"color: red;\">No Videohub data available</p>';\n    return msg;\n}\n\nconst inputLabels = state.inputLabels || {};\nconst outputLabels = state.outputLabels || {};\nconst outputRouting = state.outputRouting || {};\n\n// Get counts from device info\nconst numInputs = parseInt(state.device['Video inputs']) || 0;\nconst numOutputs = parseInt(state.device['Video outputs']) || 0;\n\n// Build HTML\nlet html = `\n<!DOCTYPE html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Videohub Routing Matrix</title>\n    <style>\n        body {\n            margin: 0;\n            padding: 20px;\n            font-family: Arial, sans-serif;\n            background-color: #f5f5f5;\n        }\n        .header {\n            background: white;\n            padding: 20px;\n            margin-bottom: 10px;\n            border-radius: 8px;\n            box-shadow: 0 2px 4px rgba(0,0,0,0.1);\n        }\n        h1 {\n            margin: 0 0 10px 0;\n            color: #333;\n        }\n        .device-info {\n            padding: 10px;\n            background: #f0f0f0;\n            border-radius: 4px;\n        }\n        .table-container {\n            background: white;\n            border-radius: 8px;\n            box-shadow: 0 2px 4px rgba(0,0,0,0.1);\n            height: calc(100vh - 200px);\n            overflow: scroll;\n            position: relative;\n        }\n        table {\n            border-collapse: collapse;\n        }\n        th, td {\n            min-width: 50px;\n            height: 40px;\n            border: 1px solid #ddd;\n            padding: 8px;\n            text-align: center;\n            background: white;\n        }\n        /* Freeze first column */\n        th:first-child,\n        td:first-child {\n            position: sticky;\n            left: 0;\n            z-index: 2;\n            background: #2196F3;\n            color: white;\n            font-weight: bold;\n            text-align: left;\n            min-width: 150px;\n            border-right: 2px solid #333;\n        }\n        /* Freeze header row */\n        thead th {\n            position: sticky;\n            top: 0;\n            z-index: 3;\n            background: #4CAF50;\n            color: white;\n            font-weight: bold;\n            padding: 10px 8px;\n        }\n        /* Top-left corner cell */\n        thead th:first-child {\n            z-index: 4;\n            background: #1976D2;\n        }\n        .output-label {\n            writing-mode: vertical-rl;\n            text-orientation: mixed;\n            white-space: nowrap;\n        }\n        .port-number {\n            font-size: 0.75em;\n            opacity: 0.8;\n            display: block;\n            margin-top: 4px;\n        }\n        .routed {\n            background-color: #4CAF50 !important;\n            color: white;\n            font-weight: bold;\n            font-size: 1.2em;\n        }\n        .not-routed {\n            background-color: #fafafa;\n        }\n    </style>\n</head>\n<body>\n    <div class=\"header\">\n        <h1>Videohub Routing Matrix</h1>\n        <div class=\"device-info\">\n            <strong>Device:</strong> ${state.device['Model name'] || 'Unknown'} | \n            <strong>Inputs:</strong> ${numInputs} | \n            <strong>Outputs:</strong> ${numOutputs}\n        </div>\n    </div>\n    <div class=\"table-container\">\n        <table>\n            <thead>\n                <tr>\n                    <th>Outputs ⮕<br/>Inputs ⬇</th>\n`;\n\n// Output column headers\nfor (let o = 0; o < numOutputs; o++) {\n    const label = outputLabels[o] || `Output ${o + 1}`;\n    html += `                    <th>\n                        <div class=\"output-label\">${label}<span class=\"port-number\">[${o + 1}]</span></div>\n                    </th>\n`;\n}\n\nhtml += `                </tr>\n            </thead>\n            <tbody>\n`;\n\n// Input rows\nfor (let i = 0; i < numInputs; i++) {\n    const inputLabel = inputLabels[i] || `Input ${i + 1}`;\n    html += `                <tr>\n                    <td>${inputLabel}<span class=\"port-number\">[${i + 1}]</span></td>\n`;\n    \n    // Check each output for this input\n    for (let o = 0; o < numOutputs; o++) {\n        const isRouted = outputRouting[o] == i;\n        const className = isRouted ? 'routed' : 'not-routed';\n        const content = isRouted ? '✓' : '';\n        html += `                    <td class=\"${className}\">${content}</td>\n`;\n    }\n    \n    html += `                </tr>\n`;\n}\n\nhtml += `            </tbody>\n        </table>\n    </div>\n</body>\n</html>\n`;\n\nmsg.payload = html;\nreturn msg;",
     "outputs": 1,
     "noerr": 0,
     "initialize": "",
@@ -67819,7 +67828,7 @@
     "type": "function",
     "z": "tab-api-network",
     "name": "Collect & store results",
-    "func": "var result = msg.pingResult;\nvar pending = flow.get('network_ping_pending') || [];\nvar count = (flow.get('network_ping_count') || 0) + 1;\nvar total = flow.get('network_ping_total') || pending.length;\n\n// Match by IP\nvar idx = pending.findIndex(function(r) { return r.ip === result.ip; });\nif (idx >= 0) {\n    pending[idx].packets_sent     = result.packets_sent;\n    pending[idx].packets_received = result.packets_received;\n    pending[idx].avg_ms           = result.avg_ms;\n    pending[idx].loss_pct         = result.loss_pct;\n    pending[idx].status           = result.status;\n}\n\nflow.set('network_ping_pending', pending);\nflow.set('network_ping_count', count);\n\n// When all results are in, commit to the stable cache\nif (count >= total) {\n    flow.set('network_ping_results', JSON.parse(JSON.stringify(pending)));\n    flow.set('network_ping_generated_at', new Date().toISOString());\n    flow.set('network_ping_count', 0);\n}\n\nreturn null; // no output \u2014 HTTP handler reads from flow context",
+    "func": "var result = msg.pingResult;\nvar pending = flow.get('network_ping_pending') || [];\nvar count = (flow.get('network_ping_count') || 0) + 1;\nvar total = flow.get('network_ping_total') || pending.length;\n\n// Match by IP\nvar idx = pending.findIndex(function(r) { return r.ip === result.ip; });\nif (idx >= 0) {\n    pending[idx].packets_sent     = result.packets_sent;\n    pending[idx].packets_received = result.packets_received;\n    pending[idx].avg_ms           = result.avg_ms;\n    pending[idx].loss_pct         = result.loss_pct;\n    pending[idx].status           = result.status;\n}\n\nflow.set('network_ping_pending', pending);\nflow.set('network_ping_count', count);\n\n// When all results are in, commit to the stable cache\nif (count >= total) {\n    flow.set('network_ping_results', JSON.parse(JSON.stringify(pending)));\n    flow.set('network_ping_generated_at', new Date().toISOString());\n    flow.set('network_ping_count', 0);\n}\n\nreturn null; // no output — HTTP handler reads from flow context",
     "outputs": 0,
     "noerr": 0,
     "initialize": "",
@@ -67851,7 +67860,7 @@
     "type": "function",
     "z": "tab-api-network",
     "name": "Build response",
-    "func": "var results = flow.get('network_ping_results');\nvar generatedAt = flow.get('network_ping_generated_at');\n\nif (!results) {\n    msg.statusCode = 503;\n    msg.payload = { error: 'No ping data yet \u2014 sweep in progress or not started' };\n} else {\n    msg.statusCode = 200;\n    msg.payload = {\n        generated_at: generatedAt,\n        results: results\n    };\n}\n\nmsg.headers = { 'Content-Type': 'application/json' };\nreturn msg;",
+    "func": "var results = flow.get('network_ping_results');\nvar generatedAt = flow.get('network_ping_generated_at');\n\nif (!results) {\n    msg.statusCode = 503;\n    msg.payload = { error: 'No ping data yet — sweep in progress or not started' };\n} else {\n    msg.statusCode = 200;\n    msg.payload = {\n        generated_at: generatedAt,\n        results: results\n    };\n}\n\nmsg.headers = { 'Content-Type': 'application/json' };\nreturn msg;",
     "outputs": 1,
     "noerr": 0,
     "initialize": "",
@@ -68235,7 +68244,7 @@
     "z": "423652b85f130c5f",
     "g": "d3819f7fd7316fa9",
     "name": "atem_tally_fn",
-    "func": "// ATEM program-input tally handler\n// Accepts both:\n//   Companion HTTP push: {me:1, source:\"3\"}  (me is 1-based: 1=ME1, 2=ME2)\n//   atem-atem node:      msg.payload.data.ME (0-based) + msg.payload.data.videoSource.id\nconst CAMERA_INPUTS = [1, 2, 3];\nconst SUPERSOURCE_ID = 6000;\n\nconst pl = msg.payload || {};\nlet me, sourceId;\n\nif (pl.me != null && pl.source != null) {\n    // Companion HTTP push \u2014 me is 1-based\n    me       = Number(pl.me) - 1;   // normalise to 0-based\n    sourceId = Number(pl.source);\n} else if (pl.data) {\n    // atem-atem node\n    const d = pl.data;\n    me       = (d.ME != null) ? Number(d.ME) : 0;\n    sourceId = d.videoSource ? Number(d.videoSource.id) : null;\n} else {\n    node.warn('atem_tally_fn: unrecognised payload: ' + JSON.stringify(pl));\n    return null;\n}\n\nif (sourceId === null || isNaN(sourceId) || me < 0) return null;\n\nif      (me === 0) flow.set('atem_me1_program', sourceId);\nelse if (me === 1) flow.set('atem_me2_program', sourceId);\nelse return null;\n\nconst me1 = flow.get('atem_me1_program') || 0;\nconst me2 = flow.get('atem_me2_program') || 0;\n\nconst activeCameras = new Set();\nif (CAMERA_INPUTS.includes(me1)) activeCameras.add(me1);\nif (me1 === SUPERSOURCE_ID && CAMERA_INPUTS.includes(me2)) activeCameras.add(me2);\n\nconst cameraMap = flow.get('cameraMap') || {};\nconst tallyMsgs = [];\nCAMERA_INPUTS.forEach(cam => {\n    if (!cameraMap[cam]) return;\n    tallyMsgs.push({\n        topic:   activeCameras.has(cam) ? 'tally-on' : 'tally-off',\n        payload: { ip: cameraMap[cam].ip, port: cameraMap[cam].port, input: cam }\n    });\n});\n\nconst meLabel    = `ME${me + 1}`;\nconst activeList = activeCameras.size ? `Cam ${[...activeCameras].sort().join(',')}` : 'none';\nconst statusTxt  = `${meLabel} src=${sourceId} \u2192 tally: ${activeList}`;\nnode.warn('atem_tally_fn: ' + statusTxt);\nnode.status({ fill: activeCameras.size ? 'green' : 'grey', shape: 'dot', text: statusTxt });\n\nconst logMsg = {\n    payload: {\n        timestamp: Date.now(),\n        level: 'Info',\n        category: 'ATEM',\n        source: meLabel + ' programInput',\n        event: statusTxt\n    },\n    topic: 'atem-tally-' + Date.now()\n};\n\n// HTTP response (only present when request came from HTTP in)\nconst httpRes = msg.res ? { payload: { ok: true }, res: msg.res } : null;\n\nreturn [tallyMsgs.length ? tallyMsgs : null, logMsg, httpRes];\n",
+    "func": "// ATEM program-input tally handler\n// Accepts both:\n//   Companion HTTP push: {me:1, source:\"3\"}  (me is 1-based: 1=ME1, 2=ME2)\n//   atem-atem node:      msg.payload.data.ME (0-based) + msg.payload.data.videoSource.id\nconst CAMERA_INPUTS = [1, 2, 3];\nconst SUPERSOURCE_ID = 6000;\n\nconst pl = msg.payload || {};\nlet me, sourceId;\n\nif (pl.me != null && pl.source != null) {\n    // Companion HTTP push — me is 1-based\n    me       = Number(pl.me) - 1;   // normalise to 0-based\n    sourceId = Number(pl.source);\n} else if (pl.data) {\n    // atem-atem node\n    const d = pl.data;\n    me       = (d.ME != null) ? Number(d.ME) : 0;\n    sourceId = d.videoSource ? Number(d.videoSource.id) : null;\n} else {\n    node.warn('atem_tally_fn: unrecognised payload: ' + JSON.stringify(pl));\n    return null;\n}\n\nif (sourceId === null || isNaN(sourceId) || me < 0) return null;\n\nif      (me === 0) flow.set('atem_me1_program', sourceId);\nelse if (me === 1) flow.set('atem_me2_program', sourceId);\nelse return null;\n\nconst me1 = flow.get('atem_me1_program') || 0;\nconst me2 = flow.get('atem_me2_program') || 0;\n\nconst activeCameras = new Set();\nif (CAMERA_INPUTS.includes(me1)) activeCameras.add(me1);\nif (me1 === SUPERSOURCE_ID && CAMERA_INPUTS.includes(me2)) activeCameras.add(me2);\n\nconst cameraMap = flow.get('cameraMap') || {};\nconst tallyMsgs = [];\nCAMERA_INPUTS.forEach(cam => {\n    if (!cameraMap[cam]) return;\n    tallyMsgs.push({\n        topic:   activeCameras.has(cam) ? 'tally-on' : 'tally-off',\n        payload: { ip: cameraMap[cam].ip, port: cameraMap[cam].port, input: cam }\n    });\n});\n\nconst meLabel    = `ME${me + 1}`;\nconst activeList = activeCameras.size ? `Cam ${[...activeCameras].sort().join(',')}` : 'none';\nconst statusTxt  = `${meLabel} src=${sourceId} → tally: ${activeList}`;\nnode.warn('atem_tally_fn: ' + statusTxt);\nnode.status({ fill: activeCameras.size ? 'green' : 'grey', shape: 'dot', text: statusTxt });\n\nconst logMsg = {\n    payload: {\n        timestamp: Date.now(),\n        level: 'Info',\n        category: 'ATEM',\n        source: meLabel + ' programInput',\n        event: statusTxt\n    },\n    topic: 'atem-tally-' + Date.now()\n};\n\n// HTTP response (only present when request came from HTTP in)\nconst httpRes = msg.res ? { payload: { ok: true }, res: msg.res } : null;\n\nreturn [tallyMsgs.length ? tallyMsgs : null, logMsg, httpRes];\n",
     "outputs": 3,
     "noerr": 0,
     "initialize": "",
@@ -68260,7 +68269,7 @@
     "type": "link out",
     "z": "423652b85f130c5f",
     "g": "d3819f7fd7316fa9",
-    "name": "ATEM \u2192 UI Event Log",
+    "name": "ATEM → UI Event Log",
     "mode": "link",
     "links": [
       "atem_ui_evtlog_in"
@@ -68290,7 +68299,7 @@
     "id": "atem_pi_lout",
     "type": "link out",
     "z": "96ac9944.5b4dd8",
-    "name": "\u2192 ATEM tally fn",
+    "name": "→ ATEM tally fn",
     "mode": "link",
     "links": [
       "atem_pi_lin"
@@ -68304,7 +68313,7 @@
     "type": "link in",
     "z": "423652b85f130c5f",
     "g": "d3819f7fd7316fa9",
-    "name": "\u2190 programInput",
+    "name": "← programInput",
     "links": [
       "atem_pi_lout"
     ],
@@ -68457,6 +68466,2198 @@
       [
         "37c75c6928771478"
       ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a59601",
+    "type": "tab",
+    "label": "UI Lights v2",
+    "disabled": false,
+    "info": "Dashboard 2 UI for ETC ColorSource"
+  },
+  {
+    "id": "f0e1d2c3b4a59602",
+    "type": "tab",
+    "label": "/cc/lights",
+    "disabled": false,
+    "info": "Execution tab for ETC ColorSource"
+  },
+  {
+    "id": "f0e1d2c3b4a59603",
+    "type": "ui-page",
+    "name": "Lights",
+    "ui": "c0e57a845850eed0",
+    "path": "/lights",
+    "icon": "mdi-lightbulb",
+    "layout": "grid",
+    "theme": "0d92c765bfad87e6",
+    "breakpoints": [
+      {
+        "name": "Default",
+        "px": "0",
+        "cols": "3"
+      },
+      {
+        "name": "Tablet",
+        "px": "576",
+        "cols": "6"
+      },
+      {
+        "name": "Small Desktop",
+        "px": "768",
+        "cols": "9"
+      },
+      {
+        "name": "Desktop",
+        "px": "1024",
+        "cols": "12"
+      }
+    ],
+    "order": 5,
+    "className": "",
+    "visible": "true",
+    "disabled": "false"
+  },
+  {
+    "id": "f0e1d2c3b4a59604",
+    "type": "ui-group",
+    "name": "Cue Control",
+    "page": "f0e1d2c3b4a59603",
+    "width": "6",
+    "height": "1",
+    "order": 1,
+    "showTitle": true,
+    "className": "",
+    "visible": "true",
+    "disabled": "false"
+  },
+  {
+    "id": "f0e1d2c3b4a59605",
+    "type": "ui-group",
+    "name": "Looks",
+    "page": "f0e1d2c3b4a59603",
+    "width": "6",
+    "height": "1",
+    "order": 2,
+    "showTitle": true,
+    "className": "",
+    "visible": "true",
+    "disabled": "false"
+  },
+  {
+    "id": "f0e1d2c3b4a59606",
+    "type": "ui-group",
+    "name": "Level and Colour",
+    "page": "f0e1d2c3b4a59603",
+    "width": "6",
+    "height": "1",
+    "order": 3,
+    "showTitle": true,
+    "className": "",
+    "visible": "true",
+    "disabled": "false"
+  },
+  {
+    "id": "f0e1d2c3b4a59607",
+    "type": "ui-group",
+    "name": "Quick Selects",
+    "page": "f0e1d2c3b4a59603",
+    "width": "6",
+    "height": "1",
+    "order": 4,
+    "showTitle": true,
+    "className": "",
+    "visible": "true",
+    "disabled": "false"
+  },
+  {
+    "id": "f0e1d2c3b4a59608",
+    "type": "ui-group",
+    "name": "Clear",
+    "page": "f0e1d2c3b4a59603",
+    "width": "6",
+    "height": "1",
+    "order": 5,
+    "showTitle": true,
+    "className": "",
+    "visible": "true",
+    "disabled": "false"
+  },
+  {
+    "id": "f0e1d2c3b4a59610",
+    "type": "ui-button",
+    "z": "f0e1d2c3b4a59601",
+    "group": "f0e1d2c3b4a59604",
+    "name": "",
+    "label": "Go",
+    "order": 1,
+    "width": "2",
+    "height": "1",
+    "emulateClick": false,
+    "tooltip": "",
+    "color": "#00aa00",
+    "bgcolor": "",
+    "className": "",
+    "icon": "",
+    "iconPosition": "left",
+    "payload": "{\"cmd\":\"/cc/lights/go\",\"parm\":null}",
+    "payloadType": "json",
+    "topic": "",
+    "topicType": "str",
+    "wires": [
+      [
+        "f0e1d2c3b4a59650"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a59611",
+    "type": "ui-button",
+    "z": "f0e1d2c3b4a59601",
+    "group": "f0e1d2c3b4a59604",
+    "name": "",
+    "label": "Back",
+    "order": 2,
+    "width": "2",
+    "height": "1",
+    "emulateClick": false,
+    "tooltip": "",
+    "color": "#aa0000",
+    "bgcolor": "",
+    "className": "",
+    "icon": "",
+    "iconPosition": "left",
+    "payload": "{\"cmd\":\"/cc/lights/goback\",\"parm\":null}",
+    "payloadType": "json",
+    "topic": "",
+    "topicType": "str",
+    "wires": [
+      [
+        "f0e1d2c3b4a59650"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a59612",
+    "type": "ui-button",
+    "z": "f0e1d2c3b4a59601",
+    "group": "f0e1d2c3b4a59604",
+    "name": "",
+    "label": "Pause",
+    "order": 3,
+    "width": "2",
+    "height": "1",
+    "emulateClick": false,
+    "tooltip": "",
+    "color": "#d1b610",
+    "bgcolor": "",
+    "className": "",
+    "icon": "",
+    "iconPosition": "left",
+    "payload": "{\"cmd\":\"/cc/lights/pause\",\"parm\":null}",
+    "payloadType": "json",
+    "topic": "",
+    "topicType": "str",
+    "wires": [
+      [
+        "f0e1d2c3b4a59650"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a59613",
+    "type": "ui-button",
+    "z": "f0e1d2c3b4a59601",
+    "group": "f0e1d2c3b4a59605",
+    "name": "",
+    "label": "Walls B>R",
+    "order": 1,
+    "width": "2",
+    "height": "1",
+    "emulateClick": false,
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "className": "",
+    "icon": "",
+    "iconPosition": "left",
+    "payload": "{\"cmd\":\"/cc/lights/look\",\"parm\":\"walls_br\"}",
+    "payloadType": "json",
+    "topic": "",
+    "topicType": "str",
+    "wires": [
+      [
+        "f0e1d2c3b4a59650"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a59614",
+    "type": "ui-button",
+    "z": "f0e1d2c3b4a59601",
+    "group": "f0e1d2c3b4a59605",
+    "name": "",
+    "label": "Pillars B>R",
+    "order": 2,
+    "width": "2",
+    "height": "1",
+    "emulateClick": false,
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "className": "",
+    "icon": "",
+    "iconPosition": "left",
+    "payload": "{\"cmd\":\"/cc/lights/look\",\"parm\":\"pillars_br\"}",
+    "payloadType": "json",
+    "topic": "",
+    "topicType": "str",
+    "wires": [
+      [
+        "f0e1d2c3b4a59650"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a59615",
+    "type": "ui-button",
+    "z": "f0e1d2c3b4a59601",
+    "group": "f0e1d2c3b4a59605",
+    "name": "",
+    "label": "Walls R>Y",
+    "order": 3,
+    "width": "2",
+    "height": "1",
+    "emulateClick": false,
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "className": "",
+    "icon": "",
+    "iconPosition": "left",
+    "payload": "{\"cmd\":\"/cc/lights/look\",\"parm\":\"walls_ry\"}",
+    "payloadType": "json",
+    "topic": "",
+    "topicType": "str",
+    "wires": [
+      [
+        "f0e1d2c3b4a59650"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a59616",
+    "type": "ui-button",
+    "z": "f0e1d2c3b4a59601",
+    "group": "f0e1d2c3b4a59605",
+    "name": "",
+    "label": "Pillars R>Y",
+    "order": 4,
+    "width": "2",
+    "height": "1",
+    "emulateClick": false,
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "className": "",
+    "icon": "",
+    "iconPosition": "left",
+    "payload": "{\"cmd\":\"/cc/lights/look\",\"parm\":\"pillars_ry\"}",
+    "payloadType": "json",
+    "topic": "",
+    "topicType": "str",
+    "wires": [
+      [
+        "f0e1d2c3b4a59650"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a59617",
+    "type": "ui-button",
+    "z": "f0e1d2c3b4a59601",
+    "group": "f0e1d2c3b4a59605",
+    "name": "",
+    "label": "Walls R>M",
+    "order": 5,
+    "width": "2",
+    "height": "1",
+    "emulateClick": false,
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "className": "",
+    "icon": "",
+    "iconPosition": "left",
+    "payload": "{\"cmd\":\"/cc/lights/look\",\"parm\":\"walls_rm\"}",
+    "payloadType": "json",
+    "topic": "",
+    "topicType": "str",
+    "wires": [
+      [
+        "f0e1d2c3b4a59650"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a59618",
+    "type": "ui-button",
+    "z": "f0e1d2c3b4a59601",
+    "group": "f0e1d2c3b4a59605",
+    "name": "",
+    "label": "Pillars R>M",
+    "order": 6,
+    "width": "2",
+    "height": "1",
+    "emulateClick": false,
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "className": "",
+    "icon": "",
+    "iconPosition": "left",
+    "payload": "{\"cmd\":\"/cc/lights/look\",\"parm\":\"pillars_rm\"}",
+    "payloadType": "json",
+    "topic": "",
+    "topicType": "str",
+    "wires": [
+      [
+        "f0e1d2c3b4a59650"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a59619",
+    "type": "ui-button",
+    "z": "f0e1d2c3b4a59601",
+    "group": "f0e1d2c3b4a59605",
+    "name": "",
+    "label": "Walls MS",
+    "order": 7,
+    "width": "2",
+    "height": "1",
+    "emulateClick": false,
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "className": "",
+    "icon": "",
+    "iconPosition": "left",
+    "payload": "{\"cmd\":\"/cc/lights/look\",\"parm\":\"walls_ms\"}",
+    "payloadType": "json",
+    "topic": "",
+    "topicType": "str",
+    "wires": [
+      [
+        "f0e1d2c3b4a59650"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a5961a",
+    "type": "ui-button",
+    "z": "f0e1d2c3b4a59601",
+    "group": "f0e1d2c3b4a59605",
+    "name": "",
+    "label": "Pillars MS",
+    "order": 8,
+    "width": "2",
+    "height": "1",
+    "emulateClick": false,
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "className": "",
+    "icon": "",
+    "iconPosition": "left",
+    "payload": "{\"cmd\":\"/cc/lights/look\",\"parm\":\"pillars_ms\"}",
+    "payloadType": "json",
+    "topic": "",
+    "topicType": "str",
+    "wires": [
+      [
+        "f0e1d2c3b4a59650"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a5961b",
+    "type": "ui-button",
+    "z": "f0e1d2c3b4a59601",
+    "group": "f0e1d2c3b4a59605",
+    "name": "",
+    "label": "Walls A>R>P",
+    "order": 9,
+    "width": "2",
+    "height": "1",
+    "emulateClick": false,
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "className": "",
+    "icon": "",
+    "iconPosition": "left",
+    "payload": "{\"cmd\":\"/cc/lights/look\",\"parm\":\"walls_arp\"}",
+    "payloadType": "json",
+    "topic": "",
+    "topicType": "str",
+    "wires": [
+      [
+        "f0e1d2c3b4a59650"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a5961c",
+    "type": "ui-button",
+    "z": "f0e1d2c3b4a59601",
+    "group": "f0e1d2c3b4a59605",
+    "name": "",
+    "label": "Pillars A>R>P",
+    "order": 10,
+    "width": "2",
+    "height": "1",
+    "emulateClick": false,
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "className": "",
+    "icon": "",
+    "iconPosition": "left",
+    "payload": "{\"cmd\":\"/cc/lights/look\",\"parm\":\"pillars_arp\"}",
+    "payloadType": "json",
+    "topic": "",
+    "topicType": "str",
+    "wires": [
+      [
+        "f0e1d2c3b4a59650"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a5961d",
+    "type": "ui-button",
+    "z": "f0e1d2c3b4a59601",
+    "group": "f0e1d2c3b4a59605",
+    "name": "",
+    "label": "Tabernacle",
+    "order": 11,
+    "width": "2",
+    "height": "1",
+    "emulateClick": false,
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "className": "",
+    "icon": "",
+    "iconPosition": "left",
+    "payload": "{\"cmd\":\"/cc/lights/look\",\"parm\":\"tabernacle\"}",
+    "payloadType": "json",
+    "topic": "",
+    "topicType": "str",
+    "wires": [
+      [
+        "f0e1d2c3b4a59650"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a5961e",
+    "type": "ui-button",
+    "z": "f0e1d2c3b4a59601",
+    "group": "f0e1d2c3b4a59605",
+    "name": "",
+    "label": "Stained Glass MS",
+    "order": 12,
+    "width": "2",
+    "height": "1",
+    "emulateClick": false,
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "className": "",
+    "icon": "",
+    "iconPosition": "left",
+    "payload": "{\"cmd\":\"/cc/lights/look\",\"parm\":\"stained_ms\"}",
+    "payloadType": "json",
+    "topic": "",
+    "topicType": "str",
+    "wires": [
+      [
+        "f0e1d2c3b4a59650"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a5961f",
+    "type": "ui-button",
+    "z": "f0e1d2c3b4a59601",
+    "group": "f0e1d2c3b4a59605",
+    "name": "",
+    "label": "P Sunday",
+    "order": 13,
+    "width": "2",
+    "height": "1",
+    "emulateClick": false,
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "className": "",
+    "icon": "",
+    "iconPosition": "left",
+    "payload": "{\"cmd\":\"/cc/lights/look\",\"parm\":\"p_sunday\"}",
+    "payloadType": "json",
+    "topic": "",
+    "topicType": "str",
+    "wires": [
+      [
+        "f0e1d2c3b4a59650"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a59620",
+    "type": "ui-button",
+    "z": "f0e1d2c3b4a59601",
+    "group": "f0e1d2c3b4a59605",
+    "name": "",
+    "label": "FPars ES",
+    "order": 14,
+    "width": "2",
+    "height": "1",
+    "emulateClick": false,
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "className": "",
+    "icon": "",
+    "iconPosition": "left",
+    "payload": "{\"cmd\":\"/cc/lights/look\",\"parm\":\"fpars_es\"}",
+    "payloadType": "json",
+    "topic": "",
+    "topicType": "str",
+    "wires": [
+      [
+        "f0e1d2c3b4a59650"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a59621",
+    "type": "ui-button",
+    "z": "f0e1d2c3b4a59601",
+    "group": "f0e1d2c3b4a59605",
+    "name": "",
+    "label": "Most Holy",
+    "order": 15,
+    "width": "2",
+    "height": "1",
+    "emulateClick": false,
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "className": "",
+    "icon": "",
+    "iconPosition": "left",
+    "payload": "{\"cmd\":\"/cc/lights/look\",\"parm\":\"most_holy\"}",
+    "payloadType": "json",
+    "topic": "",
+    "topicType": "str",
+    "wires": [
+      [
+        "f0e1d2c3b4a59650"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a59622",
+    "type": "ui-button",
+    "z": "f0e1d2c3b4a59601",
+    "group": "f0e1d2c3b4a59606",
+    "name": "",
+    "label": "0",
+    "order": 1,
+    "width": "2",
+    "height": "1",
+    "emulateClick": false,
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "className": "",
+    "icon": "",
+    "iconPosition": "left",
+    "payload": "{\"cmd\":\"/cc/lights/color\",\"parm\":\"0\"}",
+    "payloadType": "json",
+    "topic": "",
+    "topicType": "str",
+    "wires": [
+      [
+        "f0e1d2c3b4a59650"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a59623",
+    "type": "ui-button",
+    "z": "f0e1d2c3b4a59601",
+    "group": "f0e1d2c3b4a59606",
+    "name": "",
+    "label": "25",
+    "order": 2,
+    "width": "2",
+    "height": "1",
+    "emulateClick": false,
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "className": "",
+    "icon": "",
+    "iconPosition": "left",
+    "payload": "{\"cmd\":\"/cc/lights/color\",\"parm\":\"25\"}",
+    "payloadType": "json",
+    "topic": "",
+    "topicType": "str",
+    "wires": [
+      [
+        "f0e1d2c3b4a59650"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a59624",
+    "type": "ui-button",
+    "z": "f0e1d2c3b4a59601",
+    "group": "f0e1d2c3b4a59606",
+    "name": "",
+    "label": "33",
+    "order": 3,
+    "width": "2",
+    "height": "1",
+    "emulateClick": false,
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "className": "",
+    "icon": "",
+    "iconPosition": "left",
+    "payload": "{\"cmd\":\"/cc/lights/color\",\"parm\":\"33\"}",
+    "payloadType": "json",
+    "topic": "",
+    "topicType": "str",
+    "wires": [
+      [
+        "f0e1d2c3b4a59650"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a59625",
+    "type": "ui-button",
+    "z": "f0e1d2c3b4a59601",
+    "group": "f0e1d2c3b4a59606",
+    "name": "",
+    "label": "50",
+    "order": 4,
+    "width": "2",
+    "height": "1",
+    "emulateClick": false,
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "className": "",
+    "icon": "",
+    "iconPosition": "left",
+    "payload": "{\"cmd\":\"/cc/lights/color\",\"parm\":\"50\"}",
+    "payloadType": "json",
+    "topic": "",
+    "topicType": "str",
+    "wires": [
+      [
+        "f0e1d2c3b4a59650"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a59626",
+    "type": "ui-button",
+    "z": "f0e1d2c3b4a59601",
+    "group": "f0e1d2c3b4a59606",
+    "name": "",
+    "label": "66",
+    "order": 5,
+    "width": "2",
+    "height": "1",
+    "emulateClick": false,
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "className": "",
+    "icon": "",
+    "iconPosition": "left",
+    "payload": "{\"cmd\":\"/cc/lights/color\",\"parm\":\"66\"}",
+    "payloadType": "json",
+    "topic": "",
+    "topicType": "str",
+    "wires": [
+      [
+        "f0e1d2c3b4a59650"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a59627",
+    "type": "ui-button",
+    "z": "f0e1d2c3b4a59601",
+    "group": "f0e1d2c3b4a59606",
+    "name": "",
+    "label": "75",
+    "order": 6,
+    "width": "2",
+    "height": "1",
+    "emulateClick": false,
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "className": "",
+    "icon": "",
+    "iconPosition": "left",
+    "payload": "{\"cmd\":\"/cc/lights/color\",\"parm\":\"75\"}",
+    "payloadType": "json",
+    "topic": "",
+    "topicType": "str",
+    "wires": [
+      [
+        "f0e1d2c3b4a59650"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a59628",
+    "type": "ui-button",
+    "z": "f0e1d2c3b4a59601",
+    "group": "f0e1d2c3b4a59606",
+    "name": "",
+    "label": "FL",
+    "order": 7,
+    "width": "2",
+    "height": "1",
+    "emulateClick": false,
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "className": "",
+    "icon": "",
+    "iconPosition": "left",
+    "payload": "{\"cmd\":\"/cc/lights/color\",\"parm\":\"100\"}",
+    "payloadType": "json",
+    "topic": "",
+    "topicType": "str",
+    "wires": [
+      [
+        "f0e1d2c3b4a59650"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a59629",
+    "type": "ui-button",
+    "z": "f0e1d2c3b4a59601",
+    "group": "f0e1d2c3b4a59606",
+    "name": "",
+    "label": "Red",
+    "order": 8,
+    "width": "2",
+    "height": "1",
+    "emulateClick": false,
+    "tooltip": "",
+    "color": "#aa0000",
+    "bgcolor": "",
+    "className": "",
+    "icon": "",
+    "iconPosition": "left",
+    "payload": "{\"cmd\":\"/cc/lights/color\",\"parm\":\"1\"}",
+    "payloadType": "json",
+    "topic": "",
+    "topicType": "str",
+    "wires": [
+      [
+        "f0e1d2c3b4a59650"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a5962a",
+    "type": "ui-button",
+    "z": "f0e1d2c3b4a59601",
+    "group": "f0e1d2c3b4a59606",
+    "name": "",
+    "label": "Amb",
+    "order": 9,
+    "width": "2",
+    "height": "1",
+    "emulateClick": false,
+    "tooltip": "",
+    "color": "#ffaa00",
+    "bgcolor": "",
+    "className": "",
+    "icon": "",
+    "iconPosition": "left",
+    "payload": "{\"cmd\":\"/cc/lights/color\",\"parm\":\"2\"}",
+    "payloadType": "json",
+    "topic": "",
+    "topicType": "str",
+    "wires": [
+      [
+        "f0e1d2c3b4a59650"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a5962b",
+    "type": "ui-button",
+    "z": "f0e1d2c3b4a59601",
+    "group": "f0e1d2c3b4a59606",
+    "name": "",
+    "label": "Yel",
+    "order": 10,
+    "width": "2",
+    "height": "1",
+    "emulateClick": false,
+    "tooltip": "",
+    "color": "#d4d400",
+    "bgcolor": "",
+    "className": "",
+    "icon": "",
+    "iconPosition": "left",
+    "payload": "{\"cmd\":\"/cc/lights/color\",\"parm\":\"3\"}",
+    "payloadType": "json",
+    "topic": "",
+    "topicType": "str",
+    "wires": [
+      [
+        "f0e1d2c3b4a59650"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a5962c",
+    "type": "ui-button",
+    "z": "f0e1d2c3b4a59601",
+    "group": "f0e1d2c3b4a59606",
+    "name": "",
+    "label": "Gre",
+    "order": 11,
+    "width": "2",
+    "height": "1",
+    "emulateClick": false,
+    "tooltip": "",
+    "color": "#00aa00",
+    "bgcolor": "",
+    "className": "",
+    "icon": "",
+    "iconPosition": "left",
+    "payload": "{\"cmd\":\"/cc/lights/color\",\"parm\":\"5\"}",
+    "payloadType": "json",
+    "topic": "",
+    "topicType": "str",
+    "wires": [
+      [
+        "f0e1d2c3b4a59650"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a5962d",
+    "type": "ui-button",
+    "z": "f0e1d2c3b4a59601",
+    "group": "f0e1d2c3b4a59606",
+    "name": "",
+    "label": "Blu",
+    "order": 12,
+    "width": "2",
+    "height": "1",
+    "emulateClick": false,
+    "tooltip": "",
+    "color": "#0000cc",
+    "bgcolor": "",
+    "className": "",
+    "icon": "",
+    "iconPosition": "left",
+    "payload": "{\"cmd\":\"/cc/lights/color\",\"parm\":\"11\"}",
+    "payloadType": "json",
+    "topic": "",
+    "topicType": "str",
+    "wires": [
+      [
+        "f0e1d2c3b4a59650"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a5962e",
+    "type": "ui-button",
+    "z": "f0e1d2c3b4a59601",
+    "group": "f0e1d2c3b4a59606",
+    "name": "",
+    "label": "WW",
+    "order": 13,
+    "width": "2",
+    "height": "1",
+    "emulateClick": false,
+    "tooltip": "",
+    "color": "#c8a060",
+    "bgcolor": "",
+    "className": "",
+    "icon": "",
+    "iconPosition": "left",
+    "payload": "{\"cmd\":\"/cc/lights/color\",\"parm\":\"7\"}",
+    "payloadType": "json",
+    "topic": "",
+    "topicType": "str",
+    "wires": [
+      [
+        "f0e1d2c3b4a59650"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a5962f",
+    "type": "ui-button",
+    "z": "f0e1d2c3b4a59601",
+    "group": "f0e1d2c3b4a59606",
+    "name": "",
+    "label": "CW",
+    "order": 14,
+    "width": "2",
+    "height": "1",
+    "emulateClick": false,
+    "tooltip": "",
+    "color": "#6080c8",
+    "bgcolor": "",
+    "className": "",
+    "icon": "",
+    "iconPosition": "left",
+    "payload": "{\"cmd\":\"/cc/lights/color\",\"parm\":\"8\"}",
+    "payloadType": "json",
+    "topic": "",
+    "topicType": "str",
+    "wires": [
+      [
+        "f0e1d2c3b4a59650"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a59630",
+    "type": "ui-button",
+    "z": "f0e1d2c3b4a59601",
+    "group": "f0e1d2c3b4a59606",
+    "name": "",
+    "label": "Mag",
+    "order": 15,
+    "width": "2",
+    "height": "1",
+    "emulateClick": false,
+    "tooltip": "",
+    "color": "#aa00aa",
+    "bgcolor": "",
+    "className": "",
+    "icon": "",
+    "iconPosition": "left",
+    "payload": "{\"cmd\":\"/cc/lights/color\",\"parm\":\"13\"}",
+    "payloadType": "json",
+    "topic": "",
+    "topicType": "str",
+    "wires": [
+      [
+        "f0e1d2c3b4a59650"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a59631",
+    "type": "ui-button",
+    "z": "f0e1d2c3b4a59601",
+    "group": "f0e1d2c3b4a59606",
+    "name": "",
+    "label": "Ran",
+    "order": 16,
+    "width": "2",
+    "height": "1",
+    "emulateClick": false,
+    "tooltip": "",
+    "color": "#444444",
+    "bgcolor": "",
+    "className": "",
+    "icon": "",
+    "iconPosition": "left",
+    "payload": "{\"cmd\":\"/cc/lights/color\",\"parm\":\" \"}",
+    "payloadType": "json",
+    "topic": "",
+    "topicType": "str",
+    "wires": [
+      [
+        "f0e1d2c3b4a59650"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a59632",
+    "type": "ui-button",
+    "z": "f0e1d2c3b4a59601",
+    "group": "f0e1d2c3b4a59607",
+    "name": "",
+    "label": "Clear Selections",
+    "order": 1,
+    "width": "3",
+    "height": "1",
+    "emulateClick": false,
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "className": "",
+    "icon": "",
+    "iconPosition": "left",
+    "payload": "{\"cmd\":\"/cc/lights/chanselect\",\"parm\":\" \"}",
+    "payloadType": "json",
+    "topic": "",
+    "topicType": "str",
+    "wires": [
+      [
+        "f0e1d2c3b4a59650"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a59633",
+    "type": "ui-button",
+    "z": "f0e1d2c3b4a59601",
+    "group": "f0e1d2c3b4a59607",
+    "name": "",
+    "label": "Walls",
+    "order": 2,
+    "width": "3",
+    "height": "1",
+    "emulateClick": false,
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "className": "",
+    "icon": "",
+    "iconPosition": "left",
+    "payload": "{\"cmd\":\"/cc/lights/chanselect\",\"parm\":\"49+50+51+52+53+54+55+45+46+47+48+56+57+58+59+60+61+62\"}",
+    "payloadType": "json",
+    "topic": "",
+    "topicType": "str",
+    "wires": [
+      [
+        "f0e1d2c3b4a59650"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a59634",
+    "type": "ui-button",
+    "z": "f0e1d2c3b4a59601",
+    "group": "f0e1d2c3b4a59607",
+    "name": "",
+    "label": "Floor Pars",
+    "order": 3,
+    "width": "3",
+    "height": "1",
+    "emulateClick": false,
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "className": "",
+    "icon": "",
+    "iconPosition": "left",
+    "payload": "{\"cmd\":\"/cc/lights/chanselect\",\"parm\":\"34+35+36+37+38+39+40\"}",
+    "payloadType": "json",
+    "topic": "",
+    "topicType": "str",
+    "wires": [
+      [
+        "f0e1d2c3b4a59650"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a59635",
+    "type": "ui-button",
+    "z": "f0e1d2c3b4a59601",
+    "group": "f0e1d2c3b4a59607",
+    "name": "",
+    "label": "House",
+    "order": 4,
+    "width": "3",
+    "height": "1",
+    "emulateClick": false,
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "className": "",
+    "icon": "",
+    "iconPosition": "left",
+    "payload": "{\"cmd\":\"/cc/lights/chanselect\",\"parm\":\"68+69+70+71+72+73\"}",
+    "payloadType": "json",
+    "topic": "",
+    "topicType": "str",
+    "wires": [
+      [
+        "f0e1d2c3b4a59650"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a59636",
+    "type": "ui-button",
+    "z": "f0e1d2c3b4a59601",
+    "group": "f0e1d2c3b4a59607",
+    "name": "",
+    "label": "Face",
+    "order": 5,
+    "width": "3",
+    "height": "1",
+    "emulateClick": false,
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "className": "",
+    "icon": "",
+    "iconPosition": "left",
+    "payload": "{\"cmd\":\"/cc/lights/chanselect\",\"parm\":\"10+11+12+13+14\"}",
+    "payloadType": "json",
+    "topic": "",
+    "topicType": "str",
+    "wires": [
+      [
+        "f0e1d2c3b4a59650"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a59637",
+    "type": "ui-button",
+    "z": "f0e1d2c3b4a59601",
+    "group": "f0e1d2c3b4a59607",
+    "name": "",
+    "label": "Cross",
+    "order": 6,
+    "width": "3",
+    "height": "1",
+    "emulateClick": false,
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "className": "",
+    "icon": "",
+    "iconPosition": "left",
+    "payload": "{\"cmd\":\"/cc/lights/chanselect\",\"parm\":\"66\"}",
+    "payloadType": "json",
+    "topic": "",
+    "topicType": "str",
+    "wires": [
+      [
+        "f0e1d2c3b4a59650"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a59638",
+    "type": "ui-button",
+    "z": "f0e1d2c3b4a59601",
+    "group": "f0e1d2c3b4a59607",
+    "name": "",
+    "label": "GOBOs",
+    "order": 7,
+    "width": "3",
+    "height": "1",
+    "emulateClick": false,
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "className": "",
+    "icon": "",
+    "iconPosition": "left",
+    "payload": "{\"cmd\":\"/cc/lights/chanselect\",\"parm\":\"63+64\"}",
+    "payloadType": "json",
+    "topic": "",
+    "topicType": "str",
+    "wires": [
+      [
+        "f0e1d2c3b4a59650"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a59639",
+    "type": "ui-button",
+    "z": "f0e1d2c3b4a59601",
+    "group": "f0e1d2c3b4a59607",
+    "name": "",
+    "label": "Pillars",
+    "order": 8,
+    "width": "3",
+    "height": "1",
+    "emulateClick": false,
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "className": "",
+    "icon": "",
+    "iconPosition": "left",
+    "payload": "{\"cmd\":\"/cc/lights/chanselect\",\"parm\":\"41+42+43+44\"}",
+    "payloadType": "json",
+    "topic": "",
+    "topicType": "str",
+    "wires": [
+      [
+        "f0e1d2c3b4a59650"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a5963a",
+    "type": "ui-button",
+    "z": "f0e1d2c3b4a59601",
+    "group": "f0e1d2c3b4a59607",
+    "name": "",
+    "label": "OH Pars",
+    "order": 9,
+    "width": "3",
+    "height": "1",
+    "emulateClick": false,
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "className": "",
+    "icon": "",
+    "iconPosition": "left",
+    "payload": "{\"cmd\":\"/cc/lights/chanselect\",\"parm\":\"20+21+22+24+25+26\"}",
+    "payloadType": "json",
+    "topic": "",
+    "topicType": "str",
+    "wires": [
+      [
+        "f0e1d2c3b4a59650"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a5963b",
+    "type": "ui-button",
+    "z": "f0e1d2c3b4a59601",
+    "group": "f0e1d2c3b4a59607",
+    "name": "",
+    "label": "Wash",
+    "order": 10,
+    "width": "3",
+    "height": "1",
+    "emulateClick": false,
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "className": "",
+    "icon": "",
+    "iconPosition": "left",
+    "payload": "{\"cmd\":\"/cc/lights/chanselect\",\"parm\":\"8+9+16+17\"}",
+    "payloadType": "json",
+    "topic": "",
+    "topicType": "str",
+    "wires": [
+      [
+        "f0e1d2c3b4a59650"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a5963c",
+    "type": "ui-button",
+    "z": "f0e1d2c3b4a59601",
+    "group": "f0e1d2c3b4a59607",
+    "name": "",
+    "label": "Thrust",
+    "order": 11,
+    "width": "3",
+    "height": "1",
+    "emulateClick": false,
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "className": "",
+    "icon": "",
+    "iconPosition": "left",
+    "payload": "{\"cmd\":\"/cc/lights/chanselect\",\"parm\":\"4+18+19+23\"}",
+    "payloadType": "json",
+    "topic": "",
+    "topicType": "str",
+    "wires": [
+      [
+        "f0e1d2c3b4a59650"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a5963d",
+    "type": "ui-button",
+    "z": "f0e1d2c3b4a59601",
+    "group": "f0e1d2c3b4a59607",
+    "name": "",
+    "label": "Stage Pots",
+    "order": 12,
+    "width": "3",
+    "height": "1",
+    "emulateClick": false,
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "className": "",
+    "icon": "",
+    "iconPosition": "left",
+    "payload": "{\"cmd\":\"/cc/lights/chanselect\",\"parm\":\"27+28+29+30\"}",
+    "payloadType": "json",
+    "topic": "",
+    "topicType": "str",
+    "wires": [
+      [
+        "f0e1d2c3b4a59650"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a5963e",
+    "type": "ui-button",
+    "z": "f0e1d2c3b4a59601",
+    "group": "f0e1d2c3b4a59607",
+    "name": "",
+    "label": "Spot",
+    "order": 13,
+    "width": "3",
+    "height": "1",
+    "emulateClick": false,
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "className": "",
+    "icon": "",
+    "iconPosition": "left",
+    "payload": "{\"cmd\":\"/cc/lights/chanselect\",\"parm\":\"15\"}",
+    "payloadType": "json",
+    "topic": "",
+    "topicType": "str",
+    "wires": [
+      [
+        "f0e1d2c3b4a59650"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a5963f",
+    "type": "ui-button",
+    "z": "f0e1d2c3b4a59601",
+    "group": "f0e1d2c3b4a59608",
+    "name": "",
+    "label": "Selections",
+    "order": 1,
+    "width": "2",
+    "height": "1",
+    "emulateClick": false,
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "className": "",
+    "icon": "",
+    "iconPosition": "left",
+    "payload": "{\"cmd\":\"/cc/lights/key\",\"parm\":\"clearselection\"}",
+    "payloadType": "json",
+    "topic": "",
+    "topicType": "str",
+    "wires": [
+      [
+        "f0e1d2c3b4a59650"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a59640",
+    "type": "ui-button",
+    "z": "f0e1d2c3b4a59601",
+    "group": "f0e1d2c3b4a59608",
+    "name": "",
+    "label": "Cues",
+    "order": 2,
+    "width": "2",
+    "height": "1",
+    "emulateClick": false,
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "className": "",
+    "icon": "",
+    "iconPosition": "left",
+    "payload": "{\"cmd\":\"/cc/lights/key\",\"parm\":\"clearcues\"}",
+    "payloadType": "json",
+    "topic": "",
+    "topicType": "str",
+    "wires": [
+      [
+        "f0e1d2c3b4a59650"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a59641",
+    "type": "ui-button",
+    "z": "f0e1d2c3b4a59601",
+    "group": "f0e1d2c3b4a59608",
+    "name": "",
+    "label": "Playbacks",
+    "order": 3,
+    "width": "2",
+    "height": "1",
+    "emulateClick": false,
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "className": "",
+    "icon": "",
+    "iconPosition": "left",
+    "payload": "{\"cmd\":\"/cc/lights/key\",\"parm\":\"clearplaybacks\"}",
+    "payloadType": "json",
+    "topic": "",
+    "topicType": "str",
+    "wires": [
+      [
+        "f0e1d2c3b4a59650"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a59642",
+    "type": "ui-button",
+    "z": "f0e1d2c3b4a59601",
+    "group": "f0e1d2c3b4a59608",
+    "name": "",
+    "label": "Channels",
+    "order": 4,
+    "width": "2",
+    "height": "1",
+    "emulateClick": false,
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "className": "",
+    "icon": "",
+    "iconPosition": "left",
+    "payload": "{\"cmd\":\"/cc/lights/key\",\"parm\":\"clearchannels\"}",
+    "payloadType": "json",
+    "topic": "",
+    "topicType": "str",
+    "wires": [
+      [
+        "f0e1d2c3b4a59650"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a59643",
+    "type": "ui-button",
+    "z": "f0e1d2c3b4a59601",
+    "group": "f0e1d2c3b4a59608",
+    "name": "",
+    "label": "All",
+    "order": 5,
+    "width": "2",
+    "height": "1",
+    "emulateClick": false,
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "className": "",
+    "icon": "",
+    "iconPosition": "left",
+    "payload": "{\"cmd\":\"/cc/lights/key\",\"parm\":\"clearall\"}",
+    "payloadType": "json",
+    "topic": "",
+    "topicType": "str",
+    "wires": [
+      [
+        "f0e1d2c3b4a59650"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a59644",
+    "type": "ui-button",
+    "z": "f0e1d2c3b4a59601",
+    "group": "f0e1d2c3b4a59608",
+    "name": "",
+    "label": "Blackout",
+    "order": 6,
+    "width": "2",
+    "height": "1",
+    "emulateClick": false,
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "className": "",
+    "icon": "",
+    "iconPosition": "left",
+    "payload": "{\"cmd\":\"/cc/lights/key\",\"parm\":\"blackout\"}",
+    "payloadType": "json",
+    "topic": "",
+    "topicType": "str",
+    "wires": [
+      [
+        "f0e1d2c3b4a59650"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a59650",
+    "type": "function",
+    "z": "f0e1d2c3b4a59601",
+    "name": "build cmd",
+    "func": "msg.cmd = msg.payload.cmd;\nmsg.parm = msg.payload.parm;\nmsg.message = 'Lights: ' + msg.cmd;\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "wires": [
+      [
+        "f0e1d2c3b4a59651"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a59651",
+    "type": "change",
+    "z": "f0e1d2c3b4a59601",
+    "name": "header fields",
+    "rules": [
+      {
+        "t": "set",
+        "p": "millis",
+        "pt": "msg",
+        "to": "",
+        "tot": "date"
+      },
+      {
+        "t": "set",
+        "p": "depth",
+        "pt": "msg",
+        "to": "1",
+        "tot": "num"
+      },
+      {
+        "t": "set",
+        "p": "flow",
+        "pt": "msg",
+        "to": "UI Lights v2",
+        "tot": "str"
+      },
+      {
+        "t": "set",
+        "p": "source",
+        "pt": "msg",
+        "to": "UI",
+        "tot": "str"
+      },
+      {
+        "t": "set",
+        "p": "level",
+        "pt": "msg",
+        "to": "Info",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "wires": [
+      [
+        "f0e1d2c3b4a59652"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a59652",
+    "type": "link out",
+    "z": "f0e1d2c3b4a59601",
+    "name": "to msg hub",
+    "mode": "link",
+    "links": [
+      "b33643a1f31204d1",
+      "084445fc7ab1aa20"
+    ],
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a59660",
+    "type": "link in",
+    "z": "f0e1d2c3b4a59602",
+    "name": "from msg hub",
+    "links": [],
+    "wires": [
+      [
+        "f0e1d2c3b4a59662"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a59662",
+    "type": "switch",
+    "z": "f0e1d2c3b4a59602",
+    "name": "route cmd",
+    "property": "cmd",
+    "propertyType": "msg",
+    "rules": [
+      {
+        "t": "eq",
+        "v": "/cc/lights/go",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "/cc/lights/goback",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "/cc/lights/pause",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "/cc/lights/gotocue",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "/cc/lights/key",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "/cc/lights/color",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "/cc/lights/chanselect",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "/cc/lights/look",
+        "vt": "str"
+      },
+      {
+        "t": "else"
+      }
+    ],
+    "checkall": "false",
+    "repair": false,
+    "wires": [
+      [
+        "f0e1d2c3b4a59663"
+      ],
+      [
+        "f0e1d2c3b4a59664"
+      ],
+      [
+        "f0e1d2c3b4a59665"
+      ],
+      [
+        "f0e1d2c3b4a59666"
+      ],
+      [
+        "f0e1d2c3b4a59667"
+      ],
+      [
+        "f0e1d2c3b4a59668"
+      ],
+      [
+        "f0e1d2c3b4a59669"
+      ],
+      [
+        "f0e1d2c3b4a5966d"
+      ],
+      []
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a59663",
+    "type": "change",
+    "z": "f0e1d2c3b4a59602",
+    "name": "go",
+    "rules": [
+      {
+        "t": "set",
+        "p": "topic",
+        "pt": "msg",
+        "to": "/cs/playback/go",
+        "tot": "str"
+      },
+      {
+        "t": "set",
+        "p": "payload",
+        "pt": "msg",
+        "to": "",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "wires": [
+      [
+        "f0e1d2c3b4a59681"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a59664",
+    "type": "change",
+    "z": "f0e1d2c3b4a59602",
+    "name": "goback",
+    "rules": [
+      {
+        "t": "set",
+        "p": "topic",
+        "pt": "msg",
+        "to": "/cs/playback/goback",
+        "tot": "str"
+      },
+      {
+        "t": "set",
+        "p": "payload",
+        "pt": "msg",
+        "to": "",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "wires": [
+      [
+        "f0e1d2c3b4a59681"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a59665",
+    "type": "change",
+    "z": "f0e1d2c3b4a59602",
+    "name": "pause",
+    "rules": [
+      {
+        "t": "set",
+        "p": "topic",
+        "pt": "msg",
+        "to": "/cs/playback/pause",
+        "tot": "str"
+      },
+      {
+        "t": "set",
+        "p": "payload",
+        "pt": "msg",
+        "to": "",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "wires": [
+      [
+        "f0e1d2c3b4a59681"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a59666",
+    "type": "change",
+    "z": "f0e1d2c3b4a59602",
+    "name": "gotocue",
+    "rules": [
+      {
+        "t": "set",
+        "p": "topic",
+        "pt": "msg",
+        "to": "\"/cs/playback/gotocue/\" & parm",
+        "tot": "jsonata"
+      },
+      {
+        "t": "set",
+        "p": "payload",
+        "pt": "msg",
+        "to": "",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "wires": [
+      [
+        "f0e1d2c3b4a59681"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a59667",
+    "type": "change",
+    "z": "f0e1d2c3b4a59602",
+    "name": "key",
+    "rules": [
+      {
+        "t": "set",
+        "p": "topic",
+        "pt": "msg",
+        "to": "\"/cs/key/\" & parm",
+        "tot": "jsonata"
+      },
+      {
+        "t": "set",
+        "p": "payload",
+        "pt": "msg",
+        "to": "",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "wires": [
+      [
+        "f0e1d2c3b4a59681"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a59668",
+    "type": "change",
+    "z": "f0e1d2c3b4a59602",
+    "name": "color",
+    "rules": [
+      {
+        "t": "set",
+        "p": "topic",
+        "pt": "msg",
+        "to": "\"/cs/color/select/\" & parm",
+        "tot": "jsonata"
+      },
+      {
+        "t": "set",
+        "p": "payload",
+        "pt": "msg",
+        "to": "",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "wires": [
+      [
+        "f0e1d2c3b4a59681"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a59669",
+    "type": "change",
+    "z": "f0e1d2c3b4a59602",
+    "name": "cs prep",
+    "rules": [
+      {
+        "t": "set",
+        "p": "payload",
+        "pt": "msg",
+        "to": "parm",
+        "tot": "msg"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "wires": [
+      [
+        "f0e1d2c3b4a5966a"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a5966a",
+    "type": "split",
+    "z": "f0e1d2c3b4a59602",
+    "name": "split by +",
+    "splt": "+",
+    "spltType": "str",
+    "arraySplt": 1,
+    "arraySpltType": "len",
+    "stream": false,
+    "addname": "",
+    "wires": [
+      [
+        "f0e1d2c3b4a5966b"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a5966b",
+    "type": "change",
+    "z": "f0e1d2c3b4a59602",
+    "name": "chanselect build",
+    "rules": [
+      {
+        "t": "set",
+        "p": "topic",
+        "pt": "msg",
+        "to": "\"/cs/chan/add/\" & payload",
+        "tot": "jsonata"
+      },
+      {
+        "t": "set",
+        "p": "payload",
+        "pt": "msg",
+        "to": "",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "wires": [
+      [
+        "f0e1d2c3b4a5966c"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a5966c",
+    "type": "delay",
+    "z": "f0e1d2c3b4a59602",
+    "name": "rate limit",
+    "pauseType": "rate",
+    "timeout": "1",
+    "timeoutUnits": "seconds",
+    "rate": "10",
+    "nbRateUnits": "1",
+    "rateUnits": "second",
+    "randomFirst": "1",
+    "randomLast": "5",
+    "randomUnits": "seconds",
+    "drop": false,
+    "allowrate": false,
+    "outputs": 1,
+    "wires": [
+      [
+        "f0e1d2c3b4a59681"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a5966d",
+    "type": "function",
+    "z": "f0e1d2c3b4a59602",
+    "name": "look data",
+    "func": "const LOOKS = {\n  \"walls_br\": [\n    {\n      \"ch\": 49,\n      \"lvl\": 100,\n      \"hs\": [\n        240,\n        100\n      ]\n    },\n    {\n      \"ch\": 50,\n      \"lvl\": 100,\n      \"hs\": [\n        247,\n        100\n      ]\n    },\n    {\n      \"ch\": 51,\n      \"lvl\": 100,\n      \"hs\": [\n        254,\n        100\n      ]\n    },\n    {\n      \"ch\": 52,\n      \"lvl\": 100,\n      \"hs\": [\n        261,\n        100\n      ]\n    },\n    {\n      \"ch\": 53,\n      \"lvl\": 100,\n      \"hs\": [\n        268,\n        100\n      ]\n    },\n    {\n      \"ch\": 54,\n      \"lvl\": 100,\n      \"hs\": [\n        275,\n        100\n      ]\n    },\n    {\n      \"ch\": 55,\n      \"lvl\": 100,\n      \"hs\": [\n        282,\n        100\n      ]\n    },\n    {\n      \"ch\": 45,\n      \"lvl\": 100,\n      \"hs\": [\n        289,\n        100\n      ]\n    },\n    {\n      \"ch\": 46,\n      \"lvl\": 100,\n      \"hs\": [\n        296,\n        100\n      ]\n    },\n    {\n      \"ch\": 47,\n      \"lvl\": 100,\n      \"hs\": [\n        304,\n        100\n      ]\n    },\n    {\n      \"ch\": 48,\n      \"lvl\": 100,\n      \"hs\": [\n        311,\n        100\n      ]\n    },\n    {\n      \"ch\": 56,\n      \"lvl\": 100,\n      \"hs\": [\n        318,\n        100\n      ]\n    },\n    {\n      \"ch\": 57,\n      \"lvl\": 100,\n      \"hs\": [\n        325,\n        100\n      ]\n    },\n    {\n      \"ch\": 58,\n      \"lvl\": 100,\n      \"hs\": [\n        332,\n        100\n      ]\n    },\n    {\n      \"ch\": 59,\n      \"lvl\": 100,\n      \"hs\": [\n        339,\n        100\n      ]\n    },\n    {\n      \"ch\": 60,\n      \"lvl\": 100,\n      \"hs\": [\n        346,\n        100\n      ]\n    },\n    {\n      \"ch\": 61,\n      \"lvl\": 100,\n      \"hs\": [\n        353,\n        100\n      ]\n    },\n    {\n      \"ch\": 62,\n      \"lvl\": 100,\n      \"hs\": [\n        359,\n        100\n      ]\n    }\n  ],\n  \"pillars_br\": [\n    {\n      \"ch\": 41,\n      \"lvl\": 100,\n      \"hs\": [\n        282,\n        100\n      ]\n    },\n    {\n      \"ch\": 42,\n      \"lvl\": 100,\n      \"hs\": [\n        296,\n        100\n      ]\n    },\n    {\n      \"ch\": 43,\n      \"lvl\": 100,\n      \"hs\": [\n        304,\n        100\n      ]\n    },\n    {\n      \"ch\": 44,\n      \"lvl\": 100,\n      \"hs\": [\n        318,\n        100\n      ]\n    }\n  ],\n  \"walls_ry\": [\n    {\n      \"ch\": 49,\n      \"lvl\": 100,\n      \"hs\": [\n        0,\n        100\n      ]\n    },\n    {\n      \"ch\": 50,\n      \"lvl\": 100,\n      \"hs\": [\n        2,\n        100\n      ]\n    },\n    {\n      \"ch\": 51,\n      \"lvl\": 100,\n      \"hs\": [\n        5,\n        100\n      ]\n    },\n    {\n      \"ch\": 52,\n      \"lvl\": 100,\n      \"hs\": [\n        7,\n        100\n      ]\n    },\n    {\n      \"ch\": 53,\n      \"lvl\": 100,\n      \"hs\": [\n        10,\n        100\n      ]\n    },\n    {\n      \"ch\": 54,\n      \"lvl\": 100,\n      \"hs\": [\n        12,\n        100\n      ]\n    },\n    {\n      \"ch\": 55,\n      \"lvl\": 100,\n      \"hs\": [\n        15,\n        100\n      ]\n    },\n    {\n      \"ch\": 45,\n      \"lvl\": 100,\n      \"hs\": [\n        17,\n        100\n      ]\n    },\n    {\n      \"ch\": 46,\n      \"lvl\": 100,\n      \"hs\": [\n        20,\n        100\n      ]\n    },\n    {\n      \"ch\": 47,\n      \"lvl\": 100,\n      \"hs\": [\n        22,\n        100\n      ]\n    },\n    {\n      \"ch\": 48,\n      \"lvl\": 100,\n      \"hs\": [\n        25,\n        100\n      ]\n    },\n    {\n      \"ch\": 56,\n      \"lvl\": 100,\n      \"hs\": [\n        27,\n        100\n      ]\n    },\n    {\n      \"ch\": 57,\n      \"lvl\": 100,\n      \"hs\": [\n        30,\n        100\n      ]\n    },\n    {\n      \"ch\": 58,\n      \"lvl\": 100,\n      \"hs\": [\n        32,\n        100\n      ]\n    },\n    {\n      \"ch\": 59,\n      \"lvl\": 100,\n      \"hs\": [\n        35,\n        100\n      ]\n    },\n    {\n      \"ch\": 60,\n      \"lvl\": 100,\n      \"hs\": [\n        37,\n        100\n      ]\n    },\n    {\n      \"ch\": 61,\n      \"lvl\": 100,\n      \"hs\": [\n        40,\n        100\n      ]\n    },\n    {\n      \"ch\": 62,\n      \"lvl\": 100,\n      \"hs\": [\n        42,\n        100\n      ]\n    }\n  ],\n  \"pillars_ry\": [\n    {\n      \"ch\": 41,\n      \"lvl\": 100,\n      \"hs\": [\n        15,\n        100\n      ]\n    },\n    {\n      \"ch\": 42,\n      \"lvl\": 100,\n      \"hs\": [\n        20,\n        100\n      ]\n    },\n    {\n      \"ch\": 43,\n      \"lvl\": 100,\n      \"hs\": [\n        22,\n        100\n      ]\n    },\n    {\n      \"ch\": 44,\n      \"lvl\": 100,\n      \"hs\": [\n        27,\n        100\n      ]\n    }\n  ],\n  \"walls_rm\": [\n    {\n      \"ch\": 49,\n      \"lvl\": 100,\n      \"hs\": [\n        300,\n        100\n      ]\n    },\n    {\n      \"ch\": 50,\n      \"lvl\": 100,\n      \"hs\": [\n        302,\n        100\n      ]\n    },\n    {\n      \"ch\": 51,\n      \"lvl\": 100,\n      \"hs\": [\n        305,\n        100\n      ]\n    },\n    {\n      \"ch\": 52,\n      \"lvl\": 100,\n      \"hs\": [\n        307,\n        100\n      ]\n    },\n    {\n      \"ch\": 53,\n      \"lvl\": 100,\n      \"hs\": [\n        310,\n        100\n      ]\n    },\n    {\n      \"ch\": 54,\n      \"lvl\": 100,\n      \"hs\": [\n        312,\n        100\n      ]\n    },\n    {\n      \"ch\": 55,\n      \"lvl\": 100,\n      \"hs\": [\n        315,\n        100\n      ]\n    },\n    {\n      \"ch\": 45,\n      \"lvl\": 100,\n      \"hs\": [\n        317,\n        100\n      ]\n    },\n    {\n      \"ch\": 46,\n      \"lvl\": 100,\n      \"hs\": [\n        320,\n        100\n      ]\n    },\n    {\n      \"ch\": 47,\n      \"lvl\": 100,\n      \"hs\": [\n        322,\n        100\n      ]\n    },\n    {\n      \"ch\": 48,\n      \"lvl\": 100,\n      \"hs\": [\n        325,\n        100\n      ]\n    },\n    {\n      \"ch\": 56,\n      \"lvl\": 100,\n      \"hs\": [\n        327,\n        100\n      ]\n    },\n    {\n      \"ch\": 57,\n      \"lvl\": 100,\n      \"hs\": [\n        330,\n        100\n      ]\n    },\n    {\n      \"ch\": 58,\n      \"lvl\": 100,\n      \"hs\": [\n        332,\n        100\n      ]\n    },\n    {\n      \"ch\": 59,\n      \"lvl\": 100,\n      \"hs\": [\n        335,\n        100\n      ]\n    },\n    {\n      \"ch\": 60,\n      \"lvl\": 100,\n      \"hs\": [\n        337,\n        100\n      ]\n    },\n    {\n      \"ch\": 61,\n      \"lvl\": 100,\n      \"hs\": [\n        340,\n        100\n      ]\n    },\n    {\n      \"ch\": 62,\n      \"lvl\": 100,\n      \"hs\": [\n        359,\n        100\n      ]\n    }\n  ],\n  \"pillars_rm\": [\n    {\n      \"ch\": 41,\n      \"lvl\": 100,\n      \"hs\": [\n        15,\n        100\n      ]\n    },\n    {\n      \"ch\": 42,\n      \"lvl\": 100,\n      \"hs\": [\n        20,\n        100\n      ]\n    },\n    {\n      \"ch\": 43,\n      \"lvl\": 100,\n      \"hs\": [\n        22,\n        100\n      ]\n    },\n    {\n      \"ch\": 44,\n      \"lvl\": 100,\n      \"hs\": [\n        27,\n        100\n      ]\n    }\n  ],\n  \"walls_ms\": [\n    {\n      \"ch\": 49,\n      \"lvl\": 100,\n      \"hs\": [\n        20,\n        100\n      ]\n    },\n    {\n      \"ch\": 50,\n      \"lvl\": 100,\n      \"hs\": [\n        21,\n        100\n      ]\n    },\n    {\n      \"ch\": 51,\n      \"lvl\": 100,\n      \"hs\": [\n        22,\n        100\n      ]\n    },\n    {\n      \"ch\": 52,\n      \"lvl\": 100,\n      \"hs\": [\n        23,\n        100\n      ]\n    },\n    {\n      \"ch\": 53,\n      \"lvl\": 100,\n      \"hs\": [\n        24,\n        100\n      ]\n    },\n    {\n      \"ch\": 54,\n      \"lvl\": 100,\n      \"hs\": [\n        24,\n        100\n      ]\n    },\n    {\n      \"ch\": 55,\n      \"lvl\": 100,\n      \"hs\": [\n        25,\n        100\n      ]\n    },\n    {\n      \"ch\": 45,\n      \"lvl\": 100,\n      \"hs\": [\n        26,\n        100\n      ]\n    },\n    {\n      \"ch\": 46,\n      \"lvl\": 100,\n      \"hs\": [\n        27,\n        100\n      ]\n    },\n    {\n      \"ch\": 47,\n      \"lvl\": 100,\n      \"hs\": [\n        28,\n        100\n      ]\n    },\n    {\n      \"ch\": 48,\n      \"lvl\": 100,\n      \"hs\": [\n        29,\n        100\n      ]\n    },\n    {\n      \"ch\": 56,\n      \"lvl\": 100,\n      \"hs\": [\n        30,\n        100\n      ]\n    },\n    {\n      \"ch\": 57,\n      \"lvl\": 100,\n      \"hs\": [\n        31,\n        100\n      ]\n    },\n    {\n      \"ch\": 58,\n      \"lvl\": 100,\n      \"hs\": [\n        31,\n        100\n      ]\n    },\n    {\n      \"ch\": 59,\n      \"lvl\": 100,\n      \"hs\": [\n        32,\n        100\n      ]\n    },\n    {\n      \"ch\": 60,\n      \"lvl\": 100,\n      \"hs\": [\n        33,\n        100\n      ]\n    },\n    {\n      \"ch\": 61,\n      \"lvl\": 100,\n      \"hs\": [\n        34,\n        100\n      ]\n    },\n    {\n      \"ch\": 62,\n      \"lvl\": 100,\n      \"hs\": [\n        35,\n        100\n      ]\n    }\n  ],\n  \"pillars_ms\": [\n    {\n      \"ch\": 41,\n      \"lvl\": 61,\n      \"hs\": [\n        25,\n        100\n      ]\n    },\n    {\n      \"ch\": 42,\n      \"lvl\": 0,\n      \"hs\": [\n        27,\n        100\n      ]\n    },\n    {\n      \"ch\": 43,\n      \"lvl\": 100,\n      \"hs\": [\n        28,\n        100\n      ]\n    },\n    {\n      \"ch\": 44,\n      \"lvl\": 100,\n      \"hs\": [\n        30,\n        100\n      ]\n    }\n  ],\n  \"walls_arp\": [\n    {\n      \"ch\": 49,\n      \"lvl\": 100,\n      \"hs\": [\n        35,\n        100\n      ]\n    },\n    {\n      \"ch\": 50,\n      \"lvl\": 100,\n      \"hs\": [\n        31,\n        99\n      ]\n    },\n    {\n      \"ch\": 51,\n      \"lvl\": 100,\n      \"hs\": [\n        26,\n        99\n      ]\n    },\n    {\n      \"ch\": 52,\n      \"lvl\": 100,\n      \"hs\": [\n        22,\n        98\n      ]\n    },\n    {\n      \"ch\": 53,\n      \"lvl\": 100,\n      \"hs\": [\n        18,\n        97\n      ]\n    },\n    {\n      \"ch\": 54,\n      \"lvl\": 100,\n      \"hs\": [\n        13,\n        96\n      ]\n    },\n    {\n      \"ch\": 55,\n      \"lvl\": 100,\n      \"hs\": [\n        9,\n        96\n      ]\n    },\n    {\n      \"ch\": 45,\n      \"lvl\": 100,\n      \"hs\": [\n        4,\n        95\n      ]\n    },\n    {\n      \"ch\": 46,\n      \"lvl\": 100,\n      \"hs\": [\n        0,\n        94\n      ]\n    },\n    {\n      \"ch\": 47,\n      \"lvl\": 100,\n      \"hs\": [\n        0,\n        93\n      ]\n    },\n    {\n      \"ch\": 48,\n      \"lvl\": 100,\n      \"hs\": [\n        350,\n        93\n      ]\n    },\n    {\n      \"ch\": 56,\n      \"lvl\": 100,\n      \"hs\": [\n        339,\n        92\n      ]\n    },\n    {\n      \"ch\": 57,\n      \"lvl\": 100,\n      \"hs\": [\n        329,\n        91\n      ]\n    },\n    {\n      \"ch\": 58,\n      \"lvl\": 100,\n      \"hs\": [\n        319,\n        90\n      ]\n    },\n    {\n      \"ch\": 59,\n      \"lvl\": 100,\n      \"hs\": [\n        308,\n        90\n      ]\n    },\n    {\n      \"ch\": 60,\n      \"lvl\": 100,\n      \"hs\": [\n        298,\n        89\n      ]\n    },\n    {\n      \"ch\": 61,\n      \"lvl\": 100,\n      \"hs\": [\n        287,\n        88\n      ]\n    },\n    {\n      \"ch\": 62,\n      \"lvl\": 100,\n      \"hs\": [\n        277,\n        87\n      ]\n    }\n  ],\n  \"pillars_arp\": [\n    {\n      \"ch\": 41,\n      \"lvl\": 100,\n      \"hs\": [\n        9,\n        96\n      ]\n    },\n    {\n      \"ch\": 42,\n      \"lvl\": 100,\n      \"hs\": [\n        0,\n        94\n      ]\n    },\n    {\n      \"ch\": 43,\n      \"lvl\": 100,\n      \"hs\": [\n        0,\n        93\n      ]\n    },\n    {\n      \"ch\": 44,\n      \"lvl\": 100,\n      \"hs\": [\n        339,\n        92\n      ]\n    }\n  ],\n  \"tabernacle\": [\n    {\n      \"ch\": 34,\n      \"col\": 2,\n      \"lvl\": 33\n    },\n    {\n      \"ch\": 35,\n      \"col\": 2,\n      \"lvl\": 33\n    },\n    {\n      \"ch\": 36,\n      \"col\": 2,\n      \"lvl\": 33\n    },\n    {\n      \"ch\": 76,\n      \"col\": 2,\n      \"lvl\": 33\n    },\n    {\n      \"ch\": 77,\n      \"col\": 2,\n      \"lvl\": 33\n    },\n    {\n      \"ch\": 78,\n      \"col\": 2,\n      \"lvl\": 33\n    },\n    {\n      \"ch\": 79,\n      \"col\": 2,\n      \"lvl\": 100\n    },\n    {\n      \"ch\": 15,\n      \"col\": 2,\n      \"lvl\": 50\n    }\n  ],\n  \"stained_ms\": [\n    {\n      \"ch\": 40,\n      \"lvl\": 100,\n      \"hs\": [\n        14,\n        100\n      ]\n    },\n    {\n      \"ch\": 34,\n      \"lvl\": 100,\n      \"hs\": [\n        16,\n        100\n      ]\n    },\n    {\n      \"ch\": 35,\n      \"lvl\": 100,\n      \"hs\": [\n        19,\n        100\n      ]\n    },\n    {\n      \"ch\": 36,\n      \"lvl\": 100,\n      \"hs\": [\n        21,\n        100\n      ]\n    },\n    {\n      \"ch\": 37,\n      \"lvl\": 100,\n      \"hs\": [\n        23,\n        100\n      ]\n    },\n    {\n      \"ch\": 38,\n      \"lvl\": 100,\n      \"hs\": [\n        26,\n        100\n      ]\n    },\n    {\n      \"ch\": 76,\n      \"lvl\": 100,\n      \"hs\": [\n        28,\n        100\n      ]\n    },\n    {\n      \"ch\": 78,\n      \"lvl\": 100,\n      \"hs\": [\n        30,\n        100\n      ]\n    },\n    {\n      \"ch\": 79,\n      \"lvl\": 100,\n      \"hs\": [\n        33,\n        100\n      ]\n    },\n    {\n      \"ch\": 80,\n      \"lvl\": 100,\n      \"hs\": [\n        35,\n        100\n      ]\n    }\n  ],\n  \"p_sunday\": [\n    {\n      \"ch\": 35,\n      \"lvl\": 100,\n      \"hs\": [\n        120,\n        100\n      ]\n    },\n    {\n      \"ch\": 37,\n      \"lvl\": 100,\n      \"hs\": [\n        120,\n        100\n      ]\n    },\n    {\n      \"ch\": 38,\n      \"lvl\": 100,\n      \"hs\": [\n        120,\n        100\n      ]\n    },\n    {\n      \"ch\": 39,\n      \"lvl\": 100,\n      \"hs\": [\n        120,\n        100\n      ]\n    },\n    {\n      \"ch\": 40,\n      \"lvl\": 100,\n      \"hs\": [\n        120,\n        100\n      ]\n    },\n    {\n      \"ch\": 34,\n      \"lvl\": 100,\n      \"hs\": [\n        300,\n        100\n      ]\n    },\n    {\n      \"ch\": 36,\n      \"lvl\": 100,\n      \"hs\": [\n        300,\n        100\n      ]\n    },\n    {\n      \"ch\": 41,\n      \"lvl\": 100,\n      \"hs\": [\n        300,\n        100\n      ]\n    },\n    {\n      \"ch\": 42,\n      \"lvl\": 100,\n      \"hs\": [\n        300,\n        100\n      ]\n    },\n    {\n      \"ch\": 43,\n      \"lvl\": 100,\n      \"hs\": [\n        300,\n        100\n      ]\n    },\n    {\n      \"ch\": 44,\n      \"lvl\": 100,\n      \"hs\": [\n        300,\n        100\n      ]\n    }\n  ],\n  \"fpars_es\": [\n    {\n      \"ch\": 34,\n      \"col\": 13,\n      \"lvl\": 90\n    },\n    {\n      \"ch\": 35,\n      \"col\": 13,\n      \"lvl\": 90\n    },\n    {\n      \"ch\": 36,\n      \"col\": 13,\n      \"lvl\": 90\n    },\n    {\n      \"ch\": 37,\n      \"col\": 7,\n      \"lvl\": 50\n    },\n    {\n      \"ch\": 38,\n      \"col\": 7,\n      \"lvl\": 50\n    },\n    {\n      \"ch\": 39,\n      \"col\": 7,\n      \"lvl\": 50\n    },\n    {\n      \"ch\": 40,\n      \"col\": 7,\n      \"lvl\": 50\n    }\n  ],\n  \"most_holy\": [\n    {\n      \"ch\": 78,\n      \"col\": 2,\n      \"lvl\": 33\n    },\n    {\n      \"ch\": 79,\n      \"col\": 2,\n      \"lvl\": 100\n    }\n  ]\n};\nconst lookName = msg.parm;\nconst data = LOOKS[lookName];\nif (!data) { node.warn('Unknown look: ' + lookName); return null; }\nconst msgs = [];\nfor (const entry of data) {\n  if (entry.hs) {\n    msgs.push({ topic: '/cs/color/hs/' + entry.hs[0] + '/' + entry.hs[1], payload: '' });\n  } else {\n    msgs.push({ topic: '/cs/color/select/' + entry.col, payload: '' });\n  }\n  msgs.push({ topic: '/cs/chan/at/' + entry.lvl,    payload: '' });\n  msgs.push({ topic: '/cs/chan/select/' + entry.ch, payload: '' });\n}\nmsg.payload = msgs;\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "wires": [
+      [
+        "f0e1d2c3b4a5966e"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a5966e",
+    "type": "split",
+    "z": "f0e1d2c3b4a59602",
+    "name": "split look",
+    "splt": "\\n",
+    "spltType": "str",
+    "arraySplt": 1,
+    "arraySpltType": "len",
+    "stream": false,
+    "addname": "",
+    "wires": [
+      [
+        "f0e1d2c3b4a5966f"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a5966f",
+    "type": "change",
+    "z": "f0e1d2c3b4a59602",
+    "name": "unpack look msg",
+    "rules": [
+      {
+        "t": "set",
+        "p": "topic",
+        "pt": "msg",
+        "to": "payload.topic",
+        "tot": "msg"
+      },
+      {
+        "t": "set",
+        "p": "payload",
+        "pt": "msg",
+        "to": "payload.payload",
+        "tot": "msg"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "wires": [
+      [
+        "f0e1d2c3b4a59670"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a59670",
+    "type": "delay",
+    "z": "f0e1d2c3b4a59602",
+    "name": "look rate limit",
+    "pauseType": "rate",
+    "timeout": "1",
+    "timeoutUnits": "seconds",
+    "rate": "10",
+    "nbRateUnits": "1",
+    "rateUnits": "second",
+    "randomFirst": "1",
+    "randomLast": "5",
+    "randomUnits": "seconds",
+    "drop": false,
+    "allowrate": false,
+    "outputs": 1,
+    "wires": [
+      [
+        "f0e1d2c3b4a59681"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a59681",
+    "type": "switch",
+    "z": "f0e1d2c3b4a59602",
+    "name": "LightingEnabled",
+    "property": "LightingEnabled",
+    "propertyType": "global",
+    "rules": [
+      {
+        "t": "true"
+      },
+      {
+        "t": "false"
+      },
+      {
+        "t": "else"
+      }
+    ],
+    "checkall": "false",
+    "repair": false,
+    "wires": [
+      [
+        "f0e1d2c3b4a59682"
+      ],
+      [
+        "f0e1d2c3b4a59685"
+      ],
+      []
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a59682",
+    "type": "function",
+    "z": "f0e1d2c3b4a59602",
+    "name": "lights Network parms",
+    "func": "const config = global.get(\"config\");\nconst devs = config.devices.filter(x => x.category === 'Lights');\nconst entry = devs[0];\nmsg.ip   = entry.ip;\nmsg.port = entry.port;\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "wires": [
+      [
+        "f0e1d2c3b4a59683"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a59683",
+    "type": "osc",
+    "z": "f0e1d2c3b4a59602",
+    "name": "OSC to Console",
+    "path": "",
+    "metadata": false,
+    "wires": [
+      [
+        "f0e1d2c3b4a59684"
+      ]
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a59684",
+    "type": "udp out",
+    "z": "f0e1d2c3b4a59602",
+    "name": "To ColorSource",
+    "addr": "",
+    "iface": "",
+    "port": "",
+    "ipv": "udp4",
+    "outport": "",
+    "base64": true,
+    "multicast": "false",
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "f0e1d2c3b4a59685",
+    "type": "debug",
+    "z": "f0e1d2c3b4a59602",
+    "name": "lighting disabled",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "wires": [
+      []
     ]
   }
 ]

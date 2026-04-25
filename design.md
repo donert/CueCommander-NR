@@ -52,3 +52,70 @@ There are several areas which need improvement, some of which have hard constrai
 6.  Implement the VISCA python package in native node-red (as a package? depends on modularity strategy )
 
 7.  Maintaining persistent state is somewhat clunky - need to figure out a good way to manage current state information and have incoming events apply updates for the UI.
+
+# Architecture Patterns
+
+## Message Hub Pattern
+
+All subsystem commands are routed through the `/cc Message Hub` tab. The hub uses a two-level switch:
+
+1. First switch routes on `msg.cmd` prefix (e.g. `/cc/lights/`, `/cc/klang/`, `/cc/dlive/`) to the appropriate execution tab via link-out/link-in pairs.
+2. Execution tabs translate the standard message into device-specific protocol (OSC, UDP, HTTP, etc.) and send it.
+
+This decouples the UI layer from the execution layer. A UI tab fires a message with `msg.cmd` and `msg.parm` set; it has no knowledge of IP addresses, ports, or protocols.
+
+### Standard Command Message Fields
+
+| Field       | Description                                                                 |
+|-------------|-----------------------------------------------------------------------------|
+| msg.cmd     | Command path, e.g. `/cc/lights/go`, `/cc/lights/gotocue`                   |
+| msg.parm    | Command parameter, e.g. cue number for gotocue                             |
+| msg.source  | Origin: `UI`, `http`, `internal`                                            |
+| msg.millis  | Unix timestamp (ms) when the event was created                              |
+| msg.depth   | Log verbosity level (1 = normal, 2 = verbose)                               |
+| msg.flow    | Flow name where the message originated                                      |
+| msg.level   | Severity: `Info`, `Warn`, `Error`                                           |
+| msg.message | Human-readable log description                                              |
+
+## UI / Execution Split
+
+Each subsystem has two tabs:
+
+- **UI tab** — Dashboard 2 widgets (`@flowfuse/node-red-dashboard`). Buttons, sliders, switches. No device addresses. Sends standard command messages to the message hub.
+- **Execution tab** — Receives messages from the hub, applies network parameters from `global.config`, encodes and sends device protocol.
+
+## Event Logging
+
+All UI actions and execution events send a copy of the message to the event log pipeline via a link-out to the event log tab. The message must have `cmd`, `parm`, `source`, `millis`, `depth`, `flow`, `level`, and `message` populated before logging.
+
+# Subsystem: Lighting (ETC ColorSource)
+
+## Overview
+
+Controls an ETC ColorSource AV console via OSC over UDP. Full OSC command reference: https://support.etcconnect.com/ETC/Consoles/ColorSource/
+
+## Commands
+
+| msg.cmd                    | OSC topic sent                        | Description              |
+|----------------------------|---------------------------------------|--------------------------|
+| /cc/lights/go              | /cs/playback/go                       | Advance to next cue      |
+| /cc/lights/goback          | /cs/playback/goback                   | Return to previous cue   |
+| /cc/lights/pause           | /cs/playback/pause                    | Pause playback           |
+| /cc/lights/gotocue         | /cs/playback/gotocue/{msg.parm}       | Jump to specific cue     |
+
+## Execution Path (v2)
+
+```
+Dashboard 2 UI (UI Lights v2 tab)
+  → msg.cmd = /cc/lights/{command}, msg.parm = {parameter}
+  → Link Out → /cc Message Hub
+  → Switch on /cc/lights/* → Link Out → /cc/lights execution tab
+  → Gate: global.LightingEnabled
+  → Inject network params from global.config.devices[category=Lights]
+  → OSC encode (topic = /cs/playback/...)
+  → UDP out → ColorSource console
+```
+
+## Configuration
+
+Device IP and port are read from `global.config.devices` (first entry with `category == 'Lights'`). The gate `global.LightingEnabled` (boolean) must be true for commands to be sent.
