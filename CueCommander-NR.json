@@ -71001,32 +71001,15 @@
     "name": "Quick Cue List",
     "label": "Quick Cues",
     "order": 1,
-    "width": "6",
-    "height": "8",
+    "width": 0,
+    "height": 0,
     "maxrows": "6",
     "passthru": false,
-    "autocols": false,
+    "autocols": true,
     "showSearch": false,
     "deselect": true,
     "selectionType": "click",
-    "columns": [
-      {
-        "title": "Cue",
-        "key": "cue",
-        "keyType": "key",
-        "type": "text",
-        "width": "20%",
-        "align": "start"
-      },
-      {
-        "title": "Description",
-        "key": "desc",
-        "keyType": "key",
-        "type": "text",
-        "width": "",
-        "align": "start"
-      }
-    ],
+    "columns": [],
     "mobileBreakpoint": "sm",
     "mobileBreakpointType": "defaults",
     "action": "replace",
