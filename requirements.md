@@ -206,3 +206,110 @@ The dashboard shall display a table showing the real-time status of all configur
 1. Set `global.ProjectorsEnabled = false`.
 2. Attempt to turn on a projector.  
 **Expected:** No network command is sent; event log may show "Projector communication disabled".
+
+---
+
+# Subsystem: Assignment Management
+
+## Overview
+
+The Assignment Management subsystem allows the user to save, recall, update, and delete named sets of microphone/pack assignment settings (the `input_map` and `service_title` fields). It replaces the fixed Save 1 / Save 2 / Recall 1 / Recall 2 / Recall Defaults buttons on the UI Assignments page with a generic table-driven interface.
+
+The subsystem spans the UI Assignments tab (frontend) and a new `/cc/assignments` execution tab (backend file I/O).
+
+---
+
+## Functional Requirements
+
+### AM-01 — Assignment Table
+The UI shall display a table listing all saved assignment files. Each row shall show the service title and the date/time the file was last saved. The table shall be refreshed whenever a save, update, or delete operation completes.
+
+### AM-02 — Save New Service
+The user shall be able to save the current `input_map` and `service_title` as a new named service. Before saving, the service title shall be editable. On initiation the title shall be pre-populated with the auto-generated next-Sunday date string (current behaviour). Saving shall create a new file named `input_map_<uuid>.json` in the assignments directory.
+
+### AM-03 — Recall Service
+The user shall be able to recall a saved service by selecting its row in the table. Recalling shall load the `input_map` and `service_title` into the active working state. After recall the service title shall remain editable without affecting the saved file.
+
+### AM-04 — Update Service
+The user shall be able to overwrite an existing service file with the current working state and the current service title. Update shall be available for any user-created service but not for the defaults file.
+
+### AM-05 — Delete Service
+The user shall be able to delete a saved service file. A confirmation step is required before deletion. Delete shall not be available for the defaults file.
+
+### AM-06 — Recall Defaults
+A dedicated "Recall Defaults" action shall load `input_map_defaults.json`. The defaults file shall not be updatable or deletable through the UI.
+
+### AM-07 — Editable Service Title
+The service title shall be editable at all times: on fresh page load, after a recall, and after a save. Editing the title in the UI updates only the working state; it does not automatically overwrite the source file.
+
+### AM-08 — File Storage Location
+All assignment files shall be stored in `~/Documents/UACTech/SystemDocumentation/github/uactechdoc/krd_automatin/`. The defaults file shall be named `input_map_defaults.json`. User-created files shall be named `input_map_<uuid>.json`.
+
+### AM-09 — File Contents
+Each assignment file shall be a JSON object containing:
+- `service_title` — human-readable name (string)
+- `input_map` — array of mic/pack assignment records
+- `saved_at` — Unix timestamp (ms) of when the file was last written
+
+### AM-10 — Consolidated Action Toolbar
+The UI Assignments page shall have a single toolbar containing: **Save New**, **Update**, **Print**, **Send → Klang**, **Send → Shure**, **Send → dLive**, **Send → Reaper**. The existing separate "Send Updates" button group and standalone Print button shall be removed.
+
+### AM-11 — Backend Execution Tab
+File I/O shall be handled by a `/cc/assignments` execution tab. The hub shall route `/cc/assignments/*` commands to this tab. Commands are: `list`, `save`, `update`, `delete`, `recall`, `recall_defaults`.
+
+---
+
+## Test Cases
+
+### TC-AM-01 — Table populates on load
+**Method:** Manual  
+**Status: MISSING**  
+**Steps:**
+1. Navigate to the UI Assignments page.  
+**Expected:** Table shows one row per `input_map_*.json` file in the assignments directory, with service title and saved-at date. `input_map_defaults.json` appears as a non-editable "Defaults" row.
+
+### TC-AM-02 — Save new service creates file
+**Method:** Manual  
+**Status: MISSING**  
+**Steps:**
+1. Edit the service title to "Test Service".
+2. Click **Save New** in the toolbar.  
+**Expected:** A new `input_map_<uuid>.json` appears in the directory containing `service_title: "Test Service"` and the current `input_map`. Table refreshes to show the new row.
+
+### TC-AM-03 — Recall loads state
+**Method:** Manual  
+**Status: MISSING**  
+**Steps:**
+1. Click Recall on a saved service row.  
+**Expected:** `input_map` and `service_title` are loaded into working state. Service title field in UI updates to match. The saved file is unchanged.
+
+### TC-AM-04 — Update overwrites file
+**Method:** Manual  
+**Status: MISSING**  
+**Steps:**
+1. Recall a service.
+2. Change the service title to "Updated Name".
+3. Click **Update** in the toolbar.  
+**Expected:** The file's `service_title` and `saved_at` are updated. Table refreshes. `input_map` contents reflect current working state.
+
+### TC-AM-05 — Delete removes file
+**Method:** Manual  
+**Status: MISSING**  
+**Steps:**
+1. Click Delete on a saved service row and confirm.  
+**Expected:** File is removed from disk. Row disappears from table.
+
+### TC-AM-06 — Defaults row is protected
+**Method:** Manual  
+**Status: MISSING**  
+**Steps:**
+1. Observe the Defaults row in the table.  
+**Expected:** No Update or Delete actions are available for the Defaults row. Recall Defaults action is present and functional.
+
+### TC-AM-07 — Title editable after recall
+**Method:** Manual  
+**Status: MISSING**  
+**Steps:**
+1. Recall any service.
+2. Edit the service title in the UI.  
+**Expected:** Title field updates. The source file on disk is unchanged. Event log records the recall but not the title edit.

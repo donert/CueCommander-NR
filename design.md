@@ -119,3 +119,93 @@ Dashboard 2 UI (UI Lights v2 tab)
 ## Configuration
 
 Device IP and port are read from `global.config.devices` (first entry with `category == 'Lights'`). The gate `global.LightingEnabled` (boolean) must be true for commands to be sent.
+
+---
+
+# Subsystem: Assignment Management
+
+## Overview
+
+Replaces the fixed Save 1 / Save 2 / Recall 1 / Recall 2 / Recall Defaults buttons on the UI Assignments page with a generic table-driven file manager. The subsystem is cross-cutting — it persists and restores the shared mic/pack assignment state used by dLive, Klang, Reaper, and Shure renaming flows.
+
+## File Format
+
+Each saved service is a JSON file:
+
+```json
+{
+  "service_title": "2026-04-27 Mic and Pack Assignments",
+  "input_map": [ ... ],
+  "saved_at": 1745712345678
+}
+```
+
+`service_title` is the human-readable display name, independent of the filename. `saved_at` is a Unix millisecond timestamp written on every save or update.
+
+## File Naming
+
+| File | Naming Rule |
+|------|-------------|
+| User-created services | `input_map_<uuid>.json` — UUID generated at save time |
+| Defaults | `input_map_defaults.json` — fixed name, never written by the UI |
+
+All files live in `~/Documents/UACTech/SystemDocumentation/github/uactechdoc/krd_automatin/`.
+
+> **Future work:** this directory should be moved to a more appropriate location and made configurable.
+
+## Commands (`/cc/assignments/*`)
+
+| msg.cmd | msg.parm | Description |
+|---------|----------|-------------|
+| `/cc/assignments/list` | — | Scan directory; return array of `{filename, service_title, saved_at}` for all `input_map_*.json` files |
+| `/cc/assignments/save` | `{service_title}` | Write current `global.input_map` + provided title to a new `input_map_<uuid>.json` |
+| `/cc/assignments/update` | `{filename, service_title}` | Overwrite named file with current `global.input_map` + provided title |
+| `/cc/assignments/delete` | `{filename}` | Delete named file; refuses if filename is `input_map_defaults.json` |
+| `/cc/assignments/recall` | `{filename}` | Read file; load `input_map` and `service_title` into global working state |
+| `/cc/assignments/recall_defaults` | — | Read `input_map_defaults.json`; load into global working state |
+
+## Execution Path
+
+```
+UI Assignments tab
+  → toolbar action (Save New / Update / Delete / Recall / Recall Defaults)
+  → msg.cmd = /cc/assignments/{command}, msg.parm = {parameters}
+  → Link Out → /cc Message Hub
+  → Switch on /cc/assignments/* → Link Out → /cc/assignments execution tab
+  → Function node: file I/O (fs read/write/unlink via node-red file nodes)
+  → On completion: emit /cc/assignments/list to refresh table
+  → Link Out → Event Log
+```
+
+## UI Layout — UI Assignments Tab
+
+### Toolbar (top of page)
+Single `ui-group` row containing:
+- **Save New** — saves current state as a new file
+- **Update** — overwrites the currently recalled file (disabled when no file is recalled)
+- **Print** — prints the current assignment sheet
+- **Send → Klang** | **Send → Shure** | **Send → dLive** | **Send → Reaper** — existing send-update actions, consolidated here from the former "Send Updates" section
+
+### Assignment Table
+`ui-table` (Dashboard 2) below the toolbar. Columns:
+
+| Column | Content |
+|--------|---------|
+| Service Title | `service_title` from file |
+| Saved | `saved_at` formatted as local date/time |
+| Actions | Recall · Update · Delete per row (Defaults row: Recall only) |
+
+Row selection triggers a recall. The Defaults row is visually distinguished (e.g., italic or muted colour) and exposes only the Recall action.
+
+### Service Title Field
+Editable text input below the toolbar, pre-populated on recall and on page load (auto-generated next-Sunday date string). Editing this field updates working state only; it does not auto-save.
+
+## State Management
+
+| Global variable | Set by | Read by |
+|----------------|--------|---------|
+| `global.input_map` | recall, recall_defaults | send-update commands, save, update |
+| `global.service_title` | recall, recall_defaults, UI edit | save, update, UI display |
+| `global.recalled_filename` | recall | update (to know which file to overwrite) |
+
+`global.recalled_filename` is `null` after a Recall Defaults or on fresh load, which disables the Update button.
