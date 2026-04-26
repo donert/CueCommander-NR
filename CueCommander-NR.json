@@ -3988,7 +3988,8 @@
       [
         "0cd12b3e2a5a2851"
       ]
-    ]
+    ],
+    "d": true
   },
   {
     "id": "d8a94bada6153899",
@@ -4028,7 +4029,8 @@
       [
         "71d291344d0f84aa"
       ]
-    ]
+    ],
+    "d": true
   },
   {
     "id": "3c259a6808b2e043",
@@ -4068,7 +4070,8 @@
       [
         "39271f057676b516"
       ]
-    ]
+    ],
+    "d": true
   },
   {
     "id": "d2c6aa7000df13ea",
@@ -4108,7 +4111,8 @@
       [
         "3d015c5591fce404"
       ]
-    ]
+    ],
+    "d": true
   },
   {
     "id": "a46da0992e411b41",
@@ -4148,7 +4152,8 @@
       [
         "7f321e2863b86e01"
       ]
-    ]
+    ],
+    "d": true
   },
   {
     "id": "a8baba49ccbb934e",
@@ -4188,7 +4193,8 @@
       [
         "250b103445ea275d"
       ]
-    ]
+    ],
+    "d": true
   },
   {
     "id": "4593ec3e5bba7d9c",
@@ -4228,7 +4234,8 @@
       [
         "476bb18c4dc68109"
       ]
-    ]
+    ],
+    "d": true
   },
   {
     "id": "913b5ab9a4c7818a",
@@ -4776,7 +4783,8 @@
       [
         "271b840cd819a681"
       ]
-    ]
+    ],
+    "d": true
   },
   {
     "id": "509394920a60d949",
@@ -4816,7 +4824,8 @@
       [
         "f53bb66dfb5efeba"
       ]
-    ]
+    ],
+    "d": true
   },
   {
     "id": "0cd12b3e2a5a2851",
@@ -5007,7 +5016,8 @@
     "y": 60,
     "wires": [
       []
-    ]
+    ],
+    "d": true
   },
   {
     "id": "39271f057676b516",
@@ -6602,7 +6612,8 @@
       "d766abeefe9648d0",
       "c81dabe411870d9c",
       "6dc7d9882d883e16",
-      "f0e1d2c3b4a59687"
+      "f0e1d2c3b4a59687",
+      "a0b1c2d3e4f59618"
     ],
     "x": 195,
     "y": 120,
@@ -8313,7 +8324,8 @@
       "972e9b7a7e0ae841",
       "f6e980b81adce7f0",
       "a1b2c3d4e5f60006",
-      "kl_api_bc_lout"
+      "kl_api_bc_lout",
+      "a0b1c2d3e4f59623"
     ],
     "x": 145,
     "y": 100,
@@ -8438,12 +8450,18 @@
         "case": false
       },
       {
+        "t": "regex",
+        "v": "^/cc/assignments/.*",
+        "vt": "str",
+        "case": false
+      },
+      {
         "t": "else"
       }
     ],
     "checkall": "false",
     "repair": false,
-    "outputs": 9,
+    "outputs": 11,
     "x": 490,
     "y": 180,
     "wires": [
@@ -8473,6 +8491,9 @@
       ],
       [
         "f0e1d2c3b4a59660"
+      ],
+      [
+        "a0b1c2d3e4f59619"
       ],
       [
         "5c2b358579d28e46"
@@ -70666,7 +70687,7 @@
     "type": "function",
     "z": "f0e1d2c3b4a59602",
     "name": "prep OSC log",
-    "func": "msg.level = 'Info';\nmsg.depth = (msg.depth || 1) + 1;\nmsg.flow = '/cc/lights';\nmsg.message = 'OSC \u2192 ' + msg.topic;\nmsg.payload = '';\nreturn msg;",
+    "func": "msg.level = 'Info';\nmsg.depth = (msg.depth || 1) + 1;\nmsg.flow = '/cc/lights';\nmsg.message = 'OSC → ' + msg.topic;\nmsg.payload = '';\nreturn msg;",
     "outputs": 1,
     "noerr": 0,
     "initialize": "",
@@ -71084,6 +71105,578 @@
     "wires": [
       [
         "f0e1d2c3b4a59650"
+      ]
+    ]
+  },
+  {
+    "id": "a0b1c2d3e4f59619",
+    "type": "link out",
+    "z": "dc91e074ab8e6aa8",
+    "name": "link out assignments",
+    "mode": "link",
+    "links": [
+      "a0b1c2d3e4f59602"
+    ],
+    "x": 855,
+    "y": 240,
+    "wires": []
+  },
+  {
+    "id": "a0b1c2d3e4f59601",
+    "type": "tab",
+    "label": "/cc/assignments",
+    "disabled": false,
+    "info": ""
+  },
+  {
+    "id": "a0b1c2d3e4f59616",
+    "type": "inject",
+    "z": "a0b1c2d3e4f59601",
+    "name": "startup list",
+    "props": [],
+    "repeat": "",
+    "crontab": "",
+    "once": true,
+    "onceDelay": 2,
+    "topic": "",
+    "payload": "",
+    "payloadType": "str",
+    "x": 140,
+    "y": 80,
+    "wires": [
+      [
+        "a0b1c2d3e4f59604"
+      ]
+    ]
+  },
+  {
+    "id": "a0b1c2d3e4f59602",
+    "type": "link in",
+    "z": "a0b1c2d3e4f59601",
+    "name": "link in hub",
+    "links": [
+      "a0b1c2d3e4f59619"
+    ],
+    "x": 75,
+    "y": 160,
+    "wires": [
+      [
+        "a0b1c2d3e4f59603"
+      ]
+    ]
+  },
+  {
+    "id": "a0b1c2d3e4f59603",
+    "type": "switch",
+    "z": "a0b1c2d3e4f59601",
+    "name": "cmd",
+    "property": "cmd",
+    "propertyType": "msg",
+    "rules": [
+      {
+        "t": "regex",
+        "v": "^/cc/assignments/list$",
+        "vt": "str",
+        "case": false
+      },
+      {
+        "t": "regex",
+        "v": "^/cc/assignments/save$",
+        "vt": "str",
+        "case": false
+      },
+      {
+        "t": "regex",
+        "v": "^/cc/assignments/update$",
+        "vt": "str",
+        "case": false
+      },
+      {
+        "t": "regex",
+        "v": "^/cc/assignments/delete$",
+        "vt": "str",
+        "case": false
+      },
+      {
+        "t": "regex",
+        "v": "^/cc/assignments/recall$",
+        "vt": "str",
+        "case": false
+      },
+      {
+        "t": "regex",
+        "v": "^/cc/assignments/recall_defaults$",
+        "vt": "str",
+        "case": false
+      },
+      {
+        "t": "regex",
+        "v": "^/cc/assignments/settitle$",
+        "vt": "str",
+        "case": false
+      },
+      {
+        "t": "else"
+      }
+    ],
+    "checkall": "false",
+    "repair": false,
+    "outputs": 8,
+    "x": 240,
+    "y": 160,
+    "wires": [
+      [
+        "a0b1c2d3e4f59604"
+      ],
+      [
+        "a0b1c2d3e4f59607"
+      ],
+      [
+        "a0b1c2d3e4f59609"
+      ],
+      [
+        "a0b1c2d3e4f5960b"
+      ],
+      [
+        "a0b1c2d3e4f5960d"
+      ],
+      [
+        "a0b1c2d3e4f59611"
+      ],
+      [
+        "a0b1c2d3e4f59615"
+      ],
+      []
+    ]
+  },
+  {
+    "id": "a0b1c2d3e4f59604",
+    "type": "exec",
+    "z": "a0b1c2d3e4f59601",
+    "name": "list assignment files",
+    "command": "node -e 'const fs=require(\"fs\");const d=\"/Users/donert/Documents/UACTech/SystemDocumentation/github/uactechdoc/krd_automatin\";try{const files=fs.readdirSync(d).filter(f=>f.startsWith(\"input_map_\")&&f.endsWith(\".json\"));const r=files.sort().map(f=>{try{const j=JSON.parse(fs.readFileSync(d+\"/\"+f,\"utf8\"));return{filename:f,service_title:j.service_title||f,saved_at:j.saved_at||0,is_defaults:f===\"input_map_defaults.json\"}}catch(e){return{filename:f,service_title:f,saved_at:0,is_defaults:f===\"input_map_defaults.json\"}}});console.log(JSON.stringify(r))}catch(e){console.error(e.message)}'",
+    "addpay": "",
+    "append": "",
+    "useSpawn": "false",
+    "timer": "10",
+    "winHide": false,
+    "oldrc": false,
+    "x": 440,
+    "y": 80,
+    "wires": [
+      [
+        "a0b1c2d3e4f59605"
+      ],
+      [],
+      []
+    ]
+  },
+  {
+    "id": "a0b1c2d3e4f59605",
+    "type": "function",
+    "z": "a0b1c2d3e4f59601",
+    "name": "parse list",
+    "func": "try {\n  const list = JSON.parse(msg.payload);\n  msg.payload = Array.isArray(list) ? list : [];\n  msg.topic = 'list';\n  return msg;\n} catch(e) {\n  node.warn('List parse error: ' + e.message);\n  return null;\n}",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "x": 640,
+    "y": 80,
+    "wires": [
+      [
+        "a0b1c2d3e4f59606"
+      ]
+    ]
+  },
+  {
+    "id": "a0b1c2d3e4f59606",
+    "type": "link out",
+    "z": "a0b1c2d3e4f59601",
+    "name": "to UI",
+    "mode": "link",
+    "links": [
+      "a0b1c2d3e4f59624"
+    ],
+    "x": 815,
+    "y": 80,
+    "wires": []
+  },
+  {
+    "id": "a0b1c2d3e4f59607",
+    "type": "function",
+    "z": "a0b1c2d3e4f59601",
+    "name": "prepare save",
+    "func": "const dir = '/Users/donert/Documents/UACTech/SystemDocumentation/github/uactechdoc/krd_automatin';\nconst uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {\n  const r = Math.random() * 16 | 0;\n  return (c === 'x' ? r : (r & 0x3 | 0x8)).toString(16);\n});\nconst title = (msg.parm && msg.parm.service_title) || global.get('service_title') || '';\nglobal.set('service_title', title);\nconst content = {\n  service_title: title,\n  input_map: global.get('input_map') || [],\n  saved_at: Date.now()\n};\nmsg.filename = dir + '/input_map_' + uuid + '.json';\nmsg.payload = JSON.stringify(content, null, 2);\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "x": 440,
+    "y": 220,
+    "wires": [
+      [
+        "a0b1c2d3e4f59608"
+      ]
+    ]
+  },
+  {
+    "id": "a0b1c2d3e4f59608",
+    "type": "file",
+    "z": "a0b1c2d3e4f59601",
+    "name": "write file",
+    "filename": "",
+    "filenameType": "msg",
+    "appendNewline": false,
+    "createDir": false,
+    "overwriteFile": "true",
+    "encoding": "utf8",
+    "x": 620,
+    "y": 220,
+    "wires": [
+      [
+        "a0b1c2d3e4f59604"
+      ]
+    ]
+  },
+  {
+    "id": "a0b1c2d3e4f59609",
+    "type": "function",
+    "z": "a0b1c2d3e4f59601",
+    "name": "prepare update",
+    "func": "const dir = '/Users/donert/Documents/UACTech/SystemDocumentation/github/uactechdoc/krd_automatin';\nconst filename = msg.parm && msg.parm.filename;\nif (!filename || filename === 'input_map_defaults.json') {\n  node.warn('Update blocked: ' + filename); return null;\n}\nconst title = (msg.parm && msg.parm.service_title) || global.get('service_title') || '';\nglobal.set('service_title', title);\nconst content = {\n  service_title: title,\n  input_map: global.get('input_map') || [],\n  saved_at: Date.now()\n};\nmsg.filename = dir + '/' + filename;\nmsg.payload = JSON.stringify(content, null, 2);\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "x": 440,
+    "y": 280,
+    "wires": [
+      [
+        "a0b1c2d3e4f5960a"
+      ]
+    ]
+  },
+  {
+    "id": "a0b1c2d3e4f5960a",
+    "type": "file",
+    "z": "a0b1c2d3e4f59601",
+    "name": "write file",
+    "filename": "",
+    "filenameType": "msg",
+    "appendNewline": false,
+    "createDir": false,
+    "overwriteFile": "true",
+    "encoding": "utf8",
+    "x": 620,
+    "y": 280,
+    "wires": [
+      [
+        "a0b1c2d3e4f59604"
+      ]
+    ]
+  },
+  {
+    "id": "a0b1c2d3e4f5960b",
+    "type": "function",
+    "z": "a0b1c2d3e4f59601",
+    "name": "prepare delete",
+    "func": "const dir = '/Users/donert/Documents/UACTech/SystemDocumentation/github/uactechdoc/krd_automatin';\nconst filename = msg.parm && msg.parm.filename;\nif (!filename || filename === 'input_map_defaults.json') {\n  node.warn('Delete blocked: ' + filename); return null;\n}\nmsg.payload = dir + '/' + filename;\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "x": 440,
+    "y": 340,
+    "wires": [
+      [
+        "a0b1c2d3e4f5960c"
+      ]
+    ]
+  },
+  {
+    "id": "a0b1c2d3e4f5960c",
+    "type": "exec",
+    "z": "a0b1c2d3e4f59601",
+    "name": "delete file",
+    "command": "rm",
+    "addpay": "payload",
+    "append": " ",
+    "useSpawn": "false",
+    "timer": "5",
+    "winHide": false,
+    "oldrc": false,
+    "x": 620,
+    "y": 340,
+    "wires": [
+      [
+        "a0b1c2d3e4f59604"
+      ],
+      [],
+      []
+    ]
+  },
+  {
+    "id": "a0b1c2d3e4f5960d",
+    "type": "function",
+    "z": "a0b1c2d3e4f59601",
+    "name": "prepare recall",
+    "func": "const dir = '/Users/donert/Documents/UACTech/SystemDocumentation/github/uactechdoc/krd_automatin';\nconst filename = msg.parm && msg.parm.filename;\nif (!filename) { node.warn('Recall: no filename'); return null; }\nmsg.filename = dir + '/' + filename;\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "x": 440,
+    "y": 420,
+    "wires": [
+      [
+        "a0b1c2d3e4f5960e"
+      ]
+    ]
+  },
+  {
+    "id": "a0b1c2d3e4f5960e",
+    "type": "file in",
+    "z": "a0b1c2d3e4f59601",
+    "name": "read file",
+    "filename": "",
+    "filenameType": "msg",
+    "format": "utf8",
+    "chunk": false,
+    "sendError": false,
+    "encoding": "utf8",
+    "allProps": false,
+    "x": 610,
+    "y": 420,
+    "wires": [
+      [
+        "a0b1c2d3e4f5960f"
+      ]
+    ]
+  },
+  {
+    "id": "a0b1c2d3e4f5960f",
+    "type": "json",
+    "z": "a0b1c2d3e4f59601",
+    "name": "",
+    "property": "payload",
+    "action": "",
+    "pretty": false,
+    "x": 750,
+    "y": 420,
+    "wires": [
+      [
+        "a0b1c2d3e4f59610"
+      ]
+    ]
+  },
+  {
+    "id": "a0b1c2d3e4f59610",
+    "type": "function",
+    "z": "a0b1c2d3e4f59601",
+    "name": "store recalled state",
+    "func": "const data = msg.payload;\nif (!data || !Array.isArray(data.input_map)) {\n  node.warn('Recall: invalid data'); return [null, null];\n}\nconst filename = msg.parm && msg.parm.filename;\nglobal.set('input_map', data.input_map);\nglobal.set('service_title', data.service_title || '');\nglobal.set('recalled_filename', filename || null);\nconst stateMsg = { topic: 'state', payload: {\n  recalled_filename: filename || null,\n  service_title: data.service_title || ''\n} };\nreturn [stateMsg, {}];",
+    "outputs": 2,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "x": 900,
+    "y": 420,
+    "wires": [
+      [
+        "a0b1c2d3e4f59606"
+      ],
+      [
+        "a0b1c2d3e4f59604"
+      ]
+    ]
+  },
+  {
+    "id": "a0b1c2d3e4f59611",
+    "type": "file in",
+    "z": "a0b1c2d3e4f59601",
+    "name": "read defaults",
+    "filename": "/Users/donert/Documents/UACTech/SystemDocumentation/github/uactechdoc/krd_automatin/input_map_defaults.json",
+    "filenameType": "str",
+    "format": "utf8",
+    "chunk": false,
+    "sendError": false,
+    "encoding": "utf8",
+    "allProps": false,
+    "x": 440,
+    "y": 500,
+    "wires": [
+      [
+        "a0b1c2d3e4f59613"
+      ]
+    ]
+  },
+  {
+    "id": "a0b1c2d3e4f59613",
+    "type": "json",
+    "z": "a0b1c2d3e4f59601",
+    "name": "",
+    "property": "payload",
+    "action": "",
+    "pretty": false,
+    "x": 620,
+    "y": 500,
+    "wires": [
+      [
+        "a0b1c2d3e4f59614"
+      ]
+    ]
+  },
+  {
+    "id": "a0b1c2d3e4f59614",
+    "type": "function",
+    "z": "a0b1c2d3e4f59601",
+    "name": "store defaults state",
+    "func": "const data = msg.payload;\nif (!data || !Array.isArray(data.input_map)) {\n  node.warn('Defaults: invalid data'); return [null, null];\n}\nglobal.set('input_map', data.input_map);\nglobal.set('service_title', data.service_title || '');\nglobal.set('recalled_filename', null);\nconst stateMsg = { topic: 'state', payload: {\n  recalled_filename: null,\n  service_title: data.service_title || ''\n} };\nreturn [stateMsg, {}];",
+    "outputs": 2,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "x": 800,
+    "y": 500,
+    "wires": [
+      [
+        "a0b1c2d3e4f59606"
+      ],
+      [
+        "a0b1c2d3e4f59604"
+      ]
+    ]
+  },
+  {
+    "id": "a0b1c2d3e4f59615",
+    "type": "function",
+    "z": "a0b1c2d3e4f59601",
+    "name": "set title",
+    "func": "const title = msg.parm && msg.parm.service_title;\nif (title !== undefined) global.set('service_title', title);\nreturn null;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "x": 440,
+    "y": 580,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "a0b1c2d3e4f59617",
+    "type": "function",
+    "z": "a0b1c2d3e4f59601",
+    "name": "prep log",
+    "func": "msg.level = 'Info';\nmsg.depth = (msg.depth || 1) + 1;\nmsg.flow = '/cc/assignments';\nmsg.message = msg.message || msg.cmd;\nmsg.payload = '';\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "x": 440,
+    "y": 640,
+    "wires": [
+      [
+        "a0b1c2d3e4f59618"
+      ]
+    ]
+  },
+  {
+    "id": "a0b1c2d3e4f59618",
+    "type": "link out",
+    "z": "a0b1c2d3e4f59601",
+    "name": "to event log",
+    "mode": "link",
+    "links": [
+      "084445fc7ab1aa20"
+    ],
+    "x": 615,
+    "y": 640,
+    "wires": []
+  },
+  {
+    "id": "a0b1c2d3e4f59620",
+    "type": "ui-group",
+    "name": "Assignment Manager",
+    "page": "cf7bfb3575b61bd7",
+    "width": "12",
+    "height": "1",
+    "order": 0,
+    "showTitle": true,
+    "className": "",
+    "visible": "true",
+    "disabled": "false",
+    "groupType": "default"
+  },
+  {
+    "id": "a0b1c2d3e4f59621",
+    "type": "ui-template",
+    "z": "e8a5a3e6.a0b89",
+    "group": "a0b1c2d3e4f59620",
+    "name": "Assignment Manager",
+    "order": 1,
+    "width": "12",
+    "height": "12",
+    "head": "",
+    "format": "<template>\n  <div style=\"padding:8px\">\n    <div style=\"display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px;align-items:center\">\n      <v-btn @click=\"saveNew\" color=\"primary\" size=\"small\">Save New</v-btn>\n      <v-btn @click=\"updateCurrent\" color=\"secondary\" size=\"small\" :disabled=\"!recalledFile\">Update</v-btn>\n      <v-btn @click=\"doPrint\" size=\"small\" :loading=\"printing\" variant=\"outlined\"><v-icon start>mdi-printer</v-icon> Print</v-btn>\n      <v-divider vertical style=\"height:28px;align-self:center\"/>\n      <v-btn @click=\"doSend('klang')\" size=\"small\" variant=\"outlined\">Klang</v-btn>\n      <v-btn @click=\"doSend('shure')\" size=\"small\" variant=\"outlined\">Shure</v-btn>\n      <v-btn @click=\"doSend('dlive')\" size=\"small\" variant=\"outlined\">dLive</v-btn>\n      <v-btn @click=\"doSend('reaper')\" size=\"small\" variant=\"outlined\">Reaper</v-btn>\n      <v-btn @click=\"recallDefaults\" size=\"small\" variant=\"tonal\">Recall Defaults</v-btn>\n    </div>\n    <v-text-field v-model=\"serviceTitle\" label=\"Service Title\" density=\"compact\" variant=\"outlined\"\n      style=\"margin-bottom:8px\" @blur=\"onTitleBlur\" />\n    <v-table density=\"compact\">\n      <thead><tr>\n        <th>Service</th><th>Saved</th><th>Actions</th>\n      </tr></thead>\n      <tbody>\n        <tr v-for=\"row in services\" :key=\"row.filename\"\n            :style=\"row.is_defaults ? 'opacity:0.7' : ''\">\n          <td :style=\"row.is_defaults ? 'font-style:italic' : ''\">{{ row.service_title }}</td>\n          <td style=\"white-space:nowrap\">{{ row.saved_at ? new Date(row.saved_at).toLocaleString() : '\\u2014' }}</td>\n          <td>\n            <v-btn size=\"x-small\" class=\"mr-1\" @click=\"recall(row)\">Recall</v-btn>\n            <template v-if=\"!row.is_defaults\">\n              <v-btn size=\"x-small\" class=\"mr-1\" @click=\"updateFile(row)\">Update</v-btn>\n              <v-btn size=\"x-small\" color=\"error\" @click=\"deleteFile(row)\">Delete</v-btn>\n            </template>\n          </td>\n        </tr>\n      </tbody>\n    </v-table>\n  </div>\n</template>\n<script>\nexport default {\n  data() {\n    return { services: [], serviceTitle: '', recalledFile: null, printing: false };\n  },\n  mounted() {\n    this.send({ payload: { action: 'list' } });\n  },\n  watch: {\n    msg(v) {\n      if (!v) return;\n      if (v.topic === 'list' && Array.isArray(v.payload)) {\n        this.services = v.payload;\n      } else if (v.topic === 'state' && v.payload) {\n        if (v.payload.service_title !== undefined) this.serviceTitle = v.payload.service_title;\n        this.recalledFile = v.payload.recalled_filename || null;\n      }\n    }\n  },\n  methods: {\n    saveNew() {\n      this.send({ payload: { action: 'save_new', service_title: this.serviceTitle } });\n    },\n    updateCurrent() {\n      if (!this.recalledFile) return;\n      if (!confirm('Update \"' + this.serviceTitle + '\" with current settings?')) return;\n      this.send({ payload: { action: 'update', recalled_file: this.recalledFile, service_title: this.serviceTitle } });\n    },\n    recall(row) {\n      this.send({ payload: { action: 'recall', filename: row.filename } });\n    },\n    updateFile(row) {\n      if (!confirm('Update \"' + row.service_title + '\" with current settings?')) return;\n      this.send({ payload: { action: 'update', recalled_file: row.filename, service_title: this.serviceTitle } });\n    },\n    deleteFile(row) {\n      if (!confirm('Delete \"' + row.service_title + '\"?')) return;\n      this.send({ payload: { action: 'delete', filename: row.filename } });\n    },\n    recallDefaults() {\n      this.send({ payload: { action: 'recall_defaults' } });\n    },\n    doSend(target) {\n      this.send({ payload: { action: 'send_' + target } });\n    },\n    onTitleBlur() {\n      this.send({ payload: { action: 'title_change', service_title: this.serviceTitle } });\n    },\n    async doPrint() {\n      this.printing = true;\n      let items = []; let serviceTitle = this.serviceTitle || 'Assignments';\n      try {\n        const resp = await fetch('/api/state', { headers: { 'X-Api-Token': 'vn-api-changeme' } });\n        if (resp.ok) {\n          const data = await resp.json();\n          items = Array.isArray(data.input_map) ? data.input_map : [];\n          serviceTitle = data.service_title || serviceTitle;\n        }\n      } catch(e) { console.error('Print error', e); }\n      finally { this.printing = false; }\n      const active = items.filter(i => i.active !== false);\n      const rows = active.map(i => '<tr><td>' + (i.mic_name||'') + '</td><td>' + (i.vocal_name||'') + '</td><td>' + (i.iem_pack||'') + '</td></tr>').join('');\n      const html = '<!DOCTYPE html><html><head><meta charset=\"utf-8\"><title>' + serviceTitle +\n        '</title><style>body{font-family:Arial,sans-serif;margin:20px}h2{font-size:32pt}table{width:100%;border-collapse:collapse}th{text-align:left;border-bottom:2px solid #333;padding:6px 8px;font-size:22pt}td{padding:6px 8px;font-size:24pt;font-weight:bold;border-bottom:1px solid #ddd}</style></head><body><h2>' +\n        serviceTitle + '</h2><table><thead><tr><th>Mic Name</th><th>Vocal Name</th><th>IEM Pack</th></tr></thead><tbody>' + rows + '</tbody></table></body></html>';\n      const win = window.open('', '_blank', 'width=800,height=600');\n      if (win) { win.document.write(html); win.document.close(); win.focus(); setTimeout(() => win.print(), 250); }\n    }\n  }\n};\n<\\/script>",
+    "storeOutMessages": true,
+    "passthru": false,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 200,
+    "y": 100,
+    "wires": [
+      [
+        "a0b1c2d3e4f59622"
+      ]
+    ]
+  },
+  {
+    "id": "a0b1c2d3e4f59622",
+    "type": "function",
+    "z": "e8a5a3e6.a0b89",
+    "name": "route action",
+    "func": "const a = msg.payload;\nif (!a || !a.action) return null;\nmsg.source = 'UI';\nmsg.millis = Date.now();\nmsg.depth = 1;\nmsg.flow = 'UI Assignments';\nmsg.level = 'Info';\nswitch (a.action) {\n  case 'list':\n    msg.cmd = '/cc/assignments/list'; msg.parm = {}; msg.message = 'List assignment files'; break;\n  case 'save_new':\n    msg.cmd = '/cc/assignments/save'; msg.parm = { service_title: a.service_title }; msg.message = 'Save new: ' + a.service_title; break;\n  case 'update':\n    msg.cmd = '/cc/assignments/update'; msg.parm = { filename: a.recalled_file, service_title: a.service_title }; msg.message = 'Update: ' + a.service_title; break;\n  case 'delete':\n    msg.cmd = '/cc/assignments/delete'; msg.parm = { filename: a.filename }; msg.message = 'Delete: ' + a.filename; break;\n  case 'recall':\n    msg.cmd = '/cc/assignments/recall'; msg.parm = { filename: a.filename }; msg.message = 'Recall: ' + a.filename; break;\n  case 'recall_defaults':\n    msg.cmd = '/cc/assignments/recall_defaults'; msg.parm = {}; msg.message = 'Recall defaults'; break;\n  case 'title_change':\n    msg.cmd = '/cc/assignments/settitle'; msg.parm = { service_title: a.service_title }; msg.message = 'Set title'; break;\n  case 'send_klang':\n    msg.cmd = '/cc/klang/globalrename'; msg.parm = null; msg.message = 'Send to Klang'; break;\n  case 'send_dlive':\n    msg.cmd = '/cc/dlive/inputrename'; msg.parm = null; msg.message = 'Send to dLive'; break;\n  case 'send_reaper':\n    msg.cmd = '/cc/reaper/inputrename'; msg.parm = null; msg.message = 'Send to Reaper'; break;\n  case 'send_shure':\n    msg.cmd = '/cc/shure/setnames'; msg.parm = null; msg.message = 'Send to Shure'; break;\n  default: return null;\n}\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "x": 420,
+    "y": 100,
+    "wires": [
+      [
+        "a0b1c2d3e4f59623"
+      ]
+    ]
+  },
+  {
+    "id": "a0b1c2d3e4f59623",
+    "type": "link out",
+    "z": "e8a5a3e6.a0b89",
+    "name": "to hub",
+    "mode": "link",
+    "links": [
+      "b33643a1f31204d1"
+    ],
+    "x": 595,
+    "y": 100,
+    "wires": []
+  },
+  {
+    "id": "a0b1c2d3e4f59624",
+    "type": "link in",
+    "z": "e8a5a3e6.a0b89",
+    "name": "from backend",
+    "links": [
+      "a0b1c2d3e4f59606"
+    ],
+    "x": 75,
+    "y": 100,
+    "wires": [
+      [
+        "a0b1c2d3e4f59621"
       ]
     ]
   }
