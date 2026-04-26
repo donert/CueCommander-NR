@@ -70665,7 +70665,7 @@
     "type": "function",
     "z": "f0e1d2c3b4a59602",
     "name": "prep OSC log",
-    "func": "msg.level = 'Info';\nmsg.depth = (msg.depth || 1) + 1;\nmsg.flow = '/cc/lights';\nmsg.message = 'OSC \u2192 ' + msg.topic;\nreturn msg;",
+    "func": "msg.level = 'Info';\nmsg.depth = (msg.depth || 1) + 1;\nmsg.flow = '/cc/lights';\nmsg.message = 'OSC \u2192 ' + msg.topic;\nmsg.payload = '';\nreturn msg;",
     "outputs": 1,
     "noerr": 0,
     "initialize": "",
