@@ -261,55 +261,82 @@ File I/O shall be handled by a `/cc/assignments` execution tab. The hub shall ro
 
 ## Test Cases
 
-### TC-AM-01 — Table populates on load
+### TC-AM-01 — Table populates on page load
 **Method:** Manual  
-**Status: MISSING**  
+**Status: IN PROGRESS**  
 **Steps:**
-1. Navigate to the UI Assignments page.  
-**Expected:** Table shows one row per `input_map_*.json` file in the assignments directory, with service title and saved-at date. `input_map_defaults.json` appears as a non-editable "Defaults" row.
+1. Restart Node-RED (not just Deploy).
+2. Navigate to the Assignments dashboard page.
+3. Click the **⟳** (refresh) button in the Assignment Manager toolbar.  
+**Expected:** Table shows one row per `input_map_*.json` file in the assignments directory. The `input_map_defaults.json` row displays label "Defaults" (not the raw filename), with no Update or Delete buttons. User-created rows show service title and saved-at timestamp.  
+**Notes:** The startup inject auto-populates the list ~3 s after NR start; the refresh button forces a manual reload. The service title field is pre-populated with the next-Sunday date string.
 
 ### TC-AM-02 — Save new service creates file
 **Method:** Manual  
-**Status: MISSING**  
+**Status: IN PROGRESS**  
 **Steps:**
-1. Edit the service title to "Test Service".
-2. Click **Save New** in the toolbar.  
-**Expected:** A new `input_map_<uuid>.json` appears in the directory containing `service_title: "Test Service"` and the current `input_map`. Table refreshes to show the new row.
+1. Ensure the service title field shows the auto-generated date string (or edit it).
+2. Click **Save New** in the toolbar.
+3. Check the filesystem at `~/Documents/UACTech/SystemDocumentation/github/uactechdoc/krd_automatin/`.  
+**Expected:** A new `input_map_<uuid>.json` file exists containing `service_title`, the current `input_map`, and a non-zero `saved_at` timestamp. The table in the UI refreshes and shows the new row.
 
 ### TC-AM-03 — Recall loads state
 **Method:** Manual  
 **Status: MISSING**  
 **Steps:**
-1. Click Recall on a saved service row.  
-**Expected:** `input_map` and `service_title` are loaded into working state. Service title field in UI updates to match. The saved file is unchanged.
+1. Click **Recall** on any user-created service row.  
+**Expected:** `global.input_map` and `global.service_title` are updated. The service title field in the UI shows the recalled service's title. The Editable Table updates to reflect the recalled assignments. The saved file on disk is unchanged.
 
 ### TC-AM-04 — Update overwrites file
 **Method:** Manual  
 **Status: MISSING**  
 **Steps:**
-1. Recall a service.
-2. Change the service title to "Updated Name".
+1. Recall a service (Update button becomes enabled).
+2. Edit the service title field.
 3. Click **Update** in the toolbar.  
-**Expected:** The file's `service_title` and `saved_at` are updated. Table refreshes. `input_map` contents reflect current working state.
+**Expected:** The recalled file's `service_title` and `saved_at` fields are updated. The `input_map` reflects the current working state. The table row refreshes with the new title and timestamp.
 
 ### TC-AM-05 — Delete removes file
 **Method:** Manual  
 **Status: MISSING**  
 **Steps:**
-1. Click Delete on a saved service row and confirm.  
-**Expected:** File is removed from disk. Row disappears from table.
+1. Click **Delete** on a user-created service row.  
+**Expected:** The file is removed from disk. The row disappears from the table after the refresh. The Defaults row cannot be deleted (no Delete button on that row).
 
 ### TC-AM-06 — Defaults row is protected
 **Method:** Manual  
-**Status: MISSING**  
+**Status: IN PROGRESS**  
 **Steps:**
-1. Observe the Defaults row in the table.  
-**Expected:** No Update or Delete actions are available for the Defaults row. Recall Defaults action is present and functional.
+1. Observe the Defaults row in the Assignment Manager table.  
+**Expected:** The Defaults row shows only a **Recall** button (no Update or Delete). The row is visually distinguished (italic text, reduced opacity).
 
-### TC-AM-07 — Title editable after recall
+### TC-AM-07 — Recall Defaults loads input map
+**Method:** Manual  
+**Status: IN PROGRESS**  
+**Steps:**
+1. Click **Recall Defaults** in the toolbar.  
+**Expected:** `global.input_map` is loaded from `input_map_defaults.json`. The Editable Table updates. `global.recalled_filename` is set to `null` (Update button remains disabled). Service title field clears or shows the defaults title if present.
+
+### TC-AM-08 — Title editable after recall, does not auto-save
 **Method:** Manual  
 **Status: MISSING**  
 **Steps:**
 1. Recall any service.
-2. Edit the service title in the UI.  
-**Expected:** Title field updates. The source file on disk is unchanged. Event log records the recall but not the title edit.
+2. Edit the service title field and tab/click away.  
+**Expected:** The title field updates in the UI. The source file on disk is unchanged. Only an explicit Save New or Update writes the title to a file.
+
+### TC-AM-09 — Send to subsystem routes correctly
+**Method:** Manual / Event Log  
+**Status: MISSING**  
+**Steps:**
+1. Recall a service with a known `input_map`.
+2. Click **Klang** (or Shure / dLive / Reaper) in the toolbar.  
+**Expected:** The appropriate `/cc/klang/globalrename` (or equivalent) command is dispatched to the message hub. Event log records the send action. Behaviour is identical to the previous standalone Send buttons.
+
+### TC-AM-10 — Service title auto-populated on startup
+**Method:** Manual  
+**Status: IN PROGRESS**  
+**Steps:**
+1. Restart Node-RED.
+2. Navigate to the Assignments page and wait ~3 s.  
+**Expected:** The service title field shows the next-Sunday date string in the format `YYYY-MM-DD Mic and Pack Assignments`.
