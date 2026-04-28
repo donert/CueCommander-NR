@@ -6614,7 +6614,8 @@
       "6dc7d9882d883e16",
       "f0e1d2c3b4a59687",
       "a0b1c2d3e4f59618",
-      "a0b1c2d3e4f59618b"
+      "a0b1c2d3e4f59618b",
+      "lo-network-evtlog"
     ],
     "x": 195,
     "y": 120,
@@ -54721,7 +54722,7 @@
     "fieldType": "msg",
     "format": "handlebars",
     "syntax": "mustache",
-    "template": "{\n\"devices\":  \n[\n{ \"category\": \"Projector\",\n  \"name\"    : \"East\",\n  \"ip\"      : \"192.168.0.194\",\n  \"port\"    : \"4352\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Projector\",\n  \"name\"    : \"Centre\",\n  \"ip\"      : \"192.168.0.193\",\n  \"port\"    : \"4352\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Projector\",\n  \"name\"    : \"West\",\n  \"ip\"      : \"192.168.0.195\",\n  \"port\"    : \"4352\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Projector\",\n  \"name\"    : \"Rear\",\n  \"ip\"      : \"192.168.0.183\",\n  \"port\"    : \"4352\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"ProPresenter\",\n  \"name\"    : \"PP7\",\n  \"ip\"      : \"192.168.0.210\",\n  \"port\"    : \"1025\",\n  \"url\"     : \"http://192.168.140.1:1025/v1/control/\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Lights\",\n  \"name\"    : \"Lights\",\n  \"ip\"      : \"192.168.0.197\",\n  \"port\"    : \"8005\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Cameras\",\n  \"name\"    : \"Cam 1\",\n  \"ip\"      : \"192.168.0.186\",\n  \"port\"    : \"na\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Cameras\",\n  \"name\"    : \"Cam 2\",\n  \"ip\"      : \"192.168.0.187\",\n  \"port\"    : \"na\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Cameras\",\n  \"name\"    : \"Cam 3\",\n  \"ip\"      : \"192.168.0.188\",\n  \"port\"    : \"na\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Video Mixer\",\n  \"name\"    : \"ATEM\",\n  \"ip\"      : \"192.168.0.191\",\n  \"port\"    : \"na\",\n  \"comment\"   : \"Reference only-hardcoded config\"\n},\n{ \"category\": \"Control\",\n  \"name\"    : \"CueCommmander UI\",\n  \"ip\"      : \"192.168.0.145\",\n  \"port\"    : \"1880\",\n  \"url\"     : \"http://192.168.0.145:1880/ui\",\n  \"comment\"   : \"Reference only. Hardcoded config\"\n} ,\n{ \"category\": \"Control\",\n  \"name\"    : \"OSC to VISCAip\",\n  \"ip\"      : \"127.0.0.1\",\n  \"port\"    : \"54000\",\n  \"url\"     : \"\",\n  \"comment\"   : \"Reference only. Hardcoded config\"\n}\n]\n}",
+    "template": "{\n  \"devices\": [\n    {\n      \"category\": \"Projector\",\n      \"name\": \"East\",\n      \"ip\": \"192.168.0.194\",\n      \"port\": \"4352\",\n      \"comment\": \"\"\n    },\n    {\n      \"category\": \"Projector\",\n      \"name\": \"Centre\",\n      \"ip\": \"192.168.0.193\",\n      \"port\": \"4352\",\n      \"comment\": \"\"\n    },\n    {\n      \"category\": \"Projector\",\n      \"name\": \"West\",\n      \"ip\": \"192.168.0.195\",\n      \"port\": \"4352\",\n      \"comment\": \"\"\n    },\n    {\n      \"category\": \"Projector\",\n      \"name\": \"Rear\",\n      \"ip\": \"192.168.0.183\",\n      \"port\": \"4352\",\n      \"comment\": \"\"\n    },\n    {\n      \"category\": \"ProPresenter\",\n      \"name\": \"PP7\",\n      \"ip\": \"192.168.0.210\",\n      \"port\": \"1025\",\n      \"url\": \"http://192.168.140.1:1025/v1/control/\",\n      \"comment\": \"\"\n    },\n    {\n      \"category\": \"Lights\",\n      \"name\": \"Lights\",\n      \"ip\": \"192.168.0.197\",\n      \"port\": \"8005\",\n      \"comment\": \"\"\n    },\n    {\n      \"category\": \"Cameras\",\n      \"name\": \"Cam 1\",\n      \"ip\": \"192.168.0.186\",\n      \"port\": \"na\",\n      \"comment\": \"\"\n    },\n    {\n      \"category\": \"Cameras\",\n      \"name\": \"Cam 2\",\n      \"ip\": \"192.168.0.187\",\n      \"port\": \"na\",\n      \"comment\": \"\"\n    },\n    {\n      \"category\": \"Cameras\",\n      \"name\": \"Cam 3\",\n      \"ip\": \"192.168.0.188\",\n      \"port\": \"na\",\n      \"comment\": \"\"\n    },\n    {\n      \"category\": \"Video Mixer\",\n      \"name\": \"ATEM\",\n      \"ip\": \"192.168.0.191\",\n      \"port\": \"na\",\n      \"comment\": \"Reference only-hardcoded config\"\n    },\n    {\n      \"category\": \"Control\",\n      \"name\": \"CueCommmander UI\",\n      \"ip\": \"192.168.0.145\",\n      \"port\": \"1880\",\n      \"url\": \"http://192.168.0.145:1880/ui\",\n      \"comment\": \"Reference only. Hardcoded config\"\n    },\n    {\n      \"category\": \"Control\",\n      \"name\": \"OSC to VISCAip\",\n      \"ip\": \"127.0.0.1\",\n      \"port\": \"54000\",\n      \"url\": \"\",\n      \"comment\": \"Reference only. Hardcoded config\"\n    }\n  ],\n  \"webapp_url\": \"http://localhost:9000\"\n}",
     "output": "json",
     "x": 430,
     "y": 1000,
@@ -54958,7 +54959,7 @@
     "fieldType": "msg",
     "format": "handlebars",
     "syntax": "mustache",
-    "template": "{\n\"devices\":  \n[\n{ \"category\": \"Projector\",\n  \"name\"    : \"East\",\n  \"ip\"      : \"127.0.0.194\",\n  \"port\"    : \"4352\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Projector\",\n  \"name\"    : \"Centre\",\n  \"ip\"      : \"127.0.0.195\",\n  \"port\"    : \"4352\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Projector\",\n  \"name\"    : \"Westx\",\n  \"ip\"      : \"127.0.0.196\",\n  \"port\"    : \"4352\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Projector\",\n  \"name\"    : \"Rear\",\n  \"ip\"      : \"127.0.0.xxx\",\n  \"port\"    : \"4352\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"ProPresenter\",\n  \"name\"    : \"PP7\",\n  \"ip\"      : \"127.0.0.1\",\n  \"port\"    : \"1025\",\n  \"url\"     : \"http://127.0.0.1:1025/v1/control/\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Lights\",\n  \"name\"    : \"Lights\",\n  \"ip\"      : \"127.0.0.197\",\n  \"port\"    : \"8005\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Cameras\",\n  \"name\"    : \"Cam 1\",\n  \"ip\"      : \"127.0.0.186\",\n  \"port\"    : \"na\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Cameras\",\n  \"name\"    : \"Cam 2\",\n  \"ip\"      : \"127.0.0.187\",\n  \"port\"    : \"na\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Cameras\",\n  \"name\"    : \"Cam 3\",\n  \"ip\"      : \"127.0.0.188\",\n  \"port\"    : \"na\",\n  \"comment\"   : \"\"\n},\n{ \"category\": \"Video Mixer\",\n  \"name\"    : \"ATEM\",\n  \"ip\"      : \"192.168.0.191\",\n  \"port\"    : \"na\",\n  \"comment\"   : \"Reference only-hardcoded config\"\n},\n{ \"category\": \"Control\",\n  \"name\"    : \"CueCommmander UI\",\n  \"ip\"      : \"127.0.0.1\",\n  \"port\"    : \"1880\",\n  \"url\"     : \"http://192.168.0.145:1880/ui\",\n  \"comment\"   : \"Reference only. Hardcoded config\"\n} ,\n{ \"category\": \"Control\",\n  \"name\"    : \"OSC to VISCAip\",\n  \"ip\"      : \"127.0.0.1\",\n  \"port\"    : \"54000\",\n  \"url\"     : \"\",\n  \"comment\"   : \"Reference only. Hardcoded config\"\n}\n]\n}",
+    "template": "{\n  \"devices\": [\n    {\n      \"category\": \"Projector\",\n      \"name\": \"East\",\n      \"ip\": \"127.0.0.194\",\n      \"port\": \"4352\",\n      \"comment\": \"\"\n    },\n    {\n      \"category\": \"Projector\",\n      \"name\": \"Centre\",\n      \"ip\": \"127.0.0.195\",\n      \"port\": \"4352\",\n      \"comment\": \"\"\n    },\n    {\n      \"category\": \"Projector\",\n      \"name\": \"Westx\",\n      \"ip\": \"127.0.0.196\",\n      \"port\": \"4352\",\n      \"comment\": \"\"\n    },\n    {\n      \"category\": \"Projector\",\n      \"name\": \"Rear\",\n      \"ip\": \"127.0.0.xxx\",\n      \"port\": \"4352\",\n      \"comment\": \"\"\n    },\n    {\n      \"category\": \"ProPresenter\",\n      \"name\": \"PP7\",\n      \"ip\": \"127.0.0.1\",\n      \"port\": \"1025\",\n      \"url\": \"http://127.0.0.1:1025/v1/control/\",\n      \"comment\": \"\"\n    },\n    {\n      \"category\": \"Lights\",\n      \"name\": \"Lights\",\n      \"ip\": \"127.0.0.197\",\n      \"port\": \"8005\",\n      \"comment\": \"\"\n    },\n    {\n      \"category\": \"Cameras\",\n      \"name\": \"Cam 1\",\n      \"ip\": \"127.0.0.186\",\n      \"port\": \"na\",\n      \"comment\": \"\"\n    },\n    {\n      \"category\": \"Cameras\",\n      \"name\": \"Cam 2\",\n      \"ip\": \"127.0.0.187\",\n      \"port\": \"na\",\n      \"comment\": \"\"\n    },\n    {\n      \"category\": \"Cameras\",\n      \"name\": \"Cam 3\",\n      \"ip\": \"127.0.0.188\",\n      \"port\": \"na\",\n      \"comment\": \"\"\n    },\n    {\n      \"category\": \"Video Mixer\",\n      \"name\": \"ATEM\",\n      \"ip\": \"192.168.0.191\",\n      \"port\": \"na\",\n      \"comment\": \"Reference only-hardcoded config\"\n    },\n    {\n      \"category\": \"Control\",\n      \"name\": \"CueCommmander UI\",\n      \"ip\": \"127.0.0.1\",\n      \"port\": \"1880\",\n      \"url\": \"http://192.168.0.145:1880/ui\",\n      \"comment\": \"Reference only. Hardcoded config\"\n    },\n    {\n      \"category\": \"Control\",\n      \"name\": \"OSC to VISCAip\",\n      \"ip\": \"127.0.0.1\",\n      \"port\": \"54000\",\n      \"url\": \"\",\n      \"comment\": \"Reference only. Hardcoded config\"\n    }\n  ],\n  \"webapp_url\": \"http://localhost:9000\"\n}",
     "output": "json",
     "x": 430,
     "y": 960,
@@ -67761,7 +67762,7 @@
     "y": 80,
     "wires": [
       [
-        "http-req-targets"
+        "fn-set-sweep-url"
       ]
     ]
   },
@@ -67770,8 +67771,8 @@
     "type": "function",
     "z": "tab-api-network",
     "name": "Build target list",
-    "func": "// Parse response from GET /api/network/targets (network.xlsx Monitor=Yes rows)\nvar body = msg.payload;\nif (!body || !Array.isArray(body.targets) || body.targets.length === 0) {\n    node.warn('fn-build-targets: empty or invalid response from /api/network/targets');\n    return null;\n}\nmsg.targets = body.targets;\nreturn msg;",
-    "outputs": 1,
+    "func": "// Parse response from GET /api/network/targets (network.xlsx Monitor=Yes rows)\nvar body = msg.payload;\nif (!body || !Array.isArray(body.targets) || body.targets.length === 0) {\n    var cached = flow.get('network_ping_targets');\n    if (cached && cached.length) {\n        node.warn('fn-build-targets: webapp unreachable, using cached targets (' + cached.length + ')');\n        msg.targets = cached;\n        return [msg, null];\n    }\n    // No cache \u2014 log the error and abort\n    var errMsg = {\n        cmd: '/cc/network/sweep',\n        source: 'internal',\n        millis: Date.now(),\n        depth: 1,\n        flow: 'Network Monitor',\n        level: 'Warn',\n        message: 'Ping sweep skipped \u2014 could not fetch targets from webapp and no cache available'\n    };\n    return [null, errMsg];\n}\nflow.set('network_ping_targets', body.targets);\nmsg.targets = body.targets;\nreturn [msg, null];",
+    "outputs": 2,
     "noerr": 0,
     "initialize": "",
     "finalize": "",
@@ -67781,6 +67782,9 @@
     "wires": [
       [
         "fn-init-results"
+      ],
+      [
+        "lo-network-evtlog"
       ]
     ]
   },
@@ -67851,15 +67855,20 @@
     "type": "function",
     "z": "tab-api-network",
     "name": "Collect & store results",
-    "func": "var result = msg.pingResult;\nvar pending = flow.get('network_ping_pending') || [];\nvar count = (flow.get('network_ping_count') || 0) + 1;\nvar total = flow.get('network_ping_total') || pending.length;\n\n// Match by IP\nvar idx = pending.findIndex(function(r) { return r.ip === result.ip; });\nif (idx >= 0) {\n    pending[idx].packets_sent     = result.packets_sent;\n    pending[idx].packets_received = result.packets_received;\n    pending[idx].avg_ms           = result.avg_ms;\n    pending[idx].loss_pct         = result.loss_pct;\n    pending[idx].status           = result.status;\n}\n\nflow.set('network_ping_pending', pending);\nflow.set('network_ping_count', count);\n\n// When all results are in, commit to the stable cache\nif (count >= total) {\n    flow.set('network_ping_results', JSON.parse(JSON.stringify(pending)));\n    flow.set('network_ping_generated_at', new Date().toISOString());\n    flow.set('network_ping_count', 0);\n}\n\nreturn null; // no output \u2014 HTTP handler reads from flow context",
-    "outputs": 0,
+    "func": "var result = msg.pingResult;\nvar pending = flow.get('network_ping_pending') || [];\nvar count = (flow.get('network_ping_count') || 0) + 1;\nvar total = flow.get('network_ping_total') || pending.length;\n\n// Match by IP\nvar idx = pending.findIndex(function(r) { return r.ip === result.ip; });\nif (idx >= 0) {\n    pending[idx].packets_sent     = result.packets_sent;\n    pending[idx].packets_received = result.packets_received;\n    pending[idx].avg_ms           = result.avg_ms;\n    pending[idx].loss_pct         = result.loss_pct;\n    pending[idx].status           = result.status;\n}\n\nflow.set('network_ping_pending', pending);\nflow.set('network_ping_count', count);\n\nif (count >= total) {\n    flow.set('network_ping_results', JSON.parse(JSON.stringify(pending)));\n    flow.set('network_ping_generated_at', new Date().toISOString());\n    flow.set('network_ping_count', 0);\n\n    var down = pending.filter(function(r) { return r.status === 'down'; });\n    var hiLat = pending.filter(function(r) { return r.status === 'high_latency'; });\n    var level = down.length > 0 ? 'Warn' : 'Info';\n    var summary = total + ' monitored';\n    if (down.length)   summary += ', ' + down.length + ' down';\n    if (hiLat.length)  summary += ', ' + hiLat.length + ' high-latency';\n\n    var logMsg = {\n        cmd: '/cc/network/sweep',\n        source: 'internal',\n        millis: Date.now(),\n        depth: 2,\n        flow: 'Network Monitor',\n        level: level,\n        message: 'Ping sweep complete: ' + summary\n    };\n    return [null, logMsg];\n}\nreturn [null, null];",
+    "outputs": 2,
     "noerr": 0,
     "initialize": "",
     "finalize": "",
     "libs": [],
     "x": 1110,
     "y": 80,
-    "wires": []
+    "wires": [
+      [],
+      [
+        "lo-network-evtlog"
+      ]
+    ]
   },
   {
     "id": "http-in-network-status",
@@ -71756,7 +71765,7 @@
     "method": "GET",
     "ret": "obj",
     "paytoqs": "ignore",
-    "url": "http://localhost:9000/api/network/targets",
+    "url": "",
     "tls": "",
     "persist": false,
     "proxy": "",
@@ -71769,5 +71778,32 @@
         "fn-build-targets"
       ]
     ]
+  },
+  {
+    "id": "fn-set-sweep-url",
+    "type": "function",
+    "z": "tab-api-network",
+    "name": "Set targets URL",
+    "func": "var cfg = global.get('config') || {};\nvar base = (cfg.webapp_url || 'http://localhost:9000').replace(/\\/+$/, '');\nmsg.url = base + '/api/network/targets';\nreturn msg;",
+    "outputs": 1,
+    "x": 270,
+    "y": 80,
+    "wires": [
+      [
+        "http-req-targets"
+      ]
+    ]
+  },
+  {
+    "id": "lo-network-evtlog",
+    "type": "link out",
+    "z": "tab-api-network",
+    "name": "\u2192 event log",
+    "links": [
+      "084445fc7ab1aa20"
+    ],
+    "x": 900,
+    "y": 200,
+    "wires": []
   }
 ]
