@@ -3458,7 +3458,7 @@
     "order": 0,
     "showTitle": true,
     "className": "",
-    "visible": "false",
+    "visible": false,
     "disabled": "false",
     "groupType": "default"
   },
