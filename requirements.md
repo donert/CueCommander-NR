@@ -257,6 +257,12 @@ The UI Assignments page shall have a single toolbar containing: **Save New**, **
 ### AM-11 — Backend Execution Tab
 File I/O shall be handled by a `/cc/assignments` execution tab. The hub shall route `/cc/assignments/*` commands to this tab. Commands are: `list`, `save`, `update`, `delete`, `recall`, `recall_defaults`.
 
+### AM-12 — Editable Table Active Toggle Is Row-Isolated
+The Editable Table shall provide a per-row Active toggle. Toggling one row's Active state shall affect only that row; no other row's visual state or data shall change as a side effect. Each row must carry a stable identity token (`_uid`) assigned when the payload is received so that Vue's virtual DOM can track rows correctly through sort reorders.
+
+### AM-13 — Editable Table Default Sort: Active Rows First
+The Editable Table shall default to sorting with active (checked) rows at the top of the list. This sort shall apply on initial data load and shall be preserved until the user explicitly changes the sort column.
+
 ---
 
 ## Test Cases
@@ -359,3 +365,20 @@ File I/O shall be handled by a `/cc/assignments` execution tab. The hub shall ro
 **Steps:**
 1. Navigate away from the Assignments page then return.  
 **Expected:** The Assignment Manager table repopulates automatically without any button press, reflecting the current files in `/Users/avuser/uacdata/`.
+
+### TC-AM-14 — Active toggle is row-isolated
+**Method:** Manual  
+**Status: VERIFIED**  
+**Steps:**
+1. Load the Assignments page with at least three rows visible.
+2. Click the Active toggle on any single row to uncheck it.
+3. Observe all rows.  
+**Expected:** Only the clicked row changes state (becomes dimmed/inactive). All other rows remain exactly as they were. No adjacent or non-adjacent row changes its checked state.
+
+### TC-AM-15 — Active rows sort to top by default
+**Method:** Manual  
+**Status: VERIFIED**  
+**Steps:**
+1. Load the Assignments page with a mix of active and inactive rows (recall a service that has at least one row with `active: false`).
+2. Observe the table without clicking any column header.  
+**Expected:** All active (checked) rows appear above all inactive (unchecked) rows. The Active column header shows the ↑ sort indicator.
