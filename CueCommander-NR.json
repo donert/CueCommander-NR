@@ -57256,7 +57256,7 @@
         "p": "payload"
       }
     ],
-    "repeat": "",
+    "repeat": "60",
     "crontab": "",
     "once": true,
     "onceDelay": 2,
