@@ -984,7 +984,8 @@
       "c3cb23bcb314adbc",
       "56f1838e6aa4259e",
       "cd82bcf9480a228c",
-      "fb2346fab96b953c"
+      "fb2346fab96b953c",
+      "e8598c4cb478eec4"
     ],
     "x": 134,
     "y": -1,
@@ -1003,7 +1004,6 @@
       "1b3f50f01a086580",
       "a05e19e21c03d6be",
       "3de04d8788af8479",
-      "a15c6a399963d48b",
       "2fc16bcd7529ea9b",
       "eda7388c8df50fb5",
       "ae899e36f7b7eb77",
@@ -1017,8 +1017,7 @@
       "3cb9efe049e181d9",
       "eaf50762a6f20a02",
       "45b554d8e4044ec7",
-      "cee393d4a2dc4709",
-      "b1c2d3e4f5a60004"
+      "cee393d4a2dc4709"
     ],
     "x": 34,
     "y": 319,
@@ -1064,12 +1063,14 @@
       "27cce3506e9a449e",
       "b1f21cc4276f63ca",
       "07fc43baba2c05ee",
-      "f6f12e45d91656d1"
+      "f6f12e45d91656d1",
+      "5a9cc929e372c03a",
+      "b1c2d3e4f5a60004"
     ],
     "x": 34,
-    "y": 879,
+    "y": 849,
     "w": 692,
-    "h": 162
+    "h": 192
   },
   {
     "id": "5bc5b286c099be86",
@@ -1426,7 +1427,8 @@
       "39e8fe7866fcfb3f",
       "ade94d4d05c5c976",
       "25f1d46c79d5519f",
-      "da06cbe28bbc4378"
+      "da06cbe28bbc4378",
+      "ca77eb3521e2e068"
     ],
     "x": 64,
     "y": 899,
@@ -2918,7 +2920,6 @@
     "y": 700,
     "wires": [
       [
-        "a15c6a399963d48b",
         "3de04d8788af8479",
         "3cb9efe049e181d9"
       ]
@@ -2934,7 +2935,8 @@
     "wires": [
       [
         "b62a23075b552009",
-        "27cce3506e9a449e"
+        "27cce3506e9a449e",
+        "b1c2d3e4f5a60004"
       ]
     ]
   },
@@ -6882,8 +6884,8 @@
     "props": [],
     "repeat": "",
     "crontab": "",
-    "once": false,
-    "onceDelay": 0.1,
+    "once": true,
+    "onceDelay": 2,
     "topic": "",
     "x": 150,
     "y": 860,
@@ -16515,17 +16517,26 @@
         "case": false
       },
       {
+        "t": "regex",
+        "v": "^/cc/shure/setonename$",
+        "vt": "str",
+        "case": false
+      },
+      {
         "t": "else"
       }
     ],
     "checkall": "false",
     "repair": false,
-    "outputs": 2,
+    "outputs": 3,
     "x": 290,
     "y": 120,
     "wires": [
       [
         "499dfd963becab8e"
+      ],
+      [
+        "e8598c4cb478eec4"
       ],
       [
         "a17d5f99b753a8aa"
@@ -16589,6 +16600,20 @@
     ],
     "x": 385,
     "y": 100,
+    "wires": []
+  },
+  {
+    "id": "e8598c4cb478eec4",
+    "type": "link out",
+    "z": "fe76d259b24cb0a9",
+    "g": "2d6bc1559ef4ae51",
+    "name": "link out setonename",
+    "mode": "link",
+    "links": [
+      "d9d0e1f3549af851"
+    ],
+    "x": 385,
+    "y": 140,
     "wires": []
   },
   {
@@ -16897,34 +16922,62 @@
     "wires": []
   },
   {
-    "id": "a15c6a399963d48b",
-    "type": "link out",
-    "z": "fe76d259b24cb0a9",
-    "g": "61428a7ba5725248",
-    "name": "link out 8",
-    "mode": "link",
-    "links": [
-      "d9d0e1f3549af851"
-    ],
-    "x": 595,
-    "y": 720,
-    "wires": []
-  },
-  {
     "id": "d9d0e1f3549af851",
     "type": "link in",
     "z": "fe76d259b24cb0a9",
     "g": "4a0cc04dc1d89dde",
-    "name": "link in 4",
+    "name": "link in setonename",
     "links": [
-      "a15c6a399963d48b"
+      "e8598c4cb478eec4"
     ],
     "x": 75,
     "y": 960,
     "wires": [
       [
-        "b1f21cc4276f63ca",
+        "5a9cc929e372c03a",
         "f6f12e45d91656d1"
+      ]
+    ]
+  },
+  {
+    "id": "5a9cc929e372c03a",
+    "type": "change",
+    "z": "fe76d259b24cb0a9",
+    "g": "4a0cc04dc1d89dde",
+    "name": "build SET from parm",
+    "rules": [
+      {
+        "t": "set",
+        "p": "payload",
+        "pt": "msg",
+        "to": "$exists(parm.devch) ? '< SET ' & $string(parm.devch) & ' CHAN_NAME {' & parm.chname & '} >' : payload",
+        "tot": "jsonata"
+      },
+      {
+        "t": "set",
+        "p": "host",
+        "pt": "msg",
+        "to": "$exists(parm.host) ? parm.host : host",
+        "tot": "jsonata"
+      },
+      {
+        "t": "set",
+        "p": "port",
+        "pt": "msg",
+        "to": "$exists(parm.port) ? parm.port : ($exists(port) ? port : 2202)",
+        "tot": "jsonata"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 260,
+    "y": 880,
+    "wires": [
+      [
+        "b1f21cc4276f63ca"
       ]
     ]
   },
@@ -17105,8 +17158,7 @@
     "y": 720,
     "wires": [
       [
-        "71ea45bb0de375c5",
-        "b1c2d3e4f5a60004"
+        "71ea45bb0de375c5"
       ]
     ]
   },
@@ -17203,8 +17255,8 @@
         "t": "set",
         "p": "port",
         "pt": "msg",
-        "to": "payload.shure.port",
-        "tot": "msg"
+        "to": "payload.shure.port ? payload.shure.port : 2202",
+        "tot": "jsonata"
       }
     ],
     "action": "",
@@ -17436,7 +17488,7 @@
         "t": "set",
         "p": "parm",
         "pt": "msg",
-        "to": "{   \"parm\" : {\t    \"host\": msg.host\t    ,  \"port\" : msg.port\t    , \"devch\" : msg.shure.ch\t    , \"chname\" : msg.chname\t}\t}",
+        "to": "{ \"host\": host, \"port\": port, \"devch\": payload.shure.ch, \"chname\": chname }",
         "tot": "jsonata"
       },
       {
@@ -17669,7 +17721,7 @@
     "id": "b1c2d3e4f5a60004",
     "type": "function",
     "z": "fe76d259b24cb0a9",
-    "g": "61428a7ba5725248",
+    "g": "4a0cc04dc1d89dde",
     "name": "interceptor: shure",
     "func": "const results = global.get('test_results') || [];\nresults.push({\n    device:    'shure',\n    timestamp: Date.now(),\n    command:   msg.payload,\n    host:      msg.host,\n    port:      msg.port\n});\nif (results.length > 500) results.splice(0, results.length - 500);\nglobal.set('test_results', results);\nreturn null;",
     "outputs": 1,
@@ -17678,8 +17730,8 @@
     "initialize": "",
     "finalize": "",
     "libs": [],
-    "x": 210,
-    "y": 780,
+    "x": 500,
+    "y": 880,
     "wires": [
       []
     ]
@@ -19361,7 +19413,7 @@
     "z": "e4c6ade38a918c51",
     "g": "272fc11275a208bc",
     "name": "get next Sunday",
-    "func": "function getNextSundayDate() {\n    var today = new Date();\n    var dayOfWeek = today.getDay(); // 0=Sunday\n    var daysToAdd = dayOfWeek === 0 ? 7 : 7 - dayOfWeek;\n    var sunday = new Date(today);\n    sunday.setDate(today.getDate() + daysToAdd);\n    var y = sunday.getFullYear();\n    var m = String(sunday.getMonth() + 1).padStart(2, '0');\n    var d = String(sunday.getDate()).padStart(2, '0');\n    return y + '-' + m + '-' + d;\n}\n\nvar title = getNextSundayDate() + ' Mic and Pack Assignments';\nglobal.set('service_title', title);\nmsg.service_title = title;\nmsg.payload = title;\nmsg.value = title;\nreturn msg;",
+    "func": "function getNextSundayDate() {\n    var today = new Date();\n    var dayOfWeek = today.getDay(); // 0=Sunday\n    var daysToAdd = dayOfWeek === 0 ? 7 : 7 - dayOfWeek;\n    var sunday = new Date(today);\n    sunday.setDate(today.getDate() + daysToAdd);\n    var y = sunday.getFullYear();\n    var m = String(sunday.getMonth() + 1).padStart(2, '0');\n    var d = String(sunday.getDate()).padStart(2, '0');\n    return y + '-' + m + '-' + d;\n}\n\nvar title = getNextSundayDate() + ' Mic and Pack Assignments';\nglobal.set('service_title', title);\nmsg.service_title = title;\nreturn msg;",
     "outputs": 1,
     "timeout": 0,
     "noerr": 0,
@@ -19691,6 +19743,32 @@
     "className": "",
     "x": 700,
     "y": 1080,
+    "wires": [
+      [
+        "ca77eb3521e2e068"
+      ]
+    ]
+  },
+  {
+    "id": "ca77eb3521e2e068",
+    "type": "switch",
+    "z": "e4c6ade38a918c51",
+    "g": "fa6a179eb9fa88fb",
+    "name": "payload is array",
+    "property": "payload",
+    "propertyType": "msg",
+    "rules": [
+      {
+        "t": "istype",
+        "v": "array",
+        "vt": "array"
+      }
+    ],
+    "checkall": "true",
+    "repair": false,
+    "outputs": 1,
+    "x": 800,
+    "y": 1000,
     "wires": [
       [
         "361456d6081e50ef",
