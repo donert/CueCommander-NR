@@ -88,6 +88,8 @@ Each subsystem has two tabs:
 
 All UI actions and execution events send a copy of the message to the event log pipeline via a link-out to the event log tab. The message must have `cmd`, `parm`, `source`, `millis`, `depth`, `flow`, `level`, and `message` populated before logging.
 
+Events are stored in a SQLite database at `/tmp/sqlite` (table `eventlog`). Because `/tmp` is cleared on host reboot, the log is intentionally ephemeral. The `CREATE TABLE IF NOT EXISTS` inject on the UI Event Log tab fires automatically at startup (`once=true`) so the table always exists after a reboot or deploy; without it, inserts fail silently and `/api/eventlog` hangs.
+
 # Subsystem: Lighting (ETC ColorSource)
 
 ## Overview
@@ -119,6 +121,55 @@ Dashboard 2 UI (UI Lights v2 tab)
 ## Configuration
 
 Device IP and port are read from `global.config.devices` (first entry with `category == 'Lights'`). The gate `global.LightingEnabled` (boolean) must be true for commands to be sent.
+
+---
+
+# Subsystem: Shure Receiver Channel Names
+
+## Overview
+
+Pushes vocalist names to Shure wireless receivers (ULX-D family) so each receiver channel's front-panel display shows who is on that mic. Uses the Shure TCP command protocol (`< SET n CHAN_NAME {name} >`), default port 2202.
+
+## Commands (`/cc/shure/*`)
+
+| msg.cmd | msg.parm | Description |
+|---------|----------|-------------|
+| `/cc/shure/setnames` | — | Bulk push: for every row of `global.input_map` with a `shure` config, derive the channel name and emit one `/cc/shure/setonename` per row via the message hub |
+| `/cc/shure/setonename` | `{host, port, devch, chname}` | Set one receiver channel's name. `port` defaults to 2202 when absent |
+
+## Channel Name Derivation
+
+For each `input_map` row: `chname = substring(vocal_name, 0, 6) + last-2-of(mic_name)` (e.g. vocal `Brandy`, mic `HH02` → `Brandy02`). Rows with `active = false` contribute the number only. Rows without a `shure` config are skipped.
+
+## Execution Path
+
+```
+Assignment Manager UI (Shure button)
+  → msg.cmd = /cc/shure/setnames
+  → Link Out → /cc Message Hub → /cc/shure tab
+  → load global.input_map → split rows → filter rows with shure config
+  → derive chname, host (row shure.ip), port (row shure.port, default 2202)
+  → msg.cmd = /cc/shure/setonename, msg.parm = {host, port, devch, chname}
+  → Link Out → /cc Message Hub → /cc/shure tab
+  → build "< SET {devch} CHAN_NAME {chname} >" from parm
+  → TCP request (msg.host / msg.port) → receiver
+```
+
+Routing every per-channel set back through the hub (rather than short-circuiting inside the tab) keeps each device command addressable, logged, and interceptable by the test harness. The test interceptor sits beside the TCP node in the Shure Communications group, so `/api/results` captures exactly what is sent on the wire.
+
+## Row Data Contract
+
+`input_map` rows that should receive a name push carry:
+
+```json
+{ "mic_name": "HH02", "vocal_name": "Brandy", "shure": { "ip": "192.168.0.177", "ch": 2, "port": 2202 } }
+```
+
+`shure.port` is optional (defaults to 2202). Saved assignment files typically omit it.
+
+## Known Hazard: Editable Table passthrough
+
+The Editable Table `ui-template` has `passthru = true`, so any message sent *into* the widget is forwarded to its output wire, which feeds `store on publish` (`global.input_map = msg.payload`). Messages injected into the table (e.g. the startup service-title init) must therefore never carry a non-array `payload`. A `payload is array` switch guards the table output as a second line of defence.
 
 ---
 

@@ -48,6 +48,15 @@ This document captures functional requirements and test cases for CueCommander-N
 
 ... [TC-EL-02 unchanged] ...
 
+### TC-EL-03 — eventlog table auto-created at startup
+**Method:** Manual / API  
+**Status: VERIFIED** (manually on uacts-g001, 2026-07-09)  
+**Steps:**
+1. Remove the event log database (`/tmp/sqlite` on the production host is cleared by a reboot).
+2. Restart or redeploy Node-RED.
+3. Query `/api/eventlog` and press any logged UI action.  
+**Expected:** `/api/eventlog` returns 200 with an array (it must not hang), and new events insert successfully. The `CREATE TABLE IF NOT EXISTS` inject fires automatically at startup (`once=true`, 2 s delay); no manual "Create Table" click is required.
+
 ---
 
 # Subsystem: Message Hub
@@ -93,6 +102,12 @@ This document captures functional requirements and test cases for CueCommander-N
 
 ... [RN-01 to RN-03 unchanged] ...
 
+**RN-04** — `/cc/shure/setnames` shall emit one `/cc/shure/setonename` hub command per `input_map` row that has a `shure` config, with `msg.parm = {host, port, devch, chname}`. Per-channel commands route through the message hub (not a direct in-tab link) so they are individually logged and interceptable.
+
+**RN-05** — The Shure TCP port shall be taken from the row's `shure.port` when present and default to **2202** when absent. Saved assignment files typically omit the port.
+
+**RN-06** — Sending names must not depend on manual editor actions after a restart: `global.input_map` shall survive Node-RED startup initialization (see TC-AM-16).
+
 ---
 
 ## Test Cases
@@ -100,6 +115,24 @@ This document captures functional requirements and test cases for CueCommander-N
 ### TC-RN-01 — Bulk push routes to all subsystems
 **Method:** Manual / API  
 **Status: VERIFIED** (via `tests/cases/active_status.js`)
+
+### TC-RN-02 — Shure port defaults to 2202 when the row omits it
+**Method:** API  
+**Status: VERIFIED** (via `tests/cases/shure_port.js`)  
+**Steps:**
+1. Set `input_map` to a single row with `shure: {ip, ch}` and **no** `port` field.
+2. Send `/cc/shure/setnames` via the hub API.
+3. Read the Shure capture results.  
+**Expected:** Exactly one capture with `port == 2202` and the row's `ip` as host.
+
+### TC-RN-03 — Shure per-channel commands route through the hub
+**Method:** API / Event Log  
+**Status: VERIFIED** (via `tests/cases/shure_port.js`)  
+**Steps:**
+1. Set `input_map` to N rows with `shure` configs.
+2. Send `/cc/shure/setnames` via the hub API.
+3. Read the capture results and query `/api/eventlog?cmd=/cc/shure/setonename`.  
+**Expected:** N captures of the form `< SET {ch} CHAN_NAME {name} >` at the TCP boundary; N `/cc/shure/setonename` event log entries; zero "Unsupported command" errors.
 
 ---
 
@@ -382,3 +415,12 @@ The Editable Table shall default to sorting with active (checked) rows at the to
 1. Load the Assignments page with a mix of active and inactive rows (recall a service that has at least one row with `active: false`).
 2. Observe the table without clicking any column header.  
 **Expected:** All active (checked) rows appear above all inactive (unchecked) rows. The Active column header shows the ↑ sort indicator.
+
+### TC-AM-16 — input_map survives startup title initialization
+**Method:** API  
+**Status: VERIFIED** (via `tests/cases/input_map_guard.js`)  
+**Steps:**
+1. Set `global.input_map` to a known array of rows.
+2. Trigger the service-title initialization path (restart Node-RED, or send `/cc/assignments/settitle`; the init sends a title message into the Editable Table, which has `passthru = true`).
+3. Read `global.input_map`.  
+**Expected:** `input_map` is still the same array — not a string. Title messages must not carry a `payload`, and the `payload is array` switch must block any non-array payload from reaching `store on publish`.
