@@ -28,6 +28,85 @@ This document captures functional requirements and test cases for CueCommander-N
 
 ... [TC-LT-02 to TC-LT-07 unchanged] ...
 
+### TC-LT-08 — gotocue mirrors to grandMA3
+**Method:** API  
+**Status: VERIFIED** (via `tests/cases/ma3.js`)  
+**Steps:**
+1. Set `LightingEnabled=false` (so no real ColorSource traffic) and a test `ma3_config`.
+2. Send `/cc/lights/gotocue` with `parm=94`, then with `parm=12`.
+3. Read MA3 captures.  
+**Expected:** Cue 94 produces exactly one MA3 capture `Go+ Sequence 3 Cue 4`; cue 12 (below 91) produces none.
+
+---
+
+# Subsystem: grandMA3 Console (OSC)
+
+## Functional Requirements
+
+**MA-01** — All communication destined for a grandMA3 console shall be handled by the `/cc/ma3` execution tab, reached through the message hub with commands prefixed `/cc/ma3/`.
+
+**MA-02** — `/cc/ma3/gotocue` with `parm {seq?, cue}` shall send the console command-line text `Go+ Sequence <seq> Cue <cue>` (seq defaults to 3) as an OSC message to address `/cmd`.
+
+**MA-03** — `/cc/ma3/cmd` with `parm {text}` shall send the text verbatim to the console command line (direct passthrough for future use).
+
+**MA-04** — Every `/cc/lights/gotocue` shall, in parallel with the ColorSource send, emit `/cc/ma3/gotocue` via the message hub with `cue = ColorSource cue − 90` on sequence 3 (CS cue 94 → MA3 seq 3 cue 4). Cues ≤ 90 are not mirrored. The mirror shall not depend on `LightingEnabled` (each console is gated independently; the ColorSource path will eventually be disabled in favour of MA3).
+
+**MA-05** — The console's IP and OSC port shall be acquired from the avl_data API network table: asset tag `demoma3` (temporary tag, overridable via `global.ma3_asset_tag`), NIC `NIC1`, IP from the IP column, port from the `osc:<port>` entry of the services column (e.g. `"osc:8000, web:80"` → 8000). The result is cached in `global.ma3_config`, refreshed at startup and on `/cc/ma3/refreshconfig`.
+
+**MA-06** — If no valid configuration is available, nothing shall be sent and an Error event shall be logged. `global.MA3Enabled=false` shall block sends with an Info event; unset or true sends.
+
+**MA-07** — All `/cc/ma3` actions shall produce event log records: message arrival, command transmission, config load success/failure, disabled-gate drops, and unsupported commands (Error).
+
+---
+
+## Test Cases
+
+### TC-MA-01 — gotocue builds the correct MA3 command
+**Method:** API  
+**Status: VERIFIED** (via `tests/cases/ma3.js`)  
+**Steps:**
+1. Set a test `ma3_config` via `/api/state`; clear captures.
+2. Send `/cc/ma3/gotocue` with `parm {cue: 4}`, then with `parm {seq: 5, cue: 2}`.  
+**Expected:** Captures `Go+ Sequence 3 Cue 4` and `Go+ Sequence 5 Cue 2`, OSC address `/cmd`, host/port from `ma3_config`.
+
+### TC-MA-02 — direct cmd passthrough
+**Method:** API  
+**Status: VERIFIED** (via `tests/cases/ma3.js`)  
+**Steps:** Send `/cc/ma3/cmd` with `parm {text: "Off Sequence 3"}`.  
+**Expected:** Capture contains exactly `Off Sequence 3`.
+
+### TC-MA-03 — lights gotocue mirror and cue mapping
+**Method:** API  
+**Status: VERIFIED** (via `tests/cases/ma3.js`)  
+**Steps:** As TC-LT-08.  
+**Expected:** CS cue n ≥ 91 → one MA3 capture `Go+ Sequence 3 Cue (n−90)`; cues ≤ 90 produce no MA3 traffic.
+
+### TC-MA-04 — missing config blocks the send and logs an Error
+**Method:** API / Event Log  
+**Status: VERIFIED** (via `tests/cases/ma3.js`)  
+**Steps:** Set `ma3_config=null`; send `/cc/ma3/gotocue {cue:1}`.  
+**Expected:** Zero captures; Error event "MA3 send skipped — no network config".
+
+### TC-MA-05 — MA3Enabled gate
+**Method:** API / Event Log  
+**Status: VERIFIED** (via `tests/cases/ma3.js`)  
+**Steps:** Set `MA3Enabled=false`; send `/cc/ma3/cmd {text:"Clear"}`.  
+**Expected:** Zero captures; Info event noting MA3 is disabled.
+
+### TC-MA-06 — unsupported command logs an Error
+**Method:** API / Event Log  
+**Status: VERIFIED** (via `tests/cases/ma3.js`)  
+**Steps:** Send `/cc/ma3/bogus`.  
+**Expected:** Error event "Unsupported command: /cc/ma3/bogus".
+
+### TC-MA-07 — config fetched from the data API network table
+**Method:** Manual  
+**Status: PENDING** (blocked: no `demoma3` row exists in the network table yet)  
+**Steps:**
+1. Add a network row: asset tag `demoma3`, NIC `NIC1`, the console's IP, services containing `osc:<port>`.
+2. Send `/cc/ma3/refreshconfig` (or restart Node-RED).  
+**Expected:** Info event "MA3 config loaded: ip:port (demoma3/NIC1)"; `global.ma3_config` populated; a subsequent `/cc/ma3/cmd` reaches the console.
+
 ---
 
 # Subsystem: Event Log

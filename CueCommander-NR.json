@@ -8329,7 +8329,8 @@
       "f6e980b81adce7f0",
       "a1b2c3d4e5f60006",
       "kl_api_bc_lout",
-      "a0b1c2d3e4f59623"
+      "a0b1c2d3e4f59623",
+      "70c35e2c44589dba"
     ],
     "x": 145,
     "y": 100,
@@ -8460,12 +8461,18 @@
         "case": false
       },
       {
+        "t": "regex",
+        "v": "^/cc/ma3/.*",
+        "vt": "str",
+        "case": false
+      },
+      {
         "t": "else"
       }
     ],
     "checkall": "false",
     "repair": false,
-    "outputs": 11,
+    "outputs": 12,
     "x": 490,
     "y": 180,
     "wires": [
@@ -8498,6 +8505,9 @@
       ],
       [
         "a0b1c2d3e4f59619"
+      ],
+      [
+        "4934fa192a096e12"
       ],
       [
         "5c2b358579d28e46"
@@ -22921,7 +22931,7 @@
     "type": "function",
     "z": "a1b2c3d4e5f60001",
     "name": "GET /api/state",
-    "func": "const token = msg.req.headers['x-api-token'];\nconst validToken = flow.get('api_token') || 'vn-api-changeme';\nif (!token || token !== validToken) {\n    msg.statusCode = 401;\n    msg.payload = { error: 'Unauthorized: missing or invalid X-Api-Token' };\n    return msg;\n}\n\nmsg.statusCode = 200;\nmsg.payload = {\n    input_map:     global.get('input_map')     ?? null,\n    service_title: global.get('service_title') ?? null,\n    filtertime:    global.get('filtertime')    ?? null,\n    filterdepth:   global.get('filterdepth')   ?? null,\n    filter1sec:    global.get('filter1sec')    ?? null,\n    klang_variances:  global.get('klang_variances')  ?? null,\n    klang_master_mix: global.get('klang_master_mix') ?? null,\n    klang_test_mode:    global.get('klang_test_mode')    ?? false,\n    klang_sweep_active: global.get('klang_sweep_active') ?? false,\n};\nreturn msg;",
+    "func": "const token = msg.req.headers['x-api-token'];\nconst validToken = flow.get('api_token') || 'vn-api-changeme';\nif (!token || token !== validToken) {\n    msg.statusCode = 401;\n    msg.payload = { error: 'Unauthorized: missing or invalid X-Api-Token' };\n    return msg;\n}\n\nmsg.statusCode = 200;\nmsg.payload = {\n    input_map:     global.get('input_map')     ?? null,\n    service_title: global.get('service_title') ?? null,\n    filtertime:    global.get('filtertime')    ?? null,\n    filterdepth:   global.get('filterdepth')   ?? null,\n    filter1sec:    global.get('filter1sec')    ?? null,\n    klang_variances:  global.get('klang_variances')  ?? null,\n    klang_master_mix: global.get('klang_master_mix') ?? null,\n    klang_test_mode:    global.get('klang_test_mode')    ?? false,\n    klang_sweep_active: global.get('klang_sweep_active') ?? false,\n    ma3_config:      global.get('ma3_config')      ?? null,\n    MA3Enabled:      global.get('MA3Enabled')      ?? null,\n    LightingEnabled: global.get('LightingEnabled') ?? null,\n};\nreturn msg;",
     "outputs": 1,
     "timeout": "",
     "noerr": 0,
@@ -22969,7 +22979,7 @@
     "type": "function",
     "z": "a1b2c3d4e5f60001",
     "name": "POST /api/state",
-    "func": "const token = msg.req.headers['x-api-token'];\nconst validToken = flow.get('api_token') || 'vn-api-changeme';\nif (!token || token !== validToken) {\n    msg.statusCode = 401;\n    msg.payload = { error: 'Unauthorized: missing or invalid X-Api-Token' };\n    return msg;\n}\n\nconst body = msg.req.body;\nif (!body || typeof body !== 'object' || Array.isArray(body)) {\n    msg.statusCode = 400;\n    msg.payload = { error: 'Bad Request: JSON object body required' };\n    return msg;\n}\nconst allowed = ['input_map','service_title','filtertime','filterdepth','filter1sec','test_results','klang_live_state','klang_variances','klang_master_mix','klang_test_mode','klang_sweep_active'];\nconst set = [];\nObject.keys(body).forEach(k => {\n    if (allowed.includes(k)) { global.set(k, body[k]); set.push(k); }\n});\nmsg.statusCode = 200;\nmsg.payload = { ok: true, set };\nreturn msg;",
+    "func": "const token = msg.req.headers['x-api-token'];\nconst validToken = flow.get('api_token') || 'vn-api-changeme';\nif (!token || token !== validToken) {\n    msg.statusCode = 401;\n    msg.payload = { error: 'Unauthorized: missing or invalid X-Api-Token' };\n    return msg;\n}\n\nconst body = msg.req.body;\nif (!body || typeof body !== 'object' || Array.isArray(body)) {\n    msg.statusCode = 400;\n    msg.payload = { error: 'Bad Request: JSON object body required' };\n    return msg;\n}\nconst allowed = ['input_map','service_title','filtertime','filterdepth','filter1sec','test_results','klang_live_state','klang_variances','klang_master_mix','klang_test_mode','klang_sweep_active','ma3_config','MA3Enabled','LightingEnabled'];\nconst set = [];\nObject.keys(body).forEach(k => {\n    if (allowed.includes(k)) { global.set(k, body[k]); set.push(k); }\n});\nmsg.statusCode = 200;\nmsg.payload = { ok: true, set };\nreturn msg;",
     "outputs": 1,
     "timeout": "",
     "noerr": 0,
@@ -68593,6 +68603,831 @@
     "info": "Execution tab for ETC ColorSource"
   },
   {
+    "id": "40ec95d2637ed1ca",
+    "type": "tab",
+    "label": "/cc/ma3",
+    "disabled": false,
+    "info": "grandMA3 console control via OSC.\n\nCommands: /cc/ma3/gotocue {seq?, cue}, /cc/ma3/cmd {text}, /cc/ma3/refreshconfig.\nNetwork config (IP + osc port) is fetched from the avl_data API network table, asset tag demoma3 / NIC1, and cached in global.ma3_config.\nGate: global.MA3Enabled (false blocks sends; unset/true sends).\nSee design.md \u2014 Subsystem: grandMA3 Console.",
+    "env": []
+  },
+  {
+    "id": "88510ba015ec0e7b",
+    "type": "group",
+    "z": "40ec95d2637ed1ca",
+    "name": "Handle ma3 messages from Message Hub",
+    "style": {
+      "label": true
+    },
+    "nodes": [
+      "50dc1aad3e5957d3",
+      "44976b3128a7e555",
+      "76f360a7422fbefb",
+      "94a0203f29dfaecf",
+      "75e3b45f79b1e85a",
+      "1cc832dfcf577bc0",
+      "a3e4d940d465bd59",
+      "d0fcd143bab80b4f",
+      "21ce0ff45d978664",
+      "0815aa24f3935ecf",
+      "1a29394688163b41"
+    ],
+    "x": 25,
+    "y": 0,
+    "w": 840,
+    "h": 300
+  },
+  {
+    "id": "10888e74af117d25",
+    "type": "group",
+    "z": "40ec95d2637ed1ca",
+    "name": "MA3 network config from data API",
+    "style": {
+      "label": true
+    },
+    "nodes": [
+      "89609850ef5473c3",
+      "43a33ee49b4ba3e4",
+      "e3d78ce91d6ad3c7",
+      "e862a9e78230e89f",
+      "9700476cb0c5fec8",
+      "c4cf858397c236eb",
+      "b4fd6bda7409e8f5"
+    ],
+    "x": 100,
+    "y": 320,
+    "w": 1005,
+    "h": 160
+  },
+  {
+    "id": "f03d1d08582f6372",
+    "type": "group",
+    "z": "40ec95d2637ed1ca",
+    "name": "MA3 Communications (OSC over UDP)",
+    "style": {
+      "label": true
+    },
+    "nodes": [
+      "64e6c1cb55dbf61d",
+      "ddb70c804b328db9",
+      "ed02dea73a307329",
+      "4872b839b27a41a0",
+      "6cb0743c7b190474",
+      "b97fefd4b1e30160",
+      "c661013d3484c99e",
+      "04ab0b071550cbcd",
+      "dd1ab7e6554215b4",
+      "28779c15daca1afe",
+      "f4be1509b780f3ac",
+      "a8d33124f889b83e"
+    ],
+    "x": 80,
+    "y": 520,
+    "w": 1010,
+    "h": 220
+  },
+  {
+    "id": "c1180206873427f4",
+    "type": "group",
+    "z": "40ec95d2637ed1ca",
+    "name": "ma3 event loggers",
+    "style": {
+      "label": true
+    },
+    "nodes": [
+      "ff7a6ba8d3100d77",
+      "a7b04e4f72d70fd7",
+      "68268602e8b6449a",
+      "b946c7e0c621dbef",
+      "7379118110a74ab5"
+    ],
+    "x": 25,
+    "y": 800,
+    "w": 535,
+    "h": 140
+  },
+  {
+    "id": "50dc1aad3e5957d3",
+    "type": "link in",
+    "z": "40ec95d2637ed1ca",
+    "g": "88510ba015ec0e7b",
+    "name": "from message hub",
+    "links": [
+      "4934fa192a096e12"
+    ],
+    "x": 85,
+    "y": 40,
+    "wires": [
+      [
+        "44976b3128a7e555"
+      ]
+    ]
+  },
+  {
+    "id": "44976b3128a7e555",
+    "type": "change",
+    "z": "40ec95d2637ed1ca",
+    "g": "88510ba015ec0e7b",
+    "name": "depth & flow",
+    "rules": [
+      {
+        "t": "set",
+        "p": "depth",
+        "pt": "msg",
+        "to": "$exists(depth) ? depth + 1 : 2",
+        "tot": "jsonata"
+      },
+      {
+        "t": "set",
+        "p": "flow",
+        "pt": "msg",
+        "to": "${NR_FLOW_NAME}",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 290,
+    "y": 40,
+    "wires": [
+      [
+        "76f360a7422fbefb"
+      ]
+    ]
+  },
+  {
+    "id": "76f360a7422fbefb",
+    "type": "junction",
+    "z": "40ec95d2637ed1ca",
+    "g": "88510ba015ec0e7b",
+    "x": 180,
+    "y": 120,
+    "wires": [
+      [
+        "94a0203f29dfaecf",
+        "75e3b45f79b1e85a"
+      ]
+    ]
+  },
+  {
+    "id": "94a0203f29dfaecf",
+    "type": "switch",
+    "z": "40ec95d2637ed1ca",
+    "g": "88510ba015ec0e7b",
+    "name": "level 3",
+    "property": "cmd",
+    "propertyType": "msg",
+    "rules": [
+      {
+        "t": "regex",
+        "v": "^/cc/ma3/gotocue$",
+        "vt": "str",
+        "case": false
+      },
+      {
+        "t": "regex",
+        "v": "^/cc/ma3/cmd$",
+        "vt": "str",
+        "case": false
+      },
+      {
+        "t": "regex",
+        "v": "^/cc/ma3/refreshconfig$",
+        "vt": "str",
+        "case": false
+      },
+      {
+        "t": "else"
+      }
+    ],
+    "checkall": "false",
+    "repair": false,
+    "outputs": 4,
+    "x": 300,
+    "y": 120,
+    "wires": [
+      [
+        "21ce0ff45d978664"
+      ],
+      [
+        "0815aa24f3935ecf"
+      ],
+      [
+        "e3d78ce91d6ad3c7"
+      ],
+      [
+        "a3e4d940d465bd59"
+      ]
+    ]
+  },
+  {
+    "id": "75e3b45f79b1e85a",
+    "type": "change",
+    "z": "40ec95d2637ed1ca",
+    "g": "88510ba015ec0e7b",
+    "name": "arrived",
+    "rules": [
+      {
+        "t": "set",
+        "p": "message",
+        "pt": "msg",
+        "to": "message arrived",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 390,
+    "y": 240,
+    "wires": [
+      [
+        "1cc832dfcf577bc0"
+      ]
+    ]
+  },
+  {
+    "id": "1cc832dfcf577bc0",
+    "type": "link out",
+    "z": "40ec95d2637ed1ca",
+    "g": "88510ba015ec0e7b",
+    "name": "link out ma3 msg arrived",
+    "mode": "link",
+    "links": [
+      "ff7a6ba8d3100d77"
+    ],
+    "x": 545,
+    "y": 240,
+    "wires": []
+  },
+  {
+    "id": "a3e4d940d465bd59",
+    "type": "change",
+    "z": "40ec95d2637ed1ca",
+    "g": "88510ba015ec0e7b",
+    "name": "unsupported",
+    "rules": [
+      {
+        "t": "set",
+        "p": "message",
+        "pt": "msg",
+        "to": "\"Unsupported command: \" & cmd",
+        "tot": "jsonata"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 470,
+    "y": 180,
+    "wires": [
+      [
+        "d0fcd143bab80b4f"
+      ]
+    ]
+  },
+  {
+    "id": "d0fcd143bab80b4f",
+    "type": "link out",
+    "z": "40ec95d2637ed1ca",
+    "g": "88510ba015ec0e7b",
+    "name": "link out unsupported",
+    "mode": "link",
+    "links": [
+      "68268602e8b6449a"
+    ],
+    "x": 625,
+    "y": 180,
+    "wires": []
+  },
+  {
+    "id": "21ce0ff45d978664",
+    "type": "function",
+    "z": "40ec95d2637ed1ca",
+    "g": "88510ba015ec0e7b",
+    "name": "build gotocue text",
+    "func": "msg.flow = '/cc/ma3';\nmsg.millis = msg.millis || Date.now();\nmsg.depth = msg.depth || 1;\nmsg.source = msg.source || 'internal';\nconst p = msg.parm || {};\nconst cue = Number(p.cue);\nif (!isFinite(cue)) {\n    msg.message = 'gotocue rejected: parm.cue missing or not numeric ('\n        + JSON.stringify(msg.parm) + ')';\n    return [null, msg];\n}\nconst seq = (p.seq === undefined || p.seq === null || p.seq === '') ? 3 : p.seq;\nmsg.payload = 'Go+ Sequence ' + seq + ' Cue ' + cue;\nmsg.message = 'MA3 gotocue: ' + msg.payload;\nreturn [msg, null];\n",
+    "outputs": 2,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "x": 530,
+    "y": 80,
+    "wires": [
+      [
+        "64e6c1cb55dbf61d"
+      ],
+      [
+        "1a29394688163b41"
+      ]
+    ]
+  },
+  {
+    "id": "0815aa24f3935ecf",
+    "type": "function",
+    "z": "40ec95d2637ed1ca",
+    "g": "88510ba015ec0e7b",
+    "name": "build direct cmd text",
+    "func": "msg.flow = '/cc/ma3';\nmsg.millis = msg.millis || Date.now();\nmsg.depth = msg.depth || 1;\nmsg.source = msg.source || 'internal';\nconst t = (msg.parm && typeof msg.parm === 'object') ? msg.parm.text : msg.parm;\nif (typeof t !== 'string' || !t.trim()) {\n    msg.message = 'cmd rejected: parm.text missing or empty';\n    return [null, msg];\n}\nmsg.payload = t.trim();\nmsg.message = 'MA3 cmd: ' + msg.payload;\nreturn [msg, null];\n",
+    "outputs": 2,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "x": 540,
+    "y": 140,
+    "wires": [
+      [
+        "64e6c1cb55dbf61d"
+      ],
+      [
+        "1a29394688163b41"
+      ]
+    ]
+  },
+  {
+    "id": "1a29394688163b41",
+    "type": "link out",
+    "z": "40ec95d2637ed1ca",
+    "g": "88510ba015ec0e7b",
+    "name": "link out build error",
+    "mode": "link",
+    "links": [
+      "68268602e8b6449a"
+    ],
+    "x": 725,
+    "y": 110,
+    "wires": []
+  },
+  {
+    "id": "89609850ef5473c3",
+    "type": "comment",
+    "z": "40ec95d2637ed1ca",
+    "g": "10888e74af117d25",
+    "name": "Config source: avl_data API \u2014 asset demoma3 / NIC1 (temporary tag). Override via global.ma3_asset_tag / ma3_nic. Port parsed from services column, e.g. 'osc:8000, web:80'.",
+    "info": "",
+    "x": 330,
+    "y": 360,
+    "wires": []
+  },
+  {
+    "id": "43a33ee49b4ba3e4",
+    "type": "inject",
+    "z": "40ec95d2637ed1ca",
+    "g": "10888e74af117d25",
+    "name": "fetch config at startup",
+    "props": [],
+    "repeat": "",
+    "crontab": "",
+    "once": true,
+    "onceDelay": 3,
+    "topic": "",
+    "x": 160,
+    "y": 400,
+    "wires": [
+      [
+        "e3d78ce91d6ad3c7"
+      ]
+    ]
+  },
+  {
+    "id": "e3d78ce91d6ad3c7",
+    "type": "function",
+    "z": "40ec95d2637ed1ca",
+    "g": "10888e74af117d25",
+    "name": "build config request",
+    "func": "const tag = global.get('ma3_asset_tag') || 'demoma3';\nmsg.url = 'http://uacts-g001:8002/network?asset_tag='\n    + encodeURIComponent(tag);\nmsg.ma3_tag = tag;\nreturn msg;\n",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "x": 390,
+    "y": 400,
+    "wires": [
+      [
+        "e862a9e78230e89f"
+      ]
+    ]
+  },
+  {
+    "id": "e862a9e78230e89f",
+    "type": "http request",
+    "z": "40ec95d2637ed1ca",
+    "g": "10888e74af117d25",
+    "name": "GET network row",
+    "method": "GET",
+    "ret": "obj",
+    "paytoqs": "ignore",
+    "url": "",
+    "tls": "",
+    "persist": false,
+    "proxy": "",
+    "insecureHTTPParser": false,
+    "authType": "",
+    "senderr": false,
+    "headers": [],
+    "x": 590,
+    "y": 400,
+    "wires": [
+      [
+        "9700476cb0c5fec8"
+      ]
+    ]
+  },
+  {
+    "id": "9700476cb0c5fec8",
+    "type": "function",
+    "z": "40ec95d2637ed1ca",
+    "g": "10888e74af117d25",
+    "name": "parse ma3 config",
+    "func": "msg.flow = '/cc/ma3';\nmsg.millis = msg.millis || Date.now();\nmsg.depth = msg.depth || 1;\nmsg.source = msg.source || 'internal';\nmsg.cmd = msg.cmd || '/cc/ma3/refreshconfig';\nmsg.parm = msg.parm || {};\nconst tag = msg.ma3_tag || global.get('ma3_asset_tag') || 'demoma3';\nconst wantNic = String(global.get('ma3_nic') || 'NIC1').toLowerCase();\nfunction fail(why) {\n    global.set('ma3_config', null);\n    msg.message = 'MA3 config unavailable: ' + why;\n    msg.payload = '';\n    return [null, msg];\n}\nlet rows = msg.payload;\nif (typeof rows === 'string') { try { rows = JSON.parse(rows); } catch (e) { rows = null; } }\nif (!Array.isArray(rows)) return fail('bad response from data API');\nif (rows.length === 0) return fail('no network rows for asset ' + tag);\nconst row = rows.find(r => String(r.nic || '').toLowerCase() === wantNic);\nif (!row) return fail('asset ' + tag + ' has no ' + wantNic.toUpperCase()\n    + ' row (found: ' + rows.map(r => r.nic || '?').join(', ') + ')');\nconst ip = String(row.ip_address || '').trim();\nif (!ip) return fail('row ' + tag + '/' + wantNic.toUpperCase() + ' has no IP');\nconst m = /(?:^|,)\\s*osc\\s*:\\s*(\\d+)/i.exec(String(row.services || ''));\nif (!m) return fail(\"no 'osc:<port>' entry in services ('\" + (row.services || '') + \"')\");\nconst cfg = { ip: ip, port: Number(m[1]), asset_tag: row.asset_tag,\n              nic: row.nic, fetched_at: Date.now() };\nglobal.set('ma3_config', cfg);\nmsg.message = 'MA3 config loaded: ' + cfg.ip + ':' + cfg.port\n    + ' (' + cfg.asset_tag + '/' + cfg.nic + ')';\nmsg.payload = '';\nreturn [msg, null];\n",
+    "outputs": 2,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "x": 790,
+    "y": 400,
+    "wires": [
+      [
+        "c4cf858397c236eb"
+      ],
+      [
+        "b4fd6bda7409e8f5"
+      ]
+    ]
+  },
+  {
+    "id": "c4cf858397c236eb",
+    "type": "link out",
+    "z": "40ec95d2637ed1ca",
+    "g": "10888e74af117d25",
+    "name": "config ok",
+    "mode": "link",
+    "links": [
+      "ff7a6ba8d3100d77"
+    ],
+    "x": 965,
+    "y": 380,
+    "wires": []
+  },
+  {
+    "id": "b4fd6bda7409e8f5",
+    "type": "link out",
+    "z": "40ec95d2637ed1ca",
+    "g": "10888e74af117d25",
+    "name": "config failed",
+    "mode": "link",
+    "links": [
+      "68268602e8b6449a"
+    ],
+    "x": 965,
+    "y": 420,
+    "wires": []
+  },
+  {
+    "id": "64e6c1cb55dbf61d",
+    "type": "junction",
+    "z": "40ec95d2637ed1ca",
+    "g": "f03d1d08582f6372",
+    "x": 140,
+    "y": 580,
+    "wires": [
+      [
+        "ddb70c804b328db9"
+      ]
+    ]
+  },
+  {
+    "id": "ddb70c804b328db9",
+    "type": "switch",
+    "z": "40ec95d2637ed1ca",
+    "g": "f03d1d08582f6372",
+    "name": "MA3Enabled",
+    "property": "MA3Enabled",
+    "propertyType": "global",
+    "rules": [
+      {
+        "t": "false"
+      },
+      {
+        "t": "else"
+      }
+    ],
+    "checkall": "false",
+    "repair": false,
+    "outputs": 2,
+    "x": 270,
+    "y": 580,
+    "wires": [
+      [
+        "ed02dea73a307329"
+      ],
+      [
+        "6cb0743c7b190474"
+      ]
+    ]
+  },
+  {
+    "id": "ed02dea73a307329",
+    "type": "change",
+    "z": "40ec95d2637ed1ca",
+    "g": "f03d1d08582f6372",
+    "name": "disabled",
+    "rules": [
+      {
+        "t": "set",
+        "p": "message",
+        "pt": "msg",
+        "to": "\"MA3 disabled (global.MA3Enabled=false) \u2014 not sent: \" & payload",
+        "tot": "jsonata"
+      },
+      {
+        "t": "set",
+        "p": "payload",
+        "pt": "msg",
+        "to": "",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 440,
+    "y": 640,
+    "wires": [
+      [
+        "4872b839b27a41a0"
+      ]
+    ]
+  },
+  {
+    "id": "4872b839b27a41a0",
+    "type": "link out",
+    "z": "40ec95d2637ed1ca",
+    "g": "f03d1d08582f6372",
+    "name": "disabled log",
+    "mode": "link",
+    "links": [
+      "ff7a6ba8d3100d77"
+    ],
+    "x": 595,
+    "y": 640,
+    "wires": []
+  },
+  {
+    "id": "6cb0743c7b190474",
+    "type": "function",
+    "z": "40ec95d2637ed1ca",
+    "g": "f03d1d08582f6372",
+    "name": "apply MA3 network config",
+    "func": "const cfg = global.get('ma3_config');\nif (!cfg || !cfg.ip || !cfg.port) {\n    msg.message = 'MA3 send skipped \u2014 no network config'\n        + ' (run /cc/ma3/refreshconfig after adding the network row): '\n        + msg.payload;\n    msg.payload = '';\n    return [null, msg];\n}\nmsg.ip = cfg.ip;\nmsg.port = cfg.port;\nmsg.topic = '/cmd';   // grandMA3 OSC command-line input (OSC prefix blank)\nreturn [msg, null];\n",
+    "outputs": 2,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "x": 480,
+    "y": 560,
+    "wires": [
+      [
+        "c661013d3484c99e"
+      ],
+      [
+        "b97fefd4b1e30160"
+      ]
+    ]
+  },
+  {
+    "id": "b97fefd4b1e30160",
+    "type": "link out",
+    "z": "40ec95d2637ed1ca",
+    "g": "f03d1d08582f6372",
+    "name": "no config",
+    "mode": "link",
+    "links": [
+      "68268602e8b6449a"
+    ],
+    "x": 645,
+    "y": 600,
+    "wires": []
+  },
+  {
+    "id": "c661013d3484c99e",
+    "type": "junction",
+    "z": "40ec95d2637ed1ca",
+    "g": "f03d1d08582f6372",
+    "x": 660,
+    "y": 560,
+    "wires": [
+      [
+        "04ab0b071550cbcd",
+        "28779c15daca1afe",
+        "f4be1509b780f3ac"
+      ]
+    ]
+  },
+  {
+    "id": "04ab0b071550cbcd",
+    "type": "osc",
+    "z": "40ec95d2637ed1ca",
+    "g": "f03d1d08582f6372",
+    "name": "OSC encode",
+    "path": "",
+    "metadata": false,
+    "x": 790,
+    "y": 560,
+    "wires": [
+      [
+        "dd1ab7e6554215b4"
+      ]
+    ]
+  },
+  {
+    "id": "dd1ab7e6554215b4",
+    "type": "udp out",
+    "z": "40ec95d2637ed1ca",
+    "g": "f03d1d08582f6372",
+    "name": "To grandMA3",
+    "addr": "",
+    "iface": "",
+    "port": "",
+    "ipv": "udp4",
+    "outport": "",
+    "base64": true,
+    "multicast": "false",
+    "x": 950,
+    "y": 560,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "28779c15daca1afe",
+    "type": "function",
+    "z": "40ec95d2637ed1ca",
+    "g": "f03d1d08582f6372",
+    "name": "interceptor: ma3",
+    "func": "const results = global.get('test_results') || [];\nresults.push({\n    device:    'ma3',\n    timestamp: Date.now(),\n    command:   msg.payload,\n    topic:     msg.topic,\n    host:      msg.ip,\n    port:      msg.port\n});\nif (results.length > 500) results.splice(0, results.length - 500);\nglobal.set('test_results', results);\nreturn null;\n",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "x": 800,
+    "y": 620,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "f4be1509b780f3ac",
+    "type": "function",
+    "z": "40ec95d2637ed1ca",
+    "g": "f03d1d08582f6372",
+    "name": "prep send log",
+    "func": "msg.level = 'Info';\nmsg.depth = (msg.depth || 1) + 1;\nmsg.flow = '/cc/ma3';\nmsg.message = 'MA3 \\u2192 ' + msg.ip + ':' + msg.port\n    + ' ' + msg.topic + ' ' + msg.payload;\nmsg.payload = '';\nreturn msg;\n",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "x": 790,
+    "y": 680,
+    "wires": [
+      [
+        "a8d33124f889b83e"
+      ]
+    ]
+  },
+  {
+    "id": "a8d33124f889b83e",
+    "type": "link out",
+    "z": "40ec95d2637ed1ca",
+    "g": "f03d1d08582f6372",
+    "name": "sent log",
+    "mode": "link",
+    "links": [
+      "ff7a6ba8d3100d77"
+    ],
+    "x": 945,
+    "y": 680,
+    "wires": []
+  },
+  {
+    "id": "ff7a6ba8d3100d77",
+    "type": "link in",
+    "z": "40ec95d2637ed1ca",
+    "g": "c1180206873427f4",
+    "name": "link in ma3 event logger INFO",
+    "links": [
+      "1cc832dfcf577bc0",
+      "c4cf858397c236eb",
+      "4872b839b27a41a0",
+      "a8d33124f889b83e"
+    ],
+    "x": 85,
+    "y": 840,
+    "wires": [
+      [
+        "a7b04e4f72d70fd7"
+      ]
+    ]
+  },
+  {
+    "id": "a7b04e4f72d70fd7",
+    "type": "change",
+    "z": "40ec95d2637ed1ca",
+    "g": "c1180206873427f4",
+    "name": "Level Info",
+    "rules": [
+      {
+        "t": "set",
+        "p": "level",
+        "pt": "msg",
+        "to": "Info",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 250,
+    "y": 840,
+    "wires": [
+      [
+        "7379118110a74ab5"
+      ]
+    ]
+  },
+  {
+    "id": "68268602e8b6449a",
+    "type": "link in",
+    "z": "40ec95d2637ed1ca",
+    "g": "c1180206873427f4",
+    "name": "link in ma3 event logger ERROR",
+    "links": [
+      "d0fcd143bab80b4f",
+      "1a29394688163b41",
+      "b4fd6bda7409e8f5",
+      "b97fefd4b1e30160"
+    ],
+    "x": 85,
+    "y": 880,
+    "wires": [
+      [
+        "b946c7e0c621dbef"
+      ]
+    ]
+  },
+  {
+    "id": "b946c7e0c621dbef",
+    "type": "change",
+    "z": "40ec95d2637ed1ca",
+    "g": "c1180206873427f4",
+    "name": "Level Error",
+    "rules": [
+      {
+        "t": "set",
+        "p": "level",
+        "pt": "msg",
+        "to": "Error",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 250,
+    "y": 880,
+    "wires": [
+      [
+        "7379118110a74ab5"
+      ]
+    ]
+  },
+  {
+    "id": "7379118110a74ab5",
+    "type": "link out",
+    "z": "40ec95d2637ed1ca",
+    "g": "c1180206873427f4",
+    "name": "to Event Log In",
+    "mode": "link",
+    "links": [
+      "084445fc7ab1aa20"
+    ],
+    "x": 420,
+    "y": 860,
+    "wires": []
+  },
+  {
     "id": "f0e1d2c3b4a59603",
     "type": "ui-page",
     "name": "Lights",
@@ -70217,7 +71052,9 @@
       [
         "f0e1d2c3b4a59662"
       ]
-    ]
+    ],
+    "x": 80,
+    "y": 300
   },
   {
     "id": "f0e1d2c3b4a59662",
@@ -70294,7 +71131,8 @@
         "f0e1d2c3b4a59665"
       ],
       [
-        "f0e1d2c3b4a59666"
+        "f0e1d2c3b4a59666",
+        "c809de9702ab5983"
       ],
       [
         "f0e1d2c3b4a59667"
@@ -70315,7 +71153,9 @@
         "f0e1d2c3b4a59706"
       ],
       []
-    ]
+    ],
+    "x": 240,
+    "y": 300
   },
   {
     "id": "f0e1d2c3b4a59663",
@@ -70347,7 +71187,9 @@
       [
         "f0e1d2c3b4a59681"
       ]
-    ]
+    ],
+    "x": 470,
+    "y": 60
   },
   {
     "id": "f0e1d2c3b4a59664",
@@ -70379,7 +71221,9 @@
       [
         "f0e1d2c3b4a59681"
       ]
-    ]
+    ],
+    "x": 470,
+    "y": 120
   },
   {
     "id": "f0e1d2c3b4a59665",
@@ -70411,7 +71255,9 @@
       [
         "f0e1d2c3b4a59681"
       ]
-    ]
+    ],
+    "x": 470,
+    "y": 180
   },
   {
     "id": "f0e1d2c3b4a59666",
@@ -70442,6 +71288,49 @@
     "wires": [
       [
         "f0e1d2c3b4a59681"
+      ]
+    ],
+    "x": 470,
+    "y": 240
+  },
+  {
+    "id": "51f13201ae12b580",
+    "type": "comment",
+    "z": "f0e1d2c3b4a59602",
+    "name": "CS cues \u2265 91 mirror to grandMA3 as Go+ Sequence 3 Cue (n-90) \u2014 see /cc/ma3",
+    "info": "",
+    "x": 780,
+    "y": 120,
+    "wires": []
+  },
+  {
+    "id": "70c35e2c44589dba",
+    "type": "link out",
+    "z": "f0e1d2c3b4a59602",
+    "name": "to message hub",
+    "mode": "link",
+    "links": [
+      "b33643a1f31204d1"
+    ],
+    "x": 905,
+    "y": 160,
+    "wires": []
+  },
+  {
+    "id": "c809de9702ab5983",
+    "type": "function",
+    "z": "f0e1d2c3b4a59602",
+    "name": "mirror gotocue \u2192 MA3 (cue - 90)",
+    "func": "const cs = Number(msg.parm);\nif (!isFinite(cs)) {\n    node.warn('lights gotocue: non-numeric cue ' + JSON.stringify(msg.parm));\n    return null;\n}\nconst ma3 = cs - 90;\nif (ma3 <= 0) return null;   // ColorSource-only cue, no MA3 equivalent\nreturn {\n    cmd:    '/cc/ma3/gotocue',\n    parm:   { seq: 3, cue: ma3 },\n    source: 'internal',\n    flow:   '/cc/lights',\n    level:  'Info',\n    millis: Date.now(),\n    depth:  (msg.depth || 1) + 1,\n    message: 'Mirror CS cue ' + cs + ' \\u2192 MA3 Go+ Sequence 3 Cue ' + ma3,\n    _orgmsgid: msg._orgmsgid || msg._msgid,\n};\n",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "x": 720,
+    "y": 160,
+    "wires": [
+      [
+        "70c35e2c44589dba"
       ]
     ]
   },
@@ -70475,7 +71364,9 @@
       [
         "f0e1d2c3b4a59681"
       ]
-    ]
+    ],
+    "x": 470,
+    "y": 300
   },
   {
     "id": "f0e1d2c3b4a59668",
@@ -70507,7 +71398,9 @@
       [
         "f0e1d2c3b4a59681"
       ]
-    ]
+    ],
+    "x": 470,
+    "y": 360
   },
   {
     "id": "f0e1d2c3b4a59669",
@@ -70532,7 +71425,9 @@
       [
         "f0e1d2c3b4a5966a"
       ]
-    ]
+    ],
+    "x": 470,
+    "y": 420
   },
   {
     "id": "f0e1d2c3b4a5966a",
@@ -70549,7 +71444,9 @@
       [
         "f0e1d2c3b4a5966b"
       ]
-    ]
+    ],
+    "x": 650,
+    "y": 420
   },
   {
     "id": "f0e1d2c3b4a5966b",
@@ -70581,7 +71478,9 @@
       [
         "f0e1d2c3b4a5966c"
       ]
-    ]
+    ],
+    "x": 830,
+    "y": 420
   },
   {
     "id": "f0e1d2c3b4a5966c",
@@ -70604,7 +71503,9 @@
       [
         "f0e1d2c3b4a59681"
       ]
-    ]
+    ],
+    "x": 1010,
+    "y": 420
   },
   {
     "id": "f0e1d2c3b4a5966d",
@@ -70620,7 +71521,9 @@
       [
         "f0e1d2c3b4a59670"
       ]
-    ]
+    ],
+    "x": 470,
+    "y": 500
   },
   {
     "id": "f0e1d2c3b4a5966e",
@@ -70637,7 +71540,9 @@
       [
         "f0e1d2c3b4a5966f"
       ]
-    ]
+    ],
+    "x": 470,
+    "y": 560
   },
   {
     "id": "f0e1d2c3b4a5966f",
@@ -70669,7 +71574,9 @@
       [
         "f0e1d2c3b4a59670"
       ]
-    ]
+    ],
+    "x": 650,
+    "y": 560
   },
   {
     "id": "f0e1d2c3b4a59670",
@@ -70692,7 +71599,9 @@
       [
         "f0e1d2c3b4a59681"
       ]
-    ]
+    ],
+    "x": 830,
+    "y": 500
   },
   {
     "id": "f0e1d2c3b4a59681",
@@ -70722,7 +71631,9 @@
         "f0e1d2c3b4a59685"
       ],
       []
-    ]
+    ],
+    "x": 1210,
+    "y": 300
   },
   {
     "id": "f0e1d2c3b4a59682",
@@ -70738,7 +71649,9 @@
       [
         "f0e1d2c3b4a59683"
       ]
-    ]
+    ],
+    "x": 1400,
+    "y": 300
   },
   {
     "id": "f0e1d2c3b4a59683",
@@ -70752,7 +71665,9 @@
         "f0e1d2c3b4a59684",
         "f0e1d2c3b4a59686"
       ]
-    ]
+    ],
+    "x": 1590,
+    "y": 300
   },
   {
     "id": "f0e1d2c3b4a59684",
@@ -70768,7 +71683,9 @@
     "multicast": "false",
     "wires": [
       []
-    ]
+    ],
+    "x": 1770,
+    "y": 280
   },
   {
     "id": "f0e1d2c3b4a59686",
@@ -70784,7 +71701,9 @@
       [
         "f0e1d2c3b4a59687"
       ]
-    ]
+    ],
+    "x": 1770,
+    "y": 360
   },
   {
     "id": "f0e1d2c3b4a59687",
@@ -70795,7 +71714,9 @@
     "links": [
       "084445fc7ab1aa20"
     ],
-    "wires": []
+    "wires": [],
+    "x": 1930,
+    "y": 360
   },
   {
     "id": "f0e1d2c3b4a59685",
@@ -70812,7 +71733,9 @@
     "statusType": "auto",
     "wires": [
       []
-    ]
+    ],
+    "x": 1400,
+    "y": 380
   },
   {
     "id": "f0e1d2c3b4a59690",
@@ -70844,7 +71767,9 @@
       [
         "f0e1d2c3b4a59681"
       ]
-    ]
+    ],
+    "x": 470,
+    "y": 620
   },
   {
     "id": "f0e1d2c3b4a59700",
@@ -70999,7 +71924,9 @@
       [
         "f0e1d2c3b4a59707"
       ]
-    ]
+    ],
+    "x": 470,
+    "y": 680
   },
   {
     "id": "f0e1d2c3b4a59707",
@@ -71022,7 +71949,9 @@
       [
         "f0e1d2c3b4a59681"
       ]
-    ]
+    ],
+    "x": 650,
+    "y": 680
   },
   {
     "id": "f0e1d2c3b4a59710",
@@ -71207,6 +72136,19 @@
     ],
     "x": 855,
     "y": 240,
+    "wires": []
+  },
+  {
+    "id": "4934fa192a096e12",
+    "type": "link out",
+    "z": "dc91e074ab8e6aa8",
+    "name": "link out ma3",
+    "mode": "link",
+    "links": [
+      "50dc1aad3e5957d3"
+    ],
+    "x": 895,
+    "y": 280,
     "wires": []
   },
   {

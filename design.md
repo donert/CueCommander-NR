@@ -122,6 +122,61 @@ Dashboard 2 UI (UI Lights v2 tab)
 
 Device IP and port are read from `global.config.devices` (first entry with `category == 'Lights'`). The gate `global.LightingEnabled` (boolean) must be true for commands to be sent.
 
+## grandMA3 Mirroring and Deprecation Path
+
+Every `/cc/lights/gotocue` also fires the equivalent cue on the grandMA3 console: the lights execution tab emits `/cc/ma3/gotocue` through the message hub with `cue = ColorSource cue − 90` on sequence 3 (ColorSource cue 94 → MA3 `Go+ Sequence 3 Cue 4`). Cues below 91 have no MA3 equivalent and are not mirrored. The mirror is tapped **before** the `LightingEnabled` gate, so each console is gated independently (`LightingEnabled` for the ColorSource UDP, `MA3Enabled` for the MA3 UDP).
+
+Most other `/cc/lights` commands (key, color, chanselect, look, level, huesat) exist to mimic features the grandMA3 UI provides natively and will not be carried forward. The intended end state is `LightingEnabled=false` / MA3 active, with `gotocue` the only cue-control command in use; the ColorSource implementation is then retired.
+
+---
+
+# Subsystem: grandMA3 Console (OSC)
+
+## Overview
+
+Controls a grandMA3 console by sending command-line text over OSC/UDP. Each message is an OSC packet to address `/cmd` with a single string argument, which the console executes as command-line input (the console's OSC "prefix" setting must be blank; if a prefix is configured on the console, it must be reflected in the `apply MA3 network config` node).
+
+## Commands (`/cc/ma3/*`)
+
+| msg.cmd | msg.parm | MA3 command sent | Description |
+|---------|----------|------------------|-------------|
+| `/cc/ma3/gotocue` | `{seq?, cue}` | `Go+ Sequence <seq> Cue <cue>` | Fire a specific cue. `seq` defaults to 3 (the CueCommander sequence) |
+| `/cc/ma3/cmd` | `{text}` (or a plain string) | `<text>` verbatim | Direct command-line passthrough for anything not yet wrapped |
+| `/cc/ma3/refreshconfig` | — | — | Re-fetch the console's IP/port from the data API |
+
+Reserved for future implementation (documented so UI/hub callers can plan against them): `/cc/ma3/go {seq}`, `/cc/ma3/pause {seq}`, `/cc/ma3/goback {seq}`, `/cc/ma3/off {seq}`, `/cc/ma3/master {master, value}`. All follow the same pattern: translate to MA3 command-line text, send via `/cmd`.
+
+## Network Configuration (data API)
+
+The console's address is **not** stored in `global.config`; it is acquired from the avl_data API network table and cached:
+
+```
+GET http://uacts-g001:8002/network?asset_tag=demoma3
+→ row with NIC == "NIC1"
+→ ip = ip_address column
+→ port = the osc entry in the services column ("osc:8000, web:80" → 8000)
+→ cached as global.ma3_config {ip, port, asset_tag, nic, fetched_at}
+```
+
+The fetch runs at startup (inject, `once=true`) and on `/cc/ma3/refreshconfig`. Success and failure are both event-logged; on failure `global.ma3_config` is cleared and subsequent sends are skipped with an Error event (nothing is sent blind). The asset tag `demoma3` is temporary and will be replaced with a permanent tag later — it can be overridden without a flow edit via `global.ma3_asset_tag` (and `global.ma3_nic`).
+
+## Execution Path
+
+```
+Message Hub → /cc/ma3 tab (link in → depth & flow → level-3 switch)
+  gotocue / cmd → build MA3 command text
+  → MA3Enabled gate (false blocks + logs; unset or true proceeds)
+  → apply global.ma3_config (ip, port, topic=/cmd; missing config → Error log, no send)
+  → OSC encode → UDP out → grandMA3
+  (parallel: test interceptor 'ma3' at the UDP boundary; 'MA3 → ip:port /cmd <text>' Info log)
+```
+
+Every message arriving on the tab is logged ("message arrived"), as are unsupported commands (Error), config load results, disabled-gate drops, and each transmitted command.
+
+## Test Support
+
+The `interceptor: ma3` function beside the UDP-out node records `{device:'ma3', command, topic, host, port}` to `global.test_results` (read via `GET /api/results?device=ma3`). Tests inject a fake `global.ma3_config` through `POST /api/state` (`ma3_config`, `MA3Enabled`, and `LightingEnabled` are in the state API allowlist), so the suite runs without a console or a demoma3 network row.
+
 ---
 
 # Subsystem: Shure Receiver Channel Names
