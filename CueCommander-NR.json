@@ -71321,7 +71321,7 @@
     "type": "function",
     "z": "f0e1d2c3b4a59602",
     "name": "mirror gotocue \u2192 MA3 (cue - 90)",
-    "func": "const cs = Number(msg.parm);\nif (!isFinite(cs)) {\n    node.warn('lights gotocue: non-numeric cue ' + JSON.stringify(msg.parm));\n    return null;\n}\nconst ma3 = cs - 90;\nif (ma3 <= 0) return null;   // ColorSource-only cue, no MA3 equivalent\nreturn {\n    cmd:    '/cc/ma3/gotocue',\n    parm:   { seq: 3, cue: ma3 },\n    source: 'internal',\n    flow:   '/cc/lights',\n    level:  'Info',\n    millis: Date.now(),\n    depth:  (msg.depth || 1) + 1,\n    message: 'Mirror CS cue ' + cs + ' \\u2192 MA3 Go+ Sequence 3 Cue ' + ma3,\n    _orgmsgid: msg._orgmsgid || msg._msgid,\n};\n",
+    "func": "const cs = Number(msg.parm);\nif (!isFinite(cs)) {\n    node.warn('lights gotocue: non-numeric cue ' + JSON.stringify(msg.parm));\n    return null;\n}\nconst ma3 = cs - 0;\nif (ma3 <= 0) return null;   // ColorSource-only cue, no MA3 equivalent\nreturn {\n    cmd:    '/cc/ma3/gotocue',\n    parm:   { seq: 1, cue: ma3 },\n    source: 'internal',\n    flow:   '/cc/lights',\n    level:  'Info',\n    millis: Date.now(),\n    depth:  (msg.depth || 1) + 1,\n    message: 'Mirror CS cue ' + cs + ' \\u2192 MA3 Go+ Sequence 3 Cue ' + ma3,\n    _orgmsgid: msg._orgmsgid || msg._msgid,\n};\n",
     "outputs": 1,
     "noerr": 0,
     "initialize": "",
