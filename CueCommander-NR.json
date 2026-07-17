@@ -73573,7 +73573,7 @@
         "type": "function",
         "z": "a0b1c2d3e4f59601",
         "name": "store recalled state",
-        "func": "const raw = msg.payload;\nconst inputMap = Array.isArray(raw) ? raw\n  : (raw && Array.isArray(raw.input_map) ? raw.input_map : null);\nif (!inputMap) { node.warn('Recall: invalid data'); return [null, null, null]; }\n\nvar serviceTitle = (!Array.isArray(raw) && raw && raw.service_title) ? raw.service_title : '';\nif (!serviceTitle) {\n  var now = new Date();\n  var day = now.getDay();\n  var daysUntil = day === 0 ? 7 : 7 - day;\n  var sun = new Date(now);\n  sun.setDate(now.getDate() + daysUntil);\n  serviceTitle = sun.getFullYear() + '-'\n    + String(sun.getMonth() + 1).padStart(2, '0') + '-'\n    + String(sun.getDate()).padStart(2, '0')\n    + ' Mic and Pack Assignments';\n}\n\nconst filename = msg.parm && msg.parm.filename;\nglobal.set('input_map', inputMap);\nglobal.set('service_title', serviceTitle);\nglobal.set('recalled_filename', filename || null);\nconst stateMsg = { topic: 'state', payload: {\n  recalled_filename: filename || null,\n  service_title: serviceTitle\n} };\nreturn [stateMsg, {}, {}];",
+        "func": "const raw = msg.payload;\nconst inputMap = Array.isArray(raw) ? raw\n  : (raw && Array.isArray(raw.input_map) ? raw.input_map : null);\nif (!inputMap) { node.warn('Recall: invalid data'); return [null, null, null]; }\n\nvar serviceTitle = (!Array.isArray(raw) && raw && raw.service_title) ? raw.service_title : '';\nif (!serviceTitle) {\n  var now = new Date();\n  var day = now.getDay();\n  var daysUntil = day === 0 ? 7 : 7 - day;\n  var sun = new Date(now);\n  sun.setDate(now.getDate() + daysUntil);\n  serviceTitle = sun.getFullYear() + '-'\n    + String(sun.getMonth() + 1).padStart(2, '0') + '-'\n    + String(sun.getDate()).padStart(2, '0')\n    + ' Mic and Pack Assignments';\n}\n\nconst filename = msg.parm && msg.parm.filename;\nglobal.set('input_map', inputMap);\nglobal.set('service_title', serviceTitle);\nglobal.set('recalled_filename', filename || null);\nconst stateMsg = { topic: 'state', payload: {\n  recalled_filename: filename || null,\n  service_title: serviceTitle\n} };\nconst widgetMsg = { payload: inputMap, service_title: serviceTitle };\nreturn [stateMsg, {}, widgetMsg];",
         "outputs": 3,
         "noerr": 0,
         "initialize": "",
@@ -73587,7 +73587,10 @@
             [
                 "a0b1c2d3e4f59604"
             ],
-            []
+            [
+                "122561a9620f1dc3",
+                "d2af921b2cbab95b"
+            ]
         ]
     },
     {
@@ -73631,7 +73634,7 @@
         "type": "function",
         "z": "a0b1c2d3e4f59601",
         "name": "store defaults state",
-        "func": "const raw = msg.payload;\nconst inputMap = Array.isArray(raw) ? raw\n  : (raw && Array.isArray(raw.input_map) ? raw.input_map : null);\nif (!inputMap) { node.warn('Defaults: invalid data'); return [null, null, null]; }\n\n// Use file's service_title if present, otherwise generate next-Sunday string\nvar serviceTitle = (!Array.isArray(raw) && raw && raw.service_title) ? raw.service_title : '';\nif (!serviceTitle) {\n  var now = new Date();\n  var day = now.getDay();\n  var daysUntil = day === 0 ? 7 : 7 - day;\n  var sun = new Date(now);\n  sun.setDate(now.getDate() + daysUntil);\n  serviceTitle = sun.getFullYear() + '-'\n    + String(sun.getMonth() + 1).padStart(2, '0') + '-'\n    + String(sun.getDate()).padStart(2, '0')\n    + ' Mic and Pack Assignments';\n}\n\nglobal.set('input_map', inputMap);\nglobal.set('service_title', serviceTitle);\nglobal.set('recalled_filename', null);\nconst stateMsg = { topic: 'state', payload: { recalled_filename: null, service_title: serviceTitle } };\nreturn [stateMsg, {}, {}];",
+        "func": "const raw = msg.payload;\nconst inputMap = Array.isArray(raw) ? raw\n  : (raw && Array.isArray(raw.input_map) ? raw.input_map : null);\nif (!inputMap) { node.warn('Defaults: invalid data'); return [null, null, null]; }\n\n// Use file's service_title if present, otherwise generate next-Sunday string\nvar serviceTitle = (!Array.isArray(raw) && raw && raw.service_title) ? raw.service_title : '';\nif (!serviceTitle) {\n  var now = new Date();\n  var day = now.getDay();\n  var daysUntil = day === 0 ? 7 : 7 - day;\n  var sun = new Date(now);\n  sun.setDate(now.getDate() + daysUntil);\n  serviceTitle = sun.getFullYear() + '-'\n    + String(sun.getMonth() + 1).padStart(2, '0') + '-'\n    + String(sun.getDate()).padStart(2, '0')\n    + ' Mic and Pack Assignments';\n}\n\nglobal.set('input_map', inputMap);\nglobal.set('service_title', serviceTitle);\nglobal.set('recalled_filename', null);\nconst stateMsg = { topic: 'state', payload: { recalled_filename: null, service_title: serviceTitle } };\nconst widgetMsg = { payload: inputMap, service_title: serviceTitle };\nreturn [stateMsg, {}, widgetMsg];",
         "outputs": 3,
         "noerr": 0,
         "initialize": "",
@@ -73645,7 +73648,10 @@
             [
                 "a0b1c2d3e4f59604"
             ],
-            []
+            [
+                "122561a9620f1dc3",
+                "d2af921b2cbab95b"
+            ]
         ]
     },
     {
