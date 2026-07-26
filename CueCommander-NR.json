@@ -72743,7 +72743,7 @@
         "z": "40ec95d2637ed1ca",
         "g": "f03d1d08582f6372",
         "name": "apply MA3 network config",
-        "func": "const cfg = global.get('ma3_config');\nif (!cfg || !cfg.ip || !cfg.port) {\n    msg.message = 'MA3 send skipped — no network config'\n        + ' (run /cc/ma3/refreshconfig after adding the network row): '\n        + msg.payload;\n    msg.payload = '';\n    return [null, msg];\n}\nmsg.ip = cfg.ip;\nmsg.port = cfg.port;\nmsg.topic = '/cmd/cmd';   // grandMA3 OSC command-line input (console's OSC prefix is configured as /cmd, not blank)\nreturn [msg, null];\n",
+        "func": "const cfg = global.get('ma3_config');\nif (!cfg || !cfg.ip || !cfg.port) {\n    msg.message = 'MA3 send skipped — no network config'\n        + ' (run /cc/ma3/refreshconfig after adding the network row): '\n        + msg.payload;\n    msg.payload = '';\n    return [null, msg];\n}\nmsg.ip = cfg.ip;\nmsg.port = cfg.port;\nmsg.topic = '//cmd/cmd';   // grandMA3 OSC command-line input (console's OSC prefix is configured as /cmd, not blank; the console's own OSC receiver expects the doubled-slash form //cmd/cmd, confirmed against its Console Monitor)\nreturn [msg, null];\n",
         "outputs": 2,
         "noerr": 0,
         "initialize": "",

@@ -45,7 +45,7 @@ This document captures functional requirements and test cases for CueCommander-N
 
 **MA-01** — All communication destined for a grandMA3 console shall be handled by the `/cc/ma3` execution tab, reached through the message hub with commands prefixed `/cc/ma3/`.
 
-**MA-02** — `/cc/ma3/gotocue` with `parm {seq?, cue}` shall send the console command-line text `Goto Sequence <seq> Cue <cue>` (seq defaults to 3) as an OSC message to address `/cmd/cmd` (the console's OSC input prefix is configured as `/cmd`, giving a full address of `/cmd/cmd`; confirmed 2026-07-26 against the console's Console Monitor — `Goto` is the verb that produces an `OK:` response for jumping to an arbitrary cue, `Go+` does not).
+**MA-02** — `/cc/ma3/gotocue` with `parm {seq?, cue}` shall send the console command-line text `Goto Sequence <seq> Cue <cue>` (seq defaults to 3) as an OSC message to address `//cmd/cmd` (the console's OSC input prefix is configured as `/cmd`, giving a full address of `//cmd/cmd`; confirmed 2026-07-26 against the console's Console Monitor — `Goto` is the verb that produces an `OK:` response for jumping to an arbitrary cue, `Go+` does not).
 
 **MA-03** — `/cc/ma3/cmd` with `parm {text}` shall send the text verbatim to the console command line (direct passthrough for future use).
 
@@ -67,7 +67,7 @@ This document captures functional requirements and test cases for CueCommander-N
 **Steps:**
 1. Set a test `ma3_config` via `/api/state`; clear captures.
 2. Send `/cc/ma3/gotocue` with `parm {cue: 4}`, then with `parm {seq: 5, cue: 2}`.  
-**Expected:** Captures `Goto Sequence 3 Cue 4` and `Goto Sequence 5 Cue 2`, OSC address `/cmd/cmd`, host/port from `ma3_config`.
+**Expected:** Captures `Goto Sequence 3 Cue 4` and `Goto Sequence 5 Cue 2`, OSC address `//cmd/cmd`, host/port from `ma3_config`.
 
 ### TC-MA-02 — direct cmd passthrough
 **Method:** API  

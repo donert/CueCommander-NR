@@ -138,7 +138,7 @@ Most other `/cc/lights` commands (key, color, chanselect, look, level, huesat) e
 
 ## Overview
 
-Controls a grandMA3 console by sending command-line text over OSC/UDP. Each message is an OSC packet to address `/cmd/cmd` with a single string argument, which the console executes as command-line input. The console's OSC input "prefix" is configured as `/cmd` (not blank), so the full address the console listens on is `<prefix>/cmd` = `/cmd/cmd` — confirmed 2026-07-26 against the console's own Console Monitor (a bare `/cmd` address was received and logged by the console's `OSCReceiver` but never reached `MainTask`, i.e. never executed; `/cmd/cmd` gets an `OK:<command>` response). If the console's prefix is ever changed, it must be reflected in the `apply MA3 network config` node.
+Controls a grandMA3 console by sending command-line text over OSC/UDP. Each message is an OSC packet to address `//cmd/cmd` (note the doubled leading slash — confirmed literally against the console's own Console Monitor, not a typo) with a single string argument, which the console executes as command-line input. The console's OSC input "prefix" is configured as `/cmd` (not blank); combined with the `/cmd` command address, the console's OSC receiver expects the full path as `//cmd/cmd`. A bare `/cmd` was received and logged by the console's `OSCReceiver` but never reached `MainTask`, i.e. never executed; `//cmd/cmd` gets an `OK:<command>` response. If the console's prefix is ever changed, it must be reflected in the `apply MA3 network config` node.
 
 ## Commands (`/cc/ma3/*`)
 
@@ -150,7 +150,7 @@ Controls a grandMA3 console by sending command-line text over OSC/UDP. Each mess
 
 `Goto` (not `Go+`) is the correct verb for jumping to an arbitrary cue by number — confirmed against the console's Console Monitor alongside a known-working command fired from Companion (`Goto Sequence 1 Cue 95` → console responds `OK:Goto Sequence 1 Cue 95`); `Go+ Sequence <seq> Cue <cue>` was received but silently produced no `OK:` response.
 
-Reserved for future implementation (documented so UI/hub callers can plan against them): `/cc/ma3/go {seq}`, `/cc/ma3/pause {seq}`, `/cc/ma3/goback {seq}`, `/cc/ma3/off {seq}`, `/cc/ma3/master {master, value}`. All follow the same pattern: translate to MA3 command-line text, send via `/cmd/cmd`.
+Reserved for future implementation (documented so UI/hub callers can plan against them): `/cc/ma3/go {seq}`, `/cc/ma3/pause {seq}`, `/cc/ma3/goback {seq}`, `/cc/ma3/off {seq}`, `/cc/ma3/master {master, value}`. All follow the same pattern: translate to MA3 command-line text, send via `//cmd/cmd`.
 
 ## Network Configuration (data API)
 
@@ -178,9 +178,9 @@ The default tag and host each live in exactly one place — the `DEFAULT_MA3_ASS
 Message Hub → /cc/ma3 tab (link in → depth & flow → level-3 switch)
   gotocue / cmd → build MA3 command text
   → MA3Enabled gate (false blocks + logs; unset or true proceeds)
-  → apply global.ma3_config (ip, port, topic=/cmd/cmd; missing config → Error log, no send)
+  → apply global.ma3_config (ip, port, topic=//cmd/cmd; missing config → Error log, no send)
   → OSC encode → UDP out → grandMA3
-  (parallel: test interceptor 'ma3' at the UDP boundary; 'MA3 → ip:port /cmd/cmd <text>' Info log)
+  (parallel: test interceptor 'ma3' at the UDP boundary; 'MA3 → ip:port //cmd/cmd <text>' Info log)
 ```
 
 Every message arriving on the tab is logged ("message arrived"), as are unsupported commands (Error), config load results, disabled-gate drops, and each transmitted command.

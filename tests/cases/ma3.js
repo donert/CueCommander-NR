@@ -25,8 +25,8 @@ module.exports = [
       assert(results.length === 1, `expected 1 capture, got ${results.length}`);
       assert(results[0].command === 'Goto Sequence 3 Cue 4',
         `command should be 'Goto Sequence 3 Cue 4', got '${results[0].command}'`);
-      assert(results[0].topic === '/cmd/cmd',
-        `OSC address should be '/cmd/cmd', got '${results[0].topic}'`);
+      assert(results[0].topic === '//cmd/cmd',
+        `OSC address should be '//cmd/cmd', got '${results[0].topic}'`);
       assert(results[0].host === FAKE_CFG.ip && results[0].port == FAKE_CFG.port,
         `should target ${FAKE_CFG.ip}:${FAKE_CFG.port}, got ${results[0].host}:${results[0].port}`);
     },
