@@ -14,7 +14,7 @@ const SETTLE_MS = 800;
 module.exports = [
 
   {
-    name: 'MA3 gotocue builds "Go+ Sequence 3 Cue n" (TC-MA-01)',
+    name: 'MA3 gotocue builds "Goto Sequence 3 Cue n" (TC-MA-01)',
     async run(api, assert) {
       await api.setState({ ma3_config: FAKE_CFG });
       await api.clearResults();
@@ -23,10 +23,10 @@ module.exports = [
 
       const { body: results } = await api.getResults({ device: 'ma3' });
       assert(results.length === 1, `expected 1 capture, got ${results.length}`);
-      assert(results[0].command === 'Go+ Sequence 3 Cue 4',
-        `command should be 'Go+ Sequence 3 Cue 4', got '${results[0].command}'`);
-      assert(results[0].topic === '/cmd',
-        `OSC address should be '/cmd', got '${results[0].topic}'`);
+      assert(results[0].command === 'Goto Sequence 3 Cue 4',
+        `command should be 'Goto Sequence 3 Cue 4', got '${results[0].command}'`);
+      assert(results[0].topic === '/cmd/cmd',
+        `OSC address should be '/cmd/cmd', got '${results[0].topic}'`);
       assert(results[0].host === FAKE_CFG.ip && results[0].port == FAKE_CFG.port,
         `should target ${FAKE_CFG.ip}:${FAKE_CFG.port}, got ${results[0].host}:${results[0].port}`);
     },
@@ -42,7 +42,7 @@ module.exports = [
 
       const { body: results } = await api.getResults({ device: 'ma3' });
       assert(results.length === 1, `expected 1 capture, got ${results.length}`);
-      assert(results[0].command === 'Go+ Sequence 5 Cue 2',
+      assert(results[0].command === 'Goto Sequence 5 Cue 2',
         `got '${results[0].command}'`);
     },
   },
@@ -75,8 +75,8 @@ module.exports = [
       const { body: results } = await api.getResults({ device: 'ma3' });
       assert(results.length === 1,
         `expected 1 MA3 capture from mirror, got ${results.length}`);
-      assert(results[0].command === 'Go+ Sequence 1 Cue 94',
-        `CS cue 94 should map 1:1 to 'Go+ Sequence 1 Cue 94', got '${results[0].command}'`);
+      assert(results[0].command === 'Goto Sequence 1 Cue 94',
+        `CS cue 94 should map 1:1 to 'Goto Sequence 1 Cue 94', got '${results[0].command}'`);
     },
   },
 
@@ -93,8 +93,8 @@ module.exports = [
       const { body: results } = await api.getResults({ device: 'ma3' });
       assert(results.length === 1,
         `expected 1 MA3 capture from mirror, got ${results.length}`);
-      assert(results[0].command === 'Go+ Sequence 1 Cue 12',
-        `CS cue 12 should map 1:1 to 'Go+ Sequence 1 Cue 12', got '${results[0].command}'`);
+      assert(results[0].command === 'Goto Sequence 1 Cue 12',
+        `CS cue 12 should map 1:1 to 'Goto Sequence 1 Cue 12', got '${results[0].command}'`);
     },
   },
 

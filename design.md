@@ -126,7 +126,7 @@ Device IP and port are read from `global.config.devices` (first entry with `cate
 
 ## grandMA3 Mirroring and Deprecation Path
 
-Every `/cc/lights/gotocue` also fires the equivalent cue on the grandMA3 console: the lights execution tab emits `/cc/ma3/gotocue` through the message hub with `cue = ColorSource cue` unchanged, on **sequence 1** (ColorSource cue 94 → MA3 `Go+ Sequence 1 Cue 94`, 1:1, no offset). Every numeric cue mirrors — there is no lower threshold. The mirror is tapped **before** the `LightingEnabled` gate, so each console is gated independently (`LightingEnabled` for the ColorSource UDP, `MA3Enabled` for the MA3 UDP).
+Every `/cc/lights/gotocue` also fires the equivalent cue on the grandMA3 console: the lights execution tab emits `/cc/ma3/gotocue` through the message hub with `cue = ColorSource cue` unchanged, on **sequence 1** (ColorSource cue 94 → MA3 `Goto Sequence 1 Cue 94`, 1:1, no offset). Every numeric cue mirrors — there is no lower threshold. The mirror is tapped **before** the `LightingEnabled` gate, so each console is gated independently (`LightingEnabled` for the ColorSource UDP, `MA3Enabled` for the MA3 UDP).
 
 (An earlier design mirrored to sequence 3 with a `cue − 90` offset and skipped cues ≤ 90 — that mapping is out of date as of 2026-07-26; the MA3 show is now programmed on sequence 1 with cues matching ColorSource 1:1.)
 
@@ -138,17 +138,19 @@ Most other `/cc/lights` commands (key, color, chanselect, look, level, huesat) e
 
 ## Overview
 
-Controls a grandMA3 console by sending command-line text over OSC/UDP. Each message is an OSC packet to address `/cmd` with a single string argument, which the console executes as command-line input (the console's OSC "prefix" setting must be blank; if a prefix is configured on the console, it must be reflected in the `apply MA3 network config` node).
+Controls a grandMA3 console by sending command-line text over OSC/UDP. Each message is an OSC packet to address `/cmd/cmd` with a single string argument, which the console executes as command-line input. The console's OSC input "prefix" is configured as `/cmd` (not blank), so the full address the console listens on is `<prefix>/cmd` = `/cmd/cmd` — confirmed 2026-07-26 against the console's own Console Monitor (a bare `/cmd` address was received and logged by the console's `OSCReceiver` but never reached `MainTask`, i.e. never executed; `/cmd/cmd` gets an `OK:<command>` response). If the console's prefix is ever changed, it must be reflected in the `apply MA3 network config` node.
 
 ## Commands (`/cc/ma3/*`)
 
 | msg.cmd | msg.parm | MA3 command sent | Description |
 |---------|----------|------------------|-------------|
-| `/cc/ma3/gotocue` | `{seq?, cue}` | `Go+ Sequence <seq> Cue <cue>` | Fire a specific cue. `seq` defaults to 3 (the CueCommander sequence) |
+| `/cc/ma3/gotocue` | `{seq?, cue}` | `Goto Sequence <seq> Cue <cue>` | Fire a specific cue. `seq` defaults to 3 (the CueCommander sequence) |
 | `/cc/ma3/cmd` | `{text}` (or a plain string) | `<text>` verbatim | Direct command-line passthrough for anything not yet wrapped |
 | `/cc/ma3/refreshconfig` | — | — | Re-fetch the console's IP/port from the data API |
 
-Reserved for future implementation (documented so UI/hub callers can plan against them): `/cc/ma3/go {seq}`, `/cc/ma3/pause {seq}`, `/cc/ma3/goback {seq}`, `/cc/ma3/off {seq}`, `/cc/ma3/master {master, value}`. All follow the same pattern: translate to MA3 command-line text, send via `/cmd`.
+`Goto` (not `Go+`) is the correct verb for jumping to an arbitrary cue by number — confirmed against the console's Console Monitor alongside a known-working command fired from Companion (`Goto Sequence 1 Cue 95` → console responds `OK:Goto Sequence 1 Cue 95`); `Go+ Sequence <seq> Cue <cue>` was received but silently produced no `OK:` response.
+
+Reserved for future implementation (documented so UI/hub callers can plan against them): `/cc/ma3/go {seq}`, `/cc/ma3/pause {seq}`, `/cc/ma3/goback {seq}`, `/cc/ma3/off {seq}`, `/cc/ma3/master {master, value}`. All follow the same pattern: translate to MA3 command-line text, send via `/cmd/cmd`.
 
 ## Network Configuration (data API)
 
@@ -176,9 +178,9 @@ The default tag and host each live in exactly one place — the `DEFAULT_MA3_ASS
 Message Hub → /cc/ma3 tab (link in → depth & flow → level-3 switch)
   gotocue / cmd → build MA3 command text
   → MA3Enabled gate (false blocks + logs; unset or true proceeds)
-  → apply global.ma3_config (ip, port, topic=/cmd; missing config → Error log, no send)
+  → apply global.ma3_config (ip, port, topic=/cmd/cmd; missing config → Error log, no send)
   → OSC encode → UDP out → grandMA3
-  (parallel: test interceptor 'ma3' at the UDP boundary; 'MA3 → ip:port /cmd <text>' Info log)
+  (parallel: test interceptor 'ma3' at the UDP boundary; 'MA3 → ip:port /cmd/cmd <text>' Info log)
 ```
 
 Every message arriving on the tab is logged ("message arrived"), as are unsupported commands (Error), config load results, disabled-gate drops, and each transmitted command.
