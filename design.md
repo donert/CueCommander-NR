@@ -151,14 +151,16 @@ Reserved for future implementation (documented so UI/hub callers can plan agains
 The console's address is **not** stored in `global.config`; it is acquired from the avl_data API network table and cached:
 
 ```
-GET http://uacts-g001:8002/network?asset_tag=demoma3
+GET http://uacts-g001:8002/network?asset_tag=2607-2500
 → row with NIC == "NIC1"
 → ip = ip_address column
 → port = the osc entry in the services column ("osc:8000, web:80" → 8000)
 → cached as global.ma3_config {ip, port, asset_tag, nic, fetched_at}
 ```
 
-The fetch runs at startup (inject, `once=true`) and on `/cc/ma3/refreshconfig`. Success and failure are both event-logged; on failure `global.ma3_config` is cleared and subsequent sends are skipped with an Error event (nothing is sent blind). The asset tag `demoma3` is temporary and will be replaced with a permanent tag later — it can be overridden without a flow edit via `global.ma3_asset_tag` (and `global.ma3_nic`).
+The fetch runs at startup (inject, `once=true`) and on `/cc/ma3/refreshconfig`. Success and failure are both event-logged; on failure `global.ma3_config` is cleared and subsequent sends are skipped with an Error event (nothing is sent blind). The asset tag `2607-2500` is the permanent tag for this console; it can still be overridden without a flow edit via `global.ma3_asset_tag` (and `global.ma3_nic`) for testing or if the console is re-tagged later.
+
+The default tag lives in exactly one place — the `DEFAULT_MA3_ASSET_TAG` constant in the `build config request` function, which resolves the tag and stamps it onto `msg.ma3_tag` before the HTTP call. `parse ma3 config` reads `msg.ma3_tag` (its own literal fallback is a defensive backstop only, in case that function is ever invoked without going through `build config request`, and must be kept in sync with the constant above). Keeping the resolution in one node was a deliberate fix — the tag used to be hardcoded separately in both functions, so changing it in one place could silently leave the other stale.
 
 ## Execution Path
 
@@ -175,7 +177,47 @@ Every message arriving on the tab is logged ("message arrived"), as are unsuppor
 
 ## Test Support
 
-The `interceptor: ma3` function beside the UDP-out node records `{device:'ma3', command, topic, host, port}` to `global.test_results` (read via `GET /api/results?device=ma3`). Tests inject a fake `global.ma3_config` through `POST /api/state` (`ma3_config`, `MA3Enabled`, and `LightingEnabled` are in the state API allowlist), so the suite runs without a console or a demoma3 network row.
+The `interceptor: ma3` function beside the UDP-out node records `{device:'ma3', command, topic, host, port}` to `global.test_results` (read via `GET /api/results?device=ma3`). Tests inject a fake `global.ma3_config` through `POST /api/state` (`ma3_config`, `MA3Enabled`, and `LightingEnabled` are in the state API allowlist), so the suite runs without a console or a 2607-2500 network row.
+
+---
+
+# Subsystem: ProPresenter Cue Automation (Prop Name Routing)
+
+## Overview
+
+Polls the ProPresenter data API for the currently active Props on the `Propresenter Cue Automation` tab (group "Fire Cue based on Prop Name") and lets a single Prop's *name* encode one or more automation commands. This is a separate mechanism from the standard `/cc/*` UI buttons — it lets a ProPresenter operator trigger lighting, ATEM, or MA3 actions just by which Prop is currently active on a slide, with no extra button press.
+
+## Naming Convention
+
+A Prop name is a comma-separated list of `prefix:value` segments, e.g. `Lq:200.0,Ma3cmd:Off Sequence 3`. Each segment is routed independently and multiple segments in one Prop name fire in parallel:
+
+| Prefix     | Handler                          | Result                                                        |
+|------------|-----------------------------------|----------------------------------------------------------------|
+| `Lq:`      | Handle Lq                        | `/cc/lights/gotocue` with the text after `Lq:` as `parm`        |
+| `Vq:`      | Handle Vq                        | Formats for ATEM                                                |
+| `Pq:`      | Handler pq                       | Prop processor                                                  |
+| `Lp:`      | Handle Lp                        | Lighting playback                                               |
+| `Ma3cmd:`  | Handle Ma3cmd                    | `/cc/ma3/cmd` with the text after `Ma3cmd:` as `parm` (verbatim passthrough to the MA3 command line, see `MA-03`) |
+
+## Execution Path
+
+```
+Poll ProPresenter /props (every 100ms, gated by global.ProPresenterEnabled)
+  → filter payload.id.name where is_active == true
+  → split (one message per active Prop)
+  → 'Select name': payload = payload.id.name; propname = payload (full name, captured once)
+  → comma split on payload → one message per segment, propname unchanged on every copy
+  → 'route to handler' switch (checkall=true) on payload, matches ANY segment whose text
+    contains a known prefix → fans out to the corresponding handler group
+  → each handler builds its own /cc/* command from THIS segment and sends it via
+    the message hub (Link Out → 'from ProP Cue Auto' / 'out to MH')
+```
+
+## Known Hazard: build the command from `msg.payload`, not `msg.propname`
+
+Because `comma split` only replaces `msg.payload`, every split-out message still carries the *original, full, pre-split* Prop name in `msg.propname`. A handler that reads `msg.propname` to extract "the text after my prefix" is not reading its own segment — it is reading the whole Prop name from its own prefix's first colon onward, which silently includes any later comma-separated segments that belong to *other* handlers.
+
+This caused a real bug: `Handle Ma3cmd`'s `parm` node used `$substringAfter(msg.propname, ":")`. For a Prop named `Ma3cmd:200.0,Green`, that produced `parm = "200.0,Green"` — sent verbatim as an MA3 command line, which is meaningless to the console. `Handle Lq` was never affected because it already used `$substring(msg.payload, 3)` — the current segment. The fix was to change the Ma3cmd handler to read from `msg.payload` as well (`$substringAfter(msg.payload, ":")`), matching the pattern already used by `Handle Lq`. Any new prefix handler added to this group must build its command from `msg.payload`, never `msg.propname`.
 
 ---
 

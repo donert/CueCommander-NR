@@ -51,7 +51,7 @@ This document captures functional requirements and test cases for CueCommander-N
 
 **MA-04** — Every `/cc/lights/gotocue` shall, in parallel with the ColorSource send, emit `/cc/ma3/gotocue` via the message hub with `cue = ColorSource cue − 90` on sequence 3 (CS cue 94 → MA3 seq 3 cue 4). Cues ≤ 90 are not mirrored. The mirror shall not depend on `LightingEnabled` (each console is gated independently; the ColorSource path will eventually be disabled in favour of MA3).
 
-**MA-05** — The console's IP and OSC port shall be acquired from the avl_data API network table: asset tag `demoma3` (temporary tag, overridable via `global.ma3_asset_tag`), NIC `NIC1`, IP from the IP column, port from the `osc:<port>` entry of the services column (e.g. `"osc:8000, web:80"` → 8000). The result is cached in `global.ma3_config`, refreshed at startup and on `/cc/ma3/refreshconfig`.
+**MA-05** — The console's IP and OSC port shall be acquired from the avl_data API network table: asset tag `2607-2500` (the permanent tag, overridable via `global.ma3_asset_tag`), NIC `NIC1`, IP from the IP column, port from the `osc:<port>` entry of the services column (e.g. `"osc:8000, web:80"` → 8000). The result is cached in `global.ma3_config`, refreshed at startup and on `/cc/ma3/refreshconfig`. The tag's default shall be defined in exactly one place (the `build config request` function) so it cannot drift out of sync between functions.
 
 **MA-06** — If no valid configuration is available, nothing shall be sent and an Error event shall be logged. `global.MA3Enabled=false` shall block sends with an Info event; unset or true sends.
 
@@ -101,11 +101,45 @@ This document captures functional requirements and test cases for CueCommander-N
 
 ### TC-MA-07 — config fetched from the data API network table
 **Method:** Manual  
-**Status: PENDING** (blocked: no `demoma3` row exists in the network table yet)  
+**Status: PENDING** (blocked: confirm a `2607-2500` row exists in the network table)  
 **Steps:**
-1. Add a network row: asset tag `demoma3`, NIC `NIC1`, the console's IP, services containing `osc:<port>`.
+1. Add a network row: asset tag `2607-2500`, NIC `NIC1`, the console's IP, services containing `osc:<port>`.
 2. Send `/cc/ma3/refreshconfig` (or restart Node-RED).  
-**Expected:** Info event "MA3 config loaded: ip:port (demoma3/NIC1)"; `global.ma3_config` populated; a subsequent `/cc/ma3/cmd` reaches the console.
+**Expected:** Info event "MA3 config loaded: ip:port (2607-2500/NIC1)"; `global.ma3_config` populated; a subsequent `/cc/ma3/cmd` reaches the console.
+
+---
+
+# Subsystem: ProPresenter Cue Automation (Prop Name Routing)
+
+## Functional Requirements
+
+**PC-01** — The system shall poll ProPresenter for active Props and treat each active Prop's name as a comma-separated list of `prefix:value` commands, e.g. `Lq:200.0,Ma3cmd:Off Sequence 3`.
+
+**PC-02** — Each comma-separated segment shall be routed independently by its prefix (`Lq:`, `Vq:`, `Pq:`, `Lp:`, `Ma3cmd:`) to its own handler; a single Prop name may fire more than one handler in parallel.
+
+**PC-03** — Every handler shall build its outgoing command from the current segment's own text (`msg.payload`), never from the full pre-split Prop name (`msg.propname`). `msg.propname` is captured once before the comma-split and is identical across all segments of the same Prop, so reading it inside a per-segment handler leaks content belonging to other segments.
+
+**PC-04** — The `Ma3cmd:` prefix shall send the text following it, verbatim, to `/cc/ma3/cmd` as `parm` (see MA-03).
+
+---
+
+## Test Cases
+
+### TC-PC-01 — Ma3cmd segment sends only its own text
+**Method:** Manual  
+**Status: VERIFIED** (fixed 2026-07-25 — was reading `msg.propname` instead of `msg.payload`)  
+**Steps:**
+1. In ProPresenter, name a Prop `Ma3cmd:Off Sequence 3` (no other comma segments) and make it active.
+2. Read the MA3 capture (`GET /api/results?device=ma3`).  
+**Expected:** Exactly one capture with command `Off Sequence 3` — not the raw Prop name.
+
+### TC-PC-02 — multi-segment Prop name does not leak between handlers
+**Method:** Manual  
+**Status: MISSING**  
+**Steps:**
+1. Name a Prop `Lq:200.0,Ma3cmd:Green` and make it active.
+2. Read the lighting capture and the MA3 capture.  
+**Expected:** Lighting receives `/cc/lights/gotocue` with `parm = "200.0"` (which independently mirrors to `/cc/ma3/gotocue` per MA-04 — see TC-MA-03). The MA3 capture from the `Ma3cmd:` segment shows `parm = "Green"` only — never `"200.0,Green"` or any text belonging to the `Lq:` segment.
 
 ---
 
