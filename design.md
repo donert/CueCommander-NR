@@ -152,7 +152,7 @@ The console's address is **not** stored in `global.config`; it is acquired from 
 
 ```
 GET http://127.0.0.1:8002/network?asset_tag=2607-2500
-→ row with NIC == "NIC1"
+→ row with NIC == "LAN1"
 → ip = ip_address column
 → port = the osc entry in the services column ("osc:8000, web:80" → 8000)
 → cached as global.ma3_config {ip, port, asset_tag, nic, fetched_at}

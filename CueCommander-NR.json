@@ -258,7 +258,7 @@
         "type": "tab",
         "label": "/cc/ma3",
         "disabled": false,
-        "info": "grandMA3 console control via OSC.\n\nCommands: /cc/ma3/gotocue {seq?, cue}, /cc/ma3/cmd {text}, /cc/ma3/refreshconfig.\nNetwork config (IP + osc port) is fetched from the avl_data API network table, asset tag 2607-2500 / NIC1, and cached in global.ma3_config.\nGate: global.MA3Enabled (false blocks sends; unset/true sends).\nSee design.md — Subsystem: grandMA3 Console.",
+        "info": "grandMA3 console control via OSC.\n\nCommands: /cc/ma3/gotocue {seq?, cue}, /cc/ma3/cmd {text}, /cc/ma3/refreshconfig.\nNetwork config (IP + osc port) is fetched from the avl_data API network table, asset tag 2607-2500 / LAN1, and cached in global.ma3_config.\nGate: global.MA3Enabled (false blocks sends; unset/true sends).\nSee design.md — Subsystem: grandMA3 Console.",
         "env": []
     },
     {
@@ -72584,7 +72584,7 @@
         "type": "comment",
         "z": "40ec95d2637ed1ca",
         "g": "10888e74af117d25",
-        "name": "Config source: avl_data API — asset 2607-2500 / NIC1, host defaults to 127.0.0.1:8002 (avl_data is co-located with Node-RED). Override via global.ma3_asset_tag / ma3_nic / ma3_config_host. Port parsed from services column, e.g. 'osc:8000, web:80'.",
+        "name": "Config source: avl_data API — asset 2607-2500 / LAN1, host defaults to 127.0.0.1:8002 (avl_data is co-located with Node-RED). Override via global.ma3_asset_tag / ma3_nic / ma3_config_host. Port parsed from services column, e.g. 'osc:8000, web:80'.",
         "info": "",
         "x": 330,
         "y": 360,
@@ -72660,7 +72660,7 @@
         "z": "40ec95d2637ed1ca",
         "g": "10888e74af117d25",
         "name": "parse ma3 config",
-        "func": "msg.flow = '/cc/ma3';\nmsg.millis = msg.millis || Date.now();\nmsg.depth = msg.depth || 1;\nmsg.source = msg.source || 'internal';\nmsg.cmd = msg.cmd || '/cc/ma3/refreshconfig';\nmsg.parm = msg.parm || {};\nconst tag = msg.ma3_tag || global.get('ma3_asset_tag') || '2607-2500';\nconst wantNic = String(global.get('ma3_nic') || 'NIC1').toLowerCase();\nfunction fail(why) {\n    global.set('ma3_config', null);\n    msg.message = 'MA3 config unavailable: ' + why;\n    msg.payload = '';\n    return [null, msg];\n}\nlet rows = msg.payload;\nif (typeof rows === 'string') { try { rows = JSON.parse(rows); } catch (e) { rows = null; } }\nif (!Array.isArray(rows)) return fail('bad response from data API');\nif (rows.length === 0) return fail('no network rows for asset ' + tag);\nconst row = rows.find(r => String(r.nic || '').toLowerCase() === wantNic);\nif (!row) return fail('asset ' + tag + ' has no ' + wantNic.toUpperCase()\n    + ' row (found: ' + rows.map(r => r.nic || '?').join(', ') + ')');\nconst ip = String(row.ip_address || '').trim();\nif (!ip) return fail('row ' + tag + '/' + wantNic.toUpperCase() + ' has no IP');\nconst m = /(?:^|,)\\s*osc\\s*:\\s*(\\d+)/i.exec(String(row.services || ''));\nif (!m) return fail(\"no 'osc:<port>' entry in services ('\" + (row.services || '') + \"')\");\nconst cfg = { ip: ip, port: Number(m[1]), asset_tag: row.asset_tag,\n              nic: row.nic, fetched_at: Date.now() };\nglobal.set('ma3_config', cfg);\nmsg.message = 'MA3 config loaded: ' + cfg.ip + ':' + cfg.port\n    + ' (' + cfg.asset_tag + '/' + cfg.nic + ')';\nmsg.payload = '';\nreturn [msg, null];\n",
+        "func": "msg.flow = '/cc/ma3';\nmsg.millis = msg.millis || Date.now();\nmsg.depth = msg.depth || 1;\nmsg.source = msg.source || 'internal';\nmsg.cmd = msg.cmd || '/cc/ma3/refreshconfig';\nmsg.parm = msg.parm || {};\nconst tag = msg.ma3_tag || global.get('ma3_asset_tag') || '2607-2500';\nconst wantNic = String(global.get('ma3_nic') || 'LAN1').toLowerCase();\nfunction fail(why) {\n    global.set('ma3_config', null);\n    msg.message = 'MA3 config unavailable: ' + why;\n    msg.payload = '';\n    return [null, msg];\n}\nlet rows = msg.payload;\nif (typeof rows === 'string') { try { rows = JSON.parse(rows); } catch (e) { rows = null; } }\nif (!Array.isArray(rows)) return fail('bad response from data API');\nif (rows.length === 0) return fail('no network rows for asset ' + tag);\nconst row = rows.find(r => String(r.nic || '').toLowerCase() === wantNic);\nif (!row) return fail('asset ' + tag + ' has no ' + wantNic.toUpperCase()\n    + ' row (found: ' + rows.map(r => r.nic || '?').join(', ') + ')');\nconst ip = String(row.ip_address || '').trim();\nif (!ip) return fail('row ' + tag + '/' + wantNic.toUpperCase() + ' has no IP');\nconst m = /(?:^|,)\\s*osc\\s*:\\s*(\\d+)/i.exec(String(row.services || ''));\nif (!m) return fail(\"no 'osc:<port>' entry in services ('\" + (row.services || '') + \"')\");\nconst cfg = { ip: ip, port: Number(m[1]), asset_tag: row.asset_tag,\n              nic: row.nic, fetched_at: Date.now() };\nglobal.set('ma3_config', cfg);\nmsg.message = 'MA3 config loaded: ' + cfg.ip + ':' + cfg.port\n    + ' (' + cfg.asset_tag + '/' + cfg.nic + ')';\nmsg.payload = '';\nreturn [msg, null];\n",
         "outputs": 2,
         "noerr": 0,
         "initialize": "",

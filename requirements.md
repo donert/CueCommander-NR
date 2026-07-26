@@ -51,7 +51,7 @@ This document captures functional requirements and test cases for CueCommander-N
 
 **MA-04** — Every `/cc/lights/gotocue` shall, in parallel with the ColorSource send, emit `/cc/ma3/gotocue` via the message hub with `cue = ColorSource cue − 90` on sequence 3 (CS cue 94 → MA3 seq 3 cue 4). Cues ≤ 90 are not mirrored. The mirror shall not depend on `LightingEnabled` (each console is gated independently; the ColorSource path will eventually be disabled in favour of MA3).
 
-**MA-05** — The console's IP and OSC port shall be acquired from the avl_data API network table: host `127.0.0.1:8002` (avl_data is co-located with Node-RED; overridable via `global.ma3_config_host`), asset tag `2607-2500` (the permanent tag, overridable via `global.ma3_asset_tag`), NIC `NIC1`, IP from the IP column, port from the `osc:<port>` entry of the services column (e.g. `"osc:8000, web:80"` → 8000). The result is cached in `global.ma3_config`, refreshed at startup and on `/cc/ma3/refreshconfig`. The tag's and host's defaults shall each be defined in exactly one place (the `build config request` function) so they cannot drift out of sync between functions or require hand-editing on the deployment machine.
+**MA-05** — The console's IP and OSC port shall be acquired from the avl_data API network table: host `127.0.0.1:8002` (avl_data is co-located with Node-RED; overridable via `global.ma3_config_host`), asset tag `2607-2500` (the permanent tag, overridable via `global.ma3_asset_tag`), NIC `LAN1`, IP from the IP column, port from the `osc:<port>` entry of the services column (e.g. `"osc:8000, web:80"` → 8000). The result is cached in `global.ma3_config`, refreshed at startup and on `/cc/ma3/refreshconfig`. The tag's and host's defaults shall each be defined in exactly one place (the `build config request` function) so they cannot drift out of sync between functions or require hand-editing on the deployment machine.
 
 **MA-06** — If no valid configuration is available, nothing shall be sent and an Error event shall be logged. `global.MA3Enabled=false` shall block sends with an Info event; unset or true sends.
 
@@ -103,9 +103,9 @@ This document captures functional requirements and test cases for CueCommander-N
 **Method:** Manual  
 **Status: PENDING** (network row for `2607-2500` has been added; awaiting a fresh deploy + retest now that TC-MA-08's `URL`-sandbox bug is fixed)  
 **Steps:**
-1. Add a network row: asset tag `2607-2500`, NIC `NIC1`, the console's IP, services containing `osc:<port>`.
+1. Add a network row: asset tag `2607-2500`, NIC `LAN1`, the console's IP, services containing `osc:<port>`.
 2. Send `/cc/ma3/refreshconfig` (or restart Node-RED).  
-**Expected:** Info event "MA3 config loaded: ip:port (2607-2500/NIC1)"; `global.ma3_config` populated; a subsequent `/cc/ma3/cmd` reaches the console.
+**Expected:** Info event "MA3 config loaded: ip:port (2607-2500/LAN1)"; `global.ma3_config` populated; a subsequent `/cc/ma3/cmd` reaches the console.
 
 ### TC-MA-08 — build config request runs without a sandbox ReferenceError
 **Method:** Manual  
