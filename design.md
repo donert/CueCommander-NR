@@ -193,7 +193,7 @@ Polls the ProPresenter data API for the currently active Props on the `Propresen
 
 ## Naming Convention
 
-A Prop name is a comma-separated list of `prefix:value` segments, e.g. `Lq:200.0,Ma3cmd:Off Sequence 3`. Each segment is routed independently and multiple segments in one Prop name fire in parallel:
+A Prop name is a comma-separated list of segments: a `prefix:value` segment optionally followed by a second, plain-text segment with no prefix, which is a human-readable label only and is dropped (e.g. `Lq:170.0,Red White`, `Lq:80.0,Special 80`). A Prop can also carry a `Ma3cmd:<text>` segment on its own to send raw MA3 command text. Each segment is routed independently by prefix:
 
 | Prefix     | Handler                          | Result                                                        |
 |------------|-----------------------------------|----------------------------------------------------------------|
@@ -202,6 +202,7 @@ A Prop name is a comma-separated list of `prefix:value` segments, e.g. `Lq:200.0
 | `Pq:`      | Handler pq                       | Prop processor                                                  |
 | `Lp:`      | Handle Lp                        | Lighting playback                                               |
 | `Ma3cmd:`  | Handle Ma3cmd                    | `/cc/ma3/cmd` with the text after `Ma3cmd:` as `parm` (verbatim passthrough to the MA3 command line, see `MA-03`) |
+| *(no prefix)* | — (dropped)                    | Descriptive label only, e.g. the `Red White` in `Lq:170.0,Red White` |
 
 ## Execution Path
 
@@ -215,7 +216,18 @@ Poll ProPresenter /props (every 100ms, gated by global.ProPresenterEnabled)
     contains a known prefix → fans out to the corresponding handler group
   → each handler builds its own /cc/* command from THIS segment and sends it via
     the message hub (Link Out → 'from ProP Cue Auto' / 'out to MH')
+
+  (parallel, every segment, any prefix) → 'from Prop Processor' → 'auto prop clear' link in
+    → 'switch on payload' (same 5 prefixes, checkall=true) → 'set cmd and parm' template:
+      payload = {cmd: "propclear", parm: propname}   (note: propname, the FULL original name)
+    → 'pro7 cmd' link in → promotes payload.cmd/parm to msg.cmd/msg.parm
+    → 'switch cmd' → 'fmt prop clear by name': payload = "/prop/" + msg.parm + "/clear"
+    → 'To PP7 Communications' — tells ProPresenter itself to clear the prop
 ```
+
+## Known Hazard: auto-clear must never reach MA3
+
+The "auto prop clear" mechanism above exists purely to tell **ProPresenter** to clear a prop after it's been processed — it has nothing to do with MA3. Its output link-out, `from pp7 Rq Handler`, correctly targets `To PP7 Communications`, but until 2026-07-26 it *also* targeted `handle ma3cmd` (the same link-in the legitimate `Ma3cmd:` router uses). Because `handle ma3cmd` unconditionally sets `cmd = /cc/ma3/cmd`, **every** auto-clear — for a `Lq:`, `Vq:`, `Pq:`, `Lp:`, or `Ma3cmd:` prop, regardless of which — fired a bogus OSC message at the grandMA3 console built from a fragment of the `/prop/<name>/clear` HTTP path (cut at the first colon, e.g. `/prop/Lq:170.0,Red White/clear` → `170.0,Red White/clear`). The fix was to remove the cross-wire: `from pp7 Rq Handler` now links only to `To PP7 Communications`, and `handle ma3cmd` now links only from `link out 86` (the genuine `Ma3cmd:` router). If a link-in node in this tab ever needs a new source wired in, check what it *unconditionally* does downstream first — `handle ma3cmd` has no per-source filtering, so anything routed into it becomes an MA3 command.
 
 ## Known Hazard: build the command from `msg.payload`, not `msg.propname`
 

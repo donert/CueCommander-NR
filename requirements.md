@@ -129,6 +129,8 @@ This document captures functional requirements and test cases for CueCommander-N
 
 **PC-04** — The `Ma3cmd:` prefix shall send the text following it, verbatim, to `/cc/ma3/cmd` as `parm` (see MA-03).
 
+**PC-05** — The "auto prop clear" mechanism (tells ProPresenter to clear a prop after processing, via `To PP7 Communications`) shall never reach `/cc/ma3/*`. It is triggered for every prefix (`Lq:`, `Vq:`, `Pq:`, `Lp:`, `Ma3cmd:`) and must route only to ProPresenter's own HTTP API, regardless of which prefix the prop carried.
+
 ---
 
 ## Test Cases
@@ -148,6 +150,14 @@ This document captures functional requirements and test cases for CueCommander-N
 1. Name a Prop `Lq:200.0,Ma3cmd:Green` and make it active.
 2. Read the lighting capture and the MA3 capture.  
 **Expected:** Lighting receives `/cc/lights/gotocue` with `parm = "200.0"` (which independently mirrors to `/cc/ma3/gotocue` per MA-04 — see TC-MA-03). The MA3 capture from the `Ma3cmd:` segment shows `parm = "Green"` only — never `"200.0,Green"` or any text belonging to the `Lq:` segment.
+
+### TC-PC-03 — auto prop clear never reaches MA3
+**Method:** Manual / Event Log  
+**Status: VERIFIED** (fixed 2026-07-26 — `from pp7 Rq Handler` was wired into both `To PP7 Communications` and `handle ma3cmd`)  
+**Steps:**
+1. Activate a Prop named e.g. `Lq:170.0,Red White` (a plain `Lq:` prop with a descriptive label, no `Ma3cmd:` segment) long enough for it to auto-clear.
+2. Read the MA3 capture (`GET /api/results?device=ma3`) covering the whole activation + auto-clear window.  
+**Expected:** The only MA3 traffic is the legitimate `/cc/ma3/gotocue` mirror from MA-04 (if the cue is ≥ 91). No `/cc/ma3/cmd` fires as a side effect of the prop's auto-clear — previously this produced a bogus command built from `/prop/Lq:170.0,Red White/clear` cut at the first colon (`170.0,Red White/clear`).
 
 ---
 
