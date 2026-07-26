@@ -151,7 +151,7 @@ Reserved for future implementation (documented so UI/hub callers can plan agains
 The console's address is **not** stored in `global.config`; it is acquired from the avl_data API network table and cached:
 
 ```
-GET http://uacts-g001:8002/network?asset_tag=2607-2500
+GET http://127.0.0.1:8002/network?asset_tag=2607-2500
 → row with NIC == "NIC1"
 → ip = ip_address column
 → port = the osc entry in the services column ("osc:8000, web:80" → 8000)
@@ -160,7 +160,11 @@ GET http://uacts-g001:8002/network?asset_tag=2607-2500
 
 The fetch runs at startup (inject, `once=true`) and on `/cc/ma3/refreshconfig`. Success and failure are both event-logged; on failure `global.ma3_config` is cleared and subsequent sends are skipped with an Error event (nothing is sent blind). The asset tag `2607-2500` is the permanent tag for this console; it can still be overridden without a flow edit via `global.ma3_asset_tag` (and `global.ma3_nic`) for testing or if the console is re-tagged later.
 
-The default tag lives in exactly one place — the `DEFAULT_MA3_ASSET_TAG` constant in the `build config request` function, which resolves the tag and stamps it onto `msg.ma3_tag` before the HTTP call. `parse ma3 config` reads `msg.ma3_tag` (its own literal fallback is a defensive backstop only, in case that function is ever invoked without going through `build config request`, and must be kept in sync with the constant above). Keeping the resolution in one node was a deliberate fix — the tag used to be hardcoded separately in both functions, so changing it in one place could silently leave the other stale.
+The avl_data host defaults to `127.0.0.1:8002` — avl_data runs co-located with Node-RED, matching the convention used by `avltechassistant/backend` (`AVL_DATA_URL`, default `http://localhost:8002`). It is overridable via `global.ma3_config_host` without a flow edit, so a different deployment topology never requires hand-editing the function's code (an earlier version hardcoded a VPN hostname, `uacts-g001`, which resolved unreliably from the same box and had to be patched directly on the deployment machine — the override exists so that never has to happen again).
+
+The default tag and host each live in exactly one place — the `DEFAULT_MA3_ASSET_TAG` / `DEFAULT_AVL_DATA_HOST` constants in the `build config request` function, which resolves both and stamps the tag onto `msg.ma3_tag` before the HTTP call. `parse ma3 config` reads `msg.ma3_tag` (its own literal fallback is a defensive backstop only, in case that function is ever invoked without going through `build config request`, and must be kept in sync with the constant above). Keeping the resolution in one node was a deliberate fix — the tag used to be hardcoded separately in both functions, so changing it in one place could silently leave the other stale.
+
+`build config request` builds the URL with plain string concatenation (`'http://' + host + '/network?asset_tag=' + encodeURIComponent(tag)`), not the `URL`/`URLSearchParams` classes — Node-RED's Function node sandbox does not expose the global `URL` constructor, and using it throws `ReferenceError: URL is not defined` at deploy/run time.
 
 ## Execution Path
 
