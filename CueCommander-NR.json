@@ -4880,8 +4880,6 @@
             "82a3de9da8351c3b",
             "75faaeba2fb0b84e",
             "31c80336e8704072",
-            "dc1096017e72e484",
-            "cc6ba350464cec21",
             "d41d3c0e37087525"
         ],
         "x": 44,
@@ -48744,53 +48742,6 @@
         ],
         "x": 1795,
         "y": 1260,
-        "wires": []
-    },
-    {
-        "id": "dc1096017e72e484",
-        "type": "change",
-        "z": "41f3235e2124e3a2",
-        "g": "25e2e72fbdf37a5d",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "propname",
-                "pt": "msg",
-                "to": "$replace(propname,\"&#x2F\", '/')",
-                "tot": "jsonata"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 270,
-        "y": 1420,
-        "wires": [
-            [
-                "fe75a03fe558e32e",
-                "cc6ba350464cec21"
-            ]
-        ]
-    },
-    {
-        "id": "cc6ba350464cec21",
-        "type": "debug",
-        "z": "41f3235e2124e3a2",
-        "g": "25e2e72fbdf37a5d",
-        "name": "debug 28",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 480,
-        "y": 1440,
         "wires": []
     },
     {

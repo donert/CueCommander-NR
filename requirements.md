@@ -131,6 +131,8 @@ This document captures functional requirements and test cases for CueCommander-N
 
 **PC-05** — The "auto prop clear" mechanism (tells ProPresenter to clear a prop after processing, via `To PP7 Communications`) shall never reach `/cc/ma3/*`. It is triggered for every prefix (`Lq:`, `Vq:`, `Pq:`, `Lp:`, `Ma3cmd:`) and must route only to ProPresenter's own HTTP API, regardless of which prefix the prop carried.
 
+**PC-06** — The auto prop clear mechanism shall only act on a segment whose text contains one of the five defined prefixes (`Lq:`, `Vq:`, `Pq:`, `Lp:`, `Ma3cmd:`). A segment matching none of them (including a comma-split's plain descriptive-label piece, e.g. `Red White` in `Lq:170.0,Red White`) shall produce no auto-clear action at all — not to ProPresenter, and not to any other subsystem. There shall be no code path into `set cmd and parm` (the node that builds the propclear command) other than through the prefix-matching switch.
+
 ---
 
 ## Test Cases
@@ -158,6 +160,14 @@ This document captures functional requirements and test cases for CueCommander-N
 1. Activate a Prop named e.g. `Lq:170.0,Red White` (a plain `Lq:` prop with a descriptive label, no `Ma3cmd:` segment) long enough for it to auto-clear.
 2. Read the MA3 capture (`GET /api/results?device=ma3`) covering the whole activation + auto-clear window.  
 **Expected:** The only MA3 traffic is the legitimate `/cc/ma3/gotocue` mirror from MA-04 (if the cue is ≥ 91). No `/cc/ma3/cmd` fires as a side effect of the prop's auto-clear — previously this produced a bogus command built from `/prop/Lq:170.0,Red White/clear` cut at the first colon (`170.0,Red White/clear`).
+
+### TC-PC-04 — auto prop clear ignores non-prefixed segments
+**Method:** Manual  
+**Status: VERIFIED** (fixed 2026-07-26 — removed an orphaned node that wired directly into `set cmd and parm`, bypassing the prefix switch; it had no inputs so could not fire today, but left no other bypass in place)  
+**Steps:**
+1. Activate a Prop with a plain, non-prefixed name (no `Lq:`/`Vq:`/`Pq:`/`Lp:`/`Ma3cmd:` anywhere in it, e.g. `Countdown 10:03`) long enough for it to auto-clear.
+2. Watch the debug/event log for the "Auto Clear Prop" group and check `/api/results?device=ma3`.  
+**Expected:** No `propclear` command is built, no request reaches ProPresenter's API via this path, and no MA3 traffic occurs as a result. The prefix-matching switch (`switch on payload`, 5 rules, no catch-all) is the only path into `set cmd and parm`.
 
 ---
 
