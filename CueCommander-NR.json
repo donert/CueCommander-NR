@@ -13867,6 +13867,11 @@
                 "label": "1,2,3,4",
                 "value": "5",
                 "type": "str"
+            },
+            {
+                "label": "All",
+                "value": "999999",
+                "type": "str"
             }
         ],
         "payload": "",

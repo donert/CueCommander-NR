@@ -90,6 +90,8 @@ All UI actions and execution events send a copy of the message to the event log 
 
 Events are stored in a SQLite database at `/tmp/sqlite` (table `eventlog`). Because `/tmp` is cleared on host reboot, the log is intentionally ephemeral. The `CREATE TABLE IF NOT EXISTS` inject on the UI Event Log tab fires automatically at startup (`once=true`) so the table always exists after a reboot or deploy; without it, inserts fail silently and `/api/eventlog` hangs.
 
+`msg.depth` is not a fixed 1–4 severity scale — it increments by roughly 1 at every message-hub hop (UI/ProPresenter → hub → execution tab → hub → sent-confirmation log), so a command that mirrors across subsystems (e.g. a ProPresenter-driven `/cc/lights/gotocue` that mirrors to `/cc/ma3/gotocue` and then logs its own OSC-sent confirmation) can easily reach depth 5 or more by the time it's actually sent. The UI Event Log page's "Filter Depth" control (`SELECT based on filters`, `WHERE depth < filterdepth`) previously topped out at `"1,2,3,4"` (`filterdepth=5`, i.e. `depth ≤ 4`), with no way to see anything deeper — so the actual "OSC sent" confirmation log for a deeply-nested command was invisible in the UI even though it was correctly written to the database. Added an "All" option (`filterdepth=999999`) to the Filter Depth radio group so no depth is excluded.
+
 # Subsystem: Lighting (ETC ColorSource)
 
 ## Overview
@@ -124,7 +126,9 @@ Device IP and port are read from `global.config.devices` (first entry with `cate
 
 ## grandMA3 Mirroring and Deprecation Path
 
-Every `/cc/lights/gotocue` also fires the equivalent cue on the grandMA3 console: the lights execution tab emits `/cc/ma3/gotocue` through the message hub with `cue = ColorSource cue − 90` on sequence 3 (ColorSource cue 94 → MA3 `Go+ Sequence 3 Cue 4`). Cues below 91 have no MA3 equivalent and are not mirrored. The mirror is tapped **before** the `LightingEnabled` gate, so each console is gated independently (`LightingEnabled` for the ColorSource UDP, `MA3Enabled` for the MA3 UDP).
+Every `/cc/lights/gotocue` also fires the equivalent cue on the grandMA3 console: the lights execution tab emits `/cc/ma3/gotocue` through the message hub with `cue = ColorSource cue` unchanged, on **sequence 1** (ColorSource cue 94 → MA3 `Go+ Sequence 1 Cue 94`, 1:1, no offset). Every numeric cue mirrors — there is no lower threshold. The mirror is tapped **before** the `LightingEnabled` gate, so each console is gated independently (`LightingEnabled` for the ColorSource UDP, `MA3Enabled` for the MA3 UDP).
+
+(An earlier design mirrored to sequence 3 with a `cue − 90` offset and skipped cues ≤ 90 — that mapping is out of date as of 2026-07-26; the MA3 show is now programmed on sequence 1 with cues matching ColorSource 1:1.)
 
 Most other `/cc/lights` commands (key, color, chanselect, look, level, huesat) exist to mimic features the grandMA3 UI provides natively and will not be carried forward. The intended end state is `LightingEnabled=false` / MA3 active, with `gotocue` the only cue-control command in use; the ColorSource implementation is then retired.
 

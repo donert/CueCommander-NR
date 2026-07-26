@@ -5,7 +5,7 @@
 //
 // The interceptor sits beside the UDP-out node, so captures show exactly what
 // would be sent to the console. ma3_config is normally fetched from the
-// avl_data network table (asset demoma3/NIC1); tests inject a fake config via
+// avl_data network table (asset 2607-2500/LAN1); tests inject a fake config via
 // /api/state so no real console or data-API row is needed.
 
 const FAKE_CFG = { ip: '192.168.1.50', port: 8000 };
@@ -63,7 +63,7 @@ module.exports = [
   },
 
   {
-    name: 'lights gotocue 94 mirrors to MA3 seq 3 cue 4 (TC-MA-03)',
+    name: 'lights gotocue 94 mirrors 1:1 to MA3 seq 1 cue 94 (TC-MA-03)',
     async run(api, assert) {
       // Gate off the real ColorSource console while exercising the lights
       // path; the runner restores LightingEnabled from saved state afterwards.
@@ -75,22 +75,26 @@ module.exports = [
       const { body: results } = await api.getResults({ device: 'ma3' });
       assert(results.length === 1,
         `expected 1 MA3 capture from mirror, got ${results.length}`);
-      assert(results[0].command === 'Go+ Sequence 3 Cue 4',
-        `CS cue 94 should map to 'Go+ Sequence 3 Cue 4', got '${results[0].command}'`);
+      assert(results[0].command === 'Go+ Sequence 1 Cue 94',
+        `CS cue 94 should map 1:1 to 'Go+ Sequence 1 Cue 94', got '${results[0].command}'`);
     },
   },
 
   {
-    name: 'lights gotocue below 91 does not mirror (TC-MA-03)',
+    name: 'lights gotocue mirrors with no low-cue threshold (TC-MA-03)',
     async run(api, assert) {
+      // There is no longer a cue-90 cutoff — every numeric cue mirrors,
+      // including ones that would previously have been skipped.
       await api.setState({ LightingEnabled: false, ma3_config: FAKE_CFG });
       await api.clearResults();
       await api.sendCmd('/cc/lights/gotocue', { parm: 12 });
       await api.wait(SETTLE_MS);
 
       const { body: results } = await api.getResults({ device: 'ma3' });
-      assert(results.length === 0,
-        `CS-only cue must not reach MA3, got ${results.length} capture(s)`);
+      assert(results.length === 1,
+        `expected 1 MA3 capture from mirror, got ${results.length}`);
+      assert(results[0].command === 'Go+ Sequence 1 Cue 12',
+        `CS cue 12 should map 1:1 to 'Go+ Sequence 1 Cue 12', got '${results[0].command}'`);
     },
   },
 

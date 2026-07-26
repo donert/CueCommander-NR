@@ -30,12 +30,12 @@ This document captures functional requirements and test cases for CueCommander-N
 
 ### TC-LT-08 — gotocue mirrors to grandMA3
 **Method:** API  
-**Status: VERIFIED** (via `tests/cases/ma3.js`)  
+**Status: VERIFIED** (via `tests/cases/ma3.js`; expectation corrected 2026-07-26 — see MA-04)  
 **Steps:**
 1. Set `LightingEnabled=false` (so no real ColorSource traffic) and a test `ma3_config`.
 2. Send `/cc/lights/gotocue` with `parm=94`, then with `parm=12`.
 3. Read MA3 captures.  
-**Expected:** Cue 94 produces exactly one MA3 capture `Go+ Sequence 3 Cue 4`; cue 12 (below 91) produces none.
+**Expected:** Both cues produce exactly one MA3 capture each, 1:1 on sequence 1: `Go+ Sequence 1 Cue 94` and `Go+ Sequence 1 Cue 12`. There is no lower cue threshold.
 
 ---
 
@@ -49,7 +49,7 @@ This document captures functional requirements and test cases for CueCommander-N
 
 **MA-03** — `/cc/ma3/cmd` with `parm {text}` shall send the text verbatim to the console command line (direct passthrough for future use).
 
-**MA-04** — Every `/cc/lights/gotocue` shall, in parallel with the ColorSource send, emit `/cc/ma3/gotocue` via the message hub with `cue = ColorSource cue − 90` on sequence 3 (CS cue 94 → MA3 seq 3 cue 4). Cues ≤ 90 are not mirrored. The mirror shall not depend on `LightingEnabled` (each console is gated independently; the ColorSource path will eventually be disabled in favour of MA3).
+**MA-04** — Every `/cc/lights/gotocue` shall, in parallel with the ColorSource send, emit `/cc/ma3/gotocue` via the message hub with `cue = ColorSource cue` unchanged, on sequence 1 (CS cue 94 → MA3 seq 1 cue 94, 1:1). There is no lower cue threshold — every numeric cue mirrors. The mirror shall not depend on `LightingEnabled` (each console is gated independently; the ColorSource path will eventually be disabled in favour of MA3). *(Superseded 2026-07-26: an earlier mapping used sequence 3 with a `cue − 90` offset and a ≤ 90 cutoff; that mapping is out of date — the MA3 show is programmed on sequence 1 with cues matching ColorSource 1:1.)*
 
 **MA-05** — The console's IP and OSC port shall be acquired from the avl_data API network table: host `127.0.0.1:8002` (avl_data is co-located with Node-RED; overridable via `global.ma3_config_host`), asset tag `2607-2500` (the permanent tag, overridable via `global.ma3_asset_tag`), NIC `LAN1`, IP from the IP column, port from the `osc:<port>` entry of the services column (e.g. `"osc:8000, web:80"` → 8000). The result is cached in `global.ma3_config`, refreshed at startup and on `/cc/ma3/refreshconfig`. The tag's and host's defaults shall each be defined in exactly one place (the `build config request` function) so they cannot drift out of sync between functions or require hand-editing on the deployment machine.
 
@@ -77,9 +77,9 @@ This document captures functional requirements and test cases for CueCommander-N
 
 ### TC-MA-03 — lights gotocue mirror and cue mapping
 **Method:** API  
-**Status: VERIFIED** (via `tests/cases/ma3.js`)  
+**Status: VERIFIED** (via `tests/cases/ma3.js`; expectation corrected 2026-07-26)  
 **Steps:** As TC-LT-08.  
-**Expected:** CS cue n ≥ 91 → one MA3 capture `Go+ Sequence 3 Cue (n−90)`; cues ≤ 90 produce no MA3 traffic.
+**Expected:** Any numeric CS cue `n` → one MA3 capture `Go+ Sequence 1 Cue n` (1:1, no offset, no threshold).
 
 ### TC-MA-04 — missing config blocks the send and logs an Error
 **Method:** API / Event Log  
@@ -159,7 +159,7 @@ This document captures functional requirements and test cases for CueCommander-N
 **Steps:**
 1. Activate a Prop named e.g. `Lq:170.0,Red White` (a plain `Lq:` prop with a descriptive label, no `Ma3cmd:` segment) long enough for it to auto-clear.
 2. Read the MA3 capture (`GET /api/results?device=ma3`) covering the whole activation + auto-clear window.  
-**Expected:** The only MA3 traffic is the legitimate `/cc/ma3/gotocue` mirror from MA-04 (if the cue is ≥ 91). No `/cc/ma3/cmd` fires as a side effect of the prop's auto-clear — previously this produced a bogus command built from `/prop/Lq:170.0,Red White/clear` cut at the first colon (`170.0,Red White/clear`).
+**Expected:** The only MA3 traffic is the legitimate `/cc/ma3/gotocue` mirror from MA-04 (every numeric cue mirrors, per the current 1:1 sequence-1 mapping). No `/cc/ma3/cmd` fires as a side effect of the prop's auto-clear — previously this produced a bogus command built from `/prop/Lq:170.0,Red White/clear` cut at the first colon (`170.0,Red White/clear`).
 
 ### TC-PC-04 — auto prop clear ignores non-prefixed segments
 **Method:** Manual  
@@ -174,6 +174,8 @@ This document captures functional requirements and test cases for CueCommander-N
 # Subsystem: Event Log
 
 ... [EL-01 to EL-03 unchanged] ...
+
+**EL-04** — The UI Event Log page's Filter Depth control shall include an option with no effective depth limit, so that events logged at depth 5 or greater (reachable once a command mirrors across two or more subsystems before its send-confirmation is logged) remain visible. It shall not be possible for a correctly-logged event to be permanently hidden by the deepest available filter setting.
 
 ---
 
@@ -197,6 +199,15 @@ This document captures functional requirements and test cases for CueCommander-N
 2. Restart or redeploy Node-RED.
 3. Query `/api/eventlog` and press any logged UI action.  
 **Expected:** `/api/eventlog` returns 200 with an array (it must not hang), and new events insert successfully. The `CREATE TABLE IF NOT EXISTS` inject fires automatically at startup (`once=true`, 2 s delay); no manual "Create Table" click is required.
+
+### TC-EL-04 — Filter Depth "All" option shows deep-depth events
+**Method:** Manual  
+**Status: VERIFIED** (fixed 2026-07-26 — Filter Depth topped out at `"1,2,3,4"`/`depth < 5`, hiding the OSC-sent confirmation log for any command whose depth reached 5 by the time it was sent, e.g. a ProPresenter-driven `/cc/lights/gotocue` mirrored to MA3)  
+**Steps:**
+1. Fire a command that mirrors across subsystems (e.g. `/cc/lights/gotocue` with a cue ≥ 91, which mirrors to `/cc/ma3/gotocue`).
+2. On the UI Event Log page, try each Filter Depth option up to `"1,2,3,4"`.
+3. Select the new "All" option.  
+**Expected:** The MA3 "sent" confirmation log entry (depth ≥ 5) is not visible under any of the numbered options but appears once "All" is selected.
 
 ---
 
