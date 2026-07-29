@@ -233,6 +233,12 @@ This document captures functional requirements and test cases for CueCommander-N
 
 ... [KL-01 to KL-05 unchanged] ...
 
+**KL-06** — `POST /api/klang/setvariance` (`{mix, channel, attribute, value}`) shall send `SwitchUser` for the target mix followed 250ms later by the attribute `SET`, both as raw OSC over UDP to the Konductor. `attribute` shall be one of `name`, `mute`, `visible`, `solo`; anything else is a 400. This is the shared write path behind the operational dashboard's "Set this to" (adopt consensus, single mix) and "Set all others to" (propagate one mix's value to the other 15, one `setvariance` call per mix) buttons — see `avltechassistant/requirements.md` for the dashboard-side UI.
+
+**KL-07** — The HTTP response's `ok` field shall reflect whether the OSC packets were actually handed off to the network stack, not merely whether the request was well-formed. On a send failure, the endpoint shall respond `502` with `ok:false` and a non-empty `error` message — the caller must be able to distinguish "sent" from "silently dropped."
+
+**KL-08** — Every `setvariance` send attempt (success or failure) shall be recorded to `global.test_results` under `device:'klang_setvariance'` (`{mix, channel, attribute, value, host, port, ok, error}`), independent of the HTTP response, so tests can verify a send was actually attempted rather than trusting the response alone.
+
 ---
 
 ## Test Cases
@@ -247,6 +253,31 @@ This document captures functional requirements and test cases for CueCommander-N
 ### TC-KL-02 — Build Consensus (Sweep) completion
 **Method:** API  
 **Status: VERIFIED** (via `tests/cases/klang_consensus.js`)
+
+### TC-KL-03 — setvariance sends are actually dispatched, not just reported ok
+**Method:** API  
+**Status: VERIFIED** (fixed 2026-07-28 — via `tests/cases/klang_setvariance.js`)  
+**Bug:** `kl_api_sv_fn` built the `SwitchUser`/`SET` OSC packets and called `node.send()` to its first output, but that output's wire was empty — the packets were silently dropped on every call, for both the single-mix "Set this to" and the "Set all others to" propagate loop, while the HTTP response unconditionally returned `ok:true`. This was invisible from the HTTP layer alone and had zero test coverage.  
+**Steps:**
+1. Set `klang_konductor_override` to a reachable test address via `/api/state`; clear `/api/results`.
+2. `POST /api/klang/setvariance {mix, channel, attribute:"name", value}`.  
+**Expected:** `200 {ok:true}`, and exactly one `device:'klang_setvariance'` entry in `/api/results` with matching mix/channel/attribute/value and `ok:true` — proving the packets were actually handed to the network stack, not just that the HTTP layer said so.
+
+### TC-KL-04 — setvariance send failure is reported, not swallowed
+**Method:** API  
+**Status: VERIFIED** (via `tests/cases/klang_setvariance.js`)  
+**Steps:**
+1. Set `klang_konductor_override` to an address that makes the send fail deterministically (port `-1`, which makes `dgram`'s `socket.send()` throw synchronously — no dependency on real hardware being offline).
+2. `POST /api/klang/setvariance {mix, channel, attribute, value}`.  
+**Expected:** `502 {ok:false, error:"..."}`; the recorded `test_results` entry also has `ok:false` and a non-empty `error`.
+
+### TC-KL-05 — propagate-to-others loop sends once per target mix
+**Method:** API  
+**Status: VERIFIED** (via `tests/cases/klang_setvariance.js`)  
+**Steps:**
+1. Call `setvariance` once per mix in a set of "other" mixes, sequentially (mirrors the dashboard's "Set all others to" button).
+2. Read `/api/results?device=klang_setvariance`.  
+**Expected:** One recorded, `ok:true` entry per mix called, with the mix numbers matching exactly.
 
 ---
 

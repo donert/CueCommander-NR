@@ -245,6 +245,43 @@ This caused a real bug: `Handle Ma3cmd`'s `parm` node used `$substringAfter(msg.
 
 ---
 
+# Subsystem: Klang (Personal Monitoring) — Mix Consistency Dashboard
+
+## Overview
+
+Every Klang mix (up to 16, one per personal-monitor user) maintains its own copy of channel name/mute/visible/solo state on the Konductor. Operators can drift these out of sync (typo a name on one mix, leave a channel visible on another). The "sweep" (`kl_conn_fn`, triggered by `POST /api/klang/buildconsensus`) visits each mix via `SwitchUser`, records its channel state, and computes a per-attribute plurality consensus (`TC-KL-02`). The avltechassistant operational dashboard's Mix Consistency panel (`GET /dashboard/klang`, proxying `GET /api/klang/reportmixvariances`) surfaces the resulting variances with two write actions per row: **Set this to** (adopt the consensus value on the deviating mix) and **Set all others to** (propagate that mix's actual value to the other 15) — see `avltechassistant/requirements.md` for the dashboard UI and `avltechassistant/backend/main.py`'s `/dashboard/klang*` routes, which are thin proxies to the endpoints below.
+
+## Commands
+
+Both dashboard write actions call the same endpoint:
+
+| msg.cmd / HTTP | parm / body | Description |
+|---|---|---|
+| `POST /api/klang/setvariance` | `{mix, channel, attribute, value}` | Sets one mix's one channel attribute. `attribute` is `name`, `mute`, `visible`, or `solo`. |
+
+## Execution Path
+
+```
+POST /api/klang/setvariance {mix, channel, attribute, value}
+  → kl_api_sv_fn: validate mix/channel/attribute
+  → build SwitchUser + attribute-SET OSC packets (raw, hand-built — not the OSC-encode node)
+  → send SwitchUser over a dgram socket created in the function
+  → wait 250ms (SwitchUser must settle before the console accepts the SET)
+  → send SET over the same socket
+  → record the attempt (ok/error) to global.test_results, device 'klang_setvariance'
+  → respond 200 {ok:true, ...} on success, 502 {ok:false, error} on send failure
+```
+
+## Known Hazard: an unwired output reports success while sending nothing
+
+Until 2026-07-28, `kl_api_sv_fn` built both OSC packets and sent them via `node.send()` to its first output — but that output's `wires` array was `[]`. The packets were built, logged via `node.warn()` (so debug output looked normal), and then discarded; nothing ever reached the Konductor. The second output (the HTTP response) *was* wired correctly and always sent `{ok:true}` immediately, before the (silently dropped) sends would even have completed. Both dashboard write buttons called this same function, so both were affected identically — the bug was reported via "Set all others to" (14 changes at once made the non-effect obvious) but would have equally affected the single-mix "Set this to" button.
+
+The fix does not restore that wire. Instead `kl_api_sv_fn` now owns a `dgram` socket directly (declared via the function node's `libs`, the same mechanism already used elsewhere in this flow for `fs` — see the Assignment Management file-I/O functions) so a real send failure is detectable and can be reported to the caller as `ok:false` with an error, per KL-07. A wired-but-silent output can't do that: Node-RED's core `udp out` node has zero outputs, so there is no message-based path for a downstream send failure to ever reach back into the flow. Any future write path that needs to report send success/failure to its caller should follow this pattern (own the socket, don't delegate to a terminal `udp out` node) rather than trying to retrofit feedback onto one.
+
+`klang_konductor_override` (global, `{ip, port}`) lets tests point this specific endpoint's Konductor target without touching the real `parameters` device config array — checked first in `kl_api_sv_fn`, falling back to the real config when unset. It round-trips through `GET`/`POST /api/state` so the test runner's automatic per-test save/restore covers it like `ma3_config`.
+
+---
+
 # Subsystem: Shure Receiver Channel Names
 
 ## Overview
